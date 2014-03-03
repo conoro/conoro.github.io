@@ -1,11 +1,11 @@
 {
   "globals": {
-    "site_title": "Baseline",
-    "description": "Baseline is a blog boilerplate for the Harp platform.",
-    "site_url": "http://baseline.harpapp.io",
-    "site_twitter": "trybaseline",
+    "site_title": "Cross Dominant",
+    "description": "Mixed Laterality since 1968",
+    "site_url": "http://conoro.github.io",
+    "site_twitter": "conoro",
     "logo": "/images/logo.png",
-    "disqus_account": "baseline",
-    "analytics_account": "UA-342665-41"
+    "disqus_account": "conor",
+    "analytics_account": "UA-88610-4"
   }
 }
