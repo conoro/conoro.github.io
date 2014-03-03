@@ -1,15 +1,3 @@
-title: How hard can it be to make a simple LED blinking circuit? Conor's stupid questions to self, Episode 5892
-link: http://conoroneill.net/how-hard-can-it-be-to-make-a-simple-led-blinking-circuit-conors-stupid-questions-to-self-episode-5892/
-author: admin
-description: 
-post_id: 1275
-created: 2014/02/15 14:09:34
-created_gmt: 2014/02/15 14:09:34
-comment_status: open
-post_name: how-hard-can-it-be-to-make-a-simple-led-blinking-circuit-conors-stupid-questions-to-self-episode-5892
-status: publish
-post_type: post
-
 # How hard can it be to make a simple LED blinking circuit? Conor's stupid questions to self, Episode 5892
 
 Last night after a few glasses of vino, I decided to make a simple blinking LED circuit but I didn't want to involve Arduinos, just discrete components.
