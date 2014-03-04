@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Monitoring EC2 Servers with Zabbix | Cross Dominant</title><meta name="description" content="Mixed Laterality since 1968"><meta property="og:title" content="Monitoring EC2 Servers with Zabbix | Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="Mixed Laterality since 1968"><meta property="og:url" content="http://conoro.github.io/blog/monitoring-ec2-servers-with-zabbix"><meta property="og:image" content="http://conoro.github.io/images/logo.png"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><meta name="twitter:creator" content="@conoro"><meta name="twitter:title" content="Monitoring EC2 Servers with Zabbix | Cross Dominant"><meta name="twitter:description" content="Mixed Laterality since 1968"><meta name="twitter:image" content="http://conoro.github.io/images/logo.png"><link rel="author" href="https://plus.google.com/+ConorONeill/posts"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/blog/rss.xml"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-88610-4']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></head><body class="page-blog blog-monitoring-ec2-servers-with-zabbix"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="img"></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">Monitoring EC2 Servers with Zabbix</h1><h2 class="sm date">1299413760000</h2><h1>&quot;Monitoring EC2 Servers with Zabbix&quot;</h1>
+<pre><code>&lt;div&gt;Amazon Cloudfront is great for monitoring EC2 servers but it can only do external monitoring so it cannot see things like memory being exhausted etc. I tried using Cacti but it was a nightmare to configure with plugins. Nagios always looks like it&#39;d take weeks to sort out.&lt;/div&gt;</code></pre>
+<p><p /></p>
+<div>A bit of Googling found Zabbix and people seem to like it. Install was a doddle but configuring can be a pain unless you just copy the demo settings.</div>
+<p />
+<div>You can obviously install all of this on the server to be monitored but it is only useful in non-catastrophic cases. If the server runs out of memory or goes to 100% CPU you won&#39;t be able to login to see what happened in the run-up. So ideally use a separate server. We use one of our test servers for monitoring since they spend most of their time unstressed.</div>
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">The Monitoring Server Install</span></strong></div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo aptitude install zabbix-server-mysql zabbix-frontend-php</span></div>
+<div><span style="font-family: courier new, monospace;">sudo vi /etc/php5/apache2/php.ini</span></div>
+<div>Increase some of the PHP variables in that file (you will be warned when you login to the Admin Panel)</div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo /etc/init.d/apache2 restart</span></div>
+<div><span style="font-family: courier new, monospace;">sudo apt-get install zabbix-agent</span></div>
+<p />
+<div>go to <a href="http://name.of.server/zabbix"><a href="http://name.of.server/zabbix">http://name.of.server/zabbix</a></a></div>
+<div>Login with user=admin, password=zabbix</div>
+<p />
+<div><strong><span style="text-decoration: underline;">Each Monitored Server Install</span></strong></div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo apt-get install zabbix-agent</span></div>
+<div><span style="font-family: courier new, monospace;">cd /etc/zabbix</span></div>
+<div><span style="font-family: courier new, monospace;">sudo vim zabbix_agent.conf</span></div>
+<div>Add the Monitoring Server&#39;s Public and Private IP addresses</div>
+<div>Open up ports 10050 and 10051 in your EC2 security group (using Elasticfox or similar) and allow the monitoring server&#39;s private IP</div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo /etc/init.d/zabbix-agent restart</span></div>
+<p />
+<div><strong><span style="text-decoration: underline;">SNMP (Optional)</span></strong></div>
+<p />
+<div>You can use SNMP monitoring too but the Zabbix agent seems ok so far.</div>
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">Extra Config Afterwards</span></strong></div>
+<p />
+<div>The easiest way to start monitoring is to do a full clone of the demo localhost monitoring and just change the IP address and DNS name to the monitored server.</div>
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">Authenticated SMTP Alerts</span></strong></div>
+<p />
+<div>We use AuthSMTP for all email sending from EC2. Zabbix doesn&#39;t handle authenticated SMTP out of the box so you have to use an external script.</div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo apt-get install sendEmail</span></div>
+<p />
+<div>Create a script &quot;zabbix_sendemail&quot; (chmod 755) in the AlertScriptsPath folder specified by /etc/zabbix/zabbix_server.conf (/etc/zabbix/alert.d/)</div>
+<div>--------------------------------------</div>
+<div><span style="font-family: courier new, monospace;">#!/bin/sh</span></div>
+<p />
+<div><span style="font-family: courier new, monospace;">export smtpemailfrom=<a href="mailto:zabbix@yourdomain.com">zabbix@yourdomain.com</a></span></div>
+<div><span style="font-family: courier new, monospace;">export zabbixemailto=$1</span></div>
+<div><span style="font-family: courier new, monospace;">export zabbixsubject=$2</span></div>
+<div><span style="font-family: courier new, monospace;">export zabbixbody=$3</span></div>
+<div><span style="font-family: courier new, monospace;">export smtpserver=<a href="http://yoursmtpserver.com">yoursmtpserver.com</a></span></div>
+<div><span style="font-family: courier new, monospace;">export smtplogin=smtpuser</span></div>
+<div><span style="font-family: courier new, monospace;">export smtppass=smtppassword</span></div>
+<p />
+<div><span style="font-family: courier new, monospace;">/usr/bin/sendEmail -f $smtpemailfrom -t $zabbixemailto -u $zabbixsubject -m $zabbixbody -s $smtpserver:25 -xu $smtplogin -xp $smtppass</span></div>
+<div>--------------------------------------</div>
+<p />
+<div>Set a Media Type (Administration / Media types) script to zabbix_sendemail</div>
+<div>Add that Media to the Admin user (Administration / Users / user)</div>
+<div>
+<div>Set the Action (Configurations / Actions) for the alert(s) you want to trigger on and who should get them (Admin)&nbsp;</div>
+</div>
+<p />
+<div>
+<div><strong><span style="text-decoration: underline;">SMS Alerts</span></strong></div>
+<p />
+<div>Sign up for something like Clickatell and buy a block of 400 credits for &euro;17. Then repeat the steps for SMTP above but with the following script. I have both SMS and email set to be sent on certain triggers like low memory.</div>
+<p />
+<div>
+<div>#! /bin/sh</div>
+<p />
+<div>/usr/bin/wget --spider --no-check-certificate &quot;<a href="http://api.clickatell.com/http/s">http://api.clickatell.com/http/s</a></div>
+<div>endmsg?api_id=NNNNNNN&amp;user=XXXXXXXXX&amp;password=YYYYYYY&amp;to=$1&amp;text=$2&quot;</div>
+</div>
+</div>
+<p />
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">Monitor What?</span></strong></div>
+<p />
+<div>Zabbix allows you to monitor a wide range of parameters and processes. So everything from network activity to whether your FTP server is contactable. It&#39;s not the easiest web-app to configure but so far I&#39;m finding it extremely useful.</div>
+<aside class="center author"><img src="/images/CliveStrong.jpg" alt="Conor O'Neill"/><h2 class="sm">Conor O'Neill</h2><p>Is an Irish technology guy. One of Ireland's first bloggers.</p><p class="links"><a href="/authors/admin">Posts</a><span>•</span><a href="http://twitter.com/conoro">Twitter</a><span>•</span><a href="https://plus.google.com/+ConorONeill/posts">Google+</a><span>•</span><a href="https://github.com/conoro">GitHub</a></p></aside><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'conor';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section><nav class="post-nav"><ul class="clearfix"><li><a href="oi-posterous-fix-this-please-what-is-a-liquid-error" title="Oi Posterous, fix this please. What is a Liquid Error?" class="post-prev"><strong>Previous Post</strong><span>Oi Posterous, fix this please. What is a Liquid Error?</span></a></li><li><a href="google-appinventor-for-android-is-a-massive-hit-with-11-yo-son" title="Google AppInventor for Android is a Massive Hit with 11 y/o Son" class="post-next"><strong>Next Post</strong><span>Google AppInventor for Android is a Massive Hit with 11 y/o Son</span></a></li></ul></nav></article></div></div></body></html>

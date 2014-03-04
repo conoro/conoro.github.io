@@ -1,0 +1,5 @@
+#"I will be deeply disappointed if House doesn't die from Lupus in the final episode"
+
+<blockquote>In a statement just released to the media, Executive Producers David Shore, Katie Jacobs and Hugh Laurie have announced that this current 8th season of the hit Fox series HOUSE will in fact be its last. See for yourself after the jump.</blockquote>
+via <a href="http://www.thetvaddict.com/2012/02/08/an-open-letter-from-house-executive-producers-david-shore-katie-jacobs-and-hugh-laurie/">Fox Cancels HOUSE | the TV addict</a>.
+<p style="text-align: center;"><a href="http://www.thetvaddict.com/2012/02/08/an-open-letter-from-house-executive-producers-david-shore-katie-jacobs-and-hugh-laurie/"><img src='http://conoroneill.net/wp-content/uploads/2012/02/house.jpg' alt='' /></a></p>
