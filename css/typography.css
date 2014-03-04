@@ -11,16 +11,16 @@ body{color:#555;font:18px/1.5 Lato,Lato,'Helvetica Neue',Helvetica,sans-serif;fo
 }@media (max-width: 768px){.masthead .container h1{font-size:21px}
 }@media (max-width: 568px){.masthead .container h1{font-size:18px}
 }.masthead .container h1 a{font-weight:700}
-.page-index .masthead .container h1{font-size:96px;}
+.page-index .masthead .container h1{font-size:70px;}
 @media (max-width: 1023px){.page-index .masthead .container h1{font-size:72px}
 }@media (max-width: 768px){.page-index .masthead .container h1{font-size:60px}
 }@media (max-width: 568px){.page-index .masthead .container h1{font-size:48px}
-}h1.lg{font-size:72px;font-weight:700;}
+}h1.lg{font-size:40px;font-weight:700;}
 @media (max-width: 1023px){h1.lg{font-size:60px}
 }@media (max-width: 768px){h1.lg{font-size:48px}
 }@media (max-width: 568px){h1.lg{font-size:36px}
 }h1.lg a{font-weight:700}
-h1{font-size:60px;font-weight:700;}
+h1{font-size:30px;font-weight:700;}
 @media (max-width: 1023px){h1{font-size:48px}
 }@media (max-width: 768px){h1{font-size:36px}
 }@media (max-width: 568px){h1{font-size:24px}
