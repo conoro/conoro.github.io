@@ -1,4 +1,4 @@
-body{color:#333;font:24px/1.5 'Merriweather',serif;font-style:normal;font-weight:300;font-smoothing:subpixel-antialiased;text-size-adjust:none;}
+body{color:#333;font:18px/1.5 Lato,Lato,'Helvetica Neue',Helvetica,sans-serif;font-style:normal;font-weight:300;font-smoothing:subpixel-antialiased;text-size-adjust:none;}
 @media (max-width: 1023px){body{font-size:21px}
 }@media (max-width: 768px){body{font-size:18px}
 }@media (max-width: 568px){body{font-size:16px}
@@ -163,8 +163,7 @@ aside.author img{width:100px;margin:0 auto;-webkit-border-radius:50%;border-radi
 .comments img{margin:0 24px 0 0}
 }.links span{margin:0 .5em;}
 @media (max-width: 568px){.links span{margin:0 .25em}
-}img,blockquote,figcaption,.embed{width:132%;margin:36px -16%;}
-@media (max-width: 1023px){img,blockquote,figcaption,.embed{width:124%;margin:32px -12%}
+}@media (max-width: 1023px){img,blockquote,figcaption,.embed{width:124%;margin:32px -12%}
 }@media (max-width: 768px){img,blockquote,figcaption,.embed{width:120%;margin:27px -10%}
 }@media (max-width: 568px){img,blockquote,figcaption,.embed{width:110%;margin:24px -5%}
 }@media (max-width: 480px){img,blockquote,figcaption,.embed{width:108%;margin:24px -4%}

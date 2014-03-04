@@ -1,4 +1,4 @@
-body{color:#333;font:24px/1.5 'Merriweather',serif;font-style:normal;font-weight:300;font-smoothing:subpixel-antialiased;text-size-adjust:none;}
+body{color:#333;font:18px/1.5 Lato,Lato,'Helvetica Neue',Helvetica,sans-serif;font-style:normal;font-weight:300;font-smoothing:subpixel-antialiased;text-size-adjust:none;}
 @media (max-width: 1023px){body{font-size:21px}
 }@media (max-width: 768px){body{font-size:18px}
 }@media (max-width: 568px){body{font-size:16px}
