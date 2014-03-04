@@ -1,7 +1,7 @@
 #"Starting important downloads when out and about"
 
 
-    <p><div class='p_embed p_image_embed'>
+ <p><div class='p_embed p_image_embed'>
 <img alt="Screenshot_9" height="800" src="http://getfile2.posterous.com/getfile/files.posterous.com/temp-2010-12-04/uxBAecqgiqyhwecCIqiCijDilfnBnowADluslxwyGodhwGjbBonwyAyeAElq/screenshot_9.png.scaled500.png" width="480" />
 <img alt="Screenshot_10" height="800" src="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-12-04/bByDvxjHJcJIclbAyjfFtFIcheegytyqHBczFGBjEkEfmFnbszvshpkkjCgH/screenshot_10.png.scaled500.png" width="480" />
 <img alt="Screenshot_11" height="800" src="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-12-04/HwBIlabHrkwajsvjmdCyIgxgDecDadGAvqIupJBittDjJlvrACtyuIsogyfC/screenshot_11.png.scaled500.png" width="480" />
@@ -34,4 +34,4 @@ Imagine you are on the road for a few days, you are checking your tweets and sud
 </div>
 </p>
 <p>&nbsp;</p>
-  
+ 

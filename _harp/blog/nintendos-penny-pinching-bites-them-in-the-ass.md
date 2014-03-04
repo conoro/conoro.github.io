@@ -1,7 +1,7 @@
 #"Nintendo's Penny Pinching Bites Them In The Ass"
 
 
-    <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
+ <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
 <a href="http://getfile8.posterous.com/getfile/files.posterous.com/conoroneill/nhouCwfGiFDJixnvAFebqgJzlzvufCtzEayBcmmuaypiplbdxwycwmcolloF/media_httpwwwisupplic_CnHjz.jpg.scaled1000.jpg"><img alt="Media_httpwwwisupplic_cnhjz" height="375" src="http://getfile8.posterous.com/getfile/files.posterous.com/conoroneill/nhouCwfGiFDJixnvAFebqgJzlzvufCtzEayBcmmuaypiplbdxwycwmcolloF/media_httpwwwisupplic_CnHjz.jpg.scaled500.jpg" width="500" /></a>
 </div>
 
@@ -15,4 +15,4 @@
 <p>An extra &lt; $1 on the BOM to brace the hinges with metal would have sorted this out.</p>
 <p>We won't be buying one.</p>
 </div>
-  
+ 

@@ -6,7 +6,7 @@ As she lives in Kilkenny, she always found the <a href="http://sugru.com">Sugru<
 
 Now, have a look at this big plastic bowl.
 
-<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/photo.jpg"><img class="alignnone  wp-image-740" title="photo" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/photo.jpg" alt="" width="768" height="576" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/photo.jpg"><img class="alignnone wp-image-740" title="photo" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/photo.jpg" alt="" width="768" height="576" /></a>
 
 Not exactly special.
 

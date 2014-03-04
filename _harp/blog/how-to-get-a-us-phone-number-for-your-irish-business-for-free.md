@@ -1,7 +1,7 @@
 #"How to get a US Phone Number for your Irish Business for Free"
 
 
-    <p>I was reminded of our phone setup yesterday when asked how we have implemented our US number. The easiest way is obviously to pay Blueface VOIP or Skype for a US number. But you can actually do it for zero cost which is how we have done it.</p>
+ <p>I was reminded of our phone setup yesterday when asked how we have implemented our US number. The easiest way is obviously to pay Blueface VOIP or Skype for a US number. But you can actually do it for zero cost which is how we have done it.</p>
 <p>The basic setup is as follows:</p>
 <ol>
 <li><a href="http://www.google.com/voice">Google Voice</a> US number (We chose a Palo Alto area code, cos, wellllll, cos)</li>
@@ -17,4 +17,4 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

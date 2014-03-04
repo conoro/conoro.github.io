@@ -50,7 +50,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <li>Save the file</li>
 </ol>
     <li>Now editc:\apps\appinventor\war\whitelist and add the GMail/GApps addresses of every account that you are allowing to use this App Inventor instance. In our case that it me, 2 teachers and 30 pairs of kids, all using the school Parent&#39;s Association GApps email addresses that I created.</li>
-    <li>In a Windows Command Prompt, cd to the c:\apps\appengine (or whatever) directory and then enter <strong>c:\apps\appengine-java-sdk-1.6.1\bin\appcfg.cmd -A myapplicationID update war</strong>  (where myapplicationID is obviously the name you picked in Step 2)</li>
+    <li>In a Windows Command Prompt, cd to the c:\apps\appengine (or whatever) directory and then enter <strong>c:\apps\appengine-java-sdk-1.6.1\bin\appcfg.cmd -A myapplicationID update war</strong> (where myapplicationID is obviously the name you picked in Step 2)</li>
     <li>The last step builds and uploads App Inventor to App Engine and runs it. If, after a few minutes, you get a Success message then you are in business! Just go to <a href="http://nameofyourapp.appspot.com">http://nameofyourapp.appspot.com</a> and you can login with your GMail/GApps account and start using App Inventor just like on the original Google site.</li>
 </ol>
 As I said in the last post, the only major concern is what number of simultaneous users will kick us out of the free tier on App Engine. Also, if lots of people are packaging Apps for phones, the Micro EC2 instance will take an age to build them. This isn&#39;t a huge issue for us as we spend 99% of our time either using the emulator or a live non-packaged debug session on the phones.</p>

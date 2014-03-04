@@ -1,7 +1,7 @@
 #"Alienate Yourself"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <blockquote class="posterous_long_quote">
 <div class="doc-overview-screenshots">
 <h2>App Screenshots</h2>
@@ -19,4 +19,4 @@
 <div class="posterous_quote_citation">via <a href="https://market.android.com/details?id=com.paulthemovie.paul">market.android.com</a></div>
 <p>The Androidify App kept some of our kids quiet in a church for a confirmation earlier in the week. I think this could have a similar benefit.</p>
 </div>
-  
+ 

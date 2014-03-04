@@ -1,7 +1,7 @@
 #"AdBlock on Chrome enabling insertion of invisible spam into Zoho CRM e-mail signatures"
 
 
-    <p>I emailed a potential client yesterday who replied that she couldn't read my email as it had crashed her email client. She also said that the email was huge.I had sent the email using Zoho CRM and when I checked it, it looked fine. Only a few lines long.So I sent myself a test message which also looked fine.</p>
+ <p>I emailed a potential client yesterday who replied that she couldn't read my email as it had crashed her email client. She also said that the email was huge.I had sent the email using Zoho CRM and when I checked it, it looked fine. Only a few lines long.So I sent myself a test message which also looked fine.</p>
 <p>Then I did view-source on the message. Holy Crap. Hundreds of lines of HTML with ads inserted all over it. Now wonder her email crashed.</p>
 <p>The bit that had me really worried was the I sent it from an Ubuntu machine which "shouldn't" suffer from such exploits.</p>
 <p>I went into Zoho and couldn't see where it could have happened. Then I had the aha moment (no, not Morten) and checked my Signature setting. Damn it looked fine. Wait, try view-source again. All the bastard HTML there in all it's glory.</p>
@@ -20,4 +20,4 @@
 </div>
 </p>
 <p></p>
-  
+ 

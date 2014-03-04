@@ -1,7 +1,7 @@
 #"Monitoring EC2 Servers with Zabbix"
 
 
-    <div>Amazon Cloudfront is great for monitoring EC2 servers but it can only do external monitoring so it cannot see things like memory being exhausted etc. I tried using Cacti but it was a nightmare to configure with plugins. Nagios always looks like it'd take weeks to sort out.</div>
+ <div>Amazon Cloudfront is great for monitoring EC2 servers but it can only do external monitoring so it cannot see things like memory being exhausted etc. I tried using Cacti but it was a nightmare to configure with plugins. Nagios always looks like it'd take weeks to sort out.</div>
 <p />
 <div>A bit of Googling found Zabbix and people seem to like it. Install was a doddle but configuring can be a pain unless you just copy the demo settings.</div>
 <p />
@@ -85,4 +85,4 @@
 <div><strong><span style="text-decoration: underline;">Monitor What?</span></strong></div>
 <p />
 <div>Zabbix allows you to monitor a wide range of parameters and processes. So everything from network activity to whether your FTP server is contactable. It's not the easiest web-app to configure but so far I'm finding it extremely useful.</div>
-  
+ 

@@ -1,7 +1,7 @@
 #"Does Skype hate its customers?"
 
 
-    <p>With every new release of Skype it gets slower and slower and buggier and buggier. But that's not the worst of it. I pay them for both inbound numbers and for a lot of call charges. Yet every damned morning when I get up, this stupid message greets me.</p>
+ <p>With every new release of Skype it gets slower and slower and buggier and buggier. But that's not the worst of it. I pay them for both inbound numbers and for a lot of call charges. Yet every damned morning when I get up, this stupid message greets me.</p>
 <p />
 <div>And that's after un-ticking all of the "of course I want you to try and sell me more shit" boxes.</div>
 <p />
@@ -15,4 +15,4 @@
 <div class='p_see_full_gallery'><a href="http://conoroneill.posterous.com/does-skype-hate-its-customers">See the full gallery on Posterous</a></div>
 </div>
 </p>
-  
+ 

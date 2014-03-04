@@ -1,7 +1,7 @@
 #"Die Die Die, Discussion Board Software, Die."
 
 
-    <p><span style="font-family: arial; font-size: small;">There is one area where the internet has gone backwards in the past 10 years and that's discussion sites. From 1992 to probably 2003, I got a huge amount of information using Usenet, more than I got on the web. Unfortunately, despite still existing in 2011, Usenet has become a spam hellhole and most discussions have moved to the web.
+ <p><span style="font-family: arial; font-size: small;">There is one area where the internet has gone backwards in the past 10 years and that's discussion sites. From 1992 to probably 2003, I got a huge amount of information using Usenet, more than I got on the web. Unfortunately, despite still existing in 2011, Usenet has become a spam hellhole and most discussions have moved to the web.
 <p />
 <div>If you go onto most of these sites, you'll probably see vBulletin, phpBB, BBPress or some other crime against humanity powering it. I must be one of the few technical people in Ireland who has made less than 10 posts on boards.ie since it started. Possibly less than 5. I only ever end up there if it's a google result. I value my sanity and time too much.</div>
 <p />
@@ -29,4 +29,4 @@
 <p />
 <p />
 </span></p>
-  
+ 

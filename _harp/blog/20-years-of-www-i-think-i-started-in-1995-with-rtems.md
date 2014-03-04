@@ -1,7 +1,7 @@
 #"20 Years of WWW - I think I started in 1995 with RTEMS"
 
 
-    <p><div class='p_embed p_image_embed'>
+ <p><div class='p_embed p_image_embed'>
 <a href="http://getfile7.posterous.com/getfile/files.posterous.com/conoroneill/AHPVPW79gmQ7EVat6kdy70uhwjXQmNbjx5U1Fy0TJTU1Y3ReMD1nhqpvWfMH/rtems2.png.scaled.1000.jpg"><img alt="Rtems2" height="262" src="http://getfile5.posterous.com/getfile/files.posterous.com/conoroneill/AzJka2PJ6pJkDhzihqAKk5q2Oy1RiMQf7crzrbjsTiQHKai0ig3tWaIvi11z/rtems2.png.scaled.500.jpg" width="500" /></a>
 </div>
 </p>
@@ -14,4 +14,4 @@
 <div>Somehow I found <a href="http://rtems.org/">RTEMS</a>, the&nbsp;<strong>Real-Time Executive for Missile Systems</strong>, renamed to the more palatable Real-Time Executive for Multiprocessor Systems. It was an OS developed for the US Army Missile Command in Alabama and was fully Open Source. It was also compatible with the Philips&nbsp;P90CE201&nbsp;variant of the 68000 embedded&nbsp;CPU we were using. I won't bore you with the details of compiling GCC cross-compilers on VAX but we had an <em>interesting </em>few months with RTEMS (and got a kick out of using a Missile OS in a Set Top Box). The attached screenshot from WaybackMachine from 1998 looks close to the one in 1995.</div>
 <p />
 <div>So in my mind the RTEMS site is the first real site I visited on the Web. Any idea what your's was?</div>
-  
+ 

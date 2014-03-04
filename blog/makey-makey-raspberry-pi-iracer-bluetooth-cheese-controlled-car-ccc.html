@@ -88,7 +88,7 @@ bluez-simple-agent hci0 00:12:05:09:94:26
 from evdev import InputDevice, list_devices
 devices = map(InputDevice, list_devices())
 for dev in devices:
-    print( &#39;%-20s %-32s %s&#39; % (dev.fn, dev.name, dev.phys) )
+ print( &#39;%-20s %-32s %s&#39; % (dev.fn, dev.name, dev.phys) )
 [/python]</p>
 <p>My MaKey MaKey comes up (with KB/Mouse/Joystick disconnected) as:</p>
 <p>[code]
@@ -105,32 +105,30 @@ import bluetooth
 import time
 from evdev import InputDevice, categorize, ecodes</p>
 <p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:</p>
-<pre><code>dev = InputDevice(&#39;/dev/input/event0&#39;)
-
-bd_addr = &amp;quot;00:12:05:09:94:26&amp;quot;
-port = 1
-sock = bluetooth.BluetoothSocket( bluetooth.RFCOMM )
-sock.connect((bd_addr, port))
-
-for event in dev.read_loop():
-    if event.type == ecodes.EV_KEY:
-        key_pressed = str(categorize(event))
-        if &#39;KEY_LEFT&#39; in key_pressed:
-            # 0x5X for left forward. 0x51 very slow. 0x5F fastest
-            sock.send(&#39;\x5A&#39;)
-        if &#39;KEY_RIGHT&#39; in key_pressed:
-            # 0x6X for right forward. 0x11 very slow. 0x1F fastest
-            sock.send(&#39;\x6A&#39;)
-        if &#39;KEY_DOWN&#39; in key_pressed:
-            # 0x2X for straight backward. 0x21 very slow. 0x2F fastest
-            sock.send(&#39;\x2A&#39;)
-        if &#39;KEY_UP&#39; in key_pressed:
-            # 0x1X for straight forward. 0x11 very slow. 0x1F fastest
-            sock.send(&#39;\x1A&#39;)
-        if &#39;KEY_SPACE&#39; in key_pressed:
-            #stop
-            sock.send(&#39;\x00&#39;)</code></pre>
-<p>[/python]</p>
+<p> dev = InputDevice(&#39;/dev/input/event0&#39;)</p>
+<p> bd_addr = &quot;00:12:05:09:94:26&quot;
+ port = 1
+ sock = bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+ sock.connect((bd_addr, port))</p>
+<p> for event in dev.read_loop():
+ if event.type == ecodes.EV_KEY:
+ key_pressed = str(categorize(event))
+ if &#39;KEY_LEFT&#39; in key_pressed:</p>
+<h1>0x5X for left forward. 0x51 very slow. 0x5F fastest</h1>
+<p> sock.send(&#39;\x5A&#39;)
+ if &#39;KEY_RIGHT&#39; in key_pressed:</p>
+<h1>0x6X for right forward. 0x11 very slow. 0x1F fastest</h1>
+<p> sock.send(&#39;\x6A&#39;)
+ if &#39;KEY_DOWN&#39; in key_pressed:</p>
+<h1>0x2X for straight backward. 0x21 very slow. 0x2F fastest</h1>
+<p> sock.send(&#39;\x2A&#39;)
+ if &#39;KEY_UP&#39; in key_pressed:</p>
+<h1>0x1X for straight forward. 0x11 very slow. 0x1F fastest</h1>
+<p> sock.send(&#39;\x1A&#39;)
+ if &#39;KEY_SPACE&#39; in key_pressed:</p>
+<h1>stop</h1>
+<p> sock.send(&#39;\x00&#39;)
+[/python]</p>
 <p>Note that this is extremely simple control with fixed speed just to prove the idea works. Real code will go up on GitHub when it has much more usable controls with automatic acceleration/deceleration etc and after I make it configurable with any i-Racer and with the MaKey MaKey on any USB port.</p>
 <p><h2>What&#39;s next?</h2>
 Apart from extra sensors and new outer shells, I want to do more playing with controllers. I have an Arduino Joystick shield, Arduino Nano and serial Bluetooth breakout board coming from China. It&#39;d be cool to make some sort of interesting custom controller case with the Arudino controlling the car. I may also get an <a href="http://arduino.cc/en/Main/ArduinoBoardEsplora">Arduino Esplora</a>.</p>

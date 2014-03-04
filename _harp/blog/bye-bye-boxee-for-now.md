@@ -1,7 +1,7 @@
 #"Bye Bye Boxee (for now)"
 
 
-    <p>I've been a <a href="http://www.boxee.tv/">Boxee</a> fanatic since I first installed it over two years ago. We had been running <a href="http://xbmc.org/">XBMC</a> on several old XBOXes (and still do) but they couldn't handle x.264 video or HDMI so when I built a media PC, I used Boxee. I am absolutely convinced their focus on social is the right way to go. Social watching of TV in 2011 is barely scratching the surface of what's possible.</p>
+ <p>I've been a <a href="http://www.boxee.tv/">Boxee</a> fanatic since I first installed it over two years ago. We had been running <a href="http://xbmc.org/">XBMC</a> on several old XBOXes (and still do) but they couldn't handle x.264 video or HDMI so when I built a media PC, I used Boxee. I am absolutely convinced their focus on social is the right way to go. Social watching of TV in 2011 is barely scratching the surface of what's possible.</p>
 <p />
 <div>But Brooklyn, we have a problem. Development on the non-Boxee-Box codebase has ground to a halt. All of their efforts are now on the Boxee Box. And rightly so. When you have VC investment, your job is to generate a return, not bug-fix free code for geeks. Particularly when you are a small team, you have to prioritise revenue generation.</div>
 <p />
@@ -14,4 +14,4 @@
 <div>I then tried a nightly build of XBMC and wow! All of the TV show preview stuff is brilliant, including episode synopses. Development is obviously moving ahead quickly.</div>
 <p />
 <div>I continue to recommend Boxee Boxes to anyone who asks me about media centres but I don't have $200 spare to buy something that I can already do via the media PC. Hopefully the Boxee guys will sort out the Ubuntu problems at some point and then I'll be back. But for now, XBMC it is.</div>
-  
+ 

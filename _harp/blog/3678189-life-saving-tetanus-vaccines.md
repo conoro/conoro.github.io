@@ -1,13 +1,13 @@
 #"3,678,189 life-saving tetanus vaccines"
 
 
-    <div class="posterous_bookmarklet_entry">
-      <blockquote><div>
-		<h3><a href="http://www.manicmammy.com/2010/02/19/terrific-response-from-irish-parents/" rel="bookmark">Terrific Response from Irish Parents</a></h3>
+ <div class="posterous_bookmarklet_entry">
+ <blockquote><div>
+ <h3><a href="http://www.manicmammy.com/2010/02/19/terrific-response-from-irish-parents/" rel="bookmark">Terrific Response from Irish Parents</a></h3>
 	
 	<p><b>Posted on</b> | February 19, 2010 | <a href="http://www.manicmammy.com/2010/02/19/terrific-response-from-irish-parents/#respond" title="Comment on Terrific Response from Irish Parents">No Comments</a></p>
 	
-	  
+ 
 	<p>I was happily stunned on Wednesday to receive the news that Irish parents were responsible for donating a phenomenal <em><strong>3,678,189</strong></em> life-saving tetanus vaccines between October and December 2009 as part of the Pampers, Fairy &amp; UNICEF Ireland 1 pack = 1 vaccine campaign. This figure represents a huge<br />
 213% Increase on the 2008 Campaign.</p>
 <p style="text-align: center;"><a href="http://www.manicmammy.com/wp-content/uploads/2010/02/pampers3.jpg"><img title="pampers" src="http://www.manicmammy.com/wp-content/uploads/2010/02/pampers3.jpg" height="112" alt="" width="150" style="margin-left: 150px; margin-right: 150px;" /></a></p><p></p>
@@ -20,10 +20,10 @@
 
 <p>
 	
-	</p><div><strong>Category:</strong> <a href="http://www.manicmammy.com/category/uncategorized/" title="View all posts in Miscellaneous" rel="category tag">Miscellaneous</a>,  <a href="http://www.manicmammy.com/category/parenting/" title="View all posts in Parenting" rel="category tag">Parenting</a><br /></div>
+	</p><div><strong>Category:</strong> <a href="http://www.manicmammy.com/category/uncategorized/" title="View all posts in Miscellaneous" rel="category tag">Miscellaneous</a>, <a href="http://www.manicmammy.com/category/parenting/" title="View all posts in Parenting" rel="category tag">Parenting</a><br /></div>
 	
 	
-			
+ 
 	-->
 	
 	<h3>Comments</h3>
@@ -32,9 +32,9 @@
 
 <div>
 
-			
+ 
 
-	 
+ 
 
 
 <p>Leave a Reply</p>
@@ -49,5 +49,5 @@
 	</div></blockquote>
 
 <div class="posterous_quote_citation">via <a href="http://www.manicmammy.com/2010/02/19/terrific-response-from-irish-parents/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+ManicmammysBlog+%28ManicMammy%27s+Blog%29&amp;utm_content=Google+Reader">manicmammy.com</a></div>
-    <p>Sometimes it's the simple ideas that work best. Well done P&G.</p></div>
-  
+ <p>Sometimes it's the simple ideas that work best. Well done P&G.</p></div>
+ 

@@ -1,7 +1,7 @@
 #"Avoid @wittertainment loss, install doubleTwist on Android"
 
 
-    <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
+ <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
 <a href="http://getfile2.posterous.com/getfile/files.posterous.com/conoroneill/lyCpcFAwcxuEuelCBAEzDcraaeBGwxuHpHnbwuyshkEJFhmzpyEFCqHHicxI/media_httpwwwdoubletw_phpcE.jpg.scaled1000.jpg"><img alt="Media_httpwwwdoubletw_phpce" height="301" src="http://getfile0.posterous.com/getfile/files.posterous.com/conoroneill/lyCpcFAwcxuEuelCBAEzDcraaeBGwxuHpHnbwuyshkEJFhmzpyEFCqHHicxI/media_httpwwwdoubletw_phpcE.jpg.scaled500.jpg" width="500" /></a>
 </div>
 
@@ -12,4 +12,4 @@
 <p>I immediately bought and installed doubleTwist on the phone and PC to stop this happening in future. It is now syncing all podcasts and music over wifi between the two so I have an offline backup and I don't have to worry about USB cables. Steve, it ain't post-PC if you still need to plug your iPhone into the PC.</p>
 <p>Of course, once Google releases the music app that they previewed last year at Google IO, then I can sync everything to the cloud.</p>
 </div>
-  
+ 

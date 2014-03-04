@@ -1,7 +1,7 @@
 #"The Utter Imbecilic Brain-dead Stupidity of the Amazon App Store for Android"
 
 
-    <p><span style="font-family: arial; font-size: small;">We Irish Android early adopters railed against Google for their slowness in making paid Apps available outside of a tiny group of countries. Finally last year Google got their act together and we're all now good buddies again. No more 3UK SIM tricks for me (except for Flixster, strangely). </span></p>
+ <p><span style="font-family: arial; font-size: small;">We Irish Android early adopters railed against Google for their slowness in making paid Apps available outside of a tiny group of countries. Finally last year Google got their act together and we're all now good buddies again. No more 3UK SIM tricks for me (except for Flixster, strangely). </span></p>
 <p />
 <div>Amazon has just announced their own App Store for Android. Just what the world needs, another stripped down Android app store with fewer apps than the built-in one. Sure sure, if you bought an Archos tablet or slightly dodgy no-name (Sonly Ericcsun maybe) Chinese phone, you won't have the official market but 2 minutes Googling for a workaround usually sorts that out.&nbsp;</div>
 <p />
@@ -21,4 +21,4 @@
 <p />
 <p />
 <p>&nbsp;</p>
-  
+ 

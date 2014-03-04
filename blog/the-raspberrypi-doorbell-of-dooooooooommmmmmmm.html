@@ -44,21 +44,21 @@ GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 while True:
-    if ( GPIO.input(22) == False ):
-        os.system(&#39;mplayer /home/pi/haunted_sounds/Howl.mp3 &amp;&#39;)
-        sleep(3);</p>
+ if ( GPIO.input(22) == False ):
+ os.system(&#39;mplayer /home/pi/haunted_sounds/Howl.mp3 &amp;&#39;)
+ sleep(3);</p>
 <h1>if ( GPIO.input(17) == False ):</h1>
 <h1>os.system(&#39;mplayer /home/pi/haunted_sounds/HomeAloneCountOf10.mp3 &amp;&#39;)</h1>
 <h1>sleep(3);</h1>
-<pre><code>if ( GPIO.input(23) == False ):
-    os.system(&#39;mplayer /home/pi/haunted_sounds/ReleaseTheHounds.wav &amp;amp;&#39;)
-    sleep(3);
-if ( GPIO.input(24) == False ):
-    os.system(&#39;mplayer /home/pi/haunted_sounds/Scream.wav &amp;amp;&#39;)
-    sleep(3);
-if ( GPIO.input(25) == False ):
-    os.system(&#39;mplayer /home/pi/haunted_sounds/CastleThunder.wav &amp;amp;&#39;)
-    sleep(4);</code></pre>
+<p> if ( GPIO.input(23) == False ):
+ os.system(&#39;mplayer /home/pi/haunted_sounds/ReleaseTheHounds.wav &amp;&#39;)
+ sleep(3);
+ if ( GPIO.input(24) == False ):
+ os.system(&#39;mplayer /home/pi/haunted_sounds/Scream.wav &amp;&#39;)
+ sleep(3);
+ if ( GPIO.input(25) == False ):
+ os.system(&#39;mplayer /home/pi/haunted_sounds/CastleThunder.wav &amp;&#39;)
+ sleep(4);</p>
 <p>[/python]</p>
 <p>This diagram of the RPi pin-out was invaluable:</p>
 <p><a href="http://elinux.org/RPi_Low-level_peripherals#Referring_to_pins_on_the_Expansion_header"><img class="alignnone size-full wp-image-894" title="GPIOs" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/11/GPIOs.png" alt="" width="254" height="581" /></a></p>

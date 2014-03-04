@@ -52,21 +52,21 @@ GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 while True:
-    if ( GPIO.input(22) == False ):
-        os.system('mplayer /home/pi/haunted_sounds/Howl.mp3 &amp;')
-        sleep(3);
-#    if ( GPIO.input(17) == False ):
-#        os.system('mplayer /home/pi/haunted_sounds/HomeAloneCountOf10.mp3 &amp;')
-#        sleep(3);
-    if ( GPIO.input(23) == False ):
-        os.system('mplayer /home/pi/haunted_sounds/ReleaseTheHounds.wav &amp;')
-        sleep(3);
-    if ( GPIO.input(24) == False ):
-        os.system('mplayer /home/pi/haunted_sounds/Scream.wav &amp;')
-        sleep(3);
-    if ( GPIO.input(25) == False ):
-        os.system('mplayer /home/pi/haunted_sounds/CastleThunder.wav &amp;')
-        sleep(4);
+ if ( GPIO.input(22) == False ):
+ os.system('mplayer /home/pi/haunted_sounds/Howl.mp3 &amp;')
+ sleep(3);
+# if ( GPIO.input(17) == False ):
+# os.system('mplayer /home/pi/haunted_sounds/HomeAloneCountOf10.mp3 &amp;')
+# sleep(3);
+ if ( GPIO.input(23) == False ):
+ os.system('mplayer /home/pi/haunted_sounds/ReleaseTheHounds.wav &amp;')
+ sleep(3);
+ if ( GPIO.input(24) == False ):
+ os.system('mplayer /home/pi/haunted_sounds/Scream.wav &amp;')
+ sleep(3);
+ if ( GPIO.input(25) == False ):
+ os.system('mplayer /home/pi/haunted_sounds/CastleThunder.wav &amp;')
+ sleep(4);
 
 [/python]
 

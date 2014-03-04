@@ -1,7 +1,7 @@
 #"Android 4.0 (ICS/Ice Cream Sandwich) is Pretty Lovely"
 
 
-    <p>I've got to hand it to Google, ICS is an absolute pleasure to use. Everything feels integrated and consistent and beautiful. It's really interesting how much of a difference even a font change can make.</p>
+ <p>I've got to hand it to Google, ICS is an absolute pleasure to use. Everything feels integrated and consistent and beautiful. It's really interesting how much of a difference even a font change can make.</p>
 <p>I just played around with an early community Alpha firmware of it for the HTC Sensation and even at this buggy stage, I want to switch. The iPad2 I've been using for the past 10 days feels like a clunky locked-down VTech toy in comparison. Looking forward to trying out ICS on the Asus Transformer Prime.</p>
 <p>Here's a few lovely screenshots.</p>
 <p><div class='p_embed p_image_embed'>
@@ -19,4 +19,4 @@
 <div class='p_see_full_gallery'><a href="http://conoroneill.posterous.com/android-40-icsice-cream-sandwich-is-pretty-lo">See the full gallery on Posterous</a></div>
 </div>
 </p>
-  
+ 

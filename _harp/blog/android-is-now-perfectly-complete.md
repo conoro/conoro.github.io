@@ -1,7 +1,7 @@
 #"Android is now perfectly complete"
 
 
-    <p>You thought this post was going to be about turn-by-turn voice navigation on Google Maps for Ireland didn't you? Hah! (That's the next post).</p>
+ <p>You thought this post was going to be about turn-by-turn voice navigation on Google Maps for Ireland didn't you? Hah! (That's the next post).</p>
 <p>No, this is far more important.</p>
 <p>There is now a decent ZX Spectrum emulator for Android called Xpectroid and I've been running the games I wrote from 1984-1986 on it.</p>
 <p>Here's a few screenshots of it in action. Having a few usability and sound problems but dammit, <strong>I can run Z80 assembler programs I wrote 25 years ago on my phone</strong>. Aren't computers great? As many Irish grannies would say.</p>
@@ -34,4 +34,4 @@ Cent The Pete. I think this was published in Your Spectrum/Your Sinclair. Not 10
 <p>I then started my magnum opus which was to be a funny platform/puzzle game in the style of Everyone's A Wally and Jet Set Willy. I wrote 10s of K of assembler on paper but never got it into a computer to try out. Many months spent writing edge detectionalgorithmsto sense items impacting each other.Then girls, college and drinkin got in the way.Some day I'll pay someone to type it all in and see what it does!</p>
 <p></p>
 <p></p>
-  
+ 

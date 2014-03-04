@@ -107,7 +107,7 @@ In a Python shell, (sudo python) run the following to find out your Keyboard or 
 from evdev import InputDevice, list_devices
 devices = map(InputDevice, list_devices())
 for dev in devices:
-    print( '%-20s %-32s %s' % (dev.fn, dev.name, dev.phys) )
+ print( '%-20s %-32s %s' % (dev.fn, dev.name, dev.phys) )
 [/python]
 
 My MaKey MaKey comes up (with KB/Mouse/Joystick disconnected) as:
@@ -129,31 +129,31 @@ from evdev import InputDevice, categorize, ecodes
 
 if __name__ == '__main__':
 
-    dev = InputDevice('/dev/input/event0')
+ dev = InputDevice('/dev/input/event0')
 
-    bd_addr = &quot;00:12:05:09:94:26&quot;
-    port = 1
-    sock = bluetooth.BluetoothSocket( bluetooth.RFCOMM )
-    sock.connect((bd_addr, port))
+ bd_addr = &quot;00:12:05:09:94:26&quot;
+ port = 1
+ sock = bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+ sock.connect((bd_addr, port))
 
-    for event in dev.read_loop():
-        if event.type == ecodes.EV_KEY:
-            key_pressed = str(categorize(event))
-            if 'KEY_LEFT' in key_pressed:
-                # 0x5X for left forward. 0x51 very slow. 0x5F fastest
-                sock.send('\x5A')
-            if 'KEY_RIGHT' in key_pressed:
-                # 0x6X for right forward. 0x11 very slow. 0x1F fastest
-                sock.send('\x6A')
-            if 'KEY_DOWN' in key_pressed:
-                # 0x2X for straight backward. 0x21 very slow. 0x2F fastest
-                sock.send('\x2A')
-            if 'KEY_UP' in key_pressed:
-                # 0x1X for straight forward. 0x11 very slow. 0x1F fastest
-                sock.send('\x1A')
-            if 'KEY_SPACE' in key_pressed:
-                #stop
-                sock.send('\x00')
+ for event in dev.read_loop():
+ if event.type == ecodes.EV_KEY:
+ key_pressed = str(categorize(event))
+ if 'KEY_LEFT' in key_pressed:
+ # 0x5X for left forward. 0x51 very slow. 0x5F fastest
+ sock.send('\x5A')
+ if 'KEY_RIGHT' in key_pressed:
+ # 0x6X for right forward. 0x11 very slow. 0x1F fastest
+ sock.send('\x6A')
+ if 'KEY_DOWN' in key_pressed:
+ # 0x2X for straight backward. 0x21 very slow. 0x2F fastest
+ sock.send('\x2A')
+ if 'KEY_UP' in key_pressed:
+ # 0x1X for straight forward. 0x11 very slow. 0x1F fastest
+ sock.send('\x1A')
+ if 'KEY_SPACE' in key_pressed:
+ #stop
+ sock.send('\x00')
 [/python]
 
 Note that this is extremely simple control with fixed speed just to prove the idea works. Real code will go up on GitHub when it has much more usable controls with automatic acceleration/deceleration etc and after I make it configurable with any i-Racer and with the MaKey MaKey on any USB port.

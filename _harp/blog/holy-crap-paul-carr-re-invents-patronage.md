@@ -1,7 +1,7 @@
 #"Holy Crap, Paul Carr re-invents patronage"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <blockquote class="posterous_long_quote">Instead what someone needs to build is a <em>macro</em>payment service. A way to make a one-off payment to a specific creator to thank them for their entire body of work. If you insist on using a &lsquo;micro&rsquo; word, then the correct one is &lsquo;micropatronage&rsquo;: an affordable version of the age-old practice of wealthy patrons supporting artists in substantive, public ways &ndash; ways that stroke the patron&rsquo;s ego and/or guarantee their place in heaven.</blockquote>
 <div class="posterous_quote_citation">via <a href="http://techcrunch.com/2010/02/24/no-such-thing-as-a-free-launch/">techcrunch.com</a></div>
 <p>Paul is a bollix. A very snarky, very funny bollix. And like many bollixes, he is also right more times than not.</p>
@@ -11,4 +11,4 @@
 <p>"Guiltvault - So Matthew Smith can finally afford to make Manic Miner II".</p>
 <p>Someone do it now, please.</p>
 </div>
-  
+ 

@@ -1,7 +1,7 @@
 #"Location Based Marketing, Ireland and Foursquare"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <blockquote class="posterous_long_quote">Over 40 Million <a href="http://voip-dev.com/cubic/index.html">check-ins</a> why isnt your business there?</blockquote>
 <div class="posterous_quote_citation">via <a href="http://patphelan.net/how-to-get-your-business-ready-for-location-based-marketing/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+RoamFree+%28Pat+Phelan+Dot+Net%29">patphelan.net</a>
 </div>
@@ -18,4 +18,4 @@
 <p>UPDATE 1: I hope GEO search on Foursquare (web-site) is broken otherwise it's a lot worse than I thought. In Greater Cork (population approx 250k), it is listing 50 venues and 25 people. I'll do more digging to see if I can set a centre and radius on that. Something we have in the LouderVoice Reviews API :-)</p>
 <p>UPDATE 2: Whew, GEO search is crap. It's just returning venues/people with "Cork" in their name. More data as I dig in.</p>
 </div>
-  
+ 

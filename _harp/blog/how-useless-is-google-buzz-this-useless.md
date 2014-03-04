@@ -1,7 +1,7 @@
 #"How useless is Google Buzz? This useless."
 
 
-    <p>In the latest of my tough love posts about Buzz (tagline "We're moany bitches cos we care"), I take a screencast of what was displayed to me when I checked Buzz this morning:</p>
+ <p>In the latest of my tough love posts about Buzz (tagline "We're moany bitches cos we care"), I take a screencast of what was displayed to me when I checked Buzz this morning:</p>
 <p><iframe src="http://www.youtube.com/embed/I8d_ObDycAI?wmode=transparent" allowfullscreen frameborder="0" height="417" width="500"></iframe></p>
 <p>6 weeks later and they still think this is acceptable.</p>
 <p>TURN OFF THE GODDAMMED EXTERNAL FEEDS IN BUZZ NOW.</p>
@@ -11,4 +11,4 @@
 <p>Apologies to @interactivemark for using his Friendfeed stream import in Buzz to highlight the problem.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

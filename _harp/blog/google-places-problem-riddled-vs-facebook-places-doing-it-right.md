@@ -1,7 +1,7 @@
 #"Google Places Problem-Riddled vs Facebook Places Doing It Right"
 
 
-    <p>This post has been in my head for a very long time and it'll probably still not get expressed correctly, but here goes. I am convinced that Google is heading in a disastrous direction with their Local efforts and it is bad for businesses, bad for users and bad for Google.</p>
+ <p>This post has been in my head for a very long time and it'll probably still not get expressed correctly, but here goes. I am convinced that Google is heading in a disastrous direction with their Local efforts and it is bad for businesses, bad for users and bad for Google.</p>
 <p><strong><span style="font-size: medium;">Fanboi</span></strong></p>
 <p>I have been an unapologetic Google fanboi since the day I first entered a search term when they were on the Stanford domain and I immediately stopped using Altavista, Yahoo and Excite forever. I now spend my day on my PC and on my Android phone, using GMail, writing docs/spreadsheets in Google Docs and searching. By and large all of those experiences are superb except for one; Local Search.</p>
 <p>Everyone knows how important Local is. Google didn't move Marissa Mayer over to run their efforts for fun, it's the next big landgrab. Most of Google's effort around this have centered on Google Places and in less than a year they have seriously damaged their credibility and gone against their own founding principles.</p>
@@ -47,4 +47,4 @@
 <p><strong><span style="font-size: medium;">Phew</span></strong></p>
 <p>Like I said this stuff has been bouncing around in my head for ages. Overly long and rambling I know. Am I totally off the wall with this?</p>
 <p>&nbsp;</p>
-  
+ 

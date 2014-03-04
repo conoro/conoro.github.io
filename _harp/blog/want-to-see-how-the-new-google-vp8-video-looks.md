@@ -1,7 +1,7 @@
 #"Want to see how the new Google VP8 video looks?"
 
 
-    <p><div class='p_embed p_image_embed'>
+ <p><div class='p_embed p_image_embed'>
 <a href="http://getfile1.posterous.com/getfile/files.posterous.com/conoroneill/QJRSXk4ro9qUZIx3RRfNzqz5e2ofgeMM9qp1QFHFRC5gmfhp7MRmFT0jW7qs/prince.jpg"><img alt="Prince" height="321" src="http://getfile2.posterous.com/getfile/files.posterous.com/conoroneill/25wu3wCb4147ijkB3flWkTMPIX6C3jLGJecjYMcEsm5GQ14n76aL6tExURmq/prince.jpg.scaled.500.jpg" width="500" /></a>
 </div>
 </p>
@@ -21,4 +21,4 @@
 <li>The lack of a decent alternative to Flash as a delivery mechanism for video is why it thrived in the same period</li>
 <li>Let's hope we see VP8 and the <a href="http://www.webmproject.org/users/">WebM project</a> enabling a whole new generation of video products and businesses.</li>
 </ol>
-  
+ 

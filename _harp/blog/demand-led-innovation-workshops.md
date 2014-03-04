@@ -1,7 +1,7 @@
 #"Demand Led Innovation Workshops"
 
 
-    <p>I'll be honest, I see the word "innovation" and I instantly picture Dilbert's PHB telling them to leverage synergy. It is a word that has effectively become meaningless. But when it is allied to action, then I'll take another look.</p>
+ <p>I'll be honest, I see the word "innovation" and I instantly picture Dilbert's PHB telling them to leverage synergy. It is a word that has effectively become meaningless. But when it is allied to action, then I'll take another look.</p>
 <p>I was contacted a while back by the guys in Innovator.ie about an Innovation Workshop but I mis-read the intent and thought it was just for those in the Civil Security Sector. It was only when someone else clarified it for me that I realised what it was all about and it looks very interesting indeed.</p>
 <p>This is <a href="http://www.innovator.ie/blog/?p=85">the language that caught my eye</a>:</p>
 <blockquote class="posterous_short_quote">
@@ -34,4 +34,4 @@
 <p>&nbsp;</p>
 </p>
 </p>
-  
+ 

@@ -1,7 +1,7 @@
 #"Some HTC Desire Problems"
 
 
-    <p>I've had the Desire for a while now and generally I'm a huge fan. Best phone I've ever owned. But there are some big glitches which drive me mad and a lot of them arerelatedto the RF bits.</p>
+ <p>I've had the Desire for a while now and generally I'm a huge fan. Best phone I've ever owned. But there are some big glitches which drive me mad and a lot of them arerelatedto the RF bits.</p>
 <p>In noparticularorder:</p>
 <ul>
 <li>Loses ability to connect to known+remembered Wifi access points and I have to disable/re-enable Wifi to get it to work. Particularly annoying when you were relying on it to download the lastest podcasts overnight and it couldn't.</li>
@@ -24,4 +24,4 @@
 </ul>
 <p>So that's the bad stuff. Plenty of good stuff coming tomorrow or Friday.</p>
 <p></p>
-  
+ 

@@ -17,14 +17,16 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>CODE (based on the Adafruit and Sparkfun sample code):</p>
 <p>[sourcecode]
 /<strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>*</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> 
-  This is an example for the Adafruit Thermocouple Sensor w/MAX31855K</p>
-<h2>  Designed specifically to work with the Adafruit Thermocouple Sensor</h2>
+ This is an example for the Adafruit Thermocouple Sensor w/MAX31855K</p>
+<h2> Designed specifically to work with the Adafruit Thermocouple Sensor</h2>
 <p>&gt; <a href="https://www.adafruit.com/products/269">https://www.adafruit.com/products/269</a></p>
-<p>  These displays use SPI to communicate, 3 pins are required to<br>  interface
-  Adafruit invests time and resources providing this open source code, 
-  please support Adafruit and open-source hardware by purchasing 
-  products from Adafruit!</p>
-<p>  Written by Limor Fried/Ladyada for Adafruit Industries.<br>  BSD license, all text above must be included in any redistribution
+<p> These displays use SPI to communicate, 3 pins are required to 
+ interface
+ Adafruit invests time and resources providing this open source code, 
+ please support Adafruit and open-source hardware by purchasing 
+ products from Adafruit!</p>
+<p> Written by Limor Fried/Ladyada for Adafruit Industries. 
+ BSD license, all text above must be included in any redistribution
  <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>/</p>
 <h1>include &quot;Adafruit_MAX31855.h&quot;</h1>
 <h1>include &lt;SoftwareSerial.h&gt;</h1>
@@ -36,37 +38,37 @@ int thermoDO = 3;</p>
 Adafruit_MAX31855 thermocouple(thermoCLK, thermoCS, thermoDO);
 SoftwareSerial mySerial(6,2); // pin 2 = TX, pin 3 = RX (unused)</p>
 <p>void setup() {
-  mySerial.begin(9600);
-  Serial.begin(9600);
-  delay(500);
-  mySerial.write(254); // move cursor to beginning of first line
-  mySerial.write(128);
-  mySerial.write(&quot;                &quot;); // clear display
-  mySerial.write(&quot;                &quot;);
-  mySerial.write(&quot;Hello, Thermocouple!&quot;);</p>
-<p>  // wait for MAX chip to stabilize
-  delay(1000);
+ mySerial.begin(9600);
+ Serial.begin(9600);
+ delay(500);
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);
+ mySerial.write(&quot;Hello, Thermocouple!&quot;);</p>
+<p> // wait for MAX chip to stabilize
+ delay(1000);
 }</p>
 <p>char tempstring[16];
 void loop() {
-  // basic readout test, just print the current temp
-  mySerial.write(254); // move cursor to beginning of first line
-  mySerial.write(128);
-  mySerial.write(&quot;                &quot;); // clear display
-  mySerial.write(&quot;                &quot;);</p>
-<p>  double c = thermocouple.readCelsius();
-  if (isnan(c)) 
-  {
-    mySerial.write(&quot;T/C Problem&quot;);
-  } 
-  else 
-  {
-     mySerial.write(&quot;C = &quot;); 
-     mySerial.write(dtostrf(c,4,1,tempstring));
-     Serial.println(c);
-     mySerial.write(&quot;  &quot;); 
-   }</p>
-<p>   delay(1000);
+ // basic readout test, just print the current temp
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);</p>
+<p> double c = thermocouple.readCelsius();
+ if (isnan(c)) 
+ {
+ mySerial.write(&quot;T/C Problem&quot;);
+ } 
+ else 
+ {
+ mySerial.write(&quot;C = &quot;); 
+ mySerial.write(dtostrf(c,4,1,tempstring));
+ Serial.println(c);
+ mySerial.write(&quot; &quot;); 
+ }</p>
+<p> delay(1000);
 }
 [/sourcecode]</p>
 <aside class="center author"><img src="/images/CliveStrong.jpg" alt="Conor O'Neill"/><h2 class="sm">Conor O'Neill</h2><p>Is an Irish technology guy. One of Ireland's first bloggers.</p><p class="links"><a href="/authors/admin">Posts</a><span>•</span><a href="http://twitter.com/conoro">Twitter</a><span>•</span><a href="https://plus.google.com/+ConorONeill/posts">Google+</a><span>•</span><a href="https://github.com/conoro">GitHub</a></p></aside><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'conor';

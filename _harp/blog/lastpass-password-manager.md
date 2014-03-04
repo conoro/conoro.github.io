@@ -1,14 +1,14 @@
 #"LastPass Password Manager"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <blockquote>
 <div>
 <div>
 <h3>LastPass <span>by <a href="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahdmailto:joe@lastpass.com">joe@lastpass.com</a></span></h3>
-<div><span><span><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_half-f3f7fc.gif" height="9" alt="" width="10" /></span></span> <span>(<span><span>785</span><span>&nbsp;Ratings</span></span>)             - 57,762 users             - Weekly installs: 20,217 </span></div>
+<div><span><span><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_full-f3f7fc.gif" height="9" alt="" width="10" /><img src="https://chrome.google.com/extensions/detail/hdokiejnpimakedhajhdlcegeplioahd/reviews/images/small_star_half-f3f7fc.gif" height="9" alt="" width="10" /></span></span> <span>(<span><span>785</span><span>&nbsp;Ratings</span></span>) - 57,762 users - Weekly installs: 20,217 </span></div>
 </div>
-<p>LastPass is a free password manager and form filler.  LastPass is also available for Firefox, Internet Explorer and Safari (Mac).</p>
+<p>LastPass is a free password manager and form filler. LastPass is also available for Firefox, Internet Explorer and Safari (Mac).</p>
 <div>
 <table>
 
@@ -31,4 +31,4 @@
 <p>This morning I discovered LastPass. Not only is it an online solution that integrates with your browser but it is cross-platform and cross-browser and imports from KeePass. Annnnd, does iPhone and Symbian S60.</p>
 <p>I'll report back on how well it works.</p>
 </div>
-  
+ 

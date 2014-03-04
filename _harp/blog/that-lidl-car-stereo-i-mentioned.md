@@ -1,8 +1,8 @@
 #"That Lidl car Stereo I mentioned"
 
 
-    <div class="posterous_bookmarklet_entry">
-      <blockquote class="posterous_long_quote"><span class="detailheadline">Bluetooth MP3/CD Car Radio</span><p>
+ <div class="posterous_bookmarklet_entry">
+ <blockquote class="posterous_long_quote"><span class="detailheadline">Bluetooth MP3/CD Car Radio</span><p>
  </p><table border="0">
  <tr>
  <td>
@@ -25,7 +25,7 @@
 </li><li type="disc">Price per item</li></ul></td></tr></table></blockquote>
 
 <div class="posterous_quote_citation">via <a href="http://www.lidl.ie/IE/home.nsf/pages/c.o.20100211.p.Bluetooth_MP3_CD_Car_Radio">lidl.ie</a></div>
-    <p>In yesterday's post about podcast listening I mentioned that I use A2DP  bluetooth to my car stereo. The latest version of that stereo is going to be in Lidl this Thursday on 11/02. Highly recommended except for the terrible radio reception in West Cork.
+ <p>In yesterday's post about podcast listening I mentioned that I use A2DP bluetooth to my car stereo. The latest version of that stereo is going to be in Lidl this Thursday on 11/02. Highly recommended except for the terrible radio reception in West Cork.
 </p><p>70 is a total bargain for this.
 </p><p>Many cars will need an adapter to hook their speakers etc into the ISO connection on the Lidl box. Ditto the antenna connector. Leave a comment if you want links to where to buy those and I'll fish them out. Only a few quid.</p></div>
-  
+ 

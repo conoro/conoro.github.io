@@ -61,36 +61,36 @@ bus = smbus.SMBus(0)</p>
 <p>bus.write_byte_data(0x52,0x40,0x00)
 time.sleep(0.1)
 while True:
-  try:
-    bus.write_byte(0x52,0x00)
-    time.sleep(0.1)
-    data0 =  bus.read_byte(0x52)
-    data1 =  bus.read_byte(0x52)
-    data2 =  bus.read_byte(0x52)
-    data3 =  bus.read_byte(0x52)
-    data4 =  bus.read_byte(0x52)
-    data5 =  bus.read_byte(0x52)
-    joy_x = data0
-    joy_y = data1
-    accel_x = (data2 &lt;&lt; 2) + ((data5 &amp; 0x0c) &gt;&gt; 2)
-    accel_y = (data3 &lt;&lt; 2) + ((data5 &amp; 0x30) &gt;&gt; 4)
-    accel_z = (data4 &lt;&lt; 2) + ((data5 &amp; 0xc0) &gt;&gt; 6)
-    buttons = data5 &amp; 0x03
-    button_c = (buttons == 1) or (buttons == 2)
-    button_z = (buttons == 0) or (buttons == 2)
-    print &#39;Jx: %s Jy: %s Ax: %s Ay: %s Az: %s Bc: %s Bz: %s&#39; % (joy_x, joy_y, accel_x, accel_y, accel_z, button_c, button_z)
-  except IOError as e:
-    print e
+ try:
+ bus.write_byte(0x52,0x00)
+ time.sleep(0.1)
+ data0 = bus.read_byte(0x52)
+ data1 = bus.read_byte(0x52)
+ data2 = bus.read_byte(0x52)
+ data3 = bus.read_byte(0x52)
+ data4 = bus.read_byte(0x52)
+ data5 = bus.read_byte(0x52)
+ joy_x = data0
+ joy_y = data1
+ accel_x = (data2 &lt;&lt; 2) + ((data5 &amp; 0x0c) &gt;&gt; 2)
+ accel_y = (data3 &lt;&lt; 2) + ((data5 &amp; 0x30) &gt;&gt; 4)
+ accel_z = (data4 &lt;&lt; 2) + ((data5 &amp; 0xc0) &gt;&gt; 6)
+ buttons = data5 &amp; 0x03
+ button_c = (buttons == 1) or (buttons == 2)
+ button_z = (buttons == 0) or (buttons == 2)
+ print &#39;Jx: %s Jy: %s Ax: %s Ay: %s Az: %s Bc: %s Bz: %s&#39; % (joy_x, joy_y, accel_x, accel_y, accel_z, button_c, button_z)
+ except IOError as e:
+ print e
 [/python]</p>
 <p>You interpret the Nunchuck data as follows:</p>
 <p>[code]
-Byte    Description                                     Values of sample Nunchuk
-1       X-axis value of the analog stick                Min(Full Left):0x1E / Medium(Center):0x7E / Max(Full Right):0xE1
-2       Y-axis value of the analog stick                Min(Full Down):0x1D / Medium(Center):0x7B / Max(Full Right):0xDF
-3       X-axis acceleration value                       Min(at 1G):0x48 / Medium(at 1G):0x7D / Max(at 1G):0xB0
-4       Y-axis acceleration value                       Min(at 1G):0x46 / Medium(at 1G):0x7A / Max(at 1G):0xAF
-5       Z-axis acceleration value                       Min(at 1G):0x4A / Medium(at 1G):0x7E / Max(at 1G):0xB1
-6       Button state (Bits 0/1) / acceleration LSB     Bit 0: &quot;Z&quot;-Button (0 = pressed, 1 = released) / Bit 1: &quot;C&quot; button (0 = pressed, 1 = released) / Bits 2-3: X acceleration LSB / Bits 4-5: Y acceleration LSB / Bits 6-7: Z acceleration LSB
+Byte Description Values of sample Nunchuk
+1 X-axis value of the analog stick Min(Full Left):0x1E / Medium(Center):0x7E / Max(Full Right):0xE1
+2 Y-axis value of the analog stick Min(Full Down):0x1D / Medium(Center):0x7B / Max(Full Right):0xDF
+3 X-axis acceleration value Min(at 1G):0x48 / Medium(at 1G):0x7D / Max(at 1G):0xB0
+4 Y-axis acceleration value Min(at 1G):0x46 / Medium(at 1G):0x7A / Max(at 1G):0xAF
+5 Z-axis acceleration value Min(at 1G):0x4A / Medium(at 1G):0x7E / Max(at 1G):0xB1
+6 Button state (Bits 0/1) / acceleration LSB Bit 0: &quot;Z&quot;-Button (0 = pressed, 1 = released) / Bit 1: &quot;C&quot; button (0 = pressed, 1 = released) / Bits 2-3: X acceleration LSB / Bits 4-5: Y acceleration LSB / Bits 6-7: Z acceleration LSB
 [/code]</p>
 <p>However, despite multiple attempts, I haven&#39;t been able to read reliably from the Nunchuck on the Raspberry Pi. An appreciable percentage of the data comes back as 0xFF. I have no idea if it&#39;s the wiring, the RPi CPU, the I2C driver in Linux, the I2C library in Python, timing or the code above. I don&#39;t believe the problem is the Nunchuck as I now have it working 100% reliably on the Arduino. In any case, the RPi was only ever going to be the proof of concept platform as we obviously need something more portable and less power hungry if we are going to chase a remote control car around the house.</p>
 <p><h2>Using Arduino and HC-05</h2>

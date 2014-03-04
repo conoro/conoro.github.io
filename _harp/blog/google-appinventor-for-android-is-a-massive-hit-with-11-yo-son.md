@@ -1,7 +1,7 @@
 #"Google AppInventor for Android is a Massive Hit with 11 y/o Son"
 
 
-    <p>When <a href="http://appinventor.googlelabs.com/about/">Google AppInventor</a> launched I was really excited and signed up for the pre-release immediately. The idea of a drag n drop application creator for Android that was kid-friendly sounded fantastic. Of course all I did was start it up and play for 10 minutes before forgetting about it and ADHDing over to the next cool thing.</p>
+ <p>When <a href="http://appinventor.googlelabs.com/about/">Google AppInventor</a> launched I was really excited and signed up for the pre-release immediately. The idea of a drag n drop application creator for Android that was kid-friendly sounded fantastic. Of course all I did was start it up and play for 10 minutes before forgetting about it and ADHDing over to the next cool thing.</p>
 <p>Then a few months back I came up with an idea for an Android App which would pull info from a specific RSS feed and do something useful with it. But apart from a horrific hack involving running a webapp on Google AppEngine, it seems AppInventor has no real ability to interface with Web Services. So I dropped it again.</p>
 <p>This afternoon the youngfella asked again about creating games on Android. We'd bounced the idea around a few times previously when he was using my old G1, but we'd just never got around to it.</p>
 <p>So we finally sat down with his knackered old Ubuntu laptop and my knackered old HTC G1 and got started.</p>
@@ -39,4 +39,4 @@
 <p>I'm thrilled to see him so excited about creating something rather than just consuming media. It's the way I want all of our kids to be.</p>
 <p>As I said when it launched, AppInventor has the potential to be the ZX Spectrum, C64 or BBC Micro of this generation. But Google needs to put more effort into expanding its capabilities. Imagine what kids could build with easy access to YouTube and Picasa APIs.</p>
 <p>&nbsp;</p>
-  
+ 

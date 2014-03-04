@@ -1,7 +1,7 @@
 #"PAYG data effectively 4x more on 3IRL than 3UK......in Ireland"
 
 
-    <p>I've mentioned my Pay As You Go Three UK SIM many times on Twitter. The value and customer friendliness of it is still unbeatable. Walk into a Three UK store, give them &pound;10 and get a SIM with a ton of minutes, texts and 150MB data that lasts 90 days.Top it up with another tenner for good measure and that doesn't expire.</p>
+ <p>I've mentioned my Pay As You Go Three UK SIM many times on Twitter. The value and customer friendliness of it is still unbeatable. Walk into a Three UK store, give them &pound;10 and get a SIM with a ton of minutes, texts and 150MB data that lasts 90 days.Top it up with another tenner for good measure and that doesn't expire.</p>
 <p>If you use that SIM in Ireland (ROI), they text you to say that you get 10p per min call, free to receive, 10p per SMS and 10p/MB for data.</p>
 <p>Now go to the Three Ireland site and look at their PAYG data deals. Oh that's right, you get no data included with your &euro;10 Free SIM. So how do you get data?</p>
 <p>You can get 1GB per month add-on for &euro;9.99. Perhaps someone in 3 Ireland can explain how a per month charge = Pay As You Go?</p>
@@ -12,4 +12,4 @@
 <p>You'll find your friendly Three UK Store at "3 STORE, 48A - 49 Buttercrane Shopping Centre, Newry, BT35 8HJ"</p>
 <p>Small warning tho. Don't use it to receive calls/texts in the South. The people contacting you will be gouged by their local Irish mobile operator.</p>
 <p>&nbsp;</p>
-  
+ 

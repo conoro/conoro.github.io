@@ -1,7 +1,7 @@
 #"Android Bing Tastic"
 
 
-    <p><div class='p_embed p_image_embed'>
+ <p><div class='p_embed p_image_embed'>
 <img alt="Screenshot_1" height="800" src="http://getfile6.posterous.com/getfile/files.posterous.com/temp-2010-12-16/AxdGwyiapulCEzwncHzgrehdHjxmAggfgcxkrgfdFHxGdxfIkhcbEuooBBhD/screenshot_1.png.scaled500.png" width="480" />
 </div>
 </p>
@@ -10,4 +10,4 @@
 <img alt="Screenshot" height="800" src="http://getfile7.posterous.com/getfile/files.posterous.com/temp-2010-12-16/GJxEixkCgFwveAdemryjnwcGuDDgavqjxdDfnbvmCnjxDEBjbeslFHCzDpDj/screenshot.png.scaled500.png" width="480" />
 </div>
 </p>
-  
+ 

@@ -1,7 +1,7 @@
 #"Really Amazon, my Facebook Friends like Monty Python? Wow!"
 
 
-    <p>You can now connect your Amazon account to your Facebook account. The idea being that stuff your friends like might also appeal to you.</p>
+ <p>You can now connect your Amazon account to your Facebook account. The idea being that stuff your friends like might also appeal to you.</p>
 <p>I'm not so sure when it comes to purchasing.</p>
 <p>I don't have the same taste in movies as my wife, I'm not a vegan like my old college buddy Bernard, I don't read the same books as my nephew Tadhg and I'm not a big fan of pets like my sisters.</p>
 <p>But hey, I'm a click-junkie so I set it up and this is what it gave me:</p>
@@ -22,4 +22,4 @@ A bunch of blindingly obvious "You're 42, of course you like The Godfather" plus
 <p>Purchasing is not the same as Liking YouTube clips or sharing jokes.Something far more powerful like <a href="http://hunch.com/">Hunch</a> is required.</p>
 <p>And as I said on Facebook earlier, I'm be stunned if FB doesn't buy them this year.</p>
 <p></p>
-  
+ 

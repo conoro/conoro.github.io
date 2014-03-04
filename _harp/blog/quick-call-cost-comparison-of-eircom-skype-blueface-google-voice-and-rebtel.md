@@ -1,7 +1,7 @@
 #"Quick Call Cost Comparison of Eircom, Skype, Blueface, Google Voice and Rebtel"
 
 
-    <p>We run all of our business phone comms on Blueface (Irish number), Skype (UK number) and Google Voice (US Number). I was doing some checking on dial-out pricing on those services and others over the weekend and collected this initial pricing comparison. Thought it might be useful. Note that these are all Pay As You Go prices, except Eircom which is the home Talktime Chatter package. Most of them offer big discounts if you pay a monthly sub.</p>
+ <p>We run all of our business phone comms on Blueface (Irish number), Skype (UK number) and Google Voice (US Number). I was doing some checking on dial-out pricing on those services and others over the weekend and collected this initial pricing comparison. Thought it might be useful. Note that these are all Pay As You Go prices, except Eircom which is the home Talktime Chatter package. Most of them offer big discounts if you pay a monthly sub.</p>
 <p />
 <div>All prices in Euro Cent, per minute, daytime rate, including VAT where applicable.</div>
 <p />
@@ -26,4 +26,4 @@
 <p />
 <p />
 </div>
-  
+ 

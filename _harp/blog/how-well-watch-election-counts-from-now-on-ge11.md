@@ -1,7 +1,7 @@
 #"How we'll watch election counts from now on? #ge11"
 
 
-    <p>Traditional TV is playing a very small part in my watching of the Irish General Election 2011 outcome. But <em>the</em> TV is. This is a rough version of the sort of setup that will be the default in General Election 2015:</p>
+ <p>Traditional TV is playing a very small part in my watching of the Irish General Election 2011 outcome. But <em>the</em> TV is. This is a rough version of the sort of setup that will be the default in General Election 2015:</p>
 <p><div class='p_embed p_image_embed'>
 <a href="http://getfile8.posterous.com/getfile/files.posterous.com/temp-2011-02-26/rHFDGmFsthqDaqGIpaxGCpeecpvbEsDDsxqaFmDekhlomelCtsGIBbrEzfAs/DSCN1416.JPG.scaled1000.jpg"><img alt="Dscn1416" height="375" src="http://getfile7.posterous.com/getfile/files.posterous.com/temp-2011-02-26/rHFDGmFsthqDaqGIpaxGCpeecpvbEsDDsxqaFmDekhlomelCtsGIBbrEzfAs/DSCN1416.JPG.scaled500.jpg" width="500" /></a>
 </div>
@@ -32,4 +32,4 @@ To be fair to RTE they have embraced Twitter wholeheartedly for the election. Th
 <p>Some believe that we'll all go multi-device whilst watching TV. Phone or laptop or Android tablet doing the web thing whilst the TV remains single-tasking single-programme. Where that does work is when you have multiple people watching the same show. As Twitter themselves have pointed out, they are helping to bring back the days of watching TV live instead of DVR'ed so that we can all <span style="text-decoration: line-through;">bitch</span> comment at the same time.</p>
 <p>But for events like today, gimme Minority Report. Imagine General Election 2015 powered by Microsoft Kinect!</p>
 <p>&nbsp;</p>
-  
+ 

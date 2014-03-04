@@ -1,7 +1,7 @@
 #"I've never met an Engineer who could turn their hand to business"
 
 
-    <p>With that one line by Alan Sugar on last night's UK Apprentice, I finally realised why Amstrad was never able to grow beyond the odd burst of short term opportunism into a global company. I'd like to run a few numbers past Lord Sugar:</p>
+ <p>With that one line by Alan Sugar on last night's UK Apprentice, I finally realised why Amstrad was never able to grow beyond the odd burst of short term opportunism into a global company. I'd like to run a few numbers past Lord Sugar:</p>
 <div>
 <ul>
 <li>Number of Amstrad Music Devices sold last year: 0</li>
@@ -22,4 +22,4 @@
 <p />
 <div>Herman, by the way, is a Fellow of The Royal Academy of Engineering.</div>
 
-  
+ 

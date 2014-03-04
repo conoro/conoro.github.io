@@ -1,7 +1,7 @@
 #"How the OpenSource Community Saved a Piece of Crap Device"
 
 
-    <p>Until my recent falling out with DealExtreme over their refusal to refund me for a returned item, I spent a lot of money on their site buying various gadgets and gizmos. The trick is to buy really cheap things so that if they break or aren't quite what you wanted, you can bin them or try and use them for something else. Hence I would buy replacement NDS parts, pens, USB cables etc.</p>
+ <p>Until my recent falling out with DealExtreme over their refusal to refund me for a returned item, I spent a lot of money on their site buying various gadgets and gizmos. The trick is to buy really cheap things so that if they break or aren't quite what you wanted, you can bin them or try and use them for something else. Hence I would buy replacement NDS parts, pens, USB cables etc.</p>
 <p>This year I bought a few more expensive ($25+) items and most of them have been a disappointment. My falling out with them was over an MSI Bluetooth transmitter which decided to mess-up the entire raison d'etre of Bluetooth by only working with other MSI devices!</p>
 <p>The biggest let-down was a device that enables many USB devices to connect to a lan. They called it a "<a href="http://www.dealextreme.com/details.dx/sku.20382">LAN-Storage UPNP USB/HDD/NAS/Scanner/Printer/Webcam Sharing Network LAN Server</a>" and it cost $38. Its model name is the WLXKJ<span style="font-family: arial, sans-serif;">652.&nbsp;</span>So it has two USB ports and a LAN port. You can (in theory!) connect hard drives, printers, scanners etc and all can then be accessed over a network. The storage bit, in particular, looked really impressive. You can connect 2 USB HDDs (FAT32 or NTFS) and share them out both as network drives or UPnP shares. It's a mini-NAS basically. I loved the idea of it and had lots of plans involving hacked FONs and Nokia N770 tablets in a car.</p>
 <p><div class='p_embed p_image_embed'>
@@ -22,4 +22,4 @@
 <p><span style="font-family: arial, sans-serif;">The really neat bit about this setup is that anyone with a USB thumbdrive or USB HDD can come along, plug it into the PoC and the XBOX will be able to access it without any re-configuring. The technically challenged in our family will love this. And since the XBOX itself has a DVD player, it really is a perfect (non-h264) media player.</span></p>
 <p><span style="font-family: arial, sans-serif;"><span>Last year I predicted that a glut of cheap phones would come out of China, all running Android. Chinese manufacturers seem to be ingenious at creating cheap silicon and hardware but truly awful at software. So if they used Android, that's a big problem solved. For the same reason, I wish all those Chinese companies building really smart hardware like the PoC would switch to Linux too. Then they can work with the OSS community to build some seriously kick-ass products.</span></span></p>
 
-  
+ 

@@ -1,7 +1,7 @@
 #"The web tools we can't live without in LouderVoice"
 
 
-    <p>It took it quite a long time to put together a "web toolkit" that works well for our business. To save you some of the same hassle, here are the some of important things our site/applications/OpsTeam use:</p>
+ <p>It took it quite a long time to put together a "web toolkit" that works well for our business. To save you some of the same hassle, here are the some of important things our site/applications/OpsTeam use:</p>
 <ul>
 <li>Amazon AWS including EC2, S3, EBS and EIP - It's not about hosting cost, it's about enterprise features like snapshots&nbsp;</li>
 <li>Rightscale - For some AWS management</li>
@@ -55,4 +55,4 @@
 </ul>
 <p>More as I think of them since I'm sure I've forgotten something important. What can't you live without?</p>
 <p>&nbsp;</p>
-  
+ 

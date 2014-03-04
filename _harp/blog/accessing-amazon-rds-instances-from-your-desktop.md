@@ -1,7 +1,7 @@
 #"Accessing Amazon RDS Instances from your Desktop"
 
 
-    <p>Whilst we are huge fans of the Amazon RDS database service (particularly the Multi-AZ setup), one thing that can be a problem is accessing your databases from the desktop. The standard trick of running an SSH tunnel to your EC2 instance doesn't work here.&nbsp;</p>
+ <p>Whilst we are huge fans of the Amazon RDS database service (particularly the Multi-AZ setup), one thing that can be a problem is accessing your databases from the desktop. The standard trick of running an SSH tunnel to your EC2 instance doesn't work here.&nbsp;</p>
 <div><br />After much searching I found the following on an <a href="http://developer.amazonwebservices.com/connect/message.jspa?messageID=173501">AWS discussion forum</a> and it works perfectly:</div>
 <p />
 <div><span style="font-family: courier new, monospace;">ssh-add YourKey.pem</span></div>
@@ -18,4 +18,4 @@
 </div>
 </div>
 </div>
-  
+ 

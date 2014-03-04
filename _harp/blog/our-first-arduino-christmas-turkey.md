@@ -20,19 +20,19 @@ CODE (based on the Adafruit and Sparkfun sample code):
 
 [sourcecode]
 /*************************************************** 
-  This is an example for the Adafruit Thermocouple Sensor w/MAX31855K
+ This is an example for the Adafruit Thermocouple Sensor w/MAX31855K
 
-  Designed specifically to work with the Adafruit Thermocouple Sensor
-  ----&gt; https://www.adafruit.com/products/269
+ Designed specifically to work with the Adafruit Thermocouple Sensor
+ ----&gt; https://www.adafruit.com/products/269
 
-  These displays use SPI to communicate, 3 pins are required to  
-  interface
-  Adafruit invests time and resources providing this open source code, 
-  please support Adafruit and open-source hardware by purchasing 
-  products from Adafruit!
+ These displays use SPI to communicate, 3 pins are required to 
+ interface
+ Adafruit invests time and resources providing this open source code, 
+ please support Adafruit and open-source hardware by purchasing 
+ products from Adafruit!
 
-  Written by Limor Fried/Ladyada for Adafruit Industries.  
-  BSD license, all text above must be included in any redistribution
+ Written by Limor Fried/Ladyada for Adafruit Industries. 
+ BSD license, all text above must be included in any redistribution
  ****************************************************/
 
 #include &quot;Adafruit_MAX31855.h&quot;
@@ -47,42 +47,42 @@ int thermoDO = 3;
 Adafruit_MAX31855 thermocouple(thermoCLK, thermoCS, thermoDO);
 SoftwareSerial mySerial(6,2); // pin 2 = TX, pin 3 = RX (unused)
 
-  
+ 
 void setup() {
-  mySerial.begin(9600);
-  Serial.begin(9600);
-  delay(500);
-  mySerial.write(254); // move cursor to beginning of first line
-  mySerial.write(128);
-  mySerial.write(&quot;                &quot;); // clear display
-  mySerial.write(&quot;                &quot;);
-  mySerial.write(&quot;Hello, Thermocouple!&quot;);
+ mySerial.begin(9600);
+ Serial.begin(9600);
+ delay(500);
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);
+ mySerial.write(&quot;Hello, Thermocouple!&quot;);
 
-  // wait for MAX chip to stabilize
-  delay(1000);
+ // wait for MAX chip to stabilize
+ delay(1000);
 }
 
 char tempstring[16];
 void loop() {
-  // basic readout test, just print the current temp
-  mySerial.write(254); // move cursor to beginning of first line
-  mySerial.write(128);
-  mySerial.write(&quot;                &quot;); // clear display
-  mySerial.write(&quot;                &quot;);
-   
-  double c = thermocouple.readCelsius();
-  if (isnan(c)) 
-  {
-    mySerial.write(&quot;T/C Problem&quot;);
-  } 
-  else 
-  {
-     mySerial.write(&quot;C = &quot;); 
-     mySerial.write(dtostrf(c,4,1,tempstring));
-     Serial.println(c);
-     mySerial.write(&quot;  &quot;); 
-   }
+ // basic readout test, just print the current temp
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);
  
-   delay(1000);
+ double c = thermocouple.readCelsius();
+ if (isnan(c)) 
+ {
+ mySerial.write(&quot;T/C Problem&quot;);
+ } 
+ else 
+ {
+ mySerial.write(&quot;C = &quot;); 
+ mySerial.write(dtostrf(c,4,1,tempstring));
+ Serial.println(c);
+ mySerial.write(&quot; &quot;); 
+ }
+ 
+ delay(1000);
 }
 [/sourcecode]

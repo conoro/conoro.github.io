@@ -1,7 +1,7 @@
 #"Lovely Brabantia Bin - Sugru to the Rescue"
 
 
-    <p>We've had a big-assed 50L Brabantia bin for the past 6 years or so. In their wisdom, Brabantia realise that the crappy catches they put on their bins break regularly and not only provide a spare but make it very easy to order another:</p>
+ <p>We've had a big-assed 50L Brabantia bin for the past 6 years or so. In their wisdom, Brabantia realise that the crappy catches they put on their bins break regularly and not only provide a spare but make it very easy to order another:</p>
 <p><div class='p_embed p_image_embed'>
 <a href="http://getfile8.posterous.com/getfile/files.posterous.com/temp-2010-07-27/dxyanFJcrnvDdJhroyJImEknzJFerHdHtGvGoDuAvDaqIxJFgskaIIxIIfqI/DSCN1183.JPG.scaled1000.jpg"><img alt="Dscn1183" height="375" src="http://getfile3.posterous.com/getfile/files.posterous.com/temp-2010-07-27/dxyanFJcrnvDdJhroyJImEknzJFerHdHtGvGoDuAvDaqIxJFgskaIIxIIfqI/DSCN1183.JPG.scaled500.jpg" width="500" /></a>
 </div>
@@ -21,4 +21,4 @@
 </p>
 <p></p>
 <p>UPDATE 1: Title changed from "Bloody Brabantia Bin" to "Lovely Brabantia Bin" because they <a href="http://twitter.com/BrabantiaLife/status/19648754318">reached out to me on Twitter</a> and pointed out that I could get an entire replacement lid for free on their web-site under the 10 year guarantee. Fantastic customer service. But a bit of Googling reveals the problem above is rampant which surely must be costing them a fortune? I hereby offer my Sugru "distributed load" design to Brabantia's engineers for free :-)</p>
-  
+ 

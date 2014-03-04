@@ -7,17 +7,17 @@ Whether your kids go to <a href="http://codeninja.ie/">Code Ninja</a>; <a href="
 What the heck is <a href="http://www.raspberrypi.org/">Raspberry Pi</a>?
 
 <object width="512" height="400" type="application/x-shockwave-flash" data="http://www.bbc.co.uk/emp/external/player.swf" >
-                
+ 
 	<param name="quality" value="high" />
-                
+ 
 	<param name="wmode" value="default" />
-                
+ 
 	<param name="allowFullScreen" value="true" />
-                
+ 
 	<param name="allowScriptAccess" value="always" />
-                
+ 
 	<param name="flashvars" value="playlist=http://playlists.bbc.co.uk/news/technology-17190334A/playlist.sxml&config=http://www.bbc.co.uk/player/emp/2_0_29/config/default.xml&holdingImage=http://news.bbcimg.co.uk/media/images/58759000/jpg/_58759696_pi2.jpg&config_settings_autoPlay=true&domId=emp-17190334-15098&enable3G=true&fmtjDocURI=/news/technology-17190334&config_settings_showPopoutButton=false&embedPageUrl=http://www.bbc.co.uk/news/technology-17190334&config_settings_showUpdatedInFooter=true&preroll=http://ad.doubleclick.net/pfadx/bbccom.live.site.news/news_technology_content;slot=preroll;sz=512x288;sectn=news;ctype=content;news=technology;referrer=nonbbc;domain=www.bbc.co.uk;referrer_domain=www.google.ie;rsi=J08781_10057;rsi=J08781_10269;rsi=J08781_10126;rsi=J08781_10152;rsi=J08781_10189;rsi=J08781_10259;rsi=J08781_10335;rsi=J08781_10396;rsi=J08781_10397;rsi=J08781_10496;headline=raspberrypicomputerinaction;asset_type=media_asset;story_id=17190334;keyword=;tile=1&config_plugin_fmtjLiveStats_pageType=eav1&uxHighlightColour=0xff0000&companion2Type=adi&companions=slot:companion|size:300x60|type:adi|domId:bbccom_companion_17190334;slot:mpu|size:300x250|type:adi|domId:bbccom_mpu;&config_plugin_fmtjLiveStats_edition=International&companion1Id=bbccom_companion_17190334&companion2Id=bbccom_mpu&companion1Size=300x60&embedReferer=http://www.google.ie/url?sa=t&rct=j&q=raspberry pi&source=web&cd=3&sqi=2&ved=0CEIQFjAC&url=http://www.bbc.co.uk/news/technology-17190334&ei=BSFOT_eUEYXMhAf54_mvBA&usg=AFQjCNFd_g_QLnHBEKaSPeuBPiQyigsFPA&cad=rja&companion2Size=300x250&config_settings_showShareButton=true&companion1Type=adi&config_plugin_fmtjLiveStats_pageType=eav6&config_settings_autoPlay=false&config_settings_showFooter=true&config_settings_showPopoutButton=false&config_settings_showPopoutCta=false&config_settings_addReferrerToPlaylistRequest=true" />
-            
+ 
 </object>
 
 It's a tiny Embedded PC using a Broadcom SoC with a 700MHz processor, VideoCore IV Graphics processsor and 256MB of RAM for, wait for it....39 including VAT!

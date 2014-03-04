@@ -1,7 +1,7 @@
 #"Standing Desk Update"
 
 
-    <p>The standing desk experiment is ongoing and the news has not all been good. I've had on-weeks and off-weeks and I'm still not 100% comfortable. But at the moment I'm on an on-week and things are much improved. It's down to the fact that I decided to fashion a thick mat out of materials around the house. This is it:</p>
+ <p>The standing desk experiment is ongoing and the news has not all been good. I've had on-weeks and off-weeks and I'm still not 100% comfortable. But at the moment I'm on an on-week and things are much improved. It's down to the fact that I decided to fashion a thick mat out of materials around the house. This is it:</p>
 <p><div class='p_embed p_image_embed'>
 <a href="http://getfile0.posterous.com/getfile/files.posterous.com/temp-2011-02-23/rmaynHAcEqodfjoiFiwFHigwmxabdFqIvkjglspndiziuFIqfzrjtrEpbBhl/IMG_20110222_162728.jpg.scaled1000.jpg"><img alt="Img_20110222_162728" height="375" src="http://getfile1.posterous.com/getfile/files.posterous.com/temp-2011-02-23/rmaynHAcEqodfjoiFiwFHigwmxabdFqIvkjglspndiziuFIqfzrjtrEpbBhl/IMG_20110222_162728.jpg.scaled500.jpg" width="500" /></a>
 </div>
@@ -20,4 +20,4 @@
 </p>
 <p>Cost = Approx &euro;8. Benefit = 2000x.</p>
 <p>&nbsp;</p>
-  
+ 

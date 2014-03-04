@@ -1,7 +1,7 @@
 #"Vibram FiveFingers Cult Member After 2 Weeks #VFF"
 
 
-    <p>I first heard about <a href="http://www.vibramfivefingers.com/barefoot-sports/">Vibram FiveFingers</a> "shoes" via a blogpost by Robin Blandford a few years back. They seemed to be for climbers, trekkers etc and apart from being amused by the crazy individual toe-pockets, I didn't think much about them after that.</p>
+ <p>I first heard about <a href="http://www.vibramfivefingers.com/barefoot-sports/">Vibram FiveFingers</a> "shoes" via a blogpost by Robin Blandford a few years back. They seemed to be for climbers, trekkers etc and apart from being amused by the crazy individual toe-pockets, I didn't think much about them after that.</p>
 <p><div class='p_embed p_image_embed'>
 <a href="http://getfile8.posterous.com/getfile/files.posterous.com/temp-2011-03-27/yEnEwussHqHzfqtJlCuqjzADcigqnzcdyylaeJIfyqEnGbBFiDuwHmkDixBp/classic.jpg.scaled1000.jpg"><img alt="Classic" height="368" src="http://getfile7.posterous.com/getfile/files.posterous.com/temp-2011-03-27/yEnEwussHqHzfqtJlCuqjzADcigqnzcdyylaeJIfyqEnGbBFiDuwHmkDixBp/classic.jpg.scaled500.jpg" width="500" /></a>
 </div>
@@ -47,4 +47,4 @@
 <p>There you have it. As promised, the essay on VFFs. I'm an absolute convert. Let's just hope they aren't ruined by hipsters looking for the next cool thing. I'd love if they were embraced by the hip-replacement-sters instead.</p>
 <p>Note,<a href="http://www.barefoot.ie/">these guys list</a> all the stockists in Ireland.</p>
 <p>&nbsp;</p>
-  
+ 

@@ -1,7 +1,7 @@
 #"Streaming Videos to your Android Phone"
 
 
-    <p><span style="border-collapse: separate; color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-indent: 0px; font-size: medium;">
+ <p><span style="border-collapse: separate; color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-indent: 0px; font-size: medium;">
 <div style="color: #000000; font-family: Arial,Helvetica,sans-serif; font-size: 13px; margin: 8px; background-color: #ffffff;">
 <p>Big hat-tip to<span class="Apple-converted-space">&nbsp;</span><a href="http://twitter.com/micflan">@micflan</a><span class="Apple-converted-space">&nbsp;</span>for pointing me in the right direction on this recently. I had tried and failed several times previously.</p>
 <p>I did <a href="http://conoroneill.net/streaming-video-to-kids-in-car-the-video">a post a few months back</a> about getting streaming media working on both old Nokia N770s and iPhone from an Easy Peasy based EeePC netbook running MediaTomb. The idea was that it could be the ultimate in-car media center. The one massive annoyance was that I couldn't get it working on Android due to it having only one crappy non-functional UPnP client.</p>
@@ -20,4 +20,4 @@
 <p>I'll do another quick post soon on the HDVP-2 media streamer I got recently. Whilst is works with TVersity, I'm having AV Sync issues there too.</p>
 </div>
 </span></p>
-  
+ 

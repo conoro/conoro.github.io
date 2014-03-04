@@ -1,7 +1,7 @@
 #"Parrot ASTEROID \u0096 I want something even simpler again"
 
 
-    <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
+ <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
 <img alt="Media_httpwwweurodroi_hwjbc" height="355" src="http://getfile3.posterous.com/getfile/files.posterous.com/conoroneill/AHblApFEJIphssytAckxjegtdzxqayxkcarufvmJgludBigeyFuFBtupynoz/media_httpwwweurodroi_HwJbc.jpg.scaled500.jpg" width="450" />
 </div>
 
@@ -14,4 +14,4 @@
 <p>Basically something like that Sony Ericsson LiveView but on a much bigger scale with the usual speaker connections etc at the back. I just find that messing with a touch-screen phone to change tracks/albums etc is a nightmare/dangerous when you are driving.</p>
 <p>p.s. I recently discovered that my HTC Desire (and I'm sure many other phones) can pair separately for media and calls. So I have media going to the car stereo but I have calls going to a bog-standard Plantronics headset. I just find that those I am talking to get better sound quality with the Plantronics. The phone is smart enough to mute media when a call is in progress.</p>
 </div>
-  
+ 

@@ -1,7 +1,7 @@
 #"How to Add +1 to your site (oh and Google Places API Note)"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <blockquote class="posterous_long_quote">
 <h2>Add +1 to your pages to help your site stand out</h2>
 +1 buttons let people who love your content recommend it on Google search</blockquote>
@@ -13,4 +13,4 @@
 <p>Why do they bother with those forms? Don't get me started on the /dev/null that is the Rich Snippets request form.</p>
 <p>&nbsp;</p>
 </div>
-  
+ 

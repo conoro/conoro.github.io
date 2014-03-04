@@ -1,7 +1,7 @@
 #"This Season I'll Be Mostly Wearing Bing"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <object height="417" width="500">
 <param name="movie" value="http://www.youtube.com/v/-U1Q3Mbklkk&amp;hl=en&amp;fs=1" />
 <param name="wmode" value="window" />
@@ -13,4 +13,4 @@
 <p>Not just because I am getting very uncomfortable with how Google is hijacking Local search results but also because competition and variety are good things.</p>
 <p>Dare ya.</p>
 </div>
-  
+ 

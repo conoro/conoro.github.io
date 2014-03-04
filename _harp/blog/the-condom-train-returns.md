@@ -1,7 +1,7 @@
 #"The Condom Train Returns"
 
 
-    <p>After some more reading on the lack of Paid Apps in Ireland, it appears that all the blame may not be on Google after all. From what I can see, Mobile Operators in each country have to sign up to the Open Handset Alliance (OHA) to get "access" to the Android Market.</p>
+ <p>After some more reading on the lack of Paid Apps in Ireland, it appears that all the blame may not be on Google after all. From what I can see, Mobile Operators in each country have to sign up to the Open Handset Alliance (OHA) to get "access" to the Android Market.</p>
 <p>How much do you bet that none of the Irish operators have done so?</p>
 <p>We know that Three UK SIMs work in Vodafone Ireland HTC Desires. I'm pretty confident that they'll work in all other Irish Android handsets since the operators are just box-shifting rather than getting custom versions done.</p>
 <p>Those Three SIMs are free.</p>
@@ -12,4 +12,4 @@
 <p>"What do we want?" "Paid Apps" "When do we want them?" "Now!"</p>
 <p>The revolution is upon us.</p>
 <p></p>
-  
+ 

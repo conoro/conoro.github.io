@@ -1,7 +1,7 @@
 #"Dear Vodafone/Meteor/O2, please give Google a hard slap from Irish Android Owners"
 
 
-    <p>The first Google Android phone went on sale in Ireland at the start of November 2009. It is now May 2010. And we still don't have Paid Apps in Ireland. All of the networks are losing Android phone sales because of this and all of those people who have Android phone are pissed off and wishing they'd bought bloody iPhones.</p>
+ <p>The first Google Android phone went on sale in Ireland at the start of November 2009. It is now May 2010. And we still don't have Paid Apps in Ireland. All of the networks are losing Android phone sales because of this and all of those people who have Android phone are pissed off and wishing they'd bought bloody iPhones.</p>
 <p>What the hell is the hold up Google?</p>
 <p>As I have posted here many times, I can stick a PAYG Three UK SIM in my phone when in Ireland and see all of the paid apps. I can then buy them in Google Checkout using my Irish Credit Card.</p>
 <p>There is even an app out there to trick the phones into thinking there are not in Ireland to achieve the same thing.</p>
@@ -31,4 +31,4 @@
 <p>Now.</p>
 <p></p>
 </span></p>
-  
+ 

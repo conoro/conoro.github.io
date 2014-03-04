@@ -1,7 +1,7 @@
 #"I need help with my Tweetdeck Weekend Sports Filter"
 
 
-    <p>I'm working on the best combination of words for a global filter in Tweetdeck to remove Tweets about stuff I don't care about.</p>
+ <p>I'm working on the best combination of words for a global filter in Tweetdeck to remove Tweets about stuff I don't care about.</p>
 <p />
 <div>Of course, of most importance is the Weekend Sports filter.</div>
 <p />
@@ -33,4 +33,4 @@
 </div>
 
 
-  
+ 

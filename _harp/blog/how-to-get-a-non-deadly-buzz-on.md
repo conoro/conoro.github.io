@@ -1,7 +1,7 @@
 #"How to get a non-Deadly Buzz on"
 
 
-    <p>It looks like <a href="http://google.com/buzz">Google Buzz</a> accounts inside your GMail are like hen's teeth at the minute but if you are desperate to try it out and you have a smartphone you should be in luck.</p>
+ <p>It looks like <a href="http://google.com/buzz">Google Buzz</a> accounts inside your GMail are like hen's teeth at the minute but if you are desperate to try it out and you have a smartphone you should be in luck.</p>
 <p />
 <div>Just use your phone to go to <a href="http://google.com/buzz">http://google.com/buzz</a> and it'll probably let you set up an account there and give you access to the mobile web version of Buzz</div>
 <p />
@@ -36,4 +36,4 @@
 <p />
 <p />
 </div>
-  
+ 

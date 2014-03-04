@@ -1,7 +1,7 @@
 #"My 368 Days of Posterous - The Stats"
 
 
-    <p>Hard to believe it's been a full year since I started on Posterous. The idea behind it was simple - I was scatter-gunning techie posts across several blogs and they just didn't belong there mixed in with foodie stuff and business. I wanted somewhere I could completely geek-out but with zero effort. Over the year I think most posts have taken 5 minutes to write and the bulk of them were sent by email when I was killing some time or on a lazy Saturday.</p>
+ <p>Hard to believe it's been a full year since I started on Posterous. The idea behind it was simple - I was scatter-gunning techie posts across several blogs and they just didn't belong there mixed in with foodie stuff and business. I wanted somewhere I could completely geek-out but with zero effort. Over the year I think most posts have taken 5 minutes to write and the bulk of them were sent by email when I was killing some time or on a lazy Saturday.</p>
 <p>So the headline stats since Feb 3rd 2010 according to Posterous:</p>
 <ul>
 <li>285 Posts</li>
@@ -14,4 +14,4 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

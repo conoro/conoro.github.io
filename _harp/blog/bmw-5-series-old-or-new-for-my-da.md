@@ -1,7 +1,7 @@
 #"BMW 5-Series. Old or new for my Da?"
 
 
-    <p>My Da's 12 year old BMW will fail its NCT unless he has 5 grand of work done on it so he has finally decided to get a new one. The new 520d and 525d are catching his eye. The advantage of the 525d is that it is available in March. The big disadvantage is a massive price uplift over the 520d. But he can't really wait until July for the 520d to be released.</p>
+ <p>My Da's 12 year old BMW will fail its NCT unless he has 5 grand of work done on it so he has finally decided to get a new one. The new 520d and 525d are catching his eye. The advantage of the 525d is that it is available in March. The big disadvantage is a massive price uplift over the 520d. But he can't really wait until July for the 520d to be released.</p>
 <p>The garage has some current model 520d's in stock and he is wondering should he just get one of them instead. I've been doing some research and I think he should but then I've never owned a Beemer so would appreciate advice from those in the know. My feelings are:</p>
 <ol>
 <li>He can get current 520d for a good deal if he negotiates hard (and waits for new shape to be launched)</li>
@@ -13,4 +13,4 @@
 <p>Or should he consider Merc/Audi? He's been a BMW guy since the 80s when his job upgraded him from the vinyl-roofed Granada :-)&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

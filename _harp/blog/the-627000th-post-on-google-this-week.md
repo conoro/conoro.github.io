@@ -1,7 +1,7 @@
 #"The 627,000th Post on Google+ This Week"
 
 
-    <p>You are all probably as sick as I am of all the stuff written about Google+. But I've found very few posts digging into the functionality beyond the usual top-level feature list. I'm really pleased that Google is actively soliciting feedback after their ostrich-like behaviour with Buzz. But there is too much here for me to enter as individual tickets.</p>
+ <p>You are all probably as sick as I am of all the stuff written about Google+. But I've found very few posts digging into the functionality beyond the usual top-level feature list. I'm really pleased that Google is actively soliciting feedback after their ostrich-like behaviour with Buzz. But there is too much here for me to enter as individual tickets.</p>
 <p><strong>Overall</strong></p>
 <p>Overall I like Google+ and think I'll be using it quite a bit. But only with the understanding that some of the major problems are fixed in the short-term. I kept going back to Buzz to find that none of the fundamental design errors had been addressed. Signs are good that we won't have a repeat here.</p>
 <p>&nbsp;</p>
@@ -64,4 +64,4 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

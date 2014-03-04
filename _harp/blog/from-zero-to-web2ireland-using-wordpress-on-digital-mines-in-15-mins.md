@@ -1,7 +1,7 @@
 #"From Zero to Web2Ireland using Wordpress on Digital Mines in 15 mins"
 
 
-    <div style="background-color: transparent; margin: 0px;"><span style="font-family: Arial;"><span style="font-size: 15px;">We decided to move <a href="http://Web2Ireland.org">Web2Ireland.org</a> over to <a href="http://www.digitalmines.com/">Digital Mines</a> for AWS hosting. I'm a big fan of how easy Digital Mines has made the deployment of Amazon servers. I thought it might be useful to show the steps to get a Wordpress blog up and running with such a setup.&nbsp;</span></span></div>
+ <div style="background-color: transparent; margin: 0px;"><span style="font-family: Arial;"><span style="font-size: 15px;">We decided to move <a href="http://Web2Ireland.org">Web2Ireland.org</a> over to <a href="http://www.digitalmines.com/">Digital Mines</a> for AWS hosting. I'm a big fan of how easy Digital Mines has made the deployment of Amazon servers. I thought it might be useful to show the steps to get a Wordpress blog up and running with such a setup.&nbsp;</span></span></div>
 <p />
 <div style="background-color: transparent; margin: 0px;"><span style="font-family: Arial;"><span style="font-size: 15px;">Note this doesn't include the incredibly simple steps to sign-up for Digital Mines itself and to click "Deploy" to get your server. All of the steps below were carried out in <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">Putty</a> on Windows connected by SSH to the deployed server.<br /> </span></span>
 <ul>
@@ -32,4 +32,4 @@
 <p />
 </div>
 </div>
-  
+ 

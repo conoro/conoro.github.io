@@ -1,7 +1,7 @@
 #"Oscar's First Android Game via App Inventor"
 
 
-    <p>I have to say I'd dead proud of young Oscar. Seven hours ago he'd never seen a line of code. Now he has finished his first from-scratch game. He calls it "The Reaction Game" and it involves tapping buttons as fast as possible in 60 seconds.</p>
+ <p>I have to say I'd dead proud of young Oscar. Seven hours ago he'd never seen a line of code. Now he has finished his first from-scratch game. He calls it "The Reaction Game" and it involves tapping buttons as fast as possible in 60 seconds.</p>
 <p><div class='p_embed p_image_embed'>
 <img alt="Screenshot_3" height="800" src="http://getfile1.posterous.com/getfile/files.posterous.com/temp-2011-03-06/EukztCslFtdJxBHAjkHbcIvsrxmtIiwyBpenGxhmhqnBjFEFFtxGiurwiEya/screenshot_3.png.scaled500.png" width="480" />
 </div>
@@ -41,4 +41,4 @@
 <p>I really only had to give him a few pointers on using timers and conditional logic. He figured the rest out himself.</p>
 <p>11 years old and he's already thinking monetization :-)</p>
 <p>&nbsp;</p>
-  
+ 

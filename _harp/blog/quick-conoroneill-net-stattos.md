@@ -1,7 +1,7 @@
 #"Quick conoroneill.net Stattos"
 
 
-    <p>I've been blogging since 2001 and have long since lost any interest in stats on my blog posts. I never check non-biz related stats. But for interest's sake I've been monitoring conoroneill.net since it is a brand-new blog.</p>
+ <p>I've been blogging since 2001 and have long since lost any interest in stats on my blog posts. I never check non-biz related stats. But for interest's sake I've been monitoring conoroneill.net since it is a brand-new blog.</p>
 <p>I dunno if these stats are good, bad or indifferent for a new blog that is 99% promoted via Twitter and Facebook links. The one that jumps out at me is that whilst Twitter generates 18% of the visits, Facebook only generates 4%. That's a reflection of the much smaller number of people I'm connected to on FB and their mainly non-tech demographic.</p>
 <p>So according to Posterous since Feb 3rd 2010:</p>
 <ul>
@@ -18,4 +18,4 @@
 <li>Direct = 51%, Twitter = 18%, Google = 9%, Posterous = 4% and Facebook = 4%</li>
 </ul>
 <p>&nbsp;</p>
-  
+ 

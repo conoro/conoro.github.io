@@ -1,7 +1,7 @@
 #"Oi Nokia. I'm still waiting for my free Ovi Maps"
 
 
-    <div>Or is it Oy Nokia? Or even Nokia Oy.</div>
+ <div>Or is it Oy Nokia? Or even Nokia Oy.</div>
 <p />
 <p>You announced free Turn by Turn Voice Navigation in Ovi Maps on Jan 21st for your newest phones but hilariously not for your "flagship" device cos it didn't have enough space on C:.&nbsp;</p>
 <p />
@@ -12,4 +12,4 @@
 <div>Get the finger out.</div>
 <p />
 </div>
-  
+ 

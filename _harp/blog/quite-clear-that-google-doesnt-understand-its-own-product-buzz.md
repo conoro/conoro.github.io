@@ -1,7 +1,7 @@
 #"Quite clear that Google doesn't understand its own product, Buzz"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <blockquote>
 <div>
 <p><img src="http://tctechcrunch.files.wordpress.com/2010/02/buzzbug.jpg" height="480" alt="" width="320" /></p>
@@ -14,4 +14,4 @@
 <p>And they have obviously never heard of their own product known as GoogleApps.</p>
 <p>I now understand why there are so many fundamental implementation errors in Buzz.</p>
 </div>
-  
+ 

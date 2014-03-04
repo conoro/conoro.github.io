@@ -1,7 +1,7 @@
 #"A tablet I'd actually buy"
 
 
-    <p>My feelings about the iPad remain little-changed since launch despite having played with one several times. Having said that, if I had lots of disposable income and bought XBox360s, PS3s or the latest laptop on a whim, I'm sure I'd have dipped my toe in. But as a must-have device, it ticks no boxes for me.</p>
+ <p>My feelings about the iPad remain little-changed since launch despite having played with one several times. Having said that, if I had lots of disposable income and bought XBox360s, PS3s or the latest laptop on a whim, I'm sure I'd have dipped my toe in. But as a must-have device, it ticks no boxes for me.</p>
 <p>The one area where tablets make complete sense for me is with kids. When I saw them play Angry Birds or watch videos on an iPad and then when I read people's comments about tablets replacing the horrendous stack of books they have to drag to school, I finally got the tablet niche. But it'll never be the iPad for us. I want something with crazy features like USB ports and memory card slots and the ability to install whatever goddammed apps I choose and the ability to sync everything to the cloud without needing to wire it to a real computer.</p>
 <p>So imagine my excitement when <a href="http://android.modaco.com/content/android-news/320181/advent-android-tablets-set-to-hit-the-dixons-group-stores-shortly/">Paul O'Brien over on Modaco</a> posted the details of the new DSG Group (Dixon's, Curry's, PC World) Advent tablet. The specs are awesome:</p>
 <ul>
@@ -28,4 +28,4 @@
 <p>He is now trying to figure out how to raise the cash to get one for christmas. I have to say it even has me tempted now.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

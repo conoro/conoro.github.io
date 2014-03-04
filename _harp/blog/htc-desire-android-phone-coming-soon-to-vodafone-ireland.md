@@ -1,7 +1,7 @@
 #"HTC Desire Android phone coming soon to Vodafone Ireland"
 
 
-    <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
+ <div class="posterous_bookmarklet_entry"><div class='p_embed p_image_embed'>
 <img alt="Media_httpwwwvodafone_xdsef" height="326" src="http://getfile0.posterous.com/getfile/files.posterous.com/conoroneill/xoqpnFvhDxeklFaFoDCChIoaGnunsIkkcJHBxzIGyADnlIpvphIHdlFdnFEr/media_httpwwwvodafone_xdsef.jpg.scaled500.jpg" width="220" />
 </div>
 
@@ -21,4 +21,4 @@
 </ul>
 <p>Head on over to the Vodafone site to sign-up for notification when the Desire is launched.</p>
 </div>
-  
+ 

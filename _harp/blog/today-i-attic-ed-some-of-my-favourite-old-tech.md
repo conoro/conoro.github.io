@@ -1,7 +1,7 @@
 #"Today I \"Attic-ed\" Some Of My Favourite Old Tech"
 
 
-    <p>I did a big clean out of one of our big cubby holes upstairs that held a lot of my old tech from the past few years. Anything that was already of no practical use had been moved to the attic when we originally moved to Cork back in 2004. This stuff was in the "well you never know, I _might_ need it some day". And of course I never did need it. So the next batch headed to their Toy Story 3 fate in the attic.</p>
+ <p>I did a big clean out of one of our big cubby holes upstairs that held a lot of my old tech from the past few years. Anything that was already of no practical use had been moved to the attic when we originally moved to Cork back in 2004. This stuff was in the "well you never know, I _might_ need it some day". And of course I never did need it. So the next batch headed to their Toy Story 3 fate in the attic.</p>
 <p>As I packed them up, I took pics of some the ones that I have strong memories of. Here they are:</p>
 <p>Dell Inspiron 3700. Never the best laptop but travelled the world with me in the early 00s. Bulletproof. Still works. I could not find a Dell latop that had the right mix of price and performance recently. They really seem to have lost the plot.</p>
 <p><img src="https://lh6.googleusercontent.com/-ZvOoXRUpypg/Tg8hUmw4aoI/AAAAAAAAJhs/vrSep9Jlp3E/s400/IMG_20110702_144448.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
@@ -52,4 +52,4 @@
 <p><img src="https://lh4.googleusercontent.com/-qlhXNX_2wPo/Tg8vgBWE0FI/AAAAAAAAJjA/PDxDetEsk4c/s400/IMG_20110702_154538.jpg" alt="" style="display: block; margin-left: auto; margin-right: auto;" /></p>
 <p>So there you have it. Nothing massively out of the ordinary but still feels odd putting them away. I wonder when my HTC Desire, Kindle and EeePC 701 will have the same fate?</p>
 <p>&nbsp;</p>
-  
+ 

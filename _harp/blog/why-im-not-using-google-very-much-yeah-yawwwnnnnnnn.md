@@ -1,7 +1,7 @@
 #"Why I'm not using Google+ Very Much (Yeah, Yawwwnnnnnnn)"
 
 
-    <p>I know all the G+ posts are getting boring. But this is more about my (non-)usage of it than "what Google should do, according to a nobody blogger"</p>
+ <p>I know all the G+ posts are getting boring. But this is more about my (non-)usage of it than "what Google should do, according to a nobody blogger"</p>
 <p>Here is a screenshot from a few minutes ago of Google+. I can see <strong>3</strong> posts above the fold.</p>
 <p><div class='p_embed p_image_embed'>
 <img alt="Plus" height="433" src="http://getfile2.posterous.com/getfile/files.posterous.com/temp-2011-07-21/AIiDrxigfvzxuiFbAGzmhFJitahzIhfcFffzuECmitlhxhbqafszneFebgaF/plus.png.scaled500.png" width="400" />
@@ -25,4 +25,4 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

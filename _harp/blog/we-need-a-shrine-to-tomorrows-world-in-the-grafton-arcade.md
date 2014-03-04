@@ -1,7 +1,7 @@
 #"We Need a Shrine to Tomorrow's World in The Grafton Arcade"
 
 
-    <p>Ask many people of a certain age (around 40) where they first encountered a computer and you will invariably hear "Tomorrow's World in the Grafton Arcade". Yet strangely if you google it, most of the <a href="http://conoroneill.com/2007/11/13/more-science-week-stuff/">mentions online</a> are by me <a href="http://conoroneill.com/2005/04/04/the-apprentice-uk/">since 2005</a>.</p>
+ <p>Ask many people of a certain age (around 40) where they first encountered a computer and you will invariably hear "Tomorrow's World in the Grafton Arcade". Yet strangely if you google it, most of the <a href="http://conoroneill.com/2007/11/13/more-science-week-stuff/">mentions online</a> are by me <a href="http://conoroneill.com/2005/04/04/the-apprentice-uk/">since 2005</a>.</p>
 <p>I can't overstate how important that shop was for several years in the 1980s. Just like the first McDonald's on Grafton Street was a Mecca for us muckers up for our Christmas shopping in the 80s, so too was Tomorrow's World for anyone who knew what a home computer was.</p>
 <p>It was a school trip to Dublin by St Kieran's College Kilkenny in 1982 that led me to where I am today. And that is no exaggeration. BASIC -&gt; Forth -&gt; Z80 Assembler -&gt; Fortran -&gt; C -&gt; C++ -&gt; Python -&gt; JavaScript. 1982 -&gt; 2011.</p>
 <p>One of the lads on the trip had been to Tomorrow's World before and brought a bunch of us with him.&nbsp;They had a variety of US machines like the TI-99/4A (the first and last time I touched one) but they also had the ZX81, and it was love at first sight.</p>
@@ -31,4 +31,4 @@
 <p>I'll do an updated report on how things are going with App Inventor lessons in my kids' school over the Christmas. Suffice to say that it has been very very very slow but we are finally seeing some great results, particularly from kids who have never used a PC or smartphone before. I am optimistic for their futures as creators, not consumers.</p>
 <p>But back to Tomorrow's World. I think it's time for a plaque on a wall on Grafton Street like those ones for famous authors: "Tomorrow's World 198x-198x. They accidentally kick-started the entire IT industry in Ireland."</p>
 <p>&nbsp;</p>
-  
+ 

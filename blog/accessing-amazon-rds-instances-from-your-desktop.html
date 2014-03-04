@@ -6,7 +6,7 @@ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();</script></head><body class="page-blog blog-accessing-amazon-rds-instances-from-your-desktop"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="img"></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">Accessing Amazon RDS Instances from your Desktop</h1><h2 class="sm date">1284555600000</h2><h1>&quot;Accessing Amazon RDS Instances from your Desktop&quot;</h1>
-<pre><code>&lt;p&gt;Whilst we are huge fans of the Amazon RDS database service (particularly the Multi-AZ setup), one thing that can be a problem is accessing your databases from the desktop. The standard trick of running an SSH tunnel to your EC2 instance doesn&#39;t work here.&amp;nbsp;&lt;/p&gt;</code></pre>
+<p> <p>Whilst we are huge fans of the Amazon RDS database service (particularly the Multi-AZ setup), one thing that can be a problem is accessing your databases from the desktop. The standard trick of running an SSH tunnel to your EC2 instance doesn&#39;t work here.&nbsp;</p></p>
 <div><br />After much searching I found the following on an <a href="http://developer.amazonwebservices.com/connect/message.jspa?messageID=173501">AWS discussion forum</a> and it works perfectly:</div>
 <p />
 <div><span style="font-family: courier new, monospace;">ssh-add YourKey.pem</span></div>

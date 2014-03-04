@@ -1,7 +1,7 @@
 #"Facebook Ads suddenly got a lot more powerful"
 
 
-    <div class="posterous_bookmarklet_entry">
+ <div class="posterous_bookmarklet_entry">
 <blockquote class="posterous_short_quote">So when you click the new Like Facebook button, being very helpful and all, Facebook will update your permanent profile with your new like.</blockquote>
 <div class="posterous_quote_citation">via <a href="http://www.eddale.co/general/facebook-bombshell-how-did-everyone-miss-this-facebook-f8">eddale.co</a>
 </div>
@@ -13,4 +13,4 @@
 <p>This is a very very very powerful change and if I was the Google AdWords team, I would now be officially soiling myself.</p>
 <p>Read the rest of Ed's post for more detail and thoughts.</p>
 </div>
-  
+ 

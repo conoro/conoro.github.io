@@ -1,7 +1,7 @@
 #"Quick thoughts on the new Digg"
 
 
-    <p>I have never used Digg much. It's perfect for when I have spare time and I want to bounce around different stories. The problem is that first bit, spare time. So like most people, I just used it to pimp the shit out of my own shit. But even that gets boring after a while.</p>
+ <p>I have never used Digg much. It's perfect for when I have spare time and I want to bounce around different stories. The problem is that first bit, spare time. So like most people, I just used it to pimp the shit out of my own shit. But even that gets boring after a while.</p>
 <p />
 <div>I heard Kevin Rose talk about the new Digg on TWiT recently and I really liked the sound of it. I just got my invite and played around with it for a few minutes. The setup is that you login, optionally follow some well known profiles (like newspapers etc) and then connect to Facebook, Twitter and Google to find others on Digg that you know. Your default view is then the Diggs of all of those people.</div>
 <p />
@@ -13,4 +13,4 @@
 <p />
 <div>So it appears I'll be using the new Digg as much as the old one.</div>
 <div></div>
-  
+ 

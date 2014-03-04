@@ -1,7 +1,7 @@
 #"The Happy Foot Co is feeding my #VFFs Addiction"
 
 
-    <p>It's ridiculous I know. I average one pair of new footwear every two years. I wear shoes until they fall apart and then I buy one more pair. That's now utterly changed.</p>
+ <p>It's ridiculous I know. I average one pair of new footwear every two years. I wear shoes until they fall apart and then I buy one more pair. That's now utterly changed.</p>
 <p>I bought my Vibram Five Fingers Bikilas exactly one month ago. Running on a treadmill with them is genuinely like having new legs. Unfortunately, like a fool, I ran on the road only two weeks in and I'm still suffering with a pain in one foot. But I'm a convert and an evangelist already.</p>
 <p>The one downside - they stink and washing only helps for a day or two. I wanted to wear them all the time.</p>
 <p>Tuesday I was in Dublin and after a really interesting mobile tech workshop, I wandered down to <a href="http://happyfootco.ie/">The Happy Foot Co</a> on Liffey Street, off Henry Street. I remembered that the last shop I went into on Liffey St was Hector Gray's when I was a kid.</p>
@@ -17,4 +17,4 @@
 <p><iframe src="http://www.youtube.com/embed/-QAUKQNdOXY" frameborder="0" height="390" width="640"></iframe></p>
 <p>&nbsp;</p>
 <p>Two pairs of shoes in a month and I'm already thinking about a pair of Classics instead of flip-flops for my summer holidays. Next thing I'll be watching Project Runway.</p>
-  
+ 

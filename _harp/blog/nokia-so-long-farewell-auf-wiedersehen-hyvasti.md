@@ -1,7 +1,7 @@
 #"Nokia - So long, farewell, auf Wiedersehen, Hyv\u00e4sti"
 
 
-    <p>I was a mobile phone late adopter for a very long time.After a couple of crappy feature phones from the likes of Panasonic in the 1990s, I got my first decent Nokia in 2000, the legendary 6210.</p>
+ <p>I was a mobile phone late adopter for a very long time.After a couple of crappy feature phones from the likes of Panasonic in the 1990s, I got my first decent Nokia in 2000, the legendary 6210.</p>
 <p><div class='p_embed p_image_embed'>
 <img alt="Nokia-6210" height="350" src="http://getfile8.posterous.com/getfile/files.posterous.com/temp-2010-05-02/IEGnnBfAmyoGGJHmFndIilHlwfjwhtnqAlaqkpimtvoqsAcGawwknBeIkbxI/nokia-6210.jpg.scaled500.jpg" width="250" />
 </div>
@@ -30,4 +30,4 @@
 <p>End of an era for me.</p>
 <p></p>
 <p></p>
-  
+ 

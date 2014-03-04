@@ -1,4 +1,4 @@
 #"Reasons Why 2011 is Starting to Feel Like 1999"
 
-    <ul><li>Everyone thinks company X is unbeatable (Microsoft -&gt; Facebook)</li><li>A major search engine thinks everyone wants a portal (Yahoo/Excite/Lycos/Altavisa -&gt; Google Places)</li><li>A leading Web Browser releases worst version ever (Internet Explorer 5 -&gt; Firefox 4)</li> <li>A leading OS releases a horrendous cheap knock-off of Mac OS ( Windows 98 SE -&gt; Ubuntu 11.04)</li><li>Bubble valuations of tech businesses (* -&gt; *)</li><li>Virtual Currencies are hot (Beenz vs Facebook Credits)</li> </ul><div>Any other similarities strike you?</div>
-  
+ <ul><li>Everyone thinks company X is unbeatable (Microsoft -&gt; Facebook)</li><li>A major search engine thinks everyone wants a portal (Yahoo/Excite/Lycos/Altavisa -&gt; Google Places)</li><li>A leading Web Browser releases worst version ever (Internet Explorer 5 -&gt; Firefox 4)</li> <li>A leading OS releases a horrendous cheap knock-off of Mac OS ( Windows 98 SE -&gt; Ubuntu 11.04)</li><li>Bubble valuations of tech businesses (* -&gt; *)</li><li>Virtual Currencies are hot (Beenz vs Facebook Credits)</li> </ul><div>Any other similarities strike you?</div>
+ 

@@ -1,7 +1,7 @@
 #"Rolling Up My Sleeves to Build a Cross-Platform Mobile App with FeedHenry"
 
 
-    <p>I've been playing around with the <a href="http://developer.feedhenry.com">FeedHenry</a> platform for the past few months and it really has me excited with the&nbsp;<span style="font-size: small;">possibilities</span>. If you are not familiar with it, it's a platform for building iPhone/Android/Blackberry/WP7/Nokia-WRT mobile applications from one code-base using just HTML, CSS and JavaScript. These are not just web-apps, they can be uploaded to the various App Stores too.</p>
+ <p>I've been playing around with the <a href="http://developer.feedhenry.com">FeedHenry</a> platform for the past few months and it really has me excited with the&nbsp;<span style="font-size: small;">possibilities</span>. If you are not familiar with it, it's a platform for building iPhone/Android/Blackberry/WP7/Nokia-WRT mobile applications from one code-base using just HTML, CSS and JavaScript. These are not just web-apps, they can be uploaded to the various App Stores too.</p>
 <p>Pause for disclosure: I have done some work for the guys so feel free to treat my opinions accordingly.</p>
 <p>There are several different ways of skinning the multi-platform cat and after all my study, FeedHenry is my preferred one. As they build everything in the cloud for you, you don't need to have 5 SDKs installed on your computer. Just upload and/or edit code in their online Studio, click Build and you are done.</p>
 <p>On the handset side, you build your Apps using all the same HTML5/CSS3/JavaScript skills you learned doing normal web-apps. You then use the FeedHenry JavaScript APIs to access things like camera, GPS, local storage etc. The same calls are used no matter what handset you are on. You can use any UI library you like too. Raw HTML, JQuery Mobile and Sencha Touch are the three main ones. If you have other JS libraries, you can pull those in too.</p>
@@ -16,4 +16,4 @@
 <p>I've said it many times before, but if someone is looking for an area to up-skill in, I think it has to be in mobile and it has to be in hard-core JavaScript development.</p>
 <p>I have four projects at the minute which will be built in FeedHenry. Three itch-scratchers and one pretty serious-assed. I'll report back on them (and pimp them) as soon as they are ready.&nbsp;</p>
 <p>&nbsp;</p>
-  
+ 

@@ -1,7 +1,7 @@
 #"The scary thing is, you know someone in Google is testing this"
 
 
-    <p>
+ <p>
 <object height="430" width="480">
 <param name="allowfullscreen" value="true" />
 <param name="allowscriptaccess" value="always" />
@@ -14,4 +14,4 @@
 <p>Android phones could become free with new Google Whisper Ads.</p>
 <p>Last few seconds about the Yahoo YPhone even funnier "expected in 3-4 years".</p>
 <p>Hat-tip @keithd1998</p>
-  
+ 

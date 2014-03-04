@@ -1,7 +1,7 @@
 #"Seriously unimpressed with Wavesecure's Purchase Page"
 
 
-    <p><div class='p_embed p_image_embed'>
+ <p><div class='p_embed p_image_embed'>
 <a href="http://getfile4.posterous.com/getfile/files.posterous.com/temp-2010-07-09/ldudrItqCbjlIAkqhbxqBEoCDtcxdmHzsurHqokkfamurDlJCtbbrjrBmkJy/wavesecure.jpg.scaled1000.jpg"><img alt="Wavesecure" height="385" src="http://getfile3.posterous.com/getfile/files.posterous.com/temp-2010-07-09/ldudrItqCbjlIAkqhbxqBEoCDtcxdmHzsurHqokkfamurDlJCtbbrjrBmkJy/wavesecure.jpg.scaled500.jpg" width="500" /></a>
 </div>
 I just signed up for what I thought was an <strong>Annual </strong>Subscription to <a href="https://www.wavesecure.com/buy.aspx">Wavesecure</a> on Android. How would you read the above screen? It looks to me like I have selected 12 months and the the 3 month option has been disabled. But after purchase I saw that my subscription runs out in October.</p>
@@ -12,4 +12,4 @@ I just signed up for what I thought was an <strong>Annual </strong>Subscription 
 <p>Avoid.</p>
 <p></p>
 <p></p>
-  
+ 
