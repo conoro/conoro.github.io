@@ -2,7 +2,7 @@
 
 TL;DR - A Bluetooth-enabled Button/Joystick to control music/podcasts on your phone whilst driving.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/11/bbb01.jpg"><img class="size-large wp-image-1212 alignnone" alt="bbb01" src="http://conoroneill.net/wp-content/uploads/2013/11/bbb01-1024x849.jpg" width="584" height="484" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb01.jpg"><img class="size-large wp-image-1212 alignnone" alt="bbb01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb01-1024x849.jpg" width="584" height="484" /></a>
 
 One thing I find very dangerous in the car is changing tracks etc on my phone when it's in its screen mount. It's impossible to do so without taking your eye off the road even for a second. And it's illegal in many countries. I used to love the steering column controls for the old car radio but they don't work over A2DP or AVRCP Bluetooth to my phone which streams to my Lidl car stereo.
 
@@ -20,13 +20,13 @@ httpv://www.youtube.com/watch?v=IuH-1LcZlYo
 
 It works beautifully and will take pride of place attached to my steering wheel as I wend my way around the country. Update: Just tested on an emergency drive from Bandon to Mount Mellary to collect a sick Boy Scout.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41.jpg"><img class="size-large wp-image-1214 alignnone" alt="2013-11-30 19.41.41" src="http://conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41-1024x768.jpg" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41.jpg"><img class="size-large wp-image-1214 alignnone" alt="2013-11-30 19.41.41" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41-1024x768.jpg" width="584" height="438" /></a>
 
 I have tested on an SGS4 but there is no reason it won't work on an iDevice unless Tim and Co have not implemented Consumer Report HID on iOS. Update: Tested and working beautifully on an iPhone 5 with iOS 7.
 
 The only real issues I have so far are that it won't auto-connect to the phone (I think this is the SGS4's fault) and I haven't implemented any power saving. I'm trying to sort auto-connect by using an NFC sticker to force the Samsung to connect. Not much joy yet. Power-saving should be easy to do since the joystick itself could be used to wake everything up. In the meantime I'll just unplug when not in use and charge the battery every once in a while from the cigarette lighter socket using one of these very neat <a href="http://dx.com/p/mini-usb-1a-lithium-battery-charging-board-charger-144856">$3 USB LiPo chargers</a> from the usual crew in DX in China.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/11/bbb02.jpg"><img class="aligncenter size-large wp-image-1213" alt="bbb02" src="http://conoroneill.net/wp-content/uploads/2013/11/bbb02-1024x911.jpg" width="584" height="519" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb02.jpg"><img class="aligncenter size-large wp-image-1213" alt="bbb02" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb02-1024x911.jpg" width="584" height="519" /></a>
 
 One thing I haven't figured out is why it won't work with a 3.3V Arduino Pro Mini. The RN42 is a 3.3V device but only works with my 5V Arduinos like the Nano and the Uno. Is it possible the UART pins need 5V?
 

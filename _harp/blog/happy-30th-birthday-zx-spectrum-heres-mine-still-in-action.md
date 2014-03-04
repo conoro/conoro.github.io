@@ -2,7 +2,7 @@
 
 Of course I write too much about the ZX Spectrum. Heck look at the header image. But when a tiny little computer has such an impact on your life, it deserves your attention, even 30 years later. I hope all of you who built the first iPhone Apps have held on to your first device and do the same in 25 years time.
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/04/zx_1.jpg"><img class="size-full wp-image-699 aligncenter" title="zx_1" src="http://conoroneill.net/wp-content/uploads/2012/04/zx_1.jpg" alt="" width="560" height="391" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/zx_1.jpg"><img class="size-full wp-image-699 aligncenter" title="zx_1" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/zx_1.jpg" alt="" width="560" height="391" /></a>
 
 My only disappointment today is that I don't have a <a href="http://www.raspberrypi.org/">Raspberry Pi</a> yet to sit alongside it as its spiritual successor.I honestly think, with the right support, the Raspberry Pi could be this generation's ZX Spectrum. Affordable by most people in the midst of a worldwide recession.
 

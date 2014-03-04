@@ -4,7 +4,7 @@ Rather than struggle with the very basic unprotected IO pins on the Raspberry Pi
 
 After pricing a multitude of combinations of microcontroller boards and Wifi adapters, I found that the Raspberry Pi + USB Wifi + Arduino is the absolute best value for money if you need both wireless internet access and easy sensor data handling. (Note: I'll be investigating the <a href="http://beagleboard.org/Products/BeagleBone%20Black">Beaglebone Black</a> soon to see how it compares).
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44.jpg"><img class="aligncenter size-large wp-image-1088" alt="2013-06-05 07.32.44" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44.jpg"><img class="aligncenter size-large wp-image-1088" alt="2013-06-05 07.32.44" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44-1024x576.jpg" width="584" height="328" /></a>
 
 There are four basic ways to connect Arduino to Raspberry Pi:
 <ol>
@@ -50,6 +50,6 @@ I was getting a warning about "Channel already in use" from /usr/bin/autoreset s
 <pre>sudo arduino</pre>
 If you haven't already, reboot the RPi to make the earlier steps kick in. You should now be able to program whatever you like on to the Arduino using the IDE running on the Raspberry Pi. I even have this running headless by connecting to the RPi across the network using the Windows Remote Desktop Connection tool.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-05-084448_1920x1080_scrot.png"><img class="aligncenter size-large wp-image-1092" alt="2013-06-05-084448_1920x1080_scrot" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-05-084448_1920x1080_scrot-1024x576.png" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-084448_1920x1080_scrot.png"><img class="aligncenter size-large wp-image-1092" alt="2013-06-05-084448_1920x1080_scrot" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-084448_1920x1080_scrot-1024x576.png" width="584" height="328" /></a>
 
 Any questions, pop them in the comments.

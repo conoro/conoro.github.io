@@ -2,7 +2,7 @@
 
 There are many ways you can add remote control to a project. Off the shelf modules; Bluetooth; 2.4GHz NRF24L01+ transceivers; 433MHz/434Mhz modules or even Infra-red.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/05/remote_control.jpg"><img class="aligncenter size-large wp-image-1059" alt="remote_control" src="http://conoroneill.net/wp-content/uploads/2013/05/remote_control-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control.jpg"><img class="aligncenter size-large wp-image-1059" alt="remote_control" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control-1024x576.jpg" width="584" height="328" /></a>
 
 My plan with <a href="http://conoroneill.net/progress-so-far-with-a-kids-e21-self-assemble-remote-control-car/">our ZL-4 el-cheapo RC</a> car was to use an <a href="http://www.elecfreaks.com/1999.html">Elecfreaks Joystick Shield</a>, an Arduino board and the<a href="http://www.ebay.ie/itm/1X-NRF24L01-2-4GHz-Antenna-Wireless-Transceiver-Module-For-Microcontroller-WST-/271133536748?ssPageName=ADME:L:OC:IE:3160#ht_5792wt_1385">NRF24L01+</a> modules mainly because [a] the joystick shield has a connector for one and [b] I want to use them in another potentiallycommercialproject and thought it would be a good learning exercise. They are also stunningly cheap at 1.26,includingshipping, for each transceiver.
 
@@ -22,7 +22,7 @@ For the remote control I have created an extremely simplistic "protocol". The tr
 <pre>XnnnnYnnnnAnBnCnDn</pre>
 Where Xnnnn is the X-axis of the joystick from 0 to 1024, Ynnnn is the Y-axis of the joystick from 0 to 1024, An is button-A 0 or 1, Bn is button-B 0 or 1, Cn is button-C 0 or 1 and Dn is button-D 0 or 1.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/05/remote_control2.jpg"><img class="aligncenter size-large wp-image-1063" alt="remote_control2" src="http://conoroneill.net/wp-content/uploads/2013/05/remote_control2-1024x748.jpg" width="584" height="426" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2.jpg"><img class="aligncenter size-large wp-image-1063" alt="remote_control2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2-1024x748.jpg" width="584" height="426" /></a>
 
 We are now successfully receiving and interpreting those messages on the RC car and doing forward/reverse. The bit we have to figure out is turning, as the car doesn't have any steering.
 

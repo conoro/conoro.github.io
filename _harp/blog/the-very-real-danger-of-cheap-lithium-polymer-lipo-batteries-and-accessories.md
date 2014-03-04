@@ -14,7 +14,7 @@ That was until Friday.
 
 That afternoon, the battery case was on her computer desk, charging. Our 11yo son was using the computer. Then the case started smoking. He went down to my home office to tell me but I was on a call and he decided not to bother me! So he calmly went back and pulled the cable out of the charger. He then went and got a glass of water, in case it went on fire. He's some kid. Zero panic. OK, we had to explain about water and different types of fires to him afterwards but overall, incredibly impressive.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/11/lipo01.jpg"><img class="aligncenter size-full wp-image-1194" alt="lipo01" src="http://conoroneill.net/wp-content/uploads/2013/11/lipo01.jpg" width="1024" height="768" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo01.jpg"><img class="aligncenter size-full wp-image-1194" alt="lipo01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo01.jpg" width="1024" height="768" /></a>
 
 &nbsp;
 
@@ -22,7 +22,7 @@ Less impressive was the melted plastic of the case and USB cable. Less impressiv
 
 &nbsp;
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/11/lipo02.jpg"><img class="aligncenter size-full wp-image-1196" alt="lipo02" src="http://conoroneill.net/wp-content/uploads/2013/11/lipo02.jpg" width="1024" height="1365" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo02.jpg"><img class="aligncenter size-full wp-image-1196" alt="lipo02" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo02.jpg" width="1024" height="1365" /></a>
 
 Whilst it's during charging that LiPo batteries seem to be at their most dangerous, who's to say that it wouldn't have gone on fire or exploded when my wife had been running?
 

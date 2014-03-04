@@ -6,7 +6,7 @@ My mother-in-law got me a fantastic Christmas present in <a href="https://www.fa
 
 It's a <a href="http://rusty.com/us/mens/Wired-Series/Wired-2011">Rusty Hoodie</a> with, wait for it, built-in machine-washable headphones!
 
-<a href="http://rusty.com/us/mens/Wired-Series/Wired-2011"><img class="size-full wp-image-498 aligncenter" title="Wired_r11110600_blk_f" src="http://conoroneill.net/wp-content/uploads/2012/01/Wired_r11110600_blk_f.jpg" alt="" width="600" height="678" /></a>
+<a href="http://rusty.com/us/mens/Wired-Series/Wired-2011"><img class="size-full wp-image-498 aligncenter" title="Wired_r11110600_blk_f" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/01/Wired_r11110600_blk_f.jpg" alt="" width="600" height="678" /></a>
 
 There is a separate pocket for your phone/MP3-player and a headphone plug in there. It runs up to the in-ear headphones which are actually the toggles at the end of the hood draw-string.
 

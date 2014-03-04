@@ -10,7 +10,7 @@ I was really disappointed to discover that Bluetooth on the SGS4 is as buggy and
 
 The place where this causes me the most grief is in the car. All I want is for the bloody phone to auto-connect over A2DP to my Lidl Car stereo when the car is on so I can play my podcasts and listen to music. In theory the SGS4 can do this but simply fails to, 9 times out of 10. HTC's Android was similarly bad. AOSP/Cyanogen in some versions worked perfectly but it was a crapshoot whether any version would work or not.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/05/nfc.jpg"><img class="aligncenter size-full wp-image-1041" alt="nfc" src="http://conoroneill.net/wp-content/uploads/2013/05/nfc.jpg" width="500" height="707" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/nfc.jpg"><img class="aligncenter size-full wp-image-1041" alt="nfc" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/nfc.jpg" width="500" height="707" /></a>
 
 So I thought NFC might solve this. Rather than letting Android itself auto-connect, use Tasker to force a connection. And whaddya know, it seems to work. I tap the phone off the sticker after I turn on the ignition and it connects over Bluetooth to the car stereo. It's only failed once in 10 and I'm pretty sure that's because I didn't hold the phone to the sticker long enough.
 

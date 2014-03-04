@@ -4,7 +4,7 @@ I attended the first London Twitter Teatime back in October. It was an organisat
 
 The Q&amp;A session was particularly good with no-one being too shy about asking the hard questions (*cough* Twitter Annotations).
 
-<a href="https://twitter.com/#!/twitterapi"><img class="alignnone size-full wp-image-553" title="twitterapi" src="http://conoroneill.net/wp-content/uploads/2012/02/twitterapi.png" alt="" width="823" height="147" /></a>
+<a href="https://twitter.com/#!/twitterapi"><img class="alignnone size-full wp-image-553" title="twitterapi" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/02/twitterapi.png" alt="" width="823" height="147" /></a>
 
 Big congrats to Donal Cahalane and the guys here for announcing <a href="http://www.web2ireland.org/2012/02/06/twitter-teatime-dublin/">Twitter Dublin Teatime</a>. If there is one thing you can be sure of with Donal involved, the event will kick ass.
 

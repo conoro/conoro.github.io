@@ -10,7 +10,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>I&#39;ve also mentioned multiple projects using those HC05/HC06 serial Bluetooth modules. Again, dead easy to use and they connect Arduinos to PCs, Raspberry Pis and mobile phones. They are a bit pricey tho.</p>
 <p>My latest experiments involve the Nordic Semiconductor nRF24L01+ modules. These cost <a href="http://www.ebay.ie/itm/1X-NRF24L01-2-4GHz-Antenna-Wireless-Transceiver-Module-For-Microcontroller-WST-/271265848197?pt=UK_BOI_Electrical_Test_Measurement_Equipment_ET&amp;hash=item3f28b45b85">approx 1.26 each on eBay</a> and strike me as the perfect middle ground between the two approaches above. They are cheap, work over a decent distance and have libraries available for both Arduino and Raspberry Pi.</p>
 <p>However I spent nearly all of last weekend trying to get a Raspberry Pi talking to an Arduino using instructions in some <a href="http://arduino-for-beginners.blogspot.ie/2013/02/setup-nordic-nrf24l01-rf-modules-to.html">blogposts</a>. It turns out his instructions were a mix of incorrect text, links to wrong repos, self-contradictory blogposts and code/comments which also contradicted each other. Eventually by ignoring text/comments and just reading the code, I got the wiring right and the sample code working. Whilst I hugely appreciate someone putting time and effort into writing/improving Open Source code like this, it really is a bad idea to then wrap it in such error-riddled explanations.</p>
-<p><a href="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49.jpg"><img class="aligncenter size-large wp-image-1157" alt="2013-09-07 15.34.49" src="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49-1024x556.jpg" width="584" height="317" /></a></p>
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49.jpg"><img class="aligncenter size-large wp-image-1157" alt="2013-09-07 15.34.49" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49-1024x556.jpg" width="584" height="317" /></a></p>
 <p>To avoid you going down the same rabbit hole, this is what you need to do to get Arduino talking to RPi over nRF24L01+.</p>
 <p><h2>Arduino Connections</h2>
 Note that the module is 5V tolerant (apart from VCC) but just to be sure I used it with an <a href="http://www.elecfreaks.com/store/freaduino-leonardo-p-442.html">Elecfreaks Freaduino Leonardo</a> which has a physical switch to toggle between 3.3V and 5V. You could also use a <a href="https://www.sparkfun.com/products/11114">3.3V Pro Mini from Sparkfun like this</a>. It has worked fine on my 5V Uno too.</p>
@@ -26,7 +26,7 @@ Note that the module is 5V tolerant (apart from VCC) but just to be sure I used 
 </ul></p>
 <p><h2>Raspberry Pi Connections</h2>
 The Raspberry Pi is 3.3V itself so can connect directly to the module. Here is the pin-out. Only pay attention to the pin numbers in the circles, not the names.</p>
-<p><h2><a href="http://conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png"><img class="aligncenter size-large wp-image-1149" alt="RPi pinout GPIO" src="http://conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png" width="584" height="275" /></a></h2></p>
+<p><h2><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png"><img class="aligncenter size-large wp-image-1149" alt="RPi pinout GPIO" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png" width="584" height="275" /></a></h2></p>
 <p><ul>
     <li>RPi Pin 6 - Module Pin 1</li>
     <li>RPi Pin 1 - Module Pin 2</li>
@@ -156,7 +156,7 @@ timeout = 1;
 <p>This sketch makes use of printf so you need a file in the same directory called printf.h which consists of:</p>
 <p>[sourcecode]
 /*
-Copyright (C) 2011 J. Coliz <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x6d;&#97;&#110;&#x69;&#97;&#x63;&#98;&#x75;&#x67;&#x40;&#x79;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">&#x6d;&#97;&#110;&#x69;&#97;&#x63;&#98;&#x75;&#x67;&#x40;&#x79;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
+Copyright (C) 2011 J. Coliz <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#109;&#x61;&#110;&#105;&#x61;&#99;&#x62;&#x75;&#x67;&#x40;&#121;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;">&#109;&#x61;&#110;&#105;&#x61;&#99;&#x62;&#x75;&#x67;&#x40;&#121;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#109;</a></p>
 <p>This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
 version 2 as published by the Free Software Foundation.
@@ -191,7 +191,7 @@ On the Arduino, just compile and upload the sketch and then open the Serial Moni
 If everything is working ok, both the RPi and the Arudino should be showing very similar output and reporting success.</p>
 <p><h2>Next Steps?</h2>
 The Raspberry Pi libraries and sample code are obviously in C which is probably too hardcore for most people. Ideally they&#39;d be available to both Python and JavaScript deveopers. I&#39;ll do a little poking around to see how you go about that. I wouldn&#39;t hold my breath tho.</p>
-<p><a href="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg"><img class="aligncenter size-full wp-image-1160" alt="2013-09-01 14.44.06" src="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg" width="1024" height="768" /></a></p>
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg"><img class="aligncenter size-full wp-image-1160" alt="2013-09-01 14.44.06" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg" width="1024" height="768" /></a></p>
 <p>I haven&#39;t done any major distance testing on the modules. In our house, which has concrete internal walls, two modules could communicate from one room to the next but not from one end of the house to the other. They also worked successfully with one module inside an oil tank in the garden and the other one inside the house &lt;10m away. I&#39;ll try some open air testing soon.</p>
 <aside class="center author"><img src="/images/CliveStrong.jpg" alt="Conor O'Neill"/><h2 class="sm">Conor O'Neill</h2><p>Is an Irish technology guy. One of Ireland's first bloggers.</p><p class="links"><a href="/authors/admin">Posts</a><span>•</span><a href="http://twitter.com/conoro">Twitter</a><span>•</span><a href="https://plus.google.com/+ConorONeill/posts">Google+</a><span>•</span><a href="https://github.com/conoro">GitHub</a></p></aside><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'conor';
 (function() {

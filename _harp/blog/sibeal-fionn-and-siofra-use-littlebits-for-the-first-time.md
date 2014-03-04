@@ -2,7 +2,7 @@
 
 Last night, just before bedtime, I handed over <a href="http://littlebits.cc/">littleBits</a> to our three younger kids. They had never seen or used it before and I wanted to gauge their reaction to it.
 
-<a href="http://market.littlebits.cc/littleBits-Starter-Kit-_p_36.html"><img class="size-full wp-image-830 aligncenter" title="littlebits" src="http://conoroneill.net/wp-content/uploads/2012/08/littlebits.png" alt="" width="485" height="337" /></a>
+<a href="http://market.littlebits.cc/littleBits-Starter-Kit-_p_36.html"><img class="size-full wp-image-830 aligncenter" title="littlebits" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/littlebits.png" alt="" width="485" height="337" /></a>
 
 Overall they loved it and it was the first thing Fionn looked for when he got up this morning. Sibal also snuk off with it for a while on her own last night after the others had gone to bed.
 

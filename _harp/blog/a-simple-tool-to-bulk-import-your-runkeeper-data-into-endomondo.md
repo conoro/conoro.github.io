@@ -4,7 +4,7 @@ UPDATE 17th Aug 2013: The tool should now be able to import Sports Tracker files
 
 TL;DR - <a href="https://github.com/conoro/runkeeper2endomondo/blob/master/runkeeper2endomondogui.exe?raw=true">Download</a> the Windows RunKeeper to Endomondo tool.
 
-<a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-942 aligncenter" title="rk2em_01" alt="" src="http://conoroneill.net/wp-content/uploads/2013/03/rk2em_01.jpg" width="467" height="339" /></a>
+<a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-942 aligncenter" title="rk2em_01" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/rk2em_01.jpg" width="467" height="339" /></a>
 
 I've been using <a href="http://runkeeper.com/">RunKeeper</a> as my main mobile running app since January of last year. I liked it so much, I moved to the paid "Elite" tier pretty quickly. For almost a year, I really couldn't fault it and liked the social interactions with other Irish users along with its rock solid stability.
 
@@ -53,7 +53,7 @@ And so finally I get to the point. A simple Windows App which you point to a dir
 </ol>
 </li>
 </ol>
-<a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-943 aligncenter" title="rk2em_02" alt="" src="http://conoroneill.net/wp-content/uploads/2013/03/rk2em_02.jpg" width="466" height="339" /></a>
+<a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-943 aligncenter" title="rk2em_02" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/rk2em_02.jpg" width="466" height="339" /></a>
 
 The code has a few path dependencies on Windows but it should be trivial to change it to work on OS X and Linux.
 

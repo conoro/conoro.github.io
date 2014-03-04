@@ -2,7 +2,7 @@
 
 This post was prompted by <a href="http://twitter.com/mollydot">@mollydot</a> asking me last night on Twitter what accessories make sense if you are buying a <a href="http://www.raspberrypi.org/">Raspberry Pi</a> as a Christmas Gift and<a href="http://twitter.com/jkeyes">@jkeyes</a>rightly suggesting that a post with links would be useful.
 
-<a href="http://www.raspberrypi.org/"><img class="size-full wp-image-905 aligncenter" title="santa_pi" src="http://conoroneill.net/wp-content/uploads/2012/11/santa_pi.png" alt="" width="600" height="399" /></a>
+<a href="http://www.raspberrypi.org/"><img class="size-full wp-image-905 aligncenter" title="santa_pi" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/11/santa_pi.png" alt="" width="600" height="399" /></a>
 
 I really think this Christmas could be a lovely replay of 1982 for a lot of people, like me, who got their first home computer that year. You could have so much fun on Christmas Day messing with the RPi rather than falling asleep in front of the fire. Just don't fight over who gets the telly when Doctor Who is on.
 

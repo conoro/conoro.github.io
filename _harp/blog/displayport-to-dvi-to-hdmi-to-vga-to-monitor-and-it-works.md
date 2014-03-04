@@ -4,4 +4,4 @@ Yesterday I got caught out in a meeting by having an MBP and a DVI adapter whils
 
 For giggles I just tried daisy-chaining a bunch of adapters I've collected from various Chinese sources over the last two years. It works. <a href="http://www.youtube.com/watch?v=OHVjs4aobqs">Inconceivable</a>! That's $29 fewer dollars in Apple's cofffers.
 
-<a href="http://conoroneill.net/wp-content/uploads/2014/01/adapters.jpg"><img class="aligncenter size-full wp-image-1244" alt="adapters" src="http://conoroneill.net/wp-content/uploads/2014/01/adapters.jpg" width="1024" height="576" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/adapters.jpg"><img class="aligncenter size-full wp-image-1244" alt="adapters" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/adapters.jpg" width="1024" height="576" /></a>

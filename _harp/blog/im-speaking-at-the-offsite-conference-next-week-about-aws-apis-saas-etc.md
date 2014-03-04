@@ -2,7 +2,7 @@
 
 I mentioned the <a href="http://offsite.ie/event-agenda/">OFFSITE Conference</a> over on <a href="http://www.web2ireland.org/2012/09/03/west-corks-first-major-tech-conference-offsite/">Web2Ireland</a> recently. It's the frst time a major technology event is being held in West Cork and everyone in business in Munster and beyond should consider attending. It's all happening next week, 27th September in Rosscarbery.
 
-<a href="http://offsite.ie/event-agenda/"><img class="size-medium wp-image-856 aligncenter" title="header-bg" src="http://conoroneill.net/wp-content/uploads/2012/09/header-bg-300x60.png" alt="" width="300" height="60" /></a>
+<a href="http://offsite.ie/event-agenda/"><img class="size-medium wp-image-856 aligncenter" title="header-bg" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/09/header-bg-300x60.png" alt="" width="300" height="60" /></a>
 
 The title of my talk is "<em>Building on The Shoulders of Giants: How Irish businesses can quickly deliver Enterprise-quality products through the smart use of software services</em>"
 

@@ -72,7 +72,7 @@ while True:
 
 This diagram of the RPi pin-out was invaluable:
 
-<a href="http://elinux.org/RPi_Low-level_peripherals#Referring_to_pins_on_the_Expansion_header"><img class="alignnone size-full wp-image-894" title="GPIOs" src="http://conoroneill.net/wp-content/uploads/2012/11/GPIOs.png" alt="" width="254" height="581" /></a>
+<a href="http://elinux.org/RPi_Low-level_peripherals#Referring_to_pins_on_the_Expansion_header"><img class="alignnone size-full wp-image-894" title="GPIOs" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/11/GPIOs.png" alt="" width="254" height="581" /></a>
 
 Once everything was setup at the door yesterday, we then found that the volume on the Lidl iPod Dock was far too low. I had to put a tiny battery powered speaker outside, taped to the postbox. But even that wasn't great so I added a Fiio amplifier. Of course then we couldn't hear it inside, so I split the audio and used one audio device inside and one outside.
 

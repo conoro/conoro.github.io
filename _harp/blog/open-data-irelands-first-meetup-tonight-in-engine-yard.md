@@ -4,7 +4,7 @@ Great to see this <a href="http://meetup.opendata.ie/">Meetup</a> happen and big
 
 Ireland needs to get beyond talking about OpenData and start increasing the number of people actually <em><strong>Opening Up The Data</strong></em> in a big way. The Irish tech community has to lead by example and that means just doing it.
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/10/CodeForIreland031.png"><img class="alignnone size-full wp-image-891" title="CodeForIreland03" src="http://conoroneill.net/wp-content/uploads/2012/10/CodeForIreland031.png" alt="" width="631" height="307" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/10/CodeForIreland031.png"><img class="alignnone size-full wp-image-891" title="CodeForIreland03" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/10/CodeForIreland031.png" alt="" width="631" height="307" /></a>
 
 (Apologies to <a href="http://codeforamerica.org/">Code For America</a> for the visual knock-off)
 

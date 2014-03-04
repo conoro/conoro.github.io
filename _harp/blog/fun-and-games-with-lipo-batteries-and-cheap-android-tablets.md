@@ -6,7 +6,7 @@ The <a href="http://www.ebay.com/itm/3-7V-3500mAh-lithium-Battery-Rechargeable-P
 
 The eBay replacement quotes 3500mAh which I'll take with a big grain of salt. But at least it was bigger and heavier than the 2x "2000mAh" that were in the Eken.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/05/T2eC16hHJIQE9qUHu0VFBRZTd8Hccw60_12.jpg"><img class="aligncenter size-full wp-image-1024" alt="$T2eC16hHJIQE9qUHu0VFBRZTd8Hccw~~60_12" src="http://conoroneill.net/wp-content/uploads/2013/05/T2eC16hHJIQE9qUHu0VFBRZTd8Hccw60_12.jpg" width="500" height="475" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/T2eC16hHJIQE9qUHu0VFBRZTd8Hccw60_12.jpg"><img class="aligncenter size-full wp-image-1024" alt="$T2eC16hHJIQE9qUHu0VFBRZTd8Hccw~~60_12" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/T2eC16hHJIQE9qUHu0VFBRZTd8Hccw60_12.jpg" width="500" height="475" /></a>
 
 Swapping out seemed to be a doddle, just two wires to solder. Most of the eBay batteries come with a PCM (Protection Circuit Module) built-in. This ensures that the battery never completely drains and also doesn't get overcharged. Both are lethal for LiPo batteries.
 

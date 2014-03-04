@@ -2,7 +2,7 @@
 
 I have hovered over the Buy button on the <a href="https://getpebble.com/">Pebble site</a> more times than I'd like to admit. But I always stopped at the last minute. $150 is a lot of money for a watch when you haven't worn one in years, even if it's a "Smart" watch. The dreadful reviews of the RunKeeper App didn't help, since that was going to be my main use case.
 
-<a href="http://conoroneill.net/wp-content/uploads/2014/01/running_2013.jpg"><img class="aligncenter size-full wp-image-1240" alt="running_2013" src="http://conoroneill.net/wp-content/uploads/2014/01/running_2013.jpg" width="143" height="191" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/running_2013.jpg"><img class="aligncenter size-full wp-image-1240" alt="running_2013" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/running_2013.jpg" width="143" height="191" /></a>
 
 Then, just at the beginning of December, I got one as a gift and put it to use the following day with the self-same RunKeeper App in the Clonakilty Half Marathon. That App is indeed close to useless since you cannot start or stop runs with it - the main function most people would be looking for to avoid fiddling with armbands at the start/end of a run.
 
@@ -10,15 +10,15 @@ Disaster then struck as the screen broke and turned into a kaleidoscope of colou
 
 Similar to most people, I immediately installed some silly watch-faces.
 
-<a href="http://conoroneill.net/wp-content/uploads/2014/01/bbc-face.png"><img class="aligncenter size-full wp-image-1237" alt="bbc-face" src="http://conoroneill.net/wp-content/uploads/2014/01/bbc-face.png" width="144" height="168" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/bbc-face.png"><img class="aligncenter size-full wp-image-1237" alt="bbc-face" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/bbc-face.png" width="144" height="168" /></a>
 
 I particularly liked the Fair Weather one which uses an App on your phone as an internet proxy. That's a really really smart use of a low-power device. I'm expecting to see many more uses of that proxy method over time.
 
-<a href="http://conoroneill.net/wp-content/uploads/2014/01/pebble_fairweather.png"><img class="aligncenter size-full wp-image-1238" alt="pebble_fairweather" src="http://conoroneill.net/wp-content/uploads/2014/01/pebble_fairweather.png" width="144" height="168" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/pebble_fairweather.png"><img class="aligncenter size-full wp-image-1238" alt="pebble_fairweather" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/pebble_fairweather.png" width="144" height="168" /></a>
 
 In the end I settled on the Glance App which gives me a summary of texts, emails and calls along with the time and overall weather/temperature. I also use Music Boss to control what's playing on the phone.
 
-<a href="http://conoroneill.net/wp-content/uploads/2014/01/IMG_20130606_214732-236x300.jpg"><img class="aligncenter size-full wp-image-1239" alt="IMG_20130606_214732-236x300" src="http://conoroneill.net/wp-content/uploads/2014/01/IMG_20130606_214732-236x300.jpg" width="236" height="300" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/IMG_20130606_214732-236x300.jpg"><img class="aligncenter size-full wp-image-1239" alt="IMG_20130606_214732-236x300" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/IMG_20130606_214732-236x300.jpg" width="236" height="300" /></a>
 
 The killer feature for me is, surprisingly, the SMS/Phone/IM/etc Alerts. I had thought they were going to be useless since they just replicate what the phone is doing. Except, my phone spends most of its time in my pocket or on my desk, not in my hand. There is something very very cool about getting an alert on my wrist that my phone is ringing or someone is IMing me when my phone is at the far end of the house/office. I still can't figure out how Bluetooth LE is getting such incredible range. Better than our house Wifi! I have the email alerts turned off for the obvious reason. It's also much easier/safer to glance at the alerts whilst driving.
 

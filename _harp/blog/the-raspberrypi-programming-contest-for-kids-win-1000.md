@@ -1,6 +1,6 @@
 #"The @RaspberryPi Programming Contest for Kids - Win $1000"
 
-<a href="http://www.raspberrypi.org/wp-content/uploads/2012/07/Summer-Code-001c.pdf"><img class="size-full wp-image-789 alignnone" title="competition" src="http://conoroneill.net/wp-content/uploads/2012/07/competition.png" alt="" width="855" height="856" /></a>
+<a href="http://www.raspberrypi.org/wp-content/uploads/2012/07/Summer-Code-001c.pdf"><img class="size-full wp-image-789 alignnone" title="competition" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/competition.png" alt="" width="855" height="856" /></a>
 
 &nbsp;
 

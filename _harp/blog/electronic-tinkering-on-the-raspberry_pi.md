@@ -2,7 +2,7 @@
 
 I've been lucky to-date that I haven't killed the RPi stone dead with my little projects. I find the simplest way to help avoid any catastrophic shorts is to use an old 40-core IDE cable (note, the "newer" 80-core ones don't work even tho they fit). I Dremeled mine last week to fit in this <a href="http://www.ebay.co.uk/itm/Pi-Box-Case-Box-Enclosure-for-Raspberry-Pi-Computer-New-From-PiWorks-/390538699061?pt=UK_Computing_DesktopComponents_RL&hash=item5aedeba135">very nice inexpensive case</a>.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511.jpg"><img class="alignnone size-large wp-image-931" title="IMG_20130210_102511" src="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511.jpg"><img class="alignnone size-large wp-image-931" title="IMG_20130210_102511" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511-1024x768.jpg" alt="" width="584" height="438" /></a>
 
 In many ways, that GPIO header on the RPi is like the expansion port on the ZX Spectrum. So much possibility, so much danger :-)
 

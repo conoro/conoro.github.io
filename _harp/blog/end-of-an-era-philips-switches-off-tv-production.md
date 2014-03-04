@@ -2,7 +2,7 @@
 
 Whilst <a href="http://www.rnw.nl/english/article/philips-switches-tv-production">this story passed by</a> mainly unnoticed, I was very sad to hear that Philips is exiting the TV business. I have a lot of wonderful memories of working with the TV guys in Eindhoven and it pains me to see everything move to a JV in China.
 
-<a href="http://www.philips.com/"><img class="size-full wp-image-681 aligncenter" title="mainlogo_full_gb_en" src="http://conoroneill.net/wp-content/uploads/2012/04/mainlogo_full_gb_en.gif" alt="" width="148" height="39" /></a>
+<a href="http://www.philips.com/"><img class="size-full wp-image-681 aligncenter" title="mainlogo_full_gb_en" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/mainlogo_full_gb_en.gif" alt="" width="148" height="39" /></a>
 
 My first degree-related summer-job in college in 1989 was in Eindhoven. My Dad knew a Dutch businessman who had connections in Philips and he got me a job in the Overseas TV department. The people I worked with were just amazing. They made TVs for places like South America where they had to handle every crappy signal that was thrown at them. This included not just poor TV signals, but rubbish power quality too. Those Philips TVs were the Toyota Landcruisers of the television world. Where everything else curled up into a ball and cried, your Philips kept on truckin'.
 

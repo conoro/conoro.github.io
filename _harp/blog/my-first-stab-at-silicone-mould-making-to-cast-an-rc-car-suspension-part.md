@@ -2,7 +2,7 @@
 
 Regular readers will know that I'm a huge fan of the <a href="http://conoroneill.net/makey-makey-raspberry-pi-iracer-bluetooth-cheese-controlled-car-ccc/">Dagu Arexx i-racer RC car</a>. It's cheap, light, fast, uses Bluetooth, has a removable shell and is perfect for n00b families like us who have never really done the RC thing properly.
 
-<img class="alignnone" alt="" src="http://conoroneill.net/wp-content/uploads/2012/12/iracer-300x300.jpg" width="300" height="300" />
+<img class="alignnone" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/iracer-300x300.jpg" width="300" height="300" />
 
 Unfortunately after some over-exhuberant use recently, we broke a part of the suspension on one of the front wheels. Over the space of a few weeks I tried everything to fix it without success. That included:
 <ol>
@@ -10,7 +10,7 @@ Unfortunately after some over-exhuberant use recently, we broke a part of the su
 	<li>Supergluing pieces of metalonto the remaining suspension member. They fell off.</li>
 	<li>Soldering metal and wire onto the wheel hub to completely replace theremaining suspension member. This worked but was so loose and bendy that the car just drove around in circles.</li>
 </ol>
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-07-20.47.48.jpg"><img class="aligncenter size-large wp-image-1103" alt="2013-06-07 20.47.48" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-07-20.47.48-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-07-20.47.48.jpg"><img class="aligncenter size-large wp-image-1103" alt="2013-06-07 20.47.48" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-07-20.47.48-1024x576.jpg" width="584" height="328" /></a>
 
 In the back of my mind I started justifying the cost of a 3D printer even tho I knew they were unsuitable for things that small.
 
@@ -30,25 +30,25 @@ Phase two was less straightforward. I mixed the polyurethane and poured it into 
 
 The second one was better but still not right. More rubber cutting ensued.
 
-<img class="aligncenter size-large wp-image-1104" alt="2013-06-08 18.00.11" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-08-18.00.11-1024x576.jpg" width="584" height="328" />
+<img class="aligncenter size-large wp-image-1104" alt="2013-06-08 18.00.11" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-08-18.00.11-1024x576.jpg" width="584" height="328" />
 
 The third mix was all wrong and never set.
 
 Fourth time's a charm and I got a "perfect" copy of the original. Obviously with lots of extra bits which I had to cut away.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/moulds.jpg"><img class="aligncenter size-large wp-image-1106" alt="moulds" src="http://conoroneill.net/wp-content/uploads/2013/06/moulds-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/moulds.jpg"><img class="aligncenter size-large wp-image-1106" alt="moulds" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/moulds-1024x576.jpg" width="584" height="328" /></a>
 
 I gave it about 16 hrs to cure, just in case.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-08-01.00.05.jpg"><img class="aligncenter size-large wp-image-1107" alt="2013-06-08 01.00.05" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-08-01.00.05-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-08-01.00.05.jpg"><img class="aligncenter size-large wp-image-1107" alt="2013-06-08 01.00.05" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-08-01.00.05-1024x576.jpg" width="584" height="328" /></a>
 
 A tiny amount of trimming and it fit perfectly.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/wheels.jpg"><img class="aligncenter size-large wp-image-1108" alt="wheels" src="http://conoroneill.net/wp-content/uploads/2013/06/wheels-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/wheels.jpg"><img class="aligncenter size-large wp-image-1108" alt="wheels" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/wheels-1024x576.jpg" width="584" height="328" /></a>
 
 I'm genuinely stunned. I didn't really expect a great result here but I got exactly what I needed. This method is amazing and so bloody easy.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-08-12.38.25.jpg"><img class="aligncenter size-large wp-image-1109" alt="2013-06-08 12.38.25" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-08-12.38.25-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-08-12.38.25.jpg"><img class="aligncenter size-large wp-image-1109" alt="2013-06-08 12.38.25" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-08-12.38.25-1024x576.jpg" width="584" height="328" /></a>
 
 On the downside, I am concerned about the strength of the cast. Particularly the vertical bit which is what broke in the original too. I'm tempted to do another cast where I run a thin wire in the correct place to add some robustness. Having the mould means I can make as many of these as I like.
 

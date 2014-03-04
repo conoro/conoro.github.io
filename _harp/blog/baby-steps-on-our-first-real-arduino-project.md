@@ -2,15 +2,15 @@
 
 The kids and I have a silly idea for an Arduino project involving doorbells. So I ordered some parts from <a href="http://sparkfun.com">Sparkfun</a> in the US (love that site so much) and they arrived quickly:
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/07/sparkfun.png"><img class="size-full wp-image-781 aligncenter" title="sparkfun" src="http://conoroneill.net/wp-content/uploads/2012/07/sparkfun.png" alt="" width="800" height="558" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/sparkfun.png"><img class="size-full wp-image-781 aligncenter" title="sparkfun" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/sparkfun.png" alt="" width="800" height="558" /></a>
 
 Then I lashed together the bare basics to make sure what we want to do will work. Press the button:
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/07/oisin.png"><img class="alignnone size-full wp-image-782" title="oisin" src="http://conoroneill.net/wp-content/uploads/2012/07/oisin.png" alt="" width="800" height="600" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/oisin.png"><img class="alignnone size-full wp-image-782" title="oisin" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/oisin.png" alt="" width="800" height="600" /></a>
 
 Press it again:
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/07/siofra.png"><img class="alignnone size-full wp-image-783" title="siofra" src="http://conoroneill.net/wp-content/uploads/2012/07/siofra.png" alt="" width="800" height="600" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/siofra.png"><img class="alignnone size-full wp-image-783" title="siofra" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/siofra.png" alt="" width="800" height="600" /></a>
 
 etc
 

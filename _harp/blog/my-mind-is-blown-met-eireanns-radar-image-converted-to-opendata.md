@@ -6,7 +6,7 @@ Brendan Cunningham has just left <a href="http://conoroneill.net/bandon-flood-da
 
 That vector data with rainfall values is now up on <a href="https://www.google.com/fusiontables/DataSource?docid=1E0Z4OTUfKXHzaLzFQT3aLlzJ-9LeWwcoCFyHsXk">Google Fusion Tables</a>and is updated every 15 minutes so now it can be integrated with GIS and other location based services.
 
-<a href="https://www.google.com/fusiontables/DataSource?docid=1E0Z4OTUfKXHzaLzFQT3aLlzJ-9LeWwcoCFyHsXk"><img class="size-full wp-image-835 aligncenter" title="fusion" src="http://conoroneill.net/wp-content/uploads/2012/08/fusion.png" alt="" width="375" height="442" /></a>
+<a href="https://www.google.com/fusiontables/DataSource?docid=1E0Z4OTUfKXHzaLzFQT3aLlzJ-9LeWwcoCFyHsXk"><img class="size-full wp-image-835 aligncenter" title="fusion" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/fusion.png" alt="" width="375" height="442" /></a>
 
 As he points out, with national coverage like this, you can watch for rainfall trends. Heck, you could even do predictions. He mentions that previous flood data may be available from the OPW and a Benefitting Lands layer from the OSi.
 

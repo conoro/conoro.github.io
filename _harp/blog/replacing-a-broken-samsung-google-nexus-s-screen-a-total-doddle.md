@@ -2,7 +2,7 @@
 
 My Dad put a big crack is his Nexus S screen a good while back so I promptly ordered a replacement <a href="http://www.ebay.com/itm/Replacement-LCD-Touch-Screen-Display-Assembly-For-Samsung-Google-Nexus-S-i9023-/290768756299?">from eBay</a>. I finally got the chance to fit it this morning and was thrilled that I didn't manage to completely screw it up.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-01-12.38.10.jpg"><img class="aligncenter size-large wp-image-1085" alt="2013-06-01 12.38.10" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-01-12.38.10-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-01-12.38.10.jpg"><img class="aligncenter size-large wp-image-1085" alt="2013-06-01 12.38.10" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-01-12.38.10-1024x576.jpg" width="584" height="328" /></a>
 
 A few useful notes:
 <ol>

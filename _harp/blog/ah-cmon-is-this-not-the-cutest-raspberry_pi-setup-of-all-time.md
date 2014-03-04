@@ -2,7 +2,7 @@
 
 I splashed out a little on my main dev Raspberry Pi and finally got it a <a href="http://shop.pimoroni.com/collections/pibow/products/pibow">PiBow case</a>. I've loved that design for so long, I had to succumb.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/09/pibow2.jpg"><img class="aligncenter size-large wp-image-1165" alt="pibow2" src="http://conoroneill.net/wp-content/uploads/2013/09/pibow2-991x1024.jpg" width="584" height="603" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/pibow2.jpg"><img class="aligncenter size-large wp-image-1165" alt="pibow2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/pibow2-991x1024.jpg" width="584" height="603" /></a>
 
 Coincidentally the same company now has a brilliant new USB hub specifically for the RPi called <a href="http://shop.pimoroni.com/products/pihub">the PiHUB</a>. Not only is it in that hilarious shape, but it also comes with a 3A PSU. This means you can add extra devices and power the Raspberry Pi off it. So far it's been the most compatible hub I've tried with the RPi and we all know how dodgy it can be with hubs. It also solves the USB-splitter-cable mess I had devised to connect a portable harddrive to the RPi.
 

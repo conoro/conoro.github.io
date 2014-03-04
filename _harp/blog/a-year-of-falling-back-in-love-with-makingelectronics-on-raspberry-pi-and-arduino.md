@@ -3,19 +3,19 @@
 <h2>The 80s</h2>
 As I have mentioned many many times, my adventure with computers began properly in late 1982 with my parents getting me a ZX Spectrum. I went from BASIC to Forth to Z80 Assembler over a few years and loved it all. Ok, to be fair, 90% of that time was spent playing Jet Set Willy.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.55.55.jpg"><img class="aligncenter size-large wp-image-1120" alt="2013-06-15 10.55.55" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.55.55-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.55.55.jpg"><img class="aligncenter size-large wp-image-1120" alt="2013-06-15 10.55.55" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.55.55-1024x576.jpg" width="584" height="328" /></a>
 
 But I also had a strong interest in electronics. I'd tried a few times to learn from books in the local library but most of them were still about valves! I got (and still have) "20 Simple Electronics Projects for the ZX81 and ZX Spectrum" around '84/'85 but I still struggled.
 <h2>Maplin</h2>
 Then I discovered the Maplin catalogue in the local newsagent and was entranced. I ordered various bits plus a multimeter and soldering iron from them and tried to build a Kempston-compatible joystick interface. That never worked. In fact the only real things I succeeded in doing were to upgrade the 16K Spectrum to 48K, to move it into a new keyboard case and to replace the power jack and add a reset button.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.07.56.jpg"><img class="aligncenter size-large wp-image-1121" alt="2013-06-15 11.07.56" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.07.56-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.07.56.jpg"><img class="aligncenter size-large wp-image-1121" alt="2013-06-15 11.07.56" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.07.56-1024x576.jpg" width="584" height="328" /></a>
 <h2>Electronics in College</h2>
 When it came time to pick my college course in '86, I initially looked into Computer Science in UCD/DCU/UL but the syllabuses back then were still full of Cobol, RPG (not the cool version of this acronym) and mainframes. Yuck! The Electronic Engineering syllabuses, in contrast, looked amazing. Analogue and digital electronics, programming, microwaves, bio-medical engineering, physics, chemistry, maths. Yum!
 <h2>First Principles</h2>
 So I enjoyed my 4 year degree in UCD and 2 year DSP Masters. Loved some subjects. Hated others. And sadly, electronics in general was one of the hates. I could blame the all-time worst lecturer on the planet for my detestation of analogue electronics. But it was really the entire UCD attitude of teaching the core principles without any practical understanding/feel/intuition that never worked for me. Our "practicals" were a joke of rushed setups and even more rushed reports. Zero actual understanding. If you want to freak out any ex-UCD Elec Engineer, just show them a circuit diagram with a transistor and inductor or ask them to turn on an oscilloscope.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/transistor.gif"><img class="aligncenter size-full wp-image-1118" alt="transistor" src="http://conoroneill.net/wp-content/uploads/2013/06/transistor.gif" width="762" height="301" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/transistor.gif"><img class="aligncenter size-full wp-image-1118" alt="transistor" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/transistor.gif" width="762" height="301" /></a>
 
 I still think that way of teaching is wrong. The standard response from lecturers of the time was that if you wanted to do practical hands-on stuff, you should go to DIT, which they looked down their noses at. Or become a technician. Perhaps if they looked at Irish Universities pathetic record at being the source of great engineering innovations/patents/products, they'd think again about their sense of superiority. Metrics.
 <h2>Solving Problems</h2>
@@ -37,17 +37,17 @@ The first hint to me that I was getting into a Making mindset was <a href="http:
 
 I still find myself every day looking for things that could do with a bit of Sugru to improve/fix them. I live by <a href="https://sugru.com/manifesto">The Fixer's Manifesto</a>. Check out my patent-pending Sugru Wall Fingers.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.10.01.jpg"><img class="aligncenter size-large wp-image-1122" alt="2013-06-15 11.10.01" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.10.01-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.10.01.jpg"><img class="aligncenter size-large wp-image-1122" alt="2013-06-15 11.10.01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.10.01-1024x576.jpg" width="584" height="328" /></a>
 <h2>Arduino</h2>
 It was April 2012 when the Raspberry Pi went up for pre-order that I started reading and thinking and realising I had tons of things I wanted to do which only made sense when you did online+hardware. Over April and May I had some sort of Damascene conversion and got completely buzzed about making things. I subscribed to MAKE magazine. I got my old electronics books out of the attic and then, exactly 12 months ago, I ordered an Arduino Starter Kit.
 
-<a href="http://timehop.com/c/fs:4fd0c122bd5a4e000102f15e:38112"><img class="aligncenter size-full wp-image-1076" alt="timehop" src="http://conoroneill.net/wp-content/uploads/2013/05/timehop.jpg" width="606" height="657" /></a>
+<a href="http://timehop.com/c/fs:4fd0c122bd5a4e000102f15e:38112"><img class="aligncenter size-full wp-image-1076" alt="timehop" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/timehop.jpg" width="606" height="657" /></a>
 
 And wow, what a 12 months that Starter Kit kicked-off. I've gone from a simple kit along with a soldering iron and multimeter to a desk covered in modules, wires, interfaces, sensors and microcontrollers.
 
 In fact I still use the kit every day. Here's something I put together in 10 mins before I went to bed the other night. It's an 8 DHT22 Temperature and Humidity Sensor with a cloned 4 Nokia 5110 mobile phone screen. The code is just a quick hack of two Adafruit examples from their libraries. Two modules, one resistor and an Arduino. That's all.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/05/2013-05-23-10.25.45.jpg"><img class="aligncenter size-large wp-image-1081" alt="2013-05-23 10.25.45" src="http://conoroneill.net/wp-content/uploads/2013/05/2013-05-23-10.25.45-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/2013-05-23-10.25.45.jpg"><img class="aligncenter size-large wp-image-1081" alt="2013-05-23 10.25.45" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/2013-05-23-10.25.45-1024x576.jpg" width="584" height="328" /></a>
 <h2>Open Source Hardware</h2>
 And this is the huge difference from my college days - modules. In the past year I have put together idea after idea, project after project and I've only needed to use Ohm's Law once. I've also used a circuit simulator once for old times sake. The flood of cheap parts available online from China with a worldwide community of Open Source and Open Hardware enthusiasts means that you can prototype almost anything with a minimum of electronics knowledge. The only things you need are inquisitiveness, patience and a basic ability to think things through logically.
 
@@ -59,13 +59,13 @@ Whilst we can all criticise many aspects of the RPi design (USB, SD card locatio
 
 One of my big challenges has been working out the best approach to reporting data online. The device that does this will need Wifi, not wired Ethernet and the numbers just never add up when I do it with Arduino. The obvious solution is a Raspberry Pi Model-A with a cheap USB Wifi dongle.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44.jpg"><img class="aligncenter size-large wp-image-1088" alt="2013-06-05 07.32.44" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44.jpg"><img class="aligncenter size-large wp-image-1088" alt="2013-06-05 07.32.44" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44-1024x576.jpg" width="584" height="328" /></a>
 
 This gives me plenty of welly for running Node or Python and can interface easily with an Arduino. But I'm still worried about that SD card dangling off the end. Most of the problems we've had with RPi (apart from the USB horrors) have been related to either the SD card refusing to stay well-seated or it getting corrupted by reboots (usually caused by the aforementioned USB horror). The Beaglebone Black's use of on-board eMMC looks a lot more stable by comparison but the Google Group doesn't give me confidence that it is ready for primetime quite yet.
 <h2>RC Cars</h2>
 We're also just getting into RC cars in our house. After years of the kids getting generic toy-shop RC cars which see one day's use and are then discarded when the batteries run out, we now come up with ideas all the time and give them a lash on the iRacer or the ZL-4.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.11.34.jpg"><img class="aligncenter size-large wp-image-1123" alt="2013-06-15 11.11.34" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.11.34-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.11.34.jpg"><img class="aligncenter size-large wp-image-1123" alt="2013-06-15 11.11.34" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-11.11.34-1024x576.jpg" width="584" height="328" /></a>
 <h2>Halloween</h2>
 My 9yo daughter came up with a completely insane idea for her halloween costume last week (this child thinks ahead!). It will involve wearables, servos and lots of arts/crafts. It will also scare the living daylights out of children and adults alike.
 
@@ -73,7 +73,7 @@ Her 7yo brother announced he wants to do a hockey mask and chainsaw. I'm still t
 <h2>Wearables</h2>
 I love seeing all of the activity around wearables from the likes of <a href="http://www.adafruit.com/blog/category/wearables/">Adafruit</a> and it really catches the kids' eyes too. I need to put in an order for a Flora or Lilypad soon and try some things out.
 
-<a href="http://www.adafruit.com/products/1405"><img class="aligncenter size-full wp-image-1124" alt="1405_LRG" src="http://conoroneill.net/wp-content/uploads/2013/06/1405_LRG.jpg" width="600" height="461" /></a>
+<a href="http://www.adafruit.com/products/1405"><img class="aligncenter size-full wp-image-1124" alt="1405_LRG" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/1405_LRG.jpg" width="600" height="461" /></a>
 <h2>Health and The Internet of Things</h2>
 The whole area of Health and the Internet of Things (IoT or IOT) is where my head is at a lot of the time in the past few months. Everything I have been doing around sensors obviously falls into the IOT category. I'm also making a simple set of devices that fit into the home automation category but will also have a web-site and API involved.
 
@@ -83,6 +83,6 @@ Finally I have just ordered a board for health sensing that should be great fun 
 <h2>You Getting Started</h2>
 If you are interested in getting into electronics, I can't stress enough how easy it is to get started. Buy yourself an Arduino Starter Kit <a href="http://store.arduino.cc/eu/index.php?main_page=product_info&amp;cPath=2&amp;products_id=185">here</a>, <a href="http://www.coolcomponents.co.uk/catalog/arduino-starter-p-596.html">here</a>, <a href="http://www.seeedstudio.com/depot/ardx-the-starter-kit-for-arduino-p-1153.html?cPath=138">here</a>, <a href="http://www.alpha-crucis.com/en/intermediaires/4082-arduino-starter-kit-370038669007.html">here</a>, or <a href="http://dx.com/s/arduino+starter+kit?Utm_rid=73941134&Utm_source=affiliate">here</a>, do all the projects in it and you'll be ready to take on anything after that :-)
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.35.01.jpg"><img class="aligncenter size-large wp-image-1119" alt="2013-06-15 10.35.01" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.35.01-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.35.01.jpg"><img class="aligncenter size-large wp-image-1119" alt="2013-06-15 10.35.01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-15-10.35.01-1024x576.jpg" width="584" height="328" /></a>
 <h2>Next</h2>
 Honestly if you'd told me a year ago that I'd be doing this much "stuff" in Making, I'd have laughed at you, but there is just so much potential for trying ideas out that I don't think I'll ever stop. And you just know my next big milestone is a 3D printer, and laser cutter, and and and.............

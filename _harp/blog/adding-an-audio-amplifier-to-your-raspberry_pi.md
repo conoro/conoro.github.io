@@ -8,7 +8,7 @@ Then I got a <a href="http://dx.com/p/fiio-e3-3-5mm-earphone-volume-booster-powe
 
 I came up with a really coolsolutionto the battery problem. I got one of these <a href="http://dx.com/p/mini-dc-dc-voltage-stabilizer-regulator-module-red-126106">adjustable voltage regulators from DX</a>, cut the head off an old Nokia charger and wired it in. Then I used a multimeter on the output and twisted the potentiometer until I got 1.5V out. I used crocodile clips to then connect to the Fiio.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/04/DSCF2592.jpg"><img class="aligncenter size-full wp-image-983" alt="DSCF2592" src="http://conoroneill.net/wp-content/uploads/2013/04/DSCF2592.jpg" width="500" height="375" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2592.jpg"><img class="aligncenter size-full wp-image-983" alt="DSCF2592" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2592.jpg" width="500" height="375" /></a>
 
 I can't recommend that voltage regulator highly enough. If you, like me, have tons of old power supplies from long dead electronics, it can scale down anything to the voltage you need. I'm getting another one to power the Raspberry Pi from an old Linksys 12V wall-wart as most of my phone chargers simply don't have enough juice. At 2.90, it's super value.
 
@@ -22,7 +22,7 @@ Then I went looking for something with more welly than the Fiio. That company ha
 
 I then built <a href="http://dx.com/p/2-channel-3w-pam8403-audio-amplifier-board-red-146300">this</a>:
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/04/IMG_20130302_190848.jpg"><img class="aligncenter size-full wp-image-984" alt="IMG_20130302_190848" src="http://conoroneill.net/wp-content/uploads/2013/04/IMG_20130302_190848.jpg" width="500" height="667" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130302_190848.jpg"><img class="aligncenter size-full wp-image-984" alt="IMG_20130302_190848" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130302_190848.jpg" width="500" height="667" /></a>
 
 But after much gnashing of teeth with no output and then mono output, I realised that a loudspeaker amp is totally different to an inline headphone amp and just cannot work in that configuration. So much for 6 years of Electronics in UCD ;-)
 
@@ -30,15 +30,15 @@ Weirdly I could only find loudspeaker amps on DX, eBay and Amazon. A bunch more 
 
 I ordered the various bits online from the usual suspects (eBay, DX, Farnell) and put it together last week on a mini-breadboard. Shockingly for me, it worked first time! The only difficulty in the instructions is that they are customised for a very specific Radioshack board and I had to translate that to my simple breadboard.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/04/IMG_20130407_203620.jpg"><img class="aligncenter size-full wp-image-985" alt="IMG_20130407_203620" src="http://conoroneill.net/wp-content/uploads/2013/04/IMG_20130407_203620.jpg" width="500" height="375" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130407_203620.jpg"><img class="aligncenter size-full wp-image-985" alt="IMG_20130407_203620" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130407_203620.jpg" width="500" height="375" /></a>
 
 Then yesterday I sat down to build the final circuit on some stripboard I got yonks ago in Maplin. I'll be honest, it took a while. Particularly translating the layout to a very small bit of board. But yet again, magically, it worked first time. I have it powered with another old Netgear 12V wall-wart. It'll take anything from around 9V to around 30V which is really handy.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/04/DSCF2590.jpg"><img class="aligncenter size-full wp-image-986" alt="DSCF2590" src="http://conoroneill.net/wp-content/uploads/2013/04/DSCF2590.jpg" width="500" height="437" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2590.jpg"><img class="aligncenter size-full wp-image-986" alt="DSCF2590" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2590.jpg" width="500" height="437" /></a>
 
 A bit of glue-gunning on to the unused lid of a Raspberry Pi case and I have a finished product.And boy is it loud! We'll need to be careful we don't blow the amp inside the Lidl speakers or damage the speakers themselves. Mrs D'Wife, who ran 10 miles on the treadmill today (10 miles!), approves of the improved volume level too.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/04/DSCF2596.jpg"><img class="aligncenter size-full wp-image-987" alt="DSCF2596" src="http://conoroneill.net/wp-content/uploads/2013/04/DSCF2596.jpg" width="500" height="375" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2596.jpg"><img class="aligncenter size-full wp-image-987" alt="DSCF2596" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2596.jpg" width="500" height="375" /></a>
 
 I highly recommend the <a href="http://tangentsoft.net/audio/cmoy-tutorial/assy.html">CMoy kit</a> if you are struggling with audio volume levels on anything, not just the RPi.At some point I'll draw out my layout to save others the hassle of figuring out the original layout. Hit me with any questions below.
 

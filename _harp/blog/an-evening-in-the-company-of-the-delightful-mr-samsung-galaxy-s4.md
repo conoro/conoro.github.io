@@ -6,7 +6,7 @@ Where to start? That screen, OMFG that screen. 5" of bright full 1080p HD. I pla
 
 How does the phone look? I couldn't give two hoots. I buy phones as tools, not fashion accessories. Having said that, I wouldn't be seen dead with a white one ;-)
 
-<a href="http://www.samsung.com/global/microsite/galaxys4/"><img class="aligncenter size-full wp-image-1017" alt="gal_03" src="http://conoroneill.net/wp-content/uploads/2013/04/gal_03.jpg" width="630" height="640" /></a>
+<a href="http://www.samsung.com/global/microsite/galaxys4/"><img class="aligncenter size-full wp-image-1017" alt="gal_03" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/gal_03.jpg" width="630" height="640" /></a>
 
 The lightness of the S4 can be disconcerting when the buzzer gives haptic feedback but I'll happily take lightness over a brick in my pocket any day. Oddly, the phone doesn't feel big at all. In some ways it feels smaller than the HTC Sensation.
 
@@ -36,7 +36,7 @@ And now, back to reality.
 
 I haven't had much chance to try out the camera. But the few initial pics were superb. I'll definitely be giving 1080p 30fps video a try out this week. Here's a quick example in bad light in my office:
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/04/20130428_201032.jpg"><img class="aligncenter size-large wp-image-1016" alt="20130428_201032" src="http://conoroneill.net/wp-content/uploads/2013/04/20130428_201032-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/20130428_201032.jpg"><img class="aligncenter size-large wp-image-1016" alt="20130428_201032" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/20130428_201032-1024x576.jpg" width="584" height="328" /></a>
 
 A few other notes. The charger is 2 Amp and a useful compact size. The charger cable useless at a metre too short. The phone uses microSIMs so make sure you leave the shop the right kind.
 

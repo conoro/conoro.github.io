@@ -2,7 +2,7 @@
 
 Yesterday I finally got both MHL to the TV and Bluetooth to the Wiimote working with a ZX Spectrum Emulator on my HTC Sensation (video coming over the weeked). I was amused by the fact that I was emulating a cheap old computer with an expensive mobile phone.
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/04/Manic_Miner_Screenshot.png"><img class="size-full wp-image-685 aligncenter" title="Manic_Miner_Screenshot" src="http://conoroneill.net/wp-content/uploads/2012/04/Manic_Miner_Screenshot.png" alt="" width="256" height="192" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/Manic_Miner_Screenshot.png"><img class="size-full wp-image-685 aligncenter" title="Manic_Miner_Screenshot" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/Manic_Miner_Screenshot.png" alt="" width="256" height="192" /></a>
 
 Then I wondered - How cheap was the Spectrum compared to the Sensation? Some googling for inflation adjusters later and I realised I was completely wrong. It wasn't cheap at all.
 

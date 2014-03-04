@@ -20,18 +20,18 @@ A few more examples to bang you over the head with the point:
 
 Shipping:
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/shipping-container.jpg"><img class="size-full wp-image-810 aligncenter" title="shipping-container" src="http://conoroneill.net/wp-content/uploads/2012/08/shipping-container.jpg" alt="" width="640" height="475" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/shipping-container.jpg"><img class="size-full wp-image-810 aligncenter" title="shipping-container" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/shipping-container.jpg" alt="" width="640" height="475" /></a>
 
 SMS:
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/smsc.png"><img class="size-full wp-image-811 aligncenter" title="smsc" src="http://conoroneill.net/wp-content/uploads/2012/08/smsc.png" alt="" width="500" height="309" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/smsc.png"><img class="size-full wp-image-811 aligncenter" title="smsc" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/smsc.png" alt="" width="500" height="309" /></a>
 
 Rail (gauge nerds, please desist from commenting :-) ):
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/ott03_01.jpg"><img class="size-full wp-image-812 aligncenter" title="ott03_01" src="http://conoroneill.net/wp-content/uploads/2012/08/ott03_01.jpg" alt="" width="640" height="480" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/ott03_01.jpg"><img class="size-full wp-image-812 aligncenter" title="ott03_01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/ott03_01.jpg" alt="" width="640" height="480" /></a>
 
 Email:
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/300px-SMTP-transfer-model.svg_.png"><img class="size-full wp-image-813 aligncenter" title="300px-SMTP-transfer-model.svg" src="http://conoroneill.net/wp-content/uploads/2012/08/300px-SMTP-transfer-model.svg_.png" alt="" width="300" height="179" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/300px-SMTP-transfer-model.svg_.png"><img class="size-full wp-image-813 aligncenter" title="300px-SMTP-transfer-model.svg" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/300px-SMTP-transfer-model.svg_.png" alt="" width="300" height="179" /></a>
 
 What they all share is an agreed standard that enables products and bits to be moved from place to place irrespective of the sender, receiver or shipper. They are robust, multi-vendor solutions, not, as Anil Dash would suggest, <a href="http://dashes.com/anil/2012/07/why-your-complaint-about-twitter-is-wrong.html">some hippie utopian open protocol</a>.
 
@@ -43,7 +43,7 @@ And you know what, that's fine. Their site, their apps, their advertisers, their
 
 I'm not going to prattle on about how Twitter has treated developers over the years. Building your entire business on someone else's API can only go one way, very very badly. I'll simply show you the email I got from them this week. The tone of that email tells you everything you need to know about the current mindset in Twitter towards third party developers. In summary, they screwed up but spend most of the email warning us not to screw up in the future. Or else.
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/twitter.png"><img class="alignnone size-full wp-image-809" title="twitter" src="http://conoroneill.net/wp-content/uploads/2012/08/twitter.png" alt="" width="885" height="107" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/twitter.png"><img class="alignnone size-full wp-image-809" title="twitter" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/twitter.png" alt="" width="885" height="107" /></a>
 
 Fred Wilson has <a href="http://www.avc.com/a_vc/2012/07/in-defense-of-free.html">a good post on free ad-supported businesses</a> and equates Twitter to TV and magazine companies in this regard. He is clearly one of those who favours the E! direction of Twitter. But infrastructure companies don't rely on ads. Imagine having ads in the middle of your phone calls (wait, some bozos tried that didn't they?).
 

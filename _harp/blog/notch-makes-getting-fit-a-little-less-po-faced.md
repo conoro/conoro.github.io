@@ -10,4 +10,4 @@ We need to put joy back into exercise and fitness. I hope Notch.me is just a sta
 
 Click through for the full infographic.
 
-<a href="http://notch.me/p/6IPf4vIdXXlbalH0KYeqRc?kme=share-url-clicked&amp;km_share-type=facebook-status"><img class="alignnone size-full wp-image-863" title="Notch3.me" src="http://conoroneill.net/wp-content/uploads/2012/09/Notch3.me_.jpg" alt="" width="833" height="609" /></a>
+<a href="http://notch.me/p/6IPf4vIdXXlbalH0KYeqRc?kme=share-url-clicked&amp;km_share-type=facebook-status"><img class="alignnone size-full wp-image-863" title="Notch3.me" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/09/Notch3.me_.jpg" alt="" width="833" height="609" /></a>

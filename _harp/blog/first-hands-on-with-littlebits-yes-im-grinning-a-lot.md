@@ -8,14 +8,14 @@ I've had a little play with it and it's great fun. However I won't give any deta
 
 In the meantime, here's a few pictures of <a href="http://market.littlebits.cc/littleBits-Starter-Kit-_p_36.html">the Starter Kit</a>.
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133644.jpg"><img class="alignnone size-large wp-image-818" title="IMG_20120815_133644" src="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133644-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133644.jpg"><img class="alignnone size-large wp-image-818" title="IMG_20120815_133644" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133644-1024x768.jpg" alt="" width="584" height="438" /></a>
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_1337001.jpg"><img class="alignnone size-large wp-image-820" title="IMG_20120815_133700" src="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_1337001-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_1337001.jpg"><img class="alignnone size-large wp-image-820" title="IMG_20120815_133700" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_1337001-1024x768.jpg" alt="" width="584" height="438" /></a>
 
 &nbsp;
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133712.jpg"><img class="alignnone size-large wp-image-819" title="IMG_20120815_133712" src="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133712-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133712.jpg"><img class="alignnone size-large wp-image-819" title="IMG_20120815_133712" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133712-1024x768.jpg" alt="" width="584" height="438" /></a>
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133755.jpg"><img class="alignnone size-large wp-image-821" title="IMG_20120815_133755" src="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133755-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133755.jpg"><img class="alignnone size-large wp-image-821" title="IMG_20120815_133755" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133755-1024x768.jpg" alt="" width="584" height="438" /></a>
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133808.jpg"><img class="alignnone size-large wp-image-822" title="IMG_20120815_133808" src="http://conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133808-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133808.jpg"><img class="alignnone size-large wp-image-822" title="IMG_20120815_133808" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/IMG_20120815_133808-1024x768.jpg" alt="" width="584" height="438" /></a>

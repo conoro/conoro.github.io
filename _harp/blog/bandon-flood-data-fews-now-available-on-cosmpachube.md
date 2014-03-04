@@ -4,7 +4,7 @@ When <a href="http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-
 
 This evening, I had another go. This time it was worse. Anything I tried on the data feed resulted in both Chrome and Firefox hanging. I decided to bite the bullet and figure out how to post data directly rather than having them poll. Turns out it's pretty easy.
 
-<a href="https://cosm.com/feeds/40004"><img class="size-large wp-image-766 aligncenter" title="cosm" src="http://conoroneill.net/wp-content/uploads/2012/06/cosm-1024x709.png" alt="" width="584" height="404" /></a>
+<a href="https://cosm.com/feeds/40004"><img class="size-large wp-image-766 aligncenter" title="cosm" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/cosm-1024x709.png" alt="" width="584" height="404" /></a>
 
 Now I know this isn't exactly the model that people have in mind for the <a href="http://www.wired.com/beyond_the_beyond/2012/06/the-provisional-declaration-of-the-open-internet-of-things-assembly/">Open Internet of Things</a> but it works:
 <ol>

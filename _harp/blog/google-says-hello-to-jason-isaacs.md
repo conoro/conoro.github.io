@@ -8,4 +8,4 @@ But Google just beat everyone. One of their Search engineers in Mountain View is
 
 Love it!
 
-<br /><br /><a href="http://conoroneill.net/wp-content/uploads/2012/02/20120213-233338.jpg"><img src="http://conoroneill.net/wp-content/uploads/2012/02/20120213-233338.jpg" alt="20120213-233338.jpg" class="alignnone size-full" /></a>
+<br /><br /><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/02/20120213-233338.jpg"><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/02/20120213-233338.jpg" alt="20120213-233338.jpg" class="alignnone size-full" /></a>

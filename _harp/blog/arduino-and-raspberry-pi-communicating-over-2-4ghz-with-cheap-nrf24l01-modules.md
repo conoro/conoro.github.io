@@ -8,7 +8,7 @@ My latest experiments involve the Nordic Semiconductor nRF24L01+ modules. These 
 
 However I spent nearly all of last weekend trying to get a Raspberry Pi talking to an Arduino using instructions in some <a href="http://arduino-for-beginners.blogspot.ie/2013/02/setup-nordic-nrf24l01-rf-modules-to.html">blogposts</a>. It turns out his instructions were a mix of incorrect text, links to wrong repos, self-contradictory blogposts and code/comments which also contradicted each other. Eventually by ignoring text/comments and just reading the code, I got the wiring right and the sample code working. Whilst I hugely appreciate someone putting time and effort into writing/improving Open Source code like this, it really is a bad idea to then wrap it in such error-riddled explanations.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49.jpg"><img class="aligncenter size-large wp-image-1157" alt="2013-09-07 15.34.49" src="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49-1024x556.jpg" width="584" height="317" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49.jpg"><img class="aligncenter size-large wp-image-1157" alt="2013-09-07 15.34.49" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49-1024x556.jpg" width="584" height="317" /></a>
 
 To avoid you going down the same rabbit hole, this is what you need to do to get Arduino talking to RPi over nRF24L01+.
 <h2>Arduino Connections</h2>
@@ -25,7 +25,7 @@ Note that the module is 5V tolerant (apart from VCC) but just to be sure I used 
 </ul>
 <h2>Raspberry Pi Connections</h2>
 The Raspberry Pi is 3.3V itself so can connect directly to the module. Here is the pin-out. Only pay attention to the pin numbers in the circles, not the names.
-<h2><a href="http://conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png"><img class="aligncenter size-large wp-image-1149" alt="RPi pinout GPIO" src="http://conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png" width="584" height="275" /></a></h2>
+<h2><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png"><img class="aligncenter size-large wp-image-1149" alt="RPi pinout GPIO" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png" width="584" height="275" /></a></h2>
 <ul>
 	<li>RPi Pin 6 - Module Pin 1</li>
 	<li>RPi Pin 1 - Module Pin 2</li>
@@ -244,6 +244,6 @@ If everything is working ok, both the RPi and the Arudino should be showing very
 <h2>Next Steps?</h2>
 The Raspberry Pi libraries and sample code are obviously in C which is probably too hardcore for most people. Ideally they'd be available to both Python and JavaScript deveopers. I'll do a little poking around to see how you go about that. I wouldn't hold my breath tho.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg"><img class="aligncenter size-full wp-image-1160" alt="2013-09-01 14.44.06" src="http://conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg" width="1024" height="768" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg"><img class="aligncenter size-full wp-image-1160" alt="2013-09-01 14.44.06" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg" width="1024" height="768" /></a>
 
 I haven't done any major distance testing on the modules. In our house, which has concrete internal walls, two modules could communicate from one room to the next but not from one end of the house to the other. They also worked successfully with one module inside an oil tank in the garden and the other one inside the house &lt;10m away. I'll try some open air testing soon.

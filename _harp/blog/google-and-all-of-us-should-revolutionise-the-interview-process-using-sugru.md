@@ -6,7 +6,7 @@ Years ago, I even passed on the number one person in their year in Comp Sci in T
 
 I don't know anything about the Google interview process apart from what I've heard about the crazy number of sessions and the silly logic puzzles. If true, I'd worry that you end up with a ton of people who all have a very similar profile.
 
-<a href="http://sugru.com/blog/google-commission-special-edition-sugru/">Sugru's post today</a>about how Google commissioned them to do branded Sugru for Hiring Fairs suddenly made me realise that Sugru could totally change the way we all do interviews.<img class="size-full wp-image-688 aligncenter" title="google-googru-5601" src="http://conoroneill.net/wp-content/uploads/2012/04/google-googru-5601.jpg" alt="" width="560" height="373" />
+<a href="http://sugru.com/blog/google-commission-special-edition-sugru/">Sugru's post today</a>about how Google commissioned them to do branded Sugru for Hiring Fairs suddenly made me realise that Sugru could totally change the way we all do interviews.<img class="size-full wp-image-688 aligncenter" title="google-googru-5601" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/google-googru-5601.jpg" alt="" width="560" height="373" />
 
 After the usual CV trawl with the person, hand them a few packets of sugru and a box of bits and pieces. Give them 20 minutes to do something interesting. If they come up with nothing, don't hire.
 

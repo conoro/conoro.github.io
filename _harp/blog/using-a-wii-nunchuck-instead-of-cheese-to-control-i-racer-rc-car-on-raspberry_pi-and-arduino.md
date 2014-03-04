@@ -24,7 +24,7 @@ Whilst I waited for that to arrive, I decided to return to the Raspberry Pi and 
 	<li>Pi pin 3 is the I2C Data Line and connects to the Green wire</li>
 	<li>Pi pin 5 is the I2C Clock Line and connects to the Yellow wire</li>
 </ul>
-<a href="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511.jpg"><img class="alignnone size-large wp-image-931" title="IMG_20130210_102511" src="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511.jpg"><img class="alignnone size-large wp-image-931" title="IMG_20130210_102511" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130210_102511-1024x768.jpg" alt="" width="584" height="438" /></a>
 
 Then you need to do some simple installs on the Raspberry Pi to enable I2C and access it with Python:
 
@@ -116,7 +116,7 @@ Last week the HC-05 module finally arrived from China and I was able to start pl
 
 I pulled in <a href="http://www.windmeadow.com/node/42">the Arduino Nunchuck code from here</a> and converted my Raspberry Pi Python to Arduino Processing (basically a C variant). My code maps the wide range of movement in the Nunchuck joystick to the basic 6 degrees of freedom plus speed on the i-racer. It took quite a few hours of Googling before I finally sussed that "arccos" was the mathematical function I needed. So the code splits 360 degrees into 6 segments of 60 degrees. That gives us Stop/Right Forward/Forward/Left Forward/Left Backwards/Backwards/Right Backwards. Speed ranges from 0 to 15.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1512541.jpg"><img class="alignnone size-full wp-image-935" title="IMG_20130224_151254" src="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1512541.jpg" alt="" width="800" height="600" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1512541.jpg"><img class="alignnone size-full wp-image-935" title="IMG_20130224_151254" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1512541.jpg" alt="" width="800" height="600" /></a>
 
 It was a real delight to see the i-racer responding with no delay to my thumb movements but the code definitely needs tuning and I'm pretty sure the Nunchuck is not giving a full range of motion. It's pretty ancient and so hard-left does not give the same value as hard-right for example.
 
@@ -124,7 +124,7 @@ Fionn was thrilled as I've been promising him I'd get it working for the past mo
 
 After a few more goes, both Fionn and Oisn pointed out that their natural action was to move the joystick in the direction they wanted the car to go, relative to them. I think I'll leave that for another day :-)
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1634171.jpg"><img class="alignnone size-full wp-image-936" title="IMG_20130224_163417" src="http://conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1634171.jpg" alt="" width="800" height="600" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1634171.jpg"><img class="alignnone size-full wp-image-936" title="IMG_20130224_163417" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/02/IMG_20130224_1634171.jpg" alt="" width="800" height="600" /></a>
 
 Being able to run the whole thing off 4 rechargeable AA batteries is a real plus. I'm also a huge fan of the <a href="http://shrimping.it">Shrimping It</a> project which is a minimalist Arduino setup using little more than the ATMega itself. I have two and the idea is to replace the Arduino Nano with one and make the whole thing even smaller again. The i-racer runs out of juice way faster than the remote ever will so I may be able to try AAA rechargeables or maybe a little Lipo battery.
 

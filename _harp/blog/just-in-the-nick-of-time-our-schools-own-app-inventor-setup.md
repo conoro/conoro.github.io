@@ -4,4 +4,4 @@ Now to kick the tyres a bit more and make sure all is ok. One big worry is that 
 
 
 
- <div id="attachment_486" class="wp-caption alignleft" style="width: 300px;"><a rel="attachment wp-att-486" href="http://conoroneill.net/?attachment_id=486"><img class="size-medium wp-image-486" title="appinventor" alt="" src="http://conoroneill.net/wp-content/uploads/2011/12/appinventor-300x160.png" /> </a><p class="wp-caption-text"></p></div><br /> 
+ <div id="attachment_486" class="wp-caption alignleft" style="width: 300px;"><a rel="attachment wp-att-486" href="http://conoroneill.net/?attachment_id=486"><img class="size-medium wp-image-486" title="appinventor" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2011/12/appinventor-300x160.png" /> </a><p class="wp-caption-text"></p></div><br /> 

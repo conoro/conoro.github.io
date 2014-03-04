@@ -6,11 +6,11 @@ As we all know, The Mayans predicted the world would end in 2012. This ties nice
 <p style="text-align: center;">httpv://www.youtube.com/watch?v=Py_IndUbcxc</p>
 Then we hear that the Russians have finally <a href="http://www.bbc.co.uk/news/science-environment-16907998">drilled into Lake Vostok</a> in Antarctica, releasing a likely plague of alienlife-form...movies.
 
-<a href="http://www.bbc.co.uk/news/science-environment-16907998"><img class="size-full wp-image-578 alignnone" title="_58383305_vostokfromtheair" src="http://conoroneill.net/wp-content/uploads/2012/02/58383305_vostokfromtheair.jpg" alt="" width="624" height="351" /></a>
+<a href="http://www.bbc.co.uk/news/science-environment-16907998"><img class="size-full wp-image-578 alignnone" title="_58383305_vostokfromtheair" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/02/58383305_vostokfromtheair.jpg" alt="" width="624" height="351" /></a>
 
 These three reminded me of a sci-fi book I read as a young teenager. Probably one that my Dad picked up in an airport in the early 80s. Of course I couldn't remember the name of it and spent 30 minutes googling variations of "ufo, nazis, antarctica, sci-fi". Finally I found it, Genesis!
 
-<a href="http://www.amazon.com/GENESIS-ebook/dp/B004LLIF92/ref=tmm_kin_title_0?ie=UTF8&amp;m=AG56TWVU5XWC2"><img class="size-full wp-image-579 aligncenter" title="b59e81b0c8a05ffb5a8a8110.L" src="http://conoroneill.net/wp-content/uploads/2012/02/b59e81b0c8a05ffb5a8a8110.L.jpg" alt="" width="251" height="400" /></a>
+<a href="http://www.amazon.com/GENESIS-ebook/dp/B004LLIF92/ref=tmm_kin_title_0?ie=UTF8&amp;m=AG56TWVU5XWC2"><img class="size-full wp-image-579 aligncenter" title="b59e81b0c8a05ffb5a8a8110.L" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/02/b59e81b0c8a05ffb5a8a8110.L.jpg" alt="" width="251" height="400" /></a>
 
 That plot has stuck in my head for the guts of 30 years. Brilliant, twisted and right on the edge of believable. Overly wordy sure, but he pressed all my teenage buttons.
 

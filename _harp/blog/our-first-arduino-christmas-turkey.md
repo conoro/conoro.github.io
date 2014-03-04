@@ -4,7 +4,7 @@ Take one turkey, an oven with the temperature markings rubbed-off, a food thermo
 
 Enter an <a href="http://store.arduino.cc/index.php?main_page=product_info&amp;cPath=11&amp;products_id=195">Arduino Uno</a>, a <a href="https://www.olimex.com/Products/Components/Misc/TC-K-TYPE/">K-Type thermocouple</a>, a sample <a href="http://www.maximintegrated.com/datasheet/index.mvp/id/7273">MAX31855</a> IC, some dodgy soldering from a few weeks ago, an <a href="https://github.com/adafruit/Adafruit-MAX31855-library">Adafruit library</a> and a <a href="https://www.sparkfun.com/products/9393">Sparkfun LCD</a> and you get this:
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45.jpg"><img class="aligncenter size-large wp-image-1229" alt="2013-12-25 12.43.45" src="http://conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45-1024x768.jpg" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45.jpg"><img class="aligncenter size-large wp-image-1229" alt="2013-12-25 12.43.45" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45-1024x768.jpg" width="584" height="438" /></a>
 
 All rustled up in 15 minutes.
 

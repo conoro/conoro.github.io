@@ -9,7 +9,7 @@ As a longtime <a href="http://www.cyanogenmod.com/">Cyanogenmod</a> user even I'
 
 In case you aren't aware of it, Cyanogenmod is a community built version of <a href="http://source.android.com/">Android AOSP</a> (Android Open Source Project). Every time Google releases a new version of Android, they release the source code shortly afterwards so that anyone can build a phone or phone software using it. There are hundreds if not thousands of community projects which take this code and port it in different ways to all the different handsets.
 
-<a href="http://www.cyanogenmod.com/"><img class="size-full wp-image-495 aligncenter" title="cyanogen" src="http://conoroneill.net/wp-content/uploads/2012/01/cyanogen.png" alt="" width="421" height="112" /></a>
+<a href="http://www.cyanogenmod.com/"><img class="size-full wp-image-495 aligncenter" title="cyanogen" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/01/cyanogen.png" alt="" width="421" height="112" /></a>
 
 Cyanogenmod is the best known and usually the best. You get lots of great extra features, usually a speed improvement and most importantly, it excludes all those HTC/Samsung/Motorola bloatware UIs that those manufacturers insist on adding to their phones.
 

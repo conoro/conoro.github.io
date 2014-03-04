@@ -2,7 +2,7 @@
 
 When Santa told me that he was getting an <a href="http://www.coolcomponents.co.uk/catalog/racer-p-993.html">i-Racer</a> remote controlled car for Fionn, I was very excited. This is a remote controlled car that, on the surface looks very crude. Heck it doesn't even come with a remote control.
 
-<a href="http://www.coolcomponents.co.uk/catalog/racer-p-993.html"><img class="size-medium wp-image-914 aligncenter" title="iracer" src="http://conoroneill.net/wp-content/uploads/2012/12/iracer-300x300.jpg" alt="" width="300" height="300" /></a>
+<a href="http://www.coolcomponents.co.uk/catalog/racer-p-993.html"><img class="size-medium wp-image-914 aligncenter" title="iracer" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/iracer-300x300.jpg" alt="" width="300" height="300" /></a>
 
 That's because it's Bluetooth-controlled! You can install a simple Android App, pair with the car and control it either with on-screen controls or using the accelerometer in the phone.
 
@@ -10,7 +10,7 @@ As a standalone present it is pretty neat but like all remote controlled toys, I
 
 It's when you start thinking about what is possible over time with the i-Racer that things get really interesting. Forgetting electronics for a minute, you could have huge fun making new shells for it out of different materials. Imagine a Foldify template for it so you could make printed paper shells. Lego might be a bit heavy but K'Nex plus some Sugru could work very nicely. Or what about bamboo food skewers or ice-pop sticks? Maybe just some stickers.
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141040.jpg"><img class="size-large wp-image-919 alignnone" title="IMG_20121229_141040" src="http://conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141040-1024x768.jpg" alt="" width="584" height="438" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141040.jpg"><img class="size-large wp-image-919 alignnone" title="IMG_20121229_141040" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141040-1024x768.jpg" alt="" width="584" height="438" /></a>
 
 Then there is the code running on the car. The source is available so you can play around with it. Now this isn't the easiest thing in the world to do since the car is not Arduino so you need compilers and special programming dongles, but the option is there.
 
@@ -31,10 +31,10 @@ httpv://www.youtube.com/watch?v=qb9wso0pB4o
 If you want to try this yourself and run into any problems, pop a comment in below.
 
 Otherpossibilitiesinclude grapes (GCC):
-<a href="http://conoroneill.net/wp-content/uploads/2012/12/grapes.jpg"><img class="alignnone size-large wp-image-918" title="grapes" src="http://conoroneill.net/wp-content/uploads/2012/12/grapes-1024x509.jpg" alt="" width="584" height="290" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/grapes.jpg"><img class="alignnone size-large wp-image-918" title="grapes" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/grapes-1024x509.jpg" alt="" width="584" height="290" /></a>
 
 And Barbie (BCC):
-<a href="http://conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141006.jpg"><img class="alignnone size-large wp-image-917" title="IMG_20121229_141006" src="http://conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141006-768x1024.jpg" alt="" width="584" height="778" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141006.jpg"><img class="alignnone size-large wp-image-917" title="IMG_20121229_141006" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/IMG_20121229_141006-768x1024.jpg" alt="" width="584" height="778" /></a>
 
 Now for the nasty details. Whilst these steps are quite short and the code is very simple, it took a week of evenings cursing, hacking and googling to get everything working right.
 <div></div>
@@ -166,4 +166,4 @@ One downside of the i-Racer is that <a href="http://www.arexx.com.cn/ch/ProductS
 
 If this is a success, with success being defined as Fionn remaining interested, then I'll bite the bullet and start getting the parts for one of the good Arduino robot kits out there. A good intermediate step might be the <a href="https://www.sparkfun.com/products/11012">Sparkfun Protosnap Minibot Kit</a>. After that, the sky is the limit:
 
-<a href="http://conoroneill.net/wp-content/uploads/2012/12/Moon2_1434681c_1746903c.jpg"><img class="alignnone size-full wp-image-921" title="Moon2_1434681c_1746903c" src="http://conoroneill.net/wp-content/uploads/2012/12/Moon2_1434681c_1746903c.jpg" alt="" width="460" height="288" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/Moon2_1434681c_1746903c.jpg"><img class="alignnone size-full wp-image-921" title="Moon2_1434681c_1746903c" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/12/Moon2_1434681c_1746903c.jpg" alt="" width="460" height="288" /></a>

@@ -6,7 +6,7 @@ I'd like to be able to push my activities to sites like App.net, Tumblr or anywh
 
 A bit of poking around last night led me to good old screen-scraping. Their widgets are publicly accessible so it wasn't too hard to scrape one of them and generate an ATOM feed. I used it as an opportunity to try out <a href="http://bottlepy.org/docs/dev/">Bottle</a>. If you need to build a simple web-app fast, with minimal overhead and you use Python, I think you'll like it. For kicks and giggles I decided to put it up on <a href="https://www.heroku.com/">Heroku</a> - my first time to do so properly. That's a very nice deployment flow indeed.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/04/marathon.jpg"><img class="aligncenter size-large wp-image-979" alt="marathon" src="http://conoroneill.net/wp-content/uploads/2013/04/marathon-1024x423.jpg" width="584" height="241" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/marathon.jpg"><img class="aligncenter size-large wp-image-979" alt="marathon" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/marathon-1024x423.jpg" width="584" height="241" /></a>
 
 So here you go. If you want the ATOM feed of your public Endomondo activities, just grab your numeric user ID from your profile page and tack it onto <a href="http://endo2atom.conoroneill.com">http://endo2atom.conoroneill.com</a>
 

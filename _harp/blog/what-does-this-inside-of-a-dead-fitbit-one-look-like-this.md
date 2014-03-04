@@ -4,13 +4,13 @@ After my <a href="https://www.blocbuy.com/87/product">Fitbit One</a> took a swim
 
 It's bloody well glued together so it took a while. I could instantly see that there was no hope that it would have recovered. Horrible green corrosion on many places on the motherboard.
 
-<a href="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-07-17.08.52.jpg"><img class="aligncenter size-large wp-image-1100" alt="2013-06-07 17.08.52" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-07-17.08.52-1024x576.jpg" width="584" height="328" /></a>
+<a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-07-17.08.52.jpg"><img class="aligncenter size-large wp-image-1100" alt="2013-06-07 17.08.52" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-07-17.08.52-1024x576.jpg" width="584" height="328" /></a>
 
 The main CPU/MCU is a ST Microelectonics ARM M3 (<a href="http://www.st.com/web/catalog/mmc/FM141/SC1544/SS1374/LN1041/PF251638">STM32L151QCH6</a>) running at 32 MHz with 256KB flash. Same one as the Nike Fuelband, interestingly enough. I figure its built-in USB interface is a real selling point.
 
 The LiPo battery is the smallest I've ever seen and I hope I can salvage it. Also the tiny buzzer motor might be usable somewhere.
 
-<img class="aligncenter size-large wp-image-1099" alt="2013-06-07 17.08.41" src="http://conoroneill.net/wp-content/uploads/2013/06/2013-06-07-17.08.41-1024x576.jpg" width="584" height="328" />
+<img class="aligncenter size-large wp-image-1099" alt="2013-06-07 17.08.41" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-07-17.08.41-1024x576.jpg" width="584" height="328" />
 
 The Nordic Semiconductor <a href="http://www.nordicsemi.com/eng/Products/Bluetooth-R-low-energy/nRF8001">nRF8001 IC</a> is very interesting. It's a full-blown single-chip Bluetooth 4.0 BLE (Low Energy) solution. I've been looking around for hobbyist BLE chips/dev-boards recently but they are too expensive. I'd love to see BLE used in home automation setups.
 
