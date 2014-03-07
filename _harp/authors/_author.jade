@@ -13,10 +13,10 @@ section.author
       span •
       a(href='https://github.com/#{ public.authors._data[current.source].github }') GitHub
   .articles
-    for post, slug in public.blog._data
+    for post, slug in public._data
       if post.author == current.source
         article
-          a(href="/blog/#{ slug }")
+          a(href="/#{ slug }")
             h1.sm= post.title
             h2.xs.date= post.date
             p= post.description
