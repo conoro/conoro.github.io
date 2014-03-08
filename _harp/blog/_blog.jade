@@ -10,7 +10,8 @@
 
 article.post
   h1.lg.title= title
-  h2.sm.date= prettyDate(date)
+  if date
+    h2.sm.date= prettyDate(date)
   != yield
   != partial("../_shared/author")
   != partial("../_shared/disqus")
