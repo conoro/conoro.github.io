@@ -52,7 +52,7 @@
  "posterous_6ae5db09a66b4d5434603baca3829a5f_post_id": "87886303", 
  "ptype": "post", 
  "slug": "this-is-facebooks-idea-of-chronological", 
- "status": "draft", 
+ "status": "post", 
  "title": "This is Facebook's Idea of Chronological"
 } , "lego-bring-back-beautiful" : {
  "ID": 9, 
@@ -134,7 +134,7 @@
  "posterous_6ae5db09a66b4d5434603baca3829a5f_post_id": "87077276", 
  "ptype": "post", 
  "slug": "jesus-christ-facebook-now-you-decide-to-fuck-up-python-users", 
- "status": "draft", 
+ "status": "post", 
  "title": "Jesus Christ Facebook, Now You Decide to Fuck-Up Python Users?"
 } , "what-do-you-young-hipsters-use-to-protect-your-ipads-from-the-rain" : {
  "ID": 17, 
@@ -408,7 +408,7 @@
  "posterous_6ae5db09a66b4d5434603baca3829a5f_post_id": "71621561", 
  "ptype": "post", 
  "slug": "facebooks-edgerank-should-be-renamed-cletusrank", 
- "status": "draft", 
+ "status": "post", 
  "title": "Facebook's EdgeRank should be renamed CletusRank"
 } , "i-think-we-passed-facebook-peak-3-weeks-ago" : {
  "ID": 44, 
@@ -420,7 +420,7 @@
  "posterous_6ae5db09a66b4d5434603baca3829a5f_post_id": "71468467", 
  "ptype": "post", 
  "slug": "i-think-we-passed-facebook-peak-3-weeks-ago", 
- "status": "draft", 
+ "status": "post", 
  "title": "I think we passed Facebook peak 3 weeks ago."
 } , "the-htc-sensation-is-no-im-not-going-to-say-it" : {
  "ID": 45, 
@@ -1086,7 +1086,7 @@
  "posterous_6ae5db09a66b4d5434603baca3829a5f_post_id": "52247293", 
  "ptype": "post", 
  "slug": "reasons-why-2011-is-starting-to-feel-like-1999", 
- "status": "draft", 
+ "status": "post", 
  "title": "Reasons Why 2011 is Starting to Feel Like 1999"
 } , "21st-century-milkman" : {
  "ID": 111, 
@@ -4750,7 +4750,7 @@
  "date": 1326798009000, 
  "ptype": "post", 
  "slug": "and-like-that-poof-hes-gone-rip-jaiku-2006-2012", 
- "status": "draft", 
+ "status": "post", 
  "title": "And like that, poof, he's gone. RIP Jaiku 2006-2012"
 } , "app-inventor-source-code-now-available" : {
  "ID": 518, 
@@ -4780,7 +4780,7 @@
  "date": 1327333107000, 
  "ptype": "post", 
  "slug": "focus-on-the-user-supposedly-a-more-relevant-google", 
- "status": "draft", 
+ "status": "post", 
  "title": "Focus on the User - Supposedly a more \"relevant\" Google"
 } , "ginas-one-year-at-her-standing-desk" : {
  "ID": 527, 
@@ -4892,7 +4892,7 @@
  "title": "If you develop on Twitter APIs in Ireland, you have to attend Dublin Teatime"
 } , "no-more-accidents-android-transparent-screen-app" : {
  "ID": 554, 
- "_wp_old_slug": "auto-draft", 
+ "_wp_old_slug": "auto-post", 
  "author": "admin", 
  "date": 1328610075000, 
  "ptype": "post", 
@@ -4936,7 +4936,7 @@
  "date": 1328897615000, 
  "ptype": "post", 
  "slug": "twitter-facebook-pah-so-over-them-anyone-whos-anyone-is-on-weibo-now", 
- "status": "draft", 
+ "status": "post", 
  "title": "Twitter? Facebook? Pah, so over them. Anyone who's anyone is on Weibo now"
 } , "underground-lakes-antarctic-ufos-nazis-on-the-moon-and-the-mayans" : {
  "ID": 577, 
@@ -5145,7 +5145,7 @@
  "date": 1331106366000, 
  "ptype": "post", 
  "slug": "quick-google-nows-your-chance-facebook-is-down", 
- "status": "draft", 
+ "status": "post", 
  "title": "Quick Google+, Now's Your Chance, Facebook is Down"
 } , "the-bin-is-all-its-good-for-now" : {
  "ID": 623, 
@@ -5329,7 +5329,7 @@
  "geo_public": "1", 
  "ptype": "post", 
  "slug": "with-acquisition-of-instagram-facebook-reveals-all-new-look", 
- "status": "draft", 
+ "status": "post", 
  "title": "With acquisition of Instagram, Facebook reveals all-new look"
 } , "whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc" : {
  "ID": 675, 
@@ -5578,7 +5578,7 @@
  "date": 1338423173000, 
  "ptype": "post", 
  "slug": "sorry-google-plus-local-without-a-platform-wont-save-google-plus", 
- "status": "draft", 
+ "status": "post", 
  "title": "Sorry Google, Plus Local without a Platform won't save Google Plus"
 } , "learn-electronics-with-an-arduino-and-raspberry_pi-on-an-old-philips-tv" : {
  "ID": 746, 
@@ -5692,7 +5692,7 @@
  "date": 1340958922000, 
  "ptype": "post", 
  "slug": "google-its-magical-like-homoeopathy", 
- "status": "draft", 
+ "status": "post", 
  "title": "Google+, it's Magical, like homoeopathy....."
 } , "if-you-watch-one-youtube-video-this-weekend-watch-this-ted-one-on-how-arduino-is-open-sourcing-imagination" : {
  "ID": 772, 
@@ -5853,7 +5853,7 @@
  "date": 1344508715000, 
  "ptype": "post", 
  "slug": "why-ive-pledged-money-to-appdotnet-and-why-you-should-too", 
- "status": "draft", 
+ "status": "post", 
  "title": "Why I've pledged money to @AppDotNet and why you should too"
 } , "this-week-on-twitter-every-week-on-twitter" : {
  "ID": 815, 
@@ -5883,7 +5883,7 @@
  "date": 1345159177000, 
  "ptype": "post", 
  "slug": "comic-sans-will-get-you-thrown-off-twitter", 
- "status": "draft", 
+ "status": "post", 
  "title": "Comic Sans Will Get You Thrown Off Twitter"
 } , "amazon-glacier-looks-ideal-for-cheaper-long-term-storagebackup" : {
  "ID": 828, 
@@ -5974,7 +5974,7 @@
  "date": 1346949456000, 
  "ptype": "post", 
  "slug": "games-you-may-like-on-facebook-thatd-be-none-why-are-ads-so-broken-in-2012", 
- "status": "draft", 
+ "status": "post", 
  "title": "\"Games You May Like on Facebook\". That'd be None. Why are Ads so broken in 2012?"
 } , "sugru-old-mondeo-yay" : {
  "ID": 847, 
@@ -6541,16 +6541,16 @@
  "slug": "progress-so-far-with-a-kids-e21-self-assemble-remote-control-car", 
  "status": "publish", 
  "title": "Progress so far with a kids 21 self-assemble Remote Control Car"
-} , "1056" : {
+} , "check-out-scratch-for-arduino-s4a-easier-electronics-for-kids" : {
  "ID": 1056, 
  "_edit_last": "1", 
  "_edit_lock": "1368976182:1", 
  "author": "admin", 
- "date": null, 
+ "date": 1368985200000, 
  "ptype": "post", 
- "slug": 1056, 
- "status": "draft", 
- "title": "Check out Scratch for Arduino (S4A). Easier electronics for kids"
+ "slug": "check-out-scratch-for-arduino-s4a-easier-electronics-for-kids", 
+ "status": "post", 
+ "title": "Check out Scratch for Arduino S4A. Easier electronics for kids"
 } , "remote-control-implementation-for-an-rc-car-part-1" : {
  "ID": 1058, 
  "_edit_last": "1", 
