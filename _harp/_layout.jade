@@ -19,7 +19,7 @@
   -var arr = [];
   -console.log("Start Sort");
   -for (post in public._data){
-    -var obj = {date: public._data[post].date, post:post, description: public._data[post].description, slug: public._data[post].slug, author: public._data[post].author, layout: public._data[post].layout};
+    -var obj = {date: public._data[post].date, post:post, description: public._data[post].description, slug: public._data[post].slug, author: public._data[post].author, layout: public._data[post].layout, title: public._data[post].title};
     -arr.push(obj);
   -}
   -var arr2 = [];
@@ -76,10 +76,10 @@ html(lang="en")
       .container
         if current.path[0] === "index"
           .articles
-            for post, slug in sortJ()
+            for post in sortJ()
               if post.layout !== false
                 article
-                  a(href="/#{ slug }")
+                  a(href="/#{ post.slug }")
                     img(src='/images/#{ public.authors._data[post.author].photo }', alt='#{ public.authors._data[post.author].name }', class='author')
                     h1.sm= post.title
                     h2.xs.date #{ prettyDate(post.date) } • by #{ public.authors._data[post.author].name }
