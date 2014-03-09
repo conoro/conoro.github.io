@@ -1,6 +1,6 @@
 In addition to the recent [Andro100](/the-and100-android-box-is-perfect-for-netflix-rte-player-etc/) box, the guys in [TV Trade](http://tvtrade.ie) also gave me a Sab Unix HD [Triple Tuner](http://www.tvtrade.ie/triple-tuner.html) box to try out. The specs on this thing were pretty amazing for something that costs approx €130+VAT so I was intrigued to see how well it did. After the reliability horror that was the Ferguson Ariva 120 pile of junk, I went in with open eyes.
 
-![Sab](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/sab.png SAB Triple Tuner)
+![Sab](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/sab.png "SAB Triple Tuner")
 
 The box itself is pretty compact with a 1980s Amstrad stereo vibe off it with the chrome accents. Not exactly a looker but not offensive either. It has dual satellite inputs and a single "Saorview" DTT input. The usual outputs like HDMI etc are there along with wired LAN and a front and back USB port. I hate those front USB ports on all boxes as they are behind a flap which you then have to leave open if you use the port. But if you want to insert a wifi dongle, it probably makes sense for signal strength.
 
