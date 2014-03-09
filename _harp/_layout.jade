@@ -8,8 +8,8 @@
 -}
 
 
--function sortByKey(arry, key) {
-  -return arry.sort(function(a, b) {
+-function sortByKey(array, key) {
+  -return array.sort(function(a, b) {
     -var x = a[key]; var y = b[key];
     -return (y-x);
   -});
@@ -17,17 +17,11 @@
 
 -function sortJ(){
   -var arr = [];
-  -console.log("Start Sort");
   -for (post in public._data){
     -var obj = {date: public._data[post].date, post:post, description: public._data[post].description, slug: public._data[post].slug, author: public._data[post].author, layout: public._data[post].layout, title: public._data[post].title};
     -arr.push(obj);
   -}
-  -var arr2 = [];
-  -arr2 = sortByKey(arr, 'date');
-  -for (var i = 0; i < arr2.length; i++) {
-    -console.log(arr2[i].date + " " + prettyDate(arr2[i].date) + " " + arr2[i].post);
-  -}
-  -return(arr2)
+  -return(sortByKey(arr, 'date'))
 -}
 
 doctype 5
