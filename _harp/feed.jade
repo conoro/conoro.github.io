@@ -11,7 +11,7 @@
     -var obj = {date: public._data[post].date, post:post, description: public._data[post].description, slug: public._data[post].slug, author: public._data[post].author, layout: public._data[post].layout, title: public._data[post].title};
     -arr.push(obj);
   -}
-  -return(sortByKey(arr, 'date'))
+  -return(sortByKey(arr, 'date').slice(0,9))
 -}
 
 doctype xml
