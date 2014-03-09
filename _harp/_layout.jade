@@ -1,3 +1,10 @@
+script(type='text/javascript').
+  function SortPosts(PostA, PostB){
+    return parseInt(PostA.date) - parseInt(PostB.date);
+  }
+
+  public._data.sort(sortPosts);
+
 doctype 5
 html(lang="en")
   head
