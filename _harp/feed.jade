@@ -26,6 +26,6 @@ rss(version='2.0', xmlns:atom='http://www.w3.org/2005/Atom')
         item
           title= post.title
           description= post.description
-          pubDate= new Date(post.date)
+          pubDate= (new Date(post.date)).toUTCString()
           link= site_url + "/" + post.slug
           guid(isPermaLink='true')= site_url + "/" + post.slug
