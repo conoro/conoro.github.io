@@ -22,9 +22,10 @@ rss(version='2.0', xmlns:atom='http://www.w3.org/2005/Atom')
     link= site_url
     | <atom:link href="http://baseline.harp.nu/blog/rss.xml" rel="self" type="application/rss+xml" />
     for post in sortJ()
-      item
-        title= post.title
-        description= post.description
-        pubDate= new Date(post.date)
-        link= site_url + "/" + post.slug
-        guid(isPermaLink='true')= site_url + "/" + postslug
+      if post.layout !== false
+        item
+          title= post.title
+          description= post.description
+          pubDate= new Date(post.date)
+          link= site_url + "/" + post.slug
+          guid(isPermaLink='true')= site_url + "/" + post.slug
