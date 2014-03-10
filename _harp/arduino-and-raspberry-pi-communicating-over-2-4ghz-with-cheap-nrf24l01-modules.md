@@ -60,7 +60,7 @@ You need to install the Arduino libraries:
 <h2>Arduino Sketch</h2>
 This is my quick and dirty hack of the author's Arduino sending sketch. It removes all of the LCD display stuff and only returns one sensor value. In my case that's a single switch on Digital Pin 6 which is either open or closed. I'll post a tidier one with updated comments when I have it completed.
 
-[sourcecode]
+```
 /*
 Written by Stanley Seow
 stanleyseow@gmail.com
@@ -191,11 +191,11 @@ delay(10);
 
 delay(250);
 }
-[/sourcecode]
+```
 
 This sketch makes use of printf so you need a file in the same directory called printf.h which consists of:
 
-[sourcecode]
+```
 /*
 Copyright (C) 2011 J. Coliz <maniacbug@ymail.com>
 
@@ -234,7 +234,7 @@ fdevopen( &serial_putc, 0 );
 
 #endif // __PRINTF_H__
 
-[/sourcecode]
+```
 <h2>Running the code on the RPi and Arduino</h2>
 On the Arduino, just compile and upload the sketch and then open the Serial Monitor window and set the baud rate to 57,600.
 

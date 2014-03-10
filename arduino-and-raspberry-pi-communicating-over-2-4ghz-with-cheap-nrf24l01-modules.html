@@ -60,130 +60,174 @@ You need to install the Arduino libraries:</p>
 </ul></p>
 <p><h2>Arduino Sketch</h2>
 This is my quick and dirty hack of the author&#39;s Arduino sending sketch. It removes all of the LCD display stuff and only returns one sensor value. In my case that&#39;s a single switch on Digital Pin 6 which is either open or closed. I&#39;ll post a tidier one with updated comments when I have it completed.</p>
-<p>[sourcecode]
-/<em>
+<pre><code>/*
 Written by Stanley Seow
 stanleyseow@gmail.com
-</em>/</p>
-<h1>include <SPI.h></h1>
-<h1>include &quot;nRF24L01.h&quot;</h1>
-<h1>include &quot;RF24.h&quot;</h1>
-<h1>include &quot;printf.h&quot;</h1>
-<h1>define RF_SETUP 0x17</h1>
-<p>// Set up nRF24L01 radio on SPI pin for CE, CSN
-RF24 radio(8,9);</p>
-<p>// Example below using pipe5 for writing
-const uint64_t pipes[2] = { 0xF0F0F0F0E1LL, 0x7365727631LL };</p>
-<p>char receivePayload[32];
+*/
+
+#include &lt;SPI.h&gt;
+#include &quot;nRF24L01.h&quot;
+#include &quot;RF24.h&quot;
+#include &quot;printf.h&quot;
+
+#define RF_SETUP 0x17
+
+// Set up nRF24L01 radio on SPI pin for CE, CSN
+RF24 radio(8,9);
+
+// Example below using pipe5 for writing
+const uint64_t pipes[2] = { 0xF0F0F0F0E1LL, 0x7365727631LL };
+
+char receivePayload[32];
 uint8_t counter=0;
-int inPin = 6; // button connected to digital pin 6</p>
-<p>void setup(void)
-{</p>
-<p>// Conor Switch
-pinMode(inPin, INPUT);</p>
-<p>Serial.begin(57600);</p>
-<p>printf_begin();
-printf(&quot;Sending nodeID &amp; 1 sensor data\n\r&quot;);</p>
-<p>radio.begin();</p>
-<p>// Enable this seems to work better
-radio.enableDynamicPayloads();</p>
-<p>radio.setDataRate(RF24_1MBPS);
+int inPin = 6; // button connected to digital pin 6
+
+void setup(void)
+{
+
+// Conor Switch
+pinMode(inPin, INPUT);
+
+Serial.begin(57600);
+
+printf_begin();
+printf(&quot;Sending nodeID &amp; 1 sensor data\n\r&quot;);
+
+radio.begin();
+
+// Enable this seems to work better
+radio.enableDynamicPayloads();
+
+radio.setDataRate(RF24_1MBPS);
 radio.setPALevel(RF24_PA_MAX);
 radio.setChannel(76);
-radio.setRetries(15,15);</p>
-<p>radio.openWritingPipe(pipes[0]);
-radio.openReadingPipe(1,pipes[1]);</p>
-<p>// Dump the configuration of the rf unit for debugging
+radio.setRetries(15,15);
+
+radio.openWritingPipe(pipes[0]);
+radio.openReadingPipe(1,pipes[1]);
+
+// Dump the configuration of the rf unit for debugging
 radio.printDetails();
 delay(1000);
-}</p>
-<p>void loop(void)
+}
+
+void loop(void)
 {
 uint8_t Data1,Data2,Data3,Data4 = 0;
 char temp[5];
-bool timeout=0;</p>
-<p>// Get the last two Bytes as node-id
-uint16_t nodeID = pipes[0] &amp; 0xff;</p>
-<p>char outBuffer[32]=&quot;&quot;; // Clear the outBuffer before every loop
-unsigned long send_time, rtt = 0;</p>
-<p>// Get readings from sensors, change codes below to read sensors
+bool timeout=0;
+
+// Get the last two Bytes as node-id
+uint16_t nodeID = pipes[0] &amp; 0xff;
+
+char outBuffer[32]=&quot;&quot;; // Clear the outBuffer before every loop
+unsigned long send_time, rtt = 0;
+
+// Get readings from sensors, change codes below to read sensors
 Data1 = counter++;
-Data2 = digitalRead(inPin);</p>
-<p>if ( counter &gt; 999 ) counter = 0;</p>
-<p>// Append the hex nodeID to the beginning of the payload
-sprintf(outBuffer,&quot;%2X&quot;,nodeID);</p>
-<p>strcat(outBuffer,&quot;,&quot;);</p>
-<p>// Convert int to strings and append with zeros if number smaller than 3 digits
-// 000 to 999</p>
-<p>sprintf(temp,&quot;%03d&quot;,Data1);
-strcat(outBuffer,temp);</p>
-<p>strcat(outBuffer,&quot;,&quot;);</p>
-<p>sprintf(temp,&quot;%04d&quot;,Data2);
-strcat(outBuffer,temp);</p>
-<p>printf(&quot;outBuffer: %s len: %d\n\r&quot;,outBuffer, strlen(outBuffer));</p>
-<p>send_time = millis();</p>
-<p>// Stop listening and write to radio
-radio.stopListening();</p>
-<p>// Send to hub
+Data2 = digitalRead(inPin);
+
+if ( counter &gt; 999 ) counter = 0;
+
+// Append the hex nodeID to the beginning of the payload
+sprintf(outBuffer,&quot;%2X&quot;,nodeID);
+
+strcat(outBuffer,&quot;,&quot;);
+
+// Convert int to strings and append with zeros if number smaller than 3 digits
+// 000 to 999
+
+sprintf(temp,&quot;%03d&quot;,Data1);
+strcat(outBuffer,temp);
+
+strcat(outBuffer,&quot;,&quot;);
+
+sprintf(temp,&quot;%04d&quot;,Data2);
+strcat(outBuffer,temp);
+
+printf(&quot;outBuffer: %s len: %d\n\r&quot;,outBuffer, strlen(outBuffer));
+
+send_time = millis();
+
+// Stop listening and write to radio
+radio.stopListening();
+
+// Send to hub
 if ( radio.write( outBuffer, strlen(outBuffer)) ) {
 printf(&quot;Send successful\n\r&quot;);
 }
 else {
 printf(&quot;Send failed\n\r&quot;);
-}</p>
-<p>radio.startListening();
-delay(20);</p>
-<p>while ( radio.available() &amp;&amp; !timeout ) {</p>
-<p>uint8_t len = radio.getDynamicPayloadSize();
-radio.read( receivePayload, len);</p>
-<p>receivePayload[len] = 0;
-printf(&quot;inBuffer: %s\n\r&quot;,receivePayload);</p>
-<p>// Compare receive payload with outBuffer
+}
+
+radio.startListening();
+delay(20);
+
+while ( radio.available() &amp;&amp; !timeout ) {
+
+uint8_t len = radio.getDynamicPayloadSize();
+radio.read( receivePayload, len);
+
+receivePayload[len] = 0;
+printf(&quot;inBuffer: %s\n\r&quot;,receivePayload);
+
+// Compare receive payload with outBuffer
 if ( ! strcmp(outBuffer, receivePayload) ) {
-rtt = millis() - send_time;</p>
-<p>printf(&quot;inBuffer --&gt; rtt: %i \n\r&quot;,rtt);</p>
-<p>}</p>
-<p>// Check for timeout and exit the while loop
+rtt = millis() - send_time;
+
+printf(&quot;inBuffer --&gt; rtt: %i \n\r&quot;,rtt);
+
+}
+
+// Check for timeout and exit the while loop
 if ( millis() - send_time &gt; radio.getMaxTimeout() ) {
 Serial.println(&quot;Timeout!!!&quot;);
 timeout = 1;
-}</p>
-<p>delay(10);
-} // End while</p>
-<p>delay(250);
 }
-[/sourcecode]</p>
+
+delay(10);
+} // End while
+
+delay(250);
+}</code></pre>
 <p>This sketch makes use of printf so you need a file in the same directory called printf.h which consists of:</p>
-<p>[sourcecode]
-/*
-Copyright (C) 2011 J. Coliz <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x6d;&#x61;&#x6e;&#105;&#97;&#x63;&#98;&#117;&#103;&#x40;&#121;&#109;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x6d;&#x61;&#x6e;&#105;&#97;&#x63;&#98;&#117;&#103;&#x40;&#121;&#109;&#x61;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
-<p>This program is free software; you can redistribute it and/or
+<pre><code>/*
+Copyright (C) 2011 J. Coliz &lt;maniacbug@ymail.com&gt;
+
+This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
 version 2 as published by the Free Software Foundation.
-*/</p>
-<p>/<em>*
-</em> @file printf.h
-<em>
-</em> Setup necessary to direct stdout to the Arduino Serial library, which
-<em> enables &#39;printf&#39;
-</em>/</p>
-<h1>ifndef <strong>PRINTF_H</strong></h1>
-<h1>define <strong>PRINTF_H</strong></h1>
-<h1>ifdef ARDUINO</h1>
-<p>int serial_putc( char c, FILE * )
+*/
+
+/**
+* @file printf.h
+*
+* Setup necessary to direct stdout to the Arduino Serial library, which
+* enables &#39;printf&#39;
+*/
+
+#ifndef __PRINTF_H__
+#define __PRINTF_H__
+
+#ifdef ARDUINO
+
+int serial_putc( char c, FILE * )
 {
-Serial.write( c );</p>
-<p>return c;
-}</p>
-<p>void printf_begin(void)
+Serial.write( c );
+
+return c;
+}
+
+void printf_begin(void)
 {
 fdevopen( &amp;serial_putc, 0 );
-}</p>
-<h1>else</h1>
-<h1>error This example is only for use on Arduino.</h1>
-<h1>endif // ARDUINO</h1>
-<h1>endif // <strong>PRINTF_H</strong></h1>
-<p>[/sourcecode]</p>
+}
+
+#else
+#error This example is only for use on Arduino.
+#endif // ARDUINO
+
+#endif // __PRINTF_H__</code></pre>
 <p><h2>Running the code on the RPi and Arduino</h2>
 On the Arduino, just compile and upload the sketch and then open the Serial Monitor window and set the baud rate to 57,600.</p>
 <p>On the RPi, run the following. It will show you what it is receiving from the Arduino and echoes it back.</p>
