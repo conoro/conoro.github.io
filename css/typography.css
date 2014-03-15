@@ -6,7 +6,7 @@ body{color:#555;font:18px/1.5 Lato,Lato,'Helvetica Neue',Helvetica,sans-serif;fo
 @media (max-width: 1023px){h1,h2,h3,h4,h5,h6{margin:32px 0 11px 0}
 }@media (max-width: 768px){h1,h2,h3,h4,h5,h6{margin:27px 0 9px 0}
 }@media (max-width: 568px){h1,h2,h3,h4,h5,h6{margin:24px 0 8px 0}
-}.masthead .container h1{font-size:36px;font-weight:700;}
+}.masthead .container h1{font-size:70px;font-weight:700;}
 @media (max-width: 1023px){.masthead .container h1{font-size:24px}
 }@media (max-width: 768px){.masthead .container h1{font-size:21px}
 }@media (max-width: 568px){.masthead .container h1{font-size:18px}

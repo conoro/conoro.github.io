@@ -5,7 +5,16 @@ _gaq.push(['_trackPageview']);
 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();</script></head><body class="page-openvpn-on-windows-8 openvpn-on-windows-8"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="img"></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">OpenVPN on Windows 8</h1><h2 class="sm date">6 Mar 2013</h2><h1>&quot;OpenVPN on Windows 8&quot;</h1>
+})();</script></head><body class="page-openvpn-on-windows-8 openvpn-on-windows-8"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="search-box"><script type="text/javascript">(function() {
+  var cx = '001461447920948202874:5htheqgvd1w';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();</script><gcse:search></gcse:search></div><div class="img"></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">OpenVPN on Windows 8</h1><h2 class="sm date">6 Mar 2013</h2><h1>&quot;OpenVPN on Windows 8&quot;</h1>
 <p>I&#39;m two months using Windows 8 64-bit on my desktop and I&#39;m still ok with it. The only real weirdness is a lot of disk churning even when nothing is happening. I turned off indexing but to no avail.</p>
 <p>The only major annoyance has been OpenVPN. Whilst it works fine when it&#39;s on, the problem arises when I disconnect or shut it down. The routing gets all messed up and I cannot connect to any external site. The fix is to disable/re-enable the network adapter which is a total pain in the ass.</p>
 <p>I did some searching but didn&#39;t find anyone else having the same issue. But I did find that there is finally [a] a new version of OpenVPN and [b] a 64-bit version. Even better, <a href="http://openvpn.net/index.php/open-source/downloads.html">this official version</a> works with saved passwords, which the old one didn&#39;t.</p>

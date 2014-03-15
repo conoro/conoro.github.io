@@ -5,7 +5,16 @@ _gaq.push(['_trackPageview']);
 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();</script></head><body class="page-alleluia-how-to-specify-which-google-account-in-the-url alleluia-how-to-specify-which-google-account-in-the-url"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="img"></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">Alleluia - How to specify which Google Account in the URL</h1><h2 class="sm date">11 May 2012</h2><h1>&quot;Alleluia - How to specify which Google Account in the URL&quot;</h1>
+})();</script></head><body class="page-alleluia-how-to-specify-which-google-account-in-the-url alleluia-how-to-specify-which-google-account-in-the-url"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="search-box"><script type="text/javascript">(function() {
+  var cx = '001461447920948202874:5htheqgvd1w';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();</script><gcse:search></gcse:search></div><div class="img"></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">Alleluia - How to specify which Google Account in the URL</h1><h2 class="sm date">11 May 2012</h2><h1>&quot;Alleluia - How to specify which Google Account in the URL&quot;</h1>
 <p>I have been driven demented by Google&#39;s multi-login feature since it launched. Every damned tool of theirs seems to do it differently. The good ones let you flick seamlessly between accounts (Google+). The awful ones won&#39;t let you select an alternative (yes you Picasa Web) and if you logout, you logout of everything. And of course, they always default to the one you don&#39;t want (hellooo Google Reader).</p>
 <p>I had a brainwave a few minutes ago - what if there was a way of specifying which account you want to use in the URL when accessing a Google application? And it turns out, praise jebus, there is. All you have to do is tack on ?authuser=N to the URL (or &amp;authuser=N if there is already a parameter on the URL) where N=0 for the default account (i.e. the one you logged in with first), N=1 is the next account you logged in with, etc etc.</p>
 <p>So now, rather than clicking a general bookmark for Google Reader which always goes to my unused loudervoice.com Reader account and then I have to switch, I can set the bookmark to <a href="http://google.com/reader?authuser=1"><a href="http://google.com/reader?authuser=1">http://google.com/reader?authuser=1</a></a> and go there directly.</p>
