@@ -1,11 +1,21 @@
 {
  "feed": {
  "layout": false
+ }, "running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my" : {
+ "ID": 1279,
+ "author": "admin",
+ "date": 1394830200000, 
+ "ptype": "post",
+ "description": "Asking the question 'I wonder if you can run Node.js on Android'",
+ "slug": "running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my",
+ "status": "publish",
+ "title": "Running Debian Linux, GCC, Emacs, Git, Node.js, npm and HarpJS on Samsung Galaxy S4. Oh my."
  }, "upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx" : {
- "ID": 1277,
+ "ID": 1278,
  "author": "admin",
  "date": 1394699712000, 
  "ptype": "post",
+ "description": "Avoiding all the horror of Samsung Kies",
  "slug": "upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx",
  "status": "publish",
  "title": "Upgrading your Samsung Galaxy S4 i9505 to KitKat 4.4.2 on OSX"
@@ -14,6 +24,7 @@
  "author": "admin",
  "date": 1394390348000,
  "ptype": "post",
+ "description": "Superb value for Irish cable-cutters",
  "slug": "with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box",
  "status": "publish",
  "title": "With the Enigma 2 software, the Sab Unix HD Triple Tuner is a very impressive satellite/terrestrial box"
@@ -22,6 +33,7 @@
  "author": "admin",
  "date": 1393608848000,
  "ptype": "post",
+ "description": "All the stuff that helped me to get started",
  "slug": "my-arduino-and-raspberry-pi-links-for-newbies",
  "status": "publish",
  "title": "My Arduino and Raspberry Pi links for newbies"
