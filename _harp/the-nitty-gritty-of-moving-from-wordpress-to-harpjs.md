@@ -35,15 +35,16 @@ As Harp is pretty new, there are very few templates/themes for blogs. The genera
 * The RSS feed did not validate for several reasons (JS timestamps, titles). I fixed that so it now validates. But like the home page, it only has my manually entered post summaries rather than my preferred approach of full posts.
 * The RSS feed was set to rss.xml but I changed to it to /feed so that existing subscribers to my WP blog don't all lose me in the move
 * The Disqus integration works well but ideally I'd love an Open Source JS commenting system that stores comments in maybe JSON files on Dropbox
+* Google Analytics support and the avatar support for GitHub/Twitter/Facebook/G+ is nice.
 * There is obviously no search built in. Currently I'm using Google Custom Search which works well but is fugly. Is there a possibility to create a simple JS search tool that uses _data.json as a first MVP and later builds a searchable JSON index file as part of the compile process?
 
 So I now have something that almost works the way I want it. Uploading images to S3 is no real strain and I'll be able to make all the other changes I want incrementally.
 
 The biggest ongoing annoyance is that "harp compile" deletes all of the generated HTML and re-builds everything from scratch every time. This isn't scalable when you have 650+ posts and it means that when I add a new blogpost I have to wait 2-3 minutes for it to recompile. There should be an incremental option which assumes no structural/styling changes have happened and just looks for new md files to compile and then rebuilds index.html. Good old "Make" had this nailed a long time ago ;-) Actually cpould git not be leveraged for this? Compare the current working tree with the last commit?
 
-That HTML deletion is also a problem for using a DNS CNAME with GitHub Pages since it deletes that file from the root directory every time.
+That HTML deletion is also a problem for using a DNS CNAME with GitHub Pages since it deletes that file from the root directory every time. Update: OK, I just sorted this with two minutes effort. Created CNAME file in _harp and added it with layout: false to _data.json. The compile process then copies it over to root. 
 
-It would be great to have a simple cli tool called new-blog-post which asks for a title, date and summary and updates _data.json and creates the empty .md file. I could probably write this myself but I've 500 other things I need to do too. I also must look into adding tagging.
+It would be great to have a simple cli tool called new-blog-post which asks for a title, date and summary and updates _data.json and creates the empty .md file. I could probably write this myself but I've 500 other things I need to do too. I also must look into adding tagging and a ZX Spectrum header image.
 
 I know the whole process sounds like a huge amount of work. It was! But I think everything above could be sorted with an improved WP import tool that works on WXR files and some kick-ass blog templates rather than web-site templates. I'm really looking forward to using Harp when I port an old web-site next.
 

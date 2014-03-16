@@ -1,6 +1,8 @@
 {
  "feed": {
  "layout": false
+}, "CNAME" : {
+ "layout": false
 }, "the-nitty-gritty-of-moving-from-wordpress-to-harpjs" : {
  "ID": 1281,
  "author": "admin",
