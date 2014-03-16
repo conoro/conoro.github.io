@@ -19,7 +19,7 @@ So once I had all of the old blogposts as MD files, it was time to get them into
 
 Unfortunately, even tho Harp installed, it doesn't work correctly on Windows if you are using for GitHub Pages. It throws an error about bad paths if you do harp compile _harp ./
 
-So I moved over to my Ubuntu VM and setup everything there instead. The [instructions for using GitHUb Pages](http://harpjs.com/docs/deployment/github-pages) as the host on the Harp site work perfectly for Ubuntu.
+So I moved over to my Ubuntu VM and setup everything there instead. The [instructions for using GitHub Pages](http://harpjs.com/docs/deployment/github-pages) as the host on the Harp site work perfectly for Ubuntu.
 
 As Harp is pretty new, there are very few templates/themes for blogs. The general web-site ones seem good and I'll be trying them out after this. So I ended up using the Baseline template and that's where the heavy work began. Here's all the problems/challenges/learnings I went through over the space of several weekends:
 
@@ -37,7 +37,7 @@ As Harp is pretty new, there are very few templates/themes for blogs. The genera
 * The Disqus integration works well but ideally I'd love an Open Source JS commenting system that stores comments in maybe JSON files on Dropbox
 * There is obviously no search built in. Currently I'm using Google Custom Search which works well but is fugly. Is there a possibility to create a simple JS search tool that uses _data.json as a first MVP and later builds a searchable JSON index file as part of the compile process?
 
-So I now have something that _almost_ works the way I want it. Uploading images to S3 is no real strain and I'll be able to make all the other changes I want incrementally.
+So I now have something that almost works the way I want it. Uploading images to S3 is no real strain and I'll be able to make all the other changes I want incrementally.
 
 The biggest ongoing annoyance is that "harp compile" deletes all of the generated HTML and re-builds everything from scratch every time. This isn't scalable when you have 650+ posts and it means that when I add a new blogpost I have to wait 2-3 minutes for it to recompile. There should be an incremental option which assumes no structural/styling changes have happened and just looks for new md files to compile and then rebuilds index.html. Good old "Make" had this nailed a long time ago ;-) Actually cpould git not be leveraged for this? Compare the current working tree with the last commit?
 
