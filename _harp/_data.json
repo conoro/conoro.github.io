@@ -1,7 +1,16 @@
 {
  "feed": {
  "layout": false
- }, "running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my" : {
+}, "saying-goodbye-to-wordpress-and-hello-to-harpjs" : {
+ "ID": 1280,
+ "author": "admin",
+ "date": 1394973964000, 
+ "ptype": "post",
+ "description": "WordPress enabled a huge number of people to get their blogs and web-sites online with almost zero effort. But the ongoing effort of maintaining it has many people, including me, reverting to more complex tools like HarpJS",
+ "slug": "saying-goodbye-to-wordpress-and-hello-to-harpjs",
+ "status": "publish",
+ "title": "Saying goodbye to WordPress and hello to HarpJS"
+}, "running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my" : {
  "ID": 1279,
  "author": "admin",
  "date": 1394830200000, 
@@ -10,7 +19,7 @@
  "slug": "running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my",
  "status": "publish",
  "title": "Running Debian Linux, GCC, Emacs, Git, Node.js, npm and HarpJS on Samsung Galaxy S4. Oh my."
- }, "upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx" : {
+}, "upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx" : {
  "ID": 1278,
  "author": "admin",
  "date": 1394699712000, 
