@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>The nitty-gritty of moving from WordPress to HarpJS | Cross Dominant</title><meta name="description" content="It wasn't easy but I'm now nearly happy with my all-new GitHub-Pages-hosted HarpJS-generated static blog. Here are all the gory details."><meta property="og:title" content="The nitty-gritty of moving from WordPress to HarpJS | Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="It wasn't easy but I'm now nearly happy with my all-new GitHub-Pages-hosted HarpJS-generated static blog. Here are all the gory details."><meta property="og:url" content="http://conoro.github.io/undefined"><meta property="og:image" content="http://conoro.github.io/images/logo.png"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-88610-4']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></head><body class="page-the-nitty-gritty-of-moving-from-wordpress-to-harpjs the-nitty-gritty-of-moving-from-wordpress-to-harpjs"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="search-box"><script type="text/javascript">(function() {
+  var cx = '001461447920948202874:5htheqgvd1w';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">The nitty-gritty of moving from WordPress to HarpJS</h1><h2 class="sm date">16 Mar 2014</h2><p>As I said in the previous posts, the move from WP to HarpJS was not exactly smooth. But I&#39;m glad I&#39;ve done it as I finally learned how to use a lot of things like Jade that I&#39;ve long-fingered for years.</p>
+<p>The first step was to get the original content out of WordPress. This had the added twist that the conoroneill.net blog actually started out as a Posterous blog which I imported into WordPress when I realised that Posterous was a dead-end. So the first two years of posts have some &quot;interesting&quot; problems in them.</p>
+<p>The tool I used for import was <a href="https://github.com/EJEHardenberg/wpJson4Harp">wpJson4Harp</a> as recommended on the HarpJS site. These were the notes I took on that part of the process:</p>
+<ul>
+<li>It doesn&#39;t work off a WXR export or WP APIs but actually needs access to your WordPress DB. This is not a goer if you have shared hosting with the MySQL access locked down. I had to dump my WP DB and load it into a VirtualBox Ubuntu VM and run the import tool there.</li>
+<li>As I mentioned above, the older Posterous posts had problems<ul>
+<li>Lots of embedded YouTube Videos not working</li>
+<li>I was gutted to discover that the Posterous to WP import had not moved over the images. So now that Posterous is gone, so are those images. A harsh lesson learned. I&#39;m just imagining how exposed the average Tumblr person is to the same problem</li>
+<li>Posterous seemed to use 4 spaces in formatting quite a bit. So of course Harp thinks this is source code in the generated MD files and formats appropriately. I manually did a search/replace on this to convert all sets of 4 spaces to 1. Seems to have done the trick</li>
+</ul>
+</li>
+<li>I&#39;ve been using a YouTube plugin which lets me embed videos by using a fake url with the prefix httpv. None of these work. Probably won&#39;t be that hard to do a search/replace on those eventually.</li>
+<li>The &quot;blog index&quot; file that wpJson4Harp generated (_data.json) is quite crude. It has JS timestamps rather than human readable ones and the posts are not in chronological order </li>
+<li>I ended up making some changes to its Python source to simplify its output and make it more &quot;blog like&quot;</li>
+<li>I downloaded all the files from wp-content in WordPress and uploaded them to my S3 account using Cloudberry Explorer. I then did a search replace across all of the MD files to replace my conoroneill.net URLs with <a href="https://s3-eu-west-1.amazonaws.com/">https://s3-eu-west-1.amazonaws.com/</a></li>
+</ul>
+<p>So once I had all of the old blogposts as MD files, it was time to get them into some sort of HarpJS blog. I managed to install Harp on Windows after a lot of messing with Visual Studio Express (both 2010 and 2012 now installed) and node-sass. Actully node-saas just seems to be a general pain in the arse and I hope people start using something else that doesn&#39;t require native compilation.</p>
+<p>Unfortunately, even tho Harp installed, it doesn&#39;t work correctly on Windows if you are using for GitHub Pages. It throws an error about bad paths if you do harp compile _harp ./</p>
+<p>So I moved over to my Ubuntu VM and setup everything there instead. The <a href="http://harpjs.com/docs/deployment/github-pages">instructions for using GitHUb Pages</a> as the host on the Harp site work perfectly for Ubuntu.</p>
+<p>As Harp is pretty new, there are very few templates/themes for blogs. The general web-site ones seem good and I&#39;ll be trying them out after this. So I ended up using the Baseline template and that&#39;s where the heavy work began. Here&#39;s all the problems/challenges/learnings I went through over the space of several weekends:</p>
+<ul>
+<li>Template assumes /blog for blog but that&#39;s not what I use, I need it to be in the root. Some simple playing with the templates seemed to take care of that.</li>
+<li>I didn&#39;t use year/month/day in my original URLs on Posterous (and then WordPress) so I now have 650 md files and html files in one directory each. I&#39;ll move to date based directories from now on, once I figure it out. </li>
+<li>The default index.html (_layout.jade) just lists every post in the order it finds them in _data.json but that&#39;s completely un-blog-like. I had to implement a bunch of JavaScript in the Jade template to sort the posts by reverse chronological order. As I&#39;m not a JavaScript programmer, this ended up being several days of grabbing bits of code off Stack Overflow and sticking console.log in everywhere until I finally got it working. Learned a lot but it nearly ended up being a show-stopper and I came very close to giving up. You can see the main <a href="https://github.com/conoro/conoro.github.io/blob/master/_harp/_layout.jade">changes here</a> (don&#39;t laugh!)</li>
+<li>As a result I realised that Jade is an extremely limited templating language. I can see why a lot of people use EJS instead. I had to drop to raw JavaScript to do most things e.g. converting the JS timestamps to human readable format</li>
+<li>Stylus is a reasonably nice way of doing CSS but of course you can&#39;t use line numbers in Chrome Inspector to see what line in the Stylus template has to change. But the upside is that I know have a basic understanding of Stylus</li>
+<li>I learned how to do Google Web Fonts which was neat</li>
+<li>There is no pagination in the index.html template and I cannot find a &quot;recipe&quot; for this even in a wider Jade context. </li>
+<li>I had to delete some references to Twitter etc in the templates as they kept causing Jade errors. I think it&#39;s some cross-referencing problem between author in _data.json and the config file for Twitter.</li>
+<li>The home page should not be 650+ post titles, it should be 5-10 full posts, like a normal blog. I haven&#39;t got started on this yet but it will require cross referencing between _data.json and individual HTML/md files to pull in the content</li>
+<li>The RSS feed did not validate for several reasons (JS timestamps, titles). I fixed that so it now validates. But like the home page, it only has my manually entered post summaries rather than my preferred approach of full posts.</li>
+<li>The RSS feed was set to rss.xml but I changed to it to /feed so that existing subscribers to my WP blog don&#39;t all lose me in the move</li>
+<li>The Disqus integration works well but ideally I&#39;d love an Open Source JS commenting system that stores comments in maybe JSON files on Dropbox</li>
+<li>There is obviously no search built in. Currently I&#39;m using Google Custom Search which works well but is fugly. Is there a possibility to create a simple JS search tool that uses _data.json as a first MVP and later builds a searchable JSON index file as part of the compile process?</li>
+</ul>
+<p>So I now have something that <em>almost</em> works the way I want it. Uploading images to S3 is no real strain and I&#39;ll be able to make all the other changes I want incrementally.</p>
+<p>The biggest ongoing annoyance is that &quot;harp compile&quot; deletes all of the generated HTML and re-builds everything from scratch every time. This isn&#39;t scalable when you have 650+ posts and it means that when I add a new blogpost I have to wait 2-3 minutes for it to recompile. There should be an incremental option which assumes no structural/styling changes have happened and just looks for new md files to compile and then rebuilds index.html. Good old &quot;Make&quot; had this nailed a long time ago ;-) Actually cpould git not be leveraged for this? Compare the current working tree with the last commit?</p>
+<p>That HTML deletion is also a problem for using a DNS CNAME with GitHub Pages since it deletes that file from the root directory every time.</p>
+<p>It would be great to have a simple cli tool called new-blog-post which asks for a title, date and summary and updates _data.json and creates the empty .md file. I could probably write this myself but I&#39;ve 500 other things I need to do too. I also must look into adding tagging.</p>
+<p>I know the whole process sounds like a huge amount of work. It was! But I think everything above could be sorted with an improved WP import tool that works on WXR files and some kick-ass blog templates rather than web-site templates. I&#39;m really looking forward to using Harp when I port an old web-site next.</p>
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'conor';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section><nav class="post-nav"><ul class="clearfix"><li><a href="saying-goodbye-to-wordpress-and-hello-to-harpjs" title="Saying goodbye to WordPress and hello to HarpJS" class="post-prev"><strong>Previous Post</strong><span>Saying goodbye to WordPress and hello to HarpJS</span></a></li></ul></nav></article></div></div></body></html>
