@@ -1,6 +1,15 @@
 {
  "feed": {
  "layout": false
+}, "the-nitty-gritty-of-moving-from-wordpress-to-harpjs" : {
+ "ID": 1281,
+ "author": "admin",
+ "date": 1394994782000, 
+ "ptype": "post",
+ "description": "It wasn't easy but I'm now nearly happy with my all-new GitHub-Pages-hosted HarpJS-generated static blog. Here are all the gory details.",
+ "slug": "the-nitty-gritty-of-moving-from-wordpress-to-harpjs",
+ "status": "publish",
+ "title": "The nitty-gritty of moving from WordPress to HarpJS"
 }, "saying-goodbye-to-wordpress-and-hello-to-harpjs" : {
  "ID": 1280,
  "author": "admin",
