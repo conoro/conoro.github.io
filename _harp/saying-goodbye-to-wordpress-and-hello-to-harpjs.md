@@ -47,7 +47,7 @@ A bit more digging bubbled up HarpJS as the most likely winner based on the abov
 
 It turned out to be a _lot_ harder than I thought to move from WP to Harp. Wayyyy harder than the earlier move of that same blog from Posterous to WordPress. I'll be writing a separate post right after this on the nitty gritty of the move but in this post I really just wanted to focus on the "Static Movement" )geddit? static, movement).
 
-I really think there is a large opportunity for a mainstream Static Site/Blog platform and it many ways it'll probably be like Blogger of old. I really like where Dave Winer is going with the Fargo outliner and it has the potential to be such a tool. The Harp guys are also doing some interesting stuff with the [harp.io](https://www.harp.io/) platform, but the entry price of $9.95 per month is probably too high for most non-commercial bloggers. The features an ideal platform would have include:
+I really think there is a large opportunity for a mainstream Static Site/Blog platform and it many ways it'll probably be like Blogger of old. I really like where Dave Winer is going with the [Fargo outliner](http://fargo.io/) and it has the potential to be such a tool. The Harp guys are also doing some interesting stuff with the [harp.io](https://www.harp.io/) platform, but the entry price of $9.95 per month is probably too high for most non-commercial bloggers. The features an ideal platform would have include:
 
 * Publishing of the static content to GitHub Pages, Dropbox and Google Drive via whatever APIs are appropriate, including Git
 * Dropbox and Google Drive to provide CNAME support for these static sites
