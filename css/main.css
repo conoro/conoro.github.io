@@ -104,7 +104,7 @@ figure figcaption{margin-top:-36px;padding:36px;background:#f2f2f2;-webkit-box-s
 .container{width:980px;margin:0 auto;}
 @media (max-width: 980px){.container{width:100%}
 }.search-box{float:right;width:450px}
-.masthead{padding:5% 0;position:relative;overflow:hidden;}
+.masthead{padding:1% 0;position:relative;overflow:hidden;}
 .masthead .container{padding:0% 0;position:relative;z-index:1;}
 .masthead .container h1{margin:0;padding:0 5%}
 .masthead .img{top:0;bottom:0;left:0;right:0;position:absolute}

@@ -65,8 +65,6 @@ html(lang="en")
       .container
         h1
           a(href='/')= site_title
-      .img
-    .content
       .search-box
         script(type='text/javascript').
           (function() {
@@ -80,6 +78,7 @@ html(lang="en")
             s.parentNode.insertBefore(gcse, s);
           })();
         <gcse:search></gcse:search>
+    .content
       .container
         if current.path[0] === "index"
           .articles
