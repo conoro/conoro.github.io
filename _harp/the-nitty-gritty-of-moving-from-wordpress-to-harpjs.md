@@ -48,4 +48,12 @@ It would be great to have a simple cli tool called new-blog-post which asks for 
 
 I know the whole process sounds like a huge amount of work. It was! But I think everything above could be sorted with an improved WP import tool that works on WXR files and some kick-ass blog templates rather than web-site templates. I'm really looking forward to using Harp when I port an old web-site next.
 
+Update 1: I forgot to mention a few things: 
+
+First was Disqus itself. Adding it as a plugin and using the import feature there didn't work for comments. But importing the WXR file worked great and all old comments are now visible using Disqus.
+
+Second was the actual switch from WP on Blacknight to GitHub Pages. This was a bit fiddly. I use an non-www domain and learned that you can't CNAME from conoroneill.net over to conoro.github.io. Luckily I use DNSMadeEasy for DNS and they have a feature called ANAME which does allow this. But before I turned that on, I had to move the WP blog elsewhere. This involved creating a new domain called conoroneillnet.conoroneill.com and associating it to the old WP install on Blacknight. Then I used the [Automatic Domain Changer](http://wordpress.org/plugins/automatic-domain-changer/) plugin to reset everything in WP and its database to the new archive domain. Then finally I made the DNSMadeEasy change. And ta-daaaa, I'm now on GitHub Pages. I'm sure it'll take a while for the DNS changes to propagate. I'll now turn off Google indexing of the old blog to avoid duplicate content issues. 
+
+
+
 
