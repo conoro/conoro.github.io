@@ -64,6 +64,7 @@ find . -name "*.md" -exec sh -c 'NEWDIR=`basename "$1" .md` ; mkdir "$NEWDIR" ; 
 
 ```
 
+Update 4: Damn and blast, I forgot about /feed not redirecting too. So I created a /feed directory and put the feed.jade file in there as index.jade and set layout to false in a new _data.json file in that directory (after trying 20 other things!).
 
 
 
