@@ -62,7 +62,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>Update 3: As I want to avoid &quot;downtime&quot;, I bit the bullet and took the directory approach for all old posts. The new ones will be fine. This code did the trick (thanks Stack Overflow) in the _harp dir:</p>
 <pre><code>
 find . -name &quot;*.md&quot; -exec sh -c &#39;NEWDIR=`basename &quot;$1&quot; .md` ; mkdir &quot;$NEWDIR&quot; ; mv &quot;$1&quot; &quot;index.md&quot;; mv &quot;index.md&quot; &quot;$NEWDIR&quot; &#39; _ {} \;</code></pre>
-<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'conor';
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
