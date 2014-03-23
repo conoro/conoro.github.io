@@ -14,19 +14,7 @@ A quick look at the label and I was pleased to see they worked at 433Mhz. What w
 
 It turns out that the Efergy brand uses the same simple protocol as a wide range of others around the world. I guess they are all OEMing something.
 
-A 2 minute setup on my Arduino Uno with a receiver and the relevant sniffer code loaded up and I had the 10 codes (5 on, 5 off) that the remote control used. They are:
-
-* All Off:  Received 109016 / 24bit Protocol: 1
-* 1 On:     Received 109023 / 24bit Protocol: 1
-* 1 Off:    Received 109015 / 24bit Protocol: 1
-* 2 On:     Received 109019 / 24bit Protocol: 1
-* 2 Off:    Received 109011 / 24bit Protocol: 1
-* 3 On:     Received 109021 / 24bit Protocol: 1
-* 3 Off:    Received 109013 / 24bit Protocol: 1
-* 4 On:     Received 109022 / 24bit Protocol: 1
-* 4 Off:    Received 109014 / 24bit Protocol: 1
-* 5 On:     Received 109018 / 24bit Protocol: 1
-* 5 Off:    Received 109010 / 24bit Protocol: 1
+A 2 minute setup on my Arduino Uno with a receiver and the relevant sniffer code loaded up and I had the 11 codes (5 on, 5 off, 1 all-off) that my specific remote control used. They are all 24bit, protocol "1" with 6 decimal digits like 109223. I assume they distribute a range of remotes to avoid neighbours clashing. The RC switches themselves are not locked to a specific code, they have to be set by the remote control at power up.
 
 
 2 more minutes to setup a transmitter to cycle between the codes and I was toggling the RC switches on and off. 
@@ -62,7 +50,7 @@ Of course I could send the commands directly from the mobile app to the DigiX, b
 ![Success](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg "Mobile App Success")
 
 
-One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing.
+One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing using a simple bookmarked CNAME.
 
 ![Web App](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg "FeedHenry Web App")
 
