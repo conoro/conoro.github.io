@@ -21,20 +21,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>My mind immediately leaped to our electric blanket conundrum.</p>
 <p>A quick look at the label and I was pleased to see they worked at 433Mhz. What were the chances that the <a href="http://dx.com/p/433mhz-wireless-transmitter-module-superregeneration-for-arduino-green-149254">$1.99 wireless modules</a> I bought from DX in China would work with them? Oh the joy to discover that, not only do the modules work with them, some genius has already built <a href="https://code.google.com/p/rc-switch/">a powerful Arduino library</a> to do so! </p>
 <p>It turns out that the Efergy brand uses the same simple protocol as a wide range of others around the world. I guess they are all OEMing something.</p>
-<p>A 2 minute setup on my Arduino Uno with a receiver and the relevant sniffer code loaded up and I had the 10 codes (5 on, 5 off) that the remote control used. They are:</p>
-<ul>
-<li>All Off:  Received 109016 / 24bit Protocol: 1</li>
-<li>1 On:     Received 109023 / 24bit Protocol: 1</li>
-<li>1 Off:    Received 109015 / 24bit Protocol: 1</li>
-<li>2 On:     Received 109019 / 24bit Protocol: 1</li>
-<li>2 Off:    Received 109011 / 24bit Protocol: 1</li>
-<li>3 On:     Received 109021 / 24bit Protocol: 1</li>
-<li>3 Off:    Received 109013 / 24bit Protocol: 1</li>
-<li>4 On:     Received 109022 / 24bit Protocol: 1</li>
-<li>4 Off:    Received 109014 / 24bit Protocol: 1</li>
-<li>5 On:     Received 109018 / 24bit Protocol: 1</li>
-<li>5 Off:    Received 109010 / 24bit Protocol: 1</li>
-</ul>
+<p>A 2 minute setup on my Arduino Uno with a receiver and the relevant sniffer code loaded up and I had the 11 codes (5 on, 5 off, 1 all-off) that my specific remote control used. They are all 24bit, protocol &quot;1&quot; with 6 decimal digits like 109223. I assume they distribute a range of remotes to avoid neighbours clashing. The RC switches themselves are not locked to a specific code, they have to be set by the remote control at power up.</p>
 <p>2 more minutes to setup a transmitter to cycle between the codes and I was toggling the RC switches on and off. </p>
 <p>I really was gobsmacked how easy it was. It was a lovely reminder of how incredible the internet really is. We&#39;ve become so used to it, we forget that the above would have taken me months (or never!) in pre-internet days instead of 10 minutes total.</p>
 <p>Of course that was just step 1. What I really wanted to do was internet-enable these beauties. I&#39;ve been meaning to do something along these lines with the <a href="http://digistump.com/products/50">DigiX</a> board since I got it. The DigiX is a really powerful Arduino clone with a 32-bit Atmel ARM CPU, tons upon tons of IO, SD card, audio and, most importantly for this project, Wifi on-board.</p>
@@ -49,7 +36,7 @@ mySwitch.send(109023, 24);</code></pre>
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App"></p>
 <p>Of course I could send the commands directly from the mobile app to the DigiX, but routing it through the cloud means that eventually this can be multi-user, multi-switch, re-configurable and securely locked-down.</p>
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success"></p>
-<p>One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing.</p>
+<p>One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing using a simple bookmarked CNAME.</p>
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App"></p>
 <p>I&#39;ll upload everthing on to a public GitHub repo as soon as I have removed all the hard-coding and added a modicum of &quot;security&quot; with API keys etc. More posts on this technology combo coming in the next few weeks.</p>
 <p>With the Bandon Bed Button, we have now achieved Electric Blanket Nirvana.</p>
