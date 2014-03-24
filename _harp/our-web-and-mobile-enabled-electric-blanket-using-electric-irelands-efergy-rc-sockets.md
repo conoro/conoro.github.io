@@ -26,11 +26,11 @@ Of course that was just step 1. What I really wanted to do was internet-enable t
 ![frontside](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg "DigiX with module")
 
 
-Getting Wifi setup the way I wanted on the DigiX took more time than I'd have liked yesterday but I finally figured out that the [Chinese USR-wifi232-g module](http://en.usr.cn/low-power-wifi-module.html) web UI doesn't like Chrome! Once I switched to Firefox, all went swimmingly. I connected it to a Wifi AP, gave it a fixed IP address and then setup a port forward from the house router to it.
+Getting Wifi setup the way I wanted on the DigiX took more time than I'd have liked yesterday but I finally figured out that the [Chinese USR-wifi232-g module](http://en.usr.cn/low-power-wifi-module.html) web UI doesn't like Chrome! Once I switched to Firefox, all went swimmingly. I connected it to a Wifi AP, gave it a fixed IP address and then setup a port forward from the house router to it. Obviously I use [Dynamic DNS with Dyn](http://dyn.com/) on the home router so that I don't have to track changing IP addresses manually.
 
 ![backside](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg "DigiX other side")
 
-The DigiX comes with an example Web Server built-in so I was able to just create a few simple URLS and paste the RCSwitch code into the relevant places. So within another few minutes I was toggling the switches over the internet.
+The DigiX comes with an example Web Server built-in so I was able to just create a few simple URLs and paste the RCSwitch code into the relevant places. So within another few minutes I was toggling the switches over the internet.
 
 ```
 switch1State = 1;
