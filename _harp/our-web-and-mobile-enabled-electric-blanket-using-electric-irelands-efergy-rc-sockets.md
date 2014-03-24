@@ -2,7 +2,7 @@ A major ongoing struggle in our household is convincing one of our many children
 
 Wouldn't it be fantastic if we could use technology instead of children to do this?
 
-Last Thursday I came home from work to discover that [Electric Ireland](http://www.electricireland.ie/) had sent us three [Efergy](http://efergy.com/eu/products/remotecontrolledsocket) remote control power sockets and a plugin energry monitor. I have no idea why they did so, apart perhaps from our crazy electricity use.
+Last Thursday I came home from work to discover that [Electric Ireland](http://www.electricireland.ie/) had sent us three [Efergy](http://efergy.com/eu/products/remotecontrolledsocket) remote control power sockets and a plugin energy monitor. I have no idea why they did so, apart perhaps from our crazy electricity use.
 
 
 ![Efergy](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg "Efergy RC Switch")
@@ -34,7 +34,7 @@ The DigiX comes with an example Web Server built-in so I was able to just create
 
 ```
 switch1State = 1;
-mySwitch.send(109023, 24);
+mySwitch.send(109323, 24);
 
 ```
 
