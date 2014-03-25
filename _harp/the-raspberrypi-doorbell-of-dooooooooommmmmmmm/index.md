@@ -32,15 +32,15 @@ The only real change from the <a href="http://learn.adafruit.com/playing-sounds-
 
 This is the trivial script to set the volume and call the Python script:
 
-[bash]
+<pre><code class="language-bash">
 #!/bin/bash
 amixer cset numid=3 1
 nohup ./raspi-audio-button.py &gt; /dev/null 2&gt;&amp;1 &amp;
-[/bash]
+</code></pre>
 
 This is the code, it uses the <a href="http://pypi.python.org/pypi/RPi.GPIO">RPi.GPIO</a> library (the latest version works fine):
 
-[python]
+<pre><code class="language-python">
 #!/usr/bin/env python
 from time import sleep
 import os
@@ -68,7 +68,7 @@ while True:
  os.system('mplayer /home/pi/haunted_sounds/CastleThunder.wav &amp;')
  sleep(4);
 
-[/python]
+</code></pre>
 
 This diagram of the RPi pin-out was invaluable:
 

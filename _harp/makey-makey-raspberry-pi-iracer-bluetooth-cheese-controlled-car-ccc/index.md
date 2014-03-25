@@ -60,65 +60,65 @@ The main steps in getting the code to run were as follows:
 	<li>Figure out reading directly from USB with auto-repeat using<a href="http://gvalkov.github.com/python-evdev/">Evdev</a>and<a href="https://github.com/gvalkov/python-evdev">python-evdev</a>(must be run as sudo)</li>
 </ol>
 <h2>Installs and Tweaks</h2>
-[bash]
+<pre><code class="language-bash">
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install python-pip python-dev build-essential
 sudo apt-get install --no-install-recommends bluetooth 
 sudo apt-get install bluez python-bluez bluez-hcidump
 sudo pip install evdev
-[/bash]
+</code></pre>
 
 Now you need to work around a nasty bug in Debian and Ubuntu. They have accidentally compiled in code for Nokia Series 60!
 
-[bash]
+<pre><code class="language-bash">
 sudo nano /etc/bluetooth/main.conf
-[/bash]
+</code></pre>
 
 add this line to it:
 
-[code]
+<pre><code class="language-bash">
 DisablePlugins = pnat
-[/code]
+</code></pre>
 
 Now plug in the Bluetooth dongle, power up the i-racer and run:
 
-[bash]
+<pre><code class="language-bash">
 hcitool dev
-[/bash]
+</code></pre>
 
 It should detect your dongle and report its MAC address. If it does, then run:
 
-[bash]
+<pre><code class="language-bash">
 hcitool scan
-[/bash]
+</code></pre>
 
 This should find the i-racer as a Dagu Car. Note its MAC address and then pair to it by running:
 
-[bash]
+<pre><code class="language-bash">
 bluez-simple-agent hci0 00:12:05:09:94:26
-[/bash]
+</code></pre>
 
 where you replace 00:12:05:09:94:26 with the MAC address of your car. The PIN is either 1234 or 0000
 
 In a Python shell, (sudo python) run the following to find out your Keyboard or MakeyMakey ID:
 
-[python]
+<pre><code class="language-python">
 from evdev import InputDevice, list_devices
 devices = map(InputDevice, list_devices())
 for dev in devices:
  print( '%-20s %-32s %s' % (dev.fn, dev.name, dev.phys) )
-[/python]
+</code></pre>
 
 My MaKey MaKey comes up (with KB/Mouse/Joystick disconnected) as:
 
-[code]
+<pre><code class="language-bash">
 /dev/input/event0 Unknown USB IO Board usb-bcm2708_usb-1.3.3/input2
-[/code]
+</code></pre>
 <h2>The Code</h2>
 Finally run this code as sudo to control the car using the MaKey MaKey:
 
-[python]
+<pre><code class="language-python">
 import sys
 import select
 import tty
@@ -154,7 +154,7 @@ if __name__ == '__main__':
  if 'KEY_SPACE' in key_pressed:
  #stop
  sock.send('\x00')
-[/python]
+</code></pre>
 
 Note that this is extremely simple control with fixed speed just to prove the idea works. Real code will go up on GitHub when it has much more usable controls with automatic acceleration/deceleration etc and after I make it configurable with any i-Racer and with the MaKey MaKey on any USB port.
 <h2>What's next?</h2>

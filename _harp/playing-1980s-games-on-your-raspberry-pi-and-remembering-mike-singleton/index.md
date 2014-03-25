@@ -13,7 +13,7 @@ OK, I have to admit my rose-tinted spectacle were on overdrive here. The Atari 2
 Grab all the Atari 2600 ROMs from one of many sites. They are tiny so the download takes no time at all.
 
 Then install the Stella emulator:
-<pre>sudo apt-get install stella</pre>
+<pre><code class="language-bash">sudo apt-get install stella</code></pre>
 Then just run stella inside X Windows. More details <a href="http://www.engadget.com/2012/09/28/how-to-set-up-your-raspberry-pi-to-play-atari-2600-games/">here</a>.
 <h2>MAME Arcade</h2>
 MAME seems to have been around forever. It enables you to play old arcade games on a wide variety of machines. I remember using it on my brother-in-law's Atari 520ST in the 90s.
@@ -21,32 +21,38 @@ MAME seems to have been around forever. It enables you to play old arcade games 
 So it's no surprise it works well on the Raspberry Pi. Compiling from source apparently takes forever and some of the binaries from this summer don't work on the latest Debian release. However<a href="http://sheasilverman.com/rpi/raspbian/mameBin.zip">this latest compiled version</a> of Advance MAME <a href="http://blog.sheasilverman.com/2012/07/raspbian-on-raspberry-pi-mame-mess-quake3-neogeo-and-cave-story-binaries/">by Shea Silverman</a> runs perfectly on the latest Debian.
 
 Download it to your home directory, then
-<pre>unzipmameBin.zip
-sudo chmod 777 /dev/fb0</pre>
+<pre><code class="language-bash">
+unzip mameBin.zip
+sudo chmod 777 /dev/fb0
+</code>
+</pre>
 Put your roms into ~/mame/share/advance/rom/
-<pre>cd mame/bin/
+<pre><code class="language-bash">
+cd mame/bin/
 ./advmame
-
+</code>
 </pre>
 Edit the config file
-<pre>nano ~/.advance/advmame.rc</pre>
+<pre><code class="language-bash">nano ~/.advance/advmame.rc</code></pre>
 to include the proper display configuration
 
 For HDMI try:
-<pre>device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60</pre>
+<pre><code class="language-bash">device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60</code></pre>
 For NTSC TVs try:
-<pre>device_video_clock 5 - 50 / 15.73 / 60</pre>
+<pre><code class="language-bash">device_video_clock 5 - 50 / 15.73 / 60</code></pre>
 For Composite PAL TVs:
 <pre>device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60</pre>
 Then run MAME with the name of the game e.g. pacman or zaxxon.
 
 I'll leave it as an exercise for the reader to source their own legal ROMs.
-<pre>
+<pre><code class="language-bash">
  cd mame/bin/
-./advmame gamename</pre>
+./advmame gamename
+</code>
+</pre>
 <h2>ZX Spectrum</h2>
 Installing the Fuse emulator is now trivial to do:
-<pre>sudo apt-get install fuse-emulator-common fuse-emulator-utils spectrum-roms</pre>
+<pre><code class="language-bash">sudo apt-get install fuse-emulator-common fuse-emulator-utils spectrum-roms</code></pre>
 Then grab your favourite games from <a href="http://www.worldofspectrum.org/">World of Spectrum</a> and run fuse inside X Windows. More details <a href="http://raspi.tv/2012/how-to-install-fuse-zx-spectrum-emulator-on-raspberry-pi">here</a>. And <a href="http://www.worldofspectrum.org/infoseekid.cgi?id=0006604">Lords of Midnight here</a>.
 
 There are ton of other emulators out there, at various levels of usability. Our eldest has already been asking about SNES.

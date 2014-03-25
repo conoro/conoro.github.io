@@ -13,13 +13,13 @@ So I went with Plan B which was the 433Mhz modules. These things are fab. They w
 The 433MHz modules main advantage relative to theNRF24L01+ is that they can cover longer distances with a properly setup aerial. The main disadvantages are that they generally need that aerial, they have a very low bit-rate and you have to deal with most of the error correction etc yourself.
 
 What transforms these modules into something pretty spectacular is the <a href="http://www.airspayce.com/mikem/arduino/">VirtualWire</a> library for Arduino. This takes care of all the low-level transmit/receive code and you have to do little more than the equivalent of a print statement. Just think about this. You can send any information you like over hundreds of feet using 4 worth of electronics by simply calling:
-<pre>vw_send((uint8_t *)msg, strlen(msg));</pre>
+<pre><code class="language-bash">vw_send((uint8_t *)msg, strlen(msg));</code></pre>
 No Wifi or SMS needed! Of course this is a broadcast message and anyone can pick it up but who cares.
 
 The one thing we do have to figure out is what happens when multiple devices are broadcasting locally. Will they interfere with each other? I know VirtualWire has CRC checking but that's not much use if every message is corrupt.
 
 For the remote control I have created an extremely simplistic "protocol". The transmitter sends out the following every 200ms:
-<pre>XnnnnYnnnnAnBnCnDn</pre>
+<pre><code class="language-bash">XnnnnYnnnnAnBnCnDn</code></pre>
 Where Xnnnn is the X-axis of the joystick from 0 to 1024, Ynnnn is the Y-axis of the joystick from 0 to 1024, An is button-A 0 or 1, Bn is button-B 0 or 1, Cn is button-C 0 or 1 and Dn is button-D 0 or 1.
 
 <a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2.jpg"><img class="aligncenter size-large wp-image-1063" alt="remote_control2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2-1024x748.jpg" width="584" height="426" /></a>

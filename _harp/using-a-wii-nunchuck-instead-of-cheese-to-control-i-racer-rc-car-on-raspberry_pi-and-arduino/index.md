@@ -28,47 +28,47 @@ Whilst I waited for that to arrive, I decided to return to the Raspberry Pi and 
 
 Then you need to do some simple installs on the Raspberry Pi to enable I2C and access it with Python:
 
-[bash]
+<pre><code class="language-bash">
 sudo modprobe i2c_dev
 sudo modprobe i2c-bcm2708
 sudo apt-get install i2c-tools
 sudo apt-get install python-pip
 sudo apt-get install python-smbus
-[/bash]
+</code></pre>
 
-[bash]
+<pre><code class="language-bash">
 sudo nano /etc/modules
-[/bash]
+</code></pre>
 
 Add these lines, save and reboot:
 
-[code]
+<pre><code class="language-bash">
 i2c-bcm2708
 i2c-dev
-[/code]
+</code></pre>
 
-[bash]
+<pre><code class="language-bash">
 sudo nano /etc/modprobe.d/raspi_blacklist.conf
-[/bash]
+</code></pre>
 
 Comment these lines out with a #
 
-[code]
+<pre><code class="language-bash">
 blacklist spi-bcm2708
 blacklist i2c-bcm2708
-[/code]
+</code></pre>
 
 If all is working well you should see 52 mentioned when you type this:
 
-[bash]
+<pre><code class="language-bash">
 sudo i2cdetect 0
-[/bash]
+</code></pre>
 
 (use a 1 instead of a 0 if you have a newer Raspberry Pi)
 
 Then you can use Python like the following (courtesy of <a href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=44&amp;t=28231">sidb on the RPi site</a>) to report on what the Nunchuck is doing:
 
-[python]
+<pre><code class="language-python">
 import smbus
 import time
 bus = smbus.SMBus(0)
@@ -96,11 +96,11 @@ while True:
  print 'Jx: %s Jy: %s Ax: %s Ay: %s Az: %s Bc: %s Bz: %s' % (joy_x, joy_y, accel_x, accel_y, accel_z, button_c, button_z)
  except IOError as e:
  print e
-[/python]
+</code></pre>
 
 You interpret the Nunchuck data as follows:
 
-[code]
+<pre><code class="language-bash">
 Byte Description Values of sample Nunchuk
 1 X-axis value of the analog stick Min(Full Left):0x1E / Medium(Center):0x7E / Max(Full Right):0xE1
 2 Y-axis value of the analog stick Min(Full Down):0x1D / Medium(Center):0x7B / Max(Full Right):0xDF
@@ -108,7 +108,7 @@ Byte Description Values of sample Nunchuk
 4 Y-axis acceleration value Min(at 1G):0x46 / Medium(at 1G):0x7A / Max(at 1G):0xAF
 5 Z-axis acceleration value Min(at 1G):0x4A / Medium(at 1G):0x7E / Max(at 1G):0xB1
 6 Button state (Bits 0/1) / acceleration LSB Bit 0: &quot;Z&quot;-Button (0 = pressed, 1 = released) / Bit 1: &quot;C&quot; button (0 = pressed, 1 = released) / Bits 2-3: X acceleration LSB / Bits 4-5: Y acceleration LSB / Bits 6-7: Z acceleration LSB
-[/code]
+</code></pre>
 
 However, despite multiple attempts, I haven't been able to read reliably from the Nunchuck on the Raspberry Pi. An appreciable percentage of the data comes back as 0xFF. I have no idea if it's the wiring, the RPi CPU, the I2C driver in Linux, the I2C library in Python, timing or the code above. I don't believe the problem is the Nunchuck as I now have it working 100% reliably on the Arduino. In any case, the RPi was only ever going to be the proof of concept platform as we obviously need something more portable and less power hungry if we are going to chase a remote control car around the house.
 <h2>Using Arduino and HC-05</h2>

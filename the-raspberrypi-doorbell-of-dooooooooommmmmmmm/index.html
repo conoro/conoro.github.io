@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Cross Dominant</title><meta name="description" content="Mixed Laterality since 1968"><meta property="og:title" content="Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="Mixed Laterality since 1968"><meta property="og:url" content="http://conoroneill.net//index"><meta property="og:image" content="http://conoroneill.net//images/logo.png"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed/"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Cross Dominant</title><meta name="description" content="Mixed Laterality since 1968"><meta property="og:title" content="Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="Mixed Laterality since 1968"><meta property="og:url" content="http://conoroneill.net//index"><meta property="og:image" content="http://conoroneill.net//images/logo.png"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed/"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="/css/prism.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><script src="/js/prism.js"></script><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-88610-4']);
 _gaq.push(['_trackPageview']);
 (function() {
@@ -35,15 +35,16 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <img class="alignnone" src="https://lh5.googleusercontent.com/-rAmfSFYFwwI/UJJ2Pff5PdI/AAAAAAAAjRM/98cJyIoqW5o/s800/IMG_20121031_162206.jpg" alt="" width="800" height="600" /></p>
 <p>The only real change from the <a href="http://learn.adafruit.com/playing-sounds-and-using-buttons-with-raspberry-pi">Adafruit tutorial</a> was to use mplayer instead of mpg123. This allowed me to use any audio format including WAV, rather than just MP3s. Also some of the instructions are a little redundant with the latest version of Debian on RPi, but they do no harm.</p>
 <p>This is the trivial script to set the volume and call the Python script:</p>
-<p>[bash]</p>
-<h1>!/bin/bash</h1>
-<p>amixer cset numid=3 1
+<pre><code class="language-bash">
+#!/bin/bash
+amixer cset numid=3 1
 nohup ./raspi-audio-button.py &gt; /dev/null 2&gt;&amp;1 &amp;
-[/bash]</p>
+</code></pre>
+
 <p>This is the code, it uses the <a href="http://pypi.python.org/pypi/RPi.GPIO">RPi.GPIO</a> library (the latest version works fine):</p>
-<p>[python]</p>
-<h1>!/usr/bin/env python</h1>
-<p>from time import sleep
+<pre><code class="language-python">
+#!/usr/bin/env python
+from time import sleep
 import os
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
@@ -54,21 +55,23 @@ GPIO.setup(24, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 while True:
  if ( GPIO.input(22) == False ):
- os.system(&#39;mplayer /home/pi/haunted_sounds/Howl.mp3 &amp;&#39;)
- sleep(3);</p>
-<h1>if ( GPIO.input(17) == False ):</h1>
-<h1>os.system(&#39;mplayer /home/pi/haunted_sounds/HomeAloneCountOf10.mp3 &amp;&#39;)</h1>
-<h1>sleep(3);</h1>
-<p> if ( GPIO.input(23) == False ):
- os.system(&#39;mplayer /home/pi/haunted_sounds/ReleaseTheHounds.wav &amp;&#39;)
+ os.system('mplayer /home/pi/haunted_sounds/Howl.mp3 &amp;')
+ sleep(3);
+# if ( GPIO.input(17) == False ):
+# os.system('mplayer /home/pi/haunted_sounds/HomeAloneCountOf10.mp3 &amp;')
+# sleep(3);
+ if ( GPIO.input(23) == False ):
+ os.system('mplayer /home/pi/haunted_sounds/ReleaseTheHounds.wav &amp;')
  sleep(3);
  if ( GPIO.input(24) == False ):
- os.system(&#39;mplayer /home/pi/haunted_sounds/Scream.wav &amp;&#39;)
+ os.system('mplayer /home/pi/haunted_sounds/Scream.wav &amp;')
  sleep(3);
  if ( GPIO.input(25) == False ):
- os.system(&#39;mplayer /home/pi/haunted_sounds/CastleThunder.wav &amp;&#39;)
- sleep(4);</p>
-<p>[/python]</p>
+ os.system('mplayer /home/pi/haunted_sounds/CastleThunder.wav &amp;')
+ sleep(4);
+
+</code></pre>
+
 <p>This diagram of the RPi pin-out was invaluable:</p>
 <p><a href="http://elinux.org/RPi_Low-level_peripherals#Referring_to_pins_on_the_Expansion_header"><img class="alignnone size-full wp-image-894" title="GPIOs" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/11/GPIOs.png" alt="" width="254" height="581" /></a></p>
 <p>Once everything was setup at the door yesterday, we then found that the volume on the Lidl iPod Dock was far too low. I had to put a tiny battery powered speaker outside, taped to the postbox. But even that wasn&#39;t great so I added a Fiio amplifier. Of course then we couldn&#39;t hear it inside, so I split the audio and used one audio device inside and one outside.</p>

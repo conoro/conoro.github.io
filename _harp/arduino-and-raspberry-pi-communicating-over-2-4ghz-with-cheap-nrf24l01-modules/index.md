@@ -37,16 +37,22 @@ The Raspberry Pi is 3.3V itself so can connect directly to the module. Here is t
 	<li>Module Pin 8 Not Connected</li>
 </ul>
 <h2>Building The Library on RPi</h2>
-<pre>mkdir ~/gitwork
-cd gitwork
-git clonehttps://github.com/stanleyseow/RF24.git
-cd RF24
-cd librf24-rpi/librf24
-make
-sudo make install
-sudo ldconfig -v | grep librf
-cd examples/
-make</pre>
+
+<pre><code class="language-bash">
+    javascript
+	mkdir ~/gitwork
+	cd gitwork
+	git clone https://github.com/stanleyseow/RF24.git
+	cd RF24
+	cd librf24-rpi/librf24
+	make
+	sudo make install
+	sudo ldconfig -v | grep librf
+	cd examples/
+	make
+</code>
+</pre>
+
 <h2>Arduino Libraries</h2>
 You need to install the Arduino libraries:
 <ul>
@@ -60,186 +66,190 @@ You need to install the Arduino libraries:
 <h2>Arduino Sketch</h2>
 This is my quick and dirty hack of the author's Arduino sending sketch. It removes all of the LCD display stuff and only returns one sensor value. In my case that's a single switch on Digital Pin 6 which is either open or closed. I'll post a tidier one with updated comments when I have it completed.
 
-```
-/*
-Written by Stanley Seow
-stanleyseow@gmail.com
-*/
+<pre><code class="language-c">
+	/*
+	Written by Stanley Seow
+	stanleyseow@gmail.com
+	*/
 
-#include <SPI.h>
-#include "nRF24L01.h"
-#include "RF24.h"
-#include "printf.h"
+	#include <SPI.h>
+	#include "nRF24L01.h"
+	#include "RF24.h"
+	#include "printf.h"
 
-#define RF_SETUP 0x17
+	#define RF_SETUP 0x17
 
-// Set up nRF24L01 radio on SPI pin for CE, CSN
-RF24 radio(8,9);
+	// Set up nRF24L01 radio on SPI pin for CE, CSN
+	RF24 radio(8,9);
 
-// Example below using pipe5 for writing
-const uint64_t pipes[2] = { 0xF0F0F0F0E1LL, 0x7365727631LL };
+	// Example below using pipe5 for writing
+	const uint64_t pipes[2] = { 0xF0F0F0F0E1LL, 0x7365727631LL };
 
-char receivePayload[32];
-uint8_t counter=0;
-int inPin = 6; // button connected to digital pin 6
+	char receivePayload[32];
+	uint8_t counter=0;
+	int inPin = 6; // button connected to digital pin 6
 
-void setup(void)
-{
+	void setup(void)
+	{
 
-// Conor Switch
-pinMode(inPin, INPUT);
+		// Conor Switch
+		pinMode(inPin, INPUT);
 
-Serial.begin(57600);
+		Serial.begin(57600);
 
-printf_begin();
-printf("Sending nodeID & 1 sensor data\n\r");
+		printf_begin();
+		printf("Sending nodeID & 1 sensor data\n\r");
 
-radio.begin();
+		radio.begin();
 
-// Enable this seems to work better
-radio.enableDynamicPayloads();
+		// Enable this seems to work better
+		radio.enableDynamicPayloads();
 
-radio.setDataRate(RF24_1MBPS);
-radio.setPALevel(RF24_PA_MAX);
-radio.setChannel(76);
-radio.setRetries(15,15);
+		radio.setDataRate(RF24_1MBPS);
+		radio.setPALevel(RF24_PA_MAX);
+		radio.setChannel(76);
+		radio.setRetries(15,15);
 
-radio.openWritingPipe(pipes[0]);
-radio.openReadingPipe(1,pipes[1]);
+		radio.openWritingPipe(pipes[0]);
+		radio.openReadingPipe(1,pipes[1]);
 
-// Dump the configuration of the rf unit for debugging
-radio.printDetails();
-delay(1000);
-}
+		// Dump the configuration of the rf unit for debugging
+		radio.printDetails();
+		delay(1000);
+	}
 
-void loop(void)
-{
-uint8_t Data1,Data2,Data3,Data4 = 0;
-char temp[5];
-bool timeout=0;
+	void loop(void)
+	{
+		uint8_t Data1,Data2,Data3,Data4 = 0;
+		char temp[5];
+		bool timeout=0;
 
-// Get the last two Bytes as node-id
-uint16_t nodeID = pipes[0] & 0xff;
+		// Get the last two Bytes as node-id
+		uint16_t nodeID = pipes[0] & 0xff;
 
-char outBuffer[32]=""; // Clear the outBuffer before every loop
-unsigned long send_time, rtt = 0;
+		char outBuffer[32]=""; // Clear the outBuffer before every loop
+		unsigned long send_time, rtt = 0;
 
-// Get readings from sensors, change codes below to read sensors
-Data1 = counter++;
-Data2 = digitalRead(inPin);
+		// Get readings from sensors, change codes below to read sensors
+		Data1 = counter++;
+		Data2 = digitalRead(inPin);
 
-if ( counter > 999 ) counter = 0;
+		if ( counter > 999 ) counter = 0;
 
-// Append the hex nodeID to the beginning of the payload
-sprintf(outBuffer,"%2X",nodeID);
+		// Append the hex nodeID to the beginning of the payload
+		sprintf(outBuffer,"%2X",nodeID);
 
-strcat(outBuffer,",");
+		strcat(outBuffer,",");
 
-// Convert int to strings and append with zeros if number smaller than 3 digits
-// 000 to 999
+		// Convert int to strings and append with zeros if number smaller than 3 digits
+		// 000 to 999
 
-sprintf(temp,"%03d",Data1);
-strcat(outBuffer,temp);
+		sprintf(temp,"%03d",Data1);
+		strcat(outBuffer,temp);
 
-strcat(outBuffer,",");
+		strcat(outBuffer,",");
 
-sprintf(temp,"%04d",Data2);
-strcat(outBuffer,temp);
+		sprintf(temp,"%04d",Data2);
+		strcat(outBuffer,temp);
 
-printf("outBuffer: %s len: %d\n\r",outBuffer, strlen(outBuffer));
+		printf("outBuffer: %s len: %d\n\r",outBuffer, strlen(outBuffer));
 
-send_time = millis();
+		send_time = millis();
 
-// Stop listening and write to radio
-radio.stopListening();
+		// Stop listening and write to radio
+		radio.stopListening();
 
-// Send to hub
-if ( radio.write( outBuffer, strlen(outBuffer)) ) {
-printf("Send successful\n\r");
-}
-else {
-printf("Send failed\n\r");
-}
+		// Send to hub
+		if ( radio.write( outBuffer, strlen(outBuffer)) ) {
+			printf("Send successful\n\r");
+		}
+		else {
+			printf("Send failed\n\r");
+		}
 
-radio.startListening();
-delay(20);
+		radio.startListening();
+		delay(20);
 
-while ( radio.available() && !timeout ) {
+		while ( radio.available() && !timeout ) {
 
-uint8_t len = radio.getDynamicPayloadSize();
-radio.read( receivePayload, len);
+			uint8_t len = radio.getDynamicPayloadSize();
+			radio.read( receivePayload, len);
 
-receivePayload[len] = 0;
-printf("inBuffer: %s\n\r",receivePayload);
+			receivePayload[len] = 0;
+			printf("inBuffer: %s\n\r",receivePayload);
 
-// Compare receive payload with outBuffer
-if ( ! strcmp(outBuffer, receivePayload) ) {
-rtt = millis() - send_time;
+			// Compare receive payload with outBuffer
+			if ( ! strcmp(outBuffer, receivePayload) ) {
+				rtt = millis() - send_time;
 
-printf("inBuffer --> rtt: %i \n\r",rtt);
+				printf("inBuffer --> rtt: %i \n\r",rtt);
 
-}
+			}
 
-// Check for timeout and exit the while loop
-if ( millis() - send_time > radio.getMaxTimeout() ) {
-Serial.println("Timeout!!!");
-timeout = 1;
-}
+			// Check for timeout and exit the while loop
+			if ( millis() - send_time > radio.getMaxTimeout() ) {
+				Serial.println("Timeout!!!");
+				timeout = 1;
+			}
 
-delay(10);
-} // End while
+			delay(10);
+		} // End while
 
-delay(250);
-}
-```
+		delay(250);
+	}
+</code>
+</pre>
 
 This sketch makes use of printf so you need a file in the same directory called printf.h which consists of:
 
-```
-/*
-Copyright (C) 2011 J. Coliz <maniacbug@ymail.com>
+<pre><code class="language-c">
+	/*
+	Copyright (C) 2011 J. Coliz <maniacbug@ymail.com>
 
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-version 2 as published by the Free Software Foundation.
-*/
+	This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License
+	version 2 as published by the Free Software Foundation.
+	*/
 
-/**
-* @file printf.h
-*
-* Setup necessary to direct stdout to the Arduino Serial library, which
-* enables 'printf'
-*/
+	/**
+	* @file printf.h
+	*
+	* Setup necessary to direct stdout to the Arduino Serial library, which
+	* enables 'printf'
+	*/
 
-#ifndef __PRINTF_H__
-#define __PRINTF_H__
+	#ifndef __PRINTF_H__
+	#define __PRINTF_H__
 
-#ifdef ARDUINO
+	#ifdef ARDUINO
 
-int serial_putc( char c, FILE * )
-{
-Serial.write( c );
+	int serial_putc( char c, FILE * )
+	{
+		Serial.write( c );
 
-return c;
-}
+		return c;
+	}
 
-void printf_begin(void)
-{
-fdevopen( &serial_putc, 0 );
-}
+	void printf_begin(void)
+	{
+		fdevopen( &serial_putc, 0 );
+	}
 
-#else
-#error This example is only for use on Arduino.
-#endif // ARDUINO
+	#else
+	#error This example is only for use on Arduino.
+	#endif // ARDUINO
 
-#endif // __PRINTF_H__
+	#endif // __PRINTF_H__
+</code>
+</pre>
 
-```
 <h2>Running the code on the RPi and Arduino</h2>
 On the Arduino, just compile and upload the sketch and then open the Serial Monitor window and set the baud rate to 57,600.
 
 On the RPi, run the following. It will show you what it is receiving from the Arduino and echoes it back.
-<pre>sudo /home/pi/gitwork/RF24/librf24-rpi/librf24/examples/rpi-hub</pre>
+
+<pre><code class="language-bash">sudo /home/pi/gitwork/RF24/librf24-rpi/librf24/examples/rpi-hub</code></pre>
+
 If everything is working ok, both the RPi and the Arudino should be showing very similar output and reporting success.
 <h2>Next Steps?</h2>
 The Raspberry Pi libraries and sample code are obviously in C which is probably too hardcore for most people. Ideally they'd be available to both Python and JavaScript deveopers. I'll do a little poking around to see how you go about that. I wouldn't hold my breath tho.

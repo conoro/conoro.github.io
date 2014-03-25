@@ -13,11 +13,11 @@ The car isn't very fast in the video as the Lego added a lot of weight and I har
 <h2>Technical Nitty Gritty (not too Gritty!)</h2>
 My initial experiments with the Balance Board did not go well. Eventually I discovered that the version of the cwiid Wii library that is available on Raspberry Pi (and Ubuntu etc) is not able to deal with the Balance Board. See <a href="https://bugs.launchpad.net/ubuntu/+source/cwiid/+bug/509246">this bug</a>. I applied <a href="https://launchpadlibrarian.net/115501163/balanceboard.patch">the patch</a> and re-built my own deb files. To use them, just unzip them on the raspberry pi and install like so:
 
-[code]
+<pre><code class="language-bash">
 wget https://github.com/conoro/iracer-controllers/raw/master/iracer_balance_board/cwiid_for_balance_board.zip
 unzip cwiid_for_balance_board.zip
 sudo dpkg -i *.deb
-[/code] 
+</code></pre> 
 
 The rest of the time was just spent tweaking the numbers so that I could interpret someone leaning in various directions irrespective of their weight. It's still not great but works for me, a 7yo and a 6yo.
 
@@ -33,28 +33,28 @@ Any questions, leave a comment.
 
 <h2>Only if you really need it: Building those cwiid libraries yourself</h2>
 
-[code]
+<pre><code class="language-bash">
 sudo nano /etc/apt/sources.list
-[/code]
+</code></pre>
 
 Add the following line:
-[code]
+<pre><code class="language-bash">
 deb-src http://archive.raspbian.org/raspbian wheezy main contrib non-free rpi
-[/code]
+</code></pre>
 
 Then do the following:
 
-[code]
+<pre><code class="language-bash">
 mkdir ~/build
 cd build
 apt-get source python-cwiid
 apt-get build-dep python-cwiid
 cd cwiid-0.6.00+svn201/
-[/code]
+</code></pre>
 
 Then edit these three files and add the changes from https://launchpadlibrarian.net/115501163/balanceboard.patch (or run "patch" if you are familiar with that)
 
-[code]
+<pre><code class="language-bash">
 nano libcwiid/cwiid_internal.h
 nano libcwiid/process.c
 nano libcwiid/thread.c
@@ -63,4 +63,4 @@ dpkg-buildpackage -us -uc
 cd ..
 sudo apt-get remove python-cwiid
 sudo dpkg -i *.deb
-[/code]
+</code></pre>

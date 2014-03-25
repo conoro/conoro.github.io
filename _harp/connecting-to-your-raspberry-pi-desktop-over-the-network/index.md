@@ -1,6 +1,6 @@
 #"Connecting to your Raspberry Pi desktop over the network"
 
-<pre>sudo apt-get install xrdp</pre>
+<pre><code class="language-bash">sudo apt-get install xrdp</code></pre>
 Then run Remote Desktop on your Windows 7 PC to view the RPi desktop. Works just as well with VNC.
 
 Simples. And works surprisingly well.

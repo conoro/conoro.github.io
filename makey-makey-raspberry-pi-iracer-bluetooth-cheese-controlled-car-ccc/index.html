@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Cross Dominant</title><meta name="description" content="Mixed Laterality since 1968"><meta property="og:title" content="Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="Mixed Laterality since 1968"><meta property="og:url" content="http://conoroneill.net//index"><meta property="og:image" content="http://conoroneill.net//images/logo.png"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed/"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Cross Dominant</title><meta name="description" content="Mixed Laterality since 1968"><meta property="og:title" content="Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="Mixed Laterality since 1968"><meta property="og:url" content="http://conoroneill.net//index"><meta property="og:image" content="http://conoroneill.net//images/logo.png"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed/"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="/css/prism.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><script src="/js/prism.js"></script><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-88610-4']);
 _gaq.push(['_trackPageview']);
 (function() {
@@ -62,82 +62,95 @@ Now for the nasty details. Whilst these steps are quite short and the code is ve
     <li>Try PyGame for keyboard reading but discover it needs a screen attached</li>
     <li>Figure out reading directly from USB with auto-repeat using<a href="http://gvalkov.github.com/python-evdev/">Evdev</a>and<a href="https://github.com/gvalkov/python-evdev">python-evdev</a>(must be run as sudo)</li>
 </ol></p>
-<p><h2>Installs and Tweaks</h2>
-[bash]
+<p><h2>Installs and Tweaks</h2></p>
+<pre><code class="language-bash">
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install python-pip python-dev build-essential
 sudo apt-get install --no-install-recommends bluetooth 
 sudo apt-get install bluez python-bluez bluez-hcidump
 sudo pip install evdev
-[/bash]</p>
+</code></pre>
+
 <p>Now you need to work around a nasty bug in Debian and Ubuntu. They have accidentally compiled in code for Nokia Series 60!</p>
-<p>[bash]
+<pre><code class="language-bash">
 sudo nano /etc/bluetooth/main.conf
-[/bash]</p>
+</code></pre>
+
 <p>add this line to it:</p>
-<p>[code]
+<pre><code class="language-bash">
 DisablePlugins = pnat
-[/code]</p>
+</code></pre>
+
 <p>Now plug in the Bluetooth dongle, power up the i-racer and run:</p>
-<p>[bash]
+<pre><code class="language-bash">
 hcitool dev
-[/bash]</p>
+</code></pre>
+
 <p>It should detect your dongle and report its MAC address. If it does, then run:</p>
-<p>[bash]
+<pre><code class="language-bash">
 hcitool scan
-[/bash]</p>
+</code></pre>
+
 <p>This should find the i-racer as a Dagu Car. Note its MAC address and then pair to it by running:</p>
-<p>[bash]
+<pre><code class="language-bash">
 bluez-simple-agent hci0 00:12:05:09:94:26
-[/bash]</p>
+</code></pre>
+
 <p>where you replace 00:12:05:09:94:26 with the MAC address of your car. The PIN is either 1234 or 0000</p>
 <p>In a Python shell, (sudo python) run the following to find out your Keyboard or MakeyMakey ID:</p>
-<p>[python]
+<pre><code class="language-python">
 from evdev import InputDevice, list_devices
 devices = map(InputDevice, list_devices())
 for dev in devices:
- print( &#39;%-20s %-32s %s&#39; % (dev.fn, dev.name, dev.phys) )
-[/python]</p>
+ print( '%-20s %-32s %s' % (dev.fn, dev.name, dev.phys) )
+</code></pre>
+
 <p>My MaKey MaKey comes up (with KB/Mouse/Joystick disconnected) as:</p>
-<p>[code]
+<pre><code class="language-bash">
 /dev/input/event0 Unknown USB IO Board usb-bcm2708_usb-1.3.3/input2
-[/code]</p>
-<p><h2>The Code</h2>
-Finally run this code as sudo to control the car using the MaKey MaKey:</p>
-<p>[python]
+</code></pre>
+<h2>The Code</h2>
+Finally run this code as sudo to control the car using the MaKey MaKey:
+
+<pre><code class="language-python">
 import sys
 import select
 import tty
 import termios
 import bluetooth
 import time
-from evdev import InputDevice, categorize, ecodes</p>
-<p>if <strong>name</strong> == &#39;<strong>main</strong>&#39;:</p>
-<p> dev = InputDevice(&#39;/dev/input/event0&#39;)</p>
-<p> bd_addr = &quot;00:12:05:09:94:26&quot;
+from evdev import InputDevice, categorize, ecodes
+
+if __name__ == '__main__':
+
+ dev = InputDevice('/dev/input/event0')
+
+ bd_addr = &quot;00:12:05:09:94:26&quot;
  port = 1
  sock = bluetooth.BluetoothSocket( bluetooth.RFCOMM )
- sock.connect((bd_addr, port))</p>
-<p> for event in dev.read_loop():
+ sock.connect((bd_addr, port))
+
+ for event in dev.read_loop():
  if event.type == ecodes.EV_KEY:
  key_pressed = str(categorize(event))
- if &#39;KEY_LEFT&#39; in key_pressed:</p>
-<h1>0x5X for left forward. 0x51 very slow. 0x5F fastest</h1>
-<p> sock.send(&#39;\x5A&#39;)
- if &#39;KEY_RIGHT&#39; in key_pressed:</p>
-<h1>0x6X for right forward. 0x11 very slow. 0x1F fastest</h1>
-<p> sock.send(&#39;\x6A&#39;)
- if &#39;KEY_DOWN&#39; in key_pressed:</p>
-<h1>0x2X for straight backward. 0x21 very slow. 0x2F fastest</h1>
-<p> sock.send(&#39;\x2A&#39;)
- if &#39;KEY_UP&#39; in key_pressed:</p>
-<h1>0x1X for straight forward. 0x11 very slow. 0x1F fastest</h1>
-<p> sock.send(&#39;\x1A&#39;)
- if &#39;KEY_SPACE&#39; in key_pressed:</p>
-<h1>stop</h1>
-<p> sock.send(&#39;\x00&#39;)
-[/python]</p>
+ if 'KEY_LEFT' in key_pressed:
+ # 0x5X for left forward. 0x51 very slow. 0x5F fastest
+ sock.send('\x5A')
+ if 'KEY_RIGHT' in key_pressed:
+ # 0x6X for right forward. 0x11 very slow. 0x1F fastest
+ sock.send('\x6A')
+ if 'KEY_DOWN' in key_pressed:
+ # 0x2X for straight backward. 0x21 very slow. 0x2F fastest
+ sock.send('\x2A')
+ if 'KEY_UP' in key_pressed:
+ # 0x1X for straight forward. 0x11 very slow. 0x1F fastest
+ sock.send('\x1A')
+ if 'KEY_SPACE' in key_pressed:
+ #stop
+ sock.send('\x00')
+</code></pre>
+
 <p>Note that this is extremely simple control with fixed speed just to prove the idea works. Real code will go up on GitHub when it has much more usable controls with automatic acceleration/deceleration etc and after I make it configurable with any i-Racer and with the MaKey MaKey on any USB port.</p>
 <p><h2>What&#39;s next?</h2>
 Apart from extra sensors and new outer shells, I want to do more playing with controllers. I have an Arduino Joystick shield, Arduino Nano and serial Bluetooth breakout board coming from China. It&#39;d be cool to make some sort of interesting custom controller case with the Arudino controlling the car. I may also get an <a href="http://arduino.cc/en/Main/ArduinoBoardEsplora">Arduino Esplora</a>.</p>
