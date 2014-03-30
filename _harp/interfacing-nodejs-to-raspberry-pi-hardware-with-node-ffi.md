@@ -25,7 +25,7 @@ The final set of steps are actually quite simple. All the effort was in the lear
 
 
 ### Install WiringPi
-<pre><code class="language-bash">
+```bash
 mkdir ~/gitwork
 cd gitwork
 git clone git://git.drogon.net/wiringPi
@@ -37,22 +37,20 @@ cd ~/gitwork
 git clone https://github.com/r10r/rcswitch-pi.git
 cd rcswitch-pi
 make
-</code></pre>
+```
 
 ### Build an RCSwitch-Pi library
-<pre><code class="language-bash">
+```bash
 gcc -shared -fpic RCSwitch.cpp -o libRCSwitch.so
-</code></pre>
+```
 
 ### Simple C++ test to make sure you can talk to Efergy
-<pre><code class="language-bash">
+```bash
 cd ~/gitwork/rcswitch-pi
-nano efergy.cpp
-</code></pre>
+```
 
-Paste this in
-
-<pre><code class="language-c">
+Create a file called efergy.cpp with the following contents
+```c
 #include "RCSwitch.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -76,46 +74,45 @@ int main(int argc, char *argv[]) {
 
         return 0;
 }
-</code></pre>
+```
 
-Save it. Now compile and run it:
+Now compile and run it:
 
-<pre><code class="language-bash">
+```bash
 g++ -c -o efergy.o efergy.cpp
 g++ RCSwitch.o efergy.o -o efergy -lwiringPi
 sudo ./efergy 109011
 sudo ./efergy 109019
-</code></pre>
+```
 
 If all is working ok, the switch will turn on and off.
 
 ### Install Node/NPM on Raspberry Pi 
-<pre><code class="language-bash">
-cd ~
-sudo mkdir /opt/node
-wget http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-arm-pi.tar.gz
-tar xvzf node-v0.10.23-linux-arm-pi.tar.gz
-sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
-cd ~
-nano .bash_profile
- 
-#Add these lines to the file you opened
-PATH=$PATH:/opt/node/bin
-export PATH
+```bash
+    cd ~
+    sudo mkdir /opt/node
+    wget http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-arm-pi.tar.gz
+    tar xvzf node-v0.10.23-linux-arm-pi.tar.gz
+    sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
+    cd ~
+    nano .bash_profile
+     
+    #Add these lines to the file you opened
+    PATH=$PATH:/opt/node/bin
+    export PATH
 
-#Save and exit
- 
-#Test
-node -v
-npm -v
-</code></pre>
-
+    #Save and exit
+     
+    #Test
+    node -v
+    npm -v
+```
 
 ### Wrapping C++ so it can be called by C
 Create wrapper.h and wrapper.c
 
 wrapper.h:
-<pre><code class="language-c">
+```c
 #ifndef __MYWRAPPER_H
 #define __MYWRAPPER_H
 
@@ -137,61 +134,62 @@ extern "C" {
 }
 #endif
 #endif
-</code></pre>
+```
 
 wrapper.c:
-<pre><code class="language-c">
-#include "RCSwitch.h"
-#include "wrapper.h"
-#include <stdio.h>
+```c
 
-extern "C" {
-  RCSwitch* newRCSwitch() {
-    //printf("Inside newRCSwitch");
-    return new RCSwitch();
-  }
+    #include "RCSwitch.h"
+    #include "wrapper.h"
+    #include <stdio.h>
 
-  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
-    //printf("Inside RCSwitch_send");
-    v->send(Code, length);
-  }
+    extern "C" {
+      RCSwitch* newRCSwitch() {
+        //printf("Inside newRCSwitch");
+        return new RCSwitch();
+      }
 
-  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
-    //printf("Inside RCSwitch_enableTransmit");
-    v->enableTransmit(nTransmitterPin);
-  }
+      void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
+        //printf("Inside RCSwitch_send");
+        v->send(Code, length);
+      }
 
-  void deleteRCSwitch(RCSwitch* v) {
-    delete v;
-  }
-}
-</code></pre>
+      void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
+        //printf("Inside RCSwitch_enableTransmit");
+        v->enableTransmit(nTransmitterPin);
+      }
+
+      void deleteRCSwitch(RCSwitch* v) {
+        delete v;
+      }
+    }
+```
 
 ### Compile everything
 Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple [GDB Tutorial here](http://web.eecs.umich.edu/~sugih/pointers/summary.html) and some tips on [RPi Forums](http://www.raspberrypi.org/forum/viewtopic.php?f=33&t=15312).
 
-<pre><code class="language-bash">
+```bash
 g++ -g -c wrapper.c -o wrapper.o
 gcc -g -c efergy.c -o efergy.o
 g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
 g++ -g efergy.o wrapper.o ./libRCSwitch.so -o efergy2
-</code></pre>
+```
 
 ### Run the C program
-<pre><code class="language-bash">
+```bash
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
 sudo ./efergy2 109011
-</code></pre>
+```
 
 Now to get everything running in Node/JavaScript
 
 ### Install Node FFI
-<pre><code class="language-bash">
+```bash
 sudo npm install -g ffi
-</code></pre>
+```
 
 ### Create send.js
-<pre><code class="language-javascript">
+```javascript
 var ffi = require("ffi")
 
 var libwiringPi = ffi.Library('/usr/local/lib/libwiringPi', {
@@ -227,20 +225,19 @@ if (mySwitch.isNull()) {
     libRCSwitch.RCSwitch_enableTransmit(mySwitch, PIN);
     libRCSwitch.RCSwitch_send(mySwitch, unitCode, 24);
 }
-</code></pre>
-
+```
 
 ### Compile the libraries
-<pre><code class="language-bash">
+```bash
 g++ -shared -fpic -g wrapper.c -L ./ -l RCSwitch -o libwrapper.so
 g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
-</code></pre>
+```
 
 ### Run send.js
 Note that anything which uses WiringPi has to be run sudo. A bit of a pain. Not sure I want to be running the Node process as root?
 
-<pre><code class="language-bash">
+```bash
 sudo env PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ node send.js 109011
-</code></pre>
+```
 
 That's it. You can now turn on and off your Efergy socket using Node. Next up, a simple Node server to handle remote requests to do this.
