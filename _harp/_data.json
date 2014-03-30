@@ -3,6 +3,15 @@
  "layout": false
 }, "CNAME" : {
  "layout": false
+}, "interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi" : {
+ "ID": 1283,
+ "author": "admin",
+ "date": 1396182982000, 
+ "ptype": "post",
+ "description": "Now that I can control the Efergy RC mains sockets easily with a DigiX Arduino, it's time to make the same thing work on Node.js running on a Raspberry Pi. Turns out it's not quite so easy!",
+ "slug": "interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi",
+ "status": "publish",
+ "title": "Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi"
 }, "our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets" : {
  "ID": 1282,
  "author": "admin",
