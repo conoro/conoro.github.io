@@ -12,7 +12,7 @@ mixin tree(head, tail)
       else
         mixin tree(val, tail + key + "/")
 
-h1 Sitemap
-ol
+doctype xml
+urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
   mixin tree(public, "/")
   
