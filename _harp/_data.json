@@ -1,6 +1,8 @@
 {
  "feed": {
  "layout": false
+}, "sitemap": {
+ "layout": false
 }, "CNAME" : {
  "layout": false
 }, "interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi" : {
