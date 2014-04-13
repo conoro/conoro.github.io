@@ -5,6 +5,15 @@
  "layout": false
 }, "CNAME" : {
  "layout": false
+}, "pebble-controlled-electric-blanket-using-cloud-pebble-simply-js" : {
+ "ID": 1284,
+ "author": "admin",
+ "date": 1397382536000, 
+ "ptype": "post",
+ "description": "It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js",
+ "slug": "pebble-controlled-electric-blanket-using-cloud-pebble-simply-js",
+ "status": "publish",
+ "title": "My Pebble controlled electric blanket using CloudPebble and Simply.js"
 }, "interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi" : {
  "ID": 1283,
  "author": "admin",

@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>My Pebble controlled electric blanket using CloudPebble and Simply.js | Cross Dominant</title><meta name="description" content="It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js"><meta property="og:title" content="My Pebble controlled electric blanket using CloudPebble and Simply.js | Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js"><meta property="og:url" content="http://conoroneill.net//undefined"><meta property="og:image" content="http://conoroneill.net//images/logo.png"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed/"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="/css/prism.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><script src="/js/prism.js"></script><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-88610-4']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();</script></head><body class="page-pebble-controlled-electric-blanket-using-cloud-pebble-simply-js pebble-controlled-electric-blanket-using-cloud-pebble-simply-js"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="search-box"><script type="text/javascript">(function() {
+  var cx = '001461447920948202874:5htheqgvd1w';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">My Pebble controlled electric blanket using CloudPebble and Simply.js</h1><h2 class="sm date">13 Apr 2014</h2><p>Messing with hardware and software can be both a joy and incredibly infuriating. Yesterday I spent a few intermittent hours trying to get Arduino and Espruino communicating reliably over NRF24L01+ wireless transceivers. I only half succeeded. I followed this with some reading up on both <a href="https://cloudpebble.net">CloudPebble</a> and <a href="http://simplyjs.io/">Simply.js</a>. Literally 5 minutes later I had my first Pebble App installed on my watch and was remotely controlling the <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">electric blanket in our bed</a>.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_blanket.jpg" alt="Bandon Blanket" title="Bandon Bed Button"></p>
+<p>CloudPebble is a web-based IDE for building Pebble Apps. I believe it was started independently but is now run by <a href="http://getpebble.com">Pebble</a> themselves. Simply.js is a library/SDK for building Pebble Apps using only JavaScript. Pebble recently announced that CloudPebble now supports Simply.js and boy they weren&#39;t kidding. It&#39;s now childsplay to build Pebble Apps.</p>
+<p>This is how quickly I built the App:</p>
+<ul>
+<li>Create a free Pebble <a href="https://developer.getpebble.com/">Developer account</a> </li>
+<li>Login to CloudPebble using your Pebble credentials</li>
+<li>Create a project and pick Simply.js as the type</li>
+<li>You automatically get the sample Simply.js App in the IDE</li>
+<li>Compile that and send it to your Watch. You of course need the Pebble App on your phone with developer options enabled. The Pebble App will also tell you your phone&#39;s IP address which CloudPebble may ask for.</li>
+<li>I&#39;ve found that I can&#39;t install from desktop but if I load the IDE URL on my phone I can do it from there. I assume this is because I&#39;m on house wifi and behind a firewall with a private IP.</li>
+</ul>
+<p>That first App looks like this:</p>
+<pre><code class="language-javascript">console.log(&#39;Simply.js demo!&#39;);
+
+simply.on(&#39;singleClick&#39;, function(e) {
+  console.log(util2.format(&#39;single clicked $button!&#39;, e));
+  simply.subtitle(&#39;Pressed &#39; + e.button + &#39;!&#39;);
+});
+
+simply.on(&#39;longClick&#39;, function(e) {
+  console.log(util2.format(&#39;long clicked $button!&#39;, e));
+  simply.vibe();
+  simply.scrollable(e.button !== &#39;select&#39;);
+});
+
+simply.on(&#39;accelTap&#39;, function(e) {
+  console.log(util2.format(&#39;tapped accel axis $axis $direction!&#39;, e));
+  simply.subtitle(&#39;Tapped &#39; + (e.direction &gt; 0 ? &#39;+&#39; : &#39;-&#39;) + e.axis + &#39;!&#39;);
+});
+
+simply.setText({
+  title: &#39;Simply Demo!&#39;,
+  body: &#39;This is a demo. Press buttons or tap the watch!&#39;,
+}, true);</code></pre>
+<p>And it you read the Simply.js site, you can access URLs like this:</p>
+<pre><code class="language-javascript">ajax({ url: &#39;http://simplyjs.io&#39; }, function(data){
+  var headline = data.match(/&lt;h1&gt;(.*?)&lt;\/h1&gt;/)[1];
+  simply.title(headline);
+});</code></pre>
+<p>Merge the two together and ta-daaaaa, the Bandon Bed Button Pebble App.</p>
+<pre><code class="language-javascript">console.log(&#39;Bandon Bed Button!&#39;);
+
+simply.on(&#39;singleClick&#39;, function(e) {
+  console.log(util2.format(&#39;single clicked $button!&#39;, e));
+  if (e.button == &quot;up&quot;){
+    ajax({ url: &#39;http://url-of-conors-thing-to-turn-on&#39; }, function(data){
+      simply.subtitle(&#39;Turned on Blanket!&#39;);  
+    });    
+  } else if (e.button == &quot;down&quot;){
+    ajax({ url: &#39;http://url-of-conors-thing-to-turn-off&#39; }, function(data){
+      simply.subtitle(&#39;Turned off Blanket!&#39;);  
+    });        
+  }
+});
+
+simply.setText({
+  title: &#39;Bandon Bed Button!&#39;,
+  body: &#39;Press Up to turn on the blanket. Press Down to turn off the blanket.&#39;,
+}, true);</code></pre>
+<p>Just in case the data route for this is not clear, here&#39;s what it looks like:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow"></p>
+<p>I referred to this on Twitter last night as The Internet of Thangs. I&#39;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&#39;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&#39;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&#39;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p>
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section><nav class="post-nav"><ul class="clearfix"><li><a href="interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi" title="Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi" class="post-prev"><strong>Previous Post</strong><span>Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi</span></a></li></ul></nav></article></div></div></body></html>
