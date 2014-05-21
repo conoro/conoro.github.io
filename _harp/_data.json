@@ -5,15 +5,24 @@
  "layout": false
 }, "CNAME" : {
  "layout": false
-}, "pebble-controlled-electric-blanket-using-cloud-pebble-simply-js" : {
- "ID": 1284,
+}, "my-presentation-from-3dcamp-limerick-2014" : {
+ "ID": 1285,
  "author": "admin",
- "date": 1397382536000, 
+ "date": 1400652527000, 
  "ptype": "post",
- "description": "It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js",
- "slug": "pebble-controlled-electric-blanket-using-cloud-pebble-simply-js",
+ "description": "I finally made it to 3D Camp on Saturday, Ireland's last remaining BarCamp-style event. Fantastic group of people talking about interesting fun things. My presentation was called: Hacking by Google Search - Building hardware with no electronics knowledge.",
+ "slug": "my-presentation-from-3dcamp-limerick-2014",
  "status": "publish",
- "title": "My Pebble controlled electric blanket using CloudPebble and Simply.js"
+ "title": "My presentation from 3D Camp Limerick. Hacking by Google Search - Building hardware with no electronics knowledge"
+ }, "pebble-controlled-electric-blanket-using-cloud-pebble-simply-js" : {
+  "ID": 1284,
+  "author": "admin",
+  "date": 1397382536000, 
+  "ptype": "post",
+  "description": "It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js",
+  "slug": "pebble-controlled-electric-blanket-using-cloud-pebble-simply-js",
+  "status": "publish",
+  "title": "My Pebble controlled electric blanket using CloudPebble and Simply.js"
 }, "interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi" : {
  "ID": 1283,
  "author": "admin",
