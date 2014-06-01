@@ -7690,14 +7690,24 @@
     "status": "publish",
     "title": "How hard can it be to make a simple LED blinking circuit? Conor's stupid questions to self, Episode 5892"
   },
-  "creating-a-valid-ops-file-in-json-format-for-minecraft-1.7.9": {
+  "really-pushing-it-now": {
     "ID": 1286,
     "author": "admin",
-    "date": 1401634101121,
+    "date": 1401544805122,
     "ptype": "post",
-    "description": "I challenge the Mojang guys to get a new Windows Server install working and setup an Ops file without knowledge of UUIDs and JSON. A terrible upgrade experience!",
-    "slug": "creating-a-valid-ops-file-in-json-format-for-minecraft-1.7.9",
+    "description": "Did it really update the config file?",
+    "slug": "really-pushing-it-now",
     "status": "publish",
-    "title": "Creating a valid ops file in JSON format for Minecraft 1.7.9"
+    "title": "Really pushing it now"
+  },
+  "another-go": {
+    "ID": 1287,
+    "author": "admin",
+    "date": 1401545290057,
+    "ptype": "post",
+    "description": "Checking formatting",
+    "slug": "another-go",
+    "status": "publish",
+    "title": "Another go"
   }
 }
