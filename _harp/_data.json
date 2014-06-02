@@ -7699,5 +7699,15 @@
     "slug": "creating-a-valid-ops-file-in-json-format-for-minecraft-179",
     "status": "publish",
     "title": "Creating a valid ops file in JSON format for Minecraft 1.7.9"
+  },
+  "piratebox-could-be-an-awesome-file-sharing-tool-at-every-event": {
+    "ID": 1287,
+    "author": "admin",
+    "date": 1401710202427,
+    "ptype": "post",
+    "description": "The lack of bandwidth at most events whether free or pay-for means that local file-sharing via something like PirateBox could be a god-send. Has anyone tried this at BarCamps or Coder Dojos?",
+    "slug": "piratebox-could-be-an-awesome-file-sharing-tool-at-every-event",
+    "status": "publish",
+    "title": "PirateBox could be an awesome file sharing tool at every event, particularly where internet is poor i.e. all of them."
   }
 }

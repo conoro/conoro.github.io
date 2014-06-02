@@ -6,23 +6,22 @@ var fs = require('fs');
 var file = '../_data.json';
 var config;
 
+var co = require('co');
+var prompt = require('co-prompt');
+
+var multiline = prompt.multiline;
+
 fs.readFile(file, 'utf8', function (err, data) {
   if (err) {
     console.log('Error: ' + err);
     return;
   }
   config = JSON.parse(data);
-  //
-  // Start the prompt
-  //
-  prompt.start();
 
-  //
-  // Get two properties from the user: username and email
-  //
-  prompt.get(['title', 'description'], function (err, result) {
-    var title = result.title;
-    var description = result.description;
+  co(function *(){
+    var title = yield prompt('Title: ');
+    var description = yield multiline('Description:');
+
     var author = "admin";
     var ptype = "post";
     var status = "publish";
@@ -60,5 +59,8 @@ fs.readFile(file, 'utf8', function (err, data) {
       console.log("_data.json was updated");
       }
     }); 
-  });
+
+    process.stdin.pause();
+  })();
+
 });
