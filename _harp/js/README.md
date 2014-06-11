@@ -1,7 +1,8 @@
 # This is how to generate the blog
 
 ## Pre-requisites
-sudo npm install -g gnode co co-prompt slug
+sudo npm install -g gnode 
+npm install slug co co-prompt
 
 ## Create a new blog post
 cd ~/gitwork/conoro.github.io/_harp/js

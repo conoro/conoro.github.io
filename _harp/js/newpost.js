@@ -1,6 +1,5 @@
 // Create all the metadata for a new Harp blogpost
 
-var prompt = require('prompt');
 var slug = require('slug');
 var fs = require('fs');
 var file = '../_data.json';
