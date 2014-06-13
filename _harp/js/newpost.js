@@ -2,7 +2,7 @@
 
 var slug = require('slug');
 var fs = require('fs');
-var file = './_data.json';
+var file = '../_data.json';
 var config;
 
 fs.readFile(file, 'utf8', function (err, data) {
