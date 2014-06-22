@@ -18,7 +18,7 @@
 -function sortJ(){
   -var arr = [];
   -for (post in public._data){
-    -var obj = {date: public._data[post].date, post:post, description: public._data[post].description, slug: public._data[post].slug, author: public._data[post].author, layout: public._data[post].layout, title: public._data[post].title};
+    -var obj = {date: public._data[post].date, post:post, description: public._data[post].description, slug: public._data[post].slug, author: public._data[post].author, layout: public._data[post].layout, title: public._data[post].title, FBImage: public._data[post].FBImage};
     -arr.push(obj);
   -}
   -return(sortByKey(arr, 'date'))
@@ -31,19 +31,6 @@ html(lang="en")
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
     title= locals.title ? title + " | " + site_title : site_title
     meta(name='description', content=description)
-    meta(property='og:title', content=locals.title ? title + " | " + site_title : site_title)
-    if current.path[0] === "index"
-      meta(property='og:type', content='website')
-      meta(property='og:description', content=description)
-      meta(property='og:url', content=site_url)
-    else
-      meta(property='og:type', content='article')
-      meta(property='og:description', content=description)
-      meta(property='og:url', content=site_url + "/" + current.path[1])
-    meta(property='og:image', content=site_url + logo)
-    meta(property='og:site_name', content=site_title)
-    meta(name='twitter:card', content='summary')
-    meta(name='twitter:site', content="@" + site_twitter)
     link(rel='shortcut icon', href='/favicon.ico')
     link(rel='alternate', type='application/rss+xml', title=site_title + "RSS Feed", href='/feed/')
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic')
@@ -62,37 +49,82 @@ html(lang="en")
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-  body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
-    header.masthead
-      .container
-        h1
-          a(href='/')= site_title
-      .search-box
-        script(type='text/javascript').
-          (function() {
-            var cx = '001461447920948202874:5htheqgvd1w';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                '//www.google.com/cse/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-          })();
-        <gcse:search></gcse:search>
-    .content
-      .container
-        if current.path[0] === "index"
-          .articles
-            for post in sortJ()
-              if post.layout !== false
-                article
-                  a(href="/#{ post.slug }")
-                    img(src='/images/#{ public.authors._data[post.author].photo }', alt='#{ public.authors._data[post.author].name }', class='author')
-                    h1.sm= post.title
-                    h2.xs.date #{ prettyDate(post.date) } • by #{ public.authors._data[post.author].name }
-                    if post.description
-                      p= post.description
-          != yield
-        else
-          != partial("/blog/_blog")
+
+
+    if current.path[0] === "index"
+      meta(property='og:title', content=locals.title ? title + " | " + site_title : site_title)
+      meta(property='og:type', content='website')
+      meta(property='og:description', content=description)
+      meta(property='og:url', content=site_url)
+      meta(property='og:image', content=site_url + logo)
+      meta(property='og:site_name', content=site_title)
+      meta(name='twitter:card', content='summary')
+      meta(name='twitter:site', content="@" + site_twitter)
+      body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
+        header.masthead
+          .container
+            h1
+              a(href='/')= site_title
+          .search-box
+            script(type='text/javascript').
+              (function() {
+                var cx = '001461447920948202874:5htheqgvd1w';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                    '//www.google.com/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            <gcse:search></gcse:search>
+        .content
+          .container
+            if current.path[0] === "index"
+              .articles
+                for post in sortJ()
+                  if post.layout !== false
+                    article
+                      a(href="/#{ post.slug }")
+                        img(src='/images/#{ public.authors._data[post.author].photo }', alt='#{ public.authors._data[post.author].name }', class='author')
+                        h1.sm= post.title
+                        h2.xs.date #{ prettyDate(post.date) } • by #{ public.authors._data[post.author].name }
+                        if post.description
+                          p= post.description
+    else
+      meta(property='og:title', content=locals.title ? title + " | " + site_title : site_title)
+      meta(property='og:type', content='article')
+      meta(property='og:description', content=description)
+      meta(property='og:url', content=site_url + "/" + current.path[1])
+      if FBImage
+        meta(property='og:image', content=FBImage)
+      else
+        meta(property='og:image', content=site_url + logo)
+      meta(property='og:site_name', content=site_title)
+      meta(name='twitter:card', content='summary')
+      meta(name='twitter:site', content="@" + site_twitter)
+      body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
+        header.masthead
+          .container
+            h1
+              a(href='/')= site_title
+          .search-box
+            script(type='text/javascript').
+              (function() {
+                var cx = '001461447920948202874:5htheqgvd1w';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                    '//www.google.com/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            <gcse:search></gcse:search>
+        .content
+          .container
+            article.post
+               h1.lg.title= title
+               if date
+                   h2.sm.date= prettyDate(date)
+

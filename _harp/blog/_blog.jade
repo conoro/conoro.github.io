@@ -7,11 +7,60 @@
     -return d+' '+m+' '+y;
 -}
 
-article.post
-  h1.lg.title= title
-  if date
-    h2.sm.date= prettyDate(date)
-  != yield
-  != partial("../_shared/author")
-  != partial("../_shared/disqus")
-  != partial("../_shared/blog-nav")
+    meta(property='og:title', content=locals.title ? title + " | " + site_title : site_title)
+    if current.path[0] === "index"
+      meta(property='og:type', content='website')
+      meta(property='og:description', content=description)
+      meta(property='og:url', content=site_url)
+    else
+      meta(property='og:type', content='article')
+      meta(property='og:description', content=description)
+      meta(property='og:url', content=site_url)
+    if FBImage
+      meta(property='og:image', content=FBImage)
+    else
+      meta(property='og:image', content=site_url + logo)
+    meta(property='og:site_name', content=site_title)
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:site', content="@" + site_twitter)
+    link(rel='shortcut icon', href='/favicon.ico')
+    link(rel='alternate', type='application/rss+xml', title=site_title + "RSS Feed", href='/feed/')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic')
+    link(rel='stylesheet', href='/css/prism.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lekton')
+    link(rel="stylesheet", href='/css/main.css')
+    <script src="/js/prism.js"></script>
+    //if lt IE 9
+      <script src="/js/html5shiv.js"></script>
+    script(type='text/javascript').
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '#{ locals.analytics_account }']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
+    header.masthead
+      .container
+        h1
+          a(href='/')= site_title
+      .search-box
+        script(type='text/javascript').
+          (function() {
+            var cx = '001461447920948202874:5htheqgvd1w';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+        <gcse:search></gcse:search>
+    .content
+      .container
+
+
+
