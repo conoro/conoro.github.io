@@ -78,6 +78,6 @@ function getContentTypeByFile(fileName) {
 
 ```
 
-Source is [here on GitHub](https://github.com/conoro/conoro.github.io/blob/master/_harp/upload_s3_images.js).
+Source is [here on GitHub](https://github.com/conoro/conoro.github.io/blob/master/_harp/js/upload_s3_images.js).
 
 I hope you find it useful.
