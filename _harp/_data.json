@@ -7730,5 +7730,16 @@
     "status": "publish",
     "title": "Thanks to Elon Musk's position on patents, I now have a Tesla S",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/tesla1.jpg"
+  },
+  "a-simple-nodejs-script-to-upload-your-harpjs-blog-images-to-s3": {
+    "ID": 1290,
+    "author": "admin",
+    "date": 1403462120527,
+    "ptype": "post",
+    "description": "Whilst there are tons of tools to do S3 upload, I wanted something tuned to how I blog, particularly with a static blog that used to be a WordPress one. I hope you find it useful.",
+    "slug": "a-simple-nodejs-script-to-upload-your-harpjs-blog-images-to-s3",
+    "status": "publish",
+    "title": "A simple Node.js script to upload your Harp.js blog images to S3",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/s3_upload.jpg"
   }
 }

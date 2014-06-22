@@ -16,4 +16,57 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
       '//www.google.com/cse/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
-})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1></article></div></div></body></head></html>
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><p>I&#39;ll shortly be moving this entire blog from WordPress to <a href="http://harpjs.com/docs/deployment/github-pages">HarpJS</a> generated static pages over on GitHub. It hasn&#39;t been as smooth a process as I&#39;d hoped but I&#39;ve learned lots. We&#39;re also using HarpJS in a work context and it works great there running under Node. I&#39;ll write it all up either this weekend or next.</p>
+<p>Then this evening I asked myself the silly question &quot;I wonder can I run Node.js on Android?&quot;. It turns out you can. But it&#39;s a teensy bit fiddly to get going. The biggest problem turned out to be Android 4.4 KitKat which made the first few steps the hardest.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android_02.jpg" alt="Debian on Android" title="Debian and Harp"></p>
+<p>You are going to be running Debian Linux in a chrooted environment. For some weird reason I never even knew this was possible until today! In fact there are multiple projects out there that enable this. The main thing, of course, is that your phone must be rooted. A Stock Samsung ROM is fine and I&#39;m sure GPE and Cyanogen would also work.</p>
+<p>I initially tried &quot;Linux Deploy&quot; from the Android Play Store but hit a brick wall with it mounting the external SD card on the S4. I then tried <a href="https://play.google.com/store/apps/details?id=com.zpwebsites.linuxonandroid">Linux On Android</a>, also from the Play Store and hit similar problems, so I dug a bit deeper and got to the bottom of it. </p>
+<p>All of this is easier if you connect up an external keyboard to your S4. I&#39;ve found that a <a href="http://dx.com/p/micro-usb-otg-cable-for-android-tablet-gps-mp3-phone-black-276901">cheap USB OTG</a> cable works brilliantly for thumbdrives, mice, keyboards and even the 2.4GHz combo keyboards you get with Android TV sticks.</p>
+<ul>
+<li>Install <a href="https://play.google.com/store/apps/details?id=com.zpwebsites.linuxonandroid">Complete Linux Installer</a>, <a href="https://play.google.com/store/apps/details?id=stericson.busybox">BusyBox</a>, <a href="https://play.google.com/store/apps/details?id=eu.chainfire.supersu">Chainfire SuperSU</a>, <a href="https://play.google.com/store/apps/details?id=jackpal.androidterm">Terminal Emulator</a> and  <a href="https://play.google.com/store/apps/details?id=android.androidVNC">androidVNC</a> from the Play Store </li>
+<li>Download the &quot;Small EXT4&quot; LinuxOnAndroid <a href="http://sourceforge.net/projects/linuxonandroid/files/Debian/Testing/Small/">Debian Jessie image</a> from Sourceforge. Unzip that. Create a directory on your phone&#39;s SD card called debian and copy over the two unzipped files into that directory</li>
+<li>Using a File Explorer on your S4 that can enter root mode (e.g. <a href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop">ES File Explorer</a>), browse to /data/data/com.zpwebsites.linuxonandroid/files/</li>
+<li>rename busybox to busybox.bak</li>
+<li>edit bootscript.sh </li>
+</ul>
+<p>find this bit:</p>
+<pre><code>elif [ -d /Removable/MicroSD ]; then
+echo &quot;mounting /Removable/MicroSD to $mnt/external_sd...&quot;
+$bbox mount -o bind /Removable/MicroSD  $mnt/external_sd</code></pre>
+<p>and change it to the following:</p>
+<pre><code>elif [ -d /storage/extSdCard ]; then
+echo &quot;mounting /storage/extSdCard to $mnt/external_sd...&quot;
+$bbox mount -o bind /storage/extSdCard  $mnt/external_sd</code></pre>
+<ul>
+<li>Save that</li>
+<li>Then run the Complete Linux Installer App which mainly consists of instructions. The only important step is to pick Debian in the drop-down list and change the settings so that the image directory is set to where you copied those image files to e.g. /storage/extSdCard/debian</li>
+<li>Then just tap the Start Linux button</li>
+<li>You may see some initial errors but if all is basically ok, you&#39;ll get a first-time-run set of Debian questions asking for password etc.</li>
+<li>And you are done from a Debian perspective. You can even setup the VNC server to have a basic UI but I haven&#39;t got that working properly yet (blank screen with X pointer).</li>
+</ul>
+<p>So now that we have an almost bog-standard Linux setup, you can pretty much do what you normally would. I have run into some small glitches but found workarounds quickly for them all. I should probably setup a non-root user at some point too. In any case, this is how I setup HarpJS:</p>
+<pre><code>apt-get update
+apt-get install nodejs nodejs-legacy
+apt-get install git curl build-essential openssl libssl-dev
+wget https://npmjs.org/install.sh
+chmod 755 install.sh
+./install.sh
+npm install --unsafe-perm -g harp
+mkdir gitwork
+cd gitwork
+git clone https://github.com/conoro/conoro.github.io.git
+cd conoro.github.io
+harp compile _harp ./</code></pre>
+<p>The two bits of oddness above were getting an error from curl trying to install npm, so I used wget. Also, very very strange node-gyp permissions errors installing Harp globally when it came to node-sass (hence the --unsafe-perm). Node-sass also causes problems on Windows I&#39;ve noticed.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android.jpg" alt="Harp on Android" title="Harp and Android">
+And that&#39;s it about it. Except for.......</p>
+<pre><code>apt-get install emacs</code></pre>
+<p>How could I not? :-)</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/emacs.png" alt="Emacs on Android" title="Emacs and Android"></p>
+<p>So I edit Markdown blogposts in Emacs, compile with Harp and commit to GitHub to publish. Simples.</p>
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section></article></div></div></body></head></html>

@@ -16,4 +16,27 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
       '//www.google.com/cse/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
-})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1></article></div></div></body></head></html>
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;Accessing Amazon RDS Instances from your Desktop&quot;</h1>
+<p> <p>Whilst we are huge fans of the Amazon RDS database service (particularly the Multi-AZ setup), one thing that can be a problem is accessing your databases from the desktop. The standard trick of running an SSH tunnel to your EC2 instance doesn&#39;t work here.&nbsp;</p></p>
+<div><br />After much searching I found the following on an <a href="http://developer.amazonwebservices.com/connect/message.jspa?messageID=173501">AWS discussion forum</a> and it works perfectly:</div>
+<p />
+<div><span style="font-family: courier new, monospace;">ssh-add YourKey.pem</span></div>
+<div>
+<div><span style="font-family: courier new, monospace;">ssh -l &lt;username&gt; -L 33060:&lt;ec2_rfc_ip&gt;:3306 -N &lt;ext_hostname&gt;&nbsp;</span><p /> Then connect your local MySQL client to localhost, port 33060&nbsp;<p /><span style="font-family: courier new, monospace;">&lt;username&gt;</span> is the login user on the EC2 instance from where you normally access the RDS MySQL DB. <span style="font-family: courier new, monospace;">&lt;ec2_rfc_ip&gt;</span> is the RDS instance&#39;s IP address and <span style="font-family: courier new, monospace;">&lt;ext_hostname&gt;</span>&nbsp;is the external hostname of one of your EC2 instances.&nbsp;</div>
+<div>
+<div><br />A couple of notes:<br /><ol>
+<li>You have to use the internal AWS IP address of the RDS instance, not its name or its external IP</li>
+<li>We&#39;ve only tested it on an Ubuntu desktop running inside VirtualBox on Windows</li>
+<li>It works fine with the MySQL GUI tools</li>
+<li>We haven&#39;t been able to figure out how to do it directly with Putty on Windows. Anyone know how?</li>
+</ol>
+<p />
+</div>
+</div>
+</div>
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section></article></div></div></body></head></html>

@@ -16,4 +16,19 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
       '//www.google.com/cse/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
-})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1></article></div></div></body></head></html>
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;First two trivial parts of getting App Inventor working on Raspberry Pi done&quot;</h1>
+<p>I&#39;ve been playing a small bit with the Raspberry Pi VM on VMware to see what&#39;s possible and what isn&#39;t. One thing I am eager to try when it arrives on the week of May 14th (YAY!), is to get App Inventor working on it.</p>
+<p>There are three basic user parts to App Inventor. The browser-based Designer, the Java-based Blocks Editor and the Phone Emulator (if you don&#39;t have a phone).</p>
+<p>Yesterday I got the first two bits working with about 2 minutes work. All you need to do is install the OpenJDK. <del>SUN</del>Oracle Java is not available yet.</p>
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/appinventor_raspberrypi.png"><img class="alignnone size-large wp-image-706" title="appinventor_raspberrypi" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/appinventor_raspberrypi-1024x888.png" alt="" width="584" height="506" /></a></p>
+<p>The bit that will need more work is the emulator. I think. Ye see, I grabbed the code for the Linux version of the emulator and followed the simple instructions to build it. Then I saw it was building for i386 and of course the RPi is ARM-based. Damn.</p>
+<p>A bit of poking around and I realised we were almost in a recursive loop. I was running ARM Linux in qemu i386 emulator on a Virtual Machine and I was trying to run an ARM emulator inside a another qemu i386 emulator inside that. Yes my head exploded too.</p>
+<p>But then sense prevailed and I realised that Android is ARM and RPi is ARM, so do we need an emulator at all, or just an Android image compiled for ARM11 inside some sort of wrapper/container?</p>
+<p>As an old Embedded guy I should be all over this but I&#39;ve forgotten more than I ever learned about cross-compiling and building OS images. Anyone have any ideas on where to start? I popped a question on the relevant App Inventor Google Group too.</p>
+<p>Of course all of this may be moot if the 256MB of RAM and 700MHz CPU is not enough to support all of this. But it&#39;s worth a try.</p>
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section></article></div></div></body></head></html>

@@ -123,8 +123,4 @@ html(lang="en")
             <gcse:search></gcse:search>
         .content
           .container
-            article.post
-               h1.lg.title= title
-               if date
-                   h2.sm.date= prettyDate(date)
-
+            != partial("/blog/_blog")

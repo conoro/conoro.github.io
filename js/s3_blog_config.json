@@ -1,0 +1,6 @@
+{ 
+  "blogS3Url" : "https://s3-eu-west-1.amazonaws.com/",
+  "bucket": "conoroneill.net",
+  "rootUploadDir": "wp-content/uploads/"
+}
+

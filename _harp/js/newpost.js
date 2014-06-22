@@ -33,7 +33,9 @@ fs.readFile(file, 'utf8', function (err, data) {
         var author = "admin";
         var ptype = "post";
         var status = "publish";
-        var slugTitle = slug(title).toLowerCase();
+
+        // slug module doesn't replace periods which causes Harp to choke when serving up static file
+        var slugTitle = slug(title).toLowerCase().split('.').join("");
         var publishDate = (new Date).getTime();
 
         var maxProp = "ID";
@@ -51,7 +53,6 @@ fs.readFile(file, 'utf8', function (err, data) {
         var newPost = {"ID": id, "author": author, "date": publishDate, "ptype": ptype, "description": description, "slug": slugTitle, "status": status, "title": title, "FBImage": fbImage};
 
         config[slugTitle] = newPost;
-        //console.log(config);
 
         fs.writeFile(file, JSON.stringify(config, null,  2), function(err) {
           if(err) {
