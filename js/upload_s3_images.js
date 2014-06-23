@@ -32,7 +32,7 @@ fileList.forEach(function (val, index, array) {
     
   var s3 = new AWS.S3(); 
 
-  var params = {Bucket: blogConfig.bucket, Key: uploadName, Body: fileBuffer, ContentType: metaData};
+  var params = {ACL: 'public-read', Bucket: blogConfig.bucket, Key: uploadName, Body: fileBuffer, ContentType: metaData};
 
   s3.putObject(params, function(err, data) {
     if (err)       

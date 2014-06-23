@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>A simple Node.js script to setup a new blog post in Harp.js | Cross Dominant</title><meta name="description" content="This little script generates the relevant metadata in the _data.json file including epoch time and optional Facebook thumbnail URL if you are using the Baseline boilerplate."><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed/"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="/css/prism.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><script src="/js/prism.js"></script><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-88610-4']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script><meta property="og:title" content="A simple Node.js script to setup a new blog post in Harp.js | Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="This little script generates the relevant metadata in the _data.json file including epoch time and optional Facebook thumbnail URL if you are using the Baseline boilerplate."><meta property="og:url" content="http://conoroneill.net//undefined"><meta property="og:image" content="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/newpost.jpg"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><body class="page-a-simple-nodejs-script-to-setup-a-new-blog-post-in-harpjs a-simple-nodejs-script-to-setup-a-new-blog-post-in-harpjs"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="search-box"><script type="text/javascript">(function() {
+  var cx = '001461447920948202874:5htheqgvd1w';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">A simple Node.js script to setup a new blog post in Harp.js</h1><h2 class="sm date">23 Jun 2014</h2><p>One small annoyance with the Baseline bolierplate in harp.js is that every blogpost needs to be listed in a file called _data.json with all the relevant metadata. Whilst it&#39;s not a huge job to slug-ify a title and add the ID and epoch time, it&#39;s sufficiently annoying to add friction to me blogging more. Here&#39;s the entry for this blogpost:</p>
+<pre><code class="language-javascript">
+  &quot;a-simple-nodejs-script-to-setup-a-new-blog-post-in-harpjs&quot;: {
+    &quot;ID&quot;: 1291,
+    &quot;author&quot;: &quot;admin&quot;,
+    &quot;date&quot;: 1403504847928,
+    &quot;ptype&quot;: &quot;post&quot;,
+    &quot;description&quot;: &quot;This little script generates the relevant metadata in the _data.json file including epoch time and optional Facebook thumbnail URL if you are using the Baseline boilerplate.&quot;,
+    &quot;slug&quot;: &quot;a-simple-nodejs-script-to-setup-a-new-blog-post-in-harpjs&quot;,
+    &quot;status&quot;: &quot;publish&quot;,
+    &quot;title&quot;: &quot;A simple Node.js script to setup a new blog post in Harp.js&quot;,
+    &quot;FBImage&quot;: &quot;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/newpost.jpg&quot;
+  }</code></pre>
+<p>This little script just generates everything you need once you tell it a title, description and image &quot;thumbnail&quot;. That latter piece is something I added to the _data.json &quot;schema&quot; so that when my posts are auto-shared to Facebook by dlvr.it, it&#39;s not the same image there every time but one of my chosing.</p>
+<pre><code class="language-javascript">
+// newpost.js
+// Create all the metadata for a new Harp blogpost
+// node newpost.js
+// Uses and updates the _data.json file in your _harp directory
+// It prompts you for the post-title, post-description and URL of an image that will appear when syndicated to Facebook
+
+// Copyright (C) 2014 Conor O&#39;Neill
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var slug = require(&#39;slug&#39;);
+var fs = require(&#39;fs&#39;);
+var file = &#39;../_data.json&#39;;
+var config;
+
+fs.readFile(file, &#39;utf8&#39;, function (err, data) {
+  if (err) {
+    console.log(&#39;Error: &#39; + err);
+    return;
+  }
+  config = JSON.parse(data);
+
+  var readline = require(&#39;readline&#39;);
+  var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  rl.question(&quot;Title: &quot;, function(title) {
+    rl.question(&quot;Description: &quot;, function(description) {
+      rl.question(&quot;Facebook Thumbnail Image URL: &quot;, function(fbImage) {
+        var author = &quot;admin&quot;;
+        var ptype = &quot;post&quot;;
+        var status = &quot;publish&quot;;
+
+        // slug module doesn&#39;t replace periods which causes Harp to choke when serving up static file
+        var slugTitle = slug(title).toLowerCase().split(&#39;.&#39;).join(&quot;&quot;);
+        var publishDate = (new Date).getTime();
+
+        var maxProp = &quot;ID&quot;;
+        var maxVal = 0;
+
+        for (post in config) {
+            var value = parseInt(config[post][maxProp], 10);
+            if (value &gt; maxVal) {
+                maxVal = value;
+            }
+        }
+
+        var id = maxVal + 1;
+
+        var newPost = {&quot;ID&quot;: id, &quot;author&quot;: author, &quot;date&quot;: publishDate, &quot;ptype&quot;: ptype, &quot;description&quot;: description, &quot;slug&quot;: slugTitle, &quot;status&quot;: status, &quot;title&quot;: title, &quot;FBImage&quot;: fbImage};
+
+        config[slugTitle] = newPost;
+
+        fs.writeFile(file, JSON.stringify(config, null,  2), function(err) {
+          if(err) {
+            console.log(err);
+          } else {
+          fs.writeFile(&quot;../&quot;+slugTitle+&quot;.md&quot;, description, function(err) {
+            if(err) {
+              console.log(err);
+            } else {
+              console.log(&quot;The new post was created as ../&quot;+slugTitle+&quot;.md&quot;);
+            }
+          }); 
+          console.log(&quot;_data.json was updated&quot;);
+          }
+        }); 
+        rl.close();
+      });     
+    });
+  });
+});</code></pre>
+<p>Sourcecode <a href="https://github.com/conoro/conoro.github.io/blob/master/_harp/js/newpost.js">is on GitHub</a> as always.</p>
+<p>One interesting side-note was how much effort it was to find a Node module that asks for user input in the way I needed. There are lots of modules out there for Q&amp;A and some of them make it very easy to ask lots of questions, but not one of them (not one!) is able to deal with input that stretches over more than the terminal width. All of them start overwriting what you write on the screen instead of scrolling up. That&#39;s a pretty staggering oversight by a lot of developers. Eventually I found the classic readline library which I have used in many languages over the years and it worked like a charm.</p>
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section><nav class="post-nav"><ul class="clearfix"><li><a href="a-simple-nodejs-script-to-upload-your-harpjs-blog-images-to-s3" title="A simple Node.js script to upload your Harp.js blog images to S3" class="post-prev"><strong>Previous Post</strong><span>A simple Node.js script to upload your Harp.js blog images to S3</span></a></li></ul></nav></article></div></div></body></head></html>
