@@ -7752,5 +7752,16 @@
     "status": "publish",
     "title": "A simple Node.js script to setup a new blog post in Harp.js",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/newpost.jpg"
+  },
+  "if-you-wondered-whether-3d-printing-would-ever-go-mainstream-heres-the-proof": {
+    "ID": 1292,
+    "author": "admin",
+    "date": 1403507105418,
+    "ptype": "post",
+    "description": "I already have a request in from her sister to do her name with each character a different colour. Time to figure our 123D properly.",
+    "slug": "if-you-wondered-whether-3d-printing-would-ever-go-mainstream-heres-the-proof",
+    "status": "publish",
+    "title": "If you wondered whether 3D Printing would ever go mainstream, here's the proof.",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/siofra_bag.jpg"
   }
 }
