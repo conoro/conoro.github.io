@@ -7741,5 +7741,16 @@
     "status": "publish",
     "title": "A simple Node.js script to upload your Harp.js blog images to S3",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/s3_upload.jpg"
+  },
+  "a-simple-nodejs-script-to-setup-a-new-blog-post-in-harpjs": {
+    "ID": 1291,
+    "author": "admin",
+    "date": 1403504847928,
+    "ptype": "post",
+    "description": "This little script generates the relevant metadata in the _data.json file including epoch time and optional Facebook thumbnail URL if you are using the Baseline boilerplate.",
+    "slug": "a-simple-nodejs-script-to-setup-a-new-blog-post-in-harpjs",
+    "status": "publish",
+    "title": "A simple Node.js script to setup a new blog post in Harp.js",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/newpost.jpg"
   }
 }
