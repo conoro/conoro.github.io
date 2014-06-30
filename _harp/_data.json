@@ -7763,5 +7763,16 @@
     "status": "publish",
     "title": "If you wondered whether 3D Printing would ever go mainstream, here's the proof.",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/siofra_bag.jpg"
+  },
+  "kimono-is-a-dead-easy-zero-code-way-of-building-apis-from-scraped-web-pages": {
+    "ID": 1293,
+    "author": "admin",
+    "date": 1404113253690,
+    "ptype": "post",
+    "description": "I was able to generate a single end-point API for the Bandon Flood Early Warning System with a few clicks. Far easier than the current Python code that I use!",
+    "slug": "kimono-is-a-dead-easy-zero-code-way-of-building-apis-from-scraped-web-pages",
+    "status": "publish",
+    "title": "Kimono is a dead-easy zero-code way of building APIs from scraped web-pages",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/kimono.jpg"
   }
 }
