@@ -7829,5 +7829,16 @@
     "status": "publish",
     "title": "As promised, yet more tech goodie backlog for your entertainment",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/10/gopher.png"
+  },
+  "some-thoughts-on-twitter-rebuilding-a-developer-ecosystem-and-how-they-might-succeed": {
+    "ID": 1299,
+    "author": "admin",
+    "date": 1414858229201,
+    "ptype": "post",
+    "description": "As someone who built my first Twitter apps in 2007 but completely gave up in 2011, I have some suggestions how they can grow from the Fabric launch to create something that developers really want to use. It's about more than trust, it's about having the confidence to go backwards in order to go forwards and fully embracing the fact that Twitter is a platform, not a site.",
+    "slug": "some-thoughts-on-twitter-rebuilding-a-developer-ecosystem-and-how-they-might-succeed",
+    "status": "publish",
+    "title": "Some thoughts on Twitter rebuilding a developer ecosystem and how they might succeed",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/11/oxley-bird.jpg"
   }
 }
