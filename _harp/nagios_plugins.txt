@@ -1,0 +1,24 @@
+check_apt check_jabber check_pgsql
+check_bgpstate check_jmx check_ping
+check_breeze check_ldap check_pop
+check_by_ssh check_ldaps check_procs
+check_clamd check_linux_raid check_radius
+check_cluster check_load check_real
+check_dhcp check_log check_rpc
+check_dig check_mailq check_rta_multi
+check_disk check_mongodb.py check_sensors
+check_disk_smb check_mrtg check_simap
+check_dns check_mrtgtraf check_smtp
+check_dummy check_mysql check_snmp
+check_file_age check_mysql_query check_spop
+check_flexlm check_nagios check_ssh
+check_ftp check_nntp check_ssmtp
+check_host check_nntps check_swap
+check_hpjd check_nrpe check_tcp
+check_http check_nt check_time
+check_icmp check_ntp check_tomcat_threads
+check_ide_smart check_ntp_peer check_udp
+check_ifoperstatus check_ntp_time check_ups
+check_ifstatus check_nwstat check_users
+check_imap check_oracle check_wave
+check_ircd check_overcr

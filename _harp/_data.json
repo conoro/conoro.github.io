@@ -7840,5 +7840,16 @@
     "status": "publish",
     "title": "Some thoughts on Twitter rebuilding a developer ecosystem and how they might succeed",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/11/oxley-bird.jpg"
+  },
+  "some-personal-thoughts-on-the-red-hat-acquisition-of-feedhenry": {
+    "ID": 1300,
+    "author": "admin",
+    "date": 1417185588254,
+    "ptype": "post",
+    "description": "The acquisition of FeedHenry by Red Hat isn't just one the most exciting tech stories in Ireland in 2014, it is also wonderfully satisfying for me as one of only two people in Product Management.",
+    "slug": "some-personal-thoughts-on-the-red-hat-acquisition-of-feedhenry",
+    "status": "publish",
+    "title": "Some personal thoughts on the Red Hat acquisition of FeedHenry",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/11/Red-Hat-logo-design.jpg"
   }
 }
