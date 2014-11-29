@@ -7851,5 +7851,16 @@
     "status": "publish",
     "title": "Some personal thoughts on the Red Hat acquisition of FeedHenry",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/11/Red-Hat-logo-design.jpg"
+  },
+  "conors-thanksgiving-tech-miscellany": {
+    "ID": 1301,
+    "author": "admin",
+    "date": 1417273250783,
+    "ptype": "post",
+    "description": "As always, so many great tech things happening out there, so little time to blog them, let alone do anything useful with them.",
+    "slug": "conors-thanksgiving-tech-miscellany",
+    "status": "publish",
+    "title": "Conor's Thanksgiving Tech Miscellany",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/11/turkey.gif"
   }
 }
