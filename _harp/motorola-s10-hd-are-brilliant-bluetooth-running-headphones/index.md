@@ -1,8 +1,8 @@
 #"Motorola S10-HD are brilliant Bluetooth running headphones"
 
-The lovely people in <a href="http://www.mobilefun.co.uk">Mobile Fun</a> in the UK, home of a bajillion mobile and <a href="http://www.mobilefun.co.uk/cat/iPad-Accessories.htm">iPad accessories</a>,contacted me recently. I'm a long-time customer of theirs and I'm a huge fan. Their <a href="http://www.mobilefun.co.uk/dash-genie-in-car-holder-p23796.htm">Dash Genie</a> in-car phone holder is a wonderful thing that just works.
+The lovely people in <a href="http://www.mobilefun.co.uk">Mobile Fun</a> in the UK, home of a bajillion mobile and <a href="http://www.mobilefun.co.uk/cat/iPad-Accessories.htm">iPad accessories</a>,contacted me recently. I'm a long-time customer of theirs and I'm a huge fan. Their Dash Genie in-car phone holder is a wonderful thing that just works.
 
-They asked if I wanted to review anything on their site and I cheekily requested a pair of <a href="http://www.mobilefun.co.uk/motorola-s10-hd-bluetooth-headset-p30657.htm">Motorola S10-HD headphones</a>. They shot a pair over to me for free immediately.
+They asked if I wanted to review anything on their site and I cheekily requested a pair of Motorola S10-HD headphones. They shot a pair over to me for free immediately.
 
 I've had them for a few weeks and they are just superb. Like a fool, I bought a pair of S9's on eBay a few years ago. I didn't suss that the only way they could be so cheap was if they were knock-offs. They fell apart in no time. These <em>real</em> S10-HD's are in a different league altogether.
 
