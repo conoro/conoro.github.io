@@ -1,6 +1,6 @@
 #"Motorola S10-HD are brilliant Bluetooth running headphones"
 
-The lovely people in <a href="http://www.mobilefun.co.uk">Mobile Fun</a> in the UK, home of a bajillion mobile and <a href="http://www.mobilefun.co.uk/cat/iPad-Accessories.htm">iPad accessories</a>,contacted me recently. I'm a long-time customer of theirs and I'm a huge fan. Their Dash Genie in-car phone holder is a wonderful thing that just works.
+The lovely people in Mobile Fun in the UK, home of a bajillion mobile and iPad accessories,contacted me recently. I'm a long-time customer of theirs and I'm a huge fan. Their Dash Genie in-car phone holder is a wonderful thing that just works.
 
 They asked if I wanted to review anything on their site and I cheekily requested a pair of Motorola S10-HD headphones. They shot a pair over to me for free immediately.
 
@@ -22,7 +22,7 @@ The big test was this morning where I ran a sweaty Bandon 10km and listened to K
 
 Not much more to say. They work perfectly. They come with a variety of ear-plug sizes and they are great value. I'll be using nothing else from now on when running.
 
-Thanks again to the <a href="http://www.mobilefun.co.uk">Mobile Fun</a> crew. Still the first site I go to when I want to get something for my phone.
+Thanks again to the Mobile Fun crew. Still the first site I go to when I want to get something for my phone.
 
 UPDATE June 5th 2012: I ran the Cork Half Marathon yesterday with the S10-HD connected to my HTC Sensation. They worked beautifully. No battery issues, no drop-outs and my head wasn't sore afterwards. Which is more than can be said about the balls of my feet.
 
