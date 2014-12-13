@@ -7862,5 +7862,16 @@
     "status": "publish",
     "title": "Conor's Thanksgiving Tech Miscellany",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/11/turkey.gif"
+  },
+  "some-of-my-old-red-hat-floppy-disks-from-2000-2004": {
+    "ID": 1302,
+    "author": "admin",
+    "date": 1418481330885,
+    "ptype": "post",
+    "description": "We had to empty our attic to get the house insulated this week. I uncovered some old Red Hat and Fedora floppies and CDs. I had older ones but was quite ruthless about reusing floppies in the old days! ",
+    "slug": "some-of-my-old-red-hat-floppy-disks-from-2000-2004",
+    "status": "publish",
+    "title": "Some of my old Red Hat floppy disks from 2000-2004",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_62.jpg"
   }
 }
