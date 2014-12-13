@@ -7873,5 +7873,16 @@
     "status": "publish",
     "title": "Some of my old Red Hat floppy disks from 2000-2004",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_62.jpg"
+  },
+  "say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor": {
+    "ID": 1303,
+    "author": "admin",
+    "date": 1418500764861,
+    "ptype": "post",
+    "description": "My first Fitbit died in the washing machine and they kindly replaced it for free. The replacement's battery started acting up recently and finally gave up the ghost last night. You won't believe what happens next ;-)",
+    "slug": "say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor",
+    "status": "publish",
+    "title": "Say hello to my little friend. The Fitbit XL with external battery by Conor",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit1.jpg"
   }
 }
