@@ -7884,5 +7884,27 @@
     "status": "publish",
     "title": "Say hello to my little friend. The Fitbit XL with external battery by Conor",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit1.jpg"
+  },
+  "i-tried-out-more-google-cardboard-apps-still-stunned-what-dollar10-can-achieve": {
+    "ID": 1304,
+    "author": "admin",
+    "date": 1418833297983,
+    "ptype": "post",
+    "description": "Of course Google Cardboard isn't up there with Oculus but I still have my jaw on the floor over what it can do. These are some of the apps I've tried out this week. ",
+    "slug": "i-tried-out-more-google-cardboard-apps-still-stunned-what-dollar10-can-achieve",
+    "status": "draft",
+    "title": "I tried out more Google Cardboard apps. Still stunned what $10 can achieve.",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/cardboard.png"
+  },
+  "introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat": {
+    "ID": 1305,
+    "author": "admin",
+    "date": 1419183859018,
+    "ptype": "post",
+    "description": "Hi I'm Batman.",
+    "slug": "introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat",
+    "status": "publish",
+    "title": "Introducing FitBit's first sports tracker for Superheroes - The FitBat",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbat.jpg"
   }
 }
