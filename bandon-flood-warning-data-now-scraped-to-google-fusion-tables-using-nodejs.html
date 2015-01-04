@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift | Cross Dominant</title><meta name="description" content="After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift."><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Cross DominantRSS Feed" href="/feed/"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic"><link rel="stylesheet" href="/css/prism.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lekton"><link rel="stylesheet" href="/css/main.css"><script src="/js/prism.js"></script><!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]--><script type="text/javascript">var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-88610-4']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script><meta property="og:title" content="Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift | Cross Dominant"><meta property="og:type" content="article"><meta property="og:description" content="After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift."><meta property="og:url" content="http://conoroneill.net//undefined"><meta property="og:image" content="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/01/Nov09Hickeys.jpg"><meta property="og:site_name" content="Cross Dominant"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@conoro"><body class="page-bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs"><header class="masthead"><div class="container"><h1><a href="/">Cross Dominant</a></h1></div><div class="search-box"><script type="text/javascript">(function() {
+  var cx = '001461447920948202874:5htheqgvd1w';
+  var gcse = document.createElement('script');
+  gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift</h1><h2 class="sm date">4 Jan 2015</h2><p>After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift.</p>
+<h2>Introduction</h2>
+<p>Cork County Council in Ireland has a site called <a href="http://www.bandonfloodwarning.ie/">Bandon FEWS</a> (Bandon Flood Early Warning System). When the Bandon river hits certain levels near Bandon town, it alerts registered users via SMS in case they need to take emergency measures. It&#39;s a very useful service and is very necessary due to the regular flooding that occurs. However the historical river level data is not available in any useful form and that&#39;s the point of this project.</p>
+<p>In November 2011, I created <a href="http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/">a simple Python script</a> which scrapes the site every 15 minutes and saves the river level to a Google Fusions Table &quot;spreadsheet&quot; <a href="https://www.google.com/fusiontables/DataSource?docid=103YIcARoxuaWT7NfZ8mVBzY554sF_3ONYC1N3DE#rows:id=1">here</a>. This now has (with a few interruptions) 3 years of data which anyone can query, re-use or slice-dice and mashup with weather info. Not that anyone has done this :-)</p>
+<p>The script has been running on a small home Ubuntu fileserver all this time but stopped working mid-December 2014 either due to changes with the page structure of the Council site or as unexpected fallout from upgrading to Ubuntu 14.04. I have therefore re-written it in Node.js which has the big added advantage that there are free hosting possibilities for this code such as my employer Red Hat&#39;s <a href="https://www.openshift.com/">OpenShift</a>.</p>
+<p>Code is now available on <a href="https://github.com/conoro/bandonfews-nodejs">GitHub here</a>.</p>
+<p>The code started as Google&#39;s example G+ OAuth code but now has the bulk of the functionality completed. It is running reliably under Supervisor on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID-C1</a> single-board computer on my desk.</p>
+<p>To use it for something else on Fusion Tables, the main thing you need to do is setup an App in the <a href="https://console.developers.google.com/project?authuser=0">Google API Console</a>, enable Fusion Tables API access and use those keys in the placeholders in the config files.</p>
+<h2>Files</h2>
+<ul>
+<li>main.js - The main code</li>
+<li>bandonfews.conf - Supervisor config file. Copy to /etc/supervisor/conf.d/bandonfews.conf then <code>sudo supervisorctl reread</code> and <code>sudo supervisorctl reread</code></li>
+<li>tokens-example.json - rename to tokens.json. Will be auto-generated by the code on first run in any case</li>
+<li>config-example.json - Rename to config.json and fill out the Google OAuth API key/secret, the URL of the FEWS site and the id of the Fusion Table</li>
+<li>index.html - Placeholder for upcoming landing page</li>
+<li>server.js - Placeholder for upcoming API server</li>
+<li>package.json - Required Node.js packages. <code>npm install</code> to install everything</li>
+<li>.gitignore - Stuff that shouldn&#39;t go under Git control</li>
+</ul>
+<h2>OpenShift Environment Variables</h2>
+<p>If you are running on OpenShift, you need a way to set various keys etc without adding them to files in Git which could potentially leak accidentally if you also put a copy up on GitHub. So set the following (mirroring the equivalent ones in config.json and tokens.json):</p>
+<p><code>rhc set-env access_token=&quot;blah&quot; token_type=&quot;Bearer&quot; refresh_token=&quot;blah&quot; expiry_date=1419970265050 client_id=&quot;blah&quot; client_secret=&quot;blah&quot; redirect_url=&quot;http://localhost&quot; fews_url=&quot;http://www.bandonfloodwarning.ie/main.php&quot; fusiontables_id=&quot;blah&quot; -a bandonfews</code></p>
+<h2>TO-DO</h2>
+<ul>
+<li>The first time run is currently broken for the OAuth credentials. Easy fix coming.</li>
+<li>OpenShift is SIGINT&#39;ing it for some unknown reason after a random time which is why it&#39;s running on the ODROID for the moment</li>
+<li>It should have a simple Express based API so others can avoid the pain of dealing with the Fusion Tables API for basic queries</li>
+<li>It should have a simple landing page showing the latest water level and maybe a graph</li>
+<li>It should add back in the functionality of the old Python code for posting to COSM</li>
+<li>???</li>
+</ul>
+<h2>Release Notes</h2>
+<ul>
+<li>04/01/2015 - First public usable version</li>
+</ul>
+<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></section><nav class="post-nav"><ul class="clearfix"><li><a href="introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat" title="Introducing FitBit's first sports tracker for Superheroes - The FitBat" class="post-prev"><strong>Previous Post</strong><span>Introducing FitBit's first sports tracker for Superheroes - The FitBat</span></a></li></ul></nav></article></div></div></body></head></html>

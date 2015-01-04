@@ -7895,5 +7895,16 @@
     "status": "publish",
     "title": "Introducing FitBit's first sports tracker for Superheroes - The FitBat",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbat.jpg"
+  },
+  "bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs": {
+    "ID": 1306,
+    "author": "admin",
+    "date": 1420378956086,
+    "ptype": "post",
+    "description": "After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift.",
+    "slug": "bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs",
+    "status": "publish",
+    "title": "Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/01/Nov09Hickeys.jpg"
   }
 }
