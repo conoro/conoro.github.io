@@ -3,6 +3,8 @@ After 3 years running as a Python script on a file server, the Bandon FEWS scrap
 ## Introduction
 Cork County Council in Ireland has a site called [Bandon FEWS](http://www.bandonfloodwarning.ie/) (Bandon Flood Early Warning System). When the Bandon river hits certain levels near Bandon town, it alerts registered users via SMS in case they need to take emergency measures. It's a very useful service and is very necessary due to the regular flooding that occurs. However the historical river level data is not available in any useful form and that's the point of this project.
 
+![Hickey's Bandon](https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/01/Nov09Hickeys.jpg "Flooding in 2009")
+
 In November 2011, I created [a simple Python script](http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/) which scrapes the site every 15 minutes and saves the river level to a Google Fusions Table "spreadsheet" [here](https://www.google.com/fusiontables/DataSource?docid=103YIcARoxuaWT7NfZ8mVBzY554sF_3ONYC1N3DE#rows:id=1). This now has (with a few interruptions) 3 years of data which anyone can query, re-use or slice-dice and mashup with weather info. Not that anyone has done this :-)
 
 The script has been running on a small home Ubuntu fileserver all this time but stopped working mid-December 2014 either due to changes with the page structure of the Council site or as unexpected fallout from upgrading to Ubuntu 14.04. I have therefore re-written it in Node.js which has the big added advantage that there are free hosting possibilities for this code such as my employer Red Hat's [OpenShift](https://www.openshift.com/).
