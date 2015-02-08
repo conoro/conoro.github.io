@@ -7906,5 +7906,16 @@
     "status": "publish",
     "title": "Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift",
     "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/01/Nov09Hickeys.jpg"
+  },
+  "download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here": {
+    "ID": 1307,
+    "author": "admin",
+    "date": 1423399555567,
+    "ptype": "post",
+    "description": "Unfortunately the 0.12.0 release of Node won't compile on Raspberry Pi so I took a patch from io.js and was able to build it. ",
+    "slug": "download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here",
+    "status": "publish",
+    "title": "Download compiled version of Node.js 0.12.0 Stable for Raspberry Pi here",
+    "FBImage": "https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg"
   }
 }
