@@ -16,10 +16,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
       '//www.google.com/cse/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
-})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;Bandon Flood Data (FEWS) now available on Cosm/Pachube&quot;</h1>
-<p>When <a href="http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/">I announced the availablity of Open Data</a> on Google Fusion Tables for the <a href="http://bandonfloodwarning.ie/">Bandon Flood Early Warning System (FEWS)</a> last year, one suggestion that was made to me by Imogen Bertin was to put it up on <a href="http://cosm.com">Pachube</a> (now renamed to the slightly less obscure <a href="http://cosm.com">Cosm</a>). I gave it a go but couldn&#39;t figure it out. Despite providing it with the CSV link to the Fusion Table, it never did anything with the data. So I gave up due to busyness.</p>
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;Bandon Flood Data (FEWS) now available on Cosm/Pachube&quot;</h1><p>When <a href="http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/">I announced the availablity of Open Data</a> on Google Fusion Tables for the <a href="http://bandonfloodwarning.ie/">Bandon Flood Early Warning System (FEWS)</a> last year, one suggestion that was made to me by Imogen Bertin was to put it up on <a href="http://cosm.com">Pachube</a> (now renamed to the slightly less obscure <a href="http://cosm.com">Cosm</a>). I gave it a go but couldn&#39;t figure it out. Despite providing it with the CSV link to the Fusion Table, it never did anything with the data. So I gave up due to busyness.</p>
 <p>This evening, I had another go. This time it was worse. Anything I tried on the data feed resulted in both Chrome and Firefox hanging. I decided to bite the bullet and figure out how to post data directly rather than having them poll. Turns out it&#39;s pretty easy.</p>
-<p><a href="https://cosm.com/feeds/40004"><img class="size-large wp-image-766 aligncenter" title="cosm" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/cosm-1024x709.png" alt="" width="584" height="404" /></a></p>
+<p><a href="https://cosm.com/feeds/40004"><img class="size-large wp-image-766 aligncenter" title="cosm" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/cosm-1024x709.png" alt="" width="584" height="404"></a></p>
 <p>Now I know this isn&#39;t exactly the model that people have in mind for the <a href="http://www.wired.com/beyond_the_beyond/2012/06/the-provisional-declaration-of-the-open-internet-of-things-assembly/">Open Internet of Things</a> but it works:</p>
 <p><ol>
     <li>A meter on the bridge in Bandon measures the river level.</li>
@@ -33,8 +32,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 Realtime it ain&#39;t! But it&#39;s a river so that speed of reporting should be fine.</p>
 <p>I&#39;m still waiting for someone to do a mashup with that data, rainfall data at Cork Airport and tidal data. I would but I&#39;m having too much fun playing with Raspberry Pi and Arduino. Eventually I may join the dots and create a little Arduino+RPi weather station out in the garden which reports directly to Cosm using wifi to my house.</p>
 <p>In the meantime, <a href="https://cosm.com/feeds/40004">enjoy</a>!</p>
-<p>&nbsp;</p>
-<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+<p>&nbsp;</p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

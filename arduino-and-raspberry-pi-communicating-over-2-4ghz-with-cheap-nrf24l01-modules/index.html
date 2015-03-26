@@ -16,12 +16,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
       '//www.google.com/cse/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
-})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;Arduino and Raspberry Pi communicating over 2.4GHz with cheap nRF24L01+ modules&quot;</h1>
-<p>I&#39;ve had a lot of fun over the past year messing with wireless comms. The 433Mhz/434MHz dirt-cheap modules are fantastic for Arduino, particularly when used with the <a href="http://www.airspayce.com/mikem/arduino/">VirtualWire library</a> which makes them trivial to setup. I&#39;ve been able to send sensor data and RC car commands using them with just a few lines of code. However, there isn&#39;t a version of VirtualWire for RaspberryPi and I don&#39;t have the time/skills to port the Arduino one.</p>
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;Arduino and Raspberry Pi communicating over 2.4GHz with cheap nRF24L01+ modules&quot;</h1><p>I&#39;ve had a lot of fun over the past year messing with wireless comms. The 433Mhz/434MHz dirt-cheap modules are fantastic for Arduino, particularly when used with the <a href="http://www.airspayce.com/mikem/arduino/">VirtualWire library</a> which makes them trivial to setup. I&#39;ve been able to send sensor data and RC car commands using them with just a few lines of code. However, there isn&#39;t a version of VirtualWire for RaspberryPi and I don&#39;t have the time/skills to port the Arduino one.</p>
 <p>I&#39;ve also mentioned multiple projects using those HC05/HC06 serial Bluetooth modules. Again, dead easy to use and they connect Arduinos to PCs, Raspberry Pis and mobile phones. They are a bit pricey tho.</p>
 <p>My latest experiments involve the Nordic Semiconductor nRF24L01+ modules. These cost <a href="http://www.ebay.ie/itm/1X-NRF24L01-2-4GHz-Antenna-Wireless-Transceiver-Module-For-Microcontroller-WST-/271265848197?pt=UK_BOI_Electrical_Test_Measurement_Equipment_ET&amp;hash=item3f28b45b85">approx 1.26 each on eBay</a> and strike me as the perfect middle ground between the two approaches above. They are cheap, work over a decent distance and have libraries available for both Arduino and Raspberry Pi.</p>
 <p>However I spent nearly all of last weekend trying to get a Raspberry Pi talking to an Arduino using instructions in some <a href="http://arduino-for-beginners.blogspot.ie/2013/02/setup-nordic-nrf24l01-rf-modules-to.html">blogposts</a>. It turns out his instructions were a mix of incorrect text, links to wrong repos, self-contradictory blogposts and code/comments which also contradicted each other. Eventually by ignoring text/comments and just reading the code, I got the wiring right and the sample code working. Whilst I hugely appreciate someone putting time and effort into writing/improving Open Source code like this, it really is a bad idea to then wrap it in such error-riddled explanations.</p>
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49.jpg"><img class="aligncenter size-large wp-image-1157" alt="2013-09-07 15.34.49" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49-1024x556.jpg" width="584" height="317" /></a></p>
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49.jpg"><img class="aligncenter size-large wp-image-1157" alt="2013-09-07 15.34.49" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49-1024x556.jpg" width="584" height="317"></a></p>
 <p>To avoid you going down the same rabbit hole, this is what you need to do to get Arduino talking to RPi over nRF24L01+.</p>
 <h2>Arduino Connections</h2>
 Note that the module is 5V tolerant (apart from VCC) but just to be sure I used it with an <a href="http://www.elecfreaks.com/store/freaduino-leonardo-p-442.html">Elecfreaks Freaduino Leonardo</a> which has a physical switch to toggle between 3.3V and 5V. You could also use a <a href="https://www.sparkfun.com/products/11114">3.3V Pro Mini from Sparkfun like this</a>. It has worked fine on my 5V Uno too.
@@ -37,7 +36,7 @@ Note that the module is 5V tolerant (apart from VCC) but just to be sure I used 
 </ul>
 <h2>Raspberry Pi Connections</h2>
 The Raspberry Pi is 3.3V itself so can connect directly to the module. Here is the pin-out. Only pay attention to the pin numbers in the circles, not the names.
-<h2><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png"><img class="aligncenter size-large wp-image-1149" alt="RPi pinout GPIO" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png" width="584" height="275" /></a></h2>
+<h2><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png"><img class="aligncenter size-large wp-image-1149" alt="RPi pinout GPIO" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png" width="584" height="275"></a></h2>
 <ul>
     <li>RPi Pin 6 - Module Pin 1</li>
     <li>RPi Pin 1 - Module Pin 2</li>
@@ -83,7 +82,7 @@ This is my quick and dirty hack of the author&#39;s Arduino sending sketch. It r
     stanleyseow@gmail.com
     */
 
-    #include <SPI.h>
+    #include <spi .h>
     #include "nRF24L01.h"
     #include "RF24.h"
     #include "printf.h"
@@ -208,7 +207,7 @@ This is my quick and dirty hack of the author&#39;s Arduino sending sketch. It r
 
         delay(250);
     }
-</code>
+</spi></code>
 </pre>
 
 <p>This sketch makes use of printf so you need a file in the same directory called printf.h which consists of:</p>
@@ -261,9 +260,8 @@ On the Arduino, just compile and upload the sketch and then open the Serial Moni
 <p>If everything is working ok, both the RPi and the Arudino should be showing very similar output and reporting success.</p>
 <p><h2>Next Steps?</h2>
 The Raspberry Pi libraries and sample code are obviously in C which is probably too hardcore for most people. Ideally they&#39;d be available to both Python and JavaScript deveopers. I&#39;ll do a little poking around to see how you go about that. I wouldn&#39;t hold my breath tho.</p>
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg"><img class="aligncenter size-full wp-image-1160" alt="2013-09-01 14.44.06" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg" width="1024" height="768" /></a></p>
-<p>I haven&#39;t done any major distance testing on the modules. In our house, which has concrete internal walls, two modules could communicate from one room to the next but not from one end of the house to the other. They also worked successfully with one module inside an oil tank in the garden and the other one inside the house &lt;10m away. I&#39;ll try some open air testing soon.</p>
-<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg"><img class="aligncenter size-full wp-image-1160" alt="2013-09-01 14.44.06" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg" width="1024" height="768"></a></p>
+<p>I haven&#39;t done any major distance testing on the modules. In our house, which has concrete internal walls, two modules could communicate from one room to the next but not from one end of the house to the other. They also worked successfully with one module inside an oil tank in the garden and the other one inside the house &lt;10m away. I&#39;ll try some open air testing soon.</p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

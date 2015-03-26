@@ -16,10 +16,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
       '//www.google.com/cse/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
-})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;A simple tool to bulk import your RunKeeper data into Endomondo&quot;</h1>
-<p>UPDATE 17th Aug 2013: The tool should now be able to import Sports Tracker files into Endomondo too.</p>
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title"></h1><h1>&quot;A simple tool to bulk import your RunKeeper data into Endomondo&quot;</h1><p>UPDATE 17th Aug 2013: The tool should now be able to import Sports Tracker files into Endomondo too.</p>
 <p>TL;DR - <a href="https://github.com/conoro/runkeeper2endomondo/blob/master/runkeeper2endomondogui.exe?raw=true">Download</a> the Windows RunKeeper to Endomondo tool.</p>
-<p><a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-942 aligncenter" title="rk2em_01" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/rk2em_01.jpg" width="467" height="339" /></a></p>
+<p><a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-942 aligncenter" title="rk2em_01" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/rk2em_01.jpg" width="467" height="339"></a></p>
 <p>I&#39;ve been using <a href="http://runkeeper.com/">RunKeeper</a> as my main mobile running app since January of last year. I liked it so much, I moved to the paid &quot;Elite&quot; tier pretty quickly. For almost a year, I really couldn&#39;t fault it and liked the social interactions with other Irish users along with its rock solid stability.</p>
 <p>Then in December, it all went to hell. Whatever they changed in the Android App around the end of the year made a complete mess of the GPS tracking. Every run looked like I was a drunk Mr Incredible, staggering from one side of the road to the other in a single step.</p>
 <p>I ran a bunch of tests and compared the data to other tracking apps like Google My Tracks. They confirmed that the problem wasn&#39;t the phone/OS/location/weather/time/mood or even the moon, the problem was RunKeeper. Even worse, my wife&#39;s RK on iPhone was showing similar rubbish data on the same route! Given the terrible mobile signal in Old Chapel, is it possible that RK&#39;s inability to live upload location actually trashes the location data itself?</p>
@@ -32,14 +31,14 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>And so finally I get to the point. A simple Windows App which you point to a directory containing all your unzipped GPX files from RunKeeper and which generates a single endomondo.gpx file which you can import into Endomondo.</p>
 <p><h2>Converting from RunKeeper to Endomondo</h2></p>
 <p><ol>
-    <li>You export from RunKeeper as follows:</p>
+    <li>You export from RunKeeper as follows:</li></ol></p>
 <p><ol>
     <li>Click on your name in the top right of the main screen</li>
     <li>Select My Settings</li>
     <li>Scroll down and you&#39;ll see a small blue link on the bottom left to &quot;Export Data&quot;</li>
     <li>Click that and follow the instructions</li>
 </ol>
-</li>
+
     <li><a href="https://github.com/conoro/runkeeper2endomondo/blob/master/runkeeper2endomondogui.exe?raw=true">Download runkeeper2endomondogui.exe</a></li>
     <li>This is a Windows Executable. You don&#39;t know me from Adam. Please run a virus checker on it after you download.</li>
     <li>runrunkeeper2endomondogui.exe</li>
@@ -48,7 +47,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <li>My code is very rough and may show &quot;not responding&quot; as it grinds through larger files. It tells you what it is doing in the main window so just be a bit patient, particularly if you have an older PC.</li>
     <li>When it is done, you&#39;ll have a new endomondo.gpx file in the same directory as the exisiting files</li>
     <li>I&#39;ve read that Endomodo craps-out on files over 10MB, so if the endomondo.gpx file is bigger than that, you&#39;ll have to do this process in batches with sub-sets of the RK files. As a guide, my 47 GPX files including several half marathons and a full marathon come in at 4MB.</li>
-    <li>You import into Endomondo as follows:</p>
+    <li>You import into Endomondo as follows:</li></p>
 <p><ol>
     <li>Once my tool is done, go to Endomondo and select &quot;New Workout&quot;</li>
     <li>Select the &quot;Import from File&quot; option</li>
@@ -56,13 +55,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <li>Endomondo will appear to hang when you do the import. Leave it running and then open another browser tab and check your activity history. When it is fully populated with the imported activities, you can then safely close the original browser tab.</li>
     <li>That&#39;s it, you&#39;re done</li>
 </ol>
-</li>
-</ol>
-<a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-943 aligncenter" title="rk2em_02" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/rk2em_02.jpg" width="466" height="339" /></a></p>
+
+
+<a href="https://github.com/conoro/runkeeper2endomondo"><img class="size-full wp-image-943 aligncenter" title="rk2em_02" alt="" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/rk2em_02.jpg" width="466" height="339"></a></p>
 <p>The code has a few path dependencies on Windows but it should be trivial to change it to work on OS X and Linux.</p>
 <p>All of the source code is, as always, <a href="https://github.com/conoro/runkeeper2endomondo">up on GitHub</a>, for you to change as you see fit</p>
-<p>Questions or Problems or Expressions of Horror at the awfulness of the code? Leave a comment here. Not on Facebook or Twitter.</p>
-<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+<p>Questions or Problems or Expressions of Horror at the awfulness of the code? Leave a comment here. Not on Facebook or Twitter.</p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

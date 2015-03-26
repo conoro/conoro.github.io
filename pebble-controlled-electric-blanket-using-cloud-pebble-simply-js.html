@@ -50,12 +50,14 @@ simply.on(&#39;accelTap&#39;, function(e) {
 simply.setText({
   title: &#39;Simply Demo!&#39;,
   body: &#39;This is a demo. Press buttons or tap the watch!&#39;,
-}, true);</code></pre>
+}, true);
+</code></pre>
 <p>And it you read the Simply.js site, you can access URLs like this:</p>
 <pre><code class="language-javascript">ajax({ url: &#39;http://simplyjs.io&#39; }, function(data){
   var headline = data.match(/&lt;h1&gt;(.*?)&lt;\/h1&gt;/)[1];
   simply.title(headline);
-});</code></pre>
+});
+</code></pre>
 <p>Merge the two together and ta-daaaaa, the Bandon Bed Button Pebble App.</p>
 <pre><code class="language-javascript">console.log(&#39;Bandon Bed Button!&#39;);
 
@@ -75,11 +77,11 @@ simply.on(&#39;singleClick&#39;, function(e) {
 simply.setText({
   title: &#39;Bandon Bed Button!&#39;,
   body: &#39;Press Up to turn on the blanket. Press Down to turn off the blanket.&#39;,
-}, true);</code></pre>
+}, true);
+</code></pre>
 <p>Just in case the data route for this is not clear, here&#39;s what it looks like:</p>
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow"></p>
-<p>I referred to this on Twitter last night as The Internet of Thangs. I&#39;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&#39;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&#39;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&#39;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p>
-<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+<p>I referred to this on Twitter last night as The Internet of Thangs. I&#39;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&#39;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&#39;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&#39;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

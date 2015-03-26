@@ -32,12 +32,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <p>find this bit:</p>
 <pre><code>elif [ -d /Removable/MicroSD ]; then
 echo &quot;mounting /Removable/MicroSD to $mnt/external_sd...&quot;
-$bbox mount -o bind /Removable/MicroSD  $mnt/external_sd</code></pre>
-<p>and change it to the following:</p>
+$bbox mount -o bind /Removable/MicroSD  $mnt/external_sd
+</code></pre><p>and change it to the following:</p>
 <pre><code>elif [ -d /storage/extSdCard ]; then
 echo &quot;mounting /storage/extSdCard to $mnt/external_sd...&quot;
-$bbox mount -o bind /storage/extSdCard  $mnt/external_sd</code></pre>
-<ul>
+$bbox mount -o bind /storage/extSdCard  $mnt/external_sd
+</code></pre><ul>
 <li>Save that</li>
 <li>Then run the Complete Linux Installer App which mainly consists of instructions. The only important step is to pick Debian in the drop-down list and change the settings so that the image directory is set to where you copied those image files to e.g. /storage/extSdCard/debian</li>
 <li>Then just tap the Start Linux button</li>
@@ -56,15 +56,14 @@ mkdir gitwork
 cd gitwork
 git clone https://github.com/conoro/conoro.github.io.git
 cd conoro.github.io
-harp compile _harp ./</code></pre>
-<p>The two bits of oddness above were getting an error from curl trying to install npm, so I used wget. Also, very very strange node-gyp permissions errors installing Harp globally when it came to node-sass (hence the --unsafe-perm). Node-sass also causes problems on Windows I&#39;ve noticed.</p>
+harp compile _harp ./
+</code></pre><p>The two bits of oddness above were getting an error from curl trying to install npm, so I used wget. Also, very very strange node-gyp permissions errors installing Harp globally when it came to node-sass (hence the --unsafe-perm). Node-sass also causes problems on Windows I&#39;ve noticed.</p>
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android.jpg" alt="Harp on Android" title="Harp and Android">
 And that&#39;s it about it. Except for.......</p>
-<pre><code>apt-get install emacs</code></pre>
-<p>How could I not? :-)</p>
+<pre><code>apt-get install emacs
+</code></pre><p>How could I not? :-)</p>
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/emacs.png" alt="Emacs on Android" title="Emacs and Android"></p>
-<p>So I edit Markdown blogposts in Emacs, compile with Harp and commit to GitHub to publish. Simples.</p>
-<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+<p>So I edit Markdown blogposts in Emacs, compile with Harp and commit to GitHub to publish. Simples.</p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

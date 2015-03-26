@@ -28,7 +28,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     &quot;status&quot;: &quot;publish&quot;,
     &quot;title&quot;: &quot;A simple Node.js script to setup a new blog post in Harp.js&quot;,
     &quot;FBImage&quot;: &quot;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/newpost.jpg&quot;
-  }</code></pre>
+  }
+</code></pre>
 <p>This little script just generates everything you need once you tell it a title, description and image &quot;thumbnail&quot;. That latter piece is something I added to the _data.json &quot;schema&quot; so that when my posts are auto-shared to Facebook by dlvr.it, it&#39;s not the same image there every time but one of my chosing.</p>
 <pre><code class="language-javascript">
 // newpost.js
@@ -105,10 +106,10 @@ fs.readFile(file, &#39;utf8&#39;, function (err, data) {
       });     
     });
   });
-});</code></pre>
+});
+</code></pre>
 <p>Sourcecode <a href="https://github.com/conoro/conoro.github.io/blob/master/_harp/js/newpost.js">is on GitHub</a> as always.</p>
-<p>One interesting side-note was how much effort it was to find a Node module that asks for user input in the way I needed. There are lots of modules out there for Q&amp;A and some of them make it very easy to ask lots of questions, but not one of them (not one!) is able to deal with input that stretches over more than the terminal width. All of them start overwriting what you write on the screen instead of scrolling up. That&#39;s a pretty staggering oversight by a lot of developers. Eventually I found the classic readline library which I have used in many languages over the years and it worked like a charm.</p>
-<section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+<p>One interesting side-note was how much effort it was to find a Node module that asks for user input in the way I needed. There are lots of modules out there for Q&amp;A and some of them make it very easy to ask lots of questions, but not one of them (not one!) is able to deal with input that stretches over more than the terminal width. All of them start overwriting what you write on the screen instead of scrolling up. That&#39;s a pretty staggering oversight by a lot of developers. Eventually I found the classic readline library which I have used in many languages over the years and it worked like a charm.</p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
