@@ -7950,5 +7950,16 @@
     "status": "publish",
     "title": "A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!",
     "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot.jpg"
+  },
+  "save-your-yahoo-pipes-as-nodejs-apps-for-posterity": {
+    "ID": 1311,
+    "author": "admin",
+    "date": 1433599575717,
+    "ptype": "post",
+    "description": "I swore I'd never use another Yahoo product after the cultural terrorism of their Geocities shutdown. Now one of their few bright lights of the past decade is biting the dust. However some very very smart person wrote some code two years ago which you may find useful. It converts your Pipes to Node.js apps.",
+    "slug": "save-your-yahoo-pipes-as-nodejs-apps-for-posterity",
+    "status": "publish",
+    "title": "Save your Yahoo Pipes as Node.js Apps for posterity",
+    "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/06/pipeslogo_whitebg.gif"
   }
 }
