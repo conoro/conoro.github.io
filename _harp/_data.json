@@ -7961,5 +7961,16 @@
     "status": "publish",
     "title": "Save your Yahoo Pipes as Node.js Apps for posterity",
     "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/06/pipeslogo_whitebg.gif"
+  },
+  "node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available": {
+    "ID": 1312,
+    "author": "admin",
+    "date": 1436641017087,
+    "ptype": "post",
+    "description": "I compiled both on a Banana Pi for a change. Nothing special for the 0.12 build, and ./configure --without-snapshot for the 0.10 build",
+    "slug": "node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available",
+    "status": "publish",
+    "title": "Node v0.10.40 and v0.12.7 for ARM v7 (Raspberry Pi 2, Banana Pi, ODroid C1) available",
+    "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/02/nodejs.jpg"
   }
 }
