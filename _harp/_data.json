@@ -7972,5 +7972,16 @@
     "status": "publish",
     "title": "Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available",
     "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/02/nodejs.jpg"
+  },
+  "creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico": {
+    "ID": 1313,
+    "author": "admin",
+    "date": 1437549266314,
+    "ptype": "post",
+    "description": "Now that the Espruino Pico has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I've cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.",
+    "slug": "creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico",
+    "status": "publish",
+    "title": "Creating an OTP fob compatible with Google Authenticator using an Espruino Pico",
+    "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg"
   }
 }
