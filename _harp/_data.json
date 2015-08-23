@@ -7983,5 +7983,16 @@
     "status": "publish",
     "title": "Creating an OTP fob compatible with Google Authenticator using an Espruino Pico",
     "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg"
+  },
+  "til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that": {
+    "ID": 1314,
+    "author": "admin",
+    "date": 1440337352093,
+    "ptype": "post",
+    "description": "WE had US visitors last weekend and the kids loved my Printrbot 3D printer. They had learned Tinkercad in school so that's what they used to create things and print them out. I noticed a \"Download to Minecraft\" option and finally just had a chance to try it out. Wow!",
+    "slug": "til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that",
+    "status": "publish",
+    "title": "TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?",
+    "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker01.jpg"
   }
 }
