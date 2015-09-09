@@ -24,3 +24,6 @@ sudo cp -R * /usr/local/
 
 UPDATE: I also built 0.10.40 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
 * [node-v0.10.40-linux-arm-v6.tar.gz](http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v6.tar.gz)
+
+UPDATE 2: I also built 0.12.7 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
+* [node-v0.12.7-linux-arm-v6.tar.gz](http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/node-v0.12.7-linux-arm-v6.tar.gz)
