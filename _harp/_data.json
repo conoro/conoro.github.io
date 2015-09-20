@@ -7994,5 +7994,16 @@
     "status": "publish",
     "title": "TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?",
     "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker01.jpg"
+  },
+  "running-zeromq-with-node-js-on-raspberry-pi": {
+    "ID": 1315,
+    "author": "admin",
+    "date": 1442745526313,
+    "ptype": "post",
+    "description": "ZeroMQ is a lightweight messaging library and looks ideal for lower powered devices like the RPi. Building and running is pretty easy. These are more notes for myself for future reference.",
+    "slug": "running-zeromq-with-node-js-on-raspberry-pi",
+    "status": "publish",
+    "title": "Running ZeroMQ with Node.js on Raspberry Pi",
+    "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/zmq_logo.gif"
   }
 }
