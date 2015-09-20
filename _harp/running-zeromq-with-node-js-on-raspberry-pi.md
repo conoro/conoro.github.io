@@ -25,7 +25,7 @@ sudo make install
 sudo ldconfig
 ```
 
-Test code for Request / Reply from [from here](http://blog.rastating.com/using-zeromq-with-node-js/):
+Test code for Request / Reply [from here](http://blog.rastating.com/using-zeromq-with-node-js/):
 
 server.js:
 ```javascript
