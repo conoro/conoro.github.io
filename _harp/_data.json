@@ -8005,5 +8005,16 @@
     "status": "publish",
     "title": "Running ZeroMQ with Node.js on Raspberry Pi",
     "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/zmq_logo.gif"
+  },
+  "tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi": {
+    "ID": 1316,
+    "author": "admin",
+    "date": 1442750634462,
+    "ptype": "post",
+    "description": "As an old Embedded guy who actually cares about resource usage, I've been bothered for quite a while by the number of trivial projects out there that require a full-blown MongoDB or MySQL server to operate. It's a particular problem on the Raspberry Pi or small DigitalOcean Droplets. In many cases a simple SQLite DB or TingoDB is more than sufficient. Here's some notes on using them. ",
+    "slug": "tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi",
+    "status": "publish",
+    "title": "TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi",
+    "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/62721634.jpg"
   }
 }
