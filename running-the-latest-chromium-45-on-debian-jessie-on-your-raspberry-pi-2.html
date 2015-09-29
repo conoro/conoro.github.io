@@ -16,7 +16,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
       '//www.google.com/cse/cse.js?cx=' + cx;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(gcse, s);
-})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</h1><h2 class="sm date">29 Sep 2015</h2><p>For some odd reason, Google and others stopped auto-generating armhf binaries of Chromium last year. Version 37 was the last one I could find. Luckily the Ubuntu guys have been building it all along and their version 45 installs really easily on the <a href="https://www.raspberrypi.org/blog/raspbian-jessie-is-here/">all-new Debian/Raspbian Jessie</a> on your Raspberry Pi 2.</p>
+})();</script><gcse:search></gcse:search></div></header><div class="content"><div class="container"><article class="post"><h1 class="lg title">Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</h1><h2 class="sm date">29 Sep 2015</h2><p>For some odd reason, Google and others stopped auto-generating armhf binaries of <a href="https://www.chromium.org/Home">Chromium</a> last year. Version 37 was the last one I could find. Luckily the Ubuntu guys have been building it all along and their version 45 installs really easily on the <a href="https://www.raspberrypi.org/blog/raspbian-jessie-is-here/">all-new Debian/Raspbian Jessie</a> on your Raspberry Pi 2.</p>
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_heart_chrome.png" alt="Pi loves Chromium"></p>
 <p>This was a surprise as this kind of thing usually degenerates into dependency hell.</p>
 <p>Here you go:</p>
@@ -25,7 +25,9 @@ wget http://launchpadlibrarian.net/218525711/chromium-codecs-ffmpeg-extra_45.0.2
 sudo dpkg -i chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 </code></pre>
-<p>It even appears correctly in your desktop menus!</p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
+<p>It even appears correctly in your desktop menus!</p>
+<p>Apart from security fixes and the latest Chromium features, you also get full access to most of the Apps and Extensions in the Chrome Web Store. This includes the <a href="http://www.espruino.com/Order#distributors">Espruino</a> Chrome <a href="https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo">App</a>, which means you or your kids now have everything you need to develop and deploy Embedded and IoT projects for under €100. Honestly, that&#39;s revolutionary.</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_plus_espruino_small.jpg" alt="Pi loves Espruino"></p><section class="comments"><h2>Discuss</h2><div id="disqus_thread"><script>var disqus_shortname = 'crossdominant';
 (function() {
   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
