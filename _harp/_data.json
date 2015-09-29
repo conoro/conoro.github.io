@@ -8016,5 +8016,16 @@
     "status": "publish",
     "title": "TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi",
     "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/62721634.jpg"
+  },
+  "running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2": {
+    "ID": 1317,
+    "author": "admin",
+    "date": 1443544511143,
+    "ptype": "post",
+    "description": "For some odd reason, Google and others stopped generating armhf binaries of Chromium last year. V37 was the last one I could find. Luckily the Ubuntu guys have been building it and it installs really easily on the all new Debian Jessie (Raspbian) on your RPi 2.",
+    "slug": "running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2",
+    "status": "publish",
+    "title": "Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2",
+    "FBImage": "http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_heart_chrome.png"
   }
 }
