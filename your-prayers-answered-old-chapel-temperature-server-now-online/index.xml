@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your-Prayers-Answered-Old-Chapel-Temperature-Server-Now-Onlines on Cross Dominant</title>
+    <link>http://conoroneill.net/your-prayers-answered-old-chapel-temperature-server-now-online/</link>
+    <description>Recent content in Your-Prayers-Answered-Old-Chapel-Temperature-Server-Now-Onlines on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Apr 2013 09:00:19 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/your-prayers-answered-old-chapel-temperature-server-now-online/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Your prayers answered, Old Chapel temperature server now online</title>
+      <link>http://conoroneill.net/your-prayers-answered-old-chapel-temperature-server-now-online/your-prayers-answered-old-chapel-temperature-server-now-online/</link>
+      <pubDate>Tue, 23 Apr 2013 09:00:19 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/your-prayers-answered-old-chapel-temperature-server-now-online/your-prayers-answered-old-chapel-temperature-server-now-online/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Your prayers answered, Old Chapel temperature server now online&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I must get 20 emails a day asking the same question: &amp;ldquo;Conor, what temperature is it,&lt;em&gt;right now,&lt;/em&gt; outside your office window?&amp;ldquo;. Thankfully, after literally several minutes work, &lt;a href=&#34;http://nano.conoroneill.com:9999/&#34;&gt;you have your answer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Courtesy of an &lt;a href=&#34;http://dx.com/p/nano-v3-0-avr-atmega328-p-20au-module-board-usb-cable-for-arduino-118037&#34;&gt;Arduino Nano&lt;/a&gt;, &lt;a href=&#34;http://www.ebay.com/itm/MIni-3-3v-ENC28J60-LAN-Ethernet-Network-Module-Shield-For-Arduino-MCU-AVR-51-LPC-/390511080956?ssPageName=ADME:L:OC:IE:3160&#34;&gt;Ethernet adapter&lt;/a&gt; and &lt;a href=&#34;https://www.sparkfun.com/products/9418&#34;&gt;Sparkfun temperature breakout board&lt;/a&gt;, I can exclusively reveal the temperature is&lt;a href=&#34;http://nano.conoroneill.com:9999/&#34;&gt;12.44C and 54.39F&lt;/a&gt; i.e. about 2C higher than reality.&lt;/p&gt;
+
+&lt;p&gt;To get something more accurate I&amp;rsquo;ll need to put the sensor away from the building, away from the ground, out of direct sunlight and with good air flow. Then I&amp;rsquo;ll auto-post the values to &lt;a href=&#34;http://openweathermap.org/&#34;&gt;Open Weather Map&lt;/a&gt; and &lt;a href=&#34;https://cosm.com&#34;&gt;COSM&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2602.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1002&#34; alt=&#34;DSCF2602&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2602-1024x768.jpg&#34; width=&#34;584&#34; height=&#34;438&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I was genuinely surprised on Sunday at the level of interest in the Arduino web-server I mentioned. I think a mixture of the tiny cost and 8-bit nature of the whole thing intrigued people. It was also trivial to puttogetherwith &lt;a href=&#34;https://github.com/jcw/ethercard&#34;&gt;some sample code&lt;/a&gt;. The only difficulty I&amp;rsquo;ve found with Arduino in general is handling floating point values easily.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;aligncenter size-large wp-image-1000&#34; style=&#34;color: #333333; font-style: normal; line-height: 24px;&#34; alt=&#34;nano2&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/nano2-1024x768.jpg&#34; width=&#34;584&#34; height=&#34;438&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course it doesn&amp;rsquo;t really make sense to have low-powered nodes being read by anyone. As several people pointed out on Sunday, a DDoS (heck, even a DoS) attack would be ridiculously easy. The nodes should either be reporting to central server(s) or queried on a regular basis by a small number of systems. That&amp;rsquo;s phase 2 for my little side project and it&amp;rsquo;s a bit more complex than temperature. More updates in a few weeks.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

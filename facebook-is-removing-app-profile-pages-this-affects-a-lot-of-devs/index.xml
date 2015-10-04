@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Facebook-Is-Removing-App-Profile-Pages-This-Affects-A-Lot-Of-Devs on Cross Dominant</title>
+    <link>http://conoroneill.net/facebook-is-removing-app-profile-pages-this-affects-a-lot-of-devs/</link>
+    <description>Recent content in Facebook-Is-Removing-App-Profile-Pages-This-Affects-A-Lot-Of-Devs on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Dec 2011 14:59:00 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/facebook-is-removing-app-profile-pages-this-affects-a-lot-of-devs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Facebook is removing App Profile Pages - This affects a lot of Devs</title>
+      <link>http://conoroneill.net/facebook-is-removing-app-profile-pages-this-affects-a-lot-of-devs/facebook-is-removing-app-profile-pages-this-affects-a-lot-of-devs/</link>
+      <pubDate>Mon, 12 Dec 2011 14:59:00 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/facebook-is-removing-app-profile-pages-this-affects-a-lot-of-devs/facebook-is-removing-app-profile-pages-this-affects-a-lot-of-devs/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Facebook is removing App Profile Pages - This affects a lot of Devs&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;posterous_bookmarklet_entry&#34;&gt;
+ &lt;blockquote class=&#34;posterous_long_quote&#34;&gt;Today, we are announcing that we will remove all App Profile Pages on February 1st, 2012. Though similar in appearance, the automatically generated App Profile Pages differ in features from traditional &lt;a href=&#34;http://www.facebook.com/pages&#34;&gt;Facebook Pages&lt;/a&gt;, and over time the inconsistencies between the two, such as different Insights, APIs, and distribution channels, have become more apparent.&lt;/blockquote&gt;&lt;/p&gt;
+
+&lt;div class=&#34;posterous_quote_citation&#34;&gt;via &lt;a href=&#34;https://developers.facebook.com/blog/post/611&#34;&gt;developers.facebook.com&lt;/a&gt;&lt;/div&gt;
+ &lt;p&gt;If you have an App that you add to Pages as a Tab by sending Page Owners to the App&#39;s own Profile Page, then you need to change how you do things.
+&lt;/p&gt;&lt;p&gt;The easiest way is the URL example they give. You can set that up and just tell people to go there and click on the Page which needs the Tab.
+&lt;/p&gt;&lt;p&gt;Probably a bigger documentation issue for companies like ours rather than being a technical issue.&lt;/p&gt;&lt;/div&gt;
+ 
+</description>
+    </item>
+    
+  </channel>
+</rss>

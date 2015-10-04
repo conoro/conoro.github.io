@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adblock-On-Chrome-Enabling-Insertion-Of-Invisible-Spam-Into-Zoho-Crm-E-Mail-Signatures on Cross Dominant</title>
+    <link>http://conoroneill.net/adblock-on-chrome-enabling-insertion-of-invisible-spam-into-zoho-crm-e-mail-signatures/</link>
+    <description>Recent content in Adblock-On-Chrome-Enabling-Insertion-Of-Invisible-Spam-Into-Zoho-Crm-E-Mail-Signatures on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 May 2010 14:41:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/adblock-on-chrome-enabling-insertion-of-invisible-spam-into-zoho-crm-e-mail-signatures/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AdBlock on Chrome enabling insertion of invisible spam into Zoho CRM e-mail signatures</title>
+      <link>http://conoroneill.net/adblock-on-chrome-enabling-insertion-of-invisible-spam-into-zoho-crm-e-mail-signatures/adblock-on-chrome-enabling-insertion-of-invisible-spam-into-zoho-crm-e-mail-signatures/</link>
+      <pubDate>Wed, 26 May 2010 14:41:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/adblock-on-chrome-enabling-insertion-of-invisible-spam-into-zoho-crm-e-mail-signatures/adblock-on-chrome-enabling-insertion-of-invisible-spam-into-zoho-crm-e-mail-signatures/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;AdBlock on Chrome enabling insertion of invisible spam into Zoho CRM e-mail signatures&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;I emailed a potential client yesterday who replied that she couldn&amp;rsquo;t read my email as it had crashed her email client. She also said that the email was huge.I had sent the email using Zoho CRM and when I checked it, it looked fine. Only a few lines long.So I sent myself a test message which also looked fine.&lt;/p&gt;
+&lt;p&gt;Then I did view-source on the message. Holy Crap. Hundreds of lines of HTML with ads inserted all over it. Now wonder her email crashed.&lt;/p&gt;
+&lt;p&gt;The bit that had me really worried was the I sent it from an Ubuntu machine which &amp;ldquo;shouldn&amp;rsquo;t&amp;rdquo; suffer from such exploits.&lt;/p&gt;
+&lt;p&gt;I went into Zoho and couldn&amp;rsquo;t see where it could have happened. Then I had the aha moment (no, not Morten) and checked my Signature setting. Damn it looked fine. Wait, try view-source again. All the bastard HTML there in all it&amp;rsquo;s glory.&lt;/p&gt;
+&lt;p&gt;I was able to reliably replicate the problem. Paste text signature in Zoho field, save, re-open, view-source, see spam.&lt;/p&gt;
+&lt;p&gt;I then tried it on Firefox. It didn&amp;rsquo;t have the problem. Weird.&lt;/p&gt;
+&lt;p&gt;Then Windows 7. Chrome - bad. Firefox - good. And in a shocker, IE8 - good.&lt;/p&gt;
+&lt;p&gt;WTF?&lt;/p&gt;
+&lt;p&gt;So I went over to a netbook which I booted up with a clean Ubuntu USB stick and installed Chrome. And all was well, no problem. WTF x2?&lt;/p&gt;
+&lt;p&gt;OK, so what is common amongst two machines but not a third, despite operating system differences? Aha, the browser extensions. Luckily I only have 3 installed so it was easy to test.&lt;/p&gt;
+&lt;p&gt;First I uninstalled AdBlock which I run mainly to block Flash ads since they cripple the CPU on netbooks and Ubuntu boxes.&lt;/p&gt;
+&lt;p&gt;Job done! Problem gone.&lt;/p&gt;
+&lt;p&gt;This is very very &lt;strong&gt;very&lt;/strong&gt; serious. Something you install to block ads ends up causing the mailing of spam ads to your customers. Very very serious indeed.&lt;/p&gt;
+&lt;p&gt;I have reported it to Zoho in case they can block the problem at their end and ditto to the AdBlock people since it is more likely to be an exploit of them rather than dodgy behaviour. Here is a screen shot of some of what it was inserting:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile5.posterous.com/getfile/files.posterous.com/temp-2010-05-26/fmAgtvfrJJahIwiccGfHFytFlGbFFawfxyBArCgadDjFHsEeecJkmnuHkbpv/spamads.png.scaled1000.png&#34;&gt;&lt;img alt=&#34;Spamads&#34; height=&#34;319&#34; src=&#34;http://getfile4.posterous.com/getfile/files.posterous.com/temp-2010-05-26/fmAgtvfrJJahIwiccGfHFytFlGbFFawfxyBArCgadDjFHsEeecJkmnuHkbpv/spamads.png.scaled500.png&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

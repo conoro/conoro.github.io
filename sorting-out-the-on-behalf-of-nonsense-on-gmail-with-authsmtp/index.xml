@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sorting-Out-The-On-Behalf-Of-Nonsense-On-Gmail-With-Authsmtps on Cross Dominant</title>
+    <link>http://conoroneill.net/sorting-out-the-on-behalf-of-nonsense-on-gmail-with-authsmtp/</link>
+    <description>Recent content in Sorting-Out-The-On-Behalf-Of-Nonsense-On-Gmail-With-Authsmtps on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Jan 2011 10:18:42 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/sorting-out-the-on-behalf-of-nonsense-on-gmail-with-authsmtp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sorting out the &#39;On Behalf Of&#39; Nonsense on GMail with AuthSMTP</title>
+      <link>http://conoroneill.net/sorting-out-the-on-behalf-of-nonsense-on-gmail-with-authsmtp/sorting-out-the-on-behalf-of-nonsense-on-gmail-with-authsmtp/</link>
+      <pubDate>Fri, 07 Jan 2011 10:18:42 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/sorting-out-the-on-behalf-of-nonsense-on-gmail-with-authsmtp/sorting-out-the-on-behalf-of-nonsense-on-gmail-with-authsmtp/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Sorting out the \&amp;ldquo;On Behalf Of\&amp;rdquo; Nonsense on GMail with AuthSMTP&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I have long been pained by GMails handling of multiple &amp;quot;From&amp;quot; accounts. We use Google Apps For Your Domain which we generally like apart from that one feature.&lt;p /&gt;&lt;div&gt;Obviously we have accounts like sales@ and support@ which are accessed by more than one of us. On the face of it GMail allows you to send from these addresses using your main account. So I can send a mail when logged in as conor@ but have it appear to be From sales@.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;But Google insists on sticking an additional header called &amp;quot;Sender&amp;quot; which identifies that it really was conor@ who sent the mail. That then appears in the recipients Outlook Inbox as &amp;quot;From conor@blah on behalf of sales@blah&amp;quot;. This completely defeats the purpose of having generic group addresses. It means we can&amp;#39;t have seamless &amp;quot;tonight Matthew I&amp;#39;m going to be Support&amp;quot;.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;But it turns out Google does have a solution for it and you can continue to use the web interface. When you are setting up those extra accounts you can tell Google not to use their servers to send but to use another SMTP server. They generally expect that to be your own mail server but we actually use &lt;a href=&#34;http://www.authsmtp.com/&#34;&gt;AuthSMTP&lt;/a&gt; for all our automated sending from EC2 and it works perfectly here too. It&amp;#39;s a very inexpensive solution which has never let us down. Highly recommended. (Note - enable SSL on your AuthSMTP account but don&amp;#39;t on GMail).&lt;/div&gt; &lt;p /&gt;&lt;div&gt;Job done!&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

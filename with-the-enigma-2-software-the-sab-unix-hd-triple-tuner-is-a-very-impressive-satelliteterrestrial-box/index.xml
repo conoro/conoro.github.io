@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>With-The-Enigma-2-Software-The-Sab-Unix-Hd-Triple-Tuner-Is-A-Very-Impressive-Satelliteterrestrial-Boxes on Cross Dominant</title>
+    <link>http://conoroneill.net/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box/</link>
+    <description>Recent content in With-The-Enigma-2-Software-The-Sab-Unix-Hd-Triple-Tuner-Is-A-Very-Impressive-Satelliteterrestrial-Boxes on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Mar 2014 18:39:08 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>With the Enigma 2 software, the Sab Unix HD Triple Tuner is a very impressive satellite/terrestrial box</title>
+      <link>http://conoroneill.net/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box/</link>
+      <pubDate>Sun, 09 Mar 2014 18:39:08 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box/</guid>
+      <description>&lt;p&gt;In addition to the recent &lt;a href=&#34;http://conoroneill.net/the-and100-android-box-is-perfect-for-netflix-rte-player-etc/&#34;&gt;Andro100&lt;/a&gt; box, the guys in &lt;a href=&#34;http://tvtrade.ie&#34;&gt;TV Trade&lt;/a&gt; also gave me a Sab Unix HD &lt;a href=&#34;http://www.tvtrade.ie/triple-tuner.html&#34;&gt;Triple Tuner&lt;/a&gt; box to try out. The specs on this thing were pretty amazing for something that costs approx €130+VAT so I was intrigued to see how well it did. After the reliability horror that was the Ferguson Ariva 120 pile of junk, I went in with open eyes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/sab.png&#34; alt=&#34;Sab&#34; title=&#34;SAB Triple Tuner&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The box itself is pretty compact with a 1980s Amstrad stereo vibe off it with the chrome accents. Not exactly a looker but not offensive either. It has dual satellite inputs and a single &amp;ldquo;Saorview&amp;rdquo; DTT input. The usual outputs like HDMI etc are there along with wired LAN and a front and back USB port. I hate those front USB ports on all boxes as they are behind a flap which you then have to leave open if you use the port. But if you want to insert a wifi dongle, it probably makes sense for signal strength.&lt;/p&gt;
+
+&lt;p&gt;I connected up a 1TB externally powered USB harddrive to the back and stuck a generic nano Wifi dongle in the front. Both were recognised immediately and I was able to connect to the home network and format the drive as EXT4 within minutes. The box is Linux under the hood which is why stuff like this just works. The reason I went with EXT4 is that I did some tests recently on our home server and EXT4 write-speed is 3-4 times faster than NTFS on a Linux box.&lt;/p&gt;
+
+&lt;p&gt;The general UI of the box wasn&amp;rsquo;t great and I found the whole EPG setup to be annoying and overly complex. However I was easily able to setup the nightly internet download of a 7 day programme guide so the lack of Freesat certification was not a problem. This is a huge advantage over cheaper boxes.&lt;/p&gt;
+
+&lt;p&gt;We used the box for a few weeks but continued to struggle with the generally clunky UI, awkward EPG and remote control. For example, the pause button on the remote control doesn&amp;rsquo;t do time-shifting, it does freeze-frame. Who has ever wanted a freeze-frame button? You have to hit the time-shift button and then hit pause. The box was also unable to record shared channels like CBBC/BBC4 which was infuriating for Bron/Broen/The Bridge.&lt;/p&gt;
+
+&lt;p&gt;The software had a ton of completely useless features like &amp;ldquo;apps&amp;rdquo; for various German stations. The apps felt like the old Unison boxes from 10+ years ago.&lt;/p&gt;
+
+&lt;p&gt;These usability problems meant our usage tailed off. But the guys in TV Trade mentioned that there was an alternative opensource front end for the box called Enigma 2 and that I should give that a whirl. They had all the files on their site plus instructions and video. It was actually a doddle to install and took less than 10 mins.&lt;/p&gt;
+
+&lt;p&gt;I couldn&amp;rsquo;t believe how good Enigma was compared to the default software. Infinitely more usable and slick and just felt far more &amp;ldquo;modern&amp;rdquo;. However it too suffers from an EPG that just takes too much work to figure out. It has a kitchen-sink set of features when all I want is a list of available channels and the ability to say &amp;ldquo;include/exclude in TV Guide&amp;rdquo;. All this stuff with Bouquets is straight from the old MPEG specs and should never be seen by an end user.&lt;/p&gt;
+
+&lt;p&gt;I was starting to get frustrated with the EPG setup and did some googling to discover that there is a PC app called dreamboxEDIT which lets you configure the EPG remotely. I was pleasantly surprised to find that it was very easy to use and I simply deleted all the &amp;ldquo;bouquets&amp;rdquo; and removed all the garbage channels so I just had the core Irish and UK ones.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/epg.jpg&#34; alt=&#34;EPG&#34; title=&#34;Enigma 2 EPG&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;So yes, it was fiddly to get that sorted but we now have a really nice program guide with 7 days of content. You can&amp;rsquo;t do series link like Sky but you can set repeating timers for the same time.&lt;/p&gt;
+
+&lt;p&gt;We have played with dual simultaneous recording and it works very well which is huge relief given how bad the Ariva was at even recording one channel. Time-shifting/pausing also works well but takes a few seconds to kick in.&lt;/p&gt;
+
+&lt;p&gt;The difference between the default software and Enigma is like night and day. I&amp;rsquo;ve noticed that we are watching live satellite TV far more often now that it&amp;rsquo;s easy to do.&lt;/p&gt;
+
+&lt;p&gt;The box also has a media player which can play network videos from your PC or NAS and you can easily FTP to it too. I&amp;rsquo;m having very slow FTP transfers off the box but I haven&amp;rsquo;t investigated that properly.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d recommend that the TV Trade guys ship Enigma by default with a single default Bouquet of the &amp;ldquo;normal&amp;rdquo; channels pre-configured. If they did, the Triple Tuner box would be usable by most people from the get-go, no matter how non-technical. As it stands, it&amp;rsquo;s brilliant value but you need to do some work to get it setup just so.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s great to be finally back able to watch BBC2, BBC4, Channel 4 etc again (and not forgetting GirlPop for our youngest). The timing of getting the box was also perfect for the Winter Olympics and we watched a ton of it.&lt;/p&gt;
+
+&lt;p&gt;If you have cable cut and you are looking for something powerful but inexpensive, the Sab Unix HD Triple Tuner is well worth a look.&lt;/p&gt;
+
+&lt;p&gt;Excuse me whilst I go set the timer for Salamander on BBC4 tomorrow.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

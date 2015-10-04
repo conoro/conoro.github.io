@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn-Electronics-With-An-Arduino-And-Raspberry_pi-On-An-Old-Philips-Tvs on Cross Dominant</title>
+    <link>http://conoroneill.net/learn-electronics-with-an-arduino-and-raspberry_pi-on-an-old-philips-tv/</link>
+    <description>Recent content in Learn-Electronics-With-An-Arduino-And-Raspberry_pi-On-An-Old-Philips-Tvs on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Jun 2012 13:29:06 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/learn-electronics-with-an-arduino-and-raspberry_pi-on-an-old-philips-tv/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learn electronics with an Arduino and @Raspberry_Pi on an old Philips TV</title>
+      <link>http://conoroneill.net/learn-electronics-with-an-arduino-and-raspberry_pi-on-an-old-philips-tv/learn-electronics-with-an-arduino-and-raspberry_pi-on-an-old-philips-tv/</link>
+      <pubDate>Fri, 08 Jun 2012 13:29:06 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/learn-electronics-with-an-arduino-and-raspberry_pi-on-an-old-philips-tv/learn-electronics-with-an-arduino-and-raspberry_pi-on-an-old-philips-tv/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Learn electronics with an Arduino and @Raspberry_Pi on an old Philips TV&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Been slammed with work for two weeks (will never complain about that!) which means blogging has been a bit light. But the big excitement yesterday was my &lt;a href=&#34;http://www.seeedstudio.com/depot/ardx-the-starter-kit-for-arduino-p-1153.html?cPath=138&#34;&gt;ARDX Arduino Starter Kit&lt;/a&gt; arriving from Seeedstudio.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.seeedstudio.com&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-747&#34; title=&#34;P4113660&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/P4113660.jpg&#34; alt=&#34;&#34; width=&#34;700&#34; height=&#34;525&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are not familair with &lt;a href=&#34;http://arduino.cc&#34;&gt;Arduino&lt;/a&gt;, it is an OpenSource hardware platform forelectronicsprojects, tinkering, robotics, home automation etc etc etc. The blue board above is the heart of it.&lt;/p&gt;
+
+&lt;p&gt;The Starter Kit makes it possible for anyone, even with zero electronics knowledge to assemble simple circuits with no soldering and then run code on the Arduino microcontroller to do &amp;ldquo;things&amp;rdquo;. In this kit it ranges from blinking an LED to controlling a motor. Once you get the hang of it, a whole world of experimentation awaits you. There are also tons of add-on boards called Shields to do everything from advanced motor control to LCD and GPS.&lt;/p&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t had a chance to try anything on the Arduino yet except run a simple program to flash the on-board LED.&lt;/p&gt;
+
+&lt;p&gt;But I was over the moon to discover that that &lt;a href=&#34;http://www.raspbian.org/&#34;&gt;Raspbian&lt;/a&gt; distribution for &lt;a href=&#34;http://www.raspberrypi.org/&#34;&gt;Raspberry Pi&lt;/a&gt; has a working copy of the Arduino IDE which is what you use to write your programs, upload them to the Arduino and run them. A few minutes later, I had everything working.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/rpiardx01.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-748&#34; title=&#34;rpiardx01&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/rpiardx01.jpg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;600&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then for kicks and giggles I connected the RPi up to a 12 yo Philips portable telly. And it works too! Massive massive flashbacks to the ZX Spectrum days.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/rpiardx02.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-749&#34; title=&#34;rpiardx02&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/rpiardx02.jpg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;600&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is more amazing than it first might seem. Think about it - A computer for $25 connected to an electronics learning kit for $79 connected to an old telly. Everything you need to becomecompetentwith both computers and electronics. And you don&amp;rsquo;t even need the internet at home.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/rpiardx03.jpg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-750&#34; title=&#34;rpiardx03&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/rpiardx03.jpg&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;600&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Get a wifi dongle &lt;a href=&#34;http://www.dealextreme.com/p/mini-usb-150mbps-802-11b-g-n-wifi-wireless-network-adapter-106094&#34;&gt;for 6&lt;/a&gt; and borrow a mobile phone charger. Then spend anhour a week in school or Coder Dojo or somewhere offering free Wifi (Mahon Point!) to grab any software updates you need and to download any webpages, manuals, example code etc. And you can do the rest at home.&lt;/p&gt;
+
+&lt;p&gt;Old school!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll do a video and proper post on the Arduuino kit once I&amp;rsquo;ve assembled it and tried out a few of the projects over the weekend.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

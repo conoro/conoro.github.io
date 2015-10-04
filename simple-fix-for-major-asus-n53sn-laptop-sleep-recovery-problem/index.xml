@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simple-Fix-For-Major-Asus-N53sn-Laptop-Sleep-Recovery-Problems on Cross Dominant</title>
+    <link>http://conoroneill.net/simple-fix-for-major-asus-n53sn-laptop-sleep-recovery-problem/</link>
+    <description>Recent content in Simple-Fix-For-Major-Asus-N53sn-Laptop-Sleep-Recovery-Problems on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Dec 2011 17:53:54 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/simple-fix-for-major-asus-n53sn-laptop-sleep-recovery-problem/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simple Fix for Major Asus N53SN Laptop Sleep Recovery Problem</title>
+      <link>http://conoroneill.net/simple-fix-for-major-asus-n53sn-laptop-sleep-recovery-problem/simple-fix-for-major-asus-n53sn-laptop-sleep-recovery-problem/</link>
+      <pubDate>Sun, 04 Dec 2011 17:53:54 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/simple-fix-for-major-asus-n53sn-laptop-sleep-recovery-problem/simple-fix-for-major-asus-n53sn-laptop-sleep-recovery-problem/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Simple Fix for Major Asus N53SN Laptop Sleep Recovery Problem&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://uk.asus.com/Notebooks/Multimedia_Entertainment/N53SN/&#34;&gt;Asus N53SN&lt;/a&gt; is proving to be a great purchase. Wodges of CPU power and yet it strangely lasts a decent amount of time on battery. Unlike certain other makes, you can pop the battery out and bring a spare so it&amp;#39;s no problem doing lots of hard-core work on the Cork-Dublin train run. &lt;p /&gt;&lt;div&gt;However it has had one infuriating problem since I bought it. When you wake it up after a sleep (e.g. if you close the lid) it behaves fine for 5 mins and then freezes solid. The mouse pointer still moves but nothing else works. A hard reboot is required. I updated all the drivers and even did a full Windows re-install but to no avail. I was convinced it was a video driver issue due to the mouse thing but could not get to the bottom of it. I then started to suspect it was a hardware problem.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;For giggles the other day, I went googling for the problem again and ended up on the same massive owners thread as before over on &lt;a href=&#34;http://forum.notebookreview.com/asus-reviews-owners-lounges/563336-asus-n53sv-n53sn-sandybridge-owner-thread-118.html#post7957974&#34;&gt;notebookreview.com&lt;/a&gt;. But this time someone else was reporting the issue and someone had a suggestion. It was to update the Intel RST Storage Drivers. It seemed an unlikely fix and there were no updated drivers on the Asus site. But there were on &lt;a href=&#34;http://downloadcenter.intel.com/Detail_Desc.aspx?agr=Y&amp;amp;DwnldID=20624&amp;amp;ProdId=2101&amp;amp;lang=eng&amp;amp;OSVersion=Windows%207%2C%2064-bit*&amp;amp;DownloadType=Drivers&#34;&gt;the Intel site&lt;/a&gt;. And blummin eck, it flippin worked! The laptop has been perfect ever since. So if you have the same problem, I hope you find this post! Oh and don&amp;#39;t bother with that stupid Intel hardware auto-detection Java tool garbage. It didn&amp;#39;t do a thing for me.&lt;/div&gt; &lt;div&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

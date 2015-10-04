@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Controlling-An-I-Racer-Rc-Car-Using-A-Wii-Balance-Board-And-Raspberry_pis on Cross Dominant</title>
+    <link>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/</link>
+    <description>Recent content in Controlling-An-I-Racer-Rc-Car-Using-A-Wii-Balance-Board-And-Raspberry_pis on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 May 2013 08:17:38 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi</title>
+      <link>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/</link>
+      <pubDate>Tue, 07 May 2013 08:17:38 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I love watching ideas bounce back and forward between people on Twitter and see them grow. The best for me recently started when &lt;a href=&#34;http://www.theverge.com/2013/5/2/4292712/fitscales-wii-fit-balance-board-connected-scale&#34;&gt;The Verge posted a story&lt;/a&gt; about an OpenSource Android App which basically turned a &lt;a href=&#34;http://wiibrew.org/wiki/Wii_Balance_Board&#34;&gt;Wii Balance Board&lt;/a&gt; into a Withings weighing scales, including RunKeeper and Fitbit integration. I retweeted it and it was picked up by &lt;a href=&#34;https://twitter.com/joedesbonnet&#34;&gt;Joe Desbonnet&lt;/a&gt;. He realised you could also do some interesting things with the Balance Board and a Raspberry Pi and started hacking. Which of course made me realise I could control the i-racer with it!&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a wee video of it in action:&lt;/p&gt;
+
+&lt;p&gt;httpv://youtu.be/8cdn_LFKQXI&lt;/p&gt;
+
+&lt;p&gt;Apologies for the mobile interference in the audio. I was using my new SGS4 to SSH to the Raspberry Pi to kick off the Python code. The ConnectBot guys really need to fix the microscopic font on screens like the SGS4!&lt;/p&gt;
+
+&lt;p&gt;The car isn&amp;rsquo;t very fast in the video as the Lego added a lot of weight and I hardcoded the speed to 50%. We&amp;rsquo;ll try again next weekend using a lighter shell, full speed and tarmac instead of cobblelock.&lt;/p&gt;
+
+&lt;h2&gt;Technical Nitty Gritty (not too Gritty!)&lt;/h2&gt;
+My initial experiments with the Balance Board did not go well. Eventually I discovered that the version of the cwiid Wii library that is available on Raspberry Pi (and Ubuntu etc) is not able to deal with the Balance Board. See &lt;a href=&#34;https://bugs.launchpad.net/ubuntu/+source/cwiid/+bug/509246&#34;&gt;this bug&lt;/a&gt;. I applied &lt;a href=&#34;https://launchpadlibrarian.net/115501163/balanceboard.patch&#34;&gt;the patch&lt;/a&gt; and re-built my own deb files. To use them, just unzip them on the raspberry pi and install like so:
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+wget https://github.com/conoro/iracer-controllers/raw/master/iracer_balance_board/cwiid_for_balance_board.zip
+unzip cwiid_for_balance_board.zip
+sudo dpkg -i *.deb
+&lt;/code&gt;&lt;/pre&gt; 
+
+The rest of the time was just spent tweaking the numbers so that I could interpret someone leaning in various directions irrespective of their weight. It&#39;s still not great but works for me, a 7yo and a 6yo.
+
+All the old i-racer Bluetooth code carried over unchanged from our &lt;a href=&#34;http://conoroneill.net/makey-makey-raspberry-pi-iracer-bluetooth-cheese-controlled-car-ccc/&#34;&gt;Cheese Controlled Car&lt;/a&gt;. Follow the instructions there for installing various Bluetooth bits and bobs on the Raspberry Pi.
+
+I was very surprised that I could talk to both the i-racer and the Balance Board over the same $2 Bluetooth adapter. I was sure I&#39;d end up having to use two adapters.
+
+You can, as ever, &lt;a href=&#34;https://github.com/conoro/iracer-controllers/tree/master/iracer_balance_board&#34;&gt;grab the code from Github&lt;/a&gt;. The only changes you need to make in the code are to set the Bluetooth MAC addresses of both the Balance Board and the i-racer.
+
+Sidenote: The Android App was a dead end. It doesn&#39;t work on Android 4.2 because Google decided to upgrade their broken Bluetooth stack and actually managed to make it worse.
+
+Any questions, leave a comment.
+
+&lt;h2&gt;Only if you really need it: Building those cwiid libraries yourself&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+sudo nano /etc/apt/sources.list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Add the following line:
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+deb-src &lt;a href=&#34;http://archive.raspbian.org/raspbian&#34;&gt;http://archive.raspbian.org/raspbian&lt;/a&gt; wheezy main contrib non-free rpi
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Then do the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+mkdir ~/build
+cd build
+apt-get source python-cwiid
+apt-get build-dep python-cwiid
+cd cwiid-0.6.00+svn201/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then edit these three files and add the changes from &lt;a href=&#34;https://launchpadlibrarian.net/115501163/balanceboard.patch&#34;&gt;https://launchpadlibrarian.net/115501163/balanceboard.patch&lt;/a&gt; (or run &amp;ldquo;patch&amp;rdquo; if you are familiar with that)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+nano libcwiid/cwiid_internal.h
+nano libcwiid/process.c
+nano libcwiid/thread.c
+dpkg-source --commit
+dpkg-buildpackage -us -uc
+cd ..
+sudo apt-get remove python-cwiid
+sudo dpkg -i *.deb
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

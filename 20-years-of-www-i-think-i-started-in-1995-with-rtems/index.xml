@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>20-Years-Of-Www-I-Think-I-Started-In-1995-With-Rtems on Cross Dominant</title>
+    <link>http://conoroneill.net/20-years-of-www-i-think-i-started-in-1995-with-rtems/</link>
+    <description>Recent content in 20-Years-Of-Www-I-Think-I-Started-In-1995-With-Rtems on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Aug 2011 13:31:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/20-years-of-www-i-think-i-started-in-1995-with-rtems/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>20 Years of WWW - I think I started in 1995 with RTEMS</title>
+      <link>http://conoroneill.net/20-years-of-www-i-think-i-started-in-1995-with-rtems/20-years-of-www-i-think-i-started-in-1995-with-rtems/</link>
+      <pubDate>Sun, 07 Aug 2011 13:31:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/20-years-of-www-i-think-i-started-in-1995-with-rtems/20-years-of-www-i-think-i-started-in-1995-with-rtems/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;20 Years of WWW - I think I started in 1995 with RTEMS&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile7.posterous.com/getfile/files.posterous.com/conoroneill/AHPVPW79gmQ7EVat6kdy70uhwjXQmNbjx5U1Fy0TJTU1Y3ReMD1nhqpvWfMH/rtems2.png.scaled.1000.jpg&#34;&gt;&lt;img alt=&#34;Rtems2&#34; height=&#34;262&#34; src=&#34;http://getfile5.posterous.com/getfile/files.posterous.com/conoroneill/AzJka2PJ6pJkDhzihqAKk5q2Oy1RiMQf7crzrbjsTiQHKai0ig3tWaIvi11z/rtems2.png.scaled.500.jpg&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Today is the 20th anniversary of the web. Pretty incredible 20 years really. My own history of the internet was finding Usenet in 1990 when I started my Masters in UCD, followed by email, &lt;a href=&#34;http://FTP.FUNET.FI&#34;&gt;FTP.FUNET.FI&lt;/a&gt;, Gopher, WAIS and the joy of downloadable shareware. There was then a pause from 92-94 as I worked on GSM basestation software in S3 and only had email. Ever resourceful, we then discovered FTP-by-email. Yes it was as clunky as it sounds but it bloody worked.&lt;/p&gt;
+&lt;p /&gt;
+&lt;div&gt;At the start of 1995 I was put in charge of an incredibly cool software project - to build the embedded software for Philip&amp;rsquo;s first generation of MPEG-2 decoders. One of the requirements was to use a Real-Time Operating System (RTOS). Now this is proper Real-Time, not Twitter Real-Time. When you are decoding video, &amp;ldquo;best effort&amp;rdquo; is not good enough, you have no wiggle room when it comes to managing a transport stream with a 24Mhz CPU.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;My boss at the time mentioned the Web, which I was vaguely aware of as a sort of tarted-up Gopher. He has Mosaic installed on his PC and a modem attached to that. The only access point in the entire company!&amp;nbsp;He showed me some directory site (possibly Yahoo, but not sure) and I went digging. I also re-discovered Usenet and what a wonderful wealth of information it had. Actually I think you can call Usenet the Twitter of its day. It was the fastest most efficient way to get an answer to a technical question for years. Of course I can still &lt;a href=&#34;http://groups.google.com/group/comp.realtime/browse_thread/thread/45a79f6c41af58be/ef4f89bf18b35232?q=conor_o+m68k#ef4f89bf18b35232&#34;&gt;search back on posts from 1995&lt;/a&gt; thanks to Google. Try that in 2028 for this year&amp;rsquo;s Tweets.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;Somehow I found &lt;a href=&#34;http://rtems.org/&#34;&gt;RTEMS&lt;/a&gt;, the&amp;nbsp;&lt;strong&gt;Real-Time Executive for Missile Systems&lt;/strong&gt;, renamed to the more palatable Real-Time Executive for Multiprocessor Systems. It was an OS developed for the US Army Missile Command in Alabama and was fully Open Source. It was also compatible with the Philips&amp;nbsp;P90CE201&amp;nbsp;variant of the 68000 embedded&amp;nbsp;CPU we were using. I won&amp;rsquo;t bore you with the details of compiling GCC cross-compilers on VAX but we had an &lt;em&gt;interesting &lt;/em&gt;few months with RTEMS (and got a kick out of using a Missile OS in a Set Top Box). The attached screenshot from WaybackMachine from 1998 looks close to the one in 1995.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;So in my mind the RTEMS site is the first real site I visited on the Web. Any idea what your&amp;rsquo;s was?&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

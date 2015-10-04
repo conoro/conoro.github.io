@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baby-Steps-On-Our-First-Real-Arduino-Projects on Cross Dominant</title>
+    <link>http://conoroneill.net/baby-steps-on-our-first-real-arduino-project/</link>
+    <description>Recent content in Baby-Steps-On-Our-First-Real-Arduino-Projects on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Jul 2012 12:58:38 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/baby-steps-on-our-first-real-arduino-project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Baby Steps on our first real Arduino Project</title>
+      <link>http://conoroneill.net/baby-steps-on-our-first-real-arduino-project/baby-steps-on-our-first-real-arduino-project/</link>
+      <pubDate>Sat, 07 Jul 2012 12:58:38 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/baby-steps-on-our-first-real-arduino-project/baby-steps-on-our-first-real-arduino-project/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Baby Steps on our first real Arduino Project&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;The kids and I have a silly idea for an Arduino project involving doorbells. So I ordered some parts from &lt;a href=&#34;http://sparkfun.com&#34;&gt;Sparkfun&lt;/a&gt; in the US (love that site so much) and they arrived quickly:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/sparkfun.png&#34;&gt;&lt;img class=&#34;size-full wp-image-781 aligncenter&#34; title=&#34;sparkfun&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/sparkfun.png&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;558&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then I lashed together the bare basics to make sure what we want to do will work. Press the button:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/oisin.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-782&#34; title=&#34;oisin&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/oisin.png&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;600&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Press it again:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/siofra.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-783&#34; title=&#34;siofra&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/siofra.png&#34; alt=&#34;&#34; width=&#34;800&#34; height=&#34;600&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;etc&lt;/p&gt;
+
+&lt;p&gt;Amazing to see the reaction from the kids, even teenage friends of theirs. I think it&amp;rsquo;s the tactility and physicality of the whole thing. If it was a piece of code running on a PC or phone, I&amp;rsquo;m sure the response would have been &amp;ldquo;whatevah&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Next steps are to add all the other buttons and then start on the Raspberry Pi part of the project.&lt;/p&gt;
+
+&lt;p&gt;Off we go to Maplins now to get a few more little things for it and my other far more serious project (if you can figure out what one of the parts in the first pic is, you may be able to guess)&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

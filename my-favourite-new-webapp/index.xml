@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My-Favourite-New-Webapps on Cross Dominant</title>
+    <link>http://conoroneill.net/my-favourite-new-webapp/</link>
+    <description>Recent content in My-Favourite-New-Webapps on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jan 2012 11:09:24 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/my-favourite-new-webapp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My favourite new WebApp - IFTTT - If This Then That</title>
+      <link>http://conoroneill.net/my-favourite-new-webapp/my-favourite-new-webapp/</link>
+      <pubDate>Mon, 23 Jan 2012 11:09:24 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/my-favourite-new-webapp/my-favourite-new-webapp/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;My favourite new WebApp - IFTTT - If This Then That&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I saw a bunch of mentions of &lt;a href=&#34;http://ifttt.com&#34;&gt;IFTTT&lt;/a&gt; a few months back but didn&amp;rsquo;t get a chance to try it out. It came up recently during a lovely lunch with &lt;a href=&#34;http://twitter.com/johnpeavoy&#34;&gt;@johnpeavoy&lt;/a&gt; in the ever-impressive &lt;a href=&#34;http://www.poachersinnbandon.com/&#34;&gt;Poacher&amp;rsquo;s Inn&lt;/a&gt; in Bandon. I suddenly realised it could do something I&amp;rsquo;d wanted for a year.
+&lt;div id=&#34;attachment_521&#34; class=&#34;wp-caption&#34; style=&#34;width: 450px;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://conoroneill.net/my-favourite-new-webapp/23-01-2012-11-04-55/&#34; rel=&#34;attachment wp-att-521&#34;&gt;&lt;img class=&#34;size-medium wp-image-521 aligncenter&#34; title=&#34;23-01-2012-11-04-55&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/01/23-01-2012-11-04-55-300x243.png&#34; alt=&#34;&#34; /&gt; &lt;/a&gt;
+&lt;p class=&#34;wp-caption-text&#34;&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/div&gt;
+The idea of IFTTT is simple but brilliant. It&amp;rsquo;s has a hint of Yahoo Pipes stripped back to the core USP. It&amp;rsquo;s all built around tasks which do stuff when other stuff happens (if THIS happens, then do THAT).&lt;/p&gt;
+
+&lt;p&gt;There are a ton of &amp;ldquo;Trigger Channels&amp;rdquo; like Twitter, Facebook, Dropbox, Foursquare, Google Reader, YouTube etc. Within each channel there are then Triggers like &amp;ldquo;when I update my Status on Facebook&amp;rdquo; or (and this is where I&amp;rsquo;m using it) &amp;ldquo;when I favourite a Tweet&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Then you choose an &amp;ldquo;Action Channel&amp;rdquo;, most of which are the same as the &amp;ldquo;Trigger Channel&amp;rdquo;. In my case I have two. The first is Delicious. So every time I favourite a Tweet, it get&amp;rsquo;s saved as a Bookmark in Delicious.&lt;/p&gt;
+
+&lt;p&gt;I was actually going to build that specific usecase as a standalone webapp for myself last year. Now it&amp;rsquo;s just one feature in IFTTT!&lt;/p&gt;
+
+&lt;p&gt;The other Action I use is to get the Tweet is emailed to me. This is ideal when I&amp;rsquo;m reading Twitter on my phone when out and about. I generally don&amp;rsquo;t read the links on the phone, so I favourite the Tweet and have it in my Inbox for later. You can also send them to ReadItLater or Instapaper.&lt;/p&gt;
+
+&lt;p&gt;The Task then runs every 15 minutes.&lt;/p&gt;
+
+&lt;p&gt;As I said, simple but brilliant. &lt;a href=&#34;http://ifttt.com&#34;&gt;Go have a play&lt;/a&gt; , I guarantee you&amp;rsquo;ll think of a bunch of actions. There are also lots of ones other people have created too.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

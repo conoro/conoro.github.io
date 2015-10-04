@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Streaming-Videos-To-Your-Android-Phones on Cross Dominant</title>
+    <link>http://conoroneill.net/streaming-videos-to-your-android-phone/</link>
+    <description>Recent content in Streaming-Videos-To-Your-Android-Phones on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Dec 2010 14:25:00 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/streaming-videos-to-your-android-phone/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Streaming Videos to your Android Phone</title>
+      <link>http://conoroneill.net/streaming-videos-to-your-android-phone/streaming-videos-to-your-android-phone/</link>
+      <pubDate>Sat, 04 Dec 2010 14:25:00 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/streaming-videos-to-your-android-phone/streaming-videos-to-your-android-phone/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Streaming Videos to your Android Phone&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;span style=&#34;border-collapse: separate; color: #000000; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; text-indent: 0px; font-size: medium;&#34;&gt;
+&lt;div style=&#34;color: #000000; font-family: Arial,Helvetica,sans-serif; font-size: 13px; margin: 8px; background-color: #ffffff;&#34;&gt;
+&lt;p&gt;Big hat-tip to&lt;span class=&#34;Apple-converted-space&#34;&gt;&amp;nbsp;&lt;/span&gt;&lt;a href=&#34;http://twitter.com/micflan&#34;&gt;@micflan&lt;/a&gt;&lt;span class=&#34;Apple-converted-space&#34;&gt;&amp;nbsp;&lt;/span&gt;for pointing me in the right direction on this recently. I had tried and failed several times previously.&lt;/p&gt;
+&lt;p&gt;I did &lt;a href=&#34;http://conoroneill.net/streaming-video-to-kids-in-car-the-video&#34;&gt;a post a few months back&lt;/a&gt; about getting streaming media working on both old Nokia N770s and iPhone from an Easy Peasy based EeePC netbook running MediaTomb. The idea was that it could be the ultimate in-car media center. The one massive annoyance was that I couldn&amp;rsquo;t get it working on Android due to it having only one crappy non-functional UPnP client.&lt;/p&gt;
+&lt;p&gt;In the meantime, people have been busy on Android! Streaming using UPnP now works perfectly. Having said that, I bloody hate UPnP, give me bog-standard Samba file-sharing any day. Works perfectly on XBMC, Boxee and every PC/Mac. Given that the Astro File Manager has an SMB add-on on Android, the absence of network media playing using SMB has nothing to do with lack of oomph on the handset.&lt;/p&gt;
+&lt;p&gt;Anyway, I digress, the setup is very simple for this. If you have one of those Iomega or WD etc NAS media boxes then I&amp;rsquo;m pretty sure UPnP is setup already so you don&amp;rsquo;t have to do anything there. If you have a PC that holds all your movies and other media then you just need to pop over to&lt;span class=&#34;Apple-converted-space&#34;&gt;&amp;nbsp;&lt;/span&gt;&lt;a href=&#34;http://tversity.com/&#34;&gt;TVersity&lt;/a&gt;&lt;span class=&#34;Apple-converted-space&#34;&gt;&amp;nbsp;&lt;/span&gt;and install their free UPnP Server on the PC. Once installed you just tell it what directories to share out. Job done at that end.&lt;/p&gt;
+&lt;p&gt;Then on the Android phone you just need to install UPnPlay to browse the remote media and a decent media player to display it. The two I&amp;rsquo;ve been trying most recently are RockPlayer and VPlayer. Both have their own positives and negatives depending on the media source (particularly around A/V sync) so if you have problems with one, try the other.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;img alt=&#34;Screenshot_9&#34; height=&#34;800&#34; src=&#34;http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-12-04/xknpFpzAshukdiHjtcwkhaHllniJDFkuepxtEryEmsbnvxouuxnAzBcpkxpw/screenshot_9.png.scaled500.png&#34; width=&#34;480&#34; /&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Another huge advantage that both RockPlayer and VPlayer have over the built-in media player (and others) is that they don&amp;rsquo;t require local files to be transcoded to MP4. They are perfectly capable of playing all the standard AVIs, MKVs and anything else you can throw at it, without even needing to be downsampled to a smaller screen resolution. RockPlayer has the added advantage of using the built in h.264 hardware decoder if you are using MP4s to reduce the main CPU load (and therefore improving battery life I&amp;rsquo;m guessing)&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;img alt=&#34;Screenshot_13-1&#34; height=&#34;800&#34; src=&#34;http://getfile7.posterous.com/getfile/files.posterous.com/temp-2010-12-04/bxaDgsdGCChrbzffxkicsoxoltJFwuBwroEtGGcbJuzrvFeIwipiayqEgaAn/screenshot_13-1.png.scaled500.png&#34; width=&#34;480&#34; /&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll do another quick post soon on the HDVP-2 media streamer I got recently. Whilst is works with TVersity, I&amp;rsquo;m having AV Sync issues there too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

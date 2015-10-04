@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Replacing-Google-Reader-With-A-25-Raspberry-Pi-In-The-Immortal-Words-Of-Jesse-Pinkmen on Cross Dominant</title>
+    <link>http://conoroneill.net/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/</link>
+    <description>Recent content in Replacing-Google-Reader-With-A-25-Raspberry-Pi-In-The-Immortal-Words-Of-Jesse-Pinkmen on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Mar 2013 15:41:04 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Replacing Google Reader with a $25 Raspberry Pi in the immortal words of Jesse Pinkman</title>
+      <link>http://conoroneill.net/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/</link>
+      <pubDate>Thu, 14 Mar 2013 15:41:04 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Replacing Google Reader with a $25 Raspberry Pi in the immortal words of Jesse Pinkman&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/Jesse-and-Walter-High-Five-RV.gif&#34;&gt;&lt;img class=&#34;alignnone wp-image-949&#34; title=&#34;Jesse-and-Walter-High-Five-RV&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/Jesse-and-Walter-High-Five-RV.gif&#34; alt=&#34;&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s right&lt;/p&gt;
+
+&lt;p&gt;httpv://www.youtube.com/watch?v=pQSceJJ1Clc&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tt-rss.org/&#34;&gt;Tiny Tiny RSS&lt;/a&gt;now running beautifully on my Raspberry Pi (using NGINX, PHP-FPM, MySQL):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/ttrss.jpg&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-950&#34; title=&#34;ttrss&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/03/ttrss-1024x502.jpg&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;286&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Starting-Important-Downloads-When-Out-And-Abouts on Cross Dominant</title>
+    <link>http://conoroneill.net/starting-important-downloads-when-out-and-about/</link>
+    <description>Recent content in Starting-Important-Downloads-When-Out-And-Abouts on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Dec 2010 11:59:00 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/starting-important-downloads-when-out-and-about/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Starting important downloads when out and about</title>
+      <link>http://conoroneill.net/starting-important-downloads-when-out-and-about/starting-important-downloads-when-out-and-about/</link>
+      <pubDate>Sat, 04 Dec 2010 11:59:00 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/starting-important-downloads-when-out-and-about/starting-important-downloads-when-out-and-about/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Starting important downloads when out and about&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;img alt=&#34;Screenshot_9&#34; height=&#34;800&#34; src=&#34;http://getfile2.posterous.com/getfile/files.posterous.com/temp-2010-12-04/uxBAecqgiqyhwecCIqiCijDilfnBnowADluslxwyGodhwGjbBonwyAyeAElq/screenshot_9.png.scaled500.png&#34; width=&#34;480&#34; /&gt;
+&lt;img alt=&#34;Screenshot_10&#34; height=&#34;800&#34; src=&#34;http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-12-04/bByDvxjHJcJIclbAyjfFtFIcheegytyqHBczFGBjEkEfmFnbszvshpkkjCgH/screenshot_10.png.scaled500.png&#34; width=&#34;480&#34; /&gt;
+&lt;img alt=&#34;Screenshot_11&#34; height=&#34;800&#34; src=&#34;http://getfile0.posterous.com/getfile/files.posterous.com/temp-2010-12-04/HwBIlabHrkwajsvjmdCyIgxgDecDadGAvqIupJBittDjJlvrACtyuIsogyfC/screenshot_11.png.scaled500.png&#34; width=&#34;480&#34; /&gt;
+&lt;div class=&#39;p_see_full_gallery&#39;&gt;&lt;a href=&#34;http://conoroneill.posterous.com/starting-important-downloads-when-out-and-abo&#34;&gt;See the full gallery on Posterous&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+Imagine you are on the road for a few days, you are checking your tweets and suddenly you see the new version of Ubuntu or CentOS has been released. You know that when you get back to base, you&amp;rsquo;ll have to wait ages for it to download. If only there was a way around it.&lt;/p&gt;
+&lt;p&gt;If you have an Android phone, you can now sort that problem out with Transdroid. It&amp;rsquo;s a little fiddly to get going but works perfectly once it does. What you need is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The aforementioned Android phone&lt;/li&gt;
+&lt;li&gt;With the aforemention Transdroid installed on it from the Android Market&lt;/li&gt;
+&lt;li&gt;uTorrent installed on your main PC back at base&lt;/li&gt;
+&lt;li&gt;A router with the ability to do port forwarding and dynamic DNS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The steps are as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to dyndns.com and get a dynamic DNS like myfantastichomerouter.dyndns.org&lt;/li&gt;
+&lt;li&gt;Give your main PC a fixed IP address&lt;/li&gt;
+&lt;li&gt;In uTorrent, go to Preferences-&amp;gt;WebUI-&amp;gt;Enable WebUI. Also setup a username/password in that panel&lt;/li&gt;
+&lt;li&gt;In uTorrent, go to Preferences-&amp;gt;Connection click &amp;ldquo;Random Port&amp;rdquo;. Record what port it says.&lt;/li&gt;
+&lt;li&gt;Login to your router&lt;/li&gt;
+&lt;li&gt;Give it all the dyndns credentials required (most routers do dyndns nowadays)&lt;/li&gt;
+&lt;li&gt;Go to the port forwarding section on your router and setup a forward from the Random Port selected in uTorrent to that port on your PC&amp;rsquo;s IP address&lt;/li&gt;
+&lt;li&gt;Launch Transdroid on your phone. In settings, tell it all about the setup you have just configured above&lt;/li&gt;
+&lt;li&gt;Search for what you want e.g. &amp;ldquo;Ubuntu Maverick&amp;rdquo; (You can also download the initial torrent file from the source site in your browser and open it locally in Transdroid.&lt;/li&gt;
+&lt;li&gt;Long press the correct file that is listed. Select &amp;ldquo;download now&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;The file will now start downloading on your PC at home and will be waiting for you when you get there!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile2.posterous.com/getfile/files.posterous.com/temp-2010-12-04/ivrdczjgmgIEanxeojjJhidiJhevzIwcaytoGiwllDctwbqGrvCroxhBwacH/utorrent_01.png.scaled1000.png&#34;&gt;&lt;img alt=&#34;Utorrent_01&#34; height=&#34;351&#34; src=&#34;http://getfile1.posterous.com/getfile/files.posterous.com/temp-2010-12-04/ivrdczjgmgIEanxeojjJhidiJhevzIwcaytoGiwllDctwbqGrvCroxhBwacH/utorrent_01.png.scaled500.png&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Dominant &middot; Cross Dominant</title>
+
+    <meta name="description" content="Mixed laterality since 1968">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Cross Dominant &middot; Cross Dominant">
+    <meta name="twitter:description" content="Mixed laterality since 1968">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cross Dominant &middot; Cross Dominant">
+    <meta property="og:description" content="Mixed laterality since 1968">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">08 Feb 2015, 12:45</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here/" class="post-title">Download compiled version of Node.js 0.12.0 Stable for Raspberry Pi here</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Unfortunately the <a href="http://blog.nodejs.org/2015/02/06/node-v0-12-0-stable/">0.12.0 release</a> of Node won&rsquo;t compile on a non-V2 Raspberry Pi so I took a patch from <a href="http://iojs.org">io.js</a> and was able to build it.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg" alt="Node.js" />
+</p>
+
+<p>The problem is due to recent releases of Raspbian mis-identifying the ARM version so Node tries to build for V7 instead of V6. These <a href="https://github.com/bnoordhuis/io.js/commit/6f7494292e22b1f1050abeaa43f257ac466edf2b">two</a> <a href="https://github.com/bnoordhuis/io.js/commit/8afcc5e701538e5a442a0334d781eac202cc4e1d">changes</a> from this <a href="https://github.com/iojs/io.js/issues/283">io.js thread</a> sort it out.</p>
+
+<p>It took a lonnnngggg time to build directly on my RPi Model B+.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/node-v0.12.0-linux-arm-pi.tar.gz">Download here</a> and enjoy.</p>
+
+<pre><code class="language-javascript">wget https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/node-v0.12.0-linux-arm-pi.tar.gz
+tar -zxvf node-v0.12.0-linux-arm-pi.tar.gz
+cd node-v0.12.0-linux-arm-pi
+sudo cp -R * /usr/local/
+</code></pre>
+
+<p>Works perfectly for <a href="http://harpjs.com/">Harp.js</a>, including the ever-problematic node-sass with its native bits.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">04 Jan 2015, 13:42</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs/" class="post-title">Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift.</p>
+
+<h2 id="introduction:68488b35c9290c9755b8db0d35a0e512">Introduction</h2>
+
+<p>Cork County Council in Ireland has a site called <a href="http://www.bandonfloodwarning.ie/">Bandon FEWS</a> (Bandon Flood Early Warning System). When the Bandon river hits certain levels near Bandon town, it alerts registered users via SMS in case they need to take emergency measures. It&rsquo;s a very useful service and is very necessary due to the regular flooding that occurs. However the historical river level data is not available in any useful form and that&rsquo;s the point of this project.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/01/Nov09Hickeys.jpg" alt="Hickey's Bandon" title="Flooding in 2009" />
+</p>
+
+<p>In November 2011, I created <a href="http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/">a simple Python script</a> which scrapes the site every 15 minutes and saves the river level to a Google Fusions Table &ldquo;spreadsheet&rdquo; <a href="https://www.google.com/fusiontables/DataSource?docid=103YIcARoxuaWT7NfZ8mVBzY554sF_3ONYC1N3DE#rows:id=1">here</a>. This now has (with a few interruptions) 3 years of data which anyone can query, re-use or slice-dice and mashup with weather info. Not that anyone has done this :-)</p>
+
+<p>The script has been running on a small home Ubuntu fileserver all this time but stopped working mid-December 2014 either due to changes with the page structure of the Council site or as unexpected fallout from upgrading to Ubuntu 14.04. I have therefore re-written it in Node.js which has the big added advantage that there are free hosting possibilities for this code such as my employer Red Hat&rsquo;s <a href="https://www.openshift.com/">OpenShift</a>.</p>
+
+<p>Code is now available on <a href="https://github.com/conoro/bandonfews-nodejs">GitHub here</a>.</p>
+
+<p>The code started as Google&rsquo;s example G+ OAuth code but now has the bulk of the functionality completed. It is running reliably under Supervisor on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID-C1</a> single-board computer on my desk.</p>
+
+<p>To use it for something else on Fusion Tables, the main thing you need to do is setup an App in the <a href="https://console.developers.google.com/project?authuser=0">Google API Console</a>, enable Fusion Tables API access and use those keys in the placeholders in the config files.</p>
+
+<h2 id="files:68488b35c9290c9755b8db0d35a0e512">Files</h2>
+
+<ul>
+<li>main.js - The main code</li>
+<li>bandonfews.conf - Supervisor config file. Copy to /etc/supervisor/conf.d/bandonfews.conf then <code>sudo supervisorctl reread</code> and <code>sudo supervisorctl reread</code></li>
+<li>tokens-example.json - rename to tokens.json. Will be auto-generated by the code on first run in any case</li>
+<li>config-example.json - Rename to config.json and fill out the Google OAuth API key/secret, the URL of the FEWS site and the id of the Fusion Table</li>
+<li>index.html - Placeholder for upcoming landing page</li>
+<li>server.js - Placeholder for upcoming API server</li>
+<li>package.json - Required Node.js packages. <code>npm install</code> to install everything</li>
+<li>.gitignore - Stuff that shouldn&rsquo;t go under Git control</li>
+</ul>
+
+<h2 id="openshift-environment-variables:68488b35c9290c9755b8db0d35a0e512">OpenShift Environment Variables</h2>
+
+<p>If you are running on OpenShift, you need a way to set various keys etc without adding them to files in Git which could potentially leak accidentally if you also put a copy up on GitHub. So set the following (mirroring the equivalent ones in config.json and tokens.json):</p>
+
+<p><code>rhc set-env access_token=&quot;blah&quot; token_type=&quot;Bearer&quot; refresh_token=&quot;blah&quot; expiry_date=1419970265050 client_id=&quot;blah&quot; client_secret=&quot;blah&quot; redirect_url=&quot;http://localhost&quot; fews_url=&quot;http://www.bandonfloodwarning.ie/main.php&quot; fusiontables_id=&quot;blah&quot; -a bandonfews</code></p>
+
+<h2 id="to-do:68488b35c9290c9755b8db0d35a0e512">TO-DO</h2>
+
+<ul>
+<li>The first time run is currently broken for the OAuth credentials. Easy fix coming.</li>
+<li>OpenShift is SIGINT&rsquo;ing it for some unknown reason after a random time which is why it&rsquo;s running on the ODROID for the moment</li>
+<li>It should have a simple Express based API so others can avoid the pain of dealing with the Fusion Tables API for basic queries</li>
+<li>It should have a simple landing page showing the latest water level and maybe a graph</li>
+<li>It should add back in the functionality of the old Python code for posting to COSM</li>
+<li>???</li>
+</ul>
+
+<h2 id="release-notes:68488b35c9290c9755b8db0d35a0e512">Release Notes</h2>
+
+<ul>
+<li>04/01/2015 - First public usable version</li>
+</ul>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 Dec 2014, 17:44</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat/" class="post-title">Introducing FitBit&#39;s first sports tracker for Superheroes - The FitBat</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Finally the product that Superheroes everywhere have been crying out for - The FitBat. I&rsquo;m sure the protector of Gotham would approve.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbat.jpg" alt="FitBat" title="FitBat" />
+</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Dec 2014, 19:59</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor/" class="post-title">Say hello to my little friend. The Fitbit XL with external battery by Conor</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>My first Fitbit died in the washing machine and they kindly replaced it for free. The replacement&rsquo;s battery started acting up recently and finally gave up the ghost last night. You won&rsquo;t believe what happens next ;-)</p>
+
+<p>I figured out how to take apart the Fitbit One on the original dead one so this time I managed to do it with no damage. I de-soldered the battery and tried the old one instead. No joy. I&rsquo;ve found some Chinese suppliers of 55mAh Lipos but I don&rsquo;t have the patience to wait. One slightly too big battery and some hot-glue later and I give you the FitBit One XL.</p>
+
+<p>Now that I know it works, I&rsquo;ll remove most of the hot glue and try some Shoe Goo instead.
+Front
+<img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit1.jpg" alt="Front" title="Front" />
+</p>
+
+<p>Back
+<img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit2.jpg" alt="Back" title="Back" />
+</p>
+
+<p>Wearables.
+<img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit3.jpg" alt="In its clip" title="In its clip" />
+</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Dec 2014, 14:35</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/" class="post-title">Some of my old Red Hat floppy disks from 2000-2004</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>We had to empty our attic to get the house insulated this week. I uncovered some old Red Hat and Fedora floppies and CDs. I previously had much older ones but was quite ruthless about reusing floppies in the old days!</p>
+
+<p>The very first Linux I installed was Slackware on a self-built AMD K5 PC in Sunnyvale in 1996 (I&rsquo;ve never built a PC with Intel CPUs! Current box is self-built FX-8 Eight Core 8370). I was so traumatised by the Slackware experience, as a Windows 95 user, that I didn&rsquo;t try again until &lsquo;97 with Red Hat Linux 4. My oldest floppy is from Red Hat 6.2 in 2000:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_62b.jpg" alt="Red Hat 6.2" title="Red Hat 6.2" />
+</p>
+
+<p>I then found a guy in the UK who would burn each new release of Red Hat onto CDs and send them to you for a few quid. That kept me going for ages. Here&rsquo;s a Red Hat 7.0 boot floppy cunningly reusing a Windows NT disk:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_70b.jpg" alt="Red Hat 7.0" title="Red Hat 7.0" />
+</p>
+
+<p>Then Red Hat 7.3 updates on CD</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_73b.jpg" alt="Red Hat 7.3" title="Red Hat 7.3" />
+</p>
+
+<p>And finally Fedora Core 1 boot disk:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fedora_fc1b.jpg" alt="Fedora Core 1" title="Fedora Core 1" />
+</p>
+
+<p>Next week I finally rid myself of the last vestiges of Ubuntu and move the home-office file server to CentOS 7 :-) I&rsquo;m baaaaaaaack.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Nov 2014, 15:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/conors-thanksgiving-tech-miscellany/" class="post-title">Conor&#39;s Thanksgiving Tech Miscellany</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>As always, so many great tech things happening out there, so little time to blog them, let alone do anything useful with them.</p>
+
+<p>These posts are like a curated, contextualised version of my <a href="https://pinboard.in/u:conoro">Pinboard account</a>. Here&rsquo;s hoping y&rsquo;all find something useful below.</p>
+
+<ul>
+<li><p><strong>ATOM</strong> - The <a href="https://atom.io/">Atom editor</a> by GitHub is coming along nicely and even works well <a href="https://chocolatey.org/packages/atom">on Windows now</a>. I also discovered that Windows now has a package installer called <a href="https://chocolatey.org/packages/atom">Chocolatey</a> which is pretty cool. I still think building an editor on a browser engine is somehow wrong tho.</p></li>
+
+<li><p><strong>Google Compute Engine</strong> - I moved an old Django web-app to <a href="https://cloud.google.com/compute/">Google Compute Engine</a> recently. This has previously run seamlessly on a variety of dedicated server providers, on Amazon EC2 and on Amazon EC2 + RDS. It has been anything but seamless on GCE with multiple access errors to CloudSQL per week and random server reboots. Sure, cloud servers should be treated like <a href="http://www.slideshare.net/randybias/architectures-for-open-and-scalable-clouds">cattle and not pets</a> (my fave Ops phrase recently) but this isn&rsquo;t good enough from Google. I couldn&rsquo;t recommend it to anyone for small production deployments. And unless you are willing to pay for support, you are stuck with &ldquo;community support&rdquo; on Stack Overflow if you have problems. This is pretty ridiculous when they are providing $300 worth of credits (or 60 days) for free. If the bloody thing is unreliable and support is barely accessible, the free offer basically sends people away for life. If you want public cloud, stick with EC2.</p></li>
+
+<li><p><strong>OpenShift</strong> - Now that I&rsquo;m a RedHatter (getting the red fedora on Tuesday, woohoo!), I&rsquo;ve been playing around with <a href="https://www.openshift.com/products/online">OpenShift Online</a>. It&rsquo;s a really easy to use git-based flow into a PaaS and I&rsquo;ve got both Node and Go apps running on the free tier with no effort. MongoDB is running nicely for me there too. It&rsquo;s a great way to bootstrap an API server and if you are looking to do something with Open Data, it would make a superb base. It also helps that it&rsquo;s from a company that has Open Source built into its DNA, not just as a morketing tool.</p></li>
+
+<li><p><strong>Yosemite</strong> - If the trackpad on your MBP goes all weird and refuses to click on stuff after you &ldquo;upgrade&rdquo; to Yosemite, <a href="http://support.apple.com/kb/PH14222?viewlocale=en_US">this trick worked for me</a> where you reset the PRAM.</p></li>
+
+<li><p><strong>Hudl 2</strong> - We got a <a href="http://www.tesco.com/direct/hudl2-8-wi-fi-tablet/454-7907.prd?pageLevel=&amp;skuId=397-7926">Tesco Hudl 2</a> Android tablet for my 8yo daughter for her birthday. If you want to buy from Ireland, you can get from Tesco UK Online and use your Parcel Motel address for delivery. Initial impressions have been overwhelmingly positive. The 8.3&rdquo; full-HD screen is superb, the Intel CPU is surprisingly fast, the back camera is good and the stock Android experience is great. It also takes SD cards and has HDMI out. XBMC/Kodi runs beautifully on it too. The only two tiny negatives are that it is quite heavy and there are too many unremovable Tesco UK widgets on some of the home screens. If you are in the market for an Android tablet this Christmas, I honestly haven&rsquo;t been able to find anything that comes close for even a lot more money. I see almost no practical difference between it and my latest-model iPad Mini which is hugely more expensive.</p></li>
+
+<li><p><strong>Google Cardboard Apps</strong> - <a href="https://play.google.com/store/apps/details?id=com.visor.visionhacker&amp;hl=en">Reality Hacker</a> is a Google Cardboard App which is completely head-wrecking and full of awesome. It basically gives you a filtered view of what the phone camera can see. You immediately feel like you are in a Sci-Fi movie or you are Robocop. If you haven&rsquo;t bought a bunch of Google Cardboards as stocking fillers this Christmas, you and your Android-owning friends/family are missing out big time. I get mine from Elecfreaks in China but it&rsquo;s a long wait. I assume someone in Europe is dong them at this stage?</p></li>
+
+<li><p><strong>Just Dance</strong> - <a href="http://www.google.com/intl/en_ie/chrome/devices/chromecast/index.html">Chromecast</a> is another bloody bargain that we aren&rsquo;t using massively but I still like the fact that it is there. It can do a lot more than Netflix. Once I explained to the 8yo that she can cast any YouTube video from her Hudl to the TV, she was hooked. But the app that showed what&rsquo;s really possible with a €39 TV dongle is <a href="https://play.google.com/store/apps/details?id=com.ubisoft.dance.JustDance&amp;hl=en">Just Dance Now</a>. Instead of the usual Wii and Wiimotes that we use in our house for Just Dance, you use your Android phone, a free App and Chromecast. It works perfectly. The kids were very impressed. The only teeny tiny downside is that they are now moving their arms around quickly with a large €600 phone in their hands rather than a small cheap Wiimote!</p></li>
+
+<li><p><strong>Chromebooks</strong> - Still waiting for the perfect Chromebook that I can dual-boot into Linux. It seems <em>all</em> Chromebooks on Amazon UK are 2GB only, which is ridiculous. I want 4GB, 32GB SSD, 13&rdquo;, a Haswell CPU and non-disastrous build quality. Too much to ask?</p></li>
+
+<li><p><strong>Stupid MBP</strong> - If Apple are such design geniuses, why do MBPs still have a Caps Lock key and the utterly ridiculous § key? Do yourself a favour and install both <a href="https://pqrs.org/osx/karabiner/index.html.en">Karabiner</a> and <a href="https://pqrs.org/osx/karabiner/seil.html.en">Seil</a>. Caps Lock is now a second Shift key for me and the stupid key is now #.</p></li>
+
+<li><p><strong>iBeacons and BLE</strong> - <a href="http://developer.radiusnetworks.com/2014/11/18/beacon-transmission-with-android-5.html">Android 5.0</a> now lets phones act as (i)-Beacons. Very useful for event check-in.</p></li>
+
+<li><p><strong>Plex Media Server</strong> - I&rsquo;ve had a few goes at installing Plex over the years but never had much success with it. I hate &ldquo;library&rdquo; features on most media apps (glares at almost all Android music players) and much prefer a folder view of the world. But Plex gets very confused if it finds multiple directories called something like &ldquo;Season 1&rdquo;. So after a big media clean-up on directory names, it now seems to work ok. We need it in our house due to the inability to install XBMC on iOS devices and their lack of any media playing app that can use SMB shares. So far so good and they have just announced the one thing I needed before I let the kids use Plex - <a href="https://blog.plex.tv/2014/11/20/introducing-plex-home/">family controls</a>.</p></li>
+
+<li><p><strong>Hook.io</strong> - Marak, one of the original founders of a certain Node company, is back promoting his <a href="https://github.com/bigcompany/hook.io">hook.io</a> platform again. Very interesting approach to webhooks and micro-services. Open source now too.</p></li>
+
+<li><p><strong>Hackathons</strong> - I cringed recently at a conference in London where some big name tech companies were running a &ldquo;hackathon&rdquo;. Participants were directed to build web-apps which had to use the &ldquo;sponsors&rdquo; products and which would result in some really shitty prizes. A Raspberry Pi, for fucks sake, all £35 worth. I was stunned to see people had turned up to waste their day working for free for someone else on this. To what end? Which is why I adore <a href="http://lav.io/2014/11/stupid-projects-from-the-stupid-hackathon/">Stupid Projects from the Stupid Hackathon</a> which has the best/worst ideas from the Stupid Shit No One Needs &amp; Terrible Ideas Hackathon.</p></li>
+
+<li><p><strong>Espruino</strong> - I&rsquo;m really delighted that the <a href="https://www.kickstarter.com/projects/gfw/espruino-pico-javascript-on-a-usb-stick">Espruino Pico Kickstarter</a> by Gordon Williams got backed and hit several of the stretch goals. The idea of a tiny USB stick that can emulate a KB/Mouse and is fully programmable to control hardware in JavaScript via your Chrome browser is just too cool. It also has Scratch-style blocks programming. I said it already on Twitter but I think this might be a better tool than raw Arduino for getting kids into programming and hacking and hardware. But it needs a bigger community of contributors which I hope it&rsquo;ll get from all the Pico backers. Speaking of which, I am 7 months overdue doing a full debug of the NRF24L01 code to figure out why they can talk Espruino to Espruino and Arduino to Arduino but not Espruino to Arduino or vice versa.</p></li>
+
+<li><p><strong>Wireless Comms</strong> - Also speaking of the NRF24L01, <a href="https://github.com/TMRh20/RF24">this branch</a> of the main Arduino and Raspberry Pi library seems a lot better than the one I used previously. Next week I&rsquo;ll blog about my wireless switch which uses the sample code with a few tiny changes.</p></li>
+
+<li><p><strong>Hot and Sticky</strong> - I love hot glue but so far I&rsquo;ve hated hot glue guns. Unreliable, clunky, awkward pieces of crap that take 5+ minutes to heat up. Then a few weeks ago, I discovered the <a href="http://www.amazon.co.uk/Bosch-Lithium-Ion-Cordless-Glue-Pen/dp/B00CI8FDUO">Bosch GluePen</a>. A lithium battery powered piece of brilliance that charges via micro-USB and heats up in 10 seconds. 10 seconds! Of course I bought one. Love it to bits.</p></li>
+
+<li><p><strong>Ron Swanson</strong> - <a href="https://www.youtube.com/watch?v=Q8gGsuWouDE">Nick Offerman&rsquo;s Handcrafted Wood Emojis</a>. Nuff said.</p></li>
+
+<li><p><strong>Lenovo and Dabs Hell</strong> - Absolutely horrendous experience buying a Lenovo E555 laptop from dabs4work.ie. I&rsquo;ve been a Dabs customer for absolutely years and previously never had hassle with them, even with returns. But they now have a brain-dead policy that you must deal with the manufacturer first to arrange an RMA and only then contact them. The E555 that arrived was a piece of garbage. The space bar was hanging off, the keyboard looked like it cost 15c to make, the screen was randomly covered in colour blocks, the USB ports would&rsquo;t recognise a mouse and the whole machine froze solid every few minutes and needed a hard reboot. It took days of trying to ring Lenovo/IBM/Medion (which one depended on who you talked to) to get a return approved. Eventually I got an email saying I had contacted the wrong department followed 10 minutes later by an RMA approval! Complete clowns. Avoid avoid avoid Lenovo. Then I got on to Dabs where I clicked &ldquo;arrange collection&rdquo; which of course failed on the last step. This was followed by a series of emails, at a rate of one per day, where I tried to arrange collection. The courier arrived 2 days after promised and I finally got a refund whereby I immediately bought an Acer on Amazon instead. 18 days of grief spells the end of a very long buying relationship with Dabs. When are these companies going to realise that people may come for prices but they stay for customer service (ditto Google Compute Engine). In comparison I bought some second hand DDR2 memory from an eBay seller in the UK. One of the RAM modules was faulty. They sent me a replacement immediately and asked me to return the dodgy one only when I got it. That&rsquo;s how you keep repeat business.</p></li>
+</ul>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">28 Nov 2014, 14:39</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/some-personal-thoughts-on-the-red-hat-acquisition-of-feedhenry/" class="post-title">Some personal thoughts on the Red Hat acquisition of FeedHenry</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>The acquisition of FeedHenry by Red Hat isn&rsquo;t just one the most exciting tech stories in Ireland in 2014, it is also wonderfully satisfying for me as one of only two people in Product Management.</p>
+
+<p>When I found out that Red Hat was negotiating to buy the company, I couldn&rsquo;t have been happier. Apart from the almost perfect cultural fit, it was very cool to be joining a company whose products I first used in 1997 with Red Hat Linux 4. By 1999, I told my CTO in Integral Design that PCs running Red Hat Linux would wipe his beloved Sun out. To be fair to him, he agreed. A day hasn&rsquo;t gone by since &lsquo;97 that I haven&rsquo;t had Linux running somewhere, whether in skunkworks boxes under my desk; using VMware from &lsquo;99; powering my startup from 2006 onwards; or powering FeedHenry from day 1.</p>
+
+<p>The acquisition itself brought a perfect end to an incredible year for me with FeedHenry as director of Product Management. When I joined in July 2013, we had an excellent developer product but one whose capabilities were often hard to find or use. Some development had begun on a complete re-vamp based on the same core technology but hadn&rsquo;t kicked into high gear yet.</p>
+
+<p>The most important thing for me and our VP of Product and Services, Javier Perez, was to get a really productive relationship cemented between Product, Engineering, Ops and Sales/Pre-Sales. The other critical thing was to get a big customer, our own PS developers, heavily involved in the direction of the Product. Succeeding with this ensured that we didn&rsquo;t just achieve product-market fit, but we did it in a very effective way.</p>
+
+<p>We continued to release customer-driven new features and upgrades on the existing platform throughout 2013. As the year closed, we got the upcoming Product to a place where Sales could demo it to customers and we began giving ultra-early access to a select few as we moved into 2014. The feedback was phenomenal. Everyone wanted it now! But we continued to refine and improve and dogfood it until we were happy that we had leapfrogged absolutely everyone in the industry. Finally in April we released FeedHenry 3. Shortly afterwards, the acquisition was underway.</p>
+
+<p>We are now a few weeks post-closing and I realise daily just what a great fit the company and the product is with Red Hat and the middleware suite. In fact, a cross-functional team put together a demo for the Devoxx conference in Antwerp 2 weeks ago which showed a real-world integration of FeedHenry with AeroGear and JBoss Fuse. If we can achieve that so quickly, you&rsquo;d better watch out for what&rsquo;s coming in 2015!</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Nov 2014, 16:10</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/some-thoughts-on-twitter-rebuilding-a-developer-ecosystem-and-how-they-might-succeed/" class="post-title">Some thoughts on Twitter rebuilding a developer ecosystem and how they might succeed</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>First some very detailed background.</p>
+
+<p><strong>The Beginning</strong>: I joined Twitter in Feb 2007 so that I could live-Tweet the Irish Blog Awards results via SMS. It was when Twitter finally clicked with me. 2007-2008 was a fantastic time to be on Twitter if you had even a modicum of programming ability. There&rsquo;s a chance it could be so again.</p>
+
+<p><strong>CorkProbs</strong>: Whilst <a href="http://www.loudervoice.com">LouderVoice</a> took up 95% of my time around then, the other 5% was thinking about all of the incredible things that Twitter facilitated. I was particularly proud of my CorkProbs app which let you send problems related to roads/water/lights by @&lsquo;ing CorkProbs. The idea was that people would send those via SMS so they didn&rsquo;t need a smartphone. I then took the RSS feed from that account and created a status site using Planet. There were only two problems with it. First, I never contacted Cork County Council to tell them to monitor it and second, there were probably only 20 people in Cork on Twitter at the time!</p>
+
+<p><strong>Mini-Reviews</strong>: My other inspired App was <a href="http://twitter.com/review">@review</a> where you could send a specially structured review Tweet and we would aggregate those reviews into LouderVoice. Again we were trying to do things on Twitter long before critical mass, so it never took off.</p>
+
+<p><strong>Login with Twitter</strong>: I stopped the personal experiments when OAuth came in but we added Twitter Login to LouderVoice as soon as it was launched. Of the three identity options used by reviewers on LouderVoice, email is about 99%, Facebook is about 1% and Twitter is about 0.00000001%. In fact, in the entire time the LouderVoice business reviews service has been in operation, I think we&rsquo;ve had fewer than 20 logins via Twitter.</p>
+
+<p><strong>HushVine</strong>: In 2011 we kicked off <a href="http://www.hushvine.com/">HushVine</a> which was initially designed to be the ultimate Twitter filtering service. It would show you all the stuff you found interesting and hide all the crap and it would do it in a sharable way (&ldquo;show me the best of the World Cup&rdquo; or &ldquo;hide every tweet about the goddammed World Cup&rdquo;). We did some really successful widget proofs of concept with The Irish Examiner for the Irish Presidential election and Budget and also did a mobile app for Web Summit. Once we took part in the LaunchPad accelerator program, we narrowed it to TV and got some strong interest from local media organisations. But the Twitter API changes, Tweet-display changes, firehose changes and Twitter&rsquo;s own interest in TV told me we&rsquo;d be roadkill, so we put it on ice. I&rsquo;m currently reading the Twitter book and finally getting some insight into those decisions by Twitter.</p>
+
+<p><strong>Alternatives</strong>: So we got to 2014 and I&rsquo;d done the Jaiku thing, the status.net thing, the Buzz thing, the Google+ thing, the App.net thing and the Twister thing and yet I kept coming back to Twitter as a user. But under no circumstances would I consider building anything on Twitter as I&rsquo;d just be waiting for the rug to be pulled out from under me without warning (cf Facebook too).</p>
+
+<p><strong>Fabric</strong>: And then last month Twitter announced <a href="https://dev.twitter.com/products/fabric">Fabric</a> and I had to take a step back and think about things again.</p>
+
+<p>I&rsquo;ve had a lot of titles in my career from Engineer to CEO to Director of Product Management, but I&rsquo;ve realised that even from my first job, I was always a Product Manager. I was never responsible for just &ldquo;the code&rdquo;, I almost always had to figure out exactly what it was the customer wanted to ship overall because they rarely knew themselves. Design Services and Professional Services are a great learning environment for this. Even when writing Interrupt Service Routines I was also generating powerpoint decks about the entire product&rsquo;s features &amp; benefits for others to use. What that has given me is an ability to look at individual Engineering features on their own merit but then set them in the context of the overall product and/or platform.</p>
+
+<p>Which is why I find Fabric extremely interesting. I think this first micro-step in Twitter regaining developer confidence could succeed if they can provide a <em>stable</em> platform that benefits everyone: users, Twitter, advertisers and third party developers.</p>
+
+<p><strong>Platform</strong>: And that&rsquo;s the point, Twitter has always been a platform to me, not a site. It&rsquo;s a way of quickly getting information from those who have it to those who want it.</p>
+
+<p>By taking a monetisable platform approach (note, not a dumb pipe), we can all benefit and Twitter can undo some of their most controversial decisions from the past, specifically the hard limits on third party client tokens. I completely understand why this was done due to the threat from UberMedia but I also think it has been holding the user growth back hugely.</p>
+
+<p>Most of my Twitter interaction nowadays is via Tweetcaster Pro and Janetter but why couldn&rsquo;t I have an X-Factor Twitter Client or a One Direction Client? Something that is both specific to a brand but also a full-blown Twitter client with rev-share? It seems nuts to me that I pay the creators of Tweetcaster/Janetter some small one-off fee for their app to access Twitter, none of which goes to Twitter but then there aren&rsquo;t even ads in those apps. The key to being able to build rich apps is obviously Gnip and the firehose. But rather than Gnip being something a developer pays for, it should be a freely accessible programmable datasource with contextual advertising in-lined and rev-shared.</p>
+
+<p><strong>Ads</strong>: As a user, I remain shocked at how bad both Twitter and Facebook are at targeted advertising. I have close to 50,000 tweets and years of Facebook updates but I&rsquo;ve never once seen an ad on either site that I would click on. I&rsquo;m pretty clear with my purchase intent on Twitter, heck I even Tweet what KickStarter projects I back. But nothing useful, ever.</p>
+
+<p>Again, this can be solved by a platform approach where third party developers deliver specific demographic groups to Twitter which generates the relevant ads and offers rev-share. <em>TwAdsense</em>. And the thing is, this doesn&rsquo;t even need logged-in Twitter users, just vertical apps that use the platform to grab information of relevance for their user niches. Whilst Twitter&rsquo;s MoPub has a classic Ad Network model, it looks like the developer has to do all the work around targeting. It also doesn&rsquo;t seem that related to Twitter per-se, just mobile in general.</p>
+
+<p><strong>TV</strong>: Then Twitter doesn&rsquo;t have to worry about &ldquo;doing TV&rdquo; or &ldquo;doing sports&rdquo;, it just has to provide the platform base to allow others to do that. In the specific case of TV, the on-screen integrations have become ridiculous. Two examples - MythBusters where Twitter was taking up <sup>1</sup>&frasl;<sub>3</sub> of the screen and Big Driver where we were encouraged to Tweet along, whilst a woman was being sexually assaulted in the TV show. Twitter is a second screen experience and trying to dominate the first screen is deeply intrusive, like the worst kind of product placement.</p>
+
+<p><strong>Mobile</strong>: Fabric&rsquo;s focus on mobile is absolutely the right thing to do. I love <a href="https://dev.twitter.com/products/digits">Digits</a> for its beautiful simplicity. As I said on Twitter when it launched:</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p>Telcos have had 8 years to build a Twitter based entirely on your phone number. Now Twitter has done it instead. Nice move. <a href="https://twitter.com/hashtag/twitterflight?src=hash">#twitterflight</a></p>&mdash; Conor O&#39;Neill (@conoro) <a href="https://twitter.com/conoro/status/524979885799137281">October 22, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>But, <a href="http://scripting.com/2014/10/23/twittersAnnouncement.html">Dave Winer is right</a>, all the Fabric services absolutely have to get a JS implementation. Not just for Cordova Apps but also to reinvigorate Twitter web-app development. Like Dave, I&rsquo;m a huge fan of <a href="https://www.dropbox.com/developers/datastore/docs/js">Dropbox&rsquo;s JS approach</a>. In fact I&rsquo;ve recently wondered if you could build a Twitter clone for your friends where Dropbox is that platform :-)</p>
+
+<p><strong>Old Media</strong>: Why shouldn&rsquo;t a person&rsquo;s entire Twitter interaction happen on the New York Times site? Not just using the old branded Twitter widgets but an entirely custom NYT UI where, yet again, it&rsquo;s based around Ad rev-share. This is the complete opposite of Facebook where they want everything to happen on FB. Twitter should be old media&rsquo;s best friend against Facebook, giving them new revenue streams and new ways to get people on their site.</p>
+
+<p><strong>Direct Messages</strong>: Seriously Twitter, Digits + Direct Messages = WhatsApp. It&rsquo;s time to make DMs a first class citizen in the platform. You want stratospheric user growth? DMs! My 72 year old mother has just joined WhatsApp on her Nokia S40 phone so she can IM from Kilkenny in Ireland to her grandson in New York. He&rsquo;s on Twitter. She could be on Twitter with Digits+DMs.</p>
+
+<p><strong>Lists+Filters</strong>: I know I know. Lists never get much use on any site, including Twitter and Facebook. Except, I couldn&rsquo;t deal with either site without them. Lists on Facebook get rid of the goddammed algorithmic filtering and my &ldquo;Mobile&rdquo; List on Twitter is where I spend most of my time reading.</p>
+
+<p>A combination of shareable Powerful Lists+Filters would make Twitter infinitely more accessible to a much bigger audience. What are you interested in? Soccer? What Team? Liverpool? Bam - a pre-canned filtered Liverpool FC bundle ready to go, that may have been crowd-sourced, not created by Twitter. Forget the concept of following people for users like this, they should follow filtered lists. This was basically the HushVine concept and it&rsquo;s still valid. And can you think of a more perfectly tuned advertising audience? One based on interests.</p>
+
+<p><strong>Aside, Power-user rant</strong>: Speaking of algorithms, unless Twitter has invented Skynet in the past few months, their chances of showing me tweets I want to see are zero. They still think the person most suitable for me to follow is Barack Obama. Nice guy I&rsquo;m sure, no interest in following him on Twitter. If they add algorithmic insertion of tweets, it has to be optional or they&rsquo;ve just become Facebook. But the reason we love Twitter is that it isn&rsquo;t Facebook.</p>
+
+<p><strong>Useful Big Data</strong>: Of course 2014 is all about the IoT hawtness but I&rsquo;ve always thought that Twitter should be the conduit for useful IoT info. I wired the Bandon Flood Warning system into Twitter years ago. Now it is done manually but it still has quite a few locals following it for those alerts. I&rsquo;ve always been amazed that Twitter or others haven&rsquo;t built big-data analysis of the geo-movement of storm/hurricane tweets and then layered useful commercial information on top. So many useful tweets crying out to be Hadooped, used and monetised. Watching popular hashtags or search terms in the early days was a joy. Trying to do it during any major event in recent years has been ridiculous. I end up back watching human-curated stuff elsewhere. Twitter was supposed to replaced that with smarts. And if it can&rsquo;t, let others do it without putting roadblocks in their way.</p>
+
+<p><strong>Win, Win, Win, Win</strong>: So in summary, yes, Twitter can re-build the developer ecosystem but it&rsquo;s not going to be easy and there has to be a very clear immediate revenue-based ROI for developers to start using the Fabric tools and whatever else is coming next. Even more than trust, what Twitter has to offer is guaranteed stability/continuity. No more rug-pulling, no more sun-setting, no more competing with developers. There is absolutely no reason why Twitter can&rsquo;t be bigger than Facebook, but they&rsquo;ll need developers to get them there.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">30 Oct 2014, 09:24</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/as-promised-yet-more-tech-goodie-backlog-for-your-entertainment/" class="post-title">As promised, yet more tech goodie backlog for your entertainment</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>This time it&rsquo;s more about software than hardware. But first, hardware.</p>
+
+<ul>
+<li><p><strong>Lightning</strong>: We had a lightning strike near our home a few weeks back and my main Windows desktop has been acting dodgy ever since. I swapped the PSU but that didn&rsquo;t help and finally came to the conclusion that some of the USB ports were damaged on the motherboard. One replacement Gigabyte 970A-DS3P later and all seems to be well. I also replaced an older hard-disk that sounded like a machine-gun since day 1 with a combo one that has a small amount of SSD. The silence is a joy.</p></li>
+
+<li><p><strong>Node.js</strong>: I built a small mini stats portal for a side-project in Node.js with a bit of Bootstrap, Google Charts and Passport. I still believe that a lot of Node&rsquo;s power comes from the ecosystem and community. There are just so many good tutorials and sample applications out there that you can always find a good starting point. For example <a href="http://scottksmith.com/blog/2014/10/05/twitatron-building-a-production-web-app-with-node/">this one</a>. This also means that you have the combined knowledge of a ton of people who have sorted out nasties like CSRF, CORS, Auth, etc. already. Everything I&rsquo;ve done has been based on Express and MongoDB but <a href="http://hapijs.com/">HAPI</a> is starting to get that community energy too. My first failed attempt at that portal was in Go, which leads nicely to&hellip;.</p></li>
+
+<li><p><strong>Go</strong>: I&rsquo;ve also been playing around with <a href="https://golang.org/">Go</a> (#golang) which is a very interesting language built by Robert Griesemer, Rob Pike, Ken Thompson and others in Google. Anyone who knows C will feel very comfortable with it. It&rsquo;s like C with all the badness removed. I took to it like a duck to water and found it extremely easy to learn and become productive with. It&rsquo;s designed as a language for server apps and my first real app was a re-write of a database maintenance tool that started in Python, moved to Node.js and is now running perfectly in Go. The whole workflow around Go is a real strength and I can see why it&rsquo;s gaining a lot of traction in the past 24 months with companies like Bitly, Docker, Apcera etc. Its two main weaknesses are not language related. First is the small size of the community - you cannot &ldquo;program via Stack Overflow&rdquo; the way you can with Node, there just isn&rsquo;t the volume of information out there. Second is the state of Go web frameworks - there seems to be a strong anti-framework mindset in the community which thinks everyone should build from first principles. That&rsquo;s fine for full-time hardcore developers but it puts off tinkerers like me who find frameworks a nice entry point into a language. So whilst full-stack frameworks like <a href="http://beego.me/">Beego</a> have great potential (as do smaller ones like <a href="http://revel.github.io/">Revel</a> etc), the number of developers is tiny and once again you are back to the community-size and availability of learning-material problem. So for the moment I&rsquo;m going to focus on using it for tools, utilities and some fun stuff on the Raspberry Pi. Actually, the fact that it works seamlessly across Windows, OSX, Linux and generates static binaries for them is one of the other reasons I like it so much. If you have an hour, watch Rob Pike&rsquo;s <a href="http://www.youtube.com/watch?v=VoS7DsT1rdM">wonderful keynote at GopherCon</a> in April where he deconstructs hello world.</p></li>
+
+<li><p><strong>Re-factoring</strong>: A major mistake I made back in 2008 was taking a short-cut and telling a developer to build a start-up’s Admin back-end on top of Django Admin. Initially it made lots of sense when most of the functionality was just interacting with the models, but as soon as you try to do anything new, you realise you have to do it as a bloody mishmash of hacks, workarounds and copy/pasted code. In a way I&rsquo;m contradicting the previous point I made about Go but actually the error was more about not biting the bullet and re-implementing the Admin from scratch in the early days, once the initial prototype had done its job. The question now is whether it would be worth someone&rsquo;s time, even as a multi-weekend/Christmas learning exercise, to re-do in Node and Express. The system actually started as a Turbogears application so this wouldn&rsquo;t be the first time to make such a move!</p></li>
+
+<li><p><strong>Win8.1</strong>: Switched from Windows 7 to Windows 8.1. It&rsquo;s still getting in the way and slowing me down, but less so than Win 8.0. The driver-signing nonsense is still infuriating, as is the method of turning that off. However I did learn the WinKey-X short-cut which gives you quick access to everything you need like Control Panel, Command Prompt and Shut-down menu.</p></li>
+
+<li><p><strong>Harp.js</strong>: This static blog you are reading is hosted on <a href="https://pages.github.com/">GitHub Pages</a> and generated by <a href="http://harpjs.com/">Harp.js</a>. I&rsquo;m still a big fan of Harp and I&rsquo;m thrilled it now works end-to-end on Windows. Just install Node.js and do npm install -g harp. I used to have a plethora of WordPress sites and blogs but after the relentless hacks of <sup>2013</sup>&frasl;<sub>2014</sub>, I&rsquo;m done with it. I have two sites left to port over to being based on Harp.js and then it&rsquo;s buh-bye WordPress/PHP/MySQL/Insert-name-of-security-hole-riddled-plugin-here. We all moved to WordPress from Blogger/MT/etc for its ease of use and quick install but I think the move away will become a flood as people grow tired of the upgrade treadmill. The next major version of WordPress should be about security not just of the core but of every plugin too.</p></li>
+
+<li><p><strong>Inbox</strong>: Got an invite to Google Inbox. Once signed up, I spent my entire time worried I was missing an email or that I&rsquo;d accidentally archived it or trying to find the &ldquo;Mark as Unread&rdquo; button in Chrome. Sorry Google, but my first 5 minutes on GMail were a complete joy back in the day, whilst Inbox was an exercise is &ldquo;what&rsquo;s the actual point here, apart from being different?&rdquo;.</p></li>
+
+<li><p><strong>IRC</strong>: It&rsquo;s huge in Red Hat. I really love using it. Could it have a resurgence or will it go the way of Usenet? I&rsquo;m using <a href="http://hexchat.github.io/">HexChat</a> on Windows which is rather good. I think the mIRC UI is what kept me away for all those years.</p></li>
+
+<li><p><strong>Linux</strong>: I&rsquo;m moving from Ubuntu/Lubuntu/Mint in all my VirtualBox VMs to CentOS 7 and Fedora 20. Apart from yum instead of apt-get, there really isn&rsquo;t that much difference for normal day-to-day stuff. I can install all the usual tools and work as I did previously. The lack of window minimise/maximise/close buttons on Fedora is completely ridiculous tho.</p></li>
+
+<li><p><strong><a href="https://www.docker.com/">Docker</a></strong>: Cos, SEO :-) But srsly, I&rsquo;ve been kicking off some Docker instances of Mongo and Node apps inside a VBox VM and liking it a lot. Setting up the inter-instance networking is a bit of a pain tho. One thing that bothers me is the initial promise of tiny images seems to have fallen by the wayside. You really should avoid playing with it on home broadband if your base OS is different to the base OS used to build the image you want to play with. Also be very specific about what version of something you want or it&rsquo;ll download all available versions.</p></li>
+
+<li><p><strong>OpenShift</strong>: Doing a bit of playing with Red Hat&rsquo;s <a href="https://www.openshift.com/products/online">OpenShift</a> PaaS. So far so good but I haven&rsquo;t gone much further than Node.js hello world.</p></li>
+
+<li><p><strong>GoRead</strong>: Discovered a brilliant RSS reader a few months ago called <a href="https://www.goread.io/">GoRead</a> that looks and acts a lot like good old Google Reader. This one is written in Go and you have to self-host. But I was thrilled to find that I can host it on Google App Engine on the free tier. I&rsquo;ve stopped using all the centralised readers like Feedly since.</p></li>
+
+<li><p><strong>Bitbucket</strong>: I don&rsquo;t think many people realise that <a href="https://bitbucket.org/">BitBucket</a> has most of the same features as GitHub but provides private repos for free. Its only real flaws are the lack of a GitHub Pages equivalent and the lack of 2 Factor Authentication (which is really unforgivable at this stage.)</p></li>
+
+<li><p><strong>Pinboard</strong>: I finally dumped Delicious a few months back and paid the tiny few quid to get a <a href="https://pinboard.in/u:conoro">Pinboard</a> account. Not only is it a great bookmarking service that just works (and works quickly), the guy who runs it has one of the <a href="https://twitter.com/pinboard">best Twitter accounts</a> out there. It was able to import all of my Delicious bookmarks and the IFTTT  and Twitter integrations means that all my tweeted links, re-tweets and favourites automatically get saved as bookmarks.</p></li>
+
+<li><p><strong><a href="http://janetter.net/">Janetter</a></strong>: It&rsquo;s still the best Tweetdeck-multi-column-style Twitter client on Windows and OSX (but not brilliant on Android). The word/user filters alone would cause me to pay many many Euro for it but the regex filters make it invaluable.</p></li>
+</ul>
+
+<p>More tomorrow.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">29 Oct 2014, 11:21</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/months-behind-in-my-blogging-here-are-some-tech-things-for-your-enjoyment-that-have-caught-my-eye-recently/" class="post-title">Months behind in my blogging. Here are some tech things for your enjoyment that have caught my eye recently</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Once you get out of the habit of blogging it can take ages to get back in the zone. A week&rsquo;s vacation this week should do the trick for me. This is partially a link dump and partially the subjects of a bunch of upcoming posts.</p>
+
+<ul>
+<li><p><a href="http://www.feedhenry.com/red-hat-to-acquire-feedhenry/">Red Hat acquired FeedHenry</a>. I first installed Linux in 2006 when working in San Jose and was a Red Hat user all through those early years and into the initial Fedora years. I launched a start-up on 2 CentOS servers. After a period in the Ubuntu wilderness, it feels like I&rsquo;m coming home :-)</p></li>
+
+<li><p>Bought a <a href="http://robosavvy.com/store/product_info.php/cPath/2050/products_id/4603">Printrbot Simple</a> - One of the cheapest 3d printers you can buy. Took me a lazy weekend to assemble. Still freaks me out that I can print plastic. Not using it as much as I&rsquo;d expected as I need to up-skill in CAD first but love being able to print STL files off the web on a whim. Print quality not amazing but for €400, I can&rsquo;t complain. Lots more posts coming on this. I&rsquo;ll probably be upgrading from the fishing line to proper belts and pulleys soon.</p></li>
+
+<li><p>Bought a <a href="http://www.seeedstudio.com/depot/DSO-Nano-v3-p-1358.html">DSO Nano oscilloscope</a> - When I walked out of UCD in 1992 I swore I&rsquo;d never touch an oscilloscope again as long as I lived. Far too many afternoons spent doing elec labs with those horrible unusable things. Turns out they are dead handy when you can&rsquo;t figure something out from software! Have decided to sit down and <a href="https://learn.sparkfun.com/tutorials/how-to-use-an-oscilloscope">learn how to use it properly</a>.</p></li>
+
+<li><p>Bought a <a href="http://www.seeedstudio.com/depot/Bus-Pirate-v36-universal-serial-interface-p-609.html">Bus Pirate</a> - This is a cool mini &ldquo;logic analyser&rdquo; that understands many common protocols like I2C, MIDI, SPI. I seem to spend inordinate amounts of time getting I2C and SPI working on my projects. This should finally help me figure out the nRF24L01 issues.</p></li>
+
+<li><p>Have been getting frustrated with most Arduinos being 5V whilst most modules nowadays are 3.3V. Level shifters are a pain. So I got some <a href="http://arduino.cc/en/Main/ArduinoBoardProMini">3.3V 8MHz Pro Minis</a> to deal with this. Two days of grief trying to get them working with one module before I finally figured out that they cannot do 115200 serial comms reliably. Grr.</p></li>
+
+<li><p>The <a href="http://www.electrodragon.com/product/esp8266-wi07c-wifi-module/">ESP8266</a> is a stunning piece of kit. It&rsquo;s a full Wi-Fi module and TCPIP stack on a tiny board for only $4.50. It works over a serial connection and can Wifi-enable the most basic of Arduinos. It has been a bit of a pain to get going with it since there are tons of conflicting blogposts out there about them. I&rsquo;m sure the stability will improve over time as the Open Source community focuses a lot of their attention on them. One important note is that they use a lot of power and you&rsquo;ll struggle to power them from a pin on an Arduino. This also means that long-term battery-powered operation is a no-no.</p></li>
+
+<li><p>The <a href="http://www.elecfreaks.com/store/unofficial-version-google-cardboard-p-773.html">Google Cardboard clones</a> I&rsquo;ve been getting from China are head-wreckers. It should not be this easy to give people a sense of Oculus Rift style VR. Sure they don&rsquo;t compare with Oculus but it&rsquo;s one of the first times I&rsquo;ve seen the kids blown away by a piece of tech. They just got it! For the sake of a tenner, you&rsquo;d be silly not to try it out. The Versailles demo and Google Earth are amazing. The simple roller-coaster is less so but you need to be sitting down!</p></li>
+
+<li><p>The <a href="https://store.kliidje.com/index.php/security-key.html">Plug-up security key</a> for 2 Factor Authentication is interesting. It&rsquo;s a cheap USB key that implements the FIDO U2F standard and gives you another way of authenticating for GMail (on Chrome only so far). I don&rsquo;t know if I&rsquo;ll keep using it but it&rsquo;s a damn sight quicker to use that the bloody Authenticator app on your phone.</p></li>
+
+<li><p>I finally got a proper soldering station. From 1984-2012 I used the one from my youth. Then two years with a crappy Draper iron from a local hardware shop with some usage of the €10 Lidl one. This <a href="http://www.aoyue.eu/aoyue-int937-soldering-station-smd-soldering-iron-esd-safe.html">Aoyue Int937</a> is a good quality Chinese clone of an older Hakko design. So far I&rsquo;m finding it extremely good. Even the reduction in waiting time from 5mins+ to 30 secs for it to heat up makes it worth it. German supplier sent to Ireland for €65 incl delivery.</p></li>
+
+<li><p><a href="http://www.eircom.net/efibreinfo/map">eFibre</a> is now available in Old Chapel, Bandon. You have no idea how big a deal this is for me. We&rsquo;ve been stuck on 6Mbs/384kbs for what feels like a decade. Things like backups, Dropbox, Webinars, Netflix etc etc have been torture. All our kids are intimately familiar with &ldquo;buffering&rdquo;. Given the closeness of the VDSL cabinet, we&rsquo;re hoping for the full 90Mbs. Fingers crossed.</p></li>
+
+<li><p>The <a href="http://www.exp-tech.de/Shields/Wireless/Bluetooth/redbearlab-ble-nano-mk20-usb-board.html">Red Bear BLE Nano Kit</a> is a superb way of getting into BLE, iBeacons etc. I&rsquo;m playing around with one for the <a href="https://github.com/google/physical-web/blob/master/documentation/getting_started.md">Google Physical Web</a> initiative. The idea is that every beacon just advertises a URL instead of some Apple-mandated/or-random UUID. So simple but actually quite profound. I got the kit from Exp Tech in Germany and they seem to be good value for electronics in general. €7 postage to Ireland for most things with advantage of Eurozone and speed of delivery.</p></li>
+
+<li><p>Speaking of the Red Bear kit, this is also my first experience of the ARM mbed online development studio. Wow, love it! It generates the binary and you download in the browser but the really impressive bit is that you drop the binary on the pseudo memory stick that the module presents to Windows and it auto-installs and runs the binary for you. So so so much better and slicker than the poxy USB-Serial messing on Arduino.</p></li>
+
+<li><p>I haven&rsquo;t been able to get the cheap <a href="http://www.aliexpress.com/store/915658">HM-10 BLE module</a> to work with Google Physical Web. The <a href="http://jnhuamao.cn/">Chinese manufacturer</a> sent me a one line &ldquo;just do X&rdquo; without explaining how, in response to my query. So I may have to give up on it and only use it as an iBeacon.</p></li>
+
+<li><p>Halloween is coming on Friday. Projects under-way. Less ambitious than before but should have some pics up on Saturday :-)</p></li>
+
+<li><p>I was disappointed that my 13 year old Mondeo uses a version of CAN bus that is incompatible with the fun <a href="http://www.dx.com/p/elm327-obd-bluetooth-diagnostic-interface-black-130325#.VFDV4fmsUwM">OBD-II bluetooth modules</a> that you can get for half-nothing online. If yours is newer, you can plug it in just under your right knee. However it worked beautifully on my wife&rsquo;s 10 year old Zafira. You have to remove the panel underneath the handbrake. The app you use on your Android phone is called Torque. It&rsquo;s really impressive to see all of your engine stats appearing on your phone. I&rsquo;d love to see us return to the old days where everyone was able to fix their own cars. I used to do a lot of the maintenance on my old Citroens (because, ye know, they&rsquo;re Citroens) but never touched the Mondeo until recently. I&rsquo;ve replaced both the coil pack and all the brake-pads myself but I&rsquo;d love to have been able to use the OBD-II to analyse the engine.</p></li>
+
+<li><p>The power of APIs - Just had a request this morning from someone who wants to make use of an API I launched in 2008. It had some updates in 2009 but hasn&rsquo;t been changed since then. It still works perfectly and is at the heart of a bunch of features and tooling/automation. I&rsquo;ve been saying it for years but you should do everything API-first. You should read <a href="http://apievangelist.com/">API Evangelist</a> regularly, he has this stuff nailed.</p></li>
+</ul>
+
+<p>OK, I&rsquo;ll probably do another batch of these tomorrow. For the moment, it&rsquo;s time to tie together a bunch of things I&rsquo;ve been playing with since 2012.</p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 2 of 73</span>
+    
+      <a href="/page/3/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

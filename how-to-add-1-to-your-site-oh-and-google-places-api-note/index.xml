@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How-To-Add-1-To-Your-Site-Oh-And-Google-Places-Api-Notes on Cross Dominant</title>
+    <link>http://conoroneill.net/how-to-add-1-to-your-site-oh-and-google-places-api-note/</link>
+    <description>Recent content in How-To-Add-1-To-Your-Site-Oh-And-Google-Places-Api-Notes on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jun 2011 18:59:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/how-to-add-1-to-your-site-oh-and-google-places-api-note/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Add &#43;1 to your site (oh and Google Places API Note)</title>
+      <link>http://conoroneill.net/how-to-add-1-to-your-site-oh-and-google-places-api-note/how-to-add-1-to-your-site-oh-and-google-places-api-note/</link>
+      <pubDate>Wed, 01 Jun 2011 18:59:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/how-to-add-1-to-your-site-oh-and-google-places-api-note/how-to-add-1-to-your-site-oh-and-google-places-api-note/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;How to Add +1 to your site (oh and Google Places API Note)&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;posterous_bookmarklet_entry&#34;&gt;
+&lt;blockquote class=&#34;posterous_long_quote&#34;&gt;
+&lt;h2&gt;Add +1 to your pages to help your site stand out&lt;/h2&gt;
++1 buttons let people who love your content recommend it on Google search&lt;/blockquote&gt;
+&lt;div class=&#34;posterous_quote_citation&#34;&gt;via &lt;a href=&#34;http://www.google.com/webmasters/+1/button/index.html&#34;&gt;google.com&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;Shur it can&amp;rsquo;t do any harm. Already adding to some of our sites. All we need now is Google&amp;rsquo;s Graph API.&lt;/p&gt;
+&lt;p&gt;How does a site stand out when millions of other sites have the same feature? Just wondering.&lt;/p&gt;
+&lt;p&gt;BTW, the Google Places API is now open to everyone. Disappointed there is no Reviews API.&lt;/p&gt;
+&lt;p&gt;Which reminds me, the Places API when it was in Beta had the same outcome as every other attempt I have made to get access to a Google Beta API. I never got any response when I filled out yet another Google Doc Form That No-one in Google Ever Reads.&lt;/p&gt;
+&lt;p&gt;Why do they bother with those forms? Don&amp;rsquo;t get me started on the /dev/null that is the Rich Snippets request form.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

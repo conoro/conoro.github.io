@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openvpn-On-Windows-8s on Cross Dominant</title>
+    <link>http://conoroneill.net/openvpn-on-windows-8/</link>
+    <description>Recent content in Openvpn-On-Windows-8s on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Mar 2013 08:52:11 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/openvpn-on-windows-8/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OpenVPN on Windows 8</title>
+      <link>http://conoroneill.net/openvpn-on-windows-8/openvpn-on-windows-8/</link>
+      <pubDate>Wed, 06 Mar 2013 08:52:11 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/openvpn-on-windows-8/openvpn-on-windows-8/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;OpenVPN on Windows 8&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m two months using Windows 8 64-bit on my desktop and I&amp;rsquo;m still ok with it. The only real weirdness is a lot of disk churning even when nothing is happening. I turned off indexing but to no avail.&lt;/p&gt;
+
+&lt;p&gt;The only major annoyance has been OpenVPN. Whilst it works fine when it&amp;rsquo;s on, the problem arises when I disconnect or shut it down. The routing gets all messed up and I cannot connect to any external site. The fix is to disable/re-enable the network adapter which is a total pain in the ass.&lt;/p&gt;
+
+&lt;p&gt;I did some searching but didn&amp;rsquo;t find anyone else having the same issue. But I did find that there is finally [a] a new version of OpenVPN and [b] a 64-bit version. Even better, &lt;a href=&#34;http://openvpn.net/index.php/open-source/downloads.html&#34;&gt;this official version&lt;/a&gt; works with saved passwords, which the old one didn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been running it all morning and testing disconnect/re-connect. All seems fine. So if you are a BlackVPN or similar user and you are having Win 8 issues, give it a go. Obviously, like all other versions of OpenVPN, run as Administrator.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

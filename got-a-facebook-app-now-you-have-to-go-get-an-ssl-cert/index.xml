@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Got-A-Facebook-App-Now-You-Have-To-Go-Get-An-Ssl-Certs on Cross Dominant</title>
+    <link>http://conoroneill.net/got-a-facebook-app-now-you-have-to-go-get-an-ssl-cert/</link>
+    <description>Recent content in Got-A-Facebook-App-Now-You-Have-To-Go-Get-An-Ssl-Certs on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Mar 2011 18:42:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/got-a-facebook-app-now-you-have-to-go-get-an-ssl-cert/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Got a Facebook App? Now you have to go get an SSL Cert.</title>
+      <link>http://conoroneill.net/got-a-facebook-app-now-you-have-to-go-get-an-ssl-cert/got-a-facebook-app-now-you-have-to-go-get-an-ssl-cert/</link>
+      <pubDate>Sun, 27 Mar 2011 18:42:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/got-a-facebook-app-now-you-have-to-go-get-an-ssl-cert/got-a-facebook-app-now-you-have-to-go-get-an-ssl-cert/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Got a Facebook App? Now you have to go get an SSL Cert.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;I got very confused on Friday when our old App which displays reviews on a Facebook Page Tab just disappeared from all the Pages it is on. Then I realised that most of those Pages were only showing the default Facebook Tabs. Where the hell did all the others go? I assumed the old tab needed an upgrade but wasn&amp;rsquo;t bothered as our new tab was ready.&lt;/p&gt;
+&lt;p&gt;Today I was deploying our new Tab and ran into exactly the same problem. Then I remembered seeing a new field when setting the app up called &amp;ldquo;Secure Canvas URL&amp;rdquo;. And suddenly the reason dawned on me.&lt;/p&gt;
+&lt;p&gt;I had turned on https as my default access method for Facebook earlier in the week. It helps avoid a lot of the security issues people have run into. But if you do that, then every app you interact with on Facebook now has to be accessible via https too!&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;So if you have an App and you haven&amp;rsquo;t turned on https access, do so now, or watch your usage stats fall off a cliff over the coming months.&lt;/p&gt;
+&lt;p&gt;And if you are a user wondering where the hell your favourite apps have disappeared to, now you know.&lt;/p&gt;
+&lt;p&gt;Off to GoDaddy I go to get another cert.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

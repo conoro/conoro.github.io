@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cross Dominant</title>
+    <link>http://conoroneill.net/</link>
+    <description>Recent content on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Sep 2015 17:35:11 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/feed/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</title>
+      <link>http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2/</link>
+      <pubDate>Tue, 29 Sep 2015 17:35:11 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2/</guid>
+      <description>&lt;p&gt;For some odd reason, Google and others stopped auto-generating armhf binaries of &lt;a href=&#34;https://www.chromium.org/Home&#34;&gt;Chromium&lt;/a&gt; last year. Version 37 was the last one I could find. Luckily the Ubuntu guys have been building it all along and their version 45 installs really easily on the &lt;a href=&#34;https://www.raspberrypi.org/blog/raspbian-jessie-is-here/&#34;&gt;all-new Debian/Raspbian Jessie&lt;/a&gt; on your Raspberry Pi 2.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_heart_chrome.png&#34; alt=&#34;Pi loves Chromium&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This was a surprise as this kind of thing usually degenerates into dependency hell.&lt;/p&gt;
+
+&lt;p&gt;Here you go:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;wget http://launchpadlibrarian.net/218525709/chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+wget http://launchpadlibrarian.net/218525711/chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+sudo dpkg -i chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It even appears correctly in your desktop menus!&lt;/p&gt;
+
+&lt;p&gt;Apart from security fixes and the latest Chromium features, you also get full access to most of the Apps and Extensions in the Chrome Web Store. This includes the &lt;a href=&#34;http://www.espruino.com/Order#distributors&#34;&gt;Espruino&lt;/a&gt; Chrome &lt;a href=&#34;https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo&#34;&gt;App&lt;/a&gt;, which means you or your kids now have everything you need to develop and deploy Embedded and IoT projects for under €100. Honestly, that&amp;rsquo;s revolutionary.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_plus_espruino_small.jpg&#34; alt=&#34;Pi loves Espruino&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi</title>
+      <link>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/</link>
+      <pubDate>Sun, 20 Sep 2015 13:03:54 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/</guid>
+      <description>
+
+&lt;p&gt;As an old Embedded guy who actually cares about resource usage, I&amp;rsquo;ve been bothered for quite a while by the number of trivial Node.js projects out there that require a full-blown MongoDB or MySQL server to operate. It&amp;rsquo;s a particular problem on the Raspberry Pi or small &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt; Droplets. In many cases a simple SQLite DB or TingoDB is more than sufficient.&lt;/p&gt;
+
+&lt;p&gt;If your Web App has 2 registered users and 100 visitors per day, may just maybe you don&amp;rsquo;t need MongoDB or MySQL. I have a set of small Node.js projects now where I use the following combinations and they all work well. Anything you are doing in-house on a Raspberry Pi should absolutely use one of these. In fact I&amp;rsquo;m not even sure recent Mongos run on the RPi 1?&lt;/p&gt;
+
+&lt;h2 id=&#34;dulcimer-levelup-and-leveldb:b9c1e366c3521fb5cdf8cf868ebc63d4&#34;&gt;Dulcimer, LevelUP and LevelDB&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/google/leveldb&#34;&gt;LevelDB&lt;/a&gt; and &lt;a href=&#34;https://github.com/Level/levelup&#34;&gt;LevelUP&lt;/a&gt; are well known and widely used. I think &lt;a href=&#34;https://github.com/fritzy/Dulcimer&#34;&gt;Dulcimer&lt;/a&gt; probably less so. It&amp;rsquo;s a &lt;a href=&#34;http://mongoosejs.com/&#34;&gt;Mongoose-ish&lt;/a&gt; ORM for LevelDB. I was able to tie it into &lt;a href=&#34;http://passportjs.org/&#34;&gt;PassportJS&lt;/a&gt; without much effort to handle users/sessions/etc. I have two setups using it and both have been running for many months on d&amp;rsquo;internet with zero problems. In one case it&amp;rsquo;s a small stats dashboard running on DigitalOcean with a few registered users who check it maybe once a day. The other one is a registration system for people requesting access to some internal work resources. All submissions go into LevelDB. This is running on &lt;a href=&#34;https://www.openshift.com/products/online&#34;&gt;OpenShift Online&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;tingodb-and-tungus:b9c1e366c3521fb5cdf8cf868ebc63d4&#34;&gt;TingoDB and Tungus&lt;/h2&gt;
+
+&lt;p&gt;Of the NoSQL file-based databases, this seems to have the lowest profile and I think it deserves a &lt;em&gt;lot&lt;/em&gt; of attention. &lt;a href=&#34;https://github.com/sergeyksv/tingodb&#34;&gt;TingoDB&lt;/a&gt; emulates most of the common MongoDB APIs and &lt;a href=&#34;https://github.com/sergeyksv/tungus&#34;&gt;Tungus&lt;/a&gt; emulates most of the Mongoose ones. I was able to take a &lt;a href=&#34;https://github.com/sahat/tvshow-tracker&#34;&gt;random Node.js project&lt;/a&gt; off GitHub which is based on MongoDB/Mongoose/Mongoskin and get it running using TingoDB/Tungus on an RPi with only a tiny bit of fiddling with the &lt;a href=&#34;https://github.com/rschmukler/agenda/&#34;&gt;Agenda&lt;/a&gt; module. This is huge for those wanting to do NoSQL on Raspberry Pi. I&amp;rsquo;ll be playing a lot more with this setup in the coming weeks. You really should too.&lt;/p&gt;
+
+&lt;h2 id=&#34;sqlite-knex-and-bookshelf:b9c1e366c3521fb5cdf8cf868ebc63d4&#34;&gt;SQLite, Knex and Bookshelf&lt;/h2&gt;
+
+&lt;p&gt;Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&amp;rsquo;ve used &lt;a href=&#34;https://www.sqlite.org/&#34;&gt;SQLite&lt;/a&gt; many times over the years for simple projects and it has always worked well. I hadn&amp;rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&amp;rsquo;t need huge scale, you should be looking at SQLite. I&amp;rsquo;m currently wrapping up a simple in-house project using SQLite with &lt;a href=&#34;http://knexjs.org/&#34;&gt;Knex&lt;/a&gt; and &lt;a href=&#34;http://bookshelfjs.org/&#34;&gt;Bookshelf&lt;/a&gt; on a Raspberry Pi. The DB hold simple relationships between devices and their status.&lt;/p&gt;
+
+&lt;p&gt;The latter two setups above also have the big advantage that you can use them in development or in the early production stages and then you can drop in MongoDB or MySQL at a later stage if needed, without any re-coding.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Running ZeroMQ with Node.js on Raspberry Pi</title>
+      <link>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi/</link>
+      <pubDate>Sun, 20 Sep 2015 11:38:46 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://zeromq.org/&#34;&gt;ZeroMQ&lt;/a&gt; is a lightweight messaging library and looks ideal for lower powered devices like the RPi. Building and running is pretty easy. These are really just notes for myself for future reference.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t actually need a messaging system yet but I wanted to play around with one. Running a simple Request / Reply setup with Node.js on both Windows 10 and RPi was interesting. One advantage a message queue gives you over REST is that the receiver can be out of action and still get all transmitted messages when it recovers. You also have things like Pub/Sub etc. I&amp;rsquo;ve been running the code &lt;a href=&#34;http://blog.rastating.com/using-zeromq-with-node-js/&#34;&gt;from here&lt;/a&gt; 100% reliably for two days now on both setups. At some point I&amp;rsquo;ll check max throughput on a Pi.&lt;/p&gt;
+
+&lt;p&gt;Installation on Raspberry Pi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd
+sudo apt-get install libtool pkg-config build-essential autoconf automake
+mkdir build
+cd build/
+wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.3.tar.gz
+tar -zxvf libsodium-1.0.3.tar.gz
+cd libsodium-1.0.3/
+./configure
+make
+sudo make install
+cd ..
+wget http://download.zeromq.org/zeromq-4.1.3.tar.gz
+tar -zxvf zeromq-4.1.3.tar.gz
+cd zeromq-4.1.3/
+./configure
+make
+sudo make install
+sudo ldconfig
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Test code for Request / Reply &lt;a href=&#34;http://blog.rastating.com/using-zeromq-with-node-js/&#34;&gt;from here&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;server.js:
+```javascript
+var zmq = require(&amp;ldquo;zmq&amp;rdquo;);&lt;br /&gt;
+var socket = zmq.socket(&amp;ldquo;req&amp;rdquo;);&lt;br /&gt;
+var counter = 0;&lt;/p&gt;
+
+&lt;p&gt;// Just a helper function for logging to the console with a timestamp.
+function logToConsole (message) {&lt;br /&gt;
+    console.log(&amp;rdquo;[&amp;rdquo; + new Date().toLocaleTimeString() + &amp;ldquo;] &amp;rdquo; + message);
+}&lt;/p&gt;
+
+&lt;p&gt;function sendMessage (message) {&lt;br /&gt;
+    logToConsole(&amp;ldquo;Sending: &amp;ldquo; + message);
+    socket.send(message);
+}&lt;/p&gt;
+
+&lt;p&gt;// Add a callback for the event that is invoked when we receive a message.
+socket.on(&amp;ldquo;message&amp;rdquo;, function (message) {&lt;br /&gt;
+    // Convert the message into a string and log to the console.
+    logToConsole(&amp;ldquo;Response: &amp;ldquo; + message.toString(&amp;ldquo;utf8&amp;rdquo;));
+});&lt;/p&gt;
+
+&lt;p&gt;// Begin listening for connections on all IP addresses on port 9998.
+socket.bind(&amp;ldquo;tcp://*:9998&amp;rdquo;, function (error) {&lt;br /&gt;
+    if (error) {
+        logToConsole(&amp;ldquo;Failed to bind socket: &amp;ldquo; + error.message);
+        process.exit(0);
+    }
+    else {
+        logToConsole(&amp;ldquo;Server listening on port 9998&amp;rdquo;);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    // Increment the counter and send the value to the clients every second.
+    setInterval(function () { sendMessage(counter++); }, 1000);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;});
+```&lt;/p&gt;
+
+&lt;p&gt;client.js:
+```javascript
+var zmq = require(&amp;ldquo;zmq&amp;rdquo;);&lt;br /&gt;
+var socket = zmq.socket(&amp;ldquo;rep&amp;rdquo;);&lt;/p&gt;
+
+&lt;p&gt;// Just a helper function for logging to the console with a timestamp.
+function logToConsole (message) {&lt;br /&gt;
+    console.log(&amp;rdquo;[&amp;rdquo; + new Date().toLocaleTimeString() + &amp;ldquo;] &amp;rdquo; + message);
+}&lt;/p&gt;
+
+&lt;p&gt;// Add a callback for the event that is invoked when we receive a message.
+socket.on(&amp;ldquo;message&amp;rdquo;, function (message) {&lt;br /&gt;
+    // Convert the message into a string and log to the console.
+    logToConsole(&amp;ldquo;Received message: &amp;ldquo; + message.toString(&amp;ldquo;utf8&amp;rdquo;));&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// Send the message back aa a reply to the server.
+socket.send(message);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;});&lt;/p&gt;
+
+&lt;p&gt;// Connect to the server instance.
+socket.connect(&amp;lsquo;tcp://127.0.0.1:9998&amp;rsquo;);&lt;br /&gt;
+```&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?</title>
+      <link>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/</link>
+      <pubDate>Sun, 23 Aug 2015 14:42:32 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/</guid>
+      <description>&lt;p&gt;We had friends over from the US last weekend and their kids loved my &lt;a href=&#34;http://printrbot.com/project/simple-makers/&#34;&gt;Printrbot 3D printer&lt;/a&gt;. They had learned &lt;a href=&#34;https://www.tinkercad.com/&#34;&gt;Tinkercad&lt;/a&gt; in school so that&amp;rsquo;s what they used to create things so they could print them out. They are now hounding their parents for a printer. Oops :-) But I noticed a &amp;ldquo;Download to Minecraft&amp;rdquo; option in Tinkercad and finally just had a chance to try it out. Wow!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker02b.jpg&#34; alt=&#34;In Tinkercad&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://blog.tinkercad.com/2013/08/15/tinkercraft/&#34;&gt;It&amp;rsquo;s incredibly easy&lt;/a&gt;. Take any model from Tinkercad and pick the Minecraft option. You may have to tweak the sizing when you are doing it seriously. Then install the &lt;a href=&#34;http://www.mcedit.net/downloads.html&#34;&gt;MCEdit Minecraft editor&lt;/a&gt; and import the file into one of your worlds. Then load up Minecraft and thar she blows.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker01b.jpg&#34; alt=&#34;In Minecraft&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I totally love the intersection of 3D design, 3D printing and Minecraft - the real and the virtual coming together. The younger kids are gonna be psyched when I show em!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creating an OTP fob compatible with Google Authenticator using an Espruino Pico</title>
+      <link>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/</link>
+      <pubDate>Wed, 22 Jul 2015 08:14:26 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/</guid>
+      <description>&lt;p&gt;Now that the &lt;a href=&#34;http://www.espruino.com/&#34;&gt;Espruino Pico&lt;/a&gt; has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I&amp;rsquo;ve cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg&#34; alt=&#34;Espruino Pico OTP&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;This code is basically just from three sources, merged together with a few tiny tweaks by me.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Caligatio/jsSHA&#34;&gt;jsSHA, a JavaScript implementation of SHA/HMAC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/&#34;&gt;Generate Time-Based One-Time Passwords With JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.espruino.com/USB&#34;&gt;Espruino HID Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Note I&amp;rsquo;ve just discovered that Espruino has its own hmac implementation so I can possibly drop jsSHA)&lt;/p&gt;
+
+&lt;p&gt;The main thing you need for this is your Google Authenticator Secret. Unfortunately you can only get this when you have access to the original QR code that you scanned (it&amp;rsquo;s in the URL). But if you are setting up 2FA access to a new service e.g. Digital Ocean, then you can grab the secret and save it in the code. If your system also uses a PIN (e.g. SSO on some corporate sites), save that in the code too.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll need a very recent pre-release Firmware for this to work at all e.g. &lt;a href=&#34;http://www.espruino.com/binaries/git/commits/d3b43aab7efcc42e6f1584c340bd855b1e5af4c6/&#34;&gt;from here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Once that&amp;rsquo;s flashed, go into Settings on the Web IDE and make sure &amp;ldquo;Set Current Time&amp;rdquo; is ticked in the Communications section. Auth Fobs rely on having an accurate time and that setting keeps unsetting itself on my PC.&lt;/p&gt;
+
+&lt;p&gt;Now copy the code below onto the Espruino using the Web IDE and then type save() to make sure it can survive a power-cycle. Remove and re-insert the Pico, press the button and you should get the auth code you need.&lt;/p&gt;
+
+&lt;p&gt;Now for the bad news: This currently doesn&amp;rsquo;t work on my Windows 8.1 PC but works semi-reliably on my work MBP. Once the HID code makes it to production, I&amp;rsquo;m sure it will work fine.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// Code assembled by Conor O&#39;Neill from three sources. None of it copyright me.
+// This code copyright Brian Turek https://github.com/Caligatio/jsSHA https://github.com/Caligatio/jsSHA/blob/master/LICENSE
+&#39;use strict&#39;;(function(E){function t(c,a,e){var g=0,b=[],d=0,f,k,l,h,m,w,n,q=!1,r=!1,p=[],t=[],v,u=!1;e=e||{};f=e.encoding||&amp;quot;UTF8&amp;quot;;v=e.numRounds||1;l=y(a,f);if(v!==parseInt(v,10)||1&amp;gt;v)throw Error(&amp;quot;numRounds must a integer &amp;gt;= 1&amp;quot;);if(&amp;quot;SHA-1&amp;quot;===c)m=512,w=z,n=F,h=160;else throw Error(&amp;quot;Chosen SHA variant is not supported&amp;quot;);k=x(c);this.setHMACKey=function(a,b,d){var e;if(!0===r)throw Error(&amp;quot;HMAC key already set&amp;quot;);if(!0===q)throw Error(&amp;quot;Cannot set HMAC key after finalizing hash&amp;quot;);if(!0===u)throw Error(&amp;quot;Cannot set HMAC key after calling update&amp;quot;);
+f=(d||{}).encoding||&amp;quot;UTF8&amp;quot;;b=y(b,f)(a);a=b.binLen;b=b.value;e=m&amp;gt;&amp;gt;&amp;gt;3;d=e/4-1;if(e&amp;lt;a/8){for(b=n(b,a,0,x(c));b.length&amp;lt;=d;)b.push(0);b[d]&amp;amp;=4294967040}else if(e&amp;gt;a/8){for(;b.length&amp;lt;=d;)b.push(0);b[d]&amp;amp;=4294967040}for(a=0;a&amp;lt;=d;a+=1)p[a]=b[a]^909522486,t[a]=b[a]^1549556828;k=w(p,k);g=m;r=!0};this.update=function(a){var c,e,f,h=0,n=m&amp;gt;&amp;gt;&amp;gt;5;c=l(a,b,d);a=c.binLen;e=c.value;c=a&amp;gt;&amp;gt;&amp;gt;5;for(f=0;f&amp;lt;c;f+=n)h+m&amp;lt;=a&amp;amp;&amp;amp;(k=w(e.slice(f,f+n),k),h+=m);g+=h;b=e.slice(h&amp;gt;&amp;gt;&amp;gt;5);d=a%m;u=!0};this.getHash=function(a,e){var f,l,m;if(!0===
+r)throw Error(&amp;quot;Cannot call getHash after setting HMAC key&amp;quot;);m=A(e);switch(a){case &amp;quot;HEX&amp;quot;:f=function(a){return B(a,m)};break;case &amp;quot;B64&amp;quot;:f=function(a){return C(a,m)};break;case &amp;quot;BYTES&amp;quot;:f=D;break;default:throw Error(&amp;quot;format must be HEX, B64, or BYTES&amp;quot;);}if(!1===q)for(k=n(b,d,g,k),l=1;l&amp;lt;v;l+=1)k=n(k,h,0,x(c));q=!0;return f(k)};this.getHMAC=function(a,e){var f,l,p;if(!1===r)throw Error(&amp;quot;Cannot call getHMAC without first setting HMAC key&amp;quot;);p=A(e);switch(a){case &amp;quot;HEX&amp;quot;:f=function(a){return B(a,p)};break;case &amp;quot;B64&amp;quot;:f=
+function(a){return C(a,p)};break;case &amp;quot;BYTES&amp;quot;:f=D;break;default:throw Error(&amp;quot;outputFormat must be HEX, B64, or BYTES&amp;quot;);}!1===q&amp;amp;&amp;amp;(l=n(b,d,g,k),k=w(t,x(c)),k=n(l,h,m,k));q=!0;return f(k)}}function G(c,a,e){var g=c.length,b,d,f,k,l;a=a||[0];e=e||0;l=e&amp;gt;&amp;gt;&amp;gt;3;if(0!==g%2)throw Error(&amp;quot;String of HEX type must be in byte increments&amp;quot;);for(b=0;b&amp;lt;g;b+=2){d=parseInt(c.substr(b,2),16);if(isNaN(d))throw Error(&amp;quot;String of HEX type contains invalid characters&amp;quot;);k=(b&amp;gt;&amp;gt;&amp;gt;1)+l;for(f=k&amp;gt;&amp;gt;&amp;gt;2;a.length&amp;lt;=f;)a.push(0);a[f]|=d&amp;lt;&amp;lt;
+8*(3-k%4)}return{value:a,binLen:4*g+e}}function H(c,a,e){var g=[],b,d,f,k,g=a||[0];e=e||0;d=e&amp;gt;&amp;gt;&amp;gt;3;for(b=0;b&amp;lt;c.length;b+=1)a=c.charCodeAt(b),k=b+d,f=k&amp;gt;&amp;gt;&amp;gt;2,g.length&amp;lt;=f&amp;amp;&amp;amp;g.push(0),g[f]|=a&amp;lt;&amp;lt;8*(3-k%4);return{value:g,binLen:8*c.length+e}}function I(c,a,e){var g=[],b=0,d,f,k,l,h,m,g=a||[0];e=e||0;a=e&amp;gt;&amp;gt;&amp;gt;3;if(-1===c.search(/^[a-zA-Z0-9=+\/]+$/))throw Error(&amp;quot;Invalid character in base-64 string&amp;quot;);f=c.indexOf(&amp;quot;=&amp;quot;);c=c.replace(/\=/g,&amp;quot;&amp;quot;);if(-1!==f&amp;amp;&amp;amp;f&amp;lt;c.length)throw Error(&amp;quot;Invalid &#39;=&#39; found in base-64 string&amp;quot;);
+for(f=0;f&amp;lt;c.length;f+=4){h=c.substr(f,4);for(k=l=0;k&amp;lt;h.length;k+=1)d=&amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&amp;quot;.indexOf(h[k]),l|=d&amp;lt;&amp;lt;18-6*k;for(k=0;k&amp;lt;h.length-1;k+=1){m=b+a;for(d=m&amp;gt;&amp;gt;&amp;gt;2;g.length&amp;lt;=d;)g.push(0);g[d]|=(l&amp;gt;&amp;gt;&amp;gt;16-8*k&amp;amp;255)&amp;lt;&amp;lt;8*(3-m%4);b+=1}}return{value:g,binLen:8*b+e}}function B(c,a){var e=&amp;quot;&amp;quot;,g=4*c.length,b,d;for(b=0;b&amp;lt;g;b+=1)d=c[b&amp;gt;&amp;gt;&amp;gt;2]&amp;gt;&amp;gt;&amp;gt;8*(3-b%4),e+=&amp;quot;0123456789abcdef&amp;quot;.charAt(d&amp;gt;&amp;gt;&amp;gt;4&amp;amp;15)+&amp;quot;0123456789abcdef&amp;quot;.charAt(d&amp;amp;15);return a.outputUpper?e.toUpperCase():e}function C(c,
+a){var e=&amp;quot;&amp;quot;,g=4*c.length,b,d,f;for(b=0;b&amp;lt;g;b+=3)for(f=b+1&amp;gt;&amp;gt;&amp;gt;2,d=c.length&amp;lt;=f?0:c[f],f=b+2&amp;gt;&amp;gt;&amp;gt;2,f=c.length&amp;lt;=f?0:c[f],f=(c[b&amp;gt;&amp;gt;&amp;gt;2]&amp;gt;&amp;gt;&amp;gt;8*(3-b%4)&amp;amp;255)&amp;lt;&amp;lt;16|(d&amp;gt;&amp;gt;&amp;gt;8*(3-(b+1)%4)&amp;amp;255)&amp;lt;&amp;lt;8|f&amp;gt;&amp;gt;&amp;gt;8*(3-(b+2)%4)&amp;amp;255,d=0;4&amp;gt;d;d+=1)8*b+6*d&amp;lt;=32*c.length?e+=&amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&amp;quot;.charAt(f&amp;gt;&amp;gt;&amp;gt;6*(3-d)&amp;amp;63):e+=a.b64Pad;return e}function D(c){var a=&amp;quot;&amp;quot;,e=4*c.length,g,b;for(g=0;g&amp;lt;e;g+=1)b=c[g&amp;gt;&amp;gt;&amp;gt;2]&amp;gt;&amp;gt;&amp;gt;8*(3-g%4)&amp;amp;255,a+=String.fromCharCode(b);return a}function A(c){var a={outputUpper:!1,b64Pad:&amp;quot;=&amp;quot;};
+c=c||{};a.outputUpper=c.outputUpper||!1;a.b64Pad=c.b64Pad||&amp;quot;=&amp;quot;;if(&amp;quot;boolean&amp;quot;!==typeof a.outputUpper)throw Error(&amp;quot;Invalid outputUpper formatting option&amp;quot;);if(&amp;quot;string&amp;quot;!==typeof a.b64Pad)throw Error(&amp;quot;Invalid b64Pad formatting option&amp;quot;);return a}function y(c,a){var e;switch(a){case &amp;quot;UTF8&amp;quot;:case &amp;quot;UTF16BE&amp;quot;:case &amp;quot;UTF16LE&amp;quot;:break;default:throw Error(&amp;quot;encoding must be UTF8, UTF16BE, or UTF16LE&amp;quot;);}switch(c){case &amp;quot;HEX&amp;quot;:e=G;break;case &amp;quot;TEXT&amp;quot;:e=function(e,b,d){var f=[],c=[],l=0,h,m,p,n,q,f=b||[0];b=d||0;p=b&amp;gt;&amp;gt;&amp;gt;3;if(&amp;quot;UTF8&amp;quot;===
+a)for(h=0;h&amp;lt;e.length;h+=1)for(d=e.charCodeAt(h),c=[],128&amp;gt;d?c.push(d):2048&amp;gt;d?(c.push(192|d&amp;gt;&amp;gt;&amp;gt;6),c.push(128|d&amp;amp;63)):55296&amp;gt;d||57344&amp;lt;=d?c.push(224|d&amp;gt;&amp;gt;&amp;gt;12,128|d&amp;gt;&amp;gt;&amp;gt;6&amp;amp;63,128|d&amp;amp;63):(h+=1,d=65536+((d&amp;amp;1023)&amp;lt;&amp;lt;10|e.charCodeAt(h)&amp;amp;1023),c.push(240|d&amp;gt;&amp;gt;&amp;gt;18,128|d&amp;gt;&amp;gt;&amp;gt;12&amp;amp;63,128|d&amp;gt;&amp;gt;&amp;gt;6&amp;amp;63,128|d&amp;amp;63)),m=0;m&amp;lt;c.length;m+=1){q=l+p;for(n=q&amp;gt;&amp;gt;&amp;gt;2;f.length&amp;lt;=n;)f.push(0);f[n]|=c[m]&amp;lt;&amp;lt;8*(3-q%4);l+=1}else if(&amp;quot;UTF16BE&amp;quot;===a||&amp;quot;UTF16LE&amp;quot;===a)for(h=0;h&amp;lt;e.length;h+=1){d=e.charCodeAt(h);&amp;quot;UTF16LE&amp;quot;===a&amp;amp;&amp;amp;(m=d&amp;amp;255,d=m&amp;lt;&amp;lt;8|d&amp;gt;&amp;gt;&amp;gt;8);q=l+p;for(n=q&amp;gt;&amp;gt;&amp;gt;
+2;f.length&amp;lt;=n;)f.push(0);f[n]|=d&amp;lt;&amp;lt;8*(2-q%4);l+=2}return{value:f,binLen:8*l+b}};break;case &amp;quot;B64&amp;quot;:e=I;break;case &amp;quot;BYTES&amp;quot;:e=H;break;default:throw Error(&amp;quot;format must be HEX, TEXT, B64, or BYTES&amp;quot;);}return e}function r(c,a){return c&amp;lt;&amp;lt;a|c&amp;gt;&amp;gt;&amp;gt;32-a}function p(c,a){var e=(c&amp;amp;65535)+(a&amp;amp;65535);return((c&amp;gt;&amp;gt;&amp;gt;16)+(a&amp;gt;&amp;gt;&amp;gt;16)+(e&amp;gt;&amp;gt;&amp;gt;16)&amp;amp;65535)&amp;lt;&amp;lt;16|e&amp;amp;65535}function u(c,a,e,g,b){var d=(c&amp;amp;65535)+(a&amp;amp;65535)+(e&amp;amp;65535)+(g&amp;amp;65535)+(b&amp;amp;65535);return((c&amp;gt;&amp;gt;&amp;gt;16)+(a&amp;gt;&amp;gt;&amp;gt;16)+(e&amp;gt;&amp;gt;&amp;gt;16)+(g&amp;gt;&amp;gt;&amp;gt;16)+(b&amp;gt;&amp;gt;&amp;gt;16)+(d&amp;gt;&amp;gt;&amp;gt;16)&amp;amp;65535)&amp;lt;&amp;lt;16|d&amp;amp;65535}function x(c){if(&amp;quot;SHA-1&amp;quot;===
+c)c=[1732584193,4023233417,2562383102,271733878,3285377520];else throw Error(&amp;quot;No SHA variants supported&amp;quot;);return c}function z(c,a){var e=[],g,b,d,f,k,l,h;g=a[0];b=a[1];d=a[2];f=a[3];k=a[4];for(h=0;80&amp;gt;h;h+=1)e[h]=16&amp;gt;h?c[h]:r(e[h-3]^e[h-8]^e[h-14]^e[h-16],1),l=20&amp;gt;h?u(r(g,5),b&amp;amp;d^~b&amp;amp;f,k,1518500249,e[h]):40&amp;gt;h?u(r(g,5),b^d^f,k,1859775393,e[h]):60&amp;gt;h?u(r(g,5),b&amp;amp;d^b&amp;amp;f^d&amp;amp;f,k,2400959708,e[h]):u(r(g,5),b^d^f,k,3395469782,e[h]),k=f,f=d,d=r(b,30),b=g,g=l;a[0]=p(g,a[0]);a[1]=p(b,a[1]);a[2]=p(d,a[2]);a[3]=p(f,a[3]);
+a[4]=p(k,a[4]);return a}function F(c,a,e,g){var b;for(b=(a+65&amp;gt;&amp;gt;&amp;gt;9&amp;lt;&amp;lt;4)+15;c.length&amp;lt;=b;)c.push(0);c[a&amp;gt;&amp;gt;&amp;gt;5]|=128&amp;lt;&amp;lt;24-a%32;c[b]=a+e;e=c.length;for(a=0;a&amp;lt;e;a+=16)g=z(c.slice(a,a+16),g);return g}&amp;quot;function&amp;quot;===typeof define&amp;amp;&amp;amp;define.amd?define(function(){return t}):&amp;quot;undefined&amp;quot;!==typeof exports?&amp;quot;undefined&amp;quot;!==typeof module&amp;amp;&amp;amp;module.exports?module.exports=exports=t:exports=t:E.jsSHA=t})(this);
+
+// This code copyright Nic Raboy https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/
+TOTP = function() {
+
+    var dec2hex = function(s) {
+        return (s &amp;lt; 15.5 ? &amp;quot;0&amp;quot; : &amp;quot;&amp;quot;) + Math.round(s).toString(16);
+    };
+
+    var hex2dec = function(s) {
+        return parseInt(s, 16);
+    };
+
+    var leftpad = function(s, l, p) {
+        if(l + 1 &amp;gt;= s.length) {
+            s = Array(l + 1 - s.length).join(p) + s;
+        }
+        return s;
+    };
+
+    var base32tohex = function(base32) {
+        var base32chars = &amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ234567&amp;quot;;
+        var bits = &amp;quot;&amp;quot;;
+        var hex = &amp;quot;&amp;quot;;
+        for(var i = 0; i &amp;lt; base32.length; i++) {
+            var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
+            bits += leftpad(val.toString(2), 5, &#39;0&#39;);
+        }
+        for(var i = 0; i + 4 &amp;lt;= bits.length; i+=4) {
+            var chunk = bits.substr(i, 4);
+            hex = hex + parseInt(chunk, 2).toString(16) ;
+        }
+        return hex;
+    };
+
+    this.getOTP = function(secret) {
+        try {
+            var epoch = Math.round(new Date().getTime() / 1000.0);
+            var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &amp;quot;0&amp;quot;);
+            var hmacObj = new jsSHA(&amp;quot;SHA-1&amp;quot;, &amp;quot;HEX&amp;quot;);
+			hmacObj.setHMACKey(base32tohex(secret), &amp;quot;HEX&amp;quot;)
+			hmacObj.update(time);
+            var hmac = hmacObj.getHMAC(&amp;quot;HEX&amp;quot;);
+            var offset = hex2dec(hmac.substring(hmac.length - 1));
+            var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp;amp; hex2dec(&amp;quot;7fffffff&amp;quot;)) + &amp;quot;&amp;quot;;
+            otp = (otp).substr(otp.length - 6, 6);
+        } catch (error) {
+            throw error;
+        }
+        return otp;
+    };
+
+}
+
+var totpObj = new TOTP();
+
+// This code copyright Gordon Williams, Pur3 Ltd.,  https://github.com/espruino/Espruino/blob/master/LICENSE
+var kb = require(&amp;quot;USBKeyboard&amp;quot;);
+
+setWatch(function() {
+  // These two lines by Conor O&#39;Neill :-)
+	var pin = &amp;quot;put_your_PIN_Prefix_here&amp;quot;;
+  kb.type(pin + totpObj.getOTP(&amp;quot;put_your_google_authenticator_secret_here&amp;quot;).toString(), function() {
+        kb.tap(kb.KEY.ENTER);
+    });
+}, BTN, {debounce:100,repeat:true, edge:&amp;quot;rising&amp;quot;});
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available</title>
+      <link>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/</link>
+      <pubDate>Sat, 11 Jul 2015 19:56:57 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/</guid>
+      <description>&lt;p&gt;I compiled both on a Banana Pi for a change. Nothing special for the 0.12 build, and ./configure &amp;ndash;without-snapshot for the 0.10 build.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;make test&amp;rdquo; threw up the usual 7 minor errors or so.&lt;/p&gt;
+
+&lt;p&gt;I ran both Banana Pi and Raspberry Pi 2 without any immediate obvious issues.&lt;/p&gt;
+
+&lt;p&gt;Enjoy.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz&#34;&gt;node-v0.10.40-linux-arm-v7.tar.gz&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.12.7-linux-arm-v7.tar.gz&#34;&gt;node-v0.12.7-linux-arm-v7.tar.gz&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://blog.nodejs.org/2015/07/09/node-v0-10-40-maintenance/&#34;&gt;node v0.10.40 release notes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://blog.nodejs.org/2015/07/10/node-v0-12-7-stable/&#34;&gt;node-v0.12.7 release notes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir nodetemp
+cd nodetemp
+wget http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz
+tar -zxvf node-v0.10.40-linux-arm-v7.tar.gz
+cd usr/local
+sudo cp -R * /usr/local/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;UPDATE: I also built 0.10.40 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
+* &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v6.tar.gz&#34;&gt;node-v0.10.40-linux-arm-v6.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;UPDATE 2: I also built 0.12.7 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
+* &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/node-v0.12.7-linux-arm-v6.tar.gz&#34;&gt;node-v0.12.7-linux-arm-v6.tar.gz&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Save your Yahoo Pipes as Node.js Apps for posterity</title>
+      <link>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/</link>
+      <pubDate>Sat, 06 Jun 2015 15:06:15 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/</guid>
+      <description>&lt;p&gt;I swore I&amp;rsquo;d never use another Yahoo product after the cultural terrorism of their Geocities shutdown. Now one of their few bright lights of the past decade, Pipes, is biting the dust. However a very very smart person wrote a program called &lt;a href=&#34;https://github.com/neyric/pipes2js&#34;&gt;pipes2js&lt;/a&gt; three years ago which you may find useful. It converts your Pipes to Node.js apps!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/06/rip_pipes.png&#34; alt=&#34;RIP Pipes&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Installation is a tiny bit different from the instructions as it doesn&amp;rsquo;t seem to be on NPM any more. Here&amp;rsquo;s what worked for me on a Fedora 22 Virtual Box. I assume OSX would be similar. I might try Windows 8.1 later for the laugh.&lt;/p&gt;
+
+&lt;p&gt;The steps are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;sudo npm install -g git://github.com/neyric/pipes2js.git&lt;/li&gt;
+&lt;li&gt;Go to &lt;a href=&#34;https://pipes.yahoo.com/pipes/&#34;&gt;Yahoo Pipes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get the ID of each Pipe from its URL&lt;/li&gt;
+&lt;li&gt;pipes2js the_id_of_your_pipe&lt;/li&gt;
+&lt;li&gt;cd pipes/the_id_of_your_pipe/&lt;/li&gt;
+&lt;li&gt;Edit package.json and change &amp;ldquo;pipes2js&amp;rdquo;: &amp;ldquo;0.0.1&amp;rdquo; to &amp;ldquo;pipes2js&amp;rdquo;: &amp;ldquo;git://github.com/neyric/pipes2js.git&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;npm install .&lt;/li&gt;
+&lt;li&gt;node run.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The sad reality for me is that most of my Pipes are no longer functional as they use the old brilliantly simple but deprecated Twitter APIs (shakes fist at Twitter too). But it&amp;rsquo;s nice to be able to keep some sort of copy and give 2 fingers to the purple charlatans.&lt;/p&gt;
+
+&lt;p&gt;Update: It runs fine on Windows 8.1 if you have the various Visual Studio Express bits installed to compile Native Node modules. You may also have to run pipes2js with the full path to pipes2js.cmd so Windows can find it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!</title>
+      <link>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow/</link>
+      <pubDate>Fri, 01 May 2015 17:49:50 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi for quite a while. When it was originally announced, everyone seemed to think they were getting full-blown Windows for free on Pi. Many still think this. What you actually get is a GUI-less version of Windows on to which you can deploy Universal Apps (and others). So unlike Raspbian on Pi, you can&amp;rsquo;t actually develop on it, you have to have full Windows 10 running somewhere else to develop, compile, deploy and debug. Or as I said on Twitter:&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Install Visual Studio 2015 on your PC to develop Win10 IoT Apps for &lt;a href=&#34;https://twitter.com/Raspberry_Pi&#34;&gt;@Raspberry_Pi&lt;/a&gt;&amp;quot;. Install Fortran on your PDP-11 to use your ZX Spectrum?&lt;/p&gt;&amp;mdash; Conor O&amp;#39;Neill (@conoro) &lt;a href=&#34;https://twitter.com/conoro/status/593662573347794944&#34;&gt;April 30, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;OK, snark over. Let&amp;rsquo;s give this thing a go.&lt;/p&gt;
+
+&lt;p&gt;Several hours later&amp;hellip;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Installation is still a nightmare in this Preview version. Between clicking on hidden EULAs and installers failing with nonsense errors, not to mention having to install Windows 10 Preview in VirtualBox, this is not for the faint of heart.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi.jpg&#34; alt=&#34;Win 10 VBox&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The RaspberryPi bit was ok and creating the image on an SD Card worked fine. Win 10 IoT booted first time with no issues.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot_rpi_05.jpg&#34; alt=&#34;Win 10 IoT on Pi&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After several more rounds of messing with Visual Studio, I followed the Hello World Tutorial and pointed it at my Pi. I was rather shocked to see it worked!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_02.jpg&#34; alt=&#34;Screen&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;That was the point the scales fell from my eyes. This is actually a very powerful offering to anyone who uses Microsoft tools already. You can build Drag n Drop Universal Apps which deploy just as easily to the Pi as they do to Windows Desktop/Tablets/Phones. I think Kiosks and Control Dashboards could be a big seller here, particularly for the Pi Compute Module. Obviously Visual Studio itself is damned powerful and is considered by most people, even MSFT haters, to be the most powerful IDE available today.&lt;/p&gt;
+
+&lt;p&gt;Then I decided to go a step further. Could I get a Node.js program to deploy?&lt;/p&gt;
+
+&lt;p&gt;A bunch more stupid installers later&amp;hellip;&amp;hellip;..&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_04.jpg&#34; alt=&#34;Node.js on Vis Studio&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Deploy the code, annnnnnd&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot.jpg&#34; alt=&#34;Node.js on Pi&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Oh wow, that is a bit brain melting. So now I have a web-server on Node.js on Windows on Pi on ARM, all debuggable with some kick-ass tools on my PC.&lt;/p&gt;
+
+&lt;p&gt;The only major criticism I can make is that I&amp;rsquo;d like every single piece including VisStudio and all the add-ons to be installable with a command-line package manager. Much easier for everyone.&lt;/p&gt;
+
+&lt;p&gt;I doff my cap to you Mr Nadella, this really is the new Microsoft.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/doff_cap.gif&#34; alt=&#34;Cap&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Node v0.12.2 for ARM V6/V7 including Raspberry Pi, Raspberry Pi 2 and ODROID-C1</title>
+      <link>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1/</link>
+      <pubDate>Fri, 03 Apr 2015 11:32:07 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1/</guid>
+      <description>&lt;p&gt;As with Node 0.12.0 and 0.12.1, there are no-precompiled ARM versions of &lt;a href=&#34;http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/&#34;&gt;0.12.2&lt;/a&gt; on the main site.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve built for &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-pi.tar.gz&#34;&gt;Pi 1 (ARM v6)&lt;/a&gt; and &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-v7.tar.gz&#34;&gt;ODROID-C1/Pi2 (ARM v7)&lt;/a&gt;. The latter was built on an &lt;a href=&#34;http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433&#34;&gt;ODROID-C1&lt;/a&gt; and it seems to run fine on the Pi 2 since both are ARM v7. It took 1 hr 15 mins to compile compared to 4+ hrs on the Pi 1.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;make test&amp;rdquo; on the ODROID gave the same results as on the Pi 1: [10:33|% 100|+ 784|-   4]: Done&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here</title>
+      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here/</link>
+      <pubDate>Thu, 26 Mar 2015 09:56:57 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here/</guid>
+      <description>&lt;p&gt;Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&amp;rsquo;t compile on Raspberry Pi (pre 2) so I took a patch from &lt;a href=&#34;http://iojs.org&#34;&gt;io.js&lt;/a&gt; and was able to build it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The problem is due to recent releases of Raspbian mis-identifying the ARM version so Node tries to build for V7 instead of V6. These &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/6f7494292e22b1f1050abeaa43f257ac466edf2b&#34;&gt;two&lt;/a&gt; &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/8afcc5e701538e5a442a0334d781eac202cc4e1d&#34;&gt;changes&lt;/a&gt; from this &lt;a href=&#34;https://github.com/iojs/io.js/issues/283&#34;&gt;io.js thread&lt;/a&gt; sort it out.&lt;/p&gt;
+
+&lt;p&gt;I set the Raspberry Pi B+ to Turbo mode and it took 4ish hours to build&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz&#34;&gt;Download here&lt;/a&gt; and enjoy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;wget https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz
+tar -zxvf node-v0.12.1-linux-arm-pi.tar.gz
+cd node-v0.12.1-linux-arm-pi
+sudo cp -R * /usr/local/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Updated files:
+* &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/configure&#34;&gt;configure&lt;/a&gt;
+* &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/cpu.cc&#34;&gt;cpu.cc&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Diffs:
+* configure&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;493a494,495
+&amp;gt;     o[&#39;variables&#39;][&#39;arm_fpu&#39;] = &#39;vfpv3&#39;
+&amp;gt;     o[&#39;variables&#39;][&#39;arm_neon&#39;] = int(is_arm_neon())
+495,496d496
+&amp;lt;   elif is_arch_armv6():
+&amp;lt;     o[&#39;variables&#39;][&#39;arm_version&#39;] = &#39;6&#39;
+498c498,500
+&amp;lt;     o[&#39;variables&#39;][&#39;arm_version&#39;] = &#39;default&#39;
+---
+&amp;gt;     o[&#39;variables&#39;][&#39;arm_fpu&#39;] = &#39;vfpv2&#39;
+&amp;gt;     o[&#39;variables&#39;][&#39;arm_neon&#39;] = 0
+&amp;gt;     o[&#39;variables&#39;][&#39;arm_version&#39;] = &#39;6&#39; if is_arch_armv6() else &#39;default&#39;
+500,501d501
+&amp;lt;   o[&#39;variables&#39;][&#39;arm_fpu&#39;] = &#39;vfpv3&#39;  # V8 3.18 no longer supports VFP2.
+&amp;lt;   o[&#39;variables&#39;][&#39;arm_neon&#39;] = int(is_arm_neon())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cpu.cc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;368c368
+&amp;lt;     // We try to correct this by looking at the &#39;elf_platform&#39;
+---
+&amp;gt;     // We try to correct this by looking at the &#39;elf_format&#39;
+374c374
+&amp;lt;       char* processor = cpu_info.ExtractField(&amp;quot;model name&amp;quot;);
+---
+&amp;gt;       char* processor = cpu_info.ExtractField(&amp;quot;Processor&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Make Test Output: [25:08|% 100|+ 775|-   6]: Done
+(failures seem to be timeouts mainly)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Download compiled version of Node.js 0.12.0 Stable for Raspberry Pi here</title>
+      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here/</link>
+      <pubDate>Sun, 08 Feb 2015 12:45:55 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here/</guid>
+      <description>&lt;p&gt;Unfortunately the &lt;a href=&#34;http://blog.nodejs.org/2015/02/06/node-v0-12-0-stable/&#34;&gt;0.12.0 release&lt;/a&gt; of Node won&amp;rsquo;t compile on a non-V2 Raspberry Pi so I took a patch from &lt;a href=&#34;http://iojs.org&#34;&gt;io.js&lt;/a&gt; and was able to build it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The problem is due to recent releases of Raspbian mis-identifying the ARM version so Node tries to build for V7 instead of V6. These &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/6f7494292e22b1f1050abeaa43f257ac466edf2b&#34;&gt;two&lt;/a&gt; &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/8afcc5e701538e5a442a0334d781eac202cc4e1d&#34;&gt;changes&lt;/a&gt; from this &lt;a href=&#34;https://github.com/iojs/io.js/issues/283&#34;&gt;io.js thread&lt;/a&gt; sort it out.&lt;/p&gt;
+
+&lt;p&gt;It took a lonnnngggg time to build directly on my RPi Model B+.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/node-v0.12.0-linux-arm-pi.tar.gz&#34;&gt;Download here&lt;/a&gt; and enjoy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;wget https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/node-v0.12.0-linux-arm-pi.tar.gz
+tar -zxvf node-v0.12.0-linux-arm-pi.tar.gz
+cd node-v0.12.0-linux-arm-pi
+sudo cp -R * /usr/local/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Works perfectly for &lt;a href=&#34;http://harpjs.com/&#34;&gt;Harp.js&lt;/a&gt;, including the ever-problematic node-sass with its native bits.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift</title>
+      <link>http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs/</link>
+      <pubDate>Sun, 04 Jan 2015 13:42:36 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs/</guid>
+      <description>
+
+&lt;p&gt;After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift.&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction:68488b35c9290c9755b8db0d35a0e512&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Cork County Council in Ireland has a site called &lt;a href=&#34;http://www.bandonfloodwarning.ie/&#34;&gt;Bandon FEWS&lt;/a&gt; (Bandon Flood Early Warning System). When the Bandon river hits certain levels near Bandon town, it alerts registered users via SMS in case they need to take emergency measures. It&amp;rsquo;s a very useful service and is very necessary due to the regular flooding that occurs. However the historical river level data is not available in any useful form and that&amp;rsquo;s the point of this project.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/01/Nov09Hickeys.jpg&#34; alt=&#34;Hickey&#39;s Bandon&#34; title=&#34;Flooding in 2009&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In November 2011, I created &lt;a href=&#34;http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/&#34;&gt;a simple Python script&lt;/a&gt; which scrapes the site every 15 minutes and saves the river level to a Google Fusions Table &amp;ldquo;spreadsheet&amp;rdquo; &lt;a href=&#34;https://www.google.com/fusiontables/DataSource?docid=103YIcARoxuaWT7NfZ8mVBzY554sF_3ONYC1N3DE#rows:id=1&#34;&gt;here&lt;/a&gt;. This now has (with a few interruptions) 3 years of data which anyone can query, re-use or slice-dice and mashup with weather info. Not that anyone has done this :-)&lt;/p&gt;
+
+&lt;p&gt;The script has been running on a small home Ubuntu fileserver all this time but stopped working mid-December 2014 either due to changes with the page structure of the Council site or as unexpected fallout from upgrading to Ubuntu 14.04. I have therefore re-written it in Node.js which has the big added advantage that there are free hosting possibilities for this code such as my employer Red Hat&amp;rsquo;s &lt;a href=&#34;https://www.openshift.com/&#34;&gt;OpenShift&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Code is now available on &lt;a href=&#34;https://github.com/conoro/bandonfews-nodejs&#34;&gt;GitHub here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The code started as Google&amp;rsquo;s example G+ OAuth code but now has the bulk of the functionality completed. It is running reliably under Supervisor on an &lt;a href=&#34;http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433&#34;&gt;ODROID-C1&lt;/a&gt; single-board computer on my desk.&lt;/p&gt;
+
+&lt;p&gt;To use it for something else on Fusion Tables, the main thing you need to do is setup an App in the &lt;a href=&#34;https://console.developers.google.com/project?authuser=0&#34;&gt;Google API Console&lt;/a&gt;, enable Fusion Tables API access and use those keys in the placeholders in the config files.&lt;/p&gt;
+
+&lt;h2 id=&#34;files:68488b35c9290c9755b8db0d35a0e512&#34;&gt;Files&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;main.js - The main code&lt;/li&gt;
+&lt;li&gt;bandonfews.conf - Supervisor config file. Copy to /etc/supervisor/conf.d/bandonfews.conf then &lt;code&gt;sudo supervisorctl reread&lt;/code&gt; and &lt;code&gt;sudo supervisorctl reread&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;tokens-example.json - rename to tokens.json. Will be auto-generated by the code on first run in any case&lt;/li&gt;
+&lt;li&gt;config-example.json - Rename to config.json and fill out the Google OAuth API key/secret, the URL of the FEWS site and the id of the Fusion Table&lt;/li&gt;
+&lt;li&gt;index.html - Placeholder for upcoming landing page&lt;/li&gt;
+&lt;li&gt;server.js - Placeholder for upcoming API server&lt;/li&gt;
+&lt;li&gt;package.json - Required Node.js packages. &lt;code&gt;npm install&lt;/code&gt; to install everything&lt;/li&gt;
+&lt;li&gt;.gitignore - Stuff that shouldn&amp;rsquo;t go under Git control&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;openshift-environment-variables:68488b35c9290c9755b8db0d35a0e512&#34;&gt;OpenShift Environment Variables&lt;/h2&gt;
+
+&lt;p&gt;If you are running on OpenShift, you need a way to set various keys etc without adding them to files in Git which could potentially leak accidentally if you also put a copy up on GitHub. So set the following (mirroring the equivalent ones in config.json and tokens.json):&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rhc set-env access_token=&amp;quot;blah&amp;quot; token_type=&amp;quot;Bearer&amp;quot; refresh_token=&amp;quot;blah&amp;quot; expiry_date=1419970265050 client_id=&amp;quot;blah&amp;quot; client_secret=&amp;quot;blah&amp;quot; redirect_url=&amp;quot;http://localhost&amp;quot; fews_url=&amp;quot;http://www.bandonfloodwarning.ie/main.php&amp;quot; fusiontables_id=&amp;quot;blah&amp;quot; -a bandonfews&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;to-do:68488b35c9290c9755b8db0d35a0e512&#34;&gt;TO-DO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The first time run is currently broken for the OAuth credentials. Easy fix coming.&lt;/li&gt;
+&lt;li&gt;OpenShift is SIGINT&amp;rsquo;ing it for some unknown reason after a random time which is why it&amp;rsquo;s running on the ODROID for the moment&lt;/li&gt;
+&lt;li&gt;It should have a simple Express based API so others can avoid the pain of dealing with the Fusion Tables API for basic queries&lt;/li&gt;
+&lt;li&gt;It should have a simple landing page showing the latest water level and maybe a graph&lt;/li&gt;
+&lt;li&gt;It should add back in the functionality of the old Python code for posting to COSM&lt;/li&gt;
+&lt;li&gt;???&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;release-notes:68488b35c9290c9755b8db0d35a0e512&#34;&gt;Release Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;04/01/2015 - First public usable version&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducing FitBit&#39;s first sports tracker for Superheroes - The FitBat</title>
+      <link>http://conoroneill.net/introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat/</link>
+      <pubDate>Sun, 21 Dec 2014 17:44:19 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat/</guid>
+      <description>&lt;p&gt;Finally the product that Superheroes everywhere have been crying out for - The FitBat. I&amp;rsquo;m sure the protector of Gotham would approve.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbat.jpg&#34; alt=&#34;FitBat&#34; title=&#34;FitBat&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Say hello to my little friend. The Fitbit XL with external battery by Conor</title>
+      <link>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor/</link>
+      <pubDate>Sat, 13 Dec 2014 19:59:24 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor/</guid>
+      <description>&lt;p&gt;My first Fitbit died in the washing machine and they kindly replaced it for free. The replacement&amp;rsquo;s battery started acting up recently and finally gave up the ghost last night. You won&amp;rsquo;t believe what happens next ;-)&lt;/p&gt;
+
+&lt;p&gt;I figured out how to take apart the Fitbit One on the original dead one so this time I managed to do it with no damage. I de-soldered the battery and tried the old one instead. No joy. I&amp;rsquo;ve found some Chinese suppliers of 55mAh Lipos but I don&amp;rsquo;t have the patience to wait. One slightly too big battery and some hot-glue later and I give you the FitBit One XL.&lt;/p&gt;
+
+&lt;p&gt;Now that I know it works, I&amp;rsquo;ll remove most of the hot glue and try some Shoe Goo instead.
+Front
+&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit1.jpg&#34; alt=&#34;Front&#34; title=&#34;Front&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Back
+&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit2.jpg&#34; alt=&#34;Back&#34; title=&#34;Back&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Wearables.
+&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit3.jpg&#34; alt=&#34;In its clip&#34; title=&#34;In its clip&#34; /&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Some of my old Red Hat floppy disks from 2000-2004</title>
+      <link>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/</link>
+      <pubDate>Sat, 13 Dec 2014 14:35:30 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/</guid>
+      <description>&lt;p&gt;We had to empty our attic to get the house insulated this week. I uncovered some old Red Hat and Fedora floppies and CDs. I previously had much older ones but was quite ruthless about reusing floppies in the old days!&lt;/p&gt;
+
+&lt;p&gt;The very first Linux I installed was Slackware on a self-built AMD K5 PC in Sunnyvale in 1996 (I&amp;rsquo;ve never built a PC with Intel CPUs! Current box is self-built FX-8 Eight Core 8370). I was so traumatised by the Slackware experience, as a Windows 95 user, that I didn&amp;rsquo;t try again until &amp;lsquo;97 with Red Hat Linux 4. My oldest floppy is from Red Hat 6.2 in 2000:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_62b.jpg&#34; alt=&#34;Red Hat 6.2&#34; title=&#34;Red Hat 6.2&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I then found a guy in the UK who would burn each new release of Red Hat onto CDs and send them to you for a few quid. That kept me going for ages. Here&amp;rsquo;s a Red Hat 7.0 boot floppy cunningly reusing a Windows NT disk:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_70b.jpg&#34; alt=&#34;Red Hat 7.0&#34; title=&#34;Red Hat 7.0&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Then Red Hat 7.3 updates on CD&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_73b.jpg&#34; alt=&#34;Red Hat 7.3&#34; title=&#34;Red Hat 7.3&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;And finally Fedora Core 1 boot disk:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fedora_fc1b.jpg&#34; alt=&#34;Fedora Core 1&#34; title=&#34;Fedora Core 1&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Next week I finally rid myself of the last vestiges of Ubuntu and move the home-office file server to CentOS 7 :-) I&amp;rsquo;m baaaaaaaack.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

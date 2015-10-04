@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Location-Based-Marketing-Ireland-And-Foursquares on Cross Dominant</title>
+    <link>http://conoroneill.net/location-based-marketing-ireland-and-foursquare/</link>
+    <description>Recent content in Location-Based-Marketing-Ireland-And-Foursquares on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 May 2010 08:49:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/location-based-marketing-ireland-and-foursquare/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Location Based Marketing, Ireland and Foursquare</title>
+      <link>http://conoroneill.net/location-based-marketing-ireland-and-foursquare/location-based-marketing-ireland-and-foursquare/</link>
+      <pubDate>Tue, 11 May 2010 08:49:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/location-based-marketing-ireland-and-foursquare/location-based-marketing-ireland-and-foursquare/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Location Based Marketing, Ireland and Foursquare&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;posterous_bookmarklet_entry&#34;&gt;
+&lt;blockquote class=&#34;posterous_long_quote&#34;&gt;Over 40 Million &lt;a href=&#34;http://voip-dev.com/cubic/index.html&#34;&gt;check-ins&lt;/a&gt; why isnt your business there?&lt;/blockquote&gt;
+&lt;div class=&#34;posterous_quote_citation&#34;&gt;via &lt;a href=&#34;http://patphelan.net/how-to-get-your-business-ready-for-location-based-marketing/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+RoamFree+%28Pat+Phelan+Dot+Net%29&#34;&gt;patphelan.net&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Great post by Pat about Foursquare, have a read.&lt;/p&gt;
+&lt;p&gt;I think I did the first 4SQ check-in in Ireland (cos I&amp;rsquo;m a geek rather than cos I&amp;rsquo;m with-it).&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m a huge fan of the 4SQ concept and bang the drum about it but TBH I think we&amp;rsquo;re still a long way from it having any real business impact in Ireland.&lt;/p&gt;
+&lt;p&gt;Are there any stats on rate of venue addition and rate of check-in in Ireland?&lt;/p&gt;
+&lt;p&gt;You only have to sit in Coffee Pod in Cork City Centre and look at what is &amp;ldquo;near me&amp;rdquo; to see what a wasteland it still is.&lt;/p&gt;
+&lt;p&gt;In a group of 11 &amp;ldquo;normal&amp;rdquo; people (plus me) in Carrick on Shannon last weekend with people carrying a mix of HTC Desire, Nexus One, E72, N97 etc, I was the only one doing any check-ins. I think 2 others even knew what 4SQ was.&lt;/p&gt;
+&lt;p&gt;In a town with a population of approx 4,000, I&amp;rsquo;m guessing that @johnnybeirne and @reverbstudios are responsible for a large percentage of the venues and check-ins.&lt;/p&gt;
+&lt;p&gt;Having said all of that, if I was a Dublin City Centre business with a strong following on Twitter, it&amp;rsquo;d be the next logical move.&lt;/p&gt;
+&lt;p&gt;But I think most will wait until Facebook do all of this and jump there instead where the numbers are. 1m users globally for 4SQ vs 1.5m users in Ireland alone on Facebook. And a big number of those FB users accessing it on mobile.&lt;/p&gt;
+&lt;p&gt;As for Gowalla. Game over already?&lt;/p&gt;
+&lt;p&gt;UPDATE 1: I hope GEO search on Foursquare (web-site) is broken otherwise it&amp;rsquo;s a lot worse than I thought. In Greater Cork (population approx 250k), it is listing 50 venues and 25 people. I&amp;rsquo;ll do more digging to see if I can set a centre and radius on that. Something we have in the LouderVoice Reviews API :-)&lt;/p&gt;
+&lt;p&gt;UPDATE 2: Whew, GEO search is crap. It&amp;rsquo;s just returning venues/people with &amp;ldquo;Cork&amp;rdquo; in their name. More data as I dig in.&lt;/p&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

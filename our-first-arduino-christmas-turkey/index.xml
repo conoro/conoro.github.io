@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Our-First-Arduino-Christmas-Turkeys on Cross Dominant</title>
+    <link>http://conoroneill.net/our-first-arduino-christmas-turkey/</link>
+    <description>Recent content in Our-First-Arduino-Christmas-Turkeys on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Dec 2013 13:43:19 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/our-first-arduino-christmas-turkey/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Our first Arduino Christmas Turkey</title>
+      <link>http://conoroneill.net/our-first-arduino-christmas-turkey/our-first-arduino-christmas-turkey/</link>
+      <pubDate>Wed, 25 Dec 2013 13:43:19 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/our-first-arduino-christmas-turkey/our-first-arduino-christmas-turkey/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Our first Arduino Christmas Turkey&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Take one turkey, an oven with the temperature markings rubbed-off, a food thermometer with a broken probe and you have a recipe for either incineration or salmonella.&lt;/p&gt;
+
+&lt;p&gt;Enter an &lt;a href=&#34;http://store.arduino.cc/index.php?main_page=product_info&amp;amp;cPath=11&amp;amp;products_id=195&#34;&gt;Arduino Uno&lt;/a&gt;, a &lt;a href=&#34;https://www.olimex.com/Products/Components/Misc/TC-K-TYPE/&#34;&gt;K-Type thermocouple&lt;/a&gt;, a sample &lt;a href=&#34;http://www.maximintegrated.com/datasheet/index.mvp/id/7273&#34;&gt;MAX31855&lt;/a&gt; IC, some dodgy soldering from a few weeks ago, an &lt;a href=&#34;https://github.com/adafruit/Adafruit-MAX31855-library&#34;&gt;Adafruit library&lt;/a&gt; and a &lt;a href=&#34;https://www.sparkfun.com/products/9393&#34;&gt;Sparkfun LCD&lt;/a&gt; and you get this:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1229&#34; alt=&#34;2013-12-25 12.43.45&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45-1024x768.jpg&#34; width=&#34;584&#34; height=&#34;438&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All rustled up in 15 minutes.&lt;/p&gt;
+
+&lt;p&gt;Code and circuit to follow.&lt;/p&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t bothered to average out the values so using a bit of human judgement on the instantaneous ones.&lt;/p&gt;
+
+&lt;p&gt;UPDATE: So the turkey ended up very dry. I&amp;rsquo;m not sure if the cooking time was excessive or the thermocouple was reading low. I wasn&amp;rsquo;t impressed with its accuracy at room temperature (+/- 2C at least) but I suspect it may have been 10C or more off at 180C. Hmm, just tried it on boiling water and it read 100-104 so perhaps I just cooked the turkey for far too long.&lt;/p&gt;
+
+&lt;p&gt;Also, if you want to try this, do yourself a favour and get the &lt;a href=&#34;http://www.adafruit.com/products/269&#34;&gt;Adafruit MAX31855 breakout board&lt;/a&gt;. Soldering to the chip directly was a pain in the ass.&lt;/p&gt;
+
+&lt;p&gt;CODE (based on the Adafruit and Sparkfun sample code):&lt;/p&gt;
+
+&lt;p&gt;[sourcecode]
+/***************************************************
+ This is an example for the Adafruit Thermocouple Sensor w/MAX31855K&lt;/p&gt;
+
+&lt;p&gt;Designed specifically to work with the Adafruit Thermocouple Sensor
+ &amp;mdash;-&amp;gt; &lt;a href=&#34;https://www.adafruit.com/products/269&#34;&gt;https://www.adafruit.com/products/269&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;These displays use SPI to communicate, 3 pins are required to
+ interface
+ Adafruit invests time and resources providing this open source code,
+ please support Adafruit and open-source hardware by purchasing
+ products from Adafruit!&lt;/p&gt;
+
+&lt;p&gt;Written by Limor Fried/Ladyada for Adafruit Industries.
+ BSD license, all text above must be included in any redistribution
+ ****************************************************/&lt;/p&gt;
+
+&lt;p&gt;#include &amp;quot;Adafruit_MAX31855.h&amp;quot;
+#include &amp;lt;SoftwareSerial.h&amp;gt;
+#include&amp;lt;stdlib.h&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;int thermoCLK = 5;
+int thermoCS = 4;
+int thermoDO = 3;&lt;/p&gt;
+
+&lt;p&gt;// Initialize the Thermocouple
+Adafruit_MAX31855 thermocouple(thermoCLK, thermoCS, thermoDO);
+SoftwareSerial mySerial(6,2); // pin 2 = TX, pin 3 = RX (unused)&lt;/p&gt;
+
+&lt;p&gt;void setup() {
+ mySerial.begin(9600);
+ Serial.begin(9600);
+ delay(500);
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&amp;quot; &amp;quot;); // clear display
+ mySerial.write(&amp;quot; &amp;quot;);
+ mySerial.write(&amp;quot;Hello, Thermocouple!&amp;quot;);&lt;/p&gt;
+
+&lt;p&gt;// wait for MAX chip to stabilize
+ delay(1000);
+}&lt;/p&gt;
+
+&lt;p&gt;char tempstring[16];
+void loop() {
+ // basic readout test, just print the current temp
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&amp;quot; &amp;quot;); // clear display
+ mySerial.write(&amp;quot; &amp;quot;);&lt;/p&gt;
+
+&lt;p&gt;double c = thermocouple.readCelsius();
+ if (isnan&amp;copy;)
+ {
+ mySerial.write(&amp;quot;T/C Problem&amp;quot;);
+ }
+ else
+ {
+ mySerial.write(&amp;quot;C = &amp;quot;);
+ mySerial.write(dtostrf(c,4,1,tempstring));
+ Serial.println&amp;copy;;
+ mySerial.write(&amp;quot; &amp;quot;);
+ }&lt;/p&gt;
+
+&lt;p&gt;delay(1000);
+}
+[/sourcecode]&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

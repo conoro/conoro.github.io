@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Froyo-Running-On-Htc-G1s on Cross Dominant</title>
+    <link>http://conoroneill.net/froyo-running-on-htc-g1/</link>
+    <description>Recent content in Froyo-Running-On-Htc-G1s on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jul 2010 08:56:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/froyo-running-on-htc-g1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Froyo running on HTC G1</title>
+      <link>http://conoroneill.net/froyo-running-on-htc-g1/froyo-running-on-htc-g1/</link>
+      <pubDate>Tue, 27 Jul 2010 08:56:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/froyo-running-on-htc-g1/froyo-running-on-htc-g1/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Froyo running on HTC G1&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;This is CyanogenMod 6.0RC2. Working brilliantly on old hardware.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;object align=&#34;middle&#34; height=&#34;319&#34; classid=&#34;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&#34; width=&#34;425&#34;&gt;
+&lt;param name=&#34;allowScriptAccess&#34; value=&#34;sameDomain&#34; /&gt;
+&lt;param name=&#34;allowFullScreen&#34; value=&#34;true&#34; /&gt;
+&lt;param name=&#34;movie&#34; value=&#34;http://qik.com/swfs/qikPlayer5.swf&#34; /&gt;
+&lt;param name=&#34;quality&#34; value=&#34;high&#34; /&gt;
+&lt;param name=&#34;bgcolor&#34; value=&#34;#333333&#34; /&gt;
+&lt;param name=&#34;FlashVars&#34; value=&#34;streamID=d3dad2a32a7745b2afb6f11fed213c4a&amp;amp;autoplay=false&#34; /&gt;
+&lt;embed src=&#34;http://qik.com/swfs/qikPlayer5.swf&#34; type=&#34;application/x-shockwave-flash&#34; height=&#34;319&#34; flashvars=&#34;streamID=d3dad2a32a7745b2afb6f11fed213c4a&amp;amp;autoplay=false&#34; width=&#34;425&#34;&gt;&lt;/embed&gt;
+&lt;/object&gt;
+&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

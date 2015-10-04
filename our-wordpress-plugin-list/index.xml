@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Our-Wordpress-Plugin-Lists on Cross Dominant</title>
+    <link>http://conoroneill.net/our-wordpress-plugin-list/</link>
+    <description>Recent content in Our-Wordpress-Plugin-Lists on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Feb 2010 19:55:20 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/our-wordpress-plugin-list/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Our Wordpress plugin list</title>
+      <link>http://conoroneill.net/our-wordpress-plugin-list/our-wordpress-plugin-list/</link>
+      <pubDate>Thu, 04 Feb 2010 19:55:20 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/our-wordpress-plugin-list/our-wordpress-plugin-list/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Our Wordpress plugin list&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Our &lt;a href=&#34;http://www.loudervoice.com/&#34;&gt;LouderVoice Business&lt;/a&gt; site runs on Wordpress. What started as a simple (albeit award-winning!) information site has now become a full blown CMS with access controls and tons of customisation. If you are thinking of doing similar, here is a list of the main plugins we are currently using:&lt;p /&gt; &lt;ul&gt;&lt;li&gt;Akismet - Anti-spam &lt;/li&gt;&lt;li&gt;Contact Form 7 - Simple Contact Forms&lt;/li&gt;&lt;li&gt;Contact Form 7 widget - Contact Forms in your sidebar &lt;/li&gt;&lt;li&gt;Custom Permalinks - Create your own URLs &lt;/li&gt;&lt;li&gt;Deactivate Visual Editor - Deactivate the visual editor on specific pages/posts &lt;/li&gt; &lt;li&gt;Disable wptexturize - Disable Wordpress screwing with your content &lt;/li&gt;&lt;li&gt;FAQ-Tastic - Build FAQs &lt;/li&gt;&lt;li&gt;FeedBurner FeedSmith - For RSS &lt;/li&gt;&lt;li&gt;Google XML Sitemaps - Does what it says on the tin &lt;/li&gt; &lt;li&gt;Live Comment Preview - Ditto &lt;/li&gt;&lt;li&gt;My Page Order - Arange your page menus in the order you want them &lt;/li&gt;&lt;li&gt;Search Everything - Search more than page/post content &lt;/li&gt;&lt;li&gt;Subscribe To Comments - Keeps readers updated &lt;/li&gt; &lt;li&gt;User Access Manager - Access Control to files/pages &lt;/li&gt;&lt;li&gt;Wordpress Automatic Upgrade - Beats the built-in WP one hands-down &lt;/li&gt;&lt;li&gt;WordPress Database Backup - Set it on a cron job &lt;/li&gt;&lt;li&gt;WordPress Exploit Scanner - Great tool by &lt;a href=&#34;http://twitter.com/donncha&#34;&gt;@donncha&lt;/a&gt; &lt;/li&gt; &lt;li&gt;WP-Cycle - Image Gallery for sidebar &lt;/li&gt;&lt;li&gt;WP Security Scan - Does what it says on the tin &lt;/li&gt;&lt;li&gt;WP Super Cache - Speed up your site by 4 bajillion times. Again by &lt;a href=&#34;http://twitter.com/donncha&#34;&gt;@donncha&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;Have you got any other favourites? Let us know in the comments.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

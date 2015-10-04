@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oscars-First-Android-Game-Via-App-Inventors on Cross Dominant</title>
+    <link>http://conoroneill.net/oscars-first-android-game-via-app-inventor/</link>
+    <description>Recent content in Oscars-First-Android-Game-Via-App-Inventors on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Mar 2011 20:17:00 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/oscars-first-android-game-via-app-inventor/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Oscar&#39;s First Android Game via App Inventor</title>
+      <link>http://conoroneill.net/oscars-first-android-game-via-app-inventor/oscars-first-android-game-via-app-inventor/</link>
+      <pubDate>Sun, 06 Mar 2011 20:17:00 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/oscars-first-android-game-via-app-inventor/oscars-first-android-game-via-app-inventor/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Oscar&amp;rsquo;s First Android Game via App Inventor&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;I have to say I&amp;rsquo;d dead proud of young Oscar. Seven hours ago he&amp;rsquo;d never seen a line of code. Now he has finished his first from-scratch game. He calls it &amp;ldquo;The Reaction Game&amp;rdquo; and it involves tapping buttons as fast as possible in 60 seconds.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;img alt=&#34;Screenshot_3&#34; height=&#34;800&#34; src=&#34;http://getfile1.posterous.com/getfile/files.posterous.com/temp-2011-03-06/EukztCslFtdJxBHAjkHbcIvsrxmtIiwyBpenGxhmhqnBjFEFFtxGiurwiEya/screenshot_3.png.scaled500.png&#34; width=&#34;480&#34; /&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve had some choice quotes from him today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I want to build a game like all those stupid ones people play on Facebook&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s still Beta. We&amp;rsquo;ll add high scores and difficulty levels next week.&lt;/li&gt;
+&lt;li&gt;I think this could be the next Angry Birds&lt;/li&gt;
+&lt;li&gt;Wait a second, this means I could build a Chuck Norris Soundboard!&lt;/li&gt;
+&lt;li&gt;Why won&amp;rsquo;t it work on an iPhone?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you want to try it out, &lt;a href=&#34;http://cdn.conoroneill.com/TheReactionGameV2.apk&#34;&gt;download the APK&lt;/a&gt; and install on your Android phone.&lt;/p&gt;
+&lt;p&gt;Few quick thoughts.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google has built a great tool&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;It needs more kid-attractive tutorials&lt;/li&gt;
+&lt;li&gt;As I said in last post, web services need to be wired in to allow cool audio, video and image applications. Maybe even Twitter/Facebook APIs.&lt;/li&gt;
+&lt;li&gt;Kids love games, work that to the max for tutorials&lt;/li&gt;
+&lt;li&gt;But Google completely lacks coolness and mindshare. He wants to tap into Facebook. Not sure how Google fixes that.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So a kid who was building a Google Android App has this as the back of his laptop. Why? Cos Facebook is cool. (Yeah and I gave him the stickers). Do you see a Goog logo or Android logo anywhere?&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile5.posterous.com/getfile/files.posterous.com/temp-2011-03-06/IbAwgicGvJCjdAzEJsckhBchEmsssFxsGtFlppyGgtBssosdzfrljwzBAJsi/IMG_20110306_203349.jpg.scaled1000.jpg&#34;&gt;&lt;img alt=&#34;Img_20110306_203349&#34; height=&#34;375&#34; src=&#34;http://getfile1.posterous.com/getfile/files.posterous.com/temp-2011-03-06/IbAwgicGvJCjdAzEJsckhBchEmsssFxsGtFlppyGgtBssosdzfrljwzBAJsi/IMG_20110306_203349.jpg.scaled500.jpg&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Screenshot of the designer:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile9.posterous.com/getfile/files.posterous.com/temp-2011-03-06/EGFdlyiBAjJAlBstxsGAkweAAGlatsEeJoqgwvuvgwfrlagudcedeyIvnkwr/thereactiongamepic1.png.scaled1000.png&#34;&gt;&lt;img alt=&#34;Thereactiongamepic1&#34; height=&#34;313&#34; src=&#34;http://getfile5.posterous.com/getfile/files.posterous.com/temp-2011-03-06/EGFdlyiBAjJAlBstxsGAkweAAGlatsEeJoqgwvuvgwfrlagudcedeyIvnkwr/thereactiongamepic1.png.scaled500.png&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Screenshot of the blocks editor:&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile5.posterous.com/getfile/files.posterous.com/temp-2011-03-06/jxoHGJvwIAgkaGdnmdticboCzJFiqIbqzJlJgIBJiDksJhshkebAwGCHfkoH/theractiongamepic2.png.scaled1000.png&#34;&gt;&lt;img alt=&#34;Theractiongamepic2&#34; height=&#34;313&#34; src=&#34;http://getfile4.posterous.com/getfile/files.posterous.com/temp-2011-03-06/jxoHGJvwIAgkaGdnmdticboCzJFiqIbqzJlJgIBJiDksJhshkebAwGCHfkoH/theractiongamepic2.png.scaled500.png&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;I really only had to give him a few pointers on using timers and conditional logic. He figured the rest out himself.&lt;/p&gt;
+&lt;p&gt;11 years old and he&amp;rsquo;s already thinking monetization :-)&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

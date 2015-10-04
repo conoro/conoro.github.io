@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developers-Developers-Developers-Nokia-Windows-Phone-7s on Cross Dominant</title>
+    <link>http://conoroneill.net/developers-developers-developers-nokia-windows-phone-7/</link>
+    <description>Recent content in Developers-Developers-Developers-Nokia-Windows-Phone-7s on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Feb 2011 09:40:00 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/developers-developers-developers-nokia-windows-phone-7/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Developers Developers Developers ---&gt; Nokia &#43; Windows Phone 7</title>
+      <link>http://conoroneill.net/developers-developers-developers-nokia-windows-phone-7/developers-developers-developers-nokia-windows-phone-7/</link>
+      <pubDate>Fri, 11 Feb 2011 09:40:00 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/developers-developers-developers-nokia-windows-phone-7/developers-developers-developers-nokia-windows-phone-7/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Developers Developers Developers &amp;mdash;&amp;gt; Nokia + Windows Phone 7&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;I&amp;rsquo;ll leave all the industry analysis to the experts and insta-experts on Twitter. I&amp;rsquo;m just looking at the Nokia and Microsoft deal from the perspective of a punter and someone who might consider getting apps built for Nokia+WP7.&lt;/p&gt;
+&lt;p&gt;So as a punter I liked the look of Windows Phone 7 and I love the industrial design of the Nokia N8. I&amp;rsquo;m also sick to death of the shitty cameras that HTC, Samsung et all are putting in their Android phones. My 3 year old N95-8GB takes infinitely better picture and videos than my HTC Desire. A Nokia phone with a good OS and decent Apps is still something I would happily buy. Thinking about average punters, a familiar brand like Nokia running an OS made by someone they&amp;rsquo;ve heard of seems reasonable.&lt;/p&gt;
+&lt;p&gt;But as we all know, it boils down to apps. Even my technophobe Dad is become App-centric and spends tons of time in GMail, the browser or the RTE News App on his Android phone. I don&amp;rsquo;t think he could ever go back to Symbian now.&lt;/p&gt;
+&lt;p&gt;I looked at App building on Symbian before and it was a nightmare. Nokia even made something as simple as signing Apps difficult and effectively killed the hobbyist developer market. I thought they were on to something with both Python Apps and WRT as a way of simplifying development and hiding Symbian but as with everything Nokia has done in software in the past few years, they were half-assed, unsupported and then left to die.&lt;/p&gt;
+&lt;p&gt;This morning I stuck &amp;ldquo;Windows Phone 7 SDK&amp;rdquo; into Google to see where it took me. &lt;a href=&#34;http://create.msdn.com/en-US/&#34;&gt;App Hub&lt;/a&gt; is not the worst site in the world but is missing instant gratification. A video front and center showing how easy app dev is on the platform would be a big help. More importantly, it&amp;rsquo;s not even clear how/what you do development in. I had to Google off-site to find out that when they say Silverlight and .NET framework they mean C#. Maybe every developer on the planet knows that but I didn&amp;rsquo;t. The big plus is that the entire SDK is free and includes an emulator. So pretty much equivalent to the Android setup.&lt;/p&gt;
+&lt;p&gt;Even better, you can program in Visual Basic. I know I know but I built some really neat quick n dirty but useful apps in the 90s with VB. If you can get Apps out the door quickly with VB then that&amp;rsquo;s a big win. I was desperately disappointed with the Android AppInventor capabilities. Most Apps I thought of started as an RSS consumption widget and it cannot do RSS without running an App on Google AppEngine!&lt;/p&gt;
+&lt;p&gt;The only obvious downside is the mean-minded $99 to register to publish Apps. Get a grip MSFT, you can afford to drop that and it will encourage kids in bedrooms to get started. All that moaning about crappy Apps in the Android Store is just that, moaning.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile0.posterous.com/getfile/files.posterous.com/temp-2011-02-11/sEpCnxhhFJmIlAbmtDcBBiJfgmJcBhqJusqdItCcjretjjqqFwxAIedjDzlp/phone7.png.scaled1000.png&#34;&gt;&lt;img alt=&#34;Phone7&#34; height=&#34;375&#34; src=&#34;http://getfile8.posterous.com/getfile/files.posterous.com/temp-2011-02-11/sEpCnxhhFJmIlAbmtDcBBiJfgmJcBhqJusqdItCcjretjjqqFwxAIedjDzlp/phone7.png.scaled500.png&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;The other thing that jumped out at me is that they co-host Windows Phone 7 and XBOX 360 development on the App Hub site. If the same toolset can be used to build apps that connect WP7 to XBOX Games, there is a myriad of possibilities there.&lt;/p&gt;
+&lt;p&gt;I remember talking to someone in Palm before the Pre was released. It sounded like they would &amp;ldquo;support&amp;rdquo; the porting of iPhone and Android Apps to WebOS. Turns out they meant they would give you early access to the SDK! Unsurprisingly, WebOS flopped completely. If Palm had taken a few million of their marketing budget and handed it out to developers, I think the result could have been different.&lt;/p&gt;
+&lt;p&gt;Is that something that Nokia and Microsoft has to do to seed development more? I know Microsoft are good at working with schools and colleges to get their tools and apps into kids&amp;rsquo; hands. They also provide lots of support to startups. Do they need to go one step further with WP7 and start handing over devices and even &amp;ldquo;grants&amp;rdquo; to developers to get them porting and creating Apps? I&amp;rsquo;d be very tempted if they did.&lt;/p&gt;
+&lt;p&gt;Hopefully Nokia can get the first phone out before the summer. Even if they just ported WP7 to the N8 and put in a meatier CPU, I think they&amp;rsquo;d have something great on their hands. I still have a lot of affection for Nokia, as do many people, but time is running out. Fingers crossed.&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

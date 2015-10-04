@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A-Product-And-Support-Failure-By-Adafruit-With-The-Bluefruit-Ez-Keys on Cross Dominant</title>
+    <link>http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/</link>
+    <description>Recent content in A-Product-And-Support-Failure-By-Adafruit-With-The-Bluefruit-Ez-Keys on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Nov 2013 13:32:35 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[No Longer] a Product and Support failure by Adafruit with the Bluefruit EZ-Key</title>
+      <link>http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/</link>
+      <pubDate>Sun, 17 Nov 2013 13:32:35 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/</guid>
+      <description>&lt;p&gt;#&amp;rdquo;[No Longer] a Product and Support failure by Adafruit with the Bluefruit EZ-Key&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE: Incredibly fast response and resolution from Adafruit. Feel free to ignore my negative post below. But still some good tips for any biz about handling product change and support. Back in? with Adafruit.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been working on a simple-ish project recently which required Bluetooth comms between some hardware and a phone. I&amp;rsquo;ve had lots of success with those cheap HC-05/HC-06 modules from China and made some progress with a Slave module. The problem was having to write native Android code to take the info from Bluetooth and &amp;ldquo;action&amp;rdquo; it.&lt;/p&gt;
+
+&lt;p&gt;Then mid-project, Adafruit announced the&lt;a href=&#34;http://learn.adafruit.com/introducing-bluefruit-ez-key-diy-bluetooth-hid-keyboard&#34;&gt;Bluefruit EZ-Key HID&lt;/a&gt; module which solved everything (I thought) in one fell swoop. I immediately ordered one and it arrived quickly from the US. I had it paired and sending key-presses to my PC and phone within a few minutes.&lt;/p&gt;
+
+&lt;p&gt;Then I moved to using it in the actual project. I needed to be able to send Play/Pause music commands over Bluetooth. I opened up the key definition file and there was no mention of media controls. The file referenced another filename which I googled and found. A short while later I realised that a HID keyboard can&amp;rsquo;t send media commands, it requires just a slightly different HID Consumer profile (a simple setting). But I couldn&amp;rsquo;t see how to change the Bluefruit profile and &lt;a href=&#34;http://forums.adafruit.com/viewtopic.php?f=19&amp;amp;t=44730&amp;amp;p=223765&amp;amp;hilit=bluefruit#p223765&#34;&gt;asked how on their only Support method&lt;/a&gt; for paying customers - the Adafruit forums. Crickets. One non-Adafruit person tried to help but I&amp;rsquo;d already failed with the method suggested. Strike 1 for Adafruit support.&lt;/p&gt;
+
+&lt;p&gt;After a delay of a few weeks whilst I focused on Halloween tech, I finally got back to it last week and rolled up my sleeves. Back I went to the Adafruit site to get as much info as possible to see if there was any way to add the &amp;ldquo;Consumer&amp;rdquo; profile to Bluefruit. I was stunned to see they had released two new versions in less than 4 weeks. The first to add the mouse profile and the second to add the (yup, you guessed it) Consumer profile. So a feature I asked about, to which they never replied, is now part of the product!&lt;/p&gt;
+
+&lt;p&gt;Naturally I went straight to the forums and asked how I could upgrade my 4 week old device to the new firmware. Response: &lt;em&gt;you can&amp;rsquo;t&lt;/em&gt;. My basic response: &lt;em&gt;you&amp;rsquo;re kidding me&lt;/em&gt;. &lt;a href=&#34;http://forums.adafruit.com/viewtopic.php?f=19&amp;amp;t=45724&amp;amp;p=229432#p229432&#34;&gt;As I said on the forum&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;&lt;em&gt;I really have to express my annoyance about this. You released a non-user-upgradable product and then iterated it twice in the space of a few weeks? So anyone like me who bought v1.0 was basically a beta-tester without realising it? I feel very let down here by a company I have huge respect for.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;As someone who works in product management I know that this is a sure-fire way to kill a product stone-dead. Why would anyone even buy v1.2 if they suspect there might be a v1.3 next week? Did you do a beta cycle with real users at all? The features of v1.1 and v1.2 would have been obvious additions to anyone who even played with it for 5 minutes.&lt;/em&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;Now if this was a standard hacker product, there would be new firmware available to burn or instructions for hardware mods or whatever. Not in this case. This is effectively a consumer product. It is &amp;ldquo;non-user-serviceable&amp;rdquo;. Once you buy it, that&amp;rsquo;s it, it will be forever fixed function, like a vacuum cleaner.&lt;/p&gt;
+
+&lt;p&gt;This type of product is a new departure for Adafruit and they have royally screwed it up. Any normal consumer product company would offer a full or partial replacement/exchange for the people who bought the first incomplete versions. Adafruit&amp;rsquo;s attitude seems to be &amp;ldquo;tough luck, caveat emptor dude&amp;rdquo;. The almost complete lack of questions about Bluefruit on the forums tells me it is either so perfect that no-one needs any support or (more likely) very few people have bought them. So the cost of keeping a few customers happy and loyal would have been minimal.&lt;/p&gt;
+
+&lt;p&gt;My final comment to them was &amp;ldquo;&lt;em&gt;I&amp;rsquo;ll continue to buy Adafruit products that I can hack myself but you&amp;rsquo;ve really soured me with anything black-boxed like the Bluefruit.&lt;/em&gt;&amp;rdquo;. And that&amp;rsquo;s my advice to others. Until Adafruit make the necessary organisational changes to properly release and support products like this, you should stick to their excellent motor shields, Floras and other devices instead.&lt;/p&gt;
+
+&lt;p&gt;Of course yesterday I discovered &lt;a href=&#34;https://www.sparkfun.com/products/10823&#34;&gt;a similar Roving Networks product&lt;/a&gt;variant that does exactly what I want and was released 2 years ago! And it comes with full configurable HID support unlike the still fixed-function HID of the Bluefruit (v1.7 next week?). The RN42 is also available &lt;a href=&#34;http://embeddedwirelesssolutions.com/rn-42_HID_breakout_board&#34;&gt;here on a breakout board&lt;/a&gt;. Then I found that HID is now built-in by default to the RN42 and I can get it for &lt;a href=&#34;http://ie.farnell.com/microchip/rn42n-i-rm/module-bluetooth-class-2/dp/2143324&#34;&gt;16.50 in Farnell in Ireland&lt;/a&gt;. Sure it&amp;rsquo;ll need some soldering etc, but I can live with that.&lt;/p&gt;
+
+&lt;p&gt;For me, two of the brightest lights of the Maker movement have been Sparkfun and Adafruit. After this experience, one of those LEDs is just a little dimmer.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introducing-The-Bandon-Bluetooth-Button-Bbb-Using-Rn42-Hids on Cross Dominant</title>
+    <link>http://conoroneill.net/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid/</link>
+    <description>Recent content in Introducing-The-Bandon-Bluetooth-Button-Bbb-Using-Rn42-Hids on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Dec 2013 12:18:54 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducing the Bandon Bluetooth Button (BBB) using RN42 HID</title>
+      <link>http://conoroneill.net/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid/</link>
+      <pubDate>Sun, 01 Dec 2013 12:18:54 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Introducing the Bandon Bluetooth Button (BBB) using RN42 HID&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;TL;DR - A Bluetooth-enabled Button/Joystick to control music/podcasts on your phone whilst driving.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb01.jpg&#34;&gt;&lt;img class=&#34;size-large wp-image-1212 alignnone&#34; alt=&#34;bbb01&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb01-1024x849.jpg&#34; width=&#34;584&#34; height=&#34;484&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing I find very dangerous in the car is changing tracks etc on my phone when it&amp;rsquo;s in its screen mount. It&amp;rsquo;s impossible to do so without taking your eye off the road even for a second. And it&amp;rsquo;s illegal in many countries. I used to love the steering column controls for the old car radio but they don&amp;rsquo;t work over A2DP or AVRCP Bluetooth to my phone which streams to my Lidl car stereo.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve made three attempts at solving this and I finally succeeded today.&lt;/p&gt;
+
+&lt;p&gt;The first attempt involved one of those cheap Chinese Bluetooth Serial modules like HC-05 or HC-06. I got pretty far with this and was able to send commands to my phone. But that&amp;rsquo;s where I got stuck. I would need to write a native Android App to take those commands and broadcast them as media commands in the phone. I made some progress there but I was way out of my depth.&lt;/p&gt;
+
+&lt;p&gt;Whilst in the midst of that, Adafruit announced the &lt;a href=&#34;http://learn.adafruit.com/introducing-bluefruit-ez-key-diy-bluetooth-hid-keyboard&#34;&gt;Bluefruit&lt;/a&gt;. We know how &lt;a href=&#34;http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/&#34;&gt;that turned out&lt;/a&gt; for me, but if you want to make something like my BBB, I&amp;rsquo;d recommend that route since you get almost everything out of the box.&lt;/p&gt;
+
+&lt;p&gt;Finally I settled on the Microchip Roving Networks RN42 HID Bluetooth module. It only cost 16.50 ex-VAT from &lt;a href=&#34;http://ie.farnell.com/jsp/search/productdetail.jsp?sku=2143310&amp;amp;CMP=i-bf9f-00001000&#34;&gt;Farnell Element 14 in Ireland&lt;/a&gt;. As usual with Farnell, you need to bump the order over 20 to get free (fast!) deliver. My big concern was to make sure I&amp;rsquo;d get the right variant since there are quite a few. But since May 2013 it looks like the HID one is what they ship by default. Of course the big drawback is that this is an SMD module which isn&amp;rsquo;t really designed for hand soldering into a hobby project. You can get them on breakout boards but it adds a lot to the cost. In the end the soldering was fine since it only really involved 4 wires and a stiff drink ;-) (Power, Ground, Serial Receive, Serial Transmit).&lt;/p&gt;
+
+&lt;p&gt;So what does it do? It&amp;rsquo;s really very simple. You pair it to your phone and it appears as a combo Keyboard/Mouse device. You then send commands using an Arduino Nano to the RN42 and it sends them to the phone. The trick here is that the commands are &amp;ldquo;Consumer Report&amp;rdquo; ones which means Play/Pause, Next/Prev Track and Volume Up/Down (amongst many others). It&amp;rsquo;s all powered by a LiPo battery I salvaged from some broken kids toy.&lt;/p&gt;
+
+&lt;p&gt;httpv://www.youtube.com/watch?v=IuH-1LcZlYo&lt;/p&gt;
+
+&lt;p&gt;It works beautifully and will take pride of place attached to my steering wheel as I wend my way around the country. Update: Just tested on an emergency drive from Bandon to Mount Mellary to collect a sick Boy Scout.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41.jpg&#34;&gt;&lt;img class=&#34;size-large wp-image-1214 alignnone&#34; alt=&#34;2013-11-30 19.41.41&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41-1024x768.jpg&#34; width=&#34;584&#34; height=&#34;438&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I have tested on an SGS4 but there is no reason it won&amp;rsquo;t work on an iDevice unless Tim and Co have not implemented Consumer Report HID on iOS. Update: Tested and working beautifully on an iPhone 5 with iOS 7.&lt;/p&gt;
+
+&lt;p&gt;The only real issues I have so far are that it won&amp;rsquo;t auto-connect to the phone (I think this is the SGS4&amp;rsquo;s fault) and I haven&amp;rsquo;t implemented any power saving. I&amp;rsquo;m trying to sort auto-connect by using an NFC sticker to force the Samsung to connect. Not much joy yet. Power-saving should be easy to do since the joystick itself could be used to wake everything up. In the meantime I&amp;rsquo;ll just unplug when not in use and charge the battery every once in a while from the cigarette lighter socket using one of these very neat &lt;a href=&#34;http://dx.com/p/mini-usb-1a-lithium-battery-charging-board-charger-144856&#34;&gt;$3 USB LiPo chargers&lt;/a&gt; from the usual crew in DX in China.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb02.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1213&#34; alt=&#34;bbb02&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb02-1024x911.jpg&#34; width=&#34;584&#34; height=&#34;519&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing I haven&amp;rsquo;t figured out is why it won&amp;rsquo;t work with a 3.3V Arduino Pro Mini. The RN42 is a 3.3V device but only works with my 5V Arduinos like the Nano and the Uno. Is it possible the UART pins need 5V?&lt;/p&gt;
+
+&lt;p&gt;The Bill of Materials is as follows:
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;http://dx.com/p/repair-parts-replacement-analog-stick-module-for-ps2-controller-black-121340&#34;&gt;&lt;span style=&#34;line-height: 15px;&#34;&gt;Cheap Chinese Joystick Module&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;http://www.elecfreaks.com/store/arduino-nano-p-14.html&#34;&gt;Arduino Nano&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;http://ie.farnell.com/jsp/search/productdetail.jsp?sku=2143310&amp;amp;CMP=i-bf9f-00001000&#34;&gt;RN42 HID&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;3.7V Lipo Battery&lt;/li&gt;
+    &lt;li&gt;Double sided foam tape :-)&lt;/li&gt;
+    &lt;li&gt;A few headers&lt;/li&gt;
+    &lt;li&gt;NFC Sticker&lt;/li&gt;
+&lt;/ul&gt;
+Wiring is beyond easy: TX on Arduino to RX on RN42. RX on Arduino to TX on RN42. 3V3 on Arduino to VCC on RN42. GND on Arduino to GND on RN42.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/conoro/bandon-bluetooth-button&#34;&gt;My code&lt;/a&gt; is trivially simple and uses my improved version of &lt;a href=&#34;https://github.com/baselsw/BPLib&#34;&gt;an existing Arduino library&lt;/a&gt; called BPLib to talk to the RN42. I had to modify the library to work on anything other than an Arduino Mega but that was a simple search/replace. I also added a bunch of the Consumer Report functions to the library if you want to make use of them. They are:
+&lt;ul&gt;
+    &lt;li&gt;void volumeUp();&lt;/li&gt;
+    &lt;li&gt;void volumeDown();&lt;/li&gt;
+    &lt;li&gt;void muteAudio();&lt;/li&gt;
+    &lt;li&gt;void playPause();&lt;/li&gt;
+    &lt;li&gt;void nextTrack();&lt;/li&gt;
+    &lt;li&gt;void prevTrack();&lt;/li&gt;
+    &lt;li&gt;void stopAudio();&lt;/li&gt;
+    &lt;li&gt;void fastForwardAudio();&lt;/li&gt;
+    &lt;li&gt;void rewindAudio();&lt;/li&gt;
+    &lt;li&gt;void keyRelease();&lt;/li&gt;
+&lt;/ul&gt;
+My Arduino sketch and library are available &lt;a href=&#34;https://github.com/conoro/bandon-bluetooth-button&#34;&gt;on GitHub here&lt;/a&gt;. Edit the ino file to suit yourself e.g. shorten a lot of the overly conservative delays or add proper power management. The BPLib directory should be dropped into the libraries sub-directory of your Arduino IDE installation.&lt;/p&gt;
+
+&lt;p&gt;One thing to be careful of is that most Arduinos only have one serial port. So if you have the RN42 attached to the serial pins and powered up, then you won&amp;rsquo;t be able to program the Arduino using the IDE until you disconnect power or RX/TX to the RN42.&lt;/p&gt;
+
+&lt;p&gt;As always, any questions, let me know in the comments.&lt;/p&gt;
+
+&lt;p&gt;UPDATE: I&amp;rsquo;ve been using it for two days now and I love it! One problem I&amp;rsquo;ve run into which should have been obvious is that once I pull the power, the BBB forgets what it has been paired to. So when I reconnect power, the phone thinks it is paired but the BBB doesn&amp;rsquo;t and therefore connection fails. So I have to un-pair and re-pair. The solution is obviously to implement strong power management so the LiPo lasts more than the current 48hrs. I&amp;rsquo;ll post new code when I have that figured out.&lt;/p&gt;
+
+&lt;p&gt;The other tiny problem is that play/pause on Android by default uses your main Music app rather than the last audio app you ran,. In my case I want it to control the Doggcatcher Podcast player. It&amp;rsquo;s no biggie, I just have to manually open Doggcatcher at the start of a journey and then the controls work perfectly.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

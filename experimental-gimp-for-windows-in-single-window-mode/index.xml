@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experimental-Gimp-For-Windows-In-Single-Window-Modes on Cross Dominant</title>
+    <link>http://conoroneill.net/experimental-gimp-for-windows-in-single-window-mode/</link>
+    <description>Recent content in Experimental-Gimp-For-Windows-In-Single-Window-Modes on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Feb 2012 14:24:01 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/experimental-gimp-for-windows-in-single-window-mode/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Experimental GIMP for Windows in Single-Window Mode</title>
+      <link>http://conoroneill.net/experimental-gimp-for-windows-in-single-window-mode/experimental-gimp-for-windows-in-single-window-mode/</link>
+      <pubDate>Mon, 27 Feb 2012 14:24:01 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/experimental-gimp-for-windows-in-single-window-mode/experimental-gimp-for-windows-in-single-window-mode/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Experimental GIMP for Windows in Single-Window Mode&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;We use &lt;a href=&#34;http://www.gimp.org/&#34;&gt;GIMP&lt;/a&gt; for all of our basic bitmap manipulations. Whether it&amp;rsquo;s changing the colour of stars or modifying logos for Facebook Connect, it gets the job done brilliantly. I&amp;rsquo;ve tried many others like Paint.net and nothing comes close. But as anyone who has used it knows, they have had that horrible multi-window setup for years.&lt;/p&gt;
+
+&lt;p&gt;I went looking earlier to see if there had been any progress on GIMP in general. I read a scathing post a good while back basically saying RIP GIMP since it was still only able to do 8-bit colour depth. But after a bit of searching I found that things have been moving along, albeit very slowly. The new versions sounded fab but the official site didn&amp;rsquo;t have any of them for Windows. A bit more searching and I found some &lt;a href=&#34;http://graphicall.org/351&#34;&gt;experimental builds&lt;/a&gt; including one for Windows 7 64-bit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/02/gimp.png&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-602&#34; title=&#34;gimp&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/02/gimp-1024x722.png&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;411&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And so far, it&amp;rsquo;s working great! Single-Window Mode yay.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

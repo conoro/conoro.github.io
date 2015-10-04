@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My-Mind-Is-Blown-Met-Eireanns-Radar-Image-Converted-To-Opendata on Cross Dominant</title>
+    <link>http://conoroneill.net/my-mind-is-blown-met-eireanns-radar-image-converted-to-opendata/</link>
+    <description>Recent content in My-Mind-Is-Blown-Met-Eireanns-Radar-Image-Converted-To-Opendata on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Aug 2012 12:54:35 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/my-mind-is-blown-met-eireanns-radar-image-converted-to-opendata/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My mind is blown - Met Eireanns radar image converted to #OpenData</title>
+      <link>http://conoroneill.net/my-mind-is-blown-met-eireanns-radar-image-converted-to-opendata/my-mind-is-blown-met-eireanns-radar-image-converted-to-opendata/</link>
+      <pubDate>Sat, 25 Aug 2012 12:54:35 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/my-mind-is-blown-met-eireanns-radar-image-converted-to-opendata/my-mind-is-blown-met-eireanns-radar-image-converted-to-opendata/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;My mind is blown - Met Eireann\u0092s radar image converted to #OpenData&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Brendan Cunningham has just left &lt;a href=&#34;http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube/#comment-2311&#34;&gt;the most exciting comment&lt;/a&gt; this blog has ever received. He has thrown some serious smarts at the &lt;a href=&#34;http://www.met.ie/weathermaps/Web_radar.gif&#34;&gt;Met Eireann radar image&lt;/a&gt; of rain and converted in to actual numbers you can use!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.met.ie/weathermaps/Web_radar.gif&#34;&gt;&lt;img class=&#34;aligncenter&#34; src=&#34;http://www.met.ie/weathermaps/Web_radar.gif&#34; alt=&#34;&#34; width=&#34;360&#34; height=&#34;347&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That vector data with rainfall values is now up on &lt;a href=&#34;https://www.google.com/fusiontables/DataSource?docid=1E0Z4OTUfKXHzaLzFQT3aLlzJ-9LeWwcoCFyHsXk&#34;&gt;Google Fusion Tables&lt;/a&gt;and is updated every 15 minutes so now it can be integrated with GIS and other location based services.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.google.com/fusiontables/DataSource?docid=1E0Z4OTUfKXHzaLzFQT3aLlzJ-9LeWwcoCFyHsXk&#34;&gt;&lt;img class=&#34;size-full wp-image-835 aligncenter&#34; title=&#34;fusion&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/08/fusion.png&#34; alt=&#34;&#34; width=&#34;375&#34; height=&#34;442&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As he points out, with national coverage like this, you can watch for rainfall trends. Heck, you could even do predictions. He mentions that previous flood data may be available from the OPW and a Benefitting Lands layer from the OSi.&lt;/p&gt;
+
+&lt;p&gt;I pointed out to Brendan that this data may be perfect for &lt;a href=&#34;http://openweathermap.org/&#34;&gt;Open Weather Map&lt;/a&gt; which has a radar layer for the US and Canada already. Hopefully there are no rights issues with the data (which I assume the Irish taxpayer has paid for). His follow-up comment seems to indicate that all is ok as long as it&amp;rsquo;s not for profit.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s projects like this that give me hope for Ireland. Where the State is unwilling, unable or simply lacking in knowledge to release #OpenData, we can step in. Motivated, knowledgeable people with a community spirit can make the data we have already paid for, do more for the country.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m working on a small project in this area at the moment and have just received all of the hardware. Once it&amp;rsquo;s ready, I&amp;rsquo;ll publish the PoC here. I hope it will be of benefit to a lot of people.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

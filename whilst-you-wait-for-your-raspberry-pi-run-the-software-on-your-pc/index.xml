@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Whilst-You-Wait-For-Your-Raspberry-Pi-Run-The-Software-On-Your-Pcs on Cross Dominant</title>
+    <link>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/</link>
+    <description>Recent content in Whilst-You-Wait-For-Your-Raspberry-Pi-Run-The-Software-On-Your-Pcs on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Apr 2012 13:13:15 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Whilst you wait for your Raspberry Pi, run the software on your PC</title>
+      <link>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/</link>
+      <pubDate>Thu, 12 Apr 2012 13:13:15 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Whilst you wait for your Raspberry Pi, run the software on your PC&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;As we all patiently wait for the &lt;a href=&#34;http://www.raspberrypi.org/&#34;&gt;Raspberry Pi&lt;/a&gt; boards to arrive, one smart individual &lt;a href=&#34;http://russelldavis.org/2011/09/10/virtualbox-vm-for-raspberrypi-development/&#34;&gt;has built a full VM&lt;/a&gt; so you can try out the software in Virtualbox on your PC. I&amp;rsquo;m downloading now and will report back on whether it runs on VMware Workstation and Player too. There are a few things I want to try out on Raspberry Pi and this setup will let me confirm whether they are feasible or not in advance.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/modelB.jpg&#34;&gt;&lt;img class=&#34;size-full wp-image-676 aligncenter&#34; title=&#34;modelB&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/modelB.jpg&#34; alt=&#34;&#34; width=&#34;200&#34; height=&#34;200&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that they are torrent links and if you are on Eircom, you won&amp;rsquo;t be able to click the first one :-)&lt;/p&gt;
+
+&lt;p&gt;Speaking of torrents, &lt;a href=&#34;http://alestic.com/2012/04/aws-s3-torrent&#34;&gt;here is a brilliant tutorial on how to use Amazon S3 to seed files via Bittorrent&lt;/a&gt;. This type of distribution of popular legal material makes so much sense.&lt;/p&gt;
+
+&lt;p&gt;UPDATE: It works perfectly in VMware Workstation (just use the relaxed settings when it complains and asks you). Check it out. Tingles!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/raspberry_pi_02.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-678&#34; title=&#34;raspberry_pi_02&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/raspberry_pi_02.png&#34; alt=&#34;&#34; width=&#34;801&#34; height=&#34;601&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

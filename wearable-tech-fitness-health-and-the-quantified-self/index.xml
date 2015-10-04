@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wearable-Tech-Fitness-Health-And-The-Quantified-Selves on Cross Dominant</title>
+    <link>http://conoroneill.net/wearable-tech-fitness-health-and-the-quantified-self/</link>
+    <description>Recent content in Wearable-Tech-Fitness-Health-And-The-Quantified-Selves on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 May 2013 08:20:45 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/wearable-tech-fitness-health-and-the-quantified-self/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Wearable tech, fitness, health and the &#39;Quantified Self&#39;</title>
+      <link>http://conoroneill.net/wearable-tech-fitness-health-and-the-quantified-self/wearable-tech-fitness-health-and-the-quantified-self/</link>
+      <pubDate>Wed, 22 May 2013 08:20:45 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/wearable-tech-fitness-health-and-the-quantified-self/wearable-tech-fitness-health-and-the-quantified-self/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Wearable tech, fitness, health and the \&amp;ldquo;Quantified Self\&amp;ldquo;&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Nice quick intro by iJustine into this entire &lt;a href=&#34;http://quantifiedself.com/&#34;&gt;Quantified Self&lt;/a&gt; area. The section about using all of the data for predictive prevention of problems really caught my attention.&lt;/p&gt;
+
+&lt;p&gt;httpv://www.youtube.com/watch?v=pjKA0-PSA9k&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve obviously been into the whole SoLoMo thing since first getting my hands on an N95-8GB in 2007 and I&amp;rsquo;ve been generating lots and lots of location data since then. But location is really only step zero. It gets far more interesting the more things you measure, which is why I also tried my first fitness tracking app on the N95 back then too.&lt;/p&gt;
+
+&lt;p&gt;Now I spend my day with a Fitbit One connected to my t-shirt; manually entering my weight, body/visceral fat, BMI, muscle from Omron Karadascan to Google Docs; having every run/walk tracked by RunKeeper or Endomondo; and, from this week, having an array of sensors on my desk measuring temperature, humidity and light. The latter set will soon be stored live to the web. My SGS4 has a barometric pressure sensor too and will be the &amp;ldquo;base-station&amp;rdquo; for all my experiments in this area.&lt;/p&gt;
+
+&lt;p&gt;One bit I&amp;rsquo;m missing is heart monitoring. I have an ancient chest-strap monitor from Lidl but it has no computer interface and is very uncomfortable. iJustine showed off an Adidas smart-bra which seems to have the functionality I need. Perfect for my moobs. Now I just need to find the male equivalent (or buy one and modify it :-) ). Alternatively I could try making one with some conductive cloth and an Arduino or will I end up in DSP filter hell? A &lt;a href=&#34;http://pulsesensor.com/&#34;&gt;fingertip sensor like this&lt;/a&gt; might be fine for some scenarios but you&amp;rsquo;re hardly going to wear it 24x7. Any other suggestions?&lt;/p&gt;
+
+&lt;p&gt;The only way you can improve is by measuring. I think we&amp;rsquo;re in for a very interesting couple of years and I can&amp;rsquo;t wait to see what people come up with.&lt;/p&gt;
+
+&lt;p&gt;UPDATE 1: According to comments on the &lt;a href=&#34;https://www.sparkfun.com/products/11574&#34;&gt;Sparkfun site&lt;/a&gt;, that Pulse Sensor can be used on many parts of the body, including the chest. As I haven&amp;rsquo;t found any other Open Hardware projects that do heart rate monitoring, I think I&amp;rsquo;ll take a punt on it for $25.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

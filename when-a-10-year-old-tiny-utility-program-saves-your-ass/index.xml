@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>When-A-10-Year-Old-Tiny-Utility-Program-Saves-Your-Asses on Cross Dominant</title>
+    <link>http://conoroneill.net/when-a-10-year-old-tiny-utility-program-saves-your-ass/</link>
+    <description>Recent content in When-A-10-Year-Old-Tiny-Utility-Program-Saves-Your-Asses on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Jan 2014 13:36:47 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/when-a-10-year-old-tiny-utility-program-saves-your-ass/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>When a 10 year old tiny utility program saves your ass</title>
+      <link>http://conoroneill.net/when-a-10-year-old-tiny-utility-program-saves-your-ass/when-a-10-year-old-tiny-utility-program-saves-your-ass/</link>
+      <pubDate>Sat, 18 Jan 2014 13:36:47 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/when-a-10-year-old-tiny-utility-program-saves-your-ass/when-a-10-year-old-tiny-utility-program-saves-your-ass/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;When a 10 year old tiny utility program saves your ass&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;After many many years on a barely-used 1024-bit GPG/PGP key, I decided to go full-blown 4096-bit recently. More for the principle than anything else, but also to mess around with some secure apps like &lt;a href=&#34;http://retroshare.sourceforge.net/&#34;&gt;Retroshare&lt;/a&gt;, as mentioned by &lt;a href=&#34;https://twitter.com/onetruecathal&#34;&gt;Cathal Garvey&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Whilst I was as it, I moved to a new much improved longer password and made sure to drill it into my brain over and over.&lt;/p&gt;
+
+&lt;p&gt;Yeah, that worked brilliantly&amp;hellip;&amp;hellip;&amp;hellip;..&lt;/p&gt;
+
+&lt;p&gt;Last night I went to setup Retroshare properly and it rejected the password. 50 attempts later I was no closer to getting in. But I was sure I had the general pattern of the password correct.&lt;/p&gt;
+
+&lt;p&gt;Normally you are screwed when this happens, but a bit of googling found program called &amp;ldquo;&lt;a href=&#34;http://www.roguedaemon.net/rephrase/README.html&#34;&gt;Rephrase&lt;/a&gt;&amp;rdquo; which was last updated in 2003. You give it the general patter of your password along with possible character variations and it brute forces all of the possible combinations against GPG. e.g. (T|t)this(I|i)s(M|m)y(P|p)assword. And whaddya know, I was close, I just had a capitalisation wrong! Hurrah.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

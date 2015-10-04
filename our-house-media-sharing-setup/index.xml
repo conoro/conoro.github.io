@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Our-House-Media-Sharing-Setups on Cross Dominant</title>
+    <link>http://conoroneill.net/our-house-media-sharing-setup/</link>
+    <description>Recent content in Our-House-Media-Sharing-Setups on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Sep 2010 13:12:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/our-house-media-sharing-setup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Our House Media Sharing Setup</title>
+      <link>http://conoroneill.net/our-house-media-sharing-setup/our-house-media-sharing-setup/</link>
+      <pubDate>Fri, 10 Sep 2010 13:12:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/our-house-media-sharing-setup/our-house-media-sharing-setup/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Our House Media Sharing Setup&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile9.posterous.com/getfile/files.posterous.com/conoroneill/o1YMkjobIrZzEEM1ewVVEaMkFcZUVbp7t4OtQ8Zye012gS5Si9ssxzwiOS8Q/HouseMediaSharingSetup.png&#34;&gt;&lt;img alt=&#34;Housemediasharingsetup&#34; height=&#34;375&#34; src=&#34;http://getfile0.posterous.com/getfile/files.posterous.com/conoroneill/lyKaY4o6vISOOFiZUAoQUAn7soiGPUfE67drcF7OmHoAcSuAvBQffODP233U/HouseMediaSharingSetup.png.scaled.500.jpg&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;I was asked on Facebook the other day what our media sharing setup was in the house. So I did a diagram. The core machine is a pretty low-end self-build PC but with a kick-ass 512MB Video Card with HDMI output. It has all our movies and TV on 2.5TB of storage and then all the other machines in the house access that media over Wifi or Gigabit LAN. That machine runs &lt;a href=&#34;http://www.boxee.tv/&#34;&gt;Boxee&lt;/a&gt; which we use to watch all our media on a bog-standard LCD TV. The PC is more than capable of streaming movies to multiple XBOXes, PCs and Wiis simultaneously without breaking a sweat.&lt;/p&gt;
+&lt;p&gt;UPDATE: Slightly tweaked diagram after the comment from James.&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile9.posterous.com/getfile/files.posterous.com/temp-2010-09-10/yFijBmxbakJoJhiweIgrIvbuwlxnfpyiHwyDldvEhDlAGtlaGookhHefllek/HouseMediaSharingSetup_1.png.scaled1000.png&#34;&gt;&lt;img alt=&#34;Housemediasharingsetup_1&#34; height=&#34;375&#34; src=&#34;http://getfile6.posterous.com/getfile/files.posterous.com/temp-2010-09-10/yFijBmxbakJoJhiweIgrIvbuwlxnfpyiHwyDldvEhDlAGtlaGookhHefllek/HouseMediaSharingSetup_1.png.scaled500.png&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

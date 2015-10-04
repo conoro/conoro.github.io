@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pebble controlled electric blanket using CloudPebble and Simply.js &middot; Cross Dominant</title>
+
+    <meta name="description" content="It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="My Pebble controlled electric blanket using CloudPebble and Simply.js &middot; Cross Dominant">
+    <meta name="twitter:description" content="It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="My Pebble controlled electric blanket using CloudPebble and Simply.js &middot; Cross Dominant">
+    <meta property="og:description" content="It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">13 Apr 2014, 10:48</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js/" class="post-title">My Pebble controlled electric blanket using CloudPebble and Simply.js</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js/" data-title="My Pebble controlled electric blanket using CloudPebble and Simply.js" data-description="It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js/" data-description="It literally took 5 minutes to remotely control the Efergy RC mains sockets using the brilliant Cloud Pebble and Simply.js" class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>Messing with hardware and software can be both a joy and incredibly infuriating. Yesterday I spent a few intermittent hours trying to get Arduino and Espruino communicating reliably over NRF24L01+ wireless transceivers. I only half succeeded. I followed this with some reading up on both <a href="https://cloudpebble.net">CloudPebble</a> and <a href="http://simplyjs.io/">Simply.js</a>. Literally 5 minutes later I had my first Pebble App installed on my watch and was remotely controlling the <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">electric blanket in our bed</a>.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_blanket.jpg" alt="Bandon Blanket" title="Bandon Bed Button" />
+</p>
+
+<p>CloudPebble is a web-based IDE for building Pebble Apps. I believe it was started independently but is now run by <a href="http://getpebble.com">Pebble</a> themselves. Simply.js is a library/SDK for building Pebble Apps using only JavaScript. Pebble recently announced that CloudPebble now supports Simply.js and boy they weren&rsquo;t kidding. It&rsquo;s now childsplay to build Pebble Apps.</p>
+
+<p>This is how quickly I built the App:</p>
+
+<ul>
+<li>Create a free Pebble <a href="https://developer.getpebble.com/">Developer account</a></li>
+<li>Login to CloudPebble using your Pebble credentials</li>
+<li>Create a project and pick Simply.js as the type</li>
+<li>You automatically get the sample Simply.js App in the IDE</li>
+<li>Compile that and send it to your Watch. You of course need the Pebble App on your phone with developer options enabled. The Pebble App will also tell you your phone&rsquo;s IP address which CloudPebble may ask for.</li>
+<li>I&rsquo;ve found that I can&rsquo;t install from desktop but if I load the IDE URL on my phone I can do it from there. I assume this is because I&rsquo;m on house wifi and behind a firewall with a private IP.</li>
+</ul>
+
+<p>That first App looks like this:</p>
+
+<pre><code class="language-javascript">console.log('Simply.js demo!');
+
+simply.on('singleClick', function(e) {
+  console.log(util2.format('single clicked $button!', e));
+  simply.subtitle('Pressed ' + e.button + '!');
+});
+
+simply.on('longClick', function(e) {
+  console.log(util2.format('long clicked $button!', e));
+  simply.vibe();
+  simply.scrollable(e.button !== 'select');
+});
+
+simply.on('accelTap', function(e) {
+  console.log(util2.format('tapped accel axis $axis $direction!', e));
+  simply.subtitle('Tapped ' + (e.direction &gt; 0 ? '+' : '-') + e.axis + '!');
+});
+
+simply.setText({
+  title: 'Simply Demo!',
+  body: 'This is a demo. Press buttons or tap the watch!',
+}, true);
+</code></pre>
+
+<p>And it you read the Simply.js site, you can access URLs like this:</p>
+
+<pre><code class="language-javascript">ajax({ url: 'http://simplyjs.io' }, function(data){
+  var headline = data.match(/&lt;h1&gt;(.*?)&lt;\/h1&gt;/)[1];
+  simply.title(headline);
+});
+</code></pre>
+
+<p>Merge the two together and ta-daaaaa, the Bandon Bed Button Pebble App.</p>
+
+<pre><code class="language-javascript">console.log('Bandon Bed Button!');
+
+simply.on('singleClick', function(e) {
+  console.log(util2.format('single clicked $button!', e));
+  if (e.button == &quot;up&quot;){
+    ajax({ url: 'http://url-of-conors-thing-to-turn-on' }, function(data){
+      simply.subtitle('Turned on Blanket!');  
+    });    
+  } else if (e.button == &quot;down&quot;){
+    ajax({ url: 'http://url-of-conors-thing-to-turn-off' }, function(data){
+      simply.subtitle('Turned off Blanket!');  
+    });        
+  }
+});
+
+simply.setText({
+  title: 'Bandon Bed Button!',
+  body: 'Press Up to turn on the blanket. Press Down to turn off the blanket.',
+}, true);
+</code></pre>
+
+<p>Just in case the data route for this is not clear, here&rsquo;s what it looks like:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow" />
+</p>
+
+<p>I referred to this on Twitter last night as The Internet of Thangs. I&rsquo;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&rsquo;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&rsquo;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&rsquo;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js\/';
+    var disqus_title = 'My Pebble controlled electric blanket using CloudPebble and Simply.js';
+    var disqus_url = 'http:\/\/conoroneill.net\/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xbox-360-Wireless-On-The-Cheaps on Cross Dominant</title>
+    <link>http://conoroneill.net/xbox-360-wireless-on-the-cheap/</link>
+    <description>Recent content in Xbox-360-Wireless-On-The-Cheaps on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Feb 2011 20:17:31 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/xbox-360-wireless-on-the-cheap/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Xbox 360 Wireless on the cheap</title>
+      <link>http://conoroneill.net/xbox-360-wireless-on-the-cheap/xbox-360-wireless-on-the-cheap/</link>
+      <pubDate>Sun, 27 Feb 2011 20:17:31 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/xbox-360-wireless-on-the-cheap/xbox-360-wireless-on-the-cheap/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Xbox 360 Wireless on the cheap&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Our eldest was thrilled to be able to buy an old Xbox 360 from his cousin for 40. It&amp;#39;s a pretty impressive piece of kit and a big upgrade over the old-skule Xboxen we use as XBMC media players. I still prefer the Wii tho :-) &lt;p /&gt;&lt;div&gt;Surprisingly it comes with a LAN connector rather than Wifi. The official Wifi adapter is 43 on &lt;a href=&#34;http://Amazon.co.uk&#34;&gt;Amazon.co.uk&lt;/a&gt;. i.e.more than the box cost!&lt;/div&gt;&lt;p /&gt;&lt;div&gt;Ever the frugal geek, I raided my giant cavern of tricks for something suitable. I then remembered my old &lt;a href=&#34;http://www.edimax.com/en/produce_detail.php?pd_id=18&amp;amp;pl1_id=1&amp;amp;pl2_id=5&#34;&gt;EdimaxEW-7206APG&lt;/a&gt; Wifi access point. It wasoriginallybought on Dabs as the cheapest Wifi AP they had that did WDS. I had been using it to connect the older Xbox to the network using a WDS connection to our Linksys WRT54GS running DD-WRT. We now have Gigabit Ethernet in all the rooms downstairs so it hasn&amp;#39;t been needed for a long time.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;We no longer have the Linksys (I gave it to my parents to replace the default Eircom Netopia horror) and the Netgear Rangemax doesn&amp;#39;t do WDS but the main Billion 7402NX router does. However I had forgotten what a complete clusterfuck WDS was to setup. After lots of messing I gave up on the Billion. I turned my attention to my old hacked FON running DD-WRT but the muse just wasn&amp;#39;t with me today and I didn&amp;#39;t get very far.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;Then I started playing more with the Edimax and discovered Station-Infrastructuremode. Basically it allows you to connect a PC/Xbox/etc to its single LAN port and it then connects over the wireless network to another router as if it was that PC. This even includes spoofing the MAC address. This was what I&amp;#39;d always wanted, even in the old days of WDS, due to its simplicity. A few minutes on my laptop, configuring the security, finding out the MAC of the XBOX and setting the ESSID to be the same as the main router and Bingo, internet access.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;I then took the Edimax up to the Xbox 360, plugged it in and ta-da, Xbox Live is Live.&lt;/div&gt;&lt;p /&gt;&lt;div&gt;What&amp;#39;s even better about this is that they are still selling theEW-7206APG and &lt;a href=&#34;http://www.amazon.co.uk/Edimax-EW-7206APG-Wireless-Access-802-11b/dp/B000CEGUOO/ref=sr_1_1?ie=UTF8&amp;amp;qid=1298836645&amp;amp;sr=8-1&#34;&gt;it only costs 22.99&lt;/a&gt;!I&amp;#39;m pretty sure &lt;a href=&#34;http://www.dd-wrt.com/site/index&#34;&gt;DD-WRT&lt;/a&gt; can do this trick too so if you have an old FON or Linksys, you should be in business.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;Now to see about hacking the Xbox to make it a better Media Center. No chance Boxee is available for it?&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

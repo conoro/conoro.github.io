@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Just-Discovered-Vmware-Unity-Standalone-Ubuntu-Windows-In-Windows-7s on Cross Dominant</title>
+    <link>http://conoroneill.net/just-discovered-vmware-unity-standalone-ubuntu-windows-in-windows-7/</link>
+    <description>Recent content in Just-Discovered-Vmware-Unity-Standalone-Ubuntu-Windows-In-Windows-7s on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Jul 2011 13:37:19 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/just-discovered-vmware-unity-standalone-ubuntu-windows-in-windows-7/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Just discovered VMware Unity - Standalone Ubuntu Windows in Windows 7!</title>
+      <link>http://conoroneill.net/just-discovered-vmware-unity-standalone-ubuntu-windows-in-windows-7/just-discovered-vmware-unity-standalone-ubuntu-windows-in-windows-7/</link>
+      <pubDate>Wed, 06 Jul 2011 13:37:19 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/just-discovered-vmware-unity-standalone-ubuntu-windows-in-windows-7/just-discovered-vmware-unity-standalone-ubuntu-windows-in-windows-7/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Just discovered VMware Unity - Standalone Ubuntu Windows in Windows 7!&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#39;p_embed p_image_embed&#39;&gt;
+&lt;a href=&#34;http://getfile6.posterous.com/getfile/files.posterous.com/conoroneill/R5RqOdB52DyWZI3D376QCztPsO9H9doV5eHkeh0whbeQ4yRrWcDnet5RlLgL/VMwareUnity.jpg.scaled.1000.jpg&#34;&gt;&lt;img alt=&#34;Vmwareunity&#34; height=&#34;188&#34; src=&#34;http://getfile4.posterous.com/getfile/files.posterous.com/conoroneill/QZhKXDtDPSwEvOTpDzEDAkyba0MXVZvKeWtYK2Jk4cNIig2CVGMk6TQLCyad/VMwareUnity.jpg.scaled.500.jpg&#34; width=&#34;500&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Last night I did a clean install of Ubuntu 11.04 in VMware Player on my Windows 7 machine. I love the Easy-Install feature which makes this an unattended piece of cake. But I was perplexed to find that the new Ubuntu Unity Desktop was missing. Eventually I sussed that it doesn&amp;#39;t work (yet) in Player. But in my search I kept finding references to another &amp;quot;Unity&amp;quot; in VMware so I had to see what it was.&lt;/p&gt;&lt;p /&gt;&lt;div&gt;And OMG it&amp;#39;s awesome. When you turn on Unity in VMware Player, you can launch any of your Virtual Machine&amp;#39;s Apps inside native windows on Windows! So GEdit, XEmacs, SSH tunnels to RDS, Terminal, anything you like. You get an extra launcher above your Windows Start Button to access any of those Linux Apps. &lt;p /&gt;&lt;div&gt;I used to do something similar to this back in the 90s where I&amp;#39;d run a Linux box in the lab and run X-Windows software on the PC which allowed me to display remote windows. But generally it was slow, buggy and crashed a lot. This Unity setup means I can now pretty much forget about needing a dedicated Linux Laptop/PC or even dual boot. I now have the best of both worlds on the one desktop.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;Next step is to see if VMware Player can access remote VMs on other machines like I used to do with ESX server etc.&lt;/div&gt;&lt;p /&gt;&lt;p /&gt;&lt;p /&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

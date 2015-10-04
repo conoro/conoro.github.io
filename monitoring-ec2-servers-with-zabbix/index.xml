@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring-Ec2-Servers-With-Zabbixes on Cross Dominant</title>
+    <link>http://conoroneill.net/monitoring-ec2-servers-with-zabbix/</link>
+    <description>Recent content in Monitoring-Ec2-Servers-With-Zabbixes on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Mar 2011 12:16:00 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/monitoring-ec2-servers-with-zabbix/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Monitoring EC2 Servers with Zabbix</title>
+      <link>http://conoroneill.net/monitoring-ec2-servers-with-zabbix/monitoring-ec2-servers-with-zabbix/</link>
+      <pubDate>Sun, 06 Mar 2011 12:16:00 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/monitoring-ec2-servers-with-zabbix/monitoring-ec2-servers-with-zabbix/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Monitoring EC2 Servers with Zabbix&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;div&gt;Amazon Cloudfront is great for monitoring EC2 servers but it can only do external monitoring so it cannot see things like memory being exhausted etc. I tried using Cacti but it was a nightmare to configure with plugins. Nagios always looks like it&amp;rsquo;d take weeks to sort out.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;A bit of Googling found Zabbix and people seem to like it. Install was a doddle but configuring can be a pain unless you just copy the demo settings.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;You can obviously install all of this on the server to be monitored but it is only useful in non-catastrophic cases. If the server runs out of memory or goes to 100% CPU you won&amp;rsquo;t be able to login to see what happened in the run-up. So ideally use a separate server. We use one of our test servers for monitoring since they spend most of their time unstressed.&lt;/div&gt;
+&lt;p /&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;The Monitoring Server Install&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo aptitude install zabbix-server-mysql zabbix-frontend-php&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo vi /etc/php5/apache2/php.ini&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;Increase some of the PHP variables in that file (you will be warned when you login to the Admin Panel)&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo /etc/init.d/apache2 restart&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo apt-get install zabbix-agent&lt;/span&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;go to &lt;a href=&#34;http://name.of.server/zabbix&#34;&gt;http://name.of.server/zabbix&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;Login with user=admin, password=zabbix&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Each Monitored Server Install&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo apt-get install zabbix-agent&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;cd /etc/zabbix&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo vim zabbix_agent.conf&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;Add the Monitoring Server&amp;rsquo;s Public and Private IP addresses&lt;/div&gt;
+&lt;div&gt;Open up ports 10050 and 10051 in your EC2 security group (using Elasticfox or similar) and allow the monitoring server&amp;rsquo;s private IP&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo /etc/init.d/zabbix-agent restart&lt;/span&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;SNMP (Optional)&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;You can use SNMP monitoring too but the Zabbix agent seems ok so far.&lt;/div&gt;
+&lt;p /&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Extra Config Afterwards&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;The easiest way to start monitoring is to do a full clone of the demo localhost monitoring and just change the IP address and DNS name to the monitored server.&lt;/div&gt;
+&lt;p /&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Authenticated SMTP Alerts&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;We use AuthSMTP for all email sending from EC2. Zabbix doesn&amp;rsquo;t handle authenticated SMTP out of the box so you have to use an external script.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;sudo apt-get install sendEmail&lt;/span&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;Create a script &amp;ldquo;zabbix_sendemail&amp;rdquo; (chmod 755) in the AlertScriptsPath folder specified by /etc/zabbix/zabbix_server.conf (/etc/zabbix/alert.d/)&lt;/div&gt;
+&lt;div&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;#!/bin/sh&lt;/span&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;export smtpemailfrom=&lt;a href=&#34;mailto:zabbix@yourdomain.com&#34;&gt;zabbix@yourdomain.com&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;export zabbixemailto=$1&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;export zabbixsubject=$2&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;export zabbixbody=$3&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;export smtpserver=&lt;a href=&#34;http://yoursmtpserver.com&#34;&gt;yoursmtpserver.com&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;export smtplogin=smtpuser&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;export smtppass=smtppassword&lt;/span&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;span style=&#34;font-family: courier new, monospace;&#34;&gt;/usr/bin/sendEmail -f $smtpemailfrom -t $zabbixemailto -u $zabbixsubject -m $zabbixbody -s $smtpserver:25 -xu $smtplogin -xp $smtppass&lt;/span&gt;&lt;/div&gt;
+&lt;div&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;Set a Media Type (Administration / Media types) script to zabbix_sendemail&lt;/div&gt;
+&lt;div&gt;Add that Media to the Admin user (Administration / Users / user)&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;Set the Action (Configurations / Actions) for the alert(s) you want to trigger on and who should get them (Admin)&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;SMS Alerts&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;Sign up for something like Clickatell and buy a block of 400 credits for &amp;euro;17. Then repeat the steps for SMTP above but with the following script. I have both SMS and email set to be sent on certain triggers like low memory.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;
+&lt;div&gt;#! /bin/sh&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;/usr/bin/wget &amp;ndash;spider &amp;ndash;no-check-certificate &amp;ldquo;&lt;a href=&#34;http://api.clickatell.com/http/s&#34;&gt;http://api.clickatell.com/http/s&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;endmsg?api_id=NNNNNNN&amp;amp;user=XXXXXXXXX&amp;amp;password=YYYYYYY&amp;amp;to=$1&amp;amp;text=$2&amp;rdquo;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p /&gt;
+&lt;p /&gt;
+&lt;p /&gt;
+&lt;div&gt;&lt;strong&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;Monitor What?&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;Zabbix allows you to monitor a wide range of parameters and processes. So everything from network activity to whether your FTP server is contactable. It&amp;rsquo;s not the easiest web-app to configure but so far I&amp;rsquo;m finding it extremely useful.&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

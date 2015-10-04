@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Im-Speaking-At-The-Offsite-Conference-Next-Week-About-Aws-Apis-Saas-Etcs on Cross Dominant</title>
+    <link>http://conoroneill.net/im-speaking-at-the-offsite-conference-next-week-about-aws-apis-saas-etc/</link>
+    <description>Recent content in Im-Speaking-At-The-Offsite-Conference-Next-Week-About-Aws-Apis-Saas-Etcs on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Sep 2012 16:36:23 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/im-speaking-at-the-offsite-conference-next-week-about-aws-apis-saas-etc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I&#39;m speaking at the OFFSITE Conference next week about AWS, APIs, SaaS etc</title>
+      <link>http://conoroneill.net/im-speaking-at-the-offsite-conference-next-week-about-aws-apis-saas-etc/im-speaking-at-the-offsite-conference-next-week-about-aws-apis-saas-etc/</link>
+      <pubDate>Mon, 17 Sep 2012 16:36:23 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/im-speaking-at-the-offsite-conference-next-week-about-aws-apis-saas-etc/im-speaking-at-the-offsite-conference-next-week-about-aws-apis-saas-etc/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;I&amp;rsquo;m speaking at the OFFSITE Conference next week about AWS, APIs, SaaS etc&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I mentioned the &lt;a href=&#34;http://offsite.ie/event-agenda/&#34;&gt;OFFSITE Conference&lt;/a&gt; over on &lt;a href=&#34;http://www.web2ireland.org/2012/09/03/west-corks-first-major-tech-conference-offsite/&#34;&gt;Web2Ireland&lt;/a&gt; recently. It&amp;rsquo;s the frst time a major technology event is being held in West Cork and everyone in business in Munster and beyond should consider attending. It&amp;rsquo;s all happening next week, 27th September in Rosscarbery.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://offsite.ie/event-agenda/&#34;&gt;&lt;img class=&#34;size-medium wp-image-856 aligncenter&#34; title=&#34;header-bg&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/09/header-bg-300x60.png&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;60&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The title of my talk is &amp;ldquo;&lt;em&gt;Building on The Shoulders of Giants: How Irish businesses can quickly deliver Enterprise-quality products through the smart use of software services&lt;/em&gt;&amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;The bulk of the talk will be about all the lessons we have learned over the past few years in running the &lt;a href=&#34;http://www.loudervoice.com/&#34;&gt;LouderVoice&lt;/a&gt; service on a cloud infrastructure and how you could do similar.&lt;/p&gt;
+
+&lt;p&gt;Some of the topics I&amp;rsquo;ll be covering include:
+&lt;ul&gt;
+    &lt;li&gt;Building a SaaS business&lt;/li&gt;
+    &lt;li&gt;Amazon Web Services (EC2, EBS, EIP, RDS, S3, CloudFront, CloudWatch)&lt;/li&gt;
+    &lt;li&gt;IaaS vs PaaS (AWS vs Google vs Cloud Foundry vs Azure etc)&lt;/li&gt;
+    &lt;li&gt;Tying it all together with APIs&lt;/li&gt;
+    &lt;li&gt;Scaling&lt;/li&gt;
+    &lt;li&gt;Pricing and Cost Monitoring&lt;/li&gt;
+    &lt;li&gt;Robustness Cost-Benefit&lt;/li&gt;
+    &lt;li&gt;Pitfalls&lt;/li&gt;
+    &lt;li&gt;What&amp;rsquo;s Next?&lt;/li&gt;
+    &lt;li&gt;Big Data Opportunities&lt;/li&gt;
+    &lt;li&gt;Open Data Opportunities&lt;/li&gt;
+&lt;/ul&gt;
+This won&amp;rsquo;t be a geek-out session, it will be a business-centric talk where I hope those who are looking at the cloud get a lot of useful tips and cautions.&lt;/p&gt;
+
+&lt;p&gt;Let me know if there is anything in particular you would like to hear about.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The-Web-Tools-We-Cant-Live-Without-In-Loudervoices on Cross Dominant</title>
+    <link>http://conoroneill.net/the-web-tools-we-cant-live-without-in-loudervoice/</link>
+    <description>Recent content in The-Web-Tools-We-Cant-Live-Without-In-Loudervoices on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Feb 2010 09:16:04 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/the-web-tools-we-cant-live-without-in-loudervoice/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The web tools we can&#39;t live without in LouderVoice</title>
+      <link>http://conoroneill.net/the-web-tools-we-cant-live-without-in-loudervoice/the-web-tools-we-cant-live-without-in-loudervoice/</link>
+      <pubDate>Wed, 24 Feb 2010 09:16:04 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/the-web-tools-we-cant-live-without-in-loudervoice/the-web-tools-we-cant-live-without-in-loudervoice/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;The web tools we can&amp;rsquo;t live without in LouderVoice&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;It took it quite a long time to put together a &amp;ldquo;web toolkit&amp;rdquo; that works well for our business. To save you some of the same hassle, here are the some of important things our site/applications/OpsTeam use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon AWS including EC2, S3, EBS and EIP - It&amp;rsquo;s not about hosting cost, it&amp;rsquo;s about enterprise features like snapshots&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Rightscale - For some AWS management&lt;/li&gt;
+&lt;li&gt;Ubuntu Linux - Our server OS and also used on some development machines&lt;/li&gt;
+&lt;li&gt;Django - Our apps and API are all built using this framework&lt;/li&gt;
+&lt;li&gt;Python - The language Django is written in&lt;/li&gt;
+&lt;li&gt;Wordpress - All blogs and the business information site (plus approx 30 plugins)&lt;/li&gt;
+&lt;li&gt;NGINX - Front-end web-server and load balancer&lt;/li&gt;
+&lt;li&gt;Apache - Using mod_wsgi for apps and mod_php for Wordpress&lt;/li&gt;
+&lt;li&gt;MySQL - Our DB server&lt;/li&gt;
+&lt;li&gt;JQuery - For building a big chunk of our Widget&lt;/li&gt;
+&lt;li&gt;Solr - Search Engine functionality&lt;/li&gt;
+&lt;li&gt;Putty - To access our EC2 instances&lt;/li&gt;
+&lt;li&gt;AuthSMTP - For sending email from EC2&lt;/li&gt;
+&lt;li&gt;DNSMadeEasy - 100% uptime DNS provider&lt;/li&gt;
+&lt;li&gt;Akismet - For anti-spam&lt;/li&gt;
+&lt;li&gt;Memcache - For API performance&lt;/li&gt;
+&lt;li&gt;Komodo - Great cross-platform code editor that can edit files using SFTP on your EC2 servers&lt;/li&gt;
+&lt;li&gt;Eclipse - For building our Android application&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;Jungledisk - Extra backup to S3&lt;/li&gt;
+&lt;li&gt;Dropbox - File sharing&lt;/li&gt;
+&lt;li&gt;Gravity Forms - For Forms&lt;/li&gt;
+&lt;li&gt;PayPal - For getting paid :-)&lt;/li&gt;
+&lt;li&gt;Zoho CRM - Customer Contact Management&lt;/li&gt;
+&lt;li&gt;Chrome - For non-Firefox browsing&lt;/li&gt;
+&lt;li&gt;Internet Explorer &lt;sup&gt;7&lt;/sup&gt;&amp;frasl;&lt;sub&gt;8&lt;/sub&gt; - For test only&lt;/li&gt;
+&lt;li&gt;Yuuguu - For conference call desktop sharing to potential customers/partners&lt;/li&gt;
+&lt;li&gt;Pidgin - IM&lt;/li&gt;
+&lt;li&gt;Google Apps - For all our e-mail, calendar, GTalk and Goog Docs&lt;/li&gt;
+&lt;li&gt;Google Docs - Docs and Spreadsheets great, Sites Wiki poor&lt;/li&gt;
+&lt;li&gt;Remember The Milk - All of our To-Dos&lt;/li&gt;
+&lt;li&gt;Inkscape - Vector images on site&lt;/li&gt;
+&lt;li&gt;Gimp - Bitmap images on site&lt;/li&gt;
+&lt;li&gt;Filezilla - FTP/SFTP&lt;/li&gt;
+&lt;li&gt;Git - hateful source control&lt;/li&gt;
+&lt;li&gt;Unfuddle - Problem tickets, Git source control, Dev Notes&lt;/li&gt;
+&lt;li&gt;Firefox - To run&amp;nbsp;
+&lt;ul&gt;
+&lt;li&gt;Elasticfox&lt;/li&gt;
+&lt;li&gt;Firebug&lt;/li&gt;
+&lt;li&gt;YSlow&lt;/li&gt;
+&lt;li&gt;Poster&lt;/li&gt;
+&lt;li&gt;S3Fox&lt;/li&gt;
+&lt;li&gt;ColorZilla&lt;/li&gt;
+&lt;li&gt;MeasureIt&lt;/li&gt;
+&lt;li&gt;Live HTTP Headers&lt;/li&gt;
+&lt;li&gt;Screengrab&lt;/li&gt;
+&lt;li&gt;Web Developer Toolbar&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More as I think of them since I&amp;rsquo;m sure I&amp;rsquo;ve forgotten something important. What can&amp;rsquo;t you live without?&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

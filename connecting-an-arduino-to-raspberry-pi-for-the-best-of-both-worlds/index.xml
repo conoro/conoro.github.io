@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Connecting-An-Arduino-To-Raspberry-Pi-For-The-Best-Of-Both-Worlds on Cross Dominant</title>
+    <link>http://conoroneill.net/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/</link>
+    <description>Recent content in Connecting-An-Arduino-To-Raspberry-Pi-For-The-Best-Of-Both-Worlds on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Jun 2013 08:27:11 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Connecting an Arduino to Raspberry Pi for the best of both worlds</title>
+      <link>http://conoroneill.net/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/</link>
+      <pubDate>Wed, 05 Jun 2013 08:27:11 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/connecting-an-arduino-to-raspberry-pi-for-the-best-of-both-worlds/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Connecting an Arduino to Raspberry Pi for the best of both worlds&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Rather than struggle with the very basic unprotected IO pins on the Raspberry Pi and the lack of real-time performance in Linux, the ideal setup for many real-world-interfacing projects is Raspberry Pi + Arduino.&lt;/p&gt;
+
+&lt;p&gt;After pricing a multitude of combinations of microcontroller boards and Wifi adapters, I found that the Raspberry Pi + USB Wifi + Arduino is the absolute best value for money if you need both wireless internet access and easy sensor data handling. (Note: I&amp;rsquo;ll be investigating the &lt;a href=&#34;http://beagleboard.org/Products/BeagleBone%20Black&#34;&gt;Beaglebone Black&lt;/a&gt; soon to see how it compares).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1088&#34; alt=&#34;2013-06-05 07.32.44&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-07.32.44-1024x576.jpg&#34; width=&#34;584&#34; height=&#34;328&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;There are four basic ways to connect Arduino to Raspberry Pi:
+&lt;ol&gt;
+    &lt;li&gt;&lt;span style=&#34;line-height: 15px;&#34;&gt;Buy an add-on board like the Gertboard which has an Arduino compatible IC on it. Pricey.&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;Plug a standard Arduino like an Uno or Nano into the USB port of the RPi. This is by far the easiest method and minimises wiring and hassle. However it requires the more expensive Arduinos.&lt;/li&gt;
+    &lt;li&gt;Use a &lt;a href=&#34;http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&amp;amp;item=250893154137&amp;amp;ssPageName=ADME:L:OU:IE:3160&#34;&gt;USB to Serial adapter&lt;/a&gt; with a cheaper/smaller Arduino like a Pro Mini or a self-made &lt;a href=&#34;http://shrimping.it/blog/&#34;&gt;Shrimp&lt;/a&gt;. This is the best DIY option and has the same advantage of method 2 that you can power the Arduino/Shrimp from USB. For a Model B RPi, I&amp;rsquo;d recommend this route.&lt;/li&gt;
+    &lt;li&gt;Use the Serial Pins on the Raspberry Pi to connect to a cheaper/smaller Aruduino like a Pro Mini or a self-made Shrimp. This is theoretically the cheapest method but by far the most hassle. This is also the best method if you are using the cheaper Raspberry Pi Model A and its single USB port is being used for Wifi.&lt;/li&gt;
+&lt;/ol&gt;
+I won&amp;rsquo;t go into the details of 1 since I haven&amp;rsquo;t done it. 2 and 3 are plug n play and require no instructions. 4 is the awkward one, so here are some notes to save you the hassle I went through.&lt;/p&gt;
+
+&lt;p&gt;The basic steps are identical to those described &lt;a href=&#34;http://blog.oscarliang.net/raspberry-pi-and-arduino-connected-serial-gpio/&#34;&gt;here&lt;/a&gt;. In hardware terms You connect the 3.3V/GND/TX/RX pins on the Raspberry Pi via &lt;a href=&#34;http://dx.com/p/jy-mcu-5v-3v-iic-uart-spi-level-4-way-converter-module-adapter-178286?Utm_rid=73941134&amp;Utm_source=affiliate&#34;&gt;a level converter&lt;/a&gt; to 5V/GND/RX/TX pins on an Arduino. Alternatively you buy a 3.3V Arduino and avoid the need for a level converter. I powered the Arduino separately to avoid overloading the RPi pins (this seems to be causing intermittent issues with RPi booting tho).&lt;/p&gt;
+
+&lt;p&gt;RPi software changes involve commenting out this line in /etc/inittab with a #
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100&lt;/code&gt;&lt;/pre&gt;
+and removing the following parts of the one line in /boot/cmdline.txt
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;console=ttyAMA0,115200 kgdboc=ttyAMA0,115200&lt;/code&gt;&lt;/pre&gt;
+You also need to create a link to the serial port so that the Arduino IDE recognises it:
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo ln -s /dev/ttyAMA0 /dev/ttyUSB9&lt;/code&gt;&lt;/pre&gt;
+&lt;span style=&#34;text-decoration: underline;&#34;&gt;That last step has to be done after every reboot&lt;/span&gt;. I should find a way to make it permanent.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately this still isn&amp;rsquo;t enough to be able to program the Arduino from the IDE running on the RPi. We need to be able to toggle the reset pin on the Arduino to initiate programming. Normally that&amp;rsquo;s done by the USB-Serial adapters or the USB-Serial chip on the more expensive Arduinos. To do this in our setup requires &lt;a href=&#34;http://www.deanmao.com/2012/08/12/fixing-the-dtr-pin/&#34;&gt;following the instructions here&lt;/a&gt;where one of the Arduino tools is wrapped in a script which does the pin toggling at exactly the right moment. In summary:
+&lt;ol&gt;
+    &lt;li&gt;&lt;span style=&#34;line-height: 15px;&#34;&gt;Connect Pin 11 (GPIO 17) of the RPi to the DTR Pin on the Arduino Pro Mini via the level converter&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;Run the following commands to download and configure &lt;a href=&#34;https://github.com/deanmao/avrdude-rpi&#34;&gt;avrdude-rpi&lt;/a&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+sudo apt-get update
+sudo apt-get install python-dev
+sudo apt-get install python-rpi.gpio
+wget &lt;a href=&#34;https://raw.github.com/deanmao/avrdude-rpi/master/autoreset&#34;&gt;https://raw.github.com/deanmao/avrdude-rpi/master/autoreset&lt;/a&gt;
+wget &lt;a href=&#34;https://raw.github.com/deanmao/avrdude-rpi/master/avrdude-autoreset&#34;&gt;https://raw.github.com/deanmao/avrdude-rpi/master/avrdude-autoreset&lt;/a&gt;
+sudo cp autoreset /usr/bin
+sudo cp avrdude-autoreset /usr/bin
+sudo mv /usr/bin/avrdude /usr/bin/avrdude-original
+sudo ln -s /usr/bin/avrdude-autoreset /usr/bin/avrdude
+sudo chmod 755 /usr/bin/avrdude-autoreset
+sudo chmod 755 /usr/bin/autoreset
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;I was getting a warning about &amp;ldquo;Channel already in use&amp;rdquo; from /usr/bin/autoreset so I added this to the end of the file:
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;PIO.cleanup()&lt;/code&gt;&lt;/pre&gt;
+&lt;span style=&#34;text-decoration: underline;&#34;&gt;Note you must run the Arduino IDE as root from now on&lt;/span&gt;. i.e. in LXTerminal:
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo arduino&lt;/code&gt;&lt;/pre&gt;
+If you haven&amp;rsquo;t already, reboot the RPi to make the earlier steps kick in. You should now be able to program whatever you like on to the Arduino using the IDE running on the Raspberry Pi. I even have this running headless by connecting to the RPi across the network using the Windows Remote Desktop Connection tool.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-084448_1920x1080_scrot.png&#34;&gt;&lt;img class=&#34;aligncenter size-large wp-image-1092&#34; alt=&#34;2013-06-05-084448_1920x1080_scrot&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/06/2013-06-05-084448_1920x1080_scrot-1024x576.png&#34; width=&#34;584&#34; height=&#34;328&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Any questions, pop them in the comments.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

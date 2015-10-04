@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adding-A-Realtime-Clock-To-The-Raspberry-Pi-And-The-Sweetbox-Iis on Cross Dominant</title>
+    <link>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/</link>
+    <description>Recent content in Adding-A-Realtime-Clock-To-The-Raspberry-Pi-And-The-Sweetbox-Iis on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Nov 2013 17:33:32 +0000</lastBuildDate>
+    <atom:link href="http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Adding a realtime clock to the Raspberry Pi and the Sweetbox II</title>
+      <link>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/</link>
+      <pubDate>Sun, 03 Nov 2013 17:33:32 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Adding a realtime clock to the Raspberry Pi and the Sweetbox II&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I got one of these &lt;a href=&#34;http://dx.com/p/meeeno-ds1307-real-time-clock-brick-module-for-arduino-yellow-works-with-official-arduino-boards-213941&#34;&gt;$3 RTC modules&lt;/a&gt;a few months back and I finally set it up this weekend. It simply has a battery-backed clock so when your Raspberry Pi (or Arduino) boots up, it has the correct time immediately. For a network-connected Pi, it&amp;rsquo;s not really necessary as you can have the time updated regularly via NTP but not all Pis spend their life connected to the network. So if you are working away locally on your Pi, your files will no longer look like they were all created in 1970. This &lt;a href=&#34;http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/overview&#34;&gt;Adafruit tutorial&lt;/a&gt; explains exactly how to do it. You could even get &lt;a href=&#34;http://www.adafruit.com/products/264&#34;&gt;their RTC module&lt;/a&gt; instead.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc1.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-1199&#34; alt=&#34;rtc1&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc1.jpg&#34; width=&#34;1024&#34; height=&#34;768&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;On a totally unrelated note, I finally got my &lt;a href=&#34;http://www.kickstarter.com/projects/677951563/sweetbox-ii-the-perfect-case-for-your-raspberry-pi/&#34;&gt;Sweetbox II&lt;/a&gt; case for the Raspberry Pi which I backed on Kickstarter. It&amp;rsquo;s a minimalist low-profile case that comes with cute heatsinks and a cut-out for the header pins. I&amp;rsquo;m not a huge fan of the semi-translucent look of the plastic but I do love how little space it takes up. And unlike many cases, you don&amp;rsquo;t have to take it apart to plug/unplug the ribbon cable. And finally, it&amp;rsquo;s nice to have more good tech coming out of Greece.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc2.jpg&#34;&gt;&lt;img class=&#34;aligncenter size-full wp-image-1200&#34; alt=&#34;rtc2&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc2.jpg&#34; width=&#34;1024&#34; height=&#34;768&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

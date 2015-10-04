@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Control implementation for an RC Car - Part 1 &middot; Cross Dominant</title>
+
+    <meta name="description" content="">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Remote Control implementation for an RC Car - Part 1 &middot; Cross Dominant">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Remote Control implementation for an RC Car - Part 1 &middot; Cross Dominant">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">19 May 2013, 15:04</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/remote-control-implementation-for-an-rc-car-part-1/" class="post-title">Remote Control implementation for an RC Car - Part 1</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/remote-control-implementation-for-an-rc-car-part-1/" data-title="Remote Control implementation for an RC Car - Part 1" data-description="" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/remote-control-implementation-for-an-rc-car-part-1/" data-description="" class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>#&ldquo;Remote Control implementation for an RC Car - Part 1&rdquo;</p>
+
+<p>There are many ways you can add remote control to a project. Off the shelf modules; Bluetooth; 2.4GHz NRF24L01+ transceivers; 433MHz/434Mhz modules or even Infra-red.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control.jpg"><img class="aligncenter size-large wp-image-1059" alt="remote_control" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control-1024x576.jpg" width="584" height="328" /></a></p>
+
+<p>My plan with <a href="http://conoroneill.net/progress-so-far-with-a-kids-e21-self-assemble-remote-control-car/">our ZL-4 el-cheapo RC</a> car was to use an <a href="http://www.elecfreaks.com/1999.html">Elecfreaks Joystick Shield</a>, an Arduino board and the<a href="http://www.ebay.ie/itm/1X-NRF24L01-2-4GHz-Antenna-Wireless-Transceiver-Module-For-Microcontroller-WST-/271133536748?ssPageName=ADME:L:OC:IE:3160#ht_5792wt_1385">NRF24L01+</a> modules mainly because [a] the joystick shield has a connector for one and [b] I want to use them in another potentiallycommercialproject and thought it would be a good learning exercise. They are also stunningly cheap at 1.26,includingshipping, for each transceiver.</p>
+
+<p>Unfortunately Idiscovered that the Adafruit Motor Shield on the RC car uses up a ton of the pins on the Arduino and makes it very hard to add theNRF24L01+. In particular it uses the SPI pins which you need to talk to theNRF24L01+.</p>
+
+<p>So I went with Plan B which was the 433Mhz modules. These things are fab. They work in the unregulated ISM band like most weather stations etc and, like the NRF24L01+,are gob-smackingly cheap - 1.97 for <a href="http://dx.com/p/diy-433mhz-wireless-receiving-module-for-arduino-green-149252?Utm_rid=73941134&Utm_source=affiliate">the receiver</a> and 2.14 for <a href="http://dx.com/p/433mhz-wireless-transmitter-module-superregeneration-for-arduino-green-149254?Utm_rid=73941134&Utm_source=affiliate">the transmitter</a>. When I see people creating really simple projects but with 2x 20+ Zigbee modules, I just don&rsquo;t understand it.</p>
+
+<p>The 433MHz modules main advantage relative to theNRF24L01+ is that they can cover longer distances with a properly setup aerial. The main disadvantages are that they generally need that aerial, they have a very low bit-rate and you have to deal with most of the error correction etc yourself.</p>
+
+<p>What transforms these modules into something pretty spectacular is the <a href="http://www.airspayce.com/mikem/arduino/">VirtualWire</a> library for Arduino. This takes care of all the low-level transmit/receive code and you have to do little more than the equivalent of a print statement. Just think about this. You can send any information you like over hundreds of feet using 4 worth of electronics by simply calling:
+<pre><code class="language-bash">vw_send((uint8_t *)msg, strlen(msg));</code></pre>
+No Wifi or SMS needed! Of course this is a broadcast message and anyone can pick it up but who cares.</p>
+
+<p>The one thing we do have to figure out is what happens when multiple devices are broadcasting locally. Will they interfere with each other? I know VirtualWire has CRC checking but that&rsquo;s not much use if every message is corrupt.</p>
+
+<p>For the remote control I have created an extremely simplistic &ldquo;protocol&rdquo;. The transmitter sends out the following every 200ms:
+<pre><code class="language-bash">XnnnnYnnnnAnBnCnDn</code></pre>
+Where Xnnnn is the X-axis of the joystick from 0 to 1024, Ynnnn is the Y-axis of the joystick from 0 to 1024, An is button-A 0 or 1, Bn is button-B 0 or 1, Cn is button-C 0 or 1 and Dn is button-D 0 or 1.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2.jpg"><img class="aligncenter size-large wp-image-1063" alt="remote_control2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2-1024x748.jpg" width="584" height="426" /></a></p>
+
+<p>We are now successfully receiving and interpreting those messages on the RC car and doing forward/reverse. The bit we have to figure out is turning, as the car doesn&rsquo;t have any steering.</p>
+
+<p>More updates in a few days when we crack that nut. And I&rsquo;ll obviously have to add some sort of &ldquo;addressing&rdquo; for the scenario where more that one RC car is being controlled in the house.</p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/remote-control-implementation-for-an-rc-car-part-1\/remote-control-implementation-for-an-rc-car-part-1\/';
+    var disqus_title = 'Remote Control implementation for an RC Car - Part 1';
+    var disqus_url = 'http:\/\/conoroneill.net\/remote-control-implementation-for-an-rc-car-part-1\/remote-control-implementation-for-an-rc-car-part-1\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

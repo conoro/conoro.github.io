@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Connecting-To-Your-Raspberry-Pi-Desktop-Over-The-Networks on Cross Dominant</title>
+    <link>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/</link>
+    <description>Recent content in Connecting-To-Your-Raspberry-Pi-Desktop-Over-The-Networks on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 May 2012 06:55:01 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Connecting to your Raspberry Pi desktop over the network</title>
+      <link>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/connecting-to-your-raspberry-pi-desktop-over-the-network/</link>
+      <pubDate>Wed, 09 May 2012 06:55:01 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/connecting-to-your-raspberry-pi-desktop-over-the-network/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Connecting to your Raspberry Pi desktop over the network&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install xrdp&lt;/code&gt;&lt;/pre&gt;
+Then run Remote Desktop on your Windows 7 PC to view the RPi desktop. Works just as well with VNC.&lt;/p&gt;
+
+&lt;p&gt;Simples. And works surprisingly well.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/rdp_to_rpi.png&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-719&#34; title=&#34;rdp_to_rpi&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/rdp_to_rpi-1024x631.png&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;359&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

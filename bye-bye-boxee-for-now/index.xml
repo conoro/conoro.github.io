@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bye-Bye-Boxee-For-Nows on Cross Dominant</title>
+    <link>http://conoroneill.net/bye-bye-boxee-for-now/</link>
+    <description>Recent content in Bye-Bye-Boxee-For-Nows on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 May 2011 20:09:00 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/bye-bye-boxee-for-now/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bye Bye Boxee (for now)</title>
+      <link>http://conoroneill.net/bye-bye-boxee-for-now/bye-bye-boxee-for-now/</link>
+      <pubDate>Sun, 08 May 2011 20:09:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/bye-bye-boxee-for-now/bye-bye-boxee-for-now/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Bye Bye Boxee (for now)&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;I&amp;rsquo;ve been a &lt;a href=&#34;http://www.boxee.tv/&#34;&gt;Boxee&lt;/a&gt; fanatic since I first installed it over two years ago. We had been running &lt;a href=&#34;http://xbmc.org/&#34;&gt;XBMC&lt;/a&gt; on several old XBOXes (and still do) but they couldn&amp;rsquo;t handle x.264 video or HDMI so when I built a media PC, I used Boxee. I am absolutely convinced their focus on social is the right way to go. Social watching of TV in 2011 is barely scratching the surface of what&amp;rsquo;s possible.&lt;/p&gt;
+&lt;p /&gt;
+&lt;div&gt;But Brooklyn, we have a problem. Development on the non-Boxee-Box codebase has ground to a halt. All of their efforts are now on the Boxee Box. And rightly so. When you have VC investment, your job is to generate a return, not bug-fix free code for geeks. Particularly when you are a small team, you have to prioritise revenue generation.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;We did some moving around of PCs recently with the result that the media PC is now running Ubuntu 10.10 x86-64 instead of Windows. I happily did this in the knowledge that there was a Boxee installer for this setup. What I had forgotten was what a pain in the ass it is to do anything with video and decent video cards on Linux. Then I found that Boxee crashed trying to play any video. Argghhh.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;In parallel to this I discovered that XBMC (the code that Boxee is based on) had been in heavy development on PCs over the past few years. It has versions for Windows and Ubuntu too. I was forced to give it a go due to the Boxee problems and was pleasantly surprised to find that it&amp;rsquo;s very good indeed (apart from the 1980s Amstrad twin-tape-deck shiny black colour scheme).&amp;nbsp;&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;A few video glitches on XBMC made me try the ATI-AMD proprietary video driver instead of the OpenSource one. It didn&amp;rsquo;t solve the XBMC pause-restart glitch but it did make Boxee work. In black and white :-(&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;I then tried a nightly build of XBMC and wow! All of the TV show preview stuff is brilliant, including episode synopses. Development is obviously moving ahead quickly.&lt;/div&gt;
+&lt;p /&gt;
+&lt;div&gt;I continue to recommend Boxee Boxes to anyone who asks me about media centres but I don&amp;rsquo;t have $200 spare to buy something that I can already do via the media PC. Hopefully the Boxee guys will sort out the Ubuntu problems at some point and then I&amp;rsquo;ll be back. But for now, XBMC it is.&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

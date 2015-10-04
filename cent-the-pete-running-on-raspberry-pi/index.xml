@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cent-The-Pete-Running-On-Raspberry-Pis on Cross Dominant</title>
+    <link>http://conoroneill.net/cent-the-pete-running-on-raspberry-pi/</link>
+    <description>Recent content in Cent-The-Pete-Running-On-Raspberry-Pis on Cross Dominant</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 May 2012 19:11:26 +0100</lastBuildDate>
+    <atom:link href="http://conoroneill.net/cent-the-pete-running-on-raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cent The Pete running on Raspberry Pi</title>
+      <link>http://conoroneill.net/cent-the-pete-running-on-raspberry-pi/cent-the-pete-running-on-raspberry-pi/</link>
+      <pubDate>Tue, 08 May 2012 19:11:26 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/cent-the-pete-running-on-raspberry-pi/cent-the-pete-running-on-raspberry-pi/</guid>
+      <description>&lt;p&gt;#&amp;ldquo;Cent The Pete running on Raspberry Pi&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;A Centipede clone written by me in Z80 Assembler in 1985. Now running on the Fuse ZX Spectrum emulator on the Speccy&amp;rsquo;s spiritual successor, the Raspberry Pi.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1477.jpg&#34;&gt;&lt;img class=&#34;alignnone size-large wp-image-714&#34; title=&#34;DSCF1477&#34; src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1477-1024x768.jpg&#34; alt=&#34;&#34; width=&#34;584&#34; height=&#34;438&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Full unboxing video coming later tonight once it uploads to YouTube.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
