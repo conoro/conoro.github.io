@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi &middot; Cross Dominant</title>
+
+    <meta name="description" content="Now that I can control the Efergy RC mains sockets easily with a DigiX Arduino, it&#39;s time to make the same thing work on Node.js running on a Raspberry Pi. Turns out it&#39;s not quite so easy!">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi &middot; Cross Dominant">
+    <meta name="twitter:description" content="Now that I can control the Efergy RC mains sockets easily with a DigiX Arduino, it&#39;s time to make the same thing work on Node.js running on a Raspberry Pi. Turns out it&#39;s not quite so easy!">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi &middot; Cross Dominant">
+    <meta property="og:description" content="Now that I can control the Efergy RC mains sockets easily with a DigiX Arduino, it&#39;s time to make the same thing work on Node.js running on a Raspberry Pi. Turns out it&#39;s not quite so easy!">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">30 Mar 2014, 13:36</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi.html" class="post-title">Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi.html" data-title="Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi" data-description="Now that I can control the Efergy RC mains sockets easily with a DigiX Arduino, it&#39;s time to make the same thing work on Node.js running on a Raspberry Pi. Turns out it&#39;s not quite so easy!" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi.html" data-description="Now that I can control the Efergy RC mains sockets easily with a DigiX Arduino, it&#39;s time to make the same thing work on Node.js running on a Raspberry Pi. Turns out it&#39;s not quite so easy!" class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        
+
+<p>Now that I can talk to the Efergy remote control switches using Arduino and <a href="http://digistump.com/products/50">DigiX</a>, it&rsquo;s time to do the same thing with Raspberry Pi and Node.js.</p>
+
+<p>But first, check out this gorgeous <a href="http://shop.pimoroni.com/products/pibow-timber">Pimoroni Pibow Timber</a> case that the RPi now lives in. Makes me smile every time I look at it.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/pibow_timber.jpg" alt="Pibow" title="Pibow Timber Raspberry Pi case" />
+</p>
+
+<p>Start by plugging in one of the Efergy switches and using its remote control to set its code. Use the sniffer program from <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">the last post</a> to find out what that code is.</p>
+
+<p>Connecting the 433MHz transmitter to the RPi is dead easy. Connect GND to pin 6, VCC to PIN 1 and DATA to PIN 11. More details on the <a href="https://projects.drogon.net/raspberry-pi/wiringpi/pins/">WiringPi Pinout</a>. For our purposes: BCM GPIO 17 == WiringPi 0 == Pin 11 == GPIO #0</p>
+
+<p>The simplest way of doing this is to create a command-line program in C or C++ and then shell out to it in Node. But where&rsquo;s the fun in that? The core approach I decided to use was via a Node module called <a href="https://github.com/rbranson/node-ffi/wiki/Node-FFI-Tutorial">Node FFI</a> which makes it relatively easy to call out to C libraries from Node. The alternative is to build a Node module in C++. But that wasn&rsquo;t going to work, given that I haven&rsquo;t written a line of C++ in my life, after the trauma of doing a training course in it in the late 90s and seeing the horror inflicted on my beloved C.</p>
+
+<p>Unfortunately I quickly realised that node-ffi only does C whilst the <a href="https://github.com/r10r/rcswitch-pi/">RCSWitch-Pi</a> library is C++ (but the <a href="https://projects.drogon.net/raspberry-pi/wiringpi/functions/">WiringPi library</a> under that is C again!).</p>
+
+<p>An abortive attempt at using <a href="https://github.com/tjfontaine/node-ffi-generate">ffi-generate</a> went nowhere as it wouldn&rsquo;t even run on the RPi due to some libclang problem. Running in an Ubuntu VM worked after a lot of llvm messing but I couldn&rsquo;t make any sense of the output.</p>
+
+<p>Cue a lonnnngggg session Googling how to interface C to C++ and realising that I hate C++ even more now :-) Eventually I found an <a href="http://www.teddy.ch/c++_library_in_c/">idiot&rsquo;s guide to wrapping C++</a> so it can be called by C. Bit by bit I figured it all out but hit a brick wall at one point. This forced me to use the GDB debugger for the first time in 15 years. Luckily I spotted the problem using GDB in about a minute flat and got a test C program working which would call the C++ functions correctly.</p>
+
+<p>Then it was back to Node.js and node-ffi for another round of head scratching and non-stop errors. Finally it all clicked and the Efergy module clicked too!</p>
+
+<p>Now that I have the basics working, I will clean up this code and use it in the Node server that will run on the RPi via the usual exports/require approach. I&rsquo;ll also hopefully be able to apply the same approach to any C++ or C library that accesses any RPi hardware.</p>
+
+<p>The final set of steps are actually quite simple. All the effort was in the learning.</p>
+
+<h3 id="install-wiringpi:72ef235c1c656139694e1398dfdb61c0">Install WiringPi</h3>
+
+<pre><code class="language-bash">mkdir ~/gitwork
+cd gitwork
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
+
+### Install RCSwitch-Pi
+cd ~/gitwork
+git clone https://github.com/r10r/rcswitch-pi.git
+cd rcswitch-pi
+make
+</code></pre>
+
+<h3 id="build-an-rcswitch-pi-library:72ef235c1c656139694e1398dfdb61c0">Build an RCSwitch-Pi library</h3>
+
+<pre><code class="language-bash">gcc -shared -fpic RCSwitch.cpp -o libRCSwitch.so
+</code></pre>
+
+<h3 id="simple-c-test-to-make-sure-you-can-talk-to-efergy:72ef235c1c656139694e1398dfdb61c0">Simple C++ test to make sure you can talk to Efergy</h3>
+
+<pre><code class="language-bash">cd ~/gitwork/rcswitch-pi
+</code></pre>
+
+<p>Create a file called efergy.cpp with the following contents
+```c
+#include &ldquo;RCSwitch.h&rdquo;
+#include <stdlib.h>
+#include <stdio.h></p>
+
+<p>int main(int argc, char *argv[]) {</p>
+
+<pre><code>/*
+ output PIN is hardcoded for testing purposes
+ see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
+ for pin mapping of the raspberry pi GPIO connector
+ */
+int PIN = 0;
+int unitCode = atoi(argv[1]);
+
+if (wiringPiSetup () == -1) return 1;
+    printf(&quot;sending unitCode[%i]\n&quot;, unitCode);
+    RCSwitch mySwitch = RCSwitch();
+    mySwitch.enableTransmit(PIN);
+
+    mySwitch.send(unitCode,24);
+
+    return 0;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now compile and run it:</p>
+
+<pre><code class="language-bash">g++ -c -o efergy.o efergy.cpp
+g++ RCSwitch.o efergy.o -o efergy -lwiringPi
+sudo ./efergy 109011
+sudo ./efergy 109019
+</code></pre>
+
+<p>If all is working ok, the switch will turn on and off.</p>
+
+<h3 id="install-node-npm-on-raspberry-pi:72ef235c1c656139694e1398dfdb61c0">Install Node/NPM on Raspberry Pi</h3>
+
+<pre><code class="language-bash">    cd ~
+    sudo mkdir /opt/node
+    wget http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-arm-pi.tar.gz
+    tar xvzf node-v0.10.23-linux-arm-pi.tar.gz
+    sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
+    cd ~
+    nano .bash_profile
+     
+    #Add these lines to the file you opened
+    PATH=$PATH:/opt/node/bin
+    export PATH
+
+    #Save and exit
+     
+    #Test
+    node -v
+    npm -v
+</code></pre>
+
+<h3 id="wrapping-c-so-it-can-be-called-by-c:72ef235c1c656139694e1398dfdb61c0">Wrapping C++ so it can be called by C</h3>
+
+<p>Create wrapper.h and wrapper.c</p>
+
+<p>wrapper.h:
+```c
+#ifndef __MYWRAPPER_H
+#define __MYWRAPPER_H</p>
+
+<p>#ifdef __cplusplus
+extern &ldquo;C&rdquo; {
+#endif</p>
+
+<p>typedef struct RCSwitch RCSwitch;</p>
+
+<p>RCSwitch* newRCSwitch();</p>
+
+<p>void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length);</p>
+
+<p>void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin);</p>
+
+<p>void deleteRCSwitch(RCSwitch* v);</p>
+
+<p>#ifdef __cplusplus
+}
+#endif
+#endif
+```</p>
+
+<p>wrapper.c:
+```c</p>
+
+<pre><code>#include &quot;RCSwitch.h&quot;
+#include &quot;wrapper.h&quot;
+#include &lt;stdio.h&gt;
+
+extern &quot;C&quot; {
+  RCSwitch* newRCSwitch() {
+    //printf(&quot;Inside newRCSwitch&quot;);
+    return new RCSwitch();
+  }
+
+  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
+    //printf(&quot;Inside RCSwitch_send&quot;);
+    v-&gt;send(Code, length);
+  }
+
+  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
+    //printf(&quot;Inside RCSwitch_enableTransmit&quot;);
+    v-&gt;enableTransmit(nTransmitterPin);
+  }
+
+  void deleteRCSwitch(RCSwitch* v) {
+    delete v;
+  }
+}
+</code></pre>
+
+<pre><code>
+### Compile everything
+Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple [GDB Tutorial here](http://web.eecs.umich.edu/~sugih/pointers/summary.html) and some tips on [RPi Forums](http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312).
+
+```bash
+g++ -g -c wrapper.c -o wrapper.o
+gcc -g -c efergy.c -o efergy.o
+g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
+g++ -g efergy.o wrapper.o ./libRCSwitch.so -o efergy2
+</code></pre>
+
+<h3 id="run-the-c-program:72ef235c1c656139694e1398dfdb61c0">Run the C program</h3>
+
+<pre><code class="language-bash">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
+sudo ./efergy2 109011
+</code></pre>
+
+<p>Now to get everything running in Node/JavaScript</p>
+
+<h3 id="install-node-ffi:72ef235c1c656139694e1398dfdb61c0">Install Node FFI</h3>
+
+<pre><code class="language-bash">sudo npm install -g ffi
+</code></pre>
+
+<h3 id="create-send-js:72ef235c1c656139694e1398dfdb61c0">Create send.js</h3>
+
+<pre><code class="language-javascript">var ffi = require(&quot;ffi&quot;)
+
+var libwiringPi = ffi.Library('/usr/local/lib/libwiringPi', {
+    'wiringPiSetup' : [ 'int', [] ],
+    'digitalWrite' : [ 'void', ['int', 'int'] ],
+    'pinMode': [ 'void', ['int', 'int'] ],
+    'delayMicroseconds' :  [ 'void', ['int', 'int'] ]
+})
+
+var libRCSwitch = ffi.Library('./libwrapper', {
+  'newRCSwitch' : ['pointer', [] ],
+  'RCSwitch_send': ['void', [ 'pointer', 'int', 'int' ] ],
+  'RCSwitch_enableTransmit': ['void', ['pointer', 'int'] ]
+})
+
+if (process.argv.length &lt; 3) {
+  console.log('Arguments: Efergy Switch Code')
+  process.exit()
+}
+
+var PIN = 0;
+var unitCode = parseInt(process.argv[2]);
+var mySwitch = libRCSwitch.newRCSwitch();
+
+if (libwiringPi.wiringPiSetup() == -1){
+    return 1;
+    printf(&quot;Error initialising WiringPi&quot;);
+}
+
+if (mySwitch.isNull()) {
+    console.log(&quot;Oh no! Couldn't create object!\n&quot;);
+} else {
+    libRCSwitch.RCSwitch_enableTransmit(mySwitch, PIN);
+    libRCSwitch.RCSwitch_send(mySwitch, unitCode, 24);
+}
+</code></pre>
+
+<h3 id="compile-the-libraries:72ef235c1c656139694e1398dfdb61c0">Compile the libraries</h3>
+
+<pre><code class="language-bash">g++ -shared -fpic -g wrapper.c -L ./ -l RCSwitch -o libwrapper.so
+g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
+</code></pre>
+
+<h3 id="run-send-js:72ef235c1c656139694e1398dfdb61c0">Run send.js</h3>
+
+<p>Note that anything which uses WiringPi has to be run sudo. A bit of a pain. Not sure I want to be running the Node process as root?</p>
+
+<pre><code class="language-bash">sudo env PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ node send.js 109011
+</code></pre>
+
+<p>That&rsquo;s it. You can now turn on and off your Efergy socket using Node. Next up, a simple Node server to handle remote requests to do this.</p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi.html';
+    var disqus_title = 'Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi';
+    var disqus_url = 'http:\/\/conoroneill.net\/interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

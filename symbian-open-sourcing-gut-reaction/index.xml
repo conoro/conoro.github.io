@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Symbian-Open-Sourcing-Gut-Reactions on Cross Dominant</title>
-    <link>http://conoroneill.net/symbian-open-sourcing-gut-reaction/</link>
+    <link>http://conoroneill.net/symbian-open-sourcing-gut-reaction.html</link>
     <description>Recent content in Symbian-Open-Sourcing-Gut-Reactions on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Feb 2010 09:17:28 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/symbian-open-sourcing-gut-reaction/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/symbian-open-sourcing-gut-reaction.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Symbian Open-Sourcing Gut Reaction</title>
-      <link>http://conoroneill.net/symbian-open-sourcing-gut-reaction/symbian-open-sourcing-gut-reaction/</link>
+      <link>http://conoroneill.net/symbian-open-sourcing-gut-reaction/symbian-open-sourcing-gut-reaction.html</link>
       <pubDate>Thu, 04 Feb 2010 09:17:28 +0000</pubDate>
       
-      <guid>http://conoroneill.net/symbian-open-sourcing-gut-reaction/symbian-open-sourcing-gut-reaction/</guid>
+      <guid>http://conoroneill.net/symbian-open-sourcing-gut-reaction/symbian-open-sourcing-gut-reaction.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Symbian Open-Sourcing Gut Reaction&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;So Symbian &lt;a href=&#34;http://www.symbian-guru.com/welcome/2010/02/symbian-is-now-open-source.html&#34;&gt;is now fully Open-Sourced&lt;/a&gt;.&lt;p /&gt;I bang the &amp;quot;Symbian is dead&amp;quot; drum quite a bit but it&amp;#39;s more coming from a punter perspective than any industry insight. I have an N95-8GB and a HTC G1. The hardware on the N95 is fabulous, the apps are solid, the OS gets in my way all the time. The hardware on the G1 is rubbish, the apps are fabulous and the OS stays out of my way.&lt;p /&gt; If my N95-8GB asks me one more time which goddammed way it should connect to the internet, I may throw it at the wall. Here&amp;#39;s a wee bit of free code for the Symbian and Nokia S60 folks:&lt;p /&gt;If previously used Wifi available, use that.&lt;br /&gt; else&lt;br /&gt;if previously used 3G connection available use that&lt;br /&gt;else very very very rarely ask me&lt;br /&gt;endif&lt;p /&gt;Open Sourcing things at the beginning of their development often works. Doing it after 10 years rarely does, even if they are good products. How many people using the Open Source version of Solaris? What&amp;#39;s the usage of XFS vs ext3? Do people use SVN or Vesta for source control? Exactly.&lt;p /&gt; Answer me this, can I go to a Symbian site (or related hacker site) download a few files and tools, connect my N95 via USB to my PC and upload a working instance of Symbian on it and start hacking it?&lt;p /&gt;Have a look at what people like &lt;a href=&#34;http://twittter.com/cyanogen&#34;&gt;@cyanogen&lt;/a&gt; are doing on Android. If he can do it, so can a bunch of Indian or Chinese manufacturers. Unless Symbian enables that type of instant win for the dev community, it will have a long slow death.&lt;p /&gt; I, as an ex-embedded-developer, was able to install an Eclipse based SDK for Android, load up the source code for our App, figure the basics out, tweak some text and deploy the new version in both an emulator and on G1 in about an hour from start to finish. How long would it take me to do that on Symbian starting with an empty browser page and an N95-8GB?&lt;br /&gt; &lt;br /&gt;The key problem isn&amp;#39;t really the OS, it&amp;#39;s everything else.&lt;p /&gt;I&amp;#39;m afraid the future is Android, Maemo and iPhone. Symbian will be something I see when I power up the N95-8GB in 5 years time for old times sake and it says &amp;quot;Search for WLAN&amp;quot;.&lt;/p&gt;

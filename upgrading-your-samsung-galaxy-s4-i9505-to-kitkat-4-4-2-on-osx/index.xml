@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Upgrading-Your-Samsung-Galaxy-S4-I9505-To-Kitkat-4-4-2-On-Osxes on Cross Dominant</title>
-    <link>http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/</link>
+    <link>http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx.html</link>
     <description>Recent content in Upgrading-Your-Samsung-Galaxy-S4-I9505-To-Kitkat-4-4-2-On-Osxes on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Mar 2014 08:35:12 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Upgrading your Samsung Galaxy S4 i9505 to KitKat 4.4.2 on OSX</title>
-      <link>http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/</link>
+      <link>http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx.html</link>
       <pubDate>Thu, 13 Mar 2014 08:35:12 +0000</pubDate>
       
-      <guid>http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/</guid>
+      <guid>http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx.html</guid>
       <description>&lt;p&gt;Using an S4 on a Mac Book Pro is an exercise in futility now that it and other phones no longer appear as a disk drive but as a weird media device. The Samsung Kies software doesn&amp;rsquo;t help and actually seems to make things worse. If you run Windows 7 inside VirtualBox you can see the phone&amp;rsquo;s storage but doesn&amp;rsquo;t see it when the phone is in upgrade mode. So you can&amp;rsquo;t run the usual Odin software there.&lt;/p&gt;
 
 &lt;p&gt;Then I found out about Heimdall, an open source tool for upgrading Galaxy phones on Windows, Linux and OSX. It looks scary and the UI is a horror but once you find out the command required, the whole thing only takes a few minutes.&lt;/p&gt;

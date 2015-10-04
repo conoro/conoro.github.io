@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Accessing-Amazon-Rds-Instances-From-Your-Desktops on Cross Dominant</title>
-    <link>http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop/</link>
+    <link>http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop.html</link>
     <description>Recent content in Accessing-Amazon-Rds-Instances-From-Your-Desktops on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Sep 2010 14:00:00 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Accessing Amazon RDS Instances from your Desktop</title>
-      <link>http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop/accessing-amazon-rds-instances-from-your-desktop/</link>
+      <link>http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop/accessing-amazon-rds-instances-from-your-desktop.html</link>
       <pubDate>Wed, 15 Sep 2010 14:00:00 +0100</pubDate>
       
-      <guid>http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop/accessing-amazon-rds-instances-from-your-desktop/</guid>
+      <guid>http://conoroneill.net/accessing-amazon-rds-instances-from-your-desktop/accessing-amazon-rds-instances-from-your-desktop.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Accessing Amazon RDS Instances from your Desktop&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;Whilst we are huge fans of the Amazon RDS database service (particularly the Multi-AZ setup), one thing that can be a problem is accessing your databases from the desktop. The standard trick of running an SSH tunnel to your EC2 instance doesn&amp;rsquo;t work here.&amp;nbsp;&lt;/p&gt;

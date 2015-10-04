@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> &middot; Cross Dominant</title>
+
+    <meta name="description" content="Mixed laterality since 1968">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content=" &middot; Cross Dominant">
+    <meta name="twitter:description" content="Mixed laterality since 1968">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content=" &middot; Cross Dominant">
+    <meta property="og:description" content="Mixed laterality since 1968">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">29 Sep 2015, 17:35</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2.html" class="post-title">Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>For some odd reason, Google and others stopped auto-generating armhf binaries of <a href="https://www.chromium.org/Home">Chromium</a> last year. Version 37 was the last one I could find. Luckily the Ubuntu guys have been building it all along and their version 45 installs really easily on the <a href="https://www.raspberrypi.org/blog/raspbian-jessie-is-here/">all-new Debian/Raspbian Jessie</a> on your Raspberry Pi 2.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_heart_chrome.png" alt="Pi loves Chromium" />
+</p>
+
+<p>This was a surprise as this kind of thing usually degenerates into dependency hell.</p>
+
+<p>Here you go:</p>
+
+<pre><code class="language-bash">wget http://launchpadlibrarian.net/218525709/chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+wget http://launchpadlibrarian.net/218525711/chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+sudo dpkg -i chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+</code></pre>
+
+<p>It even appears correctly in your desktop menus!</p>
+
+<p>Apart from security fixes and the latest Chromium features, you also get full access to most of the Apps and Extensions in the Chrome Web Store. This includes the <a href="http://www.espruino.com/Order#distributors">Espruino</a> Chrome <a href="https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo">App</a>, which means you or your kids now have everything you need to develop and deploy Embedded and IoT projects for under €100. Honestly, that&rsquo;s revolutionary.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_plus_espruino_small.jpg" alt="Pi loves Espruino" />
+</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">20 Sep 2015, 13:03</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi.html" class="post-title">TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>As an old Embedded guy who actually cares about resource usage, I&rsquo;ve been bothered for quite a while by the number of trivial Node.js projects out there that require a full-blown MongoDB or MySQL server to operate. It&rsquo;s a particular problem on the Raspberry Pi or small <a href="https://www.digitalocean.com/">DigitalOcean</a> Droplets. In many cases a simple SQLite DB or TingoDB is more than sufficient.</p>
+
+<p>If your Web App has 2 registered users and 100 visitors per day, may just maybe you don&rsquo;t need MongoDB or MySQL. I have a set of small Node.js projects now where I use the following combinations and they all work well. Anything you are doing in-house on a Raspberry Pi should absolutely use one of these. In fact I&rsquo;m not even sure recent Mongos run on the RPi 1?</p>
+
+<h2 id="dulcimer-levelup-and-leveldb:b9c1e366c3521fb5cdf8cf868ebc63d4">Dulcimer, LevelUP and LevelDB</h2>
+
+<p><a href="https://github.com/google/leveldb">LevelDB</a> and <a href="https://github.com/Level/levelup">LevelUP</a> are well known and widely used. I think <a href="https://github.com/fritzy/Dulcimer">Dulcimer</a> probably less so. It&rsquo;s a <a href="http://mongoosejs.com/">Mongoose-ish</a> ORM for LevelDB. I was able to tie it into <a href="http://passportjs.org/">PassportJS</a> without much effort to handle users/sessions/etc. I have two setups using it and both have been running for many months on d&rsquo;internet with zero problems. In one case it&rsquo;s a small stats dashboard running on DigitalOcean with a few registered users who check it maybe once a day. The other one is a registration system for people requesting access to some internal work resources. All submissions go into LevelDB. This is running on <a href="https://www.openshift.com/products/online">OpenShift Online</a>.</p>
+
+<h2 id="tingodb-and-tungus:b9c1e366c3521fb5cdf8cf868ebc63d4">TingoDB and Tungus</h2>
+
+<p>Of the NoSQL file-based databases, this seems to have the lowest profile and I think it deserves a <em>lot</em> of attention. <a href="https://github.com/sergeyksv/tingodb">TingoDB</a> emulates most of the common MongoDB APIs and <a href="https://github.com/sergeyksv/tungus">Tungus</a> emulates most of the Mongoose ones. I was able to take a <a href="https://github.com/sahat/tvshow-tracker">random Node.js project</a> off GitHub which is based on MongoDB/Mongoose/Mongoskin and get it running using TingoDB/Tungus on an RPi with only a tiny bit of fiddling with the <a href="https://github.com/rschmukler/agenda/">Agenda</a> module. This is huge for those wanting to do NoSQL on Raspberry Pi. I&rsquo;ll be playing a lot more with this setup in the coming weeks. You really should too.</p>
+
+<h2 id="sqlite-knex-and-bookshelf:b9c1e366c3521fb5cdf8cf868ebc63d4">SQLite, Knex and Bookshelf</h2>
+
+<p>Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&rsquo;ve used <a href="https://www.sqlite.org/">SQLite</a> many times over the years for simple projects and it has always worked well. I hadn&rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&rsquo;t need huge scale, you should be looking at SQLite. I&rsquo;m currently wrapping up a simple in-house project using SQLite with <a href="http://knexjs.org/">Knex</a> and <a href="http://bookshelfjs.org/">Bookshelf</a> on a Raspberry Pi. The DB hold simple relationships between devices and their status.</p>
+
+<p>The latter two setups above also have the big advantage that you can use them in development or in the early production stages and then you can drop in MongoDB or MySQL at a later stage if needed, without any re-coding.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">20 Sep 2015, 11:38</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi.html" class="post-title">Running ZeroMQ with Node.js on Raspberry Pi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p><a href="http://zeromq.org/">ZeroMQ</a> is a lightweight messaging library and looks ideal for lower powered devices like the RPi. Building and running is pretty easy. These are really just notes for myself for future reference.</p>
+
+<p>I don&rsquo;t actually need a messaging system yet but I wanted to play around with one. Running a simple Request / Reply setup with Node.js on both Windows 10 and RPi was interesting. One advantage a message queue gives you over REST is that the receiver can be out of action and still get all transmitted messages when it recovers. You also have things like Pub/Sub etc. I&rsquo;ve been running the code <a href="http://blog.rastating.com/using-zeromq-with-node-js/">from here</a> 100% reliably for two days now on both setups. At some point I&rsquo;ll check max throughput on a Pi.</p>
+
+<p>Installation on Raspberry Pi:</p>
+
+<pre><code class="language-bash">cd
+sudo apt-get install libtool pkg-config build-essential autoconf automake
+mkdir build
+cd build/
+wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.3.tar.gz
+tar -zxvf libsodium-1.0.3.tar.gz
+cd libsodium-1.0.3/
+./configure
+make
+sudo make install
+cd ..
+wget http://download.zeromq.org/zeromq-4.1.3.tar.gz
+tar -zxvf zeromq-4.1.3.tar.gz
+cd zeromq-4.1.3/
+./configure
+make
+sudo make install
+sudo ldconfig
+</code></pre>
+
+<p>Test code for Request / Reply <a href="http://blog.rastating.com/using-zeromq-with-node-js/">from here</a>:</p>
+
+<p>server.js:
+```javascript
+var zmq = require(&ldquo;zmq&rdquo;);<br />
+var socket = zmq.socket(&ldquo;req&rdquo;);<br />
+var counter = 0;</p>
+
+<p>// Just a helper function for logging to the console with a timestamp.
+function logToConsole (message) {<br />
+    console.log(&rdquo;[&rdquo; + new Date().toLocaleTimeString() + &ldquo;] &rdquo; + message);
+}</p>
+
+<p>function sendMessage (message) {<br />
+    logToConsole(&ldquo;Sending: &ldquo; + message);
+    socket.send(message);
+}</p>
+
+<p>// Add a callback for the event that is invoked when we receive a message.
+socket.on(&ldquo;message&rdquo;, function (message) {<br />
+    // Convert the message into a string and log to the console.
+    logToConsole(&ldquo;Response: &ldquo; + message.toString(&ldquo;utf8&rdquo;));
+});</p>
+
+<p>// Begin listening for connections on all IP addresses on port 9998.
+socket.bind(&ldquo;tcp://*:9998&rdquo;, function (error) {<br />
+    if (error) {
+        logToConsole(&ldquo;Failed to bind socket: &ldquo; + error.message);
+        process.exit(0);
+    }
+    else {
+        logToConsole(&ldquo;Server listening on port 9998&rdquo;);</p>
+
+<pre><code>    // Increment the counter and send the value to the clients every second.
+    setInterval(function () { sendMessage(counter++); }, 1000);
+}
+</code></pre>
+
+<p>});
+```</p>
+
+<p>client.js:
+```javascript
+var zmq = require(&ldquo;zmq&rdquo;);<br />
+var socket = zmq.socket(&ldquo;rep&rdquo;);</p>
+
+<p>// Just a helper function for logging to the console with a timestamp.
+function logToConsole (message) {<br />
+    console.log(&rdquo;[&rdquo; + new Date().toLocaleTimeString() + &ldquo;] &rdquo; + message);
+}</p>
+
+<p>// Add a callback for the event that is invoked when we receive a message.
+socket.on(&ldquo;message&rdquo;, function (message) {<br />
+    // Convert the message into a string and log to the console.
+    logToConsole(&ldquo;Received message: &ldquo; + message.toString(&ldquo;utf8&rdquo;));</p>
+
+<pre><code>// Send the message back aa a reply to the server.
+socket.send(message);
+</code></pre>
+
+<p>});</p>
+
+<p>// Connect to the server instance.
+socket.connect(&lsquo;tcp://127.0.0.1:9998&rsquo;);<br />
+```</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">23 Aug 2015, 14:42</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that.html" class="post-title">TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>We had friends over from the US last weekend and their kids loved my <a href="http://printrbot.com/project/simple-makers/">Printrbot 3D printer</a>. They had learned <a href="https://www.tinkercad.com/">Tinkercad</a> in school so that&rsquo;s what they used to create things so they could print them out. They are now hounding their parents for a printer. Oops :-) But I noticed a &ldquo;Download to Minecraft&rdquo; option in Tinkercad and finally just had a chance to try it out. Wow!</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker02b.jpg" alt="In Tinkercad" />
+</p>
+
+<p><a href="http://blog.tinkercad.com/2013/08/15/tinkercraft/">It&rsquo;s incredibly easy</a>. Take any model from Tinkercad and pick the Minecraft option. You may have to tweak the sizing when you are doing it seriously. Then install the <a href="http://www.mcedit.net/downloads.html">MCEdit Minecraft editor</a> and import the file into one of your worlds. Then load up Minecraft and thar she blows.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker01b.jpg" alt="In Minecraft" />
+</p>
+
+<p>I totally love the intersection of 3D design, 3D printing and Minecraft - the real and the virtual coming together. The younger kids are gonna be psyched when I show em!</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">22 Jul 2015, 08:14</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico.html" class="post-title">Creating an OTP fob compatible with Google Authenticator using an Espruino Pico</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Now that the <a href="http://www.espruino.com/">Espruino Pico</a> has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I&rsquo;ve cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg" alt="Espruino Pico OTP" />
+</p>
+
+<p>This code is basically just from three sources, merged together with a few tiny tweaks by me.</p>
+
+<ul>
+<li><a href="https://github.com/Caligatio/jsSHA">jsSHA, a JavaScript implementation of SHA/HMAC</a></li>
+<li><a href="https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/">Generate Time-Based One-Time Passwords With JavaScript</a></li>
+<li><a href="http://www.espruino.com/USB">Espruino HID Example</a></li>
+</ul>
+
+<p>(Note I&rsquo;ve just discovered that Espruino has its own hmac implementation so I can possibly drop jsSHA)</p>
+
+<p>The main thing you need for this is your Google Authenticator Secret. Unfortunately you can only get this when you have access to the original QR code that you scanned (it&rsquo;s in the URL). But if you are setting up 2FA access to a new service e.g. Digital Ocean, then you can grab the secret and save it in the code. If your system also uses a PIN (e.g. SSO on some corporate sites), save that in the code too.</p>
+
+<p>You&rsquo;ll need a very recent pre-release Firmware for this to work at all e.g. <a href="http://www.espruino.com/binaries/git/commits/d3b43aab7efcc42e6f1584c340bd855b1e5af4c6/">from here</a></p>
+
+<p>Once that&rsquo;s flashed, go into Settings on the Web IDE and make sure &ldquo;Set Current Time&rdquo; is ticked in the Communications section. Auth Fobs rely on having an accurate time and that setting keeps unsetting itself on my PC.</p>
+
+<p>Now copy the code below onto the Espruino using the Web IDE and then type save() to make sure it can survive a power-cycle. Remove and re-insert the Pico, press the button and you should get the auth code you need.</p>
+
+<p>Now for the bad news: This currently doesn&rsquo;t work on my Windows 8.1 PC but works semi-reliably on my work MBP. Once the HID code makes it to production, I&rsquo;m sure it will work fine.</p>
+
+<pre><code class="language-javascript">// Code assembled by Conor O'Neill from three sources. None of it copyright me.
+// This code copyright Brian Turek https://github.com/Caligatio/jsSHA https://github.com/Caligatio/jsSHA/blob/master/LICENSE
+'use strict';(function(E){function t(c,a,e){var g=0,b=[],d=0,f,k,l,h,m,w,n,q=!1,r=!1,p=[],t=[],v,u=!1;e=e||{};f=e.encoding||&quot;UTF8&quot;;v=e.numRounds||1;l=y(a,f);if(v!==parseInt(v,10)||1&gt;v)throw Error(&quot;numRounds must a integer &gt;= 1&quot;);if(&quot;SHA-1&quot;===c)m=512,w=z,n=F,h=160;else throw Error(&quot;Chosen SHA variant is not supported&quot;);k=x(c);this.setHMACKey=function(a,b,d){var e;if(!0===r)throw Error(&quot;HMAC key already set&quot;);if(!0===q)throw Error(&quot;Cannot set HMAC key after finalizing hash&quot;);if(!0===u)throw Error(&quot;Cannot set HMAC key after calling update&quot;);
+f=(d||{}).encoding||&quot;UTF8&quot;;b=y(b,f)(a);a=b.binLen;b=b.value;e=m&gt;&gt;&gt;3;d=e/4-1;if(e&lt;a/8){for(b=n(b,a,0,x(c));b.length&lt;=d;)b.push(0);b[d]&amp;=4294967040}else if(e&gt;a/8){for(;b.length&lt;=d;)b.push(0);b[d]&amp;=4294967040}for(a=0;a&lt;=d;a+=1)p[a]=b[a]^909522486,t[a]=b[a]^1549556828;k=w(p,k);g=m;r=!0};this.update=function(a){var c,e,f,h=0,n=m&gt;&gt;&gt;5;c=l(a,b,d);a=c.binLen;e=c.value;c=a&gt;&gt;&gt;5;for(f=0;f&lt;c;f+=n)h+m&lt;=a&amp;&amp;(k=w(e.slice(f,f+n),k),h+=m);g+=h;b=e.slice(h&gt;&gt;&gt;5);d=a%m;u=!0};this.getHash=function(a,e){var f,l,m;if(!0===
+r)throw Error(&quot;Cannot call getHash after setting HMAC key&quot;);m=A(e);switch(a){case &quot;HEX&quot;:f=function(a){return B(a,m)};break;case &quot;B64&quot;:f=function(a){return C(a,m)};break;case &quot;BYTES&quot;:f=D;break;default:throw Error(&quot;format must be HEX, B64, or BYTES&quot;);}if(!1===q)for(k=n(b,d,g,k),l=1;l&lt;v;l+=1)k=n(k,h,0,x(c));q=!0;return f(k)};this.getHMAC=function(a,e){var f,l,p;if(!1===r)throw Error(&quot;Cannot call getHMAC without first setting HMAC key&quot;);p=A(e);switch(a){case &quot;HEX&quot;:f=function(a){return B(a,p)};break;case &quot;B64&quot;:f=
+function(a){return C(a,p)};break;case &quot;BYTES&quot;:f=D;break;default:throw Error(&quot;outputFormat must be HEX, B64, or BYTES&quot;);}!1===q&amp;&amp;(l=n(b,d,g,k),k=w(t,x(c)),k=n(l,h,m,k));q=!0;return f(k)}}function G(c,a,e){var g=c.length,b,d,f,k,l;a=a||[0];e=e||0;l=e&gt;&gt;&gt;3;if(0!==g%2)throw Error(&quot;String of HEX type must be in byte increments&quot;);for(b=0;b&lt;g;b+=2){d=parseInt(c.substr(b,2),16);if(isNaN(d))throw Error(&quot;String of HEX type contains invalid characters&quot;);k=(b&gt;&gt;&gt;1)+l;for(f=k&gt;&gt;&gt;2;a.length&lt;=f;)a.push(0);a[f]|=d&lt;&lt;
+8*(3-k%4)}return{value:a,binLen:4*g+e}}function H(c,a,e){var g=[],b,d,f,k,g=a||[0];e=e||0;d=e&gt;&gt;&gt;3;for(b=0;b&lt;c.length;b+=1)a=c.charCodeAt(b),k=b+d,f=k&gt;&gt;&gt;2,g.length&lt;=f&amp;&amp;g.push(0),g[f]|=a&lt;&lt;8*(3-k%4);return{value:g,binLen:8*c.length+e}}function I(c,a,e){var g=[],b=0,d,f,k,l,h,m,g=a||[0];e=e||0;a=e&gt;&gt;&gt;3;if(-1===c.search(/^[a-zA-Z0-9=+\/]+$/))throw Error(&quot;Invalid character in base-64 string&quot;);f=c.indexOf(&quot;=&quot;);c=c.replace(/\=/g,&quot;&quot;);if(-1!==f&amp;&amp;f&lt;c.length)throw Error(&quot;Invalid '=' found in base-64 string&quot;);
+for(f=0;f&lt;c.length;f+=4){h=c.substr(f,4);for(k=l=0;k&lt;h.length;k+=1)d=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;.indexOf(h[k]),l|=d&lt;&lt;18-6*k;for(k=0;k&lt;h.length-1;k+=1){m=b+a;for(d=m&gt;&gt;&gt;2;g.length&lt;=d;)g.push(0);g[d]|=(l&gt;&gt;&gt;16-8*k&amp;255)&lt;&lt;8*(3-m%4);b+=1}}return{value:g,binLen:8*b+e}}function B(c,a){var e=&quot;&quot;,g=4*c.length,b,d;for(b=0;b&lt;g;b+=1)d=c[b&gt;&gt;&gt;2]&gt;&gt;&gt;8*(3-b%4),e+=&quot;0123456789abcdef&quot;.charAt(d&gt;&gt;&gt;4&amp;15)+&quot;0123456789abcdef&quot;.charAt(d&amp;15);return a.outputUpper?e.toUpperCase():e}function C(c,
+a){var e=&quot;&quot;,g=4*c.length,b,d,f;for(b=0;b&lt;g;b+=3)for(f=b+1&gt;&gt;&gt;2,d=c.length&lt;=f?0:c[f],f=b+2&gt;&gt;&gt;2,f=c.length&lt;=f?0:c[f],f=(c[b&gt;&gt;&gt;2]&gt;&gt;&gt;8*(3-b%4)&amp;255)&lt;&lt;16|(d&gt;&gt;&gt;8*(3-(b+1)%4)&amp;255)&lt;&lt;8|f&gt;&gt;&gt;8*(3-(b+2)%4)&amp;255,d=0;4&gt;d;d+=1)8*b+6*d&lt;=32*c.length?e+=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;.charAt(f&gt;&gt;&gt;6*(3-d)&amp;63):e+=a.b64Pad;return e}function D(c){var a=&quot;&quot;,e=4*c.length,g,b;for(g=0;g&lt;e;g+=1)b=c[g&gt;&gt;&gt;2]&gt;&gt;&gt;8*(3-g%4)&amp;255,a+=String.fromCharCode(b);return a}function A(c){var a={outputUpper:!1,b64Pad:&quot;=&quot;};
+c=c||{};a.outputUpper=c.outputUpper||!1;a.b64Pad=c.b64Pad||&quot;=&quot;;if(&quot;boolean&quot;!==typeof a.outputUpper)throw Error(&quot;Invalid outputUpper formatting option&quot;);if(&quot;string&quot;!==typeof a.b64Pad)throw Error(&quot;Invalid b64Pad formatting option&quot;);return a}function y(c,a){var e;switch(a){case &quot;UTF8&quot;:case &quot;UTF16BE&quot;:case &quot;UTF16LE&quot;:break;default:throw Error(&quot;encoding must be UTF8, UTF16BE, or UTF16LE&quot;);}switch(c){case &quot;HEX&quot;:e=G;break;case &quot;TEXT&quot;:e=function(e,b,d){var f=[],c=[],l=0,h,m,p,n,q,f=b||[0];b=d||0;p=b&gt;&gt;&gt;3;if(&quot;UTF8&quot;===
+a)for(h=0;h&lt;e.length;h+=1)for(d=e.charCodeAt(h),c=[],128&gt;d?c.push(d):2048&gt;d?(c.push(192|d&gt;&gt;&gt;6),c.push(128|d&amp;63)):55296&gt;d||57344&lt;=d?c.push(224|d&gt;&gt;&gt;12,128|d&gt;&gt;&gt;6&amp;63,128|d&amp;63):(h+=1,d=65536+((d&amp;1023)&lt;&lt;10|e.charCodeAt(h)&amp;1023),c.push(240|d&gt;&gt;&gt;18,128|d&gt;&gt;&gt;12&amp;63,128|d&gt;&gt;&gt;6&amp;63,128|d&amp;63)),m=0;m&lt;c.length;m+=1){q=l+p;for(n=q&gt;&gt;&gt;2;f.length&lt;=n;)f.push(0);f[n]|=c[m]&lt;&lt;8*(3-q%4);l+=1}else if(&quot;UTF16BE&quot;===a||&quot;UTF16LE&quot;===a)for(h=0;h&lt;e.length;h+=1){d=e.charCodeAt(h);&quot;UTF16LE&quot;===a&amp;&amp;(m=d&amp;255,d=m&lt;&lt;8|d&gt;&gt;&gt;8);q=l+p;for(n=q&gt;&gt;&gt;
+2;f.length&lt;=n;)f.push(0);f[n]|=d&lt;&lt;8*(2-q%4);l+=2}return{value:f,binLen:8*l+b}};break;case &quot;B64&quot;:e=I;break;case &quot;BYTES&quot;:e=H;break;default:throw Error(&quot;format must be HEX, TEXT, B64, or BYTES&quot;);}return e}function r(c,a){return c&lt;&lt;a|c&gt;&gt;&gt;32-a}function p(c,a){var e=(c&amp;65535)+(a&amp;65535);return((c&gt;&gt;&gt;16)+(a&gt;&gt;&gt;16)+(e&gt;&gt;&gt;16)&amp;65535)&lt;&lt;16|e&amp;65535}function u(c,a,e,g,b){var d=(c&amp;65535)+(a&amp;65535)+(e&amp;65535)+(g&amp;65535)+(b&amp;65535);return((c&gt;&gt;&gt;16)+(a&gt;&gt;&gt;16)+(e&gt;&gt;&gt;16)+(g&gt;&gt;&gt;16)+(b&gt;&gt;&gt;16)+(d&gt;&gt;&gt;16)&amp;65535)&lt;&lt;16|d&amp;65535}function x(c){if(&quot;SHA-1&quot;===
+c)c=[1732584193,4023233417,2562383102,271733878,3285377520];else throw Error(&quot;No SHA variants supported&quot;);return c}function z(c,a){var e=[],g,b,d,f,k,l,h;g=a[0];b=a[1];d=a[2];f=a[3];k=a[4];for(h=0;80&gt;h;h+=1)e[h]=16&gt;h?c[h]:r(e[h-3]^e[h-8]^e[h-14]^e[h-16],1),l=20&gt;h?u(r(g,5),b&amp;d^~b&amp;f,k,1518500249,e[h]):40&gt;h?u(r(g,5),b^d^f,k,1859775393,e[h]):60&gt;h?u(r(g,5),b&amp;d^b&amp;f^d&amp;f,k,2400959708,e[h]):u(r(g,5),b^d^f,k,3395469782,e[h]),k=f,f=d,d=r(b,30),b=g,g=l;a[0]=p(g,a[0]);a[1]=p(b,a[1]);a[2]=p(d,a[2]);a[3]=p(f,a[3]);
+a[4]=p(k,a[4]);return a}function F(c,a,e,g){var b;for(b=(a+65&gt;&gt;&gt;9&lt;&lt;4)+15;c.length&lt;=b;)c.push(0);c[a&gt;&gt;&gt;5]|=128&lt;&lt;24-a%32;c[b]=a+e;e=c.length;for(a=0;a&lt;e;a+=16)g=z(c.slice(a,a+16),g);return g}&quot;function&quot;===typeof define&amp;&amp;define.amd?define(function(){return t}):&quot;undefined&quot;!==typeof exports?&quot;undefined&quot;!==typeof module&amp;&amp;module.exports?module.exports=exports=t:exports=t:E.jsSHA=t})(this);
+
+// This code copyright Nic Raboy https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/
+TOTP = function() {
+
+    var dec2hex = function(s) {
+        return (s &lt; 15.5 ? &quot;0&quot; : &quot;&quot;) + Math.round(s).toString(16);
+    };
+
+    var hex2dec = function(s) {
+        return parseInt(s, 16);
+    };
+
+    var leftpad = function(s, l, p) {
+        if(l + 1 &gt;= s.length) {
+            s = Array(l + 1 - s.length).join(p) + s;
+        }
+        return s;
+    };
+
+    var base32tohex = function(base32) {
+        var base32chars = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ234567&quot;;
+        var bits = &quot;&quot;;
+        var hex = &quot;&quot;;
+        for(var i = 0; i &lt; base32.length; i++) {
+            var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
+            bits += leftpad(val.toString(2), 5, '0');
+        }
+        for(var i = 0; i + 4 &lt;= bits.length; i+=4) {
+            var chunk = bits.substr(i, 4);
+            hex = hex + parseInt(chunk, 2).toString(16) ;
+        }
+        return hex;
+    };
+
+    this.getOTP = function(secret) {
+        try {
+            var epoch = Math.round(new Date().getTime() / 1000.0);
+            var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &quot;0&quot;);
+            var hmacObj = new jsSHA(&quot;SHA-1&quot;, &quot;HEX&quot;);
+			hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
+			hmacObj.update(time);
+            var hmac = hmacObj.getHMAC(&quot;HEX&quot;);
+            var offset = hex2dec(hmac.substring(hmac.length - 1));
+            var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp; hex2dec(&quot;7fffffff&quot;)) + &quot;&quot;;
+            otp = (otp).substr(otp.length - 6, 6);
+        } catch (error) {
+            throw error;
+        }
+        return otp;
+    };
+
+}
+
+var totpObj = new TOTP();
+
+// This code copyright Gordon Williams, Pur3 Ltd.,  https://github.com/espruino/Espruino/blob/master/LICENSE
+var kb = require(&quot;USBKeyboard&quot;);
+
+setWatch(function() {
+  // These two lines by Conor O'Neill :-)
+	var pin = &quot;put_your_PIN_Prefix_here&quot;;
+  kb.type(pin + totpObj.getOTP(&quot;put_your_google_authenticator_secret_here&quot;).toString(), function() {
+        kb.tap(kb.KEY.ENTER);
+    });
+}, BTN, {debounce:100,repeat:true, edge:&quot;rising&quot;});
+
+</code></pre>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">11 Jul 2015, 19:56</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available.html" class="post-title">Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>I compiled both on a Banana Pi for a change. Nothing special for the 0.12 build, and ./configure &ndash;without-snapshot for the 0.10 build.</p>
+
+<p>&ldquo;make test&rdquo; threw up the usual 7 minor errors or so.</p>
+
+<p>I ran both Banana Pi and Raspberry Pi 2 without any immediate obvious issues.</p>
+
+<p>Enjoy.</p>
+
+<ul>
+<li><a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz">node-v0.10.40-linux-arm-v7.tar.gz</a></li>
+
+<li><p><a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.12.7-linux-arm-v7.tar.gz">node-v0.12.7-linux-arm-v7.tar.gz</a></p></li>
+
+<li><p><a href="http://blog.nodejs.org/2015/07/09/node-v0-10-40-maintenance/">node v0.10.40 release notes</a></p></li>
+
+<li><p><a href="http://blog.nodejs.org/2015/07/10/node-v0-12-7-stable/">node-v0.12.7 release notes</a></p></li>
+</ul>
+
+<pre><code class="language-bash">mkdir nodetemp
+cd nodetemp
+wget http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz
+tar -zxvf node-v0.10.40-linux-arm-v7.tar.gz
+cd usr/local
+sudo cp -R * /usr/local/
+</code></pre>
+
+<p>UPDATE: I also built 0.10.40 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
+* <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v6.tar.gz">node-v0.10.40-linux-arm-v6.tar.gz</a></p>
+
+<p>UPDATE 2: I also built 0.12.7 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
+* <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/node-v0.12.7-linux-arm-v6.tar.gz">node-v0.12.7-linux-arm-v6.tar.gz</a></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">06 Jun 2015, 15:06</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity.html" class="post-title">Save your Yahoo Pipes as Node.js Apps for posterity</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>I swore I&rsquo;d never use another Yahoo product after the cultural terrorism of their Geocities shutdown. Now one of their few bright lights of the past decade, Pipes, is biting the dust. However a very very smart person wrote a program called <a href="https://github.com/neyric/pipes2js">pipes2js</a> three years ago which you may find useful. It converts your Pipes to Node.js apps!</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/06/rip_pipes.png" alt="RIP Pipes" />
+</p>
+
+<p>Installation is a tiny bit different from the instructions as it doesn&rsquo;t seem to be on NPM any more. Here&rsquo;s what worked for me on a Fedora 22 Virtual Box. I assume OSX would be similar. I might try Windows 8.1 later for the laugh.</p>
+
+<p>The steps are as follows:</p>
+
+<ul>
+<li>sudo npm install -g git://github.com/neyric/pipes2js.git</li>
+<li>Go to <a href="https://pipes.yahoo.com/pipes/">Yahoo Pipes</a></li>
+<li>Get the ID of each Pipe from its URL</li>
+<li>pipes2js the_id_of_your_pipe</li>
+<li>cd pipes/the_id_of_your_pipe/</li>
+<li>Edit package.json and change &ldquo;pipes2js&rdquo;: &ldquo;0.0.1&rdquo; to &ldquo;pipes2js&rdquo;: &ldquo;git://github.com/neyric/pipes2js.git&rdquo;</li>
+<li>npm install .</li>
+<li>node run.js</li>
+</ul>
+
+<p>The sad reality for me is that most of my Pipes are no longer functional as they use the old brilliantly simple but deprecated Twitter APIs (shakes fist at Twitter too). But it&rsquo;s nice to be able to keep some sort of copy and give 2 fingers to the purple charlatans.</p>
+
+<p>Update: It runs fine on Windows 8.1 if you have the various Visual Studio Express bits installed to compile Native Node modules. You may also have to run pipes2js with the full path to pipes2js.cmd so Windows can find it.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 May 2015, 17:49</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html" class="post-title">A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>I&rsquo;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi for quite a while. When it was originally announced, everyone seemed to think they were getting full-blown Windows for free on Pi. Many still think this. What you actually get is a GUI-less version of Windows on to which you can deploy Universal Apps (and others). So unlike Raspbian on Pi, you can&rsquo;t actually develop on it, you have to have full Windows 10 running somewhere else to develop, compile, deploy and debug. Or as I said on Twitter:</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;Install Visual Studio 2015 on your PC to develop Win10 IoT Apps for <a href="https://twitter.com/Raspberry_Pi">@Raspberry_Pi</a>&quot;. Install Fortran on your PDP-11 to use your ZX Spectrum?</p>&mdash; Conor O&#39;Neill (@conoro) <a href="https://twitter.com/conoro/status/593662573347794944">April 30, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>OK, snark over. Let&rsquo;s give this thing a go.</p>
+
+<p>Several hours later&hellip;&hellip;</p>
+
+<p>Installation is still a nightmare in this Preview version. Between clicking on hidden EULAs and installers failing with nonsense errors, not to mention having to install Windows 10 Preview in VirtualBox, this is not for the faint of heart.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi.jpg" alt="Win 10 VBox" />
+</p>
+
+<p>The RaspberryPi bit was ok and creating the image on an SD Card worked fine. Win 10 IoT booted first time with no issues.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot_rpi_05.jpg" alt="Win 10 IoT on Pi" />
+</p>
+
+<p>After several more rounds of messing with Visual Studio, I followed the Hello World Tutorial and pointed it at my Pi. I was rather shocked to see it worked!</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_02.jpg" alt="Screen" />
+</p>
+
+<p>That was the point the scales fell from my eyes. This is actually a very powerful offering to anyone who uses Microsoft tools already. You can build Drag n Drop Universal Apps which deploy just as easily to the Pi as they do to Windows Desktop/Tablets/Phones. I think Kiosks and Control Dashboards could be a big seller here, particularly for the Pi Compute Module. Obviously Visual Studio itself is damned powerful and is considered by most people, even MSFT haters, to be the most powerful IDE available today.</p>
+
+<p>Then I decided to go a step further. Could I get a Node.js program to deploy?</p>
+
+<p>A bunch more stupid installers later&hellip;&hellip;..</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_04.jpg" alt="Node.js on Vis Studio" />
+</p>
+
+<p>Deploy the code, annnnnnd</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot.jpg" alt="Node.js on Pi" />
+</p>
+
+<p>Oh wow, that is a bit brain melting. So now I have a web-server on Node.js on Windows on Pi on ARM, all debuggable with some kick-ass tools on my PC.</p>
+
+<p>The only major criticism I can make is that I&rsquo;d like every single piece including VisStudio and all the add-ons to be installable with a command-line package manager. Much easier for everyone.</p>
+
+<p>I doff my cap to you Mr Nadella, this really is the new Microsoft.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/doff_cap.gif" alt="Cap" />
+</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Apr 2015, 11:32</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1.html" class="post-title">Node v0.12.2 for ARM V6/V7 including Raspberry Pi, Raspberry Pi 2 and ODROID-C1</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>As with Node 0.12.0 and 0.12.1, there are no-precompiled ARM versions of <a href="http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/">0.12.2</a> on the main site.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg" alt="Node.js" />
+</p>
+
+<p>I&rsquo;ve built for <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-pi.tar.gz">Pi 1 (ARM v6)</a> and <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-v7.tar.gz">ODROID-C1/Pi2 (ARM v7)</a>. The latter was built on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID-C1</a> and it seems to run fine on the Pi 2 since both are ARM v7. It took 1 hr 15 mins to compile compared to 4+ hrs on the Pi 1.</p>
+
+<p>&ldquo;make test&rdquo; on the ODROID gave the same results as on the Pi 1: [10:33|% 100|+ 784|-   4]: Done</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">26 Mar 2015, 09:56</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html" class="post-title">Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&rsquo;t compile on Raspberry Pi (pre 2) so I took a patch from <a href="http://iojs.org">io.js</a> and was able to build it.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg" alt="Node.js" />
+</p>
+
+<p>The problem is due to recent releases of Raspbian mis-identifying the ARM version so Node tries to build for V7 instead of V6. These <a href="https://github.com/bnoordhuis/io.js/commit/6f7494292e22b1f1050abeaa43f257ac466edf2b">two</a> <a href="https://github.com/bnoordhuis/io.js/commit/8afcc5e701538e5a442a0334d781eac202cc4e1d">changes</a> from this <a href="https://github.com/iojs/io.js/issues/283">io.js thread</a> sort it out.</p>
+
+<p>I set the Raspberry Pi B+ to Turbo mode and it took 4ish hours to build</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz">Download here</a> and enjoy.</p>
+
+<pre><code class="language-javascript">wget https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz
+tar -zxvf node-v0.12.1-linux-arm-pi.tar.gz
+cd node-v0.12.1-linux-arm-pi
+sudo cp -R * /usr/local/
+</code></pre>
+
+<p>Updated files:
+* <a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/configure">configure</a>
+* <a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/cpu.cc">cpu.cc</a></p>
+
+<p>Diffs:
+* configure</p>
+
+<pre><code class="language-diff">493a494,495
+&gt;     o['variables']['arm_fpu'] = 'vfpv3'
+&gt;     o['variables']['arm_neon'] = int(is_arm_neon())
+495,496d496
+&lt;   elif is_arch_armv6():
+&lt;     o['variables']['arm_version'] = '6'
+498c498,500
+&lt;     o['variables']['arm_version'] = 'default'
+---
+&gt;     o['variables']['arm_fpu'] = 'vfpv2'
+&gt;     o['variables']['arm_neon'] = 0
+&gt;     o['variables']['arm_version'] = '6' if is_arch_armv6() else 'default'
+500,501d501
+&lt;   o['variables']['arm_fpu'] = 'vfpv3'  # V8 3.18 no longer supports VFP2.
+&lt;   o['variables']['arm_neon'] = int(is_arm_neon())
+</code></pre>
+
+<ul>
+<li>cpu.cc</li>
+</ul>
+
+<pre><code class="language-diff">368c368
+&lt;     // We try to correct this by looking at the 'elf_platform'
+---
+&gt;     // We try to correct this by looking at the 'elf_format'
+374c374
+&lt;       char* processor = cpu_info.ExtractField(&quot;model name&quot;);
+---
+&gt;       char* processor = cpu_info.ExtractField(&quot;Processor&quot;);
+</code></pre>
+
+<ul>
+<li>Make Test Output: [25:08|% 100|+ 775|-   6]: Done
+(failures seem to be timeouts mainly)</li>
+</ul>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 4</span>
+    
+      <a href="/page/2.html" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

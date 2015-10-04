@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Slight-Screw-Up-By-Facebook-In-Move-To-Https on Cross Dominant</title>
-    <link>http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https/</link>
+    <link>http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https.html</link>
     <description>Recent content in Slight-Screw-Up-By-Facebook-In-Move-To-Https on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 May 2011 11:19:56 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Slight screw-up by Facebook in move to https</title>
-      <link>http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https/slight-screw-up-by-facebook-in-move-to-https/</link>
+      <link>http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https/slight-screw-up-by-facebook-in-move-to-https.html</link>
       <pubDate>Wed, 25 May 2011 11:19:56 +0100</pubDate>
       
-      <guid>http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https/slight-screw-up-by-facebook-in-move-to-https/</guid>
+      <guid>http://conoroneill.net/slight-screw-up-by-facebook-in-move-to-https/slight-screw-up-by-facebook-in-move-to-https.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Slight screw-up by Facebook in move to https&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;As you probably know, Facebook are transitioning over to https for security reasons. You can opt-in now but it will be mandatory in the coming months. I&amp;#39;ve already written about the fact that every App developer will have to get an SSL cert but I discovered a bigger problem yesterday. &lt;p /&gt;&lt;div&gt;If you are running the old Facebook Connect code on your site (and based on my experience, that&amp;#39;s a &lt;em&gt;lot&lt;/em&gt; of sites), you are probably accessing this URL:&lt;/div&gt;&lt;p /&gt;&lt;div&gt;&lt;a href=&#34;http://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php&#34;&gt;http://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php&lt;/a&gt;&lt;/div&gt; &lt;p /&gt;&lt;div&gt;Facebook now re-directs that to:&lt;/div&gt;&lt;p /&gt;&lt;div&gt;&lt;a href=&#34;https://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php&#34;&gt;https://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php&lt;/a&gt;&lt;/div&gt; &lt;p /&gt;&lt;div&gt;But their security Cert is only valid for &lt;em&gt;.&lt;a href=&#34;http://facebook.com&#34;&gt;facebook.com&lt;/a&gt; not *.&lt;/em&gt;.&lt;a href=&#34;http://facebook.com&#34;&gt;facebook.com&lt;/a&gt; so Firefox 4 and Chrome 12 are refusing to access it and therefore disabling Facebook Connect on your site.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;Whilst everyone &lt;em&gt;should&lt;/em&gt; move to the new Graph API, not everyone has the time/money/resources to get it done. Hopefully Facebook can fix this soon and give sites more time to transition to the newer code.&lt;/div&gt;&lt;/p&gt;

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Product-And-Support-Failure-By-Adafruit-With-The-Bluefruit-Ez-Keys &middot; Cross Dominant</title>
+
+    <meta name="description" content="Mixed laterality since 1968">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="A-Product-And-Support-Failure-By-Adafruit-With-The-Bluefruit-Ez-Keys &middot; Cross Dominant">
+    <meta name="twitter:description" content="Mixed laterality since 1968">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A-Product-And-Support-Failure-By-Adafruit-With-The-Bluefruit-Ez-Keys &middot; Cross Dominant">
+    <meta property="og:description" content="Mixed laterality since 1968">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">17 Nov 2013, 13:32</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key.html" class="post-title">[No Longer] a Product and Support failure by Adafruit with the Bluefruit EZ-Key</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&rdquo;[No Longer] a Product and Support failure by Adafruit with the Bluefruit EZ-Key&rdquo;</p>
+
+<p><strong>UPDATE: Incredibly fast response and resolution from Adafruit. Feel free to ignore my negative post below. But still some good tips for any biz about handling product change and support. Back in? with Adafruit.</strong></p>
+
+<p>I&rsquo;ve been working on a simple-ish project recently which required Bluetooth comms between some hardware and a phone. I&rsquo;ve had lots of success with those cheap HC-05/HC-06 modules from China and made some progress with a Slave module. The problem was having to write native Android code to take the info from Bluetooth and &ldquo;action&rdquo; it.</p>
+
+<p>Then mid-project, Adafruit announced the<a href="http://learn.adafruit.com/introducing-bluefruit-ez-key-diy-bluetooth-hid-keyboard">Bluefruit EZ-Key HID</a> module which solved everything (I thought) in one fell swoop. I immediately ordered one and it arrived quickly from the US. I had it paired and sending key-presses to my PC and phone within a few minutes.</p>
+
+<p>Then I moved to using it in the actual project. I needed to be able to send Play/Pause music commands over Bluetooth. I opened up the key definition file and there was no mention of media controls. The file referenced another filename which I googled and found. A short while later I realised that a HID keyboard can&rsquo;t send media commands, it requires just a slightly different HID Consumer profile (a simple setting). But I couldn&rsquo;t see how to change the Bluefruit profile and <a href="http://forums.adafruit.com/viewtopic.php?f=19&amp;t=44730&amp;p=223765&amp;hilit=bluefruit#p223765">asked how on their only Support method</a> for paying customers - the Adafruit forums. Crickets. One non-Adafruit person tried to help but I&rsquo;d already failed with the method suggested. Strike 1 for Adafruit support.</p>
+
+<p>After a delay of a few weeks whilst I focused on Halloween tech, I finally got back to it last week and rolled up my sleeves. Back I went to the Adafruit site to get as much info as possible to see if there was any way to add the &ldquo;Consumer&rdquo; profile to Bluefruit. I was stunned to see they had released two new versions in less than 4 weeks. The first to add the mouse profile and the second to add the (yup, you guessed it) Consumer profile. So a feature I asked about, to which they never replied, is now part of the product!</p>
+
+<p>Naturally I went straight to the forums and asked how I could upgrade my 4 week old device to the new firmware. Response: <em>you can&rsquo;t</em>. My basic response: <em>you&rsquo;re kidding me</em>. <a href="http://forums.adafruit.com/viewtopic.php?f=19&amp;t=45724&amp;p=229432#p229432">As I said on the forum</a>:</p>
+
+<p>&ldquo;<em>I really have to express my annoyance about this. You released a non-user-upgradable product and then iterated it twice in the space of a few weeks? So anyone like me who bought v1.0 was basically a beta-tester without realising it? I feel very let down here by a company I have huge respect for.</em></p>
+
+<p><em>As someone who works in product management I know that this is a sure-fire way to kill a product stone-dead. Why would anyone even buy v1.2 if they suspect there might be a v1.3 next week? Did you do a beta cycle with real users at all? The features of v1.1 and v1.2 would have been obvious additions to anyone who even played with it for 5 minutes.</em>&ldquo;</p>
+
+<p>Now if this was a standard hacker product, there would be new firmware available to burn or instructions for hardware mods or whatever. Not in this case. This is effectively a consumer product. It is &ldquo;non-user-serviceable&rdquo;. Once you buy it, that&rsquo;s it, it will be forever fixed function, like a vacuum cleaner.</p>
+
+<p>This type of product is a new departure for Adafruit and they have royally screwed it up. Any normal consumer product company would offer a full or partial replacement/exchange for the people who bought the first incomplete versions. Adafruit&rsquo;s attitude seems to be &ldquo;tough luck, caveat emptor dude&rdquo;. The almost complete lack of questions about Bluefruit on the forums tells me it is either so perfect that no-one needs any support or (more likely) very few people have bought them. So the cost of keeping a few customers happy and loyal would have been minimal.</p>
+
+<p>My final comment to them was &ldquo;<em>I&rsquo;ll continue to buy Adafruit products that I can hack myself but you&rsquo;ve really soured me with anything black-boxed like the Bluefruit.</em>&rdquo;. And that&rsquo;s my advice to others. Until Adafruit make the necessary organisational changes to properly release and support products like this, you should stick to their excellent motor shields, Floras and other devices instead.</p>
+
+<p>Of course yesterday I discovered <a href="https://www.sparkfun.com/products/10823">a similar Roving Networks product</a>variant that does exactly what I want and was released 2 years ago! And it comes with full configurable HID support unlike the still fixed-function HID of the Bluefruit (v1.7 next week?). The RN42 is also available <a href="http://embeddedwirelesssolutions.com/rn-42_HID_breakout_board">here on a breakout board</a>. Then I found that HID is now built-in by default to the RN42 and I can get it for <a href="http://ie.farnell.com/microchip/rn42n-i-rm/module-bluetooth-class-2/dp/2143324">16.50 in Farnell in Ireland</a>. Sure it&rsquo;ll need some soldering etc, but I can live with that.</p>
+
+<p>For me, two of the brightest lights of the Maker movement have been Sparkfun and Adafruit. After this experience, one of those LEDs is just a little dimmer.</p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

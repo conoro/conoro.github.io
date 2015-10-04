@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microsoft-Really-Taking-Node-Js-Seriouslies on Cross Dominant</title>
-    <link>http://conoroneill.net/microsoft-really-taking-node-js-seriously/</link>
+    <link>http://conoroneill.net/microsoft-really-taking-node-js-seriously.html</link>
     <description>Recent content in Microsoft-Really-Taking-Node-Js-Seriouslies on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Dec 2011 12:09:00 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/microsoft-really-taking-node-js-seriously/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/microsoft-really-taking-node-js-seriously.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Microsoft really taking Node.js seriously</title>
-      <link>http://conoroneill.net/microsoft-really-taking-node-js-seriously/microsoft-really-taking-node-js-seriously/</link>
+      <link>http://conoroneill.net/microsoft-really-taking-node-js-seriously/microsoft-really-taking-node-js-seriously.html</link>
       <pubDate>Sun, 11 Dec 2011 12:09:00 +0000</pubDate>
       
-      <guid>http://conoroneill.net/microsoft-really-taking-node-js-seriously/microsoft-really-taking-node-js-seriously/</guid>
+      <guid>http://conoroneill.net/microsoft-really-taking-node-js-seriously/microsoft-really-taking-node-js-seriously.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Microsoft really taking Node.js seriously&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;&lt;span style=&#34;font-family: arial; font-size: small;&#34;&gt;We&amp;rsquo;re now on the Microsoft BizSpark program and one thing I want to try out over the next few weeks is getting our Node.js+MongoDB back-end running on Azure. &lt;/span&gt;&lt;/p&gt;

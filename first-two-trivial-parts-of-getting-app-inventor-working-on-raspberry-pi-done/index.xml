@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>First-Two-Trivial-Parts-Of-Getting-App-Inventor-Working-On-Raspberry-Pi-Dones on Cross Dominant</title>
-    <link>http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/</link>
+    <link>http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done.html</link>
     <description>Recent content in First-Two-Trivial-Parts-Of-Getting-App-Inventor-Working-On-Raspberry-Pi-Dones on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Apr 2012 13:10:13 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>First two trivial parts of getting App Inventor working on Raspberry Pi done</title>
-      <link>http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/</link>
+      <link>http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done.html</link>
       <pubDate>Sat, 28 Apr 2012 13:10:13 +0100</pubDate>
       
-      <guid>http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/</guid>
+      <guid>http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;First two trivial parts of getting App Inventor working on Raspberry Pi done&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been playing a small bit with the Raspberry Pi VM on VMware to see what&amp;rsquo;s possible and what isn&amp;rsquo;t. One thing I am eager to try when it arrives on the week of May 14th (YAY!), is to get App Inventor working on it.&lt;/p&gt;

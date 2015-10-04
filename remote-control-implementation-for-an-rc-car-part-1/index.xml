@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Remote-Control-Implementation-For-An-Rc-Car-Part-1s on Cross Dominant</title>
-    <link>http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/</link>
+    <link>http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1.html</link>
     <description>Recent content in Remote-Control-Implementation-For-An-Rc-Car-Part-1s on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 May 2013 15:04:12 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Remote Control implementation for an RC Car - Part 1</title>
-      <link>http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/remote-control-implementation-for-an-rc-car-part-1/</link>
+      <link>http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/remote-control-implementation-for-an-rc-car-part-1.html</link>
       <pubDate>Sun, 19 May 2013 15:04:12 +0100</pubDate>
       
-      <guid>http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/remote-control-implementation-for-an-rc-car-part-1/</guid>
+      <guid>http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/remote-control-implementation-for-an-rc-car-part-1.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Remote Control implementation for an RC Car - Part 1&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;There are many ways you can add remote control to a project. Off the shelf modules; Bluetooth; 2.4GHz NRF24L01+ transceivers; 433MHz/434Mhz modules or even Infra-red.&lt;/p&gt;

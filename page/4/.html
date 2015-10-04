@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> &middot; Cross Dominant</title>
+
+    <meta name="description" content="Mixed laterality since 1968">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content=" &middot; Cross Dominant">
+    <meta name="twitter:description" content="Mixed laterality since 1968">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content=" &middot; Cross Dominant">
+    <meta property="og:description" content="Mixed laterality since 1968">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">01 Jun 2014, 15:48</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/creating-a-valid-ops-file-in-json-format-for-minecraft-179.html" class="post-title">Creating a valid ops file in JSON format for Minecraft 1.7.9</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Our 8yo wanted a local server on his laptop today so I grabbed the latest 1.7.9 server exe from the Minecraft site and ran it in its own directory. It created the usual files and gave a GUI-style interface with no obvious console like the raw Java version. Fionn then asked me to make him an Op so he could change things. And it was all downhill from there.</p>
+
+<p>The standard ops.txt was missing but there was an ops.json containing just two square brackets. No amount of messing with creating an ops.txt or putting his username inside the brackets of the json file worked. Over an hour of googling finally got me close. In the recent versions of Minecraft, they have moved to using JSON instead of .txt for config files and they are rolling out the idea of UUIDs so that you can easily change your username. Both are reasonable changes but implemented terribly in this case. Unless the format of your json file in 100% correct, it doesn&rsquo;t throw an error, it just deletes it!</p>
+
+<p>So after more than 10 attempts, this is what you need:</p>
+
+<ul>
+<li><p>Find your UUID. Note that several sites claim to generate this for you but they are missing the dashes in the UUID. The one that worked for me was <a href="http://minecraft-techworld.com/uuid-lookup-tool">this one</a>. Enter your username and get something like 54d61e19-71cc-477d-8215-8a11c41f5211 back.</p></li>
+
+<li><p>Edit ops.json in a text editor and replace the contents as follows:</p></li>
+</ul>
+
+<pre><code class="language-javascript">[
+  {
+    &quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
+    &quot;name&quot;: &quot;bobloblaw&quot;,
+    &quot;level&quot;: 4
+  }
+] 
+</code></pre>
+
+<ul>
+<li>If you need more than one Op, do it like so.
+<code>javascript
+[
+{
+&quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
+&quot;name&quot;: &quot;bobloblaw&quot;,
+&quot;level&quot;: 4
+},
+{
+&quot;uuid&quot;: &quot;44d61e69-6166-444d-8665-6a11567f5211&quot;,
+&quot;name&quot;: &quot;mrsmines&quot;,
+&quot;level&quot;: 4
+}
+] 
+</code></li>
+</ul>
+
+<p>That should be all you need. Leave a comment if any problems with it.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 May 2014, 07:08</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/my-presentation-from-3dcamp-limerick-2014.html" class="post-title">My presentation from 3D Camp Limerick. Hacking by Google Search - Building hardware with no electronics knowledge</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>I&rsquo;ve been meaning to go to 3D Camp since it first started. It has been about a lot more than 3D for many years. I finally did it on Saturday and had an absolute blast. I met people I&rsquo;ve been tweeting at since 2007 and really got the full BarCamp mojo whilst I was there. James Corbett, the organiser, was kind enough to mention that I helped to organise the first <a href="http://en.wikipedia.org/wiki/BarCamp">BarCamp</a> in Ireland with <a href="http://walterhiggins.net/blog/">Walter</a> and <a href="http://www.mulley.net/">Damien</a> way back in 2006. My only regret is that instead of a BarCamp in every town and village of Ireland every weekend, we now only have 3D Camp. I hope people will realise again soon how important it is to have regular free unconferences with no one hawking their wares, just sharing knowledge, the love of technology and what it can do for people.</p>
+
+<p>OK, rant over, here&rsquo;s my deck. It&rsquo;s called <a href="http://conoroneill.net/3dcamp2014/">Hacking by Google Search - Building hardware with no electronics knowledge</a>. It&rsquo;s basically a summary of all the messing I&rsquo;ve been doing since mid-2012 when I got the electronics bug again. Anyone who follows this blog regularly will know most of it. But this one has animated gifs and some extra thoughts. It&rsquo;s also all HTML, done using a tool called <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>. I really enoyed using this approach and it means it can be hosted on GitHub Pages, just like this blog. Well worth checking out for your own decks. You only need minimal HTML knowledge.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Apr 2014, 10:48</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js.html" class="post-title">My Pebble controlled electric blanket using CloudPebble and Simply.js</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Messing with hardware and software can be both a joy and incredibly infuriating. Yesterday I spent a few intermittent hours trying to get Arduino and Espruino communicating reliably over NRF24L01+ wireless transceivers. I only half succeeded. I followed this with some reading up on both <a href="https://cloudpebble.net">CloudPebble</a> and <a href="http://simplyjs.io/">Simply.js</a>. Literally 5 minutes later I had my first Pebble App installed on my watch and was remotely controlling the <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">electric blanket in our bed</a>.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_blanket.jpg" alt="Bandon Blanket" title="Bandon Bed Button" />
+</p>
+
+<p>CloudPebble is a web-based IDE for building Pebble Apps. I believe it was started independently but is now run by <a href="http://getpebble.com">Pebble</a> themselves. Simply.js is a library/SDK for building Pebble Apps using only JavaScript. Pebble recently announced that CloudPebble now supports Simply.js and boy they weren&rsquo;t kidding. It&rsquo;s now childsplay to build Pebble Apps.</p>
+
+<p>This is how quickly I built the App:</p>
+
+<ul>
+<li>Create a free Pebble <a href="https://developer.getpebble.com/">Developer account</a></li>
+<li>Login to CloudPebble using your Pebble credentials</li>
+<li>Create a project and pick Simply.js as the type</li>
+<li>You automatically get the sample Simply.js App in the IDE</li>
+<li>Compile that and send it to your Watch. You of course need the Pebble App on your phone with developer options enabled. The Pebble App will also tell you your phone&rsquo;s IP address which CloudPebble may ask for.</li>
+<li>I&rsquo;ve found that I can&rsquo;t install from desktop but if I load the IDE URL on my phone I can do it from there. I assume this is because I&rsquo;m on house wifi and behind a firewall with a private IP.</li>
+</ul>
+
+<p>That first App looks like this:</p>
+
+<pre><code class="language-javascript">console.log('Simply.js demo!');
+
+simply.on('singleClick', function(e) {
+  console.log(util2.format('single clicked $button!', e));
+  simply.subtitle('Pressed ' + e.button + '!');
+});
+
+simply.on('longClick', function(e) {
+  console.log(util2.format('long clicked $button!', e));
+  simply.vibe();
+  simply.scrollable(e.button !== 'select');
+});
+
+simply.on('accelTap', function(e) {
+  console.log(util2.format('tapped accel axis $axis $direction!', e));
+  simply.subtitle('Tapped ' + (e.direction &gt; 0 ? '+' : '-') + e.axis + '!');
+});
+
+simply.setText({
+  title: 'Simply Demo!',
+  body: 'This is a demo. Press buttons or tap the watch!',
+}, true);
+</code></pre>
+
+<p>And it you read the Simply.js site, you can access URLs like this:</p>
+
+<pre><code class="language-javascript">ajax({ url: 'http://simplyjs.io' }, function(data){
+  var headline = data.match(/&lt;h1&gt;(.*?)&lt;\/h1&gt;/)[1];
+  simply.title(headline);
+});
+</code></pre>
+
+<p>Merge the two together and ta-daaaaa, the Bandon Bed Button Pebble App.</p>
+
+<pre><code class="language-javascript">console.log('Bandon Bed Button!');
+
+simply.on('singleClick', function(e) {
+  console.log(util2.format('single clicked $button!', e));
+  if (e.button == &quot;up&quot;){
+    ajax({ url: 'http://url-of-conors-thing-to-turn-on' }, function(data){
+      simply.subtitle('Turned on Blanket!');  
+    });    
+  } else if (e.button == &quot;down&quot;){
+    ajax({ url: 'http://url-of-conors-thing-to-turn-off' }, function(data){
+      simply.subtitle('Turned off Blanket!');  
+    });        
+  }
+});
+
+simply.setText({
+  title: 'Bandon Bed Button!',
+  body: 'Press Up to turn on the blanket. Press Down to turn off the blanket.',
+}, true);
+</code></pre>
+
+<p>Just in case the data route for this is not clear, here&rsquo;s what it looks like:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow" />
+</p>
+
+<p>I referred to this on Twitter last night as The Internet of Thangs. I&rsquo;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&rsquo;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&rsquo;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&rsquo;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">30 Mar 2014, 13:36</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi.html" class="post-title">Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>Now that I can talk to the Efergy remote control switches using Arduino and <a href="http://digistump.com/products/50">DigiX</a>, it&rsquo;s time to do the same thing with Raspberry Pi and Node.js.</p>
+
+<p>But first, check out this gorgeous <a href="http://shop.pimoroni.com/products/pibow-timber">Pimoroni Pibow Timber</a> case that the RPi now lives in. Makes me smile every time I look at it.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/pibow_timber.jpg" alt="Pibow" title="Pibow Timber Raspberry Pi case" />
+</p>
+
+<p>Start by plugging in one of the Efergy switches and using its remote control to set its code. Use the sniffer program from <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">the last post</a> to find out what that code is.</p>
+
+<p>Connecting the 433MHz transmitter to the RPi is dead easy. Connect GND to pin 6, VCC to PIN 1 and DATA to PIN 11. More details on the <a href="https://projects.drogon.net/raspberry-pi/wiringpi/pins/">WiringPi Pinout</a>. For our purposes: BCM GPIO 17 == WiringPi 0 == Pin 11 == GPIO #0</p>
+
+<p>The simplest way of doing this is to create a command-line program in C or C++ and then shell out to it in Node. But where&rsquo;s the fun in that? The core approach I decided to use was via a Node module called <a href="https://github.com/rbranson/node-ffi/wiki/Node-FFI-Tutorial">Node FFI</a> which makes it relatively easy to call out to C libraries from Node. The alternative is to build a Node module in C++. But that wasn&rsquo;t going to work, given that I haven&rsquo;t written a line of C++ in my life, after the trauma of doing a training course in it in the late 90s and seeing the horror inflicted on my beloved C.</p>
+
+<p>Unfortunately I quickly realised that node-ffi only does C whilst the <a href="https://github.com/r10r/rcswitch-pi/">RCSWitch-Pi</a> library is C++ (but the <a href="https://projects.drogon.net/raspberry-pi/wiringpi/functions/">WiringPi library</a> under that is C again!).</p>
+
+<p>An abortive attempt at using <a href="https://github.com/tjfontaine/node-ffi-generate">ffi-generate</a> went nowhere as it wouldn&rsquo;t even run on the RPi due to some libclang problem. Running in an Ubuntu VM worked after a lot of llvm messing but I couldn&rsquo;t make any sense of the output.</p>
+
+<p>Cue a lonnnngggg session Googling how to interface C to C++ and realising that I hate C++ even more now :-) Eventually I found an <a href="http://www.teddy.ch/c++_library_in_c/">idiot&rsquo;s guide to wrapping C++</a> so it can be called by C. Bit by bit I figured it all out but hit a brick wall at one point. This forced me to use the GDB debugger for the first time in 15 years. Luckily I spotted the problem using GDB in about a minute flat and got a test C program working which would call the C++ functions correctly.</p>
+
+<p>Then it was back to Node.js and node-ffi for another round of head scratching and non-stop errors. Finally it all clicked and the Efergy module clicked too!</p>
+
+<p>Now that I have the basics working, I will clean up this code and use it in the Node server that will run on the RPi via the usual exports/require approach. I&rsquo;ll also hopefully be able to apply the same approach to any C++ or C library that accesses any RPi hardware.</p>
+
+<p>The final set of steps are actually quite simple. All the effort was in the learning.</p>
+
+<h3 id="install-wiringpi:72ef235c1c656139694e1398dfdb61c0">Install WiringPi</h3>
+
+<pre><code class="language-bash">mkdir ~/gitwork
+cd gitwork
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
+
+### Install RCSwitch-Pi
+cd ~/gitwork
+git clone https://github.com/r10r/rcswitch-pi.git
+cd rcswitch-pi
+make
+</code></pre>
+
+<h3 id="build-an-rcswitch-pi-library:72ef235c1c656139694e1398dfdb61c0">Build an RCSwitch-Pi library</h3>
+
+<pre><code class="language-bash">gcc -shared -fpic RCSwitch.cpp -o libRCSwitch.so
+</code></pre>
+
+<h3 id="simple-c-test-to-make-sure-you-can-talk-to-efergy:72ef235c1c656139694e1398dfdb61c0">Simple C++ test to make sure you can talk to Efergy</h3>
+
+<pre><code class="language-bash">cd ~/gitwork/rcswitch-pi
+</code></pre>
+
+<p>Create a file called efergy.cpp with the following contents
+```c
+#include &ldquo;RCSwitch.h&rdquo;
+#include <stdlib.h>
+#include <stdio.h></p>
+
+<p>int main(int argc, char *argv[]) {</p>
+
+<pre><code>/*
+ output PIN is hardcoded for testing purposes
+ see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
+ for pin mapping of the raspberry pi GPIO connector
+ */
+int PIN = 0;
+int unitCode = atoi(argv[1]);
+
+if (wiringPiSetup () == -1) return 1;
+    printf(&quot;sending unitCode[%i]\n&quot;, unitCode);
+    RCSwitch mySwitch = RCSwitch();
+    mySwitch.enableTransmit(PIN);
+
+    mySwitch.send(unitCode,24);
+
+    return 0;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now compile and run it:</p>
+
+<pre><code class="language-bash">g++ -c -o efergy.o efergy.cpp
+g++ RCSwitch.o efergy.o -o efergy -lwiringPi
+sudo ./efergy 109011
+sudo ./efergy 109019
+</code></pre>
+
+<p>If all is working ok, the switch will turn on and off.</p>
+
+<h3 id="install-node-npm-on-raspberry-pi:72ef235c1c656139694e1398dfdb61c0">Install Node/NPM on Raspberry Pi</h3>
+
+<pre><code class="language-bash">    cd ~
+    sudo mkdir /opt/node
+    wget http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-arm-pi.tar.gz
+    tar xvzf node-v0.10.23-linux-arm-pi.tar.gz
+    sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
+    cd ~
+    nano .bash_profile
+     
+    #Add these lines to the file you opened
+    PATH=$PATH:/opt/node/bin
+    export PATH
+
+    #Save and exit
+     
+    #Test
+    node -v
+    npm -v
+</code></pre>
+
+<h3 id="wrapping-c-so-it-can-be-called-by-c:72ef235c1c656139694e1398dfdb61c0">Wrapping C++ so it can be called by C</h3>
+
+<p>Create wrapper.h and wrapper.c</p>
+
+<p>wrapper.h:
+```c
+#ifndef __MYWRAPPER_H
+#define __MYWRAPPER_H</p>
+
+<p>#ifdef __cplusplus
+extern &ldquo;C&rdquo; {
+#endif</p>
+
+<p>typedef struct RCSwitch RCSwitch;</p>
+
+<p>RCSwitch* newRCSwitch();</p>
+
+<p>void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length);</p>
+
+<p>void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin);</p>
+
+<p>void deleteRCSwitch(RCSwitch* v);</p>
+
+<p>#ifdef __cplusplus
+}
+#endif
+#endif
+```</p>
+
+<p>wrapper.c:
+```c</p>
+
+<pre><code>#include &quot;RCSwitch.h&quot;
+#include &quot;wrapper.h&quot;
+#include &lt;stdio.h&gt;
+
+extern &quot;C&quot; {
+  RCSwitch* newRCSwitch() {
+    //printf(&quot;Inside newRCSwitch&quot;);
+    return new RCSwitch();
+  }
+
+  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
+    //printf(&quot;Inside RCSwitch_send&quot;);
+    v-&gt;send(Code, length);
+  }
+
+  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
+    //printf(&quot;Inside RCSwitch_enableTransmit&quot;);
+    v-&gt;enableTransmit(nTransmitterPin);
+  }
+
+  void deleteRCSwitch(RCSwitch* v) {
+    delete v;
+  }
+}
+</code></pre>
+
+<pre><code>
+### Compile everything
+Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple [GDB Tutorial here](http://web.eecs.umich.edu/~sugih/pointers/summary.html) and some tips on [RPi Forums](http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312).
+
+```bash
+g++ -g -c wrapper.c -o wrapper.o
+gcc -g -c efergy.c -o efergy.o
+g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
+g++ -g efergy.o wrapper.o ./libRCSwitch.so -o efergy2
+</code></pre>
+
+<h3 id="run-the-c-program:72ef235c1c656139694e1398dfdb61c0">Run the C program</h3>
+
+<pre><code class="language-bash">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
+sudo ./efergy2 109011
+</code></pre>
+
+<p>Now to get everything running in Node/JavaScript</p>
+
+<h3 id="install-node-ffi:72ef235c1c656139694e1398dfdb61c0">Install Node FFI</h3>
+
+<pre><code class="language-bash">sudo npm install -g ffi
+</code></pre>
+
+<h3 id="create-send-js:72ef235c1c656139694e1398dfdb61c0">Create send.js</h3>
+
+<pre><code class="language-javascript">var ffi = require(&quot;ffi&quot;)
+
+var libwiringPi = ffi.Library('/usr/local/lib/libwiringPi', {
+    'wiringPiSetup' : [ 'int', [] ],
+    'digitalWrite' : [ 'void', ['int', 'int'] ],
+    'pinMode': [ 'void', ['int', 'int'] ],
+    'delayMicroseconds' :  [ 'void', ['int', 'int'] ]
+})
+
+var libRCSwitch = ffi.Library('./libwrapper', {
+  'newRCSwitch' : ['pointer', [] ],
+  'RCSwitch_send': ['void', [ 'pointer', 'int', 'int' ] ],
+  'RCSwitch_enableTransmit': ['void', ['pointer', 'int'] ]
+})
+
+if (process.argv.length &lt; 3) {
+  console.log('Arguments: Efergy Switch Code')
+  process.exit()
+}
+
+var PIN = 0;
+var unitCode = parseInt(process.argv[2]);
+var mySwitch = libRCSwitch.newRCSwitch();
+
+if (libwiringPi.wiringPiSetup() == -1){
+    return 1;
+    printf(&quot;Error initialising WiringPi&quot;);
+}
+
+if (mySwitch.isNull()) {
+    console.log(&quot;Oh no! Couldn't create object!\n&quot;);
+} else {
+    libRCSwitch.RCSwitch_enableTransmit(mySwitch, PIN);
+    libRCSwitch.RCSwitch_send(mySwitch, unitCode, 24);
+}
+</code></pre>
+
+<h3 id="compile-the-libraries:72ef235c1c656139694e1398dfdb61c0">Compile the libraries</h3>
+
+<pre><code class="language-bash">g++ -shared -fpic -g wrapper.c -L ./ -l RCSwitch -o libwrapper.so
+g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
+</code></pre>
+
+<h3 id="run-send-js:72ef235c1c656139694e1398dfdb61c0">Run send.js</h3>
+
+<p>Note that anything which uses WiringPi has to be run sudo. A bit of a pain. Not sure I want to be running the Node process as root?</p>
+
+<pre><code class="language-bash">sudo env PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ node send.js 109011
+</code></pre>
+
+<p>That&rsquo;s it. You can now turn on and off your Efergy socket using Node. Next up, a simple Node server to handle remote requests to do this.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">23 Mar 2014, 15:10</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets.html" class="post-title">Our web and mobile enabled electric blanket using Electric Ireland&#39;s Efergy RC sockets</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>A major ongoing struggle in our household is convincing one of our many children to go upstairs and put on the electric blanket for us. I honestly don&rsquo;t know how we get through the winter.</p>
+
+<p>Wouldn&rsquo;t it be fantastic if we could use technology instead of children to do this?</p>
+
+<p>Last Thursday I came home from work to discover that <a href="http://www.electricireland.ie/">Electric Ireland</a> had sent us three <a href="http://efergy.com/eu/products/remotecontrolledsocket">Efergy</a> remote control power sockets and a plugin energy monitor. I have no idea why they did so, apart perhaps from our crazy electricity use.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg" alt="Efergy" title="Efergy RC Switch" />
+</p>
+
+<p>My mind immediately leaped to our electric blanket conundrum.</p>
+
+<p>A quick look at the label and I was pleased to see they worked at 433Mhz. What were the chances that the <a href="http://dx.com/p/433mhz-wireless-transmitter-module-superregeneration-for-arduino-green-149254">$1.99 wireless modules</a> I bought from DX in China would work with them? Oh the joy to discover that, not only do the modules work with them, some genius has already built <a href="https://code.google.com/p/rc-switch/">a powerful Arduino library</a> to do so!</p>
+
+<p>It turns out that the Efergy brand uses the same simple protocol as a wide range of others around the world. I guess they are all OEMing something.</p>
+
+<p>A 2 minute setup on my Arduino Uno with a receiver and the relevant sniffer code loaded up and I had the 11 codes (5 on, 5 off, 1 all-off) that my specific remote control used. They are all 24bit, protocol &ldquo;1&rdquo; with 6 decimal digits like 109223. I assume they distribute a range of remotes to avoid neighbours clashing. The RC switches themselves are not locked to a specific code, they have to be set by the remote control at power up.</p>
+
+<p>2 more minutes to setup a transmitter to cycle between the codes and I was toggling the RC switches on and off.</p>
+
+<p>I really was gobsmacked how easy it was. It was a lovely reminder of how incredible the internet really is. We&rsquo;ve become so used to it, we forget that the above would have taken me months (or never!) in pre-internet days instead of 10 minutes total.</p>
+
+<p>Of course that was just step 1. What I really wanted to do was internet-enable these beauties. I&rsquo;ve been meaning to do something along these lines with the <a href="http://digistump.com/products/50">DigiX</a> board since I got it. The DigiX is a really powerful Arduino clone with a 32-bit Atmel ARM CPU, tons upon tons of IO, SD card, audio and, most importantly for this project, Wifi on-board.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg" alt="frontside" title="DigiX with module" />
+</p>
+
+<p>Getting Wifi setup the way I wanted on the DigiX took more time than I&rsquo;d have liked yesterday but I finally figured out that the <a href="http://en.usr.cn/low-power-wifi-module.html">Chinese USR-wifi232-g module</a> web UI doesn&rsquo;t like Chrome! Once I switched to Firefox, all went swimmingly. I connected it to a Wifi AP, gave it a fixed IP address and then setup a port forward from the house router to it. Obviously I use <a href="http://dyn.com/">Dynamic DNS with Dyn</a> on the home router so that I don&rsquo;t have to track changing IP addresses manually.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg" alt="backside" title="DigiX other side" />
+</p>
+
+<p>The DigiX comes with an example Web Server built-in so I was able to just create a few simple URLs and paste the RCSwitch code into the relevant places. So within another few minutes I was toggling the switches over the internet.</p>
+
+<pre><code>switch1State = 1;
+mySwitch.send(109323, 24);
+
+</code></pre>
+
+<p>Another moment when I forced myself to stop and think about how incredibly easy all this stuff has become. And all of it sitting on the shoulders of giants. So far, all I&rsquo;ve done is copy and paste stuff together.</p>
+
+<p>But of course I wasn&rsquo;t happy there. I wanted a mobile app! Luckily, Colum Bennet in <a href="http://www.feedhenry.com">FeedHenry</a> has created a superb new Getting Started guide which will be released soon. It walks you through creating an <a href="http://angularjs.org/">Angular</a> Hybrid mobile app which talks to a FeedHenry Node.js back-end to do a really simple task. Despite only playing a programmer for the purposes of blogging, I was able to easily modify both the client and cloud apps to create what I needed with the Node request module.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App" />
+</p>
+
+<p>Of course I could send the commands directly from the mobile app to the DigiX, but routing it through the cloud means that eventually this can be multi-user, multi-switch, re-configurable and securely locked-down.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success" />
+</p>
+
+<p>One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing using a simple bookmarked CNAME.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App" />
+</p>
+
+<p>I&rsquo;ll upload everthing on to a public GitHub repo as soon as I have removed all the hard-coding and added a modicum of &ldquo;security&rdquo; with API keys etc. More posts on this technology combo coming in the next few weeks.</p>
+
+<p>With the Bandon Bed Button, we have now achieved Electric Blanket Nirvana.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Jan 0001, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/i-tried-out-more-google-cardboard-apps-still-stunned-what-dollar10-can-achieve.html" class="post-title"></a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Of course Google Cardboard isn&rsquo;t up there with Oculus but I still have my jaw on the floor over what it can do. These are some of the apps I&rsquo;ve tried out this week.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/cardboard.png" alt="Cardboard" title="Cardboard" />
+</p>
+
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.google.samples.apps.cardboarddemo">Google Cardboard App itself</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.jauntvr.preview.hobbit">The Hobbit VR Experience</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.archiactinteractive.LfGC">Lamper</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.jauntvr.preview.jackwhite">Jack White: THIRD-D</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.ZeroTransform.VanguardV">Vanguard V</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.jauntvr.preview.kaiju">Kaiju Fury: Trailer</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.RyanBousfield.AChairInARoom">Chair In A Room</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=kos.is.working">SpaceTerror</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.FabulousPixel.TuscanyDive">Tuscany Dive</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.VRCraftworks.Orbulus">Orbulus</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.BDH.WarofWords">War of Words</a></li>
+<li><a href="https://gigaom.com/2014/12/18/google-maps-for-android-has-a-vr-mode-thanks-to-google-cardboard/">Google Maps Street View</a></li>
+<li>[]()</li>
+<li>[]()</li>
+</ul>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Jan 0001, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/now-with-no-fbimage-given.html" class="post-title"></a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Does it still work</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Jan 0001, 00:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/some-personal-thoughts-on-red-hats-acquistion-of-feedhenry.html" class="post-title"></a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Here&rsquo;s a quick potted history of me and computers/languages/OSes to set the scene for talking about Red Hat.</p>
+
+<ul>
+<li>1982-1986, Home: ZX Spectrum. Basic, Forth, Z80 Assembler. Loved it.</li>
+<li>1986-1989, UCD Eng: Some mainframe yoke. Fortran. The horror, the horror.</li>
+<li>1989-1989, Philips Eindhoven: Computervision Workstation. Cool.</li>
+<li>1989-1990, UCD Eng: PC, DOS. Final year project. Happy days. C</li>
+<li>1990-1992, UCD Eng Masters: PC Windows 3.0 and HP Apollo HPUX. Both fab.  C, C++. First experience of d&rsquo;internet and shareware and compiling from source.</li>
+<li>1992-1994, S3: Vax with VT-100. C. The horror the horror again. Finally got a PC with Windows.</li>
+<li>1994-1995, S3: Sun Sparc. C. Oh this isn&rsquo;t bad even if Motif is an abomination. Remote X-Windows cool. Oh what&rsquo;s this Java thing?</li>
+<li>1996-2000, Integral Design: PC Windows NT. Rock solid. <sup>1</sup>&frasl;<sub>3</sub> price of SUNs.</li>
+<li>1996-1996, Integral Design: Slackware Linux. My first ever Linux install in Sunnyvale. Did not go well.</li>
+<li>1997-2000, Integral Design: Red Hat Linux. Under my desk. Skunkworks :-) JUst got better and better.</li>
+<li>2001-2006, Xilinx/EMC/McAfee: PC Windows.  C, C++, Java, Perl, Python. Nothing interesting to report.</li>
+<li>2001-2006, Home: Red Hat, Fedora up to about FC 6. Playing, learning, configuring.</li>
+<li>2006-2008, LouderVoice: CentOS</li>
+</ul>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/page/3.html" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 4 of 4</span>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

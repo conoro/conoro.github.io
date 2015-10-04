@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring EC2 Servers with Zabbix &middot; Cross Dominant</title>
+
+    <meta name="description" content="">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Monitoring EC2 Servers with Zabbix &middot; Cross Dominant">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Monitoring EC2 Servers with Zabbix &middot; Cross Dominant">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">06 Mar 2011, 12:16</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/monitoring-ec2-servers-with-zabbix/monitoring-ec2-servers-with-zabbix.html" class="post-title">Monitoring EC2 Servers with Zabbix</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/monitoring-ec2-servers-with-zabbix/monitoring-ec2-servers-with-zabbix.html" data-title="Monitoring EC2 Servers with Zabbix" data-description="" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/monitoring-ec2-servers-with-zabbix/monitoring-ec2-servers-with-zabbix.html" data-description="" class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>#&ldquo;Monitoring EC2 Servers with Zabbix&rdquo;</p>
+
+<p><div>Amazon Cloudfront is great for monitoring EC2 servers but it can only do external monitoring so it cannot see things like memory being exhausted etc. I tried using Cacti but it was a nightmare to configure with plugins. Nagios always looks like it&rsquo;d take weeks to sort out.</div>
+<p />
+<div>A bit of Googling found Zabbix and people seem to like it. Install was a doddle but configuring can be a pain unless you just copy the demo settings.</div>
+<p />
+<div>You can obviously install all of this on the server to be monitored but it is only useful in non-catastrophic cases. If the server runs out of memory or goes to 100% CPU you won&rsquo;t be able to login to see what happened in the run-up. So ideally use a separate server. We use one of our test servers for monitoring since they spend most of their time unstressed.</div>
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">The Monitoring Server Install</span></strong></div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo aptitude install zabbix-server-mysql zabbix-frontend-php</span></div>
+<div><span style="font-family: courier new, monospace;">sudo vi /etc/php5/apache2/php.ini</span></div>
+<div>Increase some of the PHP variables in that file (you will be warned when you login to the Admin Panel)</div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo /etc/init.d/apache2 restart</span></div>
+<div><span style="font-family: courier new, monospace;">sudo apt-get install zabbix-agent</span></div>
+<p />
+<div>go to <a href="http://name.of.server/zabbix">http://name.of.server/zabbix</a></div>
+<div>Login with user=admin, password=zabbix</div>
+<p />
+<div><strong><span style="text-decoration: underline;">Each Monitored Server Install</span></strong></div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo apt-get install zabbix-agent</span></div>
+<div><span style="font-family: courier new, monospace;">cd /etc/zabbix</span></div>
+<div><span style="font-family: courier new, monospace;">sudo vim zabbix_agent.conf</span></div>
+<div>Add the Monitoring Server&rsquo;s Public and Private IP addresses</div>
+<div>Open up ports 10050 and 10051 in your EC2 security group (using Elasticfox or similar) and allow the monitoring server&rsquo;s private IP</div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo /etc/init.d/zabbix-agent restart</span></div>
+<p />
+<div><strong><span style="text-decoration: underline;">SNMP (Optional)</span></strong></div>
+<p />
+<div>You can use SNMP monitoring too but the Zabbix agent seems ok so far.</div>
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">Extra Config Afterwards</span></strong></div>
+<p />
+<div>The easiest way to start monitoring is to do a full clone of the demo localhost monitoring and just change the IP address and DNS name to the monitored server.</div>
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">Authenticated SMTP Alerts</span></strong></div>
+<p />
+<div>We use AuthSMTP for all email sending from EC2. Zabbix doesn&rsquo;t handle authenticated SMTP out of the box so you have to use an external script.</div>
+<p />
+<div><span style="font-family: courier new, monospace;">sudo apt-get install sendEmail</span></div>
+<p />
+<div>Create a script &ldquo;zabbix_sendemail&rdquo; (chmod 755) in the AlertScriptsPath folder specified by /etc/zabbix/zabbix_server.conf (/etc/zabbix/alert.d/)</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</div>
+<div><span style="font-family: courier new, monospace;">#!/bin/sh</span></div>
+<p />
+<div><span style="font-family: courier new, monospace;">export smtpemailfrom=<a href="mailto:zabbix@yourdomain.com">zabbix@yourdomain.com</a></span></div>
+<div><span style="font-family: courier new, monospace;">export zabbixemailto=$1</span></div>
+<div><span style="font-family: courier new, monospace;">export zabbixsubject=$2</span></div>
+<div><span style="font-family: courier new, monospace;">export zabbixbody=$3</span></div>
+<div><span style="font-family: courier new, monospace;">export smtpserver=<a href="http://yoursmtpserver.com">yoursmtpserver.com</a></span></div>
+<div><span style="font-family: courier new, monospace;">export smtplogin=smtpuser</span></div>
+<div><span style="font-family: courier new, monospace;">export smtppass=smtppassword</span></div>
+<p />
+<div><span style="font-family: courier new, monospace;">/usr/bin/sendEmail -f $smtpemailfrom -t $zabbixemailto -u $zabbixsubject -m $zabbixbody -s $smtpserver:25 -xu $smtplogin -xp $smtppass</span></div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</div>
+<p />
+<div>Set a Media Type (Administration / Media types) script to zabbix_sendemail</div>
+<div>Add that Media to the Admin user (Administration / Users / user)</div>
+<div>
+<div>Set the Action (Configurations / Actions) for the alert(s) you want to trigger on and who should get them (Admin)&nbsp;</div>
+</div>
+<p />
+<div>
+<div><strong><span style="text-decoration: underline;">SMS Alerts</span></strong></div>
+<p />
+<div>Sign up for something like Clickatell and buy a block of 400 credits for &euro;17. Then repeat the steps for SMTP above but with the following script. I have both SMS and email set to be sent on certain triggers like low memory.</div>
+<p />
+<div>
+<div>#! /bin/sh</div>
+<p />
+<div>/usr/bin/wget &ndash;spider &ndash;no-check-certificate &ldquo;<a href="http://api.clickatell.com/http/s">http://api.clickatell.com/http/s</a></div>
+<div>endmsg?api_id=NNNNNNN&amp;user=XXXXXXXXX&amp;password=YYYYYYY&amp;to=$1&amp;text=$2&rdquo;</div>
+</div>
+</div>
+<p />
+<p />
+<p />
+<div><strong><span style="text-decoration: underline;">Monitor What?</span></strong></div>
+<p />
+<div>Zabbix allows you to monitor a wide range of parameters and processes. So everything from network activity to whether your FTP server is contactable. It&rsquo;s not the easiest web-app to configure but so far I&rsquo;m finding it extremely useful.</div></p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/monitoring-ec2-servers-with-zabbix\/monitoring-ec2-servers-with-zabbix.html';
+    var disqus_title = 'Monitoring EC2 Servers with Zabbix';
+    var disqus_url = 'http:\/\/conoroneill.net\/monitoring-ec2-servers-with-zabbix\/monitoring-ec2-servers-with-zabbix.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

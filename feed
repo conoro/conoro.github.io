@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Sep 2015 17:35:11 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/feed/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/feed.html" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</title>
-      <link>http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2/</link>
+      <link>http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2.html</link>
       <pubDate>Tue, 29 Sep 2015 17:35:11 +0100</pubDate>
       
-      <guid>http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2/</guid>
+      <guid>http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2.html</guid>
       <description>&lt;p&gt;For some odd reason, Google and others stopped auto-generating armhf binaries of &lt;a href=&#34;https://www.chromium.org/Home&#34;&gt;Chromium&lt;/a&gt; last year. Version 37 was the last one I could find. Luckily the Ubuntu guys have been building it all along and their version 45 installs really easily on the &lt;a href=&#34;https://www.raspberrypi.org/blog/raspbian-jessie-is-here/&#34;&gt;all-new Debian/Raspbian Jessie&lt;/a&gt; on your Raspberry Pi 2.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_heart_chrome.png&#34; alt=&#34;Pi loves Chromium&#34; /&gt;
@@ -41,10 +41,10 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
     
     <item>
       <title>TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi</title>
-      <link>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/</link>
+      <link>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi.html</link>
       <pubDate>Sun, 20 Sep 2015 13:03:54 +0100</pubDate>
       
-      <guid>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/</guid>
+      <guid>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi.html</guid>
       <description>
 
 &lt;p&gt;As an old Embedded guy who actually cares about resource usage, I&amp;rsquo;ve been bothered for quite a while by the number of trivial Node.js projects out there that require a full-blown MongoDB or MySQL server to operate. It&amp;rsquo;s a particular problem on the Raspberry Pi or small &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt; Droplets. In many cases a simple SQLite DB or TingoDB is more than sufficient.&lt;/p&gt;
@@ -69,10 +69,10 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
     
     <item>
       <title>Running ZeroMQ with Node.js on Raspberry Pi</title>
-      <link>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi/</link>
+      <link>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi.html</link>
       <pubDate>Sun, 20 Sep 2015 11:38:46 +0100</pubDate>
       
-      <guid>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi/</guid>
+      <guid>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://zeromq.org/&#34;&gt;ZeroMQ&lt;/a&gt; is a lightweight messaging library and looks ideal for lower powered devices like the RPi. Building and running is pretty easy. These are really just notes for myself for future reference.&lt;/p&gt;
 
 &lt;p&gt;I don&amp;rsquo;t actually need a messaging system yet but I wanted to play around with one. Running a simple Request / Reply setup with Node.js on both Windows 10 and RPi was interesting. One advantage a message queue gives you over REST is that the receiver can be out of action and still get all transmitted messages when it recovers. You also have things like Pub/Sub etc. I&amp;rsquo;ve been running the code &lt;a href=&#34;http://blog.rastating.com/using-zeromq-with-node-js/&#34;&gt;from here&lt;/a&gt; 100% reliably for two days now on both setups. At some point I&amp;rsquo;ll check max throughput on a Pi.&lt;/p&gt;
@@ -169,10 +169,10 @@ socket.connect(&amp;lsquo;tcp://127.0.0.1:9998&amp;rsquo;);&lt;br /&gt;
     
     <item>
       <title>TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?</title>
-      <link>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/</link>
+      <link>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that.html</link>
       <pubDate>Sun, 23 Aug 2015 14:42:32 +0100</pubDate>
       
-      <guid>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/</guid>
+      <guid>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that.html</guid>
       <description>&lt;p&gt;We had friends over from the US last weekend and their kids loved my &lt;a href=&#34;http://printrbot.com/project/simple-makers/&#34;&gt;Printrbot 3D printer&lt;/a&gt;. They had learned &lt;a href=&#34;https://www.tinkercad.com/&#34;&gt;Tinkercad&lt;/a&gt; in school so that&amp;rsquo;s what they used to create things so they could print them out. They are now hounding their parents for a printer. Oops :-) But I noticed a &amp;ldquo;Download to Minecraft&amp;rdquo; option in Tinkercad and finally just had a chance to try it out. Wow!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker02b.jpg&#34; alt=&#34;In Tinkercad&#34; /&gt;
@@ -189,10 +189,10 @@ socket.connect(&amp;lsquo;tcp://127.0.0.1:9998&amp;rsquo;);&lt;br /&gt;
     
     <item>
       <title>Creating an OTP fob compatible with Google Authenticator using an Espruino Pico</title>
-      <link>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/</link>
+      <link>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico.html</link>
       <pubDate>Wed, 22 Jul 2015 08:14:26 +0100</pubDate>
       
-      <guid>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/</guid>
+      <guid>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico.html</guid>
       <description>&lt;p&gt;Now that the &lt;a href=&#34;http://www.espruino.com/&#34;&gt;Espruino Pico&lt;/a&gt; has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I&amp;rsquo;ve cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg&#34; alt=&#34;Espruino Pico OTP&#34; /&gt;
@@ -304,10 +304,10 @@ setWatch(function() {
     
     <item>
       <title>Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available</title>
-      <link>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/</link>
+      <link>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available.html</link>
       <pubDate>Sat, 11 Jul 2015 19:56:57 +0100</pubDate>
       
-      <guid>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/</guid>
+      <guid>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available.html</guid>
       <description>&lt;p&gt;I compiled both on a Banana Pi for a change. Nothing special for the 0.12 build, and ./configure &amp;ndash;without-snapshot for the 0.10 build.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;make test&amp;rdquo; threw up the usual 7 minor errors or so.&lt;/p&gt;
@@ -344,10 +344,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>Save your Yahoo Pipes as Node.js Apps for posterity</title>
-      <link>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/</link>
+      <link>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity.html</link>
       <pubDate>Sat, 06 Jun 2015 15:06:15 +0100</pubDate>
       
-      <guid>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/</guid>
+      <guid>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity.html</guid>
       <description>&lt;p&gt;I swore I&amp;rsquo;d never use another Yahoo product after the cultural terrorism of their Geocities shutdown. Now one of their few bright lights of the past decade, Pipes, is biting the dust. However a very very smart person wrote a program called &lt;a href=&#34;https://github.com/neyric/pipes2js&#34;&gt;pipes2js&lt;/a&gt; three years ago which you may find useful. It converts your Pipes to Node.js apps!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/06/rip_pipes.png&#34; alt=&#34;RIP Pipes&#34; /&gt;
@@ -376,10 +376,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!</title>
-      <link>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow/</link>
+      <link>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html</link>
       <pubDate>Fri, 01 May 2015 17:49:50 +0100</pubDate>
       
-      <guid>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow/</guid>
+      <guid>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi for quite a while. When it was originally announced, everyone seemed to think they were getting full-blown Windows for free on Pi. Many still think this. What you actually get is a GUI-less version of Windows on to which you can deploy Universal Apps (and others). So unlike Raspbian on Pi, you can&amp;rsquo;t actually develop on it, you have to have full Windows 10 running somewhere else to develop, compile, deploy and debug. Or as I said on Twitter:&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Install Visual Studio 2015 on your PC to develop Win10 IoT Apps for &lt;a href=&#34;https://twitter.com/Raspberry_Pi&#34;&gt;@Raspberry_Pi&lt;/a&gt;&amp;quot;. Install Fortran on your PDP-11 to use your ZX Spectrum?&lt;/p&gt;&amp;mdash; Conor O&amp;#39;Neill (@conoro) &lt;a href=&#34;https://twitter.com/conoro/status/593662573347794944&#34;&gt;April 30, 2015&lt;/a&gt;&lt;/blockquote&gt;
@@ -431,10 +431,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>Node v0.12.2 for ARM V6/V7 including Raspberry Pi, Raspberry Pi 2 and ODROID-C1</title>
-      <link>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1/</link>
+      <link>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1.html</link>
       <pubDate>Fri, 03 Apr 2015 11:32:07 +0100</pubDate>
       
-      <guid>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1/</guid>
+      <guid>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1.html</guid>
       <description>&lt;p&gt;As with Node 0.12.0 and 0.12.1, there are no-precompiled ARM versions of &lt;a href=&#34;http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/&#34;&gt;0.12.2&lt;/a&gt; on the main site.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;
@@ -448,10 +448,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here</title>
-      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here/</link>
+      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html</link>
       <pubDate>Thu, 26 Mar 2015 09:56:57 +0000</pubDate>
       
-      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here/</guid>
+      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html</guid>
       <description>&lt;p&gt;Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&amp;rsquo;t compile on Raspberry Pi (pre 2) so I took a patch from &lt;a href=&#34;http://iojs.org&#34;&gt;io.js&lt;/a&gt; and was able to build it.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;
@@ -516,10 +516,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>Download compiled version of Node.js 0.12.0 Stable for Raspberry Pi here</title>
-      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here/</link>
+      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here.html</link>
       <pubDate>Sun, 08 Feb 2015 12:45:55 +0000</pubDate>
       
-      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here/</guid>
+      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here.html</guid>
       <description>&lt;p&gt;Unfortunately the &lt;a href=&#34;http://blog.nodejs.org/2015/02/06/node-v0-12-0-stable/&#34;&gt;0.12.0 release&lt;/a&gt; of Node won&amp;rsquo;t compile on a non-V2 Raspberry Pi so I took a patch from &lt;a href=&#34;http://iojs.org&#34;&gt;io.js&lt;/a&gt; and was able to build it.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;
@@ -543,10 +543,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift</title>
-      <link>http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs/</link>
+      <link>http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs.html</link>
       <pubDate>Sun, 04 Jan 2015 13:42:36 +0000</pubDate>
       
-      <guid>http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs/</guid>
+      <guid>http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs.html</guid>
       <description>
 
 &lt;p&gt;After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift.&lt;/p&gt;
@@ -608,10 +608,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>Introducing FitBit&#39;s first sports tracker for Superheroes - The FitBat</title>
-      <link>http://conoroneill.net/introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat/</link>
+      <link>http://conoroneill.net/introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat.html</link>
       <pubDate>Sun, 21 Dec 2014 17:44:19 +0000</pubDate>
       
-      <guid>http://conoroneill.net/introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat/</guid>
+      <guid>http://conoroneill.net/introducing-fitbits-first-sports-tracker-for-superheroes-the-fitbat.html</guid>
       <description>&lt;p&gt;Finally the product that Superheroes everywhere have been crying out for - The FitBat. I&amp;rsquo;m sure the protector of Gotham would approve.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbat.jpg&#34; alt=&#34;FitBat&#34; title=&#34;FitBat&#34; /&gt;
@@ -621,10 +621,10 @@ sudo cp -R * /usr/local/
     
     <item>
       <title>Say hello to my little friend. The Fitbit XL with external battery by Conor</title>
-      <link>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor/</link>
+      <link>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor.html</link>
       <pubDate>Sat, 13 Dec 2014 19:59:24 +0000</pubDate>
       
-      <guid>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor/</guid>
+      <guid>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor.html</guid>
       <description>&lt;p&gt;My first Fitbit died in the washing machine and they kindly replaced it for free. The replacement&amp;rsquo;s battery started acting up recently and finally gave up the ghost last night. You won&amp;rsquo;t believe what happens next ;-)&lt;/p&gt;
 
 &lt;p&gt;I figured out how to take apart the Fitbit One on the original dead one so this time I managed to do it with no damage. I de-soldered the battery and tried the old one instead. No joy. I&amp;rsquo;ve found some Chinese suppliers of 55mAh Lipos but I don&amp;rsquo;t have the patience to wait. One slightly too big battery and some hot-glue later and I give you the FitBit One XL.&lt;/p&gt;
@@ -646,10 +646,10 @@ Front
     
     <item>
       <title>Some of my old Red Hat floppy disks from 2000-2004</title>
-      <link>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/</link>
+      <link>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004.html</link>
       <pubDate>Sat, 13 Dec 2014 14:35:30 +0000</pubDate>
       
-      <guid>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/</guid>
+      <guid>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004.html</guid>
       <description>&lt;p&gt;We had to empty our attic to get the house insulated this week. I uncovered some old Red Hat and Fedora floppies and CDs. I previously had much older ones but was quite ruthless about reusing floppies in the old days!&lt;/p&gt;
 
 &lt;p&gt;The very first Linux I installed was Slackware on a self-built AMD K5 PC in Sunnyvale in 1996 (I&amp;rsquo;ve never built a PC with Intel CPUs! Current box is self-built FX-8 Eight Core 8370). I was so traumatised by the Slackware experience, as a Windows 95 user, that I didn&amp;rsquo;t try again until &amp;lsquo;97 with Red Hat Linux 4. My oldest floppy is from Red Hat 6.2 in 2000:&lt;/p&gt;

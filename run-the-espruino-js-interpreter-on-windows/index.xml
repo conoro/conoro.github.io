@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Run-The-Espruino-Js-Interpreter-On-Windows on Cross Dominant</title>
-    <link>http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/</link>
+    <link>http://conoroneill.net/run-the-espruino-js-interpreter-on-windows.html</link>
     <description>Recent content in Run-The-Espruino-Js-Interpreter-On-Windows on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 01 Feb 2014 16:13:22 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/run-the-espruino-js-interpreter-on-windows.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Run the @espruino JS interpreter on Windows</title>
-      <link>http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/run-the-espruino-js-interpreter-on-windows/</link>
+      <link>http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/run-the-espruino-js-interpreter-on-windows.html</link>
       <pubDate>Sat, 01 Feb 2014 16:13:22 +0000</pubDate>
       
-      <guid>http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/run-the-espruino-js-interpreter-on-windows/</guid>
+      <guid>http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/run-the-espruino-js-interpreter-on-windows.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Run the @espruino JS interpreter on Windows&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I just got my Kickstarter &lt;a href=&#34;http://www.espruino.com/&#34;&gt;Espruino&lt;/a&gt; yesterday. It&amp;rsquo;s one of those projects that just makes me smile. A tiny board with an ST ARM MCU running a special JavaScript interpreter that can do all the stuff with hardware you would normally associate with C/C++/Assembler/Wiring.&lt;/p&gt;

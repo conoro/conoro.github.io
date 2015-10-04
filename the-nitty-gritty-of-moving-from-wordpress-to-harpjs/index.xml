@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The-Nitty-Gritty-Of-Moving-From-Wordpress-To-Harpjs on Cross Dominant</title>
-    <link>http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/</link>
+    <link>http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs.html</link>
     <description>Recent content in The-Nitty-Gritty-Of-Moving-From-Wordpress-To-Harpjs on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Mar 2014 18:33:02 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The nitty-gritty of moving from WordPress to HarpJS</title>
-      <link>http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/</link>
+      <link>http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/the-nitty-gritty-of-moving-from-wordpress-to-harpjs.html</link>
       <pubDate>Sun, 16 Mar 2014 18:33:02 +0000</pubDate>
       
-      <guid>http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/</guid>
+      <guid>http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/the-nitty-gritty-of-moving-from-wordpress-to-harpjs.html</guid>
       <description>&lt;p&gt;As I said in the previous posts, the move from WP to HarpJS was not exactly smooth. But I&amp;rsquo;m glad I&amp;rsquo;ve done it as I finally learned how to use a lot of things like Jade that I&amp;rsquo;ve long-fingered for years.&lt;/p&gt;
 
 &lt;p&gt;The first step was to get the original content out of WordPress. This had the added twist that the conoroneill.net blog actually started out as a Posterous blog which I imported into WordPress when I realised that Posterous was a dead-end. So the first two years of posts have some &amp;ldquo;interesting&amp;rdquo; problems in them.&lt;/p&gt;

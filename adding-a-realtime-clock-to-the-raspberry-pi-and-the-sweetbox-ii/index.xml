@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adding-A-Realtime-Clock-To-The-Raspberry-Pi-And-The-Sweetbox-Iis on Cross Dominant</title>
-    <link>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/</link>
+    <link>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii.html</link>
     <description>Recent content in Adding-A-Realtime-Clock-To-The-Raspberry-Pi-And-The-Sweetbox-Iis on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Nov 2013 17:33:32 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Adding a realtime clock to the Raspberry Pi and the Sweetbox II</title>
-      <link>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/</link>
+      <link>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii.html</link>
       <pubDate>Sun, 03 Nov 2013 17:33:32 +0000</pubDate>
       
-      <guid>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/</guid>
+      <guid>http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Adding a realtime clock to the Raspberry Pi and the Sweetbox II&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I got one of these &lt;a href=&#34;http://dx.com/p/meeeno-ds1307-real-time-clock-brick-module-for-arduino-yellow-works-with-official-arduino-boards-213941&#34;&gt;$3 RTC modules&lt;/a&gt;a few months back and I finally set it up this weekend. It simply has a battery-backed clock so when your Raspberry Pi (or Arduino) boots up, it has the correct time immediately. For a network-connected Pi, it&amp;rsquo;s not really necessary as you can have the time updated regularly via NTP but not all Pis spend their life connected to the network. So if you are working away locally on your Pi, your files will no longer look like they were all created in 1970. This &lt;a href=&#34;http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/overview&#34;&gt;Adafruit tutorial&lt;/a&gt; explains exactly how to do it. You could even get &lt;a href=&#34;http://www.adafruit.com/products/264&#34;&gt;their RTC module&lt;/a&gt; instead.&lt;/p&gt;

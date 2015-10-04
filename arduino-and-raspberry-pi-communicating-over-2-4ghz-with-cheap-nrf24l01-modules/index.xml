@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arduino-And-Raspberry-Pi-Communicating-Over-2-4ghz-With-Cheap-Nrf24l01-Modules on Cross Dominant</title>
-    <link>http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/</link>
+    <link>http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules.html</link>
     <description>Recent content in Arduino-And-Raspberry-Pi-Communicating-Over-2-4ghz-With-Cheap-Nrf24l01-Modules on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Sep 2013 15:51:57 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Arduino and Raspberry Pi communicating over 2.4GHz with cheap nRF24L01&#43; modules</title>
-      <link>http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/</link>
+      <link>http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules.html</link>
       <pubDate>Sat, 07 Sep 2013 15:51:57 +0100</pubDate>
       
-      <guid>http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/</guid>
+      <guid>http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Arduino and Raspberry Pi communicating over 2.4GHz with cheap nRF24L01+ modules&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve had a lot of fun over the past year messing with wireless comms. The 433Mhz/434MHz dirt-cheap modules are fantastic for Arduino, particularly when used with the &lt;a href=&#34;http://www.airspayce.com/mikem/arduino/&#34;&gt;VirtualWire library&lt;/a&gt; which makes them trivial to setup. I&amp;rsquo;ve been able to send sensor data and RC car commands using them with just a few lines of code. However, there isn&amp;rsquo;t a version of VirtualWire for RaspberryPi and I don&amp;rsquo;t have the time/skills to port the Arduino one.&lt;/p&gt;

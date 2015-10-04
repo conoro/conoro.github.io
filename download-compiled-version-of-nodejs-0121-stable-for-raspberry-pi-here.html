@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here &middot; Cross Dominant</title>
+
+    <meta name="description" content="Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&#39;t compile on Raspberry Pi so I took a patch from io.js and was able to build it.">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here &middot; Cross Dominant">
+    <meta name="twitter:description" content="Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&#39;t compile on Raspberry Pi so I took a patch from io.js and was able to build it.">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here &middot; Cross Dominant">
+    <meta property="og:description" content="Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&#39;t compile on Raspberry Pi so I took a patch from io.js and was able to build it.">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">26 Mar 2015, 09:56</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html" class="post-title">Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html" data-title="Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here" data-description="Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&#39;t compile on Raspberry Pi so I took a patch from io.js and was able to build it." data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html" data-description="Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&#39;t compile on Raspberry Pi so I took a patch from io.js and was able to build it." class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&rsquo;t compile on Raspberry Pi (pre 2) so I took a patch from <a href="http://iojs.org">io.js</a> and was able to build it.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg" alt="Node.js" />
+</p>
+
+<p>The problem is due to recent releases of Raspbian mis-identifying the ARM version so Node tries to build for V7 instead of V6. These <a href="https://github.com/bnoordhuis/io.js/commit/6f7494292e22b1f1050abeaa43f257ac466edf2b">two</a> <a href="https://github.com/bnoordhuis/io.js/commit/8afcc5e701538e5a442a0334d781eac202cc4e1d">changes</a> from this <a href="https://github.com/iojs/io.js/issues/283">io.js thread</a> sort it out.</p>
+
+<p>I set the Raspberry Pi B+ to Turbo mode and it took 4ish hours to build</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz">Download here</a> and enjoy.</p>
+
+<pre><code class="language-javascript">wget https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz
+tar -zxvf node-v0.12.1-linux-arm-pi.tar.gz
+cd node-v0.12.1-linux-arm-pi
+sudo cp -R * /usr/local/
+</code></pre>
+
+<p>Updated files:
+* <a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/configure">configure</a>
+* <a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/cpu.cc">cpu.cc</a></p>
+
+<p>Diffs:
+* configure</p>
+
+<pre><code class="language-diff">493a494,495
+&gt;     o['variables']['arm_fpu'] = 'vfpv3'
+&gt;     o['variables']['arm_neon'] = int(is_arm_neon())
+495,496d496
+&lt;   elif is_arch_armv6():
+&lt;     o['variables']['arm_version'] = '6'
+498c498,500
+&lt;     o['variables']['arm_version'] = 'default'
+---
+&gt;     o['variables']['arm_fpu'] = 'vfpv2'
+&gt;     o['variables']['arm_neon'] = 0
+&gt;     o['variables']['arm_version'] = '6' if is_arch_armv6() else 'default'
+500,501d501
+&lt;   o['variables']['arm_fpu'] = 'vfpv3'  # V8 3.18 no longer supports VFP2.
+&lt;   o['variables']['arm_neon'] = int(is_arm_neon())
+</code></pre>
+
+<ul>
+<li>cpu.cc</li>
+</ul>
+
+<pre><code class="language-diff">368c368
+&lt;     // We try to correct this by looking at the 'elf_platform'
+---
+&gt;     // We try to correct this by looking at the 'elf_format'
+374c374
+&lt;       char* processor = cpu_info.ExtractField(&quot;model name&quot;);
+---
+&gt;       char* processor = cpu_info.ExtractField(&quot;Processor&quot;);
+</code></pre>
+
+<ul>
+<li>Make Test Output: [25:08|% 100|+ 775|-   6]: Done
+(failures seem to be timeouts mainly)</li>
+</ul>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html';
+    var disqus_title = 'Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here';
+    var disqus_url = 'http:\/\/conoroneill.net\/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

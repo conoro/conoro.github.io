@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Dominant &middot; Cross Dominant</title>
+
+    <meta name="description" content="Mixed laterality since 1968">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Cross Dominant &middot; Cross Dominant">
+    <meta name="twitter:description" content="Mixed laterality since 1968">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cross Dominant &middot; Cross Dominant">
+    <meta property="og:description" content="Mixed laterality since 1968">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">25 Dec 2013, 13:43</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/our-first-arduino-christmas-turkey/our-first-arduino-christmas-turkey.html" class="post-title">Our first Arduino Christmas Turkey</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Our first Arduino Christmas Turkey&rdquo;</p>
+
+<p>Take one turkey, an oven with the temperature markings rubbed-off, a food thermometer with a broken probe and you have a recipe for either incineration or salmonella.</p>
+
+<p>Enter an <a href="http://store.arduino.cc/index.php?main_page=product_info&amp;cPath=11&amp;products_id=195">Arduino Uno</a>, a <a href="https://www.olimex.com/Products/Components/Misc/TC-K-TYPE/">K-Type thermocouple</a>, a sample <a href="http://www.maximintegrated.com/datasheet/index.mvp/id/7273">MAX31855</a> IC, some dodgy soldering from a few weeks ago, an <a href="https://github.com/adafruit/Adafruit-MAX31855-library">Adafruit library</a> and a <a href="https://www.sparkfun.com/products/9393">Sparkfun LCD</a> and you get this:</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45.jpg"><img class="aligncenter size-large wp-image-1229" alt="2013-12-25 12.43.45" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45-1024x768.jpg" width="584" height="438" /></a></p>
+
+<p>All rustled up in 15 minutes.</p>
+
+<p>Code and circuit to follow.</p>
+
+<p>I haven&rsquo;t bothered to average out the values so using a bit of human judgement on the instantaneous ones.</p>
+
+<p>UPDATE: So the turkey ended up very dry. I&rsquo;m not sure if the cooking time was excessive or the thermocouple was reading low. I wasn&rsquo;t impressed with its accuracy at room temperature (+/- 2C at least) but I suspect it may have been 10C or more off at 180C. Hmm, just tried it on boiling water and it read 100-104 so perhaps I just cooked the turkey for far too long.</p>
+
+<p>Also, if you want to try this, do yourself a favour and get the <a href="http://www.adafruit.com/products/269">Adafruit MAX31855 breakout board</a>. Soldering to the chip directly was a pain in the ass.</p>
+
+<p>CODE (based on the Adafruit and Sparkfun sample code):</p>
+
+<p>[sourcecode]
+/***************************************************
+ This is an example for the Adafruit Thermocouple Sensor w/MAX31855K</p>
+
+<p>Designed specifically to work with the Adafruit Thermocouple Sensor
+ &mdash;-&gt; <a href="https://www.adafruit.com/products/269">https://www.adafruit.com/products/269</a></p>
+
+<p>These displays use SPI to communicate, 3 pins are required to
+ interface
+ Adafruit invests time and resources providing this open source code,
+ please support Adafruit and open-source hardware by purchasing
+ products from Adafruit!</p>
+
+<p>Written by Limor Fried/Ladyada for Adafruit Industries.
+ BSD license, all text above must be included in any redistribution
+ ****************************************************/</p>
+
+<p>#include &quot;Adafruit_MAX31855.h&quot;
+#include &lt;SoftwareSerial.h&gt;
+#include&lt;stdlib.h&gt;</p>
+
+<p>int thermoCLK = 5;
+int thermoCS = 4;
+int thermoDO = 3;</p>
+
+<p>// Initialize the Thermocouple
+Adafruit_MAX31855 thermocouple(thermoCLK, thermoCS, thermoDO);
+SoftwareSerial mySerial(6,2); // pin 2 = TX, pin 3 = RX (unused)</p>
+
+<p>void setup() {
+ mySerial.begin(9600);
+ Serial.begin(9600);
+ delay(500);
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);
+ mySerial.write(&quot;Hello, Thermocouple!&quot;);</p>
+
+<p>// wait for MAX chip to stabilize
+ delay(1000);
+}</p>
+
+<p>char tempstring[16];
+void loop() {
+ // basic readout test, just print the current temp
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);</p>
+
+<p>double c = thermocouple.readCelsius();
+ if (isnan&copy;)
+ {
+ mySerial.write(&quot;T/C Problem&quot;);
+ }
+ else
+ {
+ mySerial.write(&quot;C = &quot;);
+ mySerial.write(dtostrf(c,4,1,tempstring));
+ Serial.println&copy;;
+ mySerial.write(&quot; &quot;);
+ }</p>
+
+<p>delay(1000);
+}
+[/sourcecode]</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Dec 2013, 13:20</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/slightly-obsessing-about-the-doctor-who-theme-music/slightly-obsessing-about-the-doctor-who-theme-music.html" class="post-title">Slightly obsessing about the Doctor Who theme music</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Slightly obsessing about the Doctor Who theme music&rdquo;</p>
+
+<p>I watched a superb Culture Show documentary on Doctor Who last week. Several people really stood out for me including <a href="http://www.delia-derbyshire.org/">Delia Derbyshire</a>, the absolute genius who, at the BBC Radiophonic Workshop in 1963,turned Ron Grainer&rsquo;s simple tune into the iconic music that is burned into my brain since I first heard it around 1972, aged 4.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/Delia-Derbyshire.png"><img class="aligncenter size-full wp-image-1220" alt="Delia-Derbyshire" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/Delia-Derbyshire.png" width="824" height="459" /></a><a href="http://www.okayfuture.com/wp-content/uploads/2013/09/Delia-Derbyshire.png">
+</a></p>
+
+<p>I&rsquo;ve just been wondering this week how she did it. Has anyone tried to re-create it using the technology available to her back then? I found this clip showing how they did it in 1980 with analogue polyphonic synthesisers and vocoders but that tech is far beyond 1963 and, to be honest, doesn&rsquo;t sound as good to my ears.</p>
+
+<p>httpv://www.youtube.com/watch?v=dIZIu72Clp4</p>
+
+<p>In any case, here&rsquo;s a bunch of them back to back, starting with Delia&rsquo;s masterpiece</p>
+
+<p>httpv://www.youtube.com/watch?v=a1AnTi1X2QM</p>
+
+<p>And a <a href="http://www.bbc.co.uk/programmes/b00rl2ky">BBC Radio 4 Documentary on Delia</a>. Sad that you have to <a href="http://www.youtube.com/watch?v=MA6Fb0nuAYw">go to YouTube</a> to listen to it!</p>
+
+<p>UPDATE: You really have to listen to that BBC R4 documentary, it&rsquo;s wonderful. Her co-workers give a good description of how the Doctor Who theme was created too.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">01 Dec 2013, 12:18</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid/introducing-the-bandon-bluetooth-button-bbb-using-rn42-hid.html" class="post-title">Introducing the Bandon Bluetooth Button (BBB) using RN42 HID</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Introducing the Bandon Bluetooth Button (BBB) using RN42 HID&rdquo;</p>
+
+<p>TL;DR - A Bluetooth-enabled Button/Joystick to control music/podcasts on your phone whilst driving.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb01.jpg"><img class="size-large wp-image-1212 alignnone" alt="bbb01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb01-1024x849.jpg" width="584" height="484" /></a></p>
+
+<p>One thing I find very dangerous in the car is changing tracks etc on my phone when it&rsquo;s in its screen mount. It&rsquo;s impossible to do so without taking your eye off the road even for a second. And it&rsquo;s illegal in many countries. I used to love the steering column controls for the old car radio but they don&rsquo;t work over A2DP or AVRCP Bluetooth to my phone which streams to my Lidl car stereo.</p>
+
+<p>I&rsquo;ve made three attempts at solving this and I finally succeeded today.</p>
+
+<p>The first attempt involved one of those cheap Chinese Bluetooth Serial modules like HC-05 or HC-06. I got pretty far with this and was able to send commands to my phone. But that&rsquo;s where I got stuck. I would need to write a native Android App to take those commands and broadcast them as media commands in the phone. I made some progress there but I was way out of my depth.</p>
+
+<p>Whilst in the midst of that, Adafruit announced the <a href="http://learn.adafruit.com/introducing-bluefruit-ez-key-diy-bluetooth-hid-keyboard">Bluefruit</a>. We know how <a href="http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/">that turned out</a> for me, but if you want to make something like my BBB, I&rsquo;d recommend that route since you get almost everything out of the box.</p>
+
+<p>Finally I settled on the Microchip Roving Networks RN42 HID Bluetooth module. It only cost 16.50 ex-VAT from <a href="http://ie.farnell.com/jsp/search/productdetail.jsp?sku=2143310&amp;CMP=i-bf9f-00001000">Farnell Element 14 in Ireland</a>. As usual with Farnell, you need to bump the order over 20 to get free (fast!) deliver. My big concern was to make sure I&rsquo;d get the right variant since there are quite a few. But since May 2013 it looks like the HID one is what they ship by default. Of course the big drawback is that this is an SMD module which isn&rsquo;t really designed for hand soldering into a hobby project. You can get them on breakout boards but it adds a lot to the cost. In the end the soldering was fine since it only really involved 4 wires and a stiff drink ;-) (Power, Ground, Serial Receive, Serial Transmit).</p>
+
+<p>So what does it do? It&rsquo;s really very simple. You pair it to your phone and it appears as a combo Keyboard/Mouse device. You then send commands using an Arduino Nano to the RN42 and it sends them to the phone. The trick here is that the commands are &ldquo;Consumer Report&rdquo; ones which means Play/Pause, Next/Prev Track and Volume Up/Down (amongst many others). It&rsquo;s all powered by a LiPo battery I salvaged from some broken kids toy.</p>
+
+<p>httpv://www.youtube.com/watch?v=IuH-1LcZlYo</p>
+
+<p>It works beautifully and will take pride of place attached to my steering wheel as I wend my way around the country. Update: Just tested on an emergency drive from Bandon to Mount Mellary to collect a sick Boy Scout.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41.jpg"><img class="size-large wp-image-1214 alignnone" alt="2013-11-30 19.41.41" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-11-30-19.41.41-1024x768.jpg" width="584" height="438" /></a></p>
+
+<p>I have tested on an SGS4 but there is no reason it won&rsquo;t work on an iDevice unless Tim and Co have not implemented Consumer Report HID on iOS. Update: Tested and working beautifully on an iPhone 5 with iOS 7.</p>
+
+<p>The only real issues I have so far are that it won&rsquo;t auto-connect to the phone (I think this is the SGS4&rsquo;s fault) and I haven&rsquo;t implemented any power saving. I&rsquo;m trying to sort auto-connect by using an NFC sticker to force the Samsung to connect. Not much joy yet. Power-saving should be easy to do since the joystick itself could be used to wake everything up. In the meantime I&rsquo;ll just unplug when not in use and charge the battery every once in a while from the cigarette lighter socket using one of these very neat <a href="http://dx.com/p/mini-usb-1a-lithium-battery-charging-board-charger-144856">$3 USB LiPo chargers</a> from the usual crew in DX in China.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb02.jpg"><img class="aligncenter size-large wp-image-1213" alt="bbb02" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/bbb02-1024x911.jpg" width="584" height="519" /></a></p>
+
+<p>One thing I haven&rsquo;t figured out is why it won&rsquo;t work with a 3.3V Arduino Pro Mini. The RN42 is a 3.3V device but only works with my 5V Arduinos like the Nano and the Uno. Is it possible the UART pins need 5V?</p>
+
+<p>The Bill of Materials is as follows:
+<ul>
+    <li><a href="http://dx.com/p/repair-parts-replacement-analog-stick-module-for-ps2-controller-black-121340"><span style="line-height: 15px;">Cheap Chinese Joystick Module</span></a></li>
+    <li><a href="http://www.elecfreaks.com/store/arduino-nano-p-14.html">Arduino Nano</a></li>
+    <li><a href="http://ie.farnell.com/jsp/search/productdetail.jsp?sku=2143310&amp;CMP=i-bf9f-00001000">RN42 HID</a></li>
+    <li>3.7V Lipo Battery</li>
+    <li>Double sided foam tape :-)</li>
+    <li>A few headers</li>
+    <li>NFC Sticker</li>
+</ul>
+Wiring is beyond easy: TX on Arduino to RX on RN42. RX on Arduino to TX on RN42. 3V3 on Arduino to VCC on RN42. GND on Arduino to GND on RN42.</p>
+
+<p><a href="https://github.com/conoro/bandon-bluetooth-button">My code</a> is trivially simple and uses my improved version of <a href="https://github.com/baselsw/BPLib">an existing Arduino library</a> called BPLib to talk to the RN42. I had to modify the library to work on anything other than an Arduino Mega but that was a simple search/replace. I also added a bunch of the Consumer Report functions to the library if you want to make use of them. They are:
+<ul>
+    <li>void volumeUp();</li>
+    <li>void volumeDown();</li>
+    <li>void muteAudio();</li>
+    <li>void playPause();</li>
+    <li>void nextTrack();</li>
+    <li>void prevTrack();</li>
+    <li>void stopAudio();</li>
+    <li>void fastForwardAudio();</li>
+    <li>void rewindAudio();</li>
+    <li>void keyRelease();</li>
+</ul>
+My Arduino sketch and library are available <a href="https://github.com/conoro/bandon-bluetooth-button">on GitHub here</a>. Edit the ino file to suit yourself e.g. shorten a lot of the overly conservative delays or add proper power management. The BPLib directory should be dropped into the libraries sub-directory of your Arduino IDE installation.</p>
+
+<p>One thing to be careful of is that most Arduinos only have one serial port. So if you have the RN42 attached to the serial pins and powered up, then you won&rsquo;t be able to program the Arduino using the IDE until you disconnect power or RX/TX to the RN42.</p>
+
+<p>As always, any questions, let me know in the comments.</p>
+
+<p>UPDATE: I&rsquo;ve been using it for two days now and I love it! One problem I&rsquo;ve run into which should have been obvious is that once I pull the power, the BBB forgets what it has been paired to. So when I reconnect power, the phone thinks it is paired but the BBB doesn&rsquo;t and therefore connection fails. So I have to un-pair and re-pair. The solution is obviously to implement strong power management so the LiPo lasts more than the current 48hrs. I&rsquo;ll post new code when I have that figured out.</p>
+
+<p>The other tiny problem is that play/pause on Android by default uses your main Music app rather than the last audio app you ran,. In my case I want it to control the Doggcatcher Podcast player. It&rsquo;s no biggie, I just have to manually open Doggcatcher at the start of a journey and then the controls work perfectly.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">17 Nov 2013, 13:32</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key/a-product-and-support-failure-by-adafruit-with-the-bluefruit-ez-key.html" class="post-title">[No Longer] a Product and Support failure by Adafruit with the Bluefruit EZ-Key</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&rdquo;[No Longer] a Product and Support failure by Adafruit with the Bluefruit EZ-Key&rdquo;</p>
+
+<p><strong>UPDATE: Incredibly fast response and resolution from Adafruit. Feel free to ignore my negative post below. But still some good tips for any biz about handling product change and support. Back in? with Adafruit.</strong></p>
+
+<p>I&rsquo;ve been working on a simple-ish project recently which required Bluetooth comms between some hardware and a phone. I&rsquo;ve had lots of success with those cheap HC-05/HC-06 modules from China and made some progress with a Slave module. The problem was having to write native Android code to take the info from Bluetooth and &ldquo;action&rdquo; it.</p>
+
+<p>Then mid-project, Adafruit announced the<a href="http://learn.adafruit.com/introducing-bluefruit-ez-key-diy-bluetooth-hid-keyboard">Bluefruit EZ-Key HID</a> module which solved everything (I thought) in one fell swoop. I immediately ordered one and it arrived quickly from the US. I had it paired and sending key-presses to my PC and phone within a few minutes.</p>
+
+<p>Then I moved to using it in the actual project. I needed to be able to send Play/Pause music commands over Bluetooth. I opened up the key definition file and there was no mention of media controls. The file referenced another filename which I googled and found. A short while later I realised that a HID keyboard can&rsquo;t send media commands, it requires just a slightly different HID Consumer profile (a simple setting). But I couldn&rsquo;t see how to change the Bluefruit profile and <a href="http://forums.adafruit.com/viewtopic.php?f=19&amp;t=44730&amp;p=223765&amp;hilit=bluefruit#p223765">asked how on their only Support method</a> for paying customers - the Adafruit forums. Crickets. One non-Adafruit person tried to help but I&rsquo;d already failed with the method suggested. Strike 1 for Adafruit support.</p>
+
+<p>After a delay of a few weeks whilst I focused on Halloween tech, I finally got back to it last week and rolled up my sleeves. Back I went to the Adafruit site to get as much info as possible to see if there was any way to add the &ldquo;Consumer&rdquo; profile to Bluefruit. I was stunned to see they had released two new versions in less than 4 weeks. The first to add the mouse profile and the second to add the (yup, you guessed it) Consumer profile. So a feature I asked about, to which they never replied, is now part of the product!</p>
+
+<p>Naturally I went straight to the forums and asked how I could upgrade my 4 week old device to the new firmware. Response: <em>you can&rsquo;t</em>. My basic response: <em>you&rsquo;re kidding me</em>. <a href="http://forums.adafruit.com/viewtopic.php?f=19&amp;t=45724&amp;p=229432#p229432">As I said on the forum</a>:</p>
+
+<p>&ldquo;<em>I really have to express my annoyance about this. You released a non-user-upgradable product and then iterated it twice in the space of a few weeks? So anyone like me who bought v1.0 was basically a beta-tester without realising it? I feel very let down here by a company I have huge respect for.</em></p>
+
+<p><em>As someone who works in product management I know that this is a sure-fire way to kill a product stone-dead. Why would anyone even buy v1.2 if they suspect there might be a v1.3 next week? Did you do a beta cycle with real users at all? The features of v1.1 and v1.2 would have been obvious additions to anyone who even played with it for 5 minutes.</em>&ldquo;</p>
+
+<p>Now if this was a standard hacker product, there would be new firmware available to burn or instructions for hardware mods or whatever. Not in this case. This is effectively a consumer product. It is &ldquo;non-user-serviceable&rdquo;. Once you buy it, that&rsquo;s it, it will be forever fixed function, like a vacuum cleaner.</p>
+
+<p>This type of product is a new departure for Adafruit and they have royally screwed it up. Any normal consumer product company would offer a full or partial replacement/exchange for the people who bought the first incomplete versions. Adafruit&rsquo;s attitude seems to be &ldquo;tough luck, caveat emptor dude&rdquo;. The almost complete lack of questions about Bluefruit on the forums tells me it is either so perfect that no-one needs any support or (more likely) very few people have bought them. So the cost of keeping a few customers happy and loyal would have been minimal.</p>
+
+<p>My final comment to them was &ldquo;<em>I&rsquo;ll continue to buy Adafruit products that I can hack myself but you&rsquo;ve really soured me with anything black-boxed like the Bluefruit.</em>&rdquo;. And that&rsquo;s my advice to others. Until Adafruit make the necessary organisational changes to properly release and support products like this, you should stick to their excellent motor shields, Floras and other devices instead.</p>
+
+<p>Of course yesterday I discovered <a href="https://www.sparkfun.com/products/10823">a similar Roving Networks product</a>variant that does exactly what I want and was released 2 years ago! And it comes with full configurable HID support unlike the still fixed-function HID of the Bluefruit (v1.7 next week?). The RN42 is also available <a href="http://embeddedwirelesssolutions.com/rn-42_HID_breakout_board">here on a breakout board</a>. Then I found that HID is now built-in by default to the RN42 and I can get it for <a href="http://ie.farnell.com/microchip/rn42n-i-rm/module-bluetooth-class-2/dp/2143324">16.50 in Farnell in Ireland</a>. Sure it&rsquo;ll need some soldering etc, but I can live with that.</p>
+
+<p>For me, two of the brightest lights of the Maker movement have been Sparkfun and Adafruit. After this experience, one of those LEDs is just a little dimmer.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Nov 2013, 17:33</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii.html" class="post-title">Adding a realtime clock to the Raspberry Pi and the Sweetbox II</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Adding a realtime clock to the Raspberry Pi and the Sweetbox II&rdquo;</p>
+
+<p>I got one of these <a href="http://dx.com/p/meeeno-ds1307-real-time-clock-brick-module-for-arduino-yellow-works-with-official-arduino-boards-213941">$3 RTC modules</a>a few months back and I finally set it up this weekend. It simply has a battery-backed clock so when your Raspberry Pi (or Arduino) boots up, it has the correct time immediately. For a network-connected Pi, it&rsquo;s not really necessary as you can have the time updated regularly via NTP but not all Pis spend their life connected to the network. So if you are working away locally on your Pi, your files will no longer look like they were all created in 1970. This <a href="http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/overview">Adafruit tutorial</a> explains exactly how to do it. You could even get <a href="http://www.adafruit.com/products/264">their RTC module</a> instead.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc1.jpg"><img class="aligncenter size-full wp-image-1199" alt="rtc1" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc1.jpg" width="1024" height="768" /></a></p>
+
+<p>On a totally unrelated note, I finally got my <a href="http://www.kickstarter.com/projects/677951563/sweetbox-ii-the-perfect-case-for-your-raspberry-pi/">Sweetbox II</a> case for the Raspberry Pi which I backed on Kickstarter. It&rsquo;s a minimalist low-profile case that comes with cute heatsinks and a cut-out for the header pins. I&rsquo;m not a huge fan of the semi-translucent look of the plastic but I do love how little space it takes up. And unlike many cases, you don&rsquo;t have to take it apart to plug/unplug the ribbon cable. And finally, it&rsquo;s nice to have more good tech coming out of Greece.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc2.jpg"><img class="aligncenter size-full wp-image-1200" alt="rtc2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc2.jpg" width="1024" height="768" /></a></p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Nov 2013, 17:11</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/the-very-real-danger-of-cheap-lithium-polymer-lipo-batteries-and-accessories/the-very-real-danger-of-cheap-lithium-polymer-lipo-batteries-and-accessories.html" class="post-title">The very real danger of cheap Lithium Polymer (LiPo) batteries and accessories</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;The very real danger of cheap Lithium Polymer (LiPo) batteries and accessories&rdquo;</p>
+
+<p>We&rsquo;ve all heard the horror stories of phones exploding in people&rsquo;s faces and it turned out to be due to aftermarket cheap LiPo batteries. TBH I&rsquo;ve always pooh-poohed that stuff and figured they had been doing something stupid with their phones.</p>
+
+<p>I was wrong.</p>
+
+<p>When my wife moved from iPhone 4 to iPhone 5 recently, she discovered [a] the iPhone 5 battery life is awful and [b] of course her Mophie battery pack case wouldn&rsquo;t work due to the new connector. As a marathon runner, she needs the phone to be still working after 26 miles of music, GPS and Runkeeper. The iPhone 5 isn&rsquo;t up to the job.</p>
+
+<p>The original Mophie cost 70+ in Dixons and is still working well on the older phone. My ideas around hacking out the iPhone 4 connector and replacing it with a Lightning one were just plain stupid. So I went cheapskate and got her <a href="http://dx.com/p/external-2200mah-battery-matte-back-case-for-iphone-5-black-silver-187985">a $23 Mophie knock-off on DX.com</a>. I guessed the 2200mAh would turn out to be fantasy but even if it gave her an extra hour or two running, it would be worth it.</p>
+
+<p>We were really surprised to discover that it actually worked well and hugely extended the usability of the iPhone 5. It just about fit into an oversized running arm-band too.</p>
+
+<p>That was until Friday.</p>
+
+<p>That afternoon, the battery case was on her computer desk, charging. Our 11yo son was using the computer. Then the case started smoking. He went down to my home office to tell me but I was on a call and he decided not to bother me! So he calmly went back and pulled the cable out of the charger. He then went and got a glass of water, in case it went on fire. He&rsquo;s some kid. Zero panic. OK, we had to explain about water and different types of fires to him afterwards but overall, incredibly impressive.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo01.jpg"><img class="aligncenter size-full wp-image-1194" alt="lipo01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo01.jpg" width="1024" height="768" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>Less impressive was the melted plastic of the case and USB cable. Less impressive again was the state of the LiPo battery inside the case when I cracked it open. It was buckled and distorted. Yes I&rsquo;m an idiot for doing so, it could have blown up in my face.</p>
+
+<p>&nbsp;</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo02.jpg"><img class="aligncenter size-full wp-image-1196" alt="lipo02" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/lipo02.jpg" width="1024" height="1365" /></a></p>
+
+<p>Whilst it&rsquo;s during charging that LiPo batteries seem to be at their most dangerous, who&rsquo;s to say that it wouldn&rsquo;t have gone on fire or exploded when my wife had been running?</p>
+
+<p>What would have happened if my son hadn&rsquo;t been there on Friday?</p>
+
+<p>I don&rsquo;t want to turn into my parents&rsquo; generation where many of them unplug the TV, toaster, oven and microwave every night but it really does make me think about the huge number of devices in our house that sit charging most of the time: laptops, phones, MP3 players, Bluetooth headsets, Nintendo DSes etc etc.</p>
+
+<p>At the very least, I am never doing unattended charging of any non-mainstream-brand that has a LiPo inside from now on. There&rsquo;s a reason a Mophie costs 70+ and it&rsquo;s not all about margin. There is <a href="http://www.amazon.co.uk/gp/product/B00BS99MRE/ref=noref?ie=UTF8&amp;psc=1&amp;s=electronics">a brand new one</a> winging its way from Amazon as we speak.</p>
+
+<p>&nbsp;</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">31 Oct 2013, 21:31</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/a-tech-halloween-mainly-made-of-fail/a-tech-halloween-mainly-made-of-fail.html" class="post-title">A Tech Halloween mainly made of fail</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;A Tech Halloween mainly made of fail&rdquo;</p>
+
+<p>This year I decided to be completely out of character and start Halloween preparations over a month ahead of time. The plans were ambitious to put it mildly. Vampires flying along guidewires, 10 feet in the air. Screaming skeletons jumping up out of bushes. Creepy crawlies automatically lowering on the heads of trick-or-treaters. You get the idea.</p>
+
+<p>The reality was that almost everything took 4x as long to do as expected and I killed more tech trying to test things than actually survived. If you add in lots of work, travel and relentless human viruses and it was not a great month.</p>
+
+<p>So this evening was a little less extreme than expected but seems to be going well so far.
+<h2>Screaming Skulls</h2>
+These are some dirt cheap flashing LED skulls from Lidl, wired to an Arduino and relay, plus PIR sensor and an audio module connected to portable speakers.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/skulls.jpg"><img class="aligncenter size-full wp-image-1186" alt="skulls" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/skulls.jpg" width="1024" height="576" /></a></p>
+
+<p>Everything works well except for those damned <a href="http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;item=390608079828" target="_blank">WTV020-SD-16P</a>audio modules. They truly are so awful you can&rsquo;t even ignore a $4 price tag. Problems include: the serial interface just doesn&rsquo;t work; it needs 3.7V not 3.3V or 5V; it only plays ad4 files of very low volume; it only works with SD cards 2GB or less; it is totally unreliable. Avoid avoid avoid.</p>
+
+<p>The bit that made it all &ldquo;sing&rdquo; was 8yo Fionn doing an extended scream for me.</p>
+
+<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116102093" height="166" width="100%" frameborder="no" scrolling="no"></iframe>
+The PIR sensor is a little over-sensitive in an outdoor environment so I&rsquo;ll use Ultrasonic sensors from now on.</p>
+
+<p>httpv://youtu.be/b3SJWiBcuxw</p>
+
+<p><h2>Audio Player</h2>
+I used the same bloody audio module on a portable &ldquo;brains, brains, brains&rdquo; sound player for our youngest. She gave up after 20 minutes this evening due to the unreliability.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/brains.jpg"><img class="aligncenter size-full wp-image-1183" alt="brains" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/brains.jpg" width="1024" height="768" /></a></p>
+
+<p>httpv://www.youtube.com/watch?v=mv09-JhG9F4
+<h2>Motors and Relays</h2>
+All of the movement projects relied on motors/servos. I thought I only had ones which I had salvaged from a dead HP inkjet. None were strong enough and could only lift one plastic mouse.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/mouse.jpg"><img class="aligncenter size-full wp-image-1188" alt="mouse" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/mouse.jpg" width="1024" height="768" /></a></p>
+
+<p>Then I thought of my 13 year old Black and Decker drill which I had recently stripped apart and salvaged the gears/motor/switch. I actually go it working with Arduino and some 10A relays last weekend, but when smoke started coming out of the relays, I stopped. It looks like I killed the motor so sadly there are no moving scary things this halloween.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/drill.jpg"><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/drill.jpg" alt="drill" width="1024" height="768" class="aligncenter size-full wp-image-1190" /></a></p>
+
+<p><h2>Minecraft Steve</h2>
+I followed an Instructable. The head ended up 4 times too big. I stopped. The kids liked playing <em>in</em> it tho.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/steve.jpg"><img class="aligncenter size-large wp-image-1184" alt="steve" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/steve-1024x937.jpg" width="584" height="534" /></a>
+<h2>Pumpkin</h2>
+Actually pretty good but then, all I did was to print out a stencil and cut around it. Damn, we&rsquo;re now out of tea-lights so two bright-white LEDs will have to do instead.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/pumpkin.jpg"><img class="aligncenter size-full wp-image-1185" alt="pumpkin" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/pumpkin.jpg" width="1024" height="576" /></a>
+<h2>Rockets</h2>
+Next year will involve rockets, lots of rockets.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">28 Sep 2013, 14:50</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/this-weeks-tech-miscellany-its-a-cracker/this-weeks-tech-miscellany-its-a-cracker.html" class="post-title">This week&#39;s Tech Miscellany. It&#39;s a cracker.</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;This week&rsquo;s Tech Miscellany. It&rsquo;s a cracker.&rdquo;</p>
+
+<ul>
+    <li><a href="http://www.espruino.com/">Espruino</a> got funded and hit all the stretch goals. Hurrah! JavaScript on a microcontroller for a pittance. Going to be fun playing with this stuff. It made me realise that, along with the incredible ecosystem around the Raspberry Pi, how important the UK still is in technology. That Engineering culture hasn't gone away despite the destruction of the manufacturing sector since the 70s. It gave me a really nice feeling to see "Designed and manufactured with care in Sheffield" on the Pibow case. A pity we never managed to create a similar culture here in Ireland.</li>
+    <li>Only 8 days left to back <a href="http://www.indiegogo.com/projects/arduino-basic-connections-the-book">ARDUINO BASIC CONNECTIONS - THE BOOK</a>. I've backed it. A really useful resource.</li>
+    <li>I've been impressed recently by how easy it is to Airplay from a Mac to an Apple TV. Less impressed that it's all proprietary as usual from the borg. So I was very pleased to discover [a] XMBC/Raspbmc can act as an <a href="http://wiki.xbmc.org/index.php?title=AirPlay">Airplay target</a> and [b] someone has a beta of full <a href="http://www.raspberrypi.org/phpBB3/viewtopic.php?f=41&amp;t=49668">Airplay mirroring to the Raspberry Pi</a>.</li>
+    <li>I've had three TP-Link routers die on me in the past few months. A variety of problems - losing settings, disabling security, LAN ports dying or random reboots. Yet my 7+ year-old WRT54GS keeps on trucking. So I'm done with the cheap Chinese crap for the important things. I just got an <a href="http://www.amazon.co.uk/ASUS-RT-N66U-Wireless-streaming-Warranty/dp/B007W16SMO">Asus RT-N66U</a> Dual Band Wireless N Router with Gigabit LAN/WAN, 2x USB, IPv6, 8x SSID etc etc. So it's expensive Chinese stuff from now on :-) A few days in and it has worked perfectly with a strong signal and good throughput. A 3 year warranty gives me confidence too.</li>
+    <li>Our audio setup for the TV facing the treadmill has been an ongoing challenge. Analogue audio from the Raspberry Pi is atrocious. Even using a HDMI-VGA adapter with an analogue audio port had a horrendous pulsating sound. This was all exacerbated by passing that through two amplifiers and then into a Lidl 2.1 speaker setup. But all that amplification is needed to hear audio over the sound of the treadmill. Given how much it is used, I finally got around to doing it right. So Raspberry Pi running Raspbmc connected by HDMI to LG full-HD monitor. Then headphone jack from monitor to all-new<a href="http://www.amazon.co.uk/dp/B0040N3BQI/ref=pe_385721_37038051_pe_217191_31005151_M3T1_dp_1">Microlabs FC330 2.1 speakers</a>. These speakers deserve all the good reviews they get on Amazon. Very heavy, great value and massive sound with 56W output. Highly recommended. No more pulsating noise, yay.</li>
+    <li>I tried out <a href="http://googlecreativelab.github.io/coder/">Google Coder</a> on the Raspberry Pi last week. My initial excitement faded quickly when I realised you need a PC as well as an RPi to use it. So it completely misses the point of the Pi. Add to that the fact that the examples you are supposed to learn from are things like Asteroids in HTML5 and the whole thing seems wrong-headed. Re-done as a pure RPi project with examples that normal people can learn from and it could be an amazing educational tool. Extra snark: Impossible to find the site directly via Google search due to its generic name.</li>
+    <li>My latest DX.com impulse purchases. <a href="http://dx.com/p/diy-3v-to-5v-1a-boost-pcb-module-for-mobile-charger-power-supply-red-229432?Utm_rid=73941134&Utm_source=affiliate">3V to 5V booster</a>. <a href="http://dx.com/p/mini-usb-1a-lithium-battery-charging-board-charger-144856?Utm_rid=73941134&Utm_source=affiliate">USB LiPo charger</a>. <a href="http://dx.com/p/pro-mini-atmega328-3-3v-8m-microcontroller-board-for-arduino-blue-156957?Utm_rid=73941134&Utm_source=affiliate">3.3V Arduino Pro Mini</a>. <a href="http://dx.com/p/arduino-tilt-switch-sensor-module-black-135528?Utm_rid=73941134&Utm_source=affiliate">Tilt switches</a>. <a href="http://dx.com/p/mma7660fc-3-axial-triaxial-digital-accelerometer-module-blue-179445?Utm_rid=73941134&Utm_source=affiliate">Accelerometer</a>. Another <a href="http://dx.com/p/hc-sr04-ultrasonic-sensor-distance-measuring-module-133696?Utm_rid=73941134&Utm_source=affiliate">ultrasonic sensor</a>. <a href="http://dx.com/p/3570100-3-7v-3000mah-lithium-polymer-battery-for-tablets-mp3-mp4-more-silver-214237?Utm_rid=73941134&Utm_source=affiliate">3000mAh Lipo battery</a>. I have a nice setup between the Lipos, charger, booster etc and various Arduinos/RaspberryPis using <a href="http://dx.com/p/jst-cables-10-pair-15234?Utm_rid=73941134&Utm_source=affiliate">these JST cables</a> for common interconnect.</li>
+    <li>Looks like it's going to be a 3 Arduino + 2 Raspberry Pi Halloween. Starting the work this weekend. <a href="http://www.ebay.co.uk/itm/U-disk-audio-player-SD-card-voice-module-MP3-Sound-module-WTV020-SD-16P-Arduino/190914132983?_trksid=p2047675.m1850&amp;_trkparms=aid%3D222002%26algo%3DSIC.FIT%26ao%3D1%26asc%3D17233%26meid%3D1606317414313265624%26pid%3D100011%26prg%3D8045%26rk%3D1%26rkt%3D5%26sd%3D190894158355%26">These things</a> will be central to it.</li>
+    <li><a href="http://campcoderdojo.com/">Camp Coder Dojo</a> in Clonakilty on 16/17 November. Should be a blast.</li>
+    <li>Tried to use <a href="http://developer.opensignal.com/">OpenSignal API</a> yesterday but the data returned isn't that useful. Lat/Lon of nearby masts would be awesome info.</li>
+    <li>Loved the idea of <a href="http://www.modk.it/">Modkit</a> when it came out. Scratch-like approach to programming an Arduino. But not obvious what is going on with project. I tweeted them last week but no response. Not clear what the $50 gets you. Seems too high to me.</li>
+    <li><a href="http://s4a.cat/">Scratch for Arduino (S4A)</a> has a new web-site. I enjoyed this a few months back but they never replied to my enquiry about getting it running on the Raspberry Pi. That would be a killer combo.</li>
+    <li>Roku 1, 2 and 3 <a href="http://www.mediastreamingmarket.com/">now available to Irish and UK punters</a>. I think I'll finally bite the bullet this weekend.</li>
+    <li><a href="http://www.youtube.com/watch?v=CQBigIRlbk8">9 hrs of Pink Noise on YouTube</a>. Incredibly effective at drowning out conversations. Non-distracting. Try it on a train etc. Failed to download using my usual tools to use offline.</li>
+    <li><a href="http://androidcommunity.com/t-mobile-g1-and-android-celebrate-5th-birthday-heres-to-5-more-years-20130923/">T-Mobile G1 announced 5 years ago today</a>. Mine still chugging away (4 years, 9 months later), waking me up every day. Amazingly, the App we got built way back in 2007 (the very first Irish Android App and one of the first reviewing Apps globally) still mostly works on my SGS4.</li>
+    <li><a href="http://int3.cc/collections/frontpage/products/usbcondoms">USB Condoms</a> are a great idea. Connecting your phone to an unknown USB source is the tech equivalent of using a glory hole.</li>
+    <li><a href="http://nodeschool.io">Nodeschool.io</a> looks like a good way of learning Node. Going to try out over the weekend.</li>
+    <li>If you are using those <a href="http://dx.com/p/zl-4-smart-car-chassis-kit-for-arduino-black-yellow-152992?Utm_rid=73941134&Utm_source=affiliate">cheap 4WD RC car kits</a> from many electronics sites (I got ours on DX.com) and you want to control them with an Arduino and an <a href="http://www.adafruit.com/products/81">Adafruit Motor Shield</a>, then you have to do <a href="http://learn.adafruit.com/adafruit-motor-shield/faq#faq-20">the trick of adding 3 capacitors</a> to each of the cheap motors. This solved a huge number of the problems I was having with my daughter's RC car.</li>
+    <li style="text-align: left;"><a href="http://ni-c.github.io/heimcontrol.js/get-started.html">Heimcontrol.js</a> is a home automation system using Node.js and Raspberry Pi. It does a lot of stuff I was hoping to play with so it may be a shortcut for me. Project seemed dead but got a ton of online attention recently and I see the Git commits have started again. Excellent stuff.</li>
+    <li style="text-align: left;">One big downside of using cheap Chinese knock-offs of Arduino is the provenance of some of the components. <a href="http://dx.com/p/meeeno-mn-mb-unomn-development-board-w-pl2303-serial-orange-black-202588?Utm_rid=73941134&Utm_source=affiliate">One device I got</a> gave an error in the Device Manager in Windows no matter what I did. Eventually I discovered that it uses a dodgy clone of a Prolific USB-Serial chip and the original chip manufacturer has modified their drivers to detect the clones and refuse to work with them. Perfectly reasonable behaviour by them and serves me right for trying to go ultra-cheap. The workaround was of course to use older drivers but long-term I'll just avoid some of nastier end of the market.</li>
+    <li style="text-align: left;">One of my funnier Twitter account registrations in the 2007 landgrab was <a href="https://twitter.com/search?q=%40rse&amp;src=typd&amp;f=realtime">@rse</a>. Still makes me snigger. I've suddenly started getting notifications for people using that in tweets. Love the fact that they are. Sadly I lost the account in late 2007 when I set up a script to auto-tweet once a week to "keep the account alive" because I believed some fool who told me you could lose accounts if you didn't update them. Of course it was detected as a bot and I had a ton of accounts suspended. I'm an idiot.</li>
+    <li style="text-align: left;">Still loving <a href="http://parcelmotel.com/">Parcel Motel</a>. Saving me a fortune in shipping from all those Amazon sellers who won't do Free Supersaver shipping to Ireland.</li>
+</ul>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">28 Sep 2013, 12:52</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/ah-cmon-is-this-not-the-cutest-raspberry_pi-setup-of-all-time/ah-cmon-is-this-not-the-cutest-raspberry_pi-setup-of-all-time.html" class="post-title">Ah c&#39;mon, is this not the cutest @raspberry_pi setup of all time?</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Ah c&rsquo;mon, is this not the cutest @raspberry_pi setup of all time?&rdquo;</p>
+
+<p>I splashed out a little on my main dev Raspberry Pi and finally got it a <a href="http://shop.pimoroni.com/collections/pibow/products/pibow">PiBow case</a>. I&rsquo;ve loved that design for so long, I had to succumb.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/pibow2.jpg"><img class="aligncenter size-large wp-image-1165" alt="pibow2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/pibow2-991x1024.jpg" width="584" height="603" /></a></p>
+
+<p>Coincidentally the same company now has a brilliant new USB hub specifically for the RPi called <a href="http://shop.pimoroni.com/products/pihub">the PiHUB</a>. Not only is it in that hilarious shape, but it also comes with a 3A PSU. This means you can add extra devices and power the Raspberry Pi off it. So far it&rsquo;s been the most compatible hub I&rsquo;ve tried with the RPi and we all know how dodgy it can be with hubs. It also solves the USB-splitter-cable mess I had devised to connect a portable harddrive to the RPi.</p>
+
+<p>Another thing I got from Pimoroni was an <a href="http://shop.pimoroni.com/collections/kits/products/adafruit-pi-t-cobbler-breakout-kit-for-raspberry-pi">Adafruit Pi T-Cobbler</a>. It&rsquo;s a simple breakout board for the Pi with no actual electronics. I&rsquo;ve been doing so much connect/disconnect stuff on the RPi pins recently I was sure I&rsquo;d short something out eventually. This just makes things a little easier and has all the pins labelled. Took about 5 minutes to solder it together.</p>
+
+<p>The other thing I got recently was <a href="http://www.7dayshop.com/7dayshop-wireless-air-mouse-keyboard-with-gyroscope-2-4ghz-1">a cheapish air mouse</a> from 7DayShop. This was actually more intended for XBMC/Raspbmc usage but I&rsquo;ve realised it&rsquo;s perfect for travel. I was happily able to use it as a mouse and keyboard for X-Windows when checking out Google Coder recently. The particular one I got has overly-small arrow keys but that&rsquo;s really the only criticism I can make.</p>
+
+<p>The only things I&rsquo;m missing now are some raspberry coloured cables.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">07 Sep 2013, 15:51</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules/arduino-and-raspberry-pi-communicating-over-2-4ghz-with-cheap-nrf24l01-modules.html" class="post-title">Arduino and Raspberry Pi communicating over 2.4GHz with cheap nRF24L01&#43; modules</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Arduino and Raspberry Pi communicating over 2.4GHz with cheap nRF24L01+ modules&rdquo;</p>
+
+<p>I&rsquo;ve had a lot of fun over the past year messing with wireless comms. The 433Mhz/434MHz dirt-cheap modules are fantastic for Arduino, particularly when used with the <a href="http://www.airspayce.com/mikem/arduino/">VirtualWire library</a> which makes them trivial to setup. I&rsquo;ve been able to send sensor data and RC car commands using them with just a few lines of code. However, there isn&rsquo;t a version of VirtualWire for RaspberryPi and I don&rsquo;t have the time/skills to port the Arduino one.</p>
+
+<p>I&rsquo;ve also mentioned multiple projects using those HC05/HC06 serial Bluetooth modules. Again, dead easy to use and they connect Arduinos to PCs, Raspberry Pis and mobile phones. They are a bit pricey tho.</p>
+
+<p>My latest experiments involve the Nordic Semiconductor nRF24L01+ modules. These cost <a href="http://www.ebay.ie/itm/1X-NRF24L01-2-4GHz-Antenna-Wireless-Transceiver-Module-For-Microcontroller-WST-/271265848197?pt=UK_BOI_Electrical_Test_Measurement_Equipment_ET&amp;hash=item3f28b45b85">approx 1.26 each on eBay</a> and strike me as the perfect middle ground between the two approaches above. They are cheap, work over a decent distance and have libraries available for both Arduino and Raspberry Pi.</p>
+
+<p>However I spent nearly all of last weekend trying to get a Raspberry Pi talking to an Arduino using instructions in some <a href="http://arduino-for-beginners.blogspot.ie/2013/02/setup-nordic-nrf24l01-rf-modules-to.html">blogposts</a>. It turns out his instructions were a mix of incorrect text, links to wrong repos, self-contradictory blogposts and code/comments which also contradicted each other. Eventually by ignoring text/comments and just reading the code, I got the wiring right and the sample code working. Whilst I hugely appreciate someone putting time and effort into writing/improving Open Source code like this, it really is a bad idea to then wrap it in such error-riddled explanations.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49.jpg"><img class="aligncenter size-large wp-image-1157" alt="2013-09-07 15.34.49" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-07-15.34.49-1024x556.jpg" width="584" height="317" /></a></p>
+
+<p>To avoid you going down the same rabbit hole, this is what you need to do to get Arduino talking to RPi over nRF24L01+.
+<h2>Arduino Connections</h2>
+Note that the module is 5V tolerant (apart from VCC) but just to be sure I used it with an <a href="http://www.elecfreaks.com/store/freaduino-leonardo-p-442.html">Elecfreaks Freaduino Leonardo</a> which has a physical switch to toggle between 3.3V and 5V. You could also use a <a href="https://www.sparkfun.com/products/11114">3.3V Pro Mini from Sparkfun like this</a>. It has worked fine on my 5V Uno too.
+<ul>
+    <li>Arduino GND - Module Pin 1</li>
+    <li>Arduino 3.3V - Module Pin 2</li>
+    <li>Arduino Pin 8 - Module Pin 3</li>
+    <li>Arduino Pin 9 - Module Pin 4</li>
+    <li>Arduino Pin 13 - Module Pin 5</li>
+    <li>Arduino Pin 11 - Module Pin 6</li>
+    <li>Arduino Pin 12 - Module Pin 7</li>
+    <li>Module Pin 8 Not Connected</li>
+</ul>
+<h2>Raspberry Pi Connections</h2>
+The Raspberry Pi is 3.3V itself so can connect directly to the module. Here is the pin-out. Only pay attention to the pin numbers in the circles, not the names.
+<h2><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png"><img class="aligncenter size-large wp-image-1149" alt="RPi pinout GPIO" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/RPi-pinout-GPIO.png" width="584" height="275" /></a></h2>
+<ul>
+    <li>RPi Pin 6 - Module Pin 1</li>
+    <li>RPi Pin 1 - Module Pin 2</li>
+    <li>RPi Pin 22 - Module Pin 3</li>
+    <li>RPi Pin 24 - Module Pin 4</li>
+    <li>RPi Pin 23 - Module Pin 5</li>
+    <li>RPi Pin 19 - Module Pin 6</li>
+    <li>RPi Pin 21 - Module Pin 7</li>
+    <li>Module Pin 8 Not Connected</li>
+</ul>
+<h2>Building The Library on RPi</h2></p>
+
+<pre><code class="language-bash">
+    javascript
+    mkdir ~/gitwork
+    cd gitwork
+    git clone https://github.com/stanleyseow/RF24.git
+    cd RF24
+    cd librf24-rpi/librf24
+    make
+    sudo make install
+    sudo ldconfig -v | grep librf
+    cd examples/
+    make
+</code>
+</pre>
+
+<p><h2>Arduino Libraries</h2>
+You need to install the Arduino libraries:
+<ul>
+    <li>Grab a <a href="https://github.com/stanleyseow/RF24/archive/master.zip">zip file of all of the latest code from Github</a>.</li>
+    <li>Unzip that file</li>
+    <li>Rename the directory from RF24-master to RF24</li>
+    <li>Delete all of its sub-directories</li>
+    <li>Copy the overall RF24 directory to the libraries directory of your Arduino IDE install. In my case that becomes: C:\Program Files (x86)\Arduino\libraries\RF24</li>
+    <li>The nRF24L01.h and RF24.h includes should now work in your code when you run the IDE</li>
+</ul>
+<h2>Arduino Sketch</h2>
+This is my quick and dirty hack of the author&rsquo;s Arduino sending sketch. It removes all of the LCD display stuff and only returns one sensor value. In my case that&rsquo;s a single switch on Digital Pin 6 which is either open or closed. I&rsquo;ll post a tidier one with updated comments when I have it completed.</p>
+
+<pre><code class="language-c">
+    /*
+    Written by Stanley Seow
+    stanleyseow@gmail.com
+    */
+
+    #include <SPI.h>
+    #include "nRF24L01.h"
+    #include "RF24.h"
+    #include "printf.h"
+
+    #define RF_SETUP 0x17
+
+    // Set up nRF24L01 radio on SPI pin for CE, CSN
+    RF24 radio(8,9);
+
+    // Example below using pipe5 for writing
+    const uint64_t pipes[2] = { 0xF0F0F0F0E1LL, 0x7365727631LL };
+
+    char receivePayload[32];
+    uint8_t counter=0;
+    int inPin = 6; // button connected to digital pin 6
+
+    void setup(void)
+    {
+
+        // Conor Switch
+        pinMode(inPin, INPUT);
+
+        Serial.begin(57600);
+
+        printf_begin();
+        printf("Sending nodeID & 1 sensor data\n\r");
+
+        radio.begin();
+
+        // Enable this seems to work better
+        radio.enableDynamicPayloads();
+
+        radio.setDataRate(RF24_1MBPS);
+        radio.setPALevel(RF24_PA_MAX);
+        radio.setChannel(76);
+        radio.setRetries(15,15);
+
+        radio.openWritingPipe(pipes[0]);
+        radio.openReadingPipe(1,pipes[1]);
+
+        // Dump the configuration of the rf unit for debugging
+        radio.printDetails();
+        delay(1000);
+    }
+
+    void loop(void)
+    {
+        uint8_t Data1,Data2,Data3,Data4 = 0;
+        char temp[5];
+        bool timeout=0;
+
+        // Get the last two Bytes as node-id
+        uint16_t nodeID = pipes[0] & 0xff;
+
+        char outBuffer[32]=""; // Clear the outBuffer before every loop
+        unsigned long send_time, rtt = 0;
+
+        // Get readings from sensors, change codes below to read sensors
+        Data1 = counter++;
+        Data2 = digitalRead(inPin);
+
+        if ( counter > 999 ) counter = 0;
+
+        // Append the hex nodeID to the beginning of the payload
+        sprintf(outBuffer,"%2X",nodeID);
+
+        strcat(outBuffer,",");
+
+        // Convert int to strings and append with zeros if number smaller than 3 digits
+        // 000 to 999
+
+        sprintf(temp,"%03d",Data1);
+        strcat(outBuffer,temp);
+
+        strcat(outBuffer,",");
+
+        sprintf(temp,"%04d",Data2);
+        strcat(outBuffer,temp);
+
+        printf("outBuffer: %s len: %d\n\r",outBuffer, strlen(outBuffer));
+
+        send_time = millis();
+
+        // Stop listening and write to radio
+        radio.stopListening();
+
+        // Send to hub
+        if ( radio.write( outBuffer, strlen(outBuffer)) ) {
+            printf("Send successful\n\r");
+        }
+        else {
+            printf("Send failed\n\r");
+        }
+
+        radio.startListening();
+        delay(20);
+
+        while ( radio.available() && !timeout ) {
+
+            uint8_t len = radio.getDynamicPayloadSize();
+            radio.read( receivePayload, len);
+
+            receivePayload[len] = 0;
+            printf("inBuffer: %s\n\r",receivePayload);
+
+            // Compare receive payload with outBuffer
+            if ( ! strcmp(outBuffer, receivePayload) ) {
+                rtt = millis() - send_time;
+
+                printf("inBuffer --> rtt: %i \n\r",rtt);
+
+            }
+
+            // Check for timeout and exit the while loop
+            if ( millis() - send_time > radio.getMaxTimeout() ) {
+                Serial.println("Timeout!!!");
+                timeout = 1;
+            }
+
+            delay(10);
+        } // End while
+
+        delay(250);
+    }
+</code>
+</pre>
+
+<p>This sketch makes use of printf so you need a file in the same directory called printf.h which consists of:</p>
+
+<pre><code class="language-c">
+    /*
+    Copyright (C) 2011 J. Coliz maniacbug@ymail.com
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    version 2 as published by the Free Software Foundation.
+    */
+
+    /**
+    * @file printf.h
+    *
+    * Setup necessary to direct stdout to the Arduino Serial library, which
+    * enables 'printf'
+    */
+
+    #ifndef __PRINTF_H__
+    #define __PRINTF_H__
+
+    #ifdef ARDUINO
+
+    int serial_putc( char c, FILE * )
+    {
+        Serial.write( c );
+
+        return c;
+    }
+
+    void printf_begin(void)
+    {
+        fdevopen( &serial_putc, 0 );
+    }
+
+    #else
+    #error This example is only for use on Arduino.
+    #endif // ARDUINO
+
+    #endif // __PRINTF_H__
+</code>
+</pre>
+
+<p><h2>Running the code on the RPi and Arduino</h2>
+On the Arduino, just compile and upload the sketch and then open the Serial Monitor window and set the baud rate to 57,600.</p>
+
+<p>On the RPi, run the following. It will show you what it is receiving from the Arduino and echoes it back.</p>
+
+<pre><code class="language-bash">sudo /home/pi/gitwork/RF24/librf24-rpi/librf24/examples/rpi-hub</code></pre>
+
+<p>If everything is working ok, both the RPi and the Arudino should be showing very similar output and reporting success.
+<h2>Next Steps?</h2>
+The Raspberry Pi libraries and sample code are obviously in C which is probably too hardcore for most people. Ideally they&rsquo;d be available to both Python and JavaScript deveopers. I&rsquo;ll do a little poking around to see how you go about that. I wouldn&rsquo;t hold my breath tho.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg"><img class="aligncenter size-full wp-image-1160" alt="2013-09-01 14.44.06" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/09/2013-09-01-14.44.06.jpg" width="1024" height="768" /></a></p>
+
+<p>I haven&rsquo;t done any major distance testing on the modules. In our house, which has concrete internal walls, two modules could communicate from one room to the next but not from one end of the house to the other. They also worked successfully with one module inside an oil tank in the garden and the other one inside the house &lt;10m away. I&rsquo;ll try some open air testing soon.</p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/page/5.html" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 6 of 73</span>
+    
+      <a href="/page/7.html" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

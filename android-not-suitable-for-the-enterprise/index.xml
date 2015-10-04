@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android-Not-Suitable-For-The-Enterprises on Cross Dominant</title>
-    <link>http://conoroneill.net/android-not-suitable-for-the-enterprise/</link>
+    <link>http://conoroneill.net/android-not-suitable-for-the-enterprise.html</link>
     <description>Recent content in Android-Not-Suitable-For-The-Enterprises on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Aug 2010 15:51:46 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/android-not-suitable-for-the-enterprise/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/android-not-suitable-for-the-enterprise.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Android not suitable for the Enterprise?</title>
-      <link>http://conoroneill.net/android-not-suitable-for-the-enterprise/android-not-suitable-for-the-enterprise/</link>
+      <link>http://conoroneill.net/android-not-suitable-for-the-enterprise/android-not-suitable-for-the-enterprise.html</link>
       <pubDate>Sun, 22 Aug 2010 15:51:46 +0100</pubDate>
       
-      <guid>http://conoroneill.net/android-not-suitable-for-the-enterprise/android-not-suitable-for-the-enterprise/</guid>
+      <guid>http://conoroneill.net/android-not-suitable-for-the-enterprise/android-not-suitable-for-the-enterprise.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Android not suitable for the Enterprise?&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I&amp;#39;m been trying and failing to get two features working on Android over the weekend: VPN and Proxy. A ton of googling revealed that both are utterly broken and have been since V1.0 of Android. Whilst my use-case is trivial (getting Facebook Places working outside of the US), the much bigger use case is a much bigger deal: the Enterprise. &lt;p /&gt;&lt;div&gt;I have read tons of posts with people pulling their hair out as they either cannot get these features working or can&amp;#39;t get them working reliably. Even worse, lots of people have returned their Android phones since they simply don&amp;#39;t work in an Enterprise setting.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;The problems are as follows:&lt;/div&gt;&lt;p /&gt;&lt;div&gt;&lt;ol&gt;&lt;li&gt;PPTP VPN - Works intermittently over WiFi, doesn&amp;#39;t work at all over mobile data.&lt;/li&gt;&lt;li&gt;Android VPN in general not compatible with Cisco VPNs&lt;/li&gt; &lt;li&gt;OpenVPN (community effort) requires PKCS12 files for the security bit. Cannot get this working with a generic VPN provider.&lt;/li&gt;&lt;li&gt;There is NO, you heard me, NO support for web proxies in Android. This is incredible for a modern OS. You can find some hacks for basic HTTP proxies on rooted phones and Cyanogen has built this into his latest ROMs but there is no support anywhere for SOCKS proxies.&lt;/li&gt; &lt;li&gt;You can use Mozilla Fennec as your web-browser if you need SOCKS but only if you want your 1GHz phone to run at the speed of treacle and have the browser hang constantly.&lt;/li&gt;&lt;/ol&gt;&lt;div&gt;It begs the question, how do Google employees access the Google network on their phones?&lt;/div&gt; &lt;/div&gt;&lt;/p&gt;

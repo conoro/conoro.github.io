@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting-Openvpn-Working-On-Androids on Cross Dominant</title>
-    <link>http://conoroneill.net/getting-openvpn-working-on-android/</link>
+    <link>http://conoroneill.net/getting-openvpn-working-on-android.html</link>
     <description>Recent content in Getting-Openvpn-Working-On-Androids on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Aug 2010 07:52:08 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/getting-openvpn-working-on-android/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/getting-openvpn-working-on-android.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getting OpenVPN working on Android</title>
-      <link>http://conoroneill.net/getting-openvpn-working-on-android/getting-openvpn-working-on-android/</link>
+      <link>http://conoroneill.net/getting-openvpn-working-on-android/getting-openvpn-working-on-android.html</link>
       <pubDate>Mon, 23 Aug 2010 07:52:08 +0100</pubDate>
       
-      <guid>http://conoroneill.net/getting-openvpn-working-on-android/getting-openvpn-working-on-android/</guid>
+      <guid>http://conoroneill.net/getting-openvpn-working-on-android/getting-openvpn-working-on-android.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Getting OpenVPN working on Android&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;There are many uses for a VPN and they are generally very easy to setup on desktop computers. The experience with phones can be variable. iPhone is a doddle but Android is a horror (see my last post). The built-in PPTN VPN is utterly broken and does not work over 3G at all or for more than a few minutes on Wifi. The steps to get an alternative working on a HTC Desire are as follows:&lt;br /&gt; &lt;ol&gt;&lt;li&gt;Brace yourself&lt;/li&gt;&lt;li&gt;Install Windows OpenVPN and get it working on your PC with your VPN provider&lt;/li&gt;&lt;li&gt;Root your Android phone. If you don&amp;#39;t know how to do this, stop reading now.&lt;/li&gt;&lt;li&gt;Replace the standard ROM with the latest community Froyo. Either &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=719544&#34;&gt;Cyanogen 6.0 Nightly&lt;/a&gt; or &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=690477&#34;&gt;DeFroST &lt;/a&gt;are good(I use DeFroST). OpenDesire does not seem to work in the later steps of this process and I haven&amp;#39;t had a chance to try any of the Modaco ones with Sense still enabled.&lt;/li&gt; &lt;li&gt;Install the Google Apps add-on too if your ROM doesn&amp;#39;t include them.&lt;/li&gt;&lt;li&gt;In Android Market, install the &amp;quot;OpenVPN Settings App&amp;quot;&lt;/li&gt;&lt;li&gt;Note this is not the same as the OpenVPN Settings Page in Network-&amp;gt;Settings. I wasted a ridiculous amount of time trying to get Cert files etc working there. Avoid it. That settings page is the source of most of the confusion around OpenVPN on all the forums. I&amp;#39;m sure there is a use for it if you have your own keys/certs etc but not for generic VPN users.&lt;/li&gt; &lt;li&gt;Copy the config directory from C:Program FilesOpenVPN (including the sub-dir) on your PC to a directory like openvpn on the SD Card on your phone&lt;/li&gt;&lt;li&gt;Go to that OpenVPN Settings App you installed&lt;/li&gt;&lt;li&gt;Tell it where you have stored the config files and it should show you the configurations you copied from the PC&lt;/li&gt; &lt;li&gt;Tap on the config you want and all going well, it will connect for you&lt;/li&gt;&lt;li&gt;You are in business!&lt;/li&gt;&lt;li&gt;I&amp;#39;ve noticed that it sometimes disconnects after a minute or so and then reconnects and stays solid after that.&lt;/li&gt; &lt;li&gt;All of the above works on both WiFi and 3G&lt;/li&gt;&lt;/ol&gt;&lt;br /&gt;So Google, any ETA on fixing all those built-in VPN bugs?&lt;/p&gt;

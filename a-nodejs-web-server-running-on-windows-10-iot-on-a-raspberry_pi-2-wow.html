@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow! &middot; Cross Dominant</title>
+
+    <meta name="description" content="I&#39;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi but for Windows shops looking to get into Embedded (WinCE 1.0 eh?), this is a no-brainer.">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow! &middot; Cross Dominant">
+    <meta name="twitter:description" content="I&#39;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi but for Windows shops looking to get into Embedded (WinCE 1.0 eh?), this is a no-brainer.">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow! &middot; Cross Dominant">
+    <meta property="og:description" content="I&#39;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi but for Windows shops looking to get into Embedded (WinCE 1.0 eh?), this is a no-brainer.">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">01 May 2015, 17:49</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html" class="post-title">A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html" data-title="A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!" data-description="I&#39;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi but for Windows shops looking to get into Embedded (WinCE 1.0 eh?), this is a no-brainer." data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html" data-description="I&#39;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi but for Windows shops looking to get into Embedded (WinCE 1.0 eh?), this is a no-brainer." class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>I&rsquo;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi for quite a while. When it was originally announced, everyone seemed to think they were getting full-blown Windows for free on Pi. Many still think this. What you actually get is a GUI-less version of Windows on to which you can deploy Universal Apps (and others). So unlike Raspbian on Pi, you can&rsquo;t actually develop on it, you have to have full Windows 10 running somewhere else to develop, compile, deploy and debug. Or as I said on Twitter:</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;Install Visual Studio 2015 on your PC to develop Win10 IoT Apps for <a href="https://twitter.com/Raspberry_Pi">@Raspberry_Pi</a>&quot;. Install Fortran on your PDP-11 to use your ZX Spectrum?</p>&mdash; Conor O&#39;Neill (@conoro) <a href="https://twitter.com/conoro/status/593662573347794944">April 30, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>OK, snark over. Let&rsquo;s give this thing a go.</p>
+
+<p>Several hours later&hellip;&hellip;</p>
+
+<p>Installation is still a nightmare in this Preview version. Between clicking on hidden EULAs and installers failing with nonsense errors, not to mention having to install Windows 10 Preview in VirtualBox, this is not for the faint of heart.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi.jpg" alt="Win 10 VBox" />
+</p>
+
+<p>The RaspberryPi bit was ok and creating the image on an SD Card worked fine. Win 10 IoT booted first time with no issues.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot_rpi_05.jpg" alt="Win 10 IoT on Pi" />
+</p>
+
+<p>After several more rounds of messing with Visual Studio, I followed the Hello World Tutorial and pointed it at my Pi. I was rather shocked to see it worked!</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_02.jpg" alt="Screen" />
+</p>
+
+<p>That was the point the scales fell from my eyes. This is actually a very powerful offering to anyone who uses Microsoft tools already. You can build Drag n Drop Universal Apps which deploy just as easily to the Pi as they do to Windows Desktop/Tablets/Phones. I think Kiosks and Control Dashboards could be a big seller here, particularly for the Pi Compute Module. Obviously Visual Studio itself is damned powerful and is considered by most people, even MSFT haters, to be the most powerful IDE available today.</p>
+
+<p>Then I decided to go a step further. Could I get a Node.js program to deploy?</p>
+
+<p>A bunch more stupid installers later&hellip;&hellip;..</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_04.jpg" alt="Node.js on Vis Studio" />
+</p>
+
+<p>Deploy the code, annnnnnd</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot.jpg" alt="Node.js on Pi" />
+</p>
+
+<p>Oh wow, that is a bit brain melting. So now I have a web-server on Node.js on Windows on Pi on ARM, all debuggable with some kick-ass tools on my PC.</p>
+
+<p>The only major criticism I can make is that I&rsquo;d like every single piece including VisStudio and all the add-ons to be installable with a command-line package manager. Much easier for everyone.</p>
+
+<p>I doff my cap to you Mr Nadella, this really is the new Microsoft.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/doff_cap.gif" alt="Cap" />
+</p>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html';
+    var disqus_title = 'A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!';
+    var disqus_url = 'http:\/\/conoroneill.net\/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

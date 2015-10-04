@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting-Openvpn-Working-On-Androids &middot; Cross Dominant</title>
+
+    <meta name="description" content="Mixed laterality since 1968">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Getting-Openvpn-Working-On-Androids &middot; Cross Dominant">
+    <meta name="twitter:description" content="Mixed laterality since 1968">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Getting-Openvpn-Working-On-Androids &middot; Cross Dominant">
+    <meta property="og:description" content="Mixed laterality since 1968">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">23 Aug 2010, 07:52</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/getting-openvpn-working-on-android/getting-openvpn-working-on-android.html" class="post-title">Getting OpenVPN working on Android</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Getting OpenVPN working on Android&rdquo;</p>
+
+<p>There are many uses for a VPN and they are generally very easy to setup on desktop computers. The experience with phones can be variable. iPhone is a doddle but Android is a horror (see my last post). The built-in PPTN VPN is utterly broken and does not work over 3G at all or for more than a few minutes on Wifi. The steps to get an alternative working on a HTC Desire are as follows:<br /> <ol><li>Brace yourself</li><li>Install Windows OpenVPN and get it working on your PC with your VPN provider</li><li>Root your Android phone. If you don&#39;t know how to do this, stop reading now.</li><li>Replace the standard ROM with the latest community Froyo. Either <a href="http://forum.xda-developers.com/showthread.php?t=719544">Cyanogen 6.0 Nightly</a> or <a href="http://forum.xda-developers.com/showthread.php?t=690477">DeFroST </a>are good(I use DeFroST). OpenDesire does not seem to work in the later steps of this process and I haven&#39;t had a chance to try any of the Modaco ones with Sense still enabled.</li> <li>Install the Google Apps add-on too if your ROM doesn&#39;t include them.</li><li>In Android Market, install the &quot;OpenVPN Settings App&quot;</li><li>Note this is not the same as the OpenVPN Settings Page in Network-&gt;Settings. I wasted a ridiculous amount of time trying to get Cert files etc working there. Avoid it. That settings page is the source of most of the confusion around OpenVPN on all the forums. I&#39;m sure there is a use for it if you have your own keys/certs etc but not for generic VPN users.</li> <li>Copy the config directory from C:Program FilesOpenVPN (including the sub-dir) on your PC to a directory like openvpn on the SD Card on your phone</li><li>Go to that OpenVPN Settings App you installed</li><li>Tell it where you have stored the config files and it should show you the configurations you copied from the PC</li> <li>Tap on the config you want and all going well, it will connect for you</li><li>You are in business!</li><li>I&#39;ve noticed that it sometimes disconnects after a minute or so and then reconnects and stays solid after that.</li> <li>All of the above works on both WiFi and 3G</li></ol><br />So Google, any ETA on fixing all those built-in VPN bugs?</p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

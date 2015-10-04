@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>How-To-Browse-Windows-7-Shares-From-Ubuntu-When-It-Suddenly-Stops-Workings on Cross Dominant</title>
-    <link>http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/</link>
+    <link>http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working.html</link>
     <description>Recent content in How-To-Browse-Windows-7-Shares-From-Ubuntu-When-It-Suddenly-Stops-Workings on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Sep 2010 20:04:11 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How to browse Windows 7 shares from Ubuntu when it suddenly stops working</title>
-      <link>http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/</link>
+      <link>http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working.html</link>
       <pubDate>Wed, 08 Sep 2010 20:04:11 +0100</pubDate>
       
-      <guid>http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/</guid>
+      <guid>http://conoroneill.net/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working/how-to-browse-windows-7-shares-from-ubuntu-when-it-suddenly-stops-working.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;How to browse Windows 7 shares from Ubuntu when it suddenly stops working&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;div style=&#34;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 13px; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; background-color: rgb(255, 255, 255);&#34;&gt; &lt;p&gt;We share out a lot of our home media from a Windows 7 desktop. That media is streamed to a variety Windows PCs, Kid&amp;#39;s Ubuntu PCs/Laptops and XBMC-based XBoxes. Recently we were suddenly unable to access the shares from Ubuntu or XBMC but all was still fine from the Windows PCs. And those PCs had no problem sharing to Ubuntu/XMBC.&lt;/p&gt; &lt;p&gt;Multiple attempts at fiddling with Windows sharing settings and umpteen Googles revealed nothing. Until last night.&lt;/p&gt;&lt;p&gt;I saw&lt;a href=&#34;http://social.technet.microsoft.com/Forums/en/w7itpronetworking/thread/9c6f1d74-f7f0-4503-94fa-0d79a5597527&#34;&gt;some mention online&lt;/a&gt;of issues with Microsoft Live Sign-In Assistant. I have a bunch of Live stuff installed on the problematic machine and even tho it looked like a long shot, I uninstalled all of it.&lt;/p&gt; &lt;p&gt;Result!&lt;/p&gt;&lt;p&gt;It turns out that they have added some overlays to the standard Windows Login when you install Live and that breaks Samba.&lt;/p&gt;&lt;p&gt;Looks like I&amp;#39;m back using Picasa for photos. I really liked the Live Movie Editor tho so I&amp;#39;m not sure what to do there.&lt;/p&gt; &lt;p /&gt;&lt;/div&gt;&lt;/p&gt;

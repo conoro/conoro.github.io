@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>From-Zero-To-Web2ireland-Using-Wordpress-On-Digital-Mines-In-15-Mins on Cross Dominant</title>
-    <link>http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/</link>
+    <link>http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins.html</link>
     <description>Recent content in From-Zero-To-Web2ireland-Using-Wordpress-On-Digital-Mines-In-15-Mins on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Jan 2011 17:20:00 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>From Zero to Web2Ireland using Wordpress on Digital Mines in 15 mins</title>
-      <link>http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/</link>
+      <link>http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins.html</link>
       <pubDate>Thu, 20 Jan 2011 17:20:00 +0000</pubDate>
       
-      <guid>http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/</guid>
+      <guid>http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;From Zero to Web2Ireland using Wordpress on Digital Mines in 15 mins&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;div style=&#34;background-color: transparent; margin: 0px;&#34;&gt;&lt;span style=&#34;font-family: Arial;&#34;&gt;&lt;span style=&#34;font-size: 15px;&#34;&gt;We decided to move &lt;a href=&#34;http://Web2Ireland.org&#34;&gt;Web2Ireland.org&lt;/a&gt; over to &lt;a href=&#34;http://www.digitalmines.com/&#34;&gt;Digital Mines&lt;/a&gt; for AWS hosting. I&amp;rsquo;m a big fan of how easy Digital Mines has made the deployment of Amazon servers. I thought it might be useful to show the steps to get a Wordpress blog up and running with such a setup.&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;

@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Dominant &middot; Cross Dominant</title>
+
+    <meta name="description" content="Mixed laterality since 1968">
+
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Cross Dominant &middot; Cross Dominant">
+    <meta name="twitter:description" content="Mixed laterality since 1968">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cross Dominant &middot; Cross Dominant">
+    <meta property="og:description" content="Mixed laterality since 1968">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/feed/" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net//index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                
+                <h1 class="content-subhead">01 Jun 2014, 15:48</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/creating-a-valid-ops-file-in-json-format-for-minecraft-179.html" class="post-title">Creating a valid ops file in JSON format for Minecraft 1.7.9</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Our 8yo wanted a local server on his laptop today so I grabbed the latest 1.7.9 server exe from the Minecraft site and ran it in its own directory. It created the usual files and gave a GUI-style interface with no obvious console like the raw Java version. Fionn then asked me to make him an Op so he could change things. And it was all downhill from there.</p>
+
+<p>The standard ops.txt was missing but there was an ops.json containing just two square brackets. No amount of messing with creating an ops.txt or putting his username inside the brackets of the json file worked. Over an hour of googling finally got me close. In the recent versions of Minecraft, they have moved to using JSON instead of .txt for config files and they are rolling out the idea of UUIDs so that you can easily change your username. Both are reasonable changes but implemented terribly in this case. Unless the format of your json file in 100% correct, it doesn&rsquo;t throw an error, it just deletes it!</p>
+
+<p>So after more than 10 attempts, this is what you need:</p>
+
+<ul>
+<li><p>Find your UUID. Note that several sites claim to generate this for you but they are missing the dashes in the UUID. The one that worked for me was <a href="http://minecraft-techworld.com/uuid-lookup-tool">this one</a>. Enter your username and get something like 54d61e19-71cc-477d-8215-8a11c41f5211 back.</p></li>
+
+<li><p>Edit ops.json in a text editor and replace the contents as follows:</p></li>
+</ul>
+
+<pre><code class="language-javascript">[
+  {
+    &quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
+    &quot;name&quot;: &quot;bobloblaw&quot;,
+    &quot;level&quot;: 4
+  }
+] 
+</code></pre>
+
+<ul>
+<li>If you need more than one Op, do it like so.
+<code>javascript
+[
+{
+&quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
+&quot;name&quot;: &quot;bobloblaw&quot;,
+&quot;level&quot;: 4
+},
+{
+&quot;uuid&quot;: &quot;44d61e69-6166-444d-8665-6a11567f5211&quot;,
+&quot;name&quot;: &quot;mrsmines&quot;,
+&quot;level&quot;: 4
+}
+] 
+</code></li>
+</ul>
+
+<p>That should be all you need. Leave a comment if any problems with it.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">21 May 2014, 07:08</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/my-presentation-from-3dcamp-limerick-2014.html" class="post-title">My presentation from 3D Camp Limerick. Hacking by Google Search - Building hardware with no electronics knowledge</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>I&rsquo;ve been meaning to go to 3D Camp since it first started. It has been about a lot more than 3D for many years. I finally did it on Saturday and had an absolute blast. I met people I&rsquo;ve been tweeting at since 2007 and really got the full BarCamp mojo whilst I was there. James Corbett, the organiser, was kind enough to mention that I helped to organise the first <a href="http://en.wikipedia.org/wiki/BarCamp">BarCamp</a> in Ireland with <a href="http://walterhiggins.net/blog/">Walter</a> and <a href="http://www.mulley.net/">Damien</a> way back in 2006. My only regret is that instead of a BarCamp in every town and village of Ireland every weekend, we now only have 3D Camp. I hope people will realise again soon how important it is to have regular free unconferences with no one hawking their wares, just sharing knowledge, the love of technology and what it can do for people.</p>
+
+<p>OK, rant over, here&rsquo;s my deck. It&rsquo;s called <a href="http://conoroneill.net/3dcamp2014/">Hacking by Google Search - Building hardware with no electronics knowledge</a>. It&rsquo;s basically a summary of all the messing I&rsquo;ve been doing since mid-2012 when I got the electronics bug again. Anyone who follows this blog regularly will know most of it. But this one has animated gifs and some extra thoughts. It&rsquo;s also all HTML, done using a tool called <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>. I really enoyed using this approach and it means it can be hosted on GitHub Pages, just like this blog. Well worth checking out for your own decks. You only need minimal HTML knowledge.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Apr 2014, 10:48</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js.html" class="post-title">My Pebble controlled electric blanket using CloudPebble and Simply.js</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Messing with hardware and software can be both a joy and incredibly infuriating. Yesterday I spent a few intermittent hours trying to get Arduino and Espruino communicating reliably over NRF24L01+ wireless transceivers. I only half succeeded. I followed this with some reading up on both <a href="https://cloudpebble.net">CloudPebble</a> and <a href="http://simplyjs.io/">Simply.js</a>. Literally 5 minutes later I had my first Pebble App installed on my watch and was remotely controlling the <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">electric blanket in our bed</a>.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_blanket.jpg" alt="Bandon Blanket" title="Bandon Bed Button" />
+</p>
+
+<p>CloudPebble is a web-based IDE for building Pebble Apps. I believe it was started independently but is now run by <a href="http://getpebble.com">Pebble</a> themselves. Simply.js is a library/SDK for building Pebble Apps using only JavaScript. Pebble recently announced that CloudPebble now supports Simply.js and boy they weren&rsquo;t kidding. It&rsquo;s now childsplay to build Pebble Apps.</p>
+
+<p>This is how quickly I built the App:</p>
+
+<ul>
+<li>Create a free Pebble <a href="https://developer.getpebble.com/">Developer account</a></li>
+<li>Login to CloudPebble using your Pebble credentials</li>
+<li>Create a project and pick Simply.js as the type</li>
+<li>You automatically get the sample Simply.js App in the IDE</li>
+<li>Compile that and send it to your Watch. You of course need the Pebble App on your phone with developer options enabled. The Pebble App will also tell you your phone&rsquo;s IP address which CloudPebble may ask for.</li>
+<li>I&rsquo;ve found that I can&rsquo;t install from desktop but if I load the IDE URL on my phone I can do it from there. I assume this is because I&rsquo;m on house wifi and behind a firewall with a private IP.</li>
+</ul>
+
+<p>That first App looks like this:</p>
+
+<pre><code class="language-javascript">console.log('Simply.js demo!');
+
+simply.on('singleClick', function(e) {
+  console.log(util2.format('single clicked $button!', e));
+  simply.subtitle('Pressed ' + e.button + '!');
+});
+
+simply.on('longClick', function(e) {
+  console.log(util2.format('long clicked $button!', e));
+  simply.vibe();
+  simply.scrollable(e.button !== 'select');
+});
+
+simply.on('accelTap', function(e) {
+  console.log(util2.format('tapped accel axis $axis $direction!', e));
+  simply.subtitle('Tapped ' + (e.direction &gt; 0 ? '+' : '-') + e.axis + '!');
+});
+
+simply.setText({
+  title: 'Simply Demo!',
+  body: 'This is a demo. Press buttons or tap the watch!',
+}, true);
+</code></pre>
+
+<p>And it you read the Simply.js site, you can access URLs like this:</p>
+
+<pre><code class="language-javascript">ajax({ url: 'http://simplyjs.io' }, function(data){
+  var headline = data.match(/&lt;h1&gt;(.*?)&lt;\/h1&gt;/)[1];
+  simply.title(headline);
+});
+</code></pre>
+
+<p>Merge the two together and ta-daaaaa, the Bandon Bed Button Pebble App.</p>
+
+<pre><code class="language-javascript">console.log('Bandon Bed Button!');
+
+simply.on('singleClick', function(e) {
+  console.log(util2.format('single clicked $button!', e));
+  if (e.button == &quot;up&quot;){
+    ajax({ url: 'http://url-of-conors-thing-to-turn-on' }, function(data){
+      simply.subtitle('Turned on Blanket!');  
+    });    
+  } else if (e.button == &quot;down&quot;){
+    ajax({ url: 'http://url-of-conors-thing-to-turn-off' }, function(data){
+      simply.subtitle('Turned off Blanket!');  
+    });        
+  }
+});
+
+simply.setText({
+  title: 'Bandon Bed Button!',
+  body: 'Press Up to turn on the blanket. Press Down to turn off the blanket.',
+}, true);
+</code></pre>
+
+<p>Just in case the data route for this is not clear, here&rsquo;s what it looks like:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow" />
+</p>
+
+<p>I referred to this on Twitter last night as The Internet of Thangs. I&rsquo;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&rsquo;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&rsquo;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&rsquo;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">30 Mar 2014, 13:36</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/interfacing-nodejs-to-raspberry-pi-hardware-with-node-ffi.html" class="post-title">Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>Now that I can talk to the Efergy remote control switches using Arduino and <a href="http://digistump.com/products/50">DigiX</a>, it&rsquo;s time to do the same thing with Raspberry Pi and Node.js.</p>
+
+<p>But first, check out this gorgeous <a href="http://shop.pimoroni.com/products/pibow-timber">Pimoroni Pibow Timber</a> case that the RPi now lives in. Makes me smile every time I look at it.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/pibow_timber.jpg" alt="Pibow" title="Pibow Timber Raspberry Pi case" />
+</p>
+
+<p>Start by plugging in one of the Efergy switches and using its remote control to set its code. Use the sniffer program from <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">the last post</a> to find out what that code is.</p>
+
+<p>Connecting the 433MHz transmitter to the RPi is dead easy. Connect GND to pin 6, VCC to PIN 1 and DATA to PIN 11. More details on the <a href="https://projects.drogon.net/raspberry-pi/wiringpi/pins/">WiringPi Pinout</a>. For our purposes: BCM GPIO 17 == WiringPi 0 == Pin 11 == GPIO #0</p>
+
+<p>The simplest way of doing this is to create a command-line program in C or C++ and then shell out to it in Node. But where&rsquo;s the fun in that? The core approach I decided to use was via a Node module called <a href="https://github.com/rbranson/node-ffi/wiki/Node-FFI-Tutorial">Node FFI</a> which makes it relatively easy to call out to C libraries from Node. The alternative is to build a Node module in C++. But that wasn&rsquo;t going to work, given that I haven&rsquo;t written a line of C++ in my life, after the trauma of doing a training course in it in the late 90s and seeing the horror inflicted on my beloved C.</p>
+
+<p>Unfortunately I quickly realised that node-ffi only does C whilst the <a href="https://github.com/r10r/rcswitch-pi/">RCSWitch-Pi</a> library is C++ (but the <a href="https://projects.drogon.net/raspberry-pi/wiringpi/functions/">WiringPi library</a> under that is C again!).</p>
+
+<p>An abortive attempt at using <a href="https://github.com/tjfontaine/node-ffi-generate">ffi-generate</a> went nowhere as it wouldn&rsquo;t even run on the RPi due to some libclang problem. Running in an Ubuntu VM worked after a lot of llvm messing but I couldn&rsquo;t make any sense of the output.</p>
+
+<p>Cue a lonnnngggg session Googling how to interface C to C++ and realising that I hate C++ even more now :-) Eventually I found an <a href="http://www.teddy.ch/c++_library_in_c/">idiot&rsquo;s guide to wrapping C++</a> so it can be called by C. Bit by bit I figured it all out but hit a brick wall at one point. This forced me to use the GDB debugger for the first time in 15 years. Luckily I spotted the problem using GDB in about a minute flat and got a test C program working which would call the C++ functions correctly.</p>
+
+<p>Then it was back to Node.js and node-ffi for another round of head scratching and non-stop errors. Finally it all clicked and the Efergy module clicked too!</p>
+
+<p>Now that I have the basics working, I will clean up this code and use it in the Node server that will run on the RPi via the usual exports/require approach. I&rsquo;ll also hopefully be able to apply the same approach to any C++ or C library that accesses any RPi hardware.</p>
+
+<p>The final set of steps are actually quite simple. All the effort was in the learning.</p>
+
+<h3 id="install-wiringpi:72ef235c1c656139694e1398dfdb61c0">Install WiringPi</h3>
+
+<pre><code class="language-bash">mkdir ~/gitwork
+cd gitwork
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
+
+### Install RCSwitch-Pi
+cd ~/gitwork
+git clone https://github.com/r10r/rcswitch-pi.git
+cd rcswitch-pi
+make
+</code></pre>
+
+<h3 id="build-an-rcswitch-pi-library:72ef235c1c656139694e1398dfdb61c0">Build an RCSwitch-Pi library</h3>
+
+<pre><code class="language-bash">gcc -shared -fpic RCSwitch.cpp -o libRCSwitch.so
+</code></pre>
+
+<h3 id="simple-c-test-to-make-sure-you-can-talk-to-efergy:72ef235c1c656139694e1398dfdb61c0">Simple C++ test to make sure you can talk to Efergy</h3>
+
+<pre><code class="language-bash">cd ~/gitwork/rcswitch-pi
+</code></pre>
+
+<p>Create a file called efergy.cpp with the following contents
+```c
+#include &ldquo;RCSwitch.h&rdquo;
+#include <stdlib.h>
+#include <stdio.h></p>
+
+<p>int main(int argc, char *argv[]) {</p>
+
+<pre><code>/*
+ output PIN is hardcoded for testing purposes
+ see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
+ for pin mapping of the raspberry pi GPIO connector
+ */
+int PIN = 0;
+int unitCode = atoi(argv[1]);
+
+if (wiringPiSetup () == -1) return 1;
+    printf(&quot;sending unitCode[%i]\n&quot;, unitCode);
+    RCSwitch mySwitch = RCSwitch();
+    mySwitch.enableTransmit(PIN);
+
+    mySwitch.send(unitCode,24);
+
+    return 0;
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Now compile and run it:</p>
+
+<pre><code class="language-bash">g++ -c -o efergy.o efergy.cpp
+g++ RCSwitch.o efergy.o -o efergy -lwiringPi
+sudo ./efergy 109011
+sudo ./efergy 109019
+</code></pre>
+
+<p>If all is working ok, the switch will turn on and off.</p>
+
+<h3 id="install-node-npm-on-raspberry-pi:72ef235c1c656139694e1398dfdb61c0">Install Node/NPM on Raspberry Pi</h3>
+
+<pre><code class="language-bash">    cd ~
+    sudo mkdir /opt/node
+    wget http://nodejs.org/dist/v0.10.23/node-v0.10.23-linux-arm-pi.tar.gz
+    tar xvzf node-v0.10.23-linux-arm-pi.tar.gz
+    sudo cp -r node-v0.10.2-linux-arm-pi/* /opt/node
+    cd ~
+    nano .bash_profile
+     
+    #Add these lines to the file you opened
+    PATH=$PATH:/opt/node/bin
+    export PATH
+
+    #Save and exit
+     
+    #Test
+    node -v
+    npm -v
+</code></pre>
+
+<h3 id="wrapping-c-so-it-can-be-called-by-c:72ef235c1c656139694e1398dfdb61c0">Wrapping C++ so it can be called by C</h3>
+
+<p>Create wrapper.h and wrapper.c</p>
+
+<p>wrapper.h:
+```c
+#ifndef __MYWRAPPER_H
+#define __MYWRAPPER_H</p>
+
+<p>#ifdef __cplusplus
+extern &ldquo;C&rdquo; {
+#endif</p>
+
+<p>typedef struct RCSwitch RCSwitch;</p>
+
+<p>RCSwitch* newRCSwitch();</p>
+
+<p>void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length);</p>
+
+<p>void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin);</p>
+
+<p>void deleteRCSwitch(RCSwitch* v);</p>
+
+<p>#ifdef __cplusplus
+}
+#endif
+#endif
+```</p>
+
+<p>wrapper.c:
+```c</p>
+
+<pre><code>#include &quot;RCSwitch.h&quot;
+#include &quot;wrapper.h&quot;
+#include &lt;stdio.h&gt;
+
+extern &quot;C&quot; {
+  RCSwitch* newRCSwitch() {
+    //printf(&quot;Inside newRCSwitch&quot;);
+    return new RCSwitch();
+  }
+
+  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
+    //printf(&quot;Inside RCSwitch_send&quot;);
+    v-&gt;send(Code, length);
+  }
+
+  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
+    //printf(&quot;Inside RCSwitch_enableTransmit&quot;);
+    v-&gt;enableTransmit(nTransmitterPin);
+  }
+
+  void deleteRCSwitch(RCSwitch* v) {
+    delete v;
+  }
+}
+</code></pre>
+
+<pre><code>
+### Compile everything
+Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple [GDB Tutorial here](http://web.eecs.umich.edu/~sugih/pointers/summary.html) and some tips on [RPi Forums](http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312).
+
+```bash
+g++ -g -c wrapper.c -o wrapper.o
+gcc -g -c efergy.c -o efergy.o
+g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
+g++ -g efergy.o wrapper.o ./libRCSwitch.so -o efergy2
+</code></pre>
+
+<h3 id="run-the-c-program:72ef235c1c656139694e1398dfdb61c0">Run the C program</h3>
+
+<pre><code class="language-bash">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
+sudo ./efergy2 109011
+</code></pre>
+
+<p>Now to get everything running in Node/JavaScript</p>
+
+<h3 id="install-node-ffi:72ef235c1c656139694e1398dfdb61c0">Install Node FFI</h3>
+
+<pre><code class="language-bash">sudo npm install -g ffi
+</code></pre>
+
+<h3 id="create-send-js:72ef235c1c656139694e1398dfdb61c0">Create send.js</h3>
+
+<pre><code class="language-javascript">var ffi = require(&quot;ffi&quot;)
+
+var libwiringPi = ffi.Library('/usr/local/lib/libwiringPi', {
+    'wiringPiSetup' : [ 'int', [] ],
+    'digitalWrite' : [ 'void', ['int', 'int'] ],
+    'pinMode': [ 'void', ['int', 'int'] ],
+    'delayMicroseconds' :  [ 'void', ['int', 'int'] ]
+})
+
+var libRCSwitch = ffi.Library('./libwrapper', {
+  'newRCSwitch' : ['pointer', [] ],
+  'RCSwitch_send': ['void', [ 'pointer', 'int', 'int' ] ],
+  'RCSwitch_enableTransmit': ['void', ['pointer', 'int'] ]
+})
+
+if (process.argv.length &lt; 3) {
+  console.log('Arguments: Efergy Switch Code')
+  process.exit()
+}
+
+var PIN = 0;
+var unitCode = parseInt(process.argv[2]);
+var mySwitch = libRCSwitch.newRCSwitch();
+
+if (libwiringPi.wiringPiSetup() == -1){
+    return 1;
+    printf(&quot;Error initialising WiringPi&quot;);
+}
+
+if (mySwitch.isNull()) {
+    console.log(&quot;Oh no! Couldn't create object!\n&quot;);
+} else {
+    libRCSwitch.RCSwitch_enableTransmit(mySwitch, PIN);
+    libRCSwitch.RCSwitch_send(mySwitch, unitCode, 24);
+}
+</code></pre>
+
+<h3 id="compile-the-libraries:72ef235c1c656139694e1398dfdb61c0">Compile the libraries</h3>
+
+<pre><code class="language-bash">g++ -shared -fpic -g wrapper.c -L ./ -l RCSwitch -o libwrapper.so
+g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
+</code></pre>
+
+<h3 id="run-send-js:72ef235c1c656139694e1398dfdb61c0">Run send.js</h3>
+
+<p>Note that anything which uses WiringPi has to be run sudo. A bit of a pain. Not sure I want to be running the Node process as root?</p>
+
+<pre><code class="language-bash">sudo env PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./ node send.js 109011
+</code></pre>
+
+<p>That&rsquo;s it. You can now turn on and off your Efergy socket using Node. Next up, a simple Node server to handle remote requests to do this.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">23 Mar 2014, 15:10</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets.html" class="post-title">Our web and mobile enabled electric blanket using Electric Ireland&#39;s Efergy RC sockets</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>A major ongoing struggle in our household is convincing one of our many children to go upstairs and put on the electric blanket for us. I honestly don&rsquo;t know how we get through the winter.</p>
+
+<p>Wouldn&rsquo;t it be fantastic if we could use technology instead of children to do this?</p>
+
+<p>Last Thursday I came home from work to discover that <a href="http://www.electricireland.ie/">Electric Ireland</a> had sent us three <a href="http://efergy.com/eu/products/remotecontrolledsocket">Efergy</a> remote control power sockets and a plugin energy monitor. I have no idea why they did so, apart perhaps from our crazy electricity use.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg" alt="Efergy" title="Efergy RC Switch" />
+</p>
+
+<p>My mind immediately leaped to our electric blanket conundrum.</p>
+
+<p>A quick look at the label and I was pleased to see they worked at 433Mhz. What were the chances that the <a href="http://dx.com/p/433mhz-wireless-transmitter-module-superregeneration-for-arduino-green-149254">$1.99 wireless modules</a> I bought from DX in China would work with them? Oh the joy to discover that, not only do the modules work with them, some genius has already built <a href="https://code.google.com/p/rc-switch/">a powerful Arduino library</a> to do so!</p>
+
+<p>It turns out that the Efergy brand uses the same simple protocol as a wide range of others around the world. I guess they are all OEMing something.</p>
+
+<p>A 2 minute setup on my Arduino Uno with a receiver and the relevant sniffer code loaded up and I had the 11 codes (5 on, 5 off, 1 all-off) that my specific remote control used. They are all 24bit, protocol &ldquo;1&rdquo; with 6 decimal digits like 109223. I assume they distribute a range of remotes to avoid neighbours clashing. The RC switches themselves are not locked to a specific code, they have to be set by the remote control at power up.</p>
+
+<p>2 more minutes to setup a transmitter to cycle between the codes and I was toggling the RC switches on and off.</p>
+
+<p>I really was gobsmacked how easy it was. It was a lovely reminder of how incredible the internet really is. We&rsquo;ve become so used to it, we forget that the above would have taken me months (or never!) in pre-internet days instead of 10 minutes total.</p>
+
+<p>Of course that was just step 1. What I really wanted to do was internet-enable these beauties. I&rsquo;ve been meaning to do something along these lines with the <a href="http://digistump.com/products/50">DigiX</a> board since I got it. The DigiX is a really powerful Arduino clone with a 32-bit Atmel ARM CPU, tons upon tons of IO, SD card, audio and, most importantly for this project, Wifi on-board.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg" alt="frontside" title="DigiX with module" />
+</p>
+
+<p>Getting Wifi setup the way I wanted on the DigiX took more time than I&rsquo;d have liked yesterday but I finally figured out that the <a href="http://en.usr.cn/low-power-wifi-module.html">Chinese USR-wifi232-g module</a> web UI doesn&rsquo;t like Chrome! Once I switched to Firefox, all went swimmingly. I connected it to a Wifi AP, gave it a fixed IP address and then setup a port forward from the house router to it. Obviously I use <a href="http://dyn.com/">Dynamic DNS with Dyn</a> on the home router so that I don&rsquo;t have to track changing IP addresses manually.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg" alt="backside" title="DigiX other side" />
+</p>
+
+<p>The DigiX comes with an example Web Server built-in so I was able to just create a few simple URLs and paste the RCSwitch code into the relevant places. So within another few minutes I was toggling the switches over the internet.</p>
+
+<pre><code>switch1State = 1;
+mySwitch.send(109323, 24);
+
+</code></pre>
+
+<p>Another moment when I forced myself to stop and think about how incredibly easy all this stuff has become. And all of it sitting on the shoulders of giants. So far, all I&rsquo;ve done is copy and paste stuff together.</p>
+
+<p>But of course I wasn&rsquo;t happy there. I wanted a mobile app! Luckily, Colum Bennet in <a href="http://www.feedhenry.com">FeedHenry</a> has created a superb new Getting Started guide which will be released soon. It walks you through creating an <a href="http://angularjs.org/">Angular</a> Hybrid mobile app which talks to a FeedHenry Node.js back-end to do a really simple task. Despite only playing a programmer for the purposes of blogging, I was able to easily modify both the client and cloud apps to create what I needed with the Node request module.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App" />
+</p>
+
+<p>Of course I could send the commands directly from the mobile app to the DigiX, but routing it through the cloud means that eventually this can be multi-user, multi-switch, re-configurable and securely locked-down.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success" />
+</p>
+
+<p>One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing using a simple bookmarked CNAME.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App" />
+</p>
+
+<p>I&rsquo;ll upload everthing on to a public GitHub repo as soon as I have removed all the hard-coding and added a modicum of &ldquo;security&rdquo; with API keys etc. More posts on this technology combo coming in the next few weeks.</p>
+
+<p>With the Bandon Bed Button, we have now achieved Electric Blanket Nirvana.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">16 Mar 2014, 18:33</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/the-nitty-gritty-of-moving-from-wordpress-to-harpjs/the-nitty-gritty-of-moving-from-wordpress-to-harpjs.html" class="post-title">The nitty-gritty of moving from WordPress to HarpJS</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>As I said in the previous posts, the move from WP to HarpJS was not exactly smooth. But I&rsquo;m glad I&rsquo;ve done it as I finally learned how to use a lot of things like Jade that I&rsquo;ve long-fingered for years.</p>
+
+<p>The first step was to get the original content out of WordPress. This had the added twist that the conoroneill.net blog actually started out as a Posterous blog which I imported into WordPress when I realised that Posterous was a dead-end. So the first two years of posts have some &ldquo;interesting&rdquo; problems in them.</p>
+
+<p>The tool I used for import was <a href="https://github.com/EJEHardenberg/wpJson4Harp">wpJson4Harp</a> as recommended on the HarpJS site. These were the notes I took on that part of the process:</p>
+
+<ul>
+<li>It doesn&rsquo;t work off a WXR export or WP APIs but actually needs access to your WordPress DB. This is not a goer if you have shared hosting with the MySQL access locked down. I had to dump my WP DB and load it into a VirtualBox Ubuntu VM and run the import tool there.</li>
+<li>As I mentioned above, the older Posterous posts had problems
+
+<ul>
+<li>Lots of embedded YouTube Videos not working</li>
+<li>I was gutted to discover that the Posterous to WP import had not moved over the images. So now that Posterous is gone, so are those images. A harsh lesson learned. I&rsquo;m just imagining how exposed the average Tumblr person is to the same problem</li>
+<li>Posterous seemed to use 4 spaces in formatting quite a bit. So of course Harp thinks this is source code in the generated MD files and formats appropriately. I manually did a search/replace on this to convert all sets of 4 spaces to 1. Seems to have done the trick</li>
+</ul></li>
+<li>I&rsquo;ve been using a YouTube plugin which lets me embed videos by using a fake url with the prefix httpv. None of these work. Probably won&rsquo;t be that hard to do a search/replace on those eventually.</li>
+<li>The &ldquo;blog index&rdquo; file that wpJson4Harp generated (_data.json) is quite crude. It has JS timestamps rather than human readable ones and the posts are not in chronological order</li>
+<li>I ended up making some changes to its Python source to simplify its output and make it more &ldquo;blog like&rdquo;</li>
+<li>I downloaded all the files from wp-content in WordPress and uploaded them to my S3 account using Cloudberry Explorer. I then did a search replace across all of the MD files to replace my conoroneill.net URLs with <a href="https://s3-eu-west-1.amazonaws.com/">https://s3-eu-west-1.amazonaws.com/</a></li>
+</ul>
+
+<p>So once I had all of the old blogposts as MD files, it was time to get them into some sort of HarpJS blog. I managed to install Harp on Windows after a lot of messing with Visual Studio Express (both 2010 and 2012 now installed) and node-sass. Actully node-saas just seems to be a general pain in the arse and I hope people start using something else that doesn&rsquo;t require native compilation.</p>
+
+<p>Unfortunately, even tho Harp installed, it doesn&rsquo;t work correctly on Windows if you are using for GitHub Pages. It throws an error about bad paths if you do harp compile _harp ./</p>
+
+<p>So I moved over to my Ubuntu VM and setup everything there instead. The <a href="http://harpjs.com/docs/deployment/github-pages">instructions for using GitHub Pages</a> as the host on the Harp site work perfectly for Ubuntu.</p>
+
+<p>As Harp is pretty new, there are very few templates/themes for blogs. The general web-site ones seem good and I&rsquo;ll be trying them out after this. So I ended up using the Baseline template and that&rsquo;s where the heavy work began. Here&rsquo;s all the problems/challenges/learnings I went through over the space of several weekends:</p>
+
+<ul>
+<li>Template assumes /blog for blog but that&rsquo;s not what I use, I need it to be in the root. Some simple playing with the templates seemed to take care of that.</li>
+<li>I didn&rsquo;t use year/month/day in my original URLs on Posterous (and then WordPress) so I now have 650 md files and html files in one directory each. I&rsquo;ll move to date based directories from now on, once I figure it out.</li>
+<li>The default index.html (_layout.jade) just lists every post in the order it finds them in _data.json but that&rsquo;s completely un-blog-like. I had to implement a bunch of JavaScript in the Jade template to sort the posts by reverse chronological order. As I&rsquo;m not a JavaScript programmer, this ended up being several days of grabbing bits of code off Stack Overflow and sticking console.log in everywhere until I finally got it working. Learned a lot but it nearly ended up being a show-stopper and I came very close to giving up. You can see the main <a href="https://github.com/conoro/conoro.github.io/blob/master/_harp/_layout.jade">changes here</a> (don&rsquo;t laugh!)</li>
+<li>As a result I realised that Jade is an extremely limited templating language. I can see why a lot of people use EJS instead. I had to drop to raw JavaScript to do most things e.g. converting the JS timestamps to human readable format</li>
+<li>Stylus is a reasonably nice way of doing CSS but of course you can&rsquo;t use line numbers in Chrome Inspector to see what line in the Stylus template has to change. But the upside is that I know have a basic understanding of Stylus</li>
+<li>I learned how to do Google Web Fonts which was neat</li>
+<li>There is no pagination in the index.html template and I cannot find a &ldquo;recipe&rdquo; for this even in a wider Jade context.</li>
+<li>I had to delete some references to Twitter etc in the templates as they kept causing Jade errors. I think it&rsquo;s some cross-referencing problem between author in _data.json and the config file for Twitter.</li>
+<li>The home page should not be 650+ post titles, it should be 5-10 full posts, like a normal blog. I haven&rsquo;t got started on this yet but it will require cross referencing between _data.json and individual HTML/md files to pull in the content</li>
+<li>The RSS feed did not validate for several reasons (JS timestamps, titles). I fixed that so it now validates. But like the home page, it only has my manually entered post summaries rather than my preferred approach of full posts.</li>
+<li>The RSS feed was set to rss.xml but I changed to it to /feed so that existing subscribers to my WP blog don&rsquo;t all lose me in the move</li>
+<li>The Disqus integration works well but ideally I&rsquo;d love an Open Source JS commenting system that stores comments in maybe JSON files on Dropbox</li>
+<li>Google Analytics support and the avatar support for GitHub/Twitter/Facebook/G+ is nice.</li>
+<li>There is obviously no search built in. Currently I&rsquo;m using Google Custom Search which works well but is fugly. Is there a possibility to create a simple JS search tool that uses _data.json as a first MVP and later builds a searchable JSON index file as part of the compile process?</li>
+</ul>
+
+<p>So I now have something that almost works the way I want it. Uploading images to S3 is no real strain and I&rsquo;ll be able to make all the other changes I want incrementally.</p>
+
+<p>The biggest ongoing annoyance is that &ldquo;harp compile&rdquo; deletes all of the generated HTML and re-builds everything from scratch every time. This isn&rsquo;t scalable when you have 650+ posts and it means that when I add a new blogpost I have to wait 2-3 minutes for it to recompile. There should be an incremental option which assumes no structural/styling changes have happened and just looks for new md files to compile and then rebuilds index.html. Good old &ldquo;Make&rdquo; had this nailed a long time ago ;-) Actually cpould git not be leveraged for this? Compare the current working tree with the last commit?</p>
+
+<p>That HTML deletion is also a problem for using a DNS CNAME with GitHub Pages since it deletes that file from the root directory every time. Update: OK, I just sorted this with two minutes effort. Created CNAME file in _harp and added it with layout: false to _data.json. The compile process then copies it over to root.</p>
+
+<p>It would be great to have a simple cli tool called new-blog-post which asks for a title, date and summary and updates _data.json and creates the empty .md file. I could probably write this myself but I&rsquo;ve 500 other things I need to do too. I also must look into adding tagging and a ZX Spectrum header image.</p>
+
+<p>I know the whole process sounds like a huge amount of work. It was! But I think everything above could be sorted with an improved WP import tool that works on WXR files and some kick-ass blog templates rather than web-site templates. I&rsquo;m really looking forward to using Harp when I port an old web-site next.</p>
+
+<p>Update 1: I forgot to mention a few things:</p>
+
+<p>First was Disqus itself. Adding it as a plugin and using the import feature there didn&rsquo;t work for comments. But importing the WXR file worked great and all old comments are now visible using Disqus.</p>
+
+<p>Second was the actual switch from WP on Blacknight to GitHub Pages. This was a bit fiddly. I use an non-www domain and learned that you can&rsquo;t CNAME from conoroneill.net over to conoro.github.io. Luckily I use DNSMadeEasy for DNS and they have a feature called ANAME which does allow this. But before I turned that on, I had to move the WP blog elsewhere. This involved creating a new domain called conoroneillnet.conoroneill.com and associating it to the old WP install on Blacknight. Then I used the <a href="http://wordpress.org/plugins/automatic-domain-changer/">Automatic Domain Changer</a> plugin to reset everything in WP and its database to the new archive domain. Then finally I made the DNSMadeEasy change. And ta-daaaa, I&rsquo;m now on GitHub Pages. I&rsquo;m sure it&rsquo;ll take a while for the DNS changes to propagate. I&rsquo;ll now turn off Google indexing of the old blog to avoid duplicate content issues.</p>
+
+<p>Update 2: Now that everything is moved, I&rsquo;ve just realised I have a very serious problem - trailing slashes, or more precisely, the lack of them. On WordPress all of my URLs ended with a trailing slash. By default, HarpJS doesn&rsquo;t since it treats / to mean directory not file. This wouldn&rsquo;t be so bad if there was a re-direct from one to the other, but there isn&rsquo;t, the URLs with trailing slashes give a 404. Which basically kills every existing inbound link to the blog (and messes up Disqus to boot). There is a way around it by putting every post in its own directory on that name and renaming every file to index.md. This seems like overkill when an auto-redirect really should be the default. Of course this is a <a href="http://garbagecollected.org/2013/02/27/wordpress-to-github-pages/">GitHub Pages issue</a> not a Harp issue. Not sure what I&rsquo;m going to do now&hellip;&hellip;</p>
+
+<p>Update 3: As I want to avoid &ldquo;downtime&rdquo;, I bit the bullet and took the directory approach for all old posts. The new ones will be fine. This code did the trick (thanks Stack Overflow) in the _harp dir:</p>
+
+<pre><code class="language-bash">
+find . -name "*.md" -exec sh -c 'NEWDIR=`basename "$1" .md` ; mkdir "$NEWDIR" ; mv "$1" "index.md"; mv "index.md" "$NEWDIR" ' _ {} \;
+</code></pre>
+
+<p>Update 4: Damn and blast, I forgot about /feed not redirecting too. So I created a /feed directory and put the feed.jade file in there as index.jade and set layout to false in a new _data.json file in that directory (after trying 20 other things!).</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">16 Mar 2014, 12:46</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/saying-goodbye-to-wordpress-and-hello-to-harpjs/saying-goodbye-to-wordpress-and-hello-to-harpjs.html" class="post-title">Saying goodbye to WordPress and hello to HarpJS</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>My blogging history goes back to 2001 when I setup a Blogger/Blogspot blog in the hope that I would update things more quickly than with Geocities or my Frontpage98 home page. 4 months later I wrote my second post :-) For a long time it involved writing the posts on Blogger and then publishing them via FTP to my own domain. It was fiddly but it worked ok.</p>
+
+<p>Then around 2005 I discovered WordPress and realised blogging could be much much much easier. In the past 9 years I&rsquo;ve done an incredible amount of stuff with WP. From personal blogging to building core parts of a business on top of it. It has been both a delight and the source of my greatest frustrations (glares at the &ldquo;WYSIWYG&rdquo; editor).</p>
+
+<p>As with all great Open Source projects, the power of WP isn&rsquo;t really in the core product itself, but in the ecosystem and community that built up around it. I have never run into a situation where I couldn&rsquo;t find a WP plugin that matched my needs within a couple of minutes of googling.</p>
+
+<p>The old slow, awkward, manually marked-up, manually-published HTML method died under the onslaught of WP&rsquo;s ease-of-use. Bloggers no longer had to be programmers or web developers, they could be writers. And that was, without a doubt, a wonderful progression. Even tools that tried to straddle both worlds, like Movable Type, couldn&rsquo;t compete with WP&rsquo;s 2 minute install and one-click publish.</p>
+
+<p>WordPress has also created a swathe of job opportunities for people around the world who do design, web-site creation, SEO etc etc, and who wouldn&rsquo;t know a HTML tag if it slapped them in the face. This is both a blessing and a curse, as the number of security-compromised WP sites grows daily.</p>
+
+<p>The incredible flexibility and architecture openness is naturally also WP&rsquo;s greatest weakness. I&rsquo;ve lost track of the number of plugins that either destroyed the performance of my WP installations or opened up giant gaping security holes. The relentless Core+Plugins upgrade cycle has also become insufferable if you run more than one site.</p>
+
+<p>I&rsquo;ve recently been thinking a lot around the lifecycle of things and how we often focus on the wrong bit. In App development, the creation of the App is the shortest bit of its lifecycle, so you should think about what you need to manage it, once its deployed. Similarly with blogging, the creation bit can take minutes but those posts can be read by thousands of people over several years. So we should be thinking more about how we make sure those posts are delivered quickly, reliably and with zero security hazards to as many people as possible and with no ongoing maintenance.</p>
+
+<p>It was when we hit 2013 that I started to notice a change in the attitude towards WordPress. The WP features continued to pile up as it tried and failed to become a proper CMS. In reality most people want to create simple text+images blogposts with as little hassle as possible. So developers started going Back To The Future and using command-line tools, Markdown syntax, templating languages and, most importantly, GitHub Pages as the blog host.</p>
+
+<p>This is the bit that started to get me excited. Totally static blog web-pages. No PHP, no MySQL DB, no possibility for security holes. And best of all, blazingly fast performance.</p>
+
+<p>Of course these tools are currently completely opaque to non-technical people. You get ultimate control and flexibility but at the cost of having to learn Markdown, Jade, EJS, Stylus, Git, S3, JavaScript, etc etc.</p>
+
+<p>As 2013 progressed I did lots more reading on these tools like Jekyll and Octopress. Somehow Ghost got lumped in there too but it&rsquo;s not a static site generator, it&rsquo;s trying to be WP with PHP removed and Node.js inserted.</p>
+
+<p>My plan was to move some old work sites to be static. They have thousands of pages on them but despite little traffic, they regularly go offline as MySQL runs out of memory due to what appears to be some horrifically written SQL queries in WP or one of its plugins.</p>
+
+<p>Finally a few weeks ago, I went at it all again but decided to use a blog move as a way of learning how it all works. I had a few requirements:</p>
+
+<ul>
+<li>It had to work with GitHub Pages or similar</li>
+<li>It should be git friendly</li>
+<li>It should ideally use Node.js rather than Ruby or PHP</li>
+<li>It should support more that one templating language/styling language and possibly CoffeeScript</li>
+<li>The tools should run on Linux, OSX and ideally Windows</li>
+<li>It should have a good community of people building themes and improvements</li>
+<li>It should have some way of importing WordPress content</li>
+<li>It should have some blog-style templates rather than web-site ones</li>
+<li>It should have some support for commenting systems like Disqus, but ideally have its own JS commenting system</li>
+</ul>
+
+<p>There are quite a few tools out there that support most of the above but I did find that many of them are either dead projects or single-developer projects with no community. The small set of which I found the most mentions, in no particular order, were:</p>
+
+<ul>
+<li><a href="http://harpjs.com/">HarpJS</a></li>
+<li><a href="http://docpad.org/">DocPad</a></li>
+<li><a href="http://octopress.org/">Octopress</a></li>
+<li><a href="http://jekyllrb.com/">Jekyll</a></li>
+<li><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></li>
+<li><a href="https://github.com/flatiron/blacksmith">Blacksmith</a></li>
+</ul>
+
+<p>A bit more digging bubbled up HarpJS as the most likely winner based on the above requirements, with DocPad as a backup in case it failed. I had also seen some Mobile guys blogging about HarpJS, and two of the co-founders created PhoneGap, which immediately piqued my interest.</p>
+
+<p>It turned out to be a <em>lot</em> harder than I thought to move from WP to Harp. Wayyyy harder than the earlier move of that same blog from Posterous to WordPress. I&rsquo;ll be writing a separate post right after this on the nitty gritty of the move but in this post I really just wanted to focus on the &ldquo;Static Movement&rdquo; (geddit? static, movement).</p>
+
+<p>I really think there is a large opportunity for a mainstream Static Site/Blog platform and it many ways it&rsquo;ll probably be like Blogger of old. I really like where Dave Winer is going with the <a href="http://fargo.io/">Fargo outliner</a> and it has the potential to be such a tool. The Harp guys are also doing some interesting stuff with the <a href="https://www.harp.io/">harp.io</a> platform, but the entry price of $9.95 per month is probably too high for most non-commercial bloggers. The features an ideal platform would have include:</p>
+
+<ul>
+<li>Publishing of the static content to GitHub Pages, Dropbox and Google Drive via whatever APIs are appropriate, including Git</li>
+<li>Dropbox and Google Drive to provide CNAME support for these static sites</li>
+<li>Built-in hosting alternative like <a href="https://www.harp.io/">harp.io</a></li>
+<li>Command line flow using git etc for developers</li>
+<li>Online management/publishing dashboard for non-developers</li>
+<li>Online Markdown editing tool - I think Markdown could also go mainstream. Anyone can learn it in a few minutes.</li>
+<li>A split-screen online Markdown editor like Mou or Stackedit</li>
+<li>Online templates/themes management using something like Jade+Stylus or EJS</li>
+<li>Very fast compile/publish cycle</li>
+<li>Plugins only available as JavaScript snippets (Dropbox JavaScript &ldquo;App&rdquo; support is very cool)</li>
+</ul>
+
+<p>I just have this feeling that Dropbox/GoogleDrive could finally be the trigger that gets us back on the righteous path of people owning and publishing their own content instead of giving it for free to Facebook/Tumblr/Twitter where it could all disappear tomorrow (cf Geocities/Posterous/etc).</p>
+
+<p>I&rsquo;m probably a week or so away from pulling the trigger on the move. Some of the earliest content that originated on Posterous is well and truly messed up and I&rsquo;m not sure if I want to script up some cleanups or leave it. Finally, the lack of pagination is probably the last thing I want to look at before making the DNS change.</p>
+
+<p>It&rsquo;ll be interesting to watch how 2014 plays out. Will a new platform come to the fore which focuses on ownership, content portability, zero-maintenance, security and adding a bit of fun back into blogging?</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">14 Mar 2014, 20:50</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my.html" class="post-title">Running Debian Linux, GCC, Emacs, Git, Node.js, npm and HarpJS on Samsung Galaxy S4. Oh my.</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>I&rsquo;ll shortly be moving this entire blog from WordPress to <a href="http://harpjs.com/docs/deployment/github-pages">HarpJS</a> generated static pages over on GitHub. It hasn&rsquo;t been as smooth a process as I&rsquo;d hoped but I&rsquo;ve learned lots. We&rsquo;re also using HarpJS in a work context and it works great there running under Node. I&rsquo;ll write it all up either this weekend or next.</p>
+
+<p>Then this evening I asked myself the silly question &ldquo;I wonder can I run Node.js on Android?&rdquo;. It turns out you can. But it&rsquo;s a teensy bit fiddly to get going. The biggest problem turned out to be Android 4.4 KitKat which made the first few steps the hardest.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android_02.jpg" alt="Debian on Android" title="Debian and Harp" />
+</p>
+
+<p>You are going to be running Debian Linux in a chrooted environment. For some weird reason I never even knew this was possible until today! In fact there are multiple projects out there that enable this. The main thing, of course, is that your phone must be rooted. A Stock Samsung ROM is fine and I&rsquo;m sure GPE and Cyanogen would also work.</p>
+
+<p>I initially tried &ldquo;Linux Deploy&rdquo; from the Android Play Store but hit a brick wall with it mounting the external SD card on the S4. I then tried <a href="https://play.google.com/store/apps/details?id=com.zpwebsites.linuxonandroid">Linux On Android</a>, also from the Play Store and hit similar problems, so I dug a bit deeper and got to the bottom of it.</p>
+
+<p>All of this is easier if you connect up an external keyboard to your S4. I&rsquo;ve found that a <a href="http://dx.com/p/micro-usb-otg-cable-for-android-tablet-gps-mp3-phone-black-276901">cheap USB OTG</a> cable works brilliantly for thumbdrives, mice, keyboards and even the 2.4GHz combo keyboards you get with Android TV sticks.</p>
+
+<ul>
+<li>Install <a href="https://play.google.com/store/apps/details?id=com.zpwebsites.linuxonandroid">Complete Linux Installer</a>, <a href="https://play.google.com/store/apps/details?id=stericson.busybox">BusyBox</a>, <a href="https://play.google.com/store/apps/details?id=eu.chainfire.supersu">Chainfire SuperSU</a>, <a href="https://play.google.com/store/apps/details?id=jackpal.androidterm">Terminal Emulator</a> and  <a href="https://play.google.com/store/apps/details?id=android.androidVNC">androidVNC</a> from the Play Store</li>
+<li>Download the &ldquo;Small EXT4&rdquo; LinuxOnAndroid <a href="http://sourceforge.net/projects/linuxonandroid/files/Debian/Testing/Small/">Debian Jessie image</a> from Sourceforge. Unzip that. Create a directory on your phone&rsquo;s SD card called debian and copy over the two unzipped files into that directory</li>
+<li>Using a File Explorer on your S4 that can enter root mode (e.g. <a href="https://play.google.com/store/apps/details?id=com.estrongs.android.pop">ES File Explorer</a>), browse to /data/data/com.zpwebsites.linuxonandroid/files/</li>
+<li>rename busybox to busybox.bak</li>
+<li>edit bootscript.sh</li>
+</ul>
+
+<p>find this bit:</p>
+
+<pre><code>elif [ -d /Removable/MicroSD ]; then
+echo &quot;mounting /Removable/MicroSD to $mnt/external_sd...&quot;
+$bbox mount -o bind /Removable/MicroSD  $mnt/external_sd
+</code></pre>
+
+<p>and change it to the following:</p>
+
+<pre><code>elif [ -d /storage/extSdCard ]; then
+echo &quot;mounting /storage/extSdCard to $mnt/external_sd...&quot;
+$bbox mount -o bind /storage/extSdCard  $mnt/external_sd
+</code></pre>
+
+<ul>
+<li>Save that</li>
+<li>Then run the Complete Linux Installer App which mainly consists of instructions. The only important step is to pick Debian in the drop-down list and change the settings so that the image directory is set to where you copied those image files to e.g. /storage/extSdCard/debian</li>
+<li>Then just tap the Start Linux button</li>
+<li>You may see some initial errors but if all is basically ok, you&rsquo;ll get a first-time-run set of Debian questions asking for password etc.</li>
+<li>And you are done from a Debian perspective. You can even setup the VNC server to have a basic UI but I haven&rsquo;t got that working properly yet (blank screen with X pointer).</li>
+</ul>
+
+<p>So now that we have an almost bog-standard Linux setup, you can pretty much do what you normally would. I have run into some small glitches but found workarounds quickly for them all. I should probably setup a non-root user at some point too. In any case, this is how I setup HarpJS:</p>
+
+<pre><code>apt-get update
+apt-get install nodejs nodejs-legacy
+apt-get install git curl build-essential openssl libssl-dev
+wget https://npmjs.org/install.sh
+chmod 755 install.sh
+./install.sh
+npm install --unsafe-perm -g harp
+mkdir gitwork
+cd gitwork
+git clone https://github.com/conoro/conoro.github.io.git
+cd conoro.github.io
+harp compile _harp ./
+</code></pre>
+
+<p>The two bits of oddness above were getting an error from curl trying to install npm, so I used wget. Also, very very strange node-gyp permissions errors installing Harp globally when it came to node-sass (hence the &ndash;unsafe-perm). Node-sass also causes problems on Windows I&rsquo;ve noticed.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android.jpg" alt="Harp on Android" title="Harp and Android" />
+
+And that&rsquo;s it about it. Except for&hellip;&hellip;.</p>
+
+<pre><code>apt-get install emacs
+</code></pre>
+
+<p>How could I not? :-)</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/emacs.png" alt="Emacs on Android" title="Emacs and Android" />
+</p>
+
+<p>So I edit Markdown blogposts in Emacs, compile with Harp and commit to GitHub to publish. Simples.</p>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">13 Mar 2014, 08:35</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx.html" class="post-title">Upgrading your Samsung Galaxy S4 i9505 to KitKat 4.4.2 on OSX</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Using an S4 on a Mac Book Pro is an exercise in futility now that it and other phones no longer appear as a disk drive but as a weird media device. The Samsung Kies software doesn&rsquo;t help and actually seems to make things worse. If you run Windows 7 inside VirtualBox you can see the phone&rsquo;s storage but doesn&rsquo;t see it when the phone is in upgrade mode. So you can&rsquo;t run the usual Odin software there.</p>
+
+<p>Then I found out about Heimdall, an open source tool for upgrading Galaxy phones on Windows, Linux and OSX. It looks scary and the UI is a horror but once you find out the command required, the whole thing only takes a few minutes.</p>
+
+<p>So assuming you want a Stock Android 4.2.2 ROM (rooted of course) on your phone and you are coming from some other ROM like the Google Play Edition ones, then the following will do the trick on An MBP.</p>
+
+<ul>
+<li>Uninstall Kies if it&rsquo;s installed. On a Mac, you stupidly have to re-download the <a href="http://www.samsung.com/uk/support/usefulsoftware/KIES/JSP">Kies installer</a> to get to its uninstall routine. Oh FFS.</li>
+<li>Download and install <a href="http://glassechidna.com.au/heimdall/">Heimdall</a></li>
+<li>Download the new 4.4.2 ROM. I <a href="http://forum.xda-developers.com/showthread.php?t=2250824">used this one</a></li>
+<li>Rename that file from .rar.md5 to .rar</li>
+<li>Install an Un-Rar tool like <a href="http://www.unrarx.com/">UnrarX</a></li>
+<li>If you are coming from a wildly different ROM, you&rsquo;ll probably have to Factory Reset. Before you do that, backup your Apps/Data using Titanium Backup and make bloody sure it backs up to SD Card, not internal memory (unlike me!).</li>
+<li>Power-off the phone and re-boot it by pressing Volume-Up and Power. When the bootloader menu appears, pick the factory reset option and then power-down</li>
+<li>Un-rar the downloaded file and you&rsquo;ll get a directory with a bunch of files in it.</li>
+<li>Put your S4 in download mode by shutting it off, then restarting it by holding Volume-Down and Power. At the prompt, press Volume-Up. Then connect it by USB to the Mac</li>
+<li>Open a terminal in OSX, cd to the directory that you un-rarred and type the following</li>
+</ul>
+
+<pre><code>sudo heimdall flash --APNHLOS NON-HLOS.bin --ABOOT aboot.mbn --BOOT boot.img --HIDDEN hidden.img.ext4 --MDM modem.bin --RECOVERY recovery.img --RPM rpm.mbn --SBL1 sbl1.mbn --SBL2 sbl2.mbn --SBL3 sbl3.mbn --SYSTEM system.img.ext4 --TZ tz.mbn --CACHE cache.img.ext4
+</code></pre>
+
+<ul>
+<li>That&rsquo;s it, after a few minutes you&rsquo;re done, the phone will reboot and give you an all clean setup.</li>
+<li>Optionally Run Titanium Backup to recover your Apps/Data</li>
+</ul>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">09 Mar 2014, 18:39</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box/with-the-enigma-2-software-the-sab-unix-hd-triple-tuner-is-a-very-impressive-satelliteterrestrial-box.html" class="post-title">With the Enigma 2 software, the Sab Unix HD Triple Tuner is a very impressive satellite/terrestrial box</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>In addition to the recent <a href="/the-and100-android-box-is-perfect-for-netflix-rte-player-etc/">Andro100</a> box, the guys in <a href="http://tvtrade.ie">TV Trade</a> also gave me a Sab Unix HD <a href="http://www.tvtrade.ie/triple-tuner.html">Triple Tuner</a> box to try out. The specs on this thing were pretty amazing for something that costs approx €130+VAT so I was intrigued to see how well it did. After the reliability horror that was the Ferguson Ariva 120 pile of junk, I went in with open eyes.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/sab.png" alt="Sab" title="SAB Triple Tuner" />
+</p>
+
+<p>The box itself is pretty compact with a 1980s Amstrad stereo vibe off it with the chrome accents. Not exactly a looker but not offensive either. It has dual satellite inputs and a single &ldquo;Saorview&rdquo; DTT input. The usual outputs like HDMI etc are there along with wired LAN and a front and back USB port. I hate those front USB ports on all boxes as they are behind a flap which you then have to leave open if you use the port. But if you want to insert a wifi dongle, it probably makes sense for signal strength.</p>
+
+<p>I connected up a 1TB externally powered USB harddrive to the back and stuck a generic nano Wifi dongle in the front. Both were recognised immediately and I was able to connect to the home network and format the drive as EXT4 within minutes. The box is Linux under the hood which is why stuff like this just works. The reason I went with EXT4 is that I did some tests recently on our home server and EXT4 write-speed is 3-4 times faster than NTFS on a Linux box.</p>
+
+<p>The general UI of the box wasn&rsquo;t great and I found the whole EPG setup to be annoying and overly complex. However I was easily able to setup the nightly internet download of a 7 day programme guide so the lack of Freesat certification was not a problem. This is a huge advantage over cheaper boxes.</p>
+
+<p>We used the box for a few weeks but continued to struggle with the generally clunky UI, awkward EPG and remote control. For example, the pause button on the remote control doesn&rsquo;t do time-shifting, it does freeze-frame. Who has ever wanted a freeze-frame button? You have to hit the time-shift button and then hit pause. The box was also unable to record shared channels like CBBC/BBC4 which was infuriating for Bron/Broen/The Bridge.</p>
+
+<p>The software had a ton of completely useless features like &ldquo;apps&rdquo; for various German stations. The apps felt like the old Unison boxes from 10+ years ago.</p>
+
+<p>These usability problems meant our usage tailed off. But the guys in TV Trade mentioned that there was an alternative opensource front end for the box called Enigma 2 and that I should give that a whirl. They had all the files on their site plus instructions and video. It was actually a doddle to install and took less than 10 mins.</p>
+
+<p>I couldn&rsquo;t believe how good Enigma was compared to the default software. Infinitely more usable and slick and just felt far more &ldquo;modern&rdquo;. However it too suffers from an EPG that just takes too much work to figure out. It has a kitchen-sink set of features when all I want is a list of available channels and the ability to say &ldquo;include/exclude in TV Guide&rdquo;. All this stuff with Bouquets is straight from the old MPEG specs and should never be seen by an end user.</p>
+
+<p>I was starting to get frustrated with the EPG setup and did some googling to discover that there is a PC app called dreamboxEDIT which lets you configure the EPG remotely. I was pleasantly surprised to find that it was very easy to use and I simply deleted all the &ldquo;bouquets&rdquo; and removed all the garbage channels so I just had the core Irish and UK ones.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/epg.jpg" alt="EPG" title="Enigma 2 EPG" />
+</p>
+
+<p>So yes, it was fiddly to get that sorted but we now have a really nice program guide with 7 days of content. You can&rsquo;t do series link like Sky but you can set repeating timers for the same time.</p>
+
+<p>We have played with dual simultaneous recording and it works very well which is huge relief given how bad the Ariva was at even recording one channel. Time-shifting/pausing also works well but takes a few seconds to kick in.</p>
+
+<p>The difference between the default software and Enigma is like night and day. I&rsquo;ve noticed that we are watching live satellite TV far more often now that it&rsquo;s easy to do.</p>
+
+<p>The box also has a media player which can play network videos from your PC or NAS and you can easily FTP to it too. I&rsquo;m having very slow FTP transfers off the box but I haven&rsquo;t investigated that properly.</p>
+
+<p>I&rsquo;d recommend that the TV Trade guys ship Enigma by default with a single default Bouquet of the &ldquo;normal&rdquo; channels pre-configured. If they did, the Triple Tuner box would be usable by most people from the get-go, no matter how non-technical. As it stands, it&rsquo;s brilliant value but you need to do some work to get it setup just so.</p>
+
+<p>It&rsquo;s great to be finally back able to watch BBC2, BBC4, Channel 4 etc again (and not forgetting GirlPop for our youngest). The timing of getting the box was also perfect for the Winter Olympics and we watched a ton of it.</p>
+
+<p>If you have cable cut and you are looking for something powerful but inexpensive, the Sab Unix HD Triple Tuner is well worth a look.</p>
+
+<p>Excuse me whilst I go set the timer for Salamander on BBC4 tomorrow.</p>
+
+                    </div>
+                </section>
+                
+            </div>
+            
+<div class="pagination">
+  <nav role="pagination" class="post-list-pagination">
+      
+      <a href="/page/3.html" class="post-list-pagination-item pure-button post-list-pagination-item-prev">
+        <i class="fa fa-angle-double-left"></i>&nbsp;Newer
+      </a>
+      
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 4 of 73</span>
+    
+      <a href="/page/5.html" class="post-list-pagination-item pure-button post-list-pagination-item-next">
+        Older&nbsp;<i class="fa fa-angle-double-right"></i>
+      </a>
+    
+  </nav>
+</div>
+
+
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net//js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

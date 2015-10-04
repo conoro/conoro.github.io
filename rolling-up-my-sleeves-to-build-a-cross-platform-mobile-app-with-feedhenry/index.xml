@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rolling-Up-My-Sleeves-To-Build-A-Cross-Platform-Mobile-App-With-Feedhenries on Cross Dominant</title>
-    <link>http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/</link>
+    <link>http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry.html</link>
     <description>Recent content in Rolling-Up-My-Sleeves-To-Build-A-Cross-Platform-Mobile-App-With-Feedhenries on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Jul 2011 10:53:00 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Rolling Up My Sleeves to Build a Cross-Platform Mobile App with FeedHenry</title>
-      <link>http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/</link>
+      <link>http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry.html</link>
       <pubDate>Sun, 17 Jul 2011 10:53:00 +0100</pubDate>
       
-      <guid>http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/</guid>
+      <guid>http://conoroneill.net/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry/rolling-up-my-sleeves-to-build-a-cross-platform-mobile-app-with-feedhenry.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Rolling Up My Sleeves to Build a Cross-Platform Mobile App with FeedHenry&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;I&amp;rsquo;ve been playing around with the &lt;a href=&#34;http://developer.feedhenry.com&#34;&gt;FeedHenry&lt;/a&gt; platform for the past few months and it really has me excited with the&amp;nbsp;&lt;span style=&#34;font-size: small;&#34;&gt;possibilities&lt;/span&gt;. If you are not familiar with it, it&amp;rsquo;s a platform for building iPhone/Android/Blackberry/WP7/Nokia-WRT mobile applications from one code-base using just HTML, CSS and JavaScript. These are not just web-apps, they can be uploaded to the various App Stores too.&lt;/p&gt;

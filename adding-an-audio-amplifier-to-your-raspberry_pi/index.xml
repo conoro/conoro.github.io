@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adding-An-Audio-Amplifier-To-Your-Raspberry_pis on Cross Dominant</title>
-    <link>http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi/</link>
+    <link>http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi.html</link>
     <description>Recent content in Adding-An-Audio-Amplifier-To-Your-Raspberry_pis on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Apr 2013 14:02:18 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Adding an audio amplifier to your @Raspberry_Pi</title>
-      <link>http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi/adding-an-audio-amplifier-to-your-raspberry_pi/</link>
+      <link>http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi/adding-an-audio-amplifier-to-your-raspberry_pi.html</link>
       <pubDate>Sun, 14 Apr 2013 14:02:18 +0100</pubDate>
       
-      <guid>http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi/adding-an-audio-amplifier-to-your-raspberry_pi/</guid>
+      <guid>http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi/adding-an-audio-amplifier-to-your-raspberry_pi.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Adding an audio amplifier to your @Raspberry_Pi&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;We have a treadmill setup in our house which has always faced some sort of media centre setup. It&amp;rsquo;s the only way I don&amp;rsquo;t lose my mind with boredom when running during Irish bad weather (August to June).Originallyit was an XBOX-1 with XBMC on a 14&amp;rdquo; Philips portable CRT. Then it became a Patriot PBO connected with a HDMI-VGA adapter to an LCD monitor and now it&amp;rsquo;s a &lt;a href=&#34;http://www.raspberrypi.org/&#34;&gt;Raspberry Pi&lt;/a&gt; running &lt;a href=&#34;http://www.raspbmc.com/&#34;&gt;Raspbmc&lt;/a&gt; connected to the same monitor.&lt;/p&gt;

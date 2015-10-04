@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Two-Tutorials-Later-And-The-Kids-Are-Liking-The-Arduino-A-Lots on Cross Dominant</title>
-    <link>http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/</link>
+    <link>http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot.html</link>
     <description>Recent content in Two-Tutorials-Later-And-The-Kids-Are-Liking-The-Arduino-A-Lots on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Jun 2012 20:33:33 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Two tutorials later and the kids are liking the Arduino a lot</title>
-      <link>http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/</link>
+      <link>http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot.html</link>
       <pubDate>Sun, 10 Jun 2012 20:33:33 +0100</pubDate>
       
-      <guid>http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/</guid>
+      <guid>http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Two tutorials later and the kids are liking the Arduino a lot&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I sat down with 8 y/o daughter and 10 y/o son this afternoon to try out our &lt;a href=&#34;http://www.seeedstudio.com/depot/ardx-the-starter-kit-for-arduino-p-1153.html?cPath=138&#34;&gt;ARDX starter kit&lt;/a&gt; for &lt;a href=&#34;http://arduino.cc/&#34;&gt;Arduino&lt;/a&gt;. The first tutorial is a simple single LED which you flash on/off in software. But I was horrified to find myself stumped!&lt;/p&gt;

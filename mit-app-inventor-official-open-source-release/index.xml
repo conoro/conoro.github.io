@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mit-App-Inventor-Official-Open-Source-Releases on Cross Dominant</title>
-    <link>http://conoroneill.net/mit-app-inventor-official-open-source-release/</link>
+    <link>http://conoroneill.net/mit-app-inventor-official-open-source-release.html</link>
     <description>Recent content in Mit-App-Inventor-Official-Open-Source-Releases on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 Oct 2012 07:59:20 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/mit-app-inventor-official-open-source-release/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/mit-app-inventor-official-open-source-release.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MIT App Inventor Official Open-Source Release</title>
-      <link>http://conoroneill.net/mit-app-inventor-official-open-source-release/mit-app-inventor-official-open-source-release/</link>
+      <link>http://conoroneill.net/mit-app-inventor-official-open-source-release/mit-app-inventor-official-open-source-release.html</link>
       <pubDate>Tue, 23 Oct 2012 07:59:20 +0100</pubDate>
       
-      <guid>http://conoroneill.net/mit-app-inventor-official-open-source-release/mit-app-inventor-official-open-source-release/</guid>
+      <guid>http://conoroneill.net/mit-app-inventor-official-open-source-release/mit-app-inventor-official-open-source-release.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;MIT App Inventor Official Open-Source Release&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m really pleased to see this release happen. Dec/Jan was an awkward time as Google dropped App Inventor and MIT didn&amp;rsquo;t have their site ready. MIT has done a sterling job since and it&amp;rsquo;s great to know that the &lt;a href=&#34;http://appinventor.mit.edu/appinventor-sources/&#34;&gt;full up-to-date source code is available&lt;/a&gt;. I hope a community of contributors to the codebase now starts building up.&lt;/p&gt;

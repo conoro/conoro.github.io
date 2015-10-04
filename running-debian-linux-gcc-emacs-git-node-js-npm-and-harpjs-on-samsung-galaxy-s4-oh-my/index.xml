@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Running-Debian-Linux-Gcc-Emacs-Git-Node-Js-Npm-And-Harpjs-On-Samsung-Galaxy-S4-Oh-Mies on Cross Dominant</title>
-    <link>http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/</link>
+    <link>http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my.html</link>
     <description>Recent content in Running-Debian-Linux-Gcc-Emacs-Git-Node-Js-Npm-And-Harpjs-On-Samsung-Galaxy-S4-Oh-Mies on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Mar 2014 20:50:00 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Running Debian Linux, GCC, Emacs, Git, Node.js, npm and HarpJS on Samsung Galaxy S4. Oh my.</title>
-      <link>http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/</link>
+      <link>http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my.html</link>
       <pubDate>Fri, 14 Mar 2014 20:50:00 +0000</pubDate>
       
-      <guid>http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/</guid>
+      <guid>http://conoroneill.net/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my/running-debian-linux-gcc-emacs-git-node-js-npm-and-harpjs-on-samsung-galaxy-s4-oh-my.html</guid>
       <description>&lt;p&gt;I&amp;rsquo;ll shortly be moving this entire blog from WordPress to &lt;a href=&#34;http://harpjs.com/docs/deployment/github-pages&#34;&gt;HarpJS&lt;/a&gt; generated static pages over on GitHub. It hasn&amp;rsquo;t been as smooth a process as I&amp;rsquo;d hoped but I&amp;rsquo;ve learned lots. We&amp;rsquo;re also using HarpJS in a work context and it works great there running under Node. I&amp;rsquo;ll write it all up either this weekend or next.&lt;/p&gt;
 
 &lt;p&gt;Then this evening I asked myself the silly question &amp;ldquo;I wonder can I run Node.js on Android?&amp;rdquo;. It turns out you can. But it&amp;rsquo;s a teensy bit fiddly to get going. The biggest problem turned out to be Android 4.4 KitKat which made the first few steps the hardest.&lt;/p&gt;

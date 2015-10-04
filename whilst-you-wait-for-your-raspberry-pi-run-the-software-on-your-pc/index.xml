@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Whilst-You-Wait-For-Your-Raspberry-Pi-Run-The-Software-On-Your-Pcs on Cross Dominant</title>
-    <link>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/</link>
+    <link>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc.html</link>
     <description>Recent content in Whilst-You-Wait-For-Your-Raspberry-Pi-Run-The-Software-On-Your-Pcs on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Apr 2012 13:13:15 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Whilst you wait for your Raspberry Pi, run the software on your PC</title>
-      <link>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/</link>
+      <link>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc.html</link>
       <pubDate>Thu, 12 Apr 2012 13:13:15 +0100</pubDate>
       
-      <guid>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/</guid>
+      <guid>http://conoroneill.net/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc/whilst-you-wait-for-your-raspberry-pi-run-the-software-on-your-pc.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Whilst you wait for your Raspberry Pi, run the software on your PC&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;As we all patiently wait for the &lt;a href=&#34;http://www.raspberrypi.org/&#34;&gt;Raspberry Pi&lt;/a&gt; boards to arrive, one smart individual &lt;a href=&#34;http://russelldavis.org/2011/09/10/virtualbox-vm-for-raspberrypi-development/&#34;&gt;has built a full VM&lt;/a&gt; so you can try out the software in Virtualbox on your PC. I&amp;rsquo;m downloading now and will report back on whether it runs on VMware Workstation and Player too. There are a few things I want to try out on Raspberry Pi and this setup will let me confirm whether they are feasible or not in advance.&lt;/p&gt;

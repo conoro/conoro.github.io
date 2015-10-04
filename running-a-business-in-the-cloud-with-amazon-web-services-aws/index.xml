@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Running-A-Business-In-The-Cloud-With-Amazon-Web-Services-Aws on Cross Dominant</title>
-    <link>http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws/</link>
+    <link>http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws.html</link>
     <description>Recent content in Running-A-Business-In-The-Cloud-With-Amazon-Web-Services-Aws on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 Sep 2012 12:44:29 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Running a business in the Cloud with Amazon Web Services #AWS</title>
-      <link>http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws/running-a-business-in-the-cloud-with-amazon-web-services-aws/</link>
+      <link>http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws/running-a-business-in-the-cloud-with-amazon-web-services-aws.html</link>
       <pubDate>Tue, 04 Sep 2012 12:44:29 +0100</pubDate>
       
-      <guid>http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws/running-a-business-in-the-cloud-with-amazon-web-services-aws/</guid>
+      <guid>http://conoroneill.net/running-a-business-in-the-cloud-with-amazon-web-services-aws/running-a-business-in-the-cloud-with-amazon-web-services-aws.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Running a business in the Cloud with Amazon Web Services #AWS&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;These are the slides from a talk I gave back in March to the UCC SME Cloud Incubator Workshop. It goes through all the details of our use of Amazon Web Services with some mentions of other cloud providers too.&lt;/p&gt;

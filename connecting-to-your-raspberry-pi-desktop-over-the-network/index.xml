@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Connecting-To-Your-Raspberry-Pi-Desktop-Over-The-Networks on Cross Dominant</title>
-    <link>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/</link>
+    <link>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network.html</link>
     <description>Recent content in Connecting-To-Your-Raspberry-Pi-Desktop-Over-The-Networks on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 May 2012 06:55:01 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Connecting to your Raspberry Pi desktop over the network</title>
-      <link>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/connecting-to-your-raspberry-pi-desktop-over-the-network/</link>
+      <link>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/connecting-to-your-raspberry-pi-desktop-over-the-network.html</link>
       <pubDate>Wed, 09 May 2012 06:55:01 +0100</pubDate>
       
-      <guid>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/connecting-to-your-raspberry-pi-desktop-over-the-network/</guid>
+      <guid>http://conoroneill.net/connecting-to-your-raspberry-pi-desktop-over-the-network/connecting-to-your-raspberry-pi-desktop-over-the-network.html</guid>
       <description>&lt;p&gt;#&amp;ldquo;Connecting to your Raspberry Pi desktop over the network&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo apt-get install xrdp&lt;/code&gt;&lt;/pre&gt;
