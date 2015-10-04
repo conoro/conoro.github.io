@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openvpn-On-Windows-8s on Cross Dominant</title>
-    <link>http://conoroneill.net/openvpn-on-windows-8.html</link>
+    <link>http://conoroneill.net/openvpn-on-windows-8/</link>
     <description>Recent content in Openvpn-On-Windows-8s on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Mar 2013 08:52:11 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/openvpn-on-windows-8.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/openvpn-on-windows-8/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OpenVPN on Windows 8</title>
-      <link>http://conoroneill.net/openvpn-on-windows-8/openvpn-on-windows-8.html</link>
+      <link>http://conoroneill.net/openvpn-on-windows-8/openvpn-on-windows-8/</link>
       <pubDate>Wed, 06 Mar 2013 08:52:11 +0000</pubDate>
       
-      <guid>http://conoroneill.net/openvpn-on-windows-8/openvpn-on-windows-8.html</guid>
+      <guid>http://conoroneill.net/openvpn-on-windows-8/openvpn-on-windows-8/</guid>
       <description>&lt;p&gt;#&amp;ldquo;OpenVPN on Windows 8&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m two months using Windows 8 64-bit on my desktop and I&amp;rsquo;m still ok with it. The only real weirdness is a lot of disk churning even when nothing is happening. I turned off indexing but to no avail.&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Twitter-Tackling-Potential-Spamabuse-Hards on Cross Dominant</title>
-    <link>http://conoroneill.net/twitter-tackling-potential-spamabuse-hard.html</link>
+    <link>http://conoroneill.net/twitter-tackling-potential-spamabuse-hard/</link>
     <description>Recent content in Twitter-Tackling-Potential-Spamabuse-Hards on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Apr 2010 11:38:21 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/twitter-tackling-potential-spamabuse-hard.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/twitter-tackling-potential-spamabuse-hard/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Twitter tackling potential spam/abuse hard</title>
-      <link>http://conoroneill.net/twitter-tackling-potential-spamabuse-hard/twitter-tackling-potential-spamabuse-hard.html</link>
+      <link>http://conoroneill.net/twitter-tackling-potential-spamabuse-hard/twitter-tackling-potential-spamabuse-hard/</link>
       <pubDate>Sat, 10 Apr 2010 11:38:21 +0100</pubDate>
       
-      <guid>http://conoroneill.net/twitter-tackling-potential-spamabuse-hard/twitter-tackling-potential-spamabuse-hard.html</guid>
+      <guid>http://conoroneill.net/twitter-tackling-potential-spamabuse-hard/twitter-tackling-potential-spamabuse-hard/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Twitter tackling potential spam/abuse hard&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I got a shock last night to receive an email from Twitter support to say that an OAuth Token we had configured had been suspended due to potential abuse.&lt;p /&gt;&lt;div&gt;A quick explanation of what that means: When clients add &lt;a href=&#34;http://www.loudervoice.com/&#34;&gt;LouderVoice&lt;/a&gt; customer reviews to their site, we provide the ability for their users to Login with Facebook and Twitter credentials and also to send a copy of their review to their Facebook or Twitter Account. Unlike many systems, we don&amp;#39;t force clients to use our generic FB/Twitter setup but give them the ability to have it fully branded with their logos etc. To do this on Twitter you setup an &amp;quot;App&amp;quot; there. You may have encountered these as a user where an external application requests permission in a pop-up to access your account. This OAuth system means you never have to give your Twitter username or password to external sites. &lt;p /&gt;&lt;div&gt;Generally we provide the instructions to the customer or their web development providers to set this up since it is very easy to do but sometimes, when under time pressure, we do it for them. Yesterday we did it for a globally known brand. And then we got the email!&lt;/div&gt; &lt;p /&gt;&lt;div&gt;I immediately guessed it was the use of the Brand name that was the problem and a quick email to Twitter confirmed it. They simply didn&amp;#39;t see enough information in the App &amp;quot;About&amp;quot; fields to know that we weren&amp;#39;t a bunch of spammers. I explained our relationship to the brand and offered contact names for confirmation and the Twitter guys then unlocked the app.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;I&amp;#39;m honestly delighted that Twitter did this. Whilst the spammers/bots are still driving us nuts on normal Twitter accounts, it appears that very close scrutiny is being placed on the API/Apps side of things. And rightly so.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;We&amp;#39;ll be updating our setup instructions so that the About info makes it very clear what the purpose of the Apps are and who is responsible.&lt;/div&gt;&lt;p /&gt;&lt;div&gt;Good job Twitter!&lt;/div&gt;&lt;p /&gt;&lt;/div&gt;&lt;/p&gt;

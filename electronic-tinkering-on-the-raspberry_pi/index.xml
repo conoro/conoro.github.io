@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Electronic-Tinkering-On-The-Raspberry_pis on Cross Dominant</title>
-    <link>http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi.html</link>
+    <link>http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi/</link>
     <description>Recent content in Electronic-Tinkering-On-The-Raspberry_pis on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 Feb 2013 11:40:18 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Electronic Tinkering on the @Raspberry_Pi and @Arduino</title>
-      <link>http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi/electronic-tinkering-on-the-raspberry_pi.html</link>
+      <link>http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi/electronic-tinkering-on-the-raspberry_pi/</link>
       <pubDate>Sun, 10 Feb 2013 11:40:18 +0000</pubDate>
       
-      <guid>http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi/electronic-tinkering-on-the-raspberry_pi.html</guid>
+      <guid>http://conoroneill.net/electronic-tinkering-on-the-raspberry_pi/electronic-tinkering-on-the-raspberry_pi/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Electronic Tinkering on the @Raspberry_Pi and @Arduino&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been lucky to-date that I haven&amp;rsquo;t killed the RPi stone dead with my little projects. I find the simplest way to help avoid any catastrophic shorts is to use an old 40-core IDE cable (note, the &amp;ldquo;newer&amp;rdquo; 80-core ones don&amp;rsquo;t work even tho they fit). I Dremeled mine last week to fit in this &lt;a href=&#34;http://www.ebay.co.uk/itm/Pi-Box-Case-Box-Enclosure-for-Raspberry-Pi-Computer-New-From-PiWorks-/390538699061?pt=UK_Computing_DesktopComponents_RL&amp;hash=item5aedeba135&#34;&gt;very nice inexpensive case&lt;/a&gt;.&lt;/p&gt;

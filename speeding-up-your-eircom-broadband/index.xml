@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Speeding-Up-Your-Eircom-Broadbands on Cross Dominant</title>
-    <link>http://conoroneill.net/speeding-up-your-eircom-broadband.html</link>
+    <link>http://conoroneill.net/speeding-up-your-eircom-broadband/</link>
     <description>Recent content in Speeding-Up-Your-Eircom-Broadbands on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 Feb 2010 12:16:30 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/speeding-up-your-eircom-broadband.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/speeding-up-your-eircom-broadband/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Speeding up your Eircom Broadband</title>
-      <link>http://conoroneill.net/speeding-up-your-eircom-broadband/speeding-up-your-eircom-broadband.html</link>
+      <link>http://conoroneill.net/speeding-up-your-eircom-broadband/speeding-up-your-eircom-broadband/</link>
       <pubDate>Sun, 07 Feb 2010 12:16:30 +0000</pubDate>
       
-      <guid>http://conoroneill.net/speeding-up-your-eircom-broadband/speeding-up-your-eircom-broadband.html</guid>
+      <guid>http://conoroneill.net/speeding-up-your-eircom-broadband/speeding-up-your-eircom-broadband/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Speeding up your Eircom Broadband&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;We signed up for Eircom 7 Mbs broadband last year having moved from dial-up -&amp;gt; ISDN -&amp;gt; 2 Mbs -&amp;gt; 3 Mbs since arriving in Bandon in 2003. However, the lines out to Old Chapel are allegedly &amp;quot;rubbish&amp;quot;, whatever that means. So despite being less than 2km from the exchange, we were mainly connecting at 4Mbs on the 7Mbs line. Or worse, connecting at 5.5 and falling back to 4 or worse.&lt;p /&gt; As a step one, I dumped the chronically unreliable Netgear Rangemax DG834PN router and replaced it with a Billion 7402NX. It does Wireless-N and is well known for being good with bad lines.&lt;p /&gt;Whilst I was disappointed to find that it only connected 5Mbs, I was thrilled that it was generally a rock-solid 5 with better actual throughput than the Netgear.&lt;p /&gt; Then three weeks ago I finally decided to disconnect some unused extension wiring. Bang, now I was on 6.1Mbs. Wahoo!&lt;p /&gt;Yesterday, I opened up the main Eircom phone point and pulled out all the other extension wiring, leaving a lone pair of wires connected.&lt;p /&gt; Damn still on 6.1Mbs.&lt;p /&gt;But this morning I did an Ubuntu update on the kids&amp;#39; PC. It averaged 650 KB/s download (bytes not bits). That&amp;#39;s 5Mbs+ sustained on a router that has 6 other PCs connected to it doing a variety of stuff. That&amp;#39;ll do nicely.&lt;p /&gt; Of course 24Mbs is a pipe dream.&lt;/p&gt;

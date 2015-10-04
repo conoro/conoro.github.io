@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Summary-Of-Setting-Up-Your-Own-Private-App-Inventor-Server-For-Your-Schools on Cross Dominant</title>
-    <link>http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school.html</link>
+    <link>http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/</link>
     <description>Recent content in Summary-Of-Setting-Up-Your-Own-Private-App-Inventor-Server-For-Your-Schools on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 31 Dec 2011 17:50:07 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Summary of Setting Up Your Own Private App Inventor Server For Your School</title>
-      <link>http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school.html</link>
+      <link>http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/</link>
       <pubDate>Sat, 31 Dec 2011 17:50:07 +0000</pubDate>
       
-      <guid>http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school.html</guid>
+      <guid>http://conoroneill.net/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Summary of Setting Up Your Own Private App Inventor Server For Your School&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;It turns out that the setup of a private App Inventor server is easier than I thought. If you are used to Amazon EC2, it&amp;rsquo;ll be a doddle for you. The Google App Engine bit is absolutely trivial. Full &lt;a href=&#34;https://docs.google.com/document/d/124V0q-Jzs8n9LqAlFKnSWxGLei_KZAUQGJUZwlALVws/edit?hl=en_US&#34;&gt;MIT documentation is here&lt;/a&gt;.

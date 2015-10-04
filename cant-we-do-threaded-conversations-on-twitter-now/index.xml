@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cant-We-Do-Threaded-Conversations-On-Twitter-Nows on Cross Dominant</title>
-    <link>http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now.html</link>
+    <link>http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now/</link>
     <description>Recent content in Cant-We-Do-Threaded-Conversations-On-Twitter-Nows on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 19 Jun 2010 09:39:48 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Can&#39;t we do threaded conversations on Twitter now?</title>
-      <link>http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now/cant-we-do-threaded-conversations-on-twitter-now.html</link>
+      <link>http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now/cant-we-do-threaded-conversations-on-twitter-now/</link>
       <pubDate>Sat, 19 Jun 2010 09:39:48 +0100</pubDate>
       
-      <guid>http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now/cant-we-do-threaded-conversations-on-twitter-now.html</guid>
+      <guid>http://conoroneill.net/cant-we-do-threaded-conversations-on-twitter-now/cant-we-do-threaded-conversations-on-twitter-now/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Can&amp;rsquo;t we do threaded conversations on Twitter now?&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I just saw this &lt;a href=&#34;http://techcrunch.com/2010/06/18/twitter-threaded-conversations/&#34;&gt;TechCruch story&lt;/a&gt; on how threaded conversations might be coming to Twitter. It set me thinking. Why can&amp;#39;t this be done now with any of the decent desktop clients like Tweetdeck once they add support for the new &lt;a href=&#34;http://apiwiki.twitter.com/Annotations-Overview&#34;&gt;annotations feature&lt;/a&gt;?&lt;p /&gt;&lt;div&gt;Every tweet gets an annotation like twitter:thread=0978098098098093434 and as long as you specifically reply to an individual tweet, then your reply gets the same annotation. Then you cluster them together. Or am I missing something?&lt;/div&gt; &lt;p /&gt;&lt;div&gt;We&amp;#39;ve had machine-tags (aka annotations) in the &lt;a href=&#34;http://www.loudervoice.com/&#34;&gt;LouderVoice&lt;/a&gt; API since 2008. For something that on the surface looks very simple, it really gives incredible power. You can add unlimited metadata to any review and thenretrievebased on any of that data. Really looking forward to kicking the tyres on the same in Twitter in the coming months.&lt;/div&gt;&lt;/p&gt;

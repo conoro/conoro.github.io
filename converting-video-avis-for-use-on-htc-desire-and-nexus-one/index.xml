@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Converting-Video-Avis-For-Use-On-Htc-Desire-And-Nexus-Ones on Cross Dominant</title>
-    <link>http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one.html</link>
+    <link>http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one/</link>
     <description>Recent content in Converting-Video-Avis-For-Use-On-Htc-Desire-And-Nexus-Ones on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 May 2010 12:42:17 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Converting Video AVIs for use on HTC Desire and Nexus One</title>
-      <link>http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one/converting-video-avis-for-use-on-htc-desire-and-nexus-one.html</link>
+      <link>http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one/converting-video-avis-for-use-on-htc-desire-and-nexus-one/</link>
       <pubDate>Wed, 05 May 2010 12:42:17 +0100</pubDate>
       
-      <guid>http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one/converting-video-avis-for-use-on-htc-desire-and-nexus-one.html</guid>
+      <guid>http://conoroneill.net/converting-video-avis-for-use-on-htc-desire-and-nexus-one/converting-video-avis-for-use-on-htc-desire-and-nexus-one/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Converting Video AVIs for use on HTC Desire and Nexus One&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;Grab &lt;a href=&#34;http://handbrake.fr/&#34;&gt;Handbrake&lt;/a&gt; (Windows, Mac, Unix)&lt;p /&gt;&lt;div&gt;For zero effort just use the iPhone preset in the GUI.&lt;/div&gt;&lt;p /&gt;&lt;div&gt;If you use the command-line, this creates very nice video indeed (via &lt;a href=&#34;http://www.nexusoneforum.net/forum/nexus-one-faq-how-tos/840-how-convert-any-video-your-nexus-one.html&#34;&gt;NexusOneForum&lt;/a&gt;) that makes use of the h264 graphics accelerator in the phone.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;HandBrakeCLI -i &amp;quot;infile.avi&amp;quot; -o &amp;quot;outfile.mp4&amp;quot; -f mp4 -e x264 -q 0.60 &amp;ndash;loose-anamorphic -x level=30:cabac=0:ref=2:mixed-refs:analyse=all:me=umh:no-fast-pskip=1 &amp;ndash;deblock -E faac -B 128 -R 48 -6 d&lt;/div&gt; &lt;/div&gt;&lt;p /&gt;&lt;div&gt;Note that it can now also convert unencrypted DVDs directly too.&lt;/div&gt;&lt;p /&gt; &lt;/div&gt;&lt;/p&gt;

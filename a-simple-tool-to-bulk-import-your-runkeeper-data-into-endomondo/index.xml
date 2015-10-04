@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>A-Simple-Tool-To-Bulk-Import-Your-Runkeeper-Data-Into-Endomondos on Cross Dominant</title>
-    <link>http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo.html</link>
+    <link>http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/</link>
     <description>Recent content in A-Simple-Tool-To-Bulk-Import-Your-Runkeeper-Data-Into-Endomondos on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Mar 2013 10:43:51 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A simple tool to bulk import your RunKeeper data into Endomondo</title>
-      <link>http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo.html</link>
+      <link>http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/</link>
       <pubDate>Tue, 12 Mar 2013 10:43:51 +0000</pubDate>
       
-      <guid>http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo.html</guid>
+      <guid>http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/</guid>
       <description>&lt;p&gt;#&amp;ldquo;A simple tool to bulk import your RunKeeper data into Endomondo&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;UPDATE 17th Aug 2013: The tool should now be able to import Sports Tracker files into Endomondo too.&lt;/p&gt;

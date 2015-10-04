@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Froyo-Running-On-Htc-G1s on Cross Dominant</title>
-    <link>http://conoroneill.net/froyo-running-on-htc-g1.html</link>
+    <link>http://conoroneill.net/froyo-running-on-htc-g1/</link>
     <description>Recent content in Froyo-Running-On-Htc-G1s on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jul 2010 08:56:00 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/froyo-running-on-htc-g1.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/froyo-running-on-htc-g1/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Froyo running on HTC G1</title>
-      <link>http://conoroneill.net/froyo-running-on-htc-g1/froyo-running-on-htc-g1.html</link>
+      <link>http://conoroneill.net/froyo-running-on-htc-g1/froyo-running-on-htc-g1/</link>
       <pubDate>Tue, 27 Jul 2010 08:56:00 +0100</pubDate>
       
-      <guid>http://conoroneill.net/froyo-running-on-htc-g1/froyo-running-on-htc-g1.html</guid>
+      <guid>http://conoroneill.net/froyo-running-on-htc-g1/froyo-running-on-htc-g1/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Froyo running on HTC G1&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;This is CyanogenMod 6.0RC2. Working brilliantly on old hardware.&lt;/p&gt;

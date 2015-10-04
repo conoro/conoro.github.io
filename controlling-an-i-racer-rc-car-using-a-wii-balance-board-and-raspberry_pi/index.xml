@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Controlling-An-I-Racer-Rc-Car-Using-A-Wii-Balance-Board-And-Raspberry_pis on Cross Dominant</title>
-    <link>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi.html</link>
+    <link>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/</link>
     <description>Recent content in Controlling-An-I-Racer-Rc-Car-Using-A-Wii-Balance-Board-And-Raspberry_pis on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 May 2013 08:17:38 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi</title>
-      <link>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi.html</link>
+      <link>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/</link>
       <pubDate>Tue, 07 May 2013 08:17:38 +0100</pubDate>
       
-      <guid>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi.html</guid>
+      <guid>http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I love watching ideas bounce back and forward between people on Twitter and see them grow. The best for me recently started when &lt;a href=&#34;http://www.theverge.com/2013/5/2/4292712/fitscales-wii-fit-balance-board-connected-scale&#34;&gt;The Verge posted a story&lt;/a&gt; about an OpenSource Android App which basically turned a &lt;a href=&#34;http://wiibrew.org/wiki/Wii_Balance_Board&#34;&gt;Wii Balance Board&lt;/a&gt; into a Withings weighing scales, including RunKeeper and Fitbit integration. I retweeted it and it was picked up by &lt;a href=&#34;https://twitter.com/joedesbonnet&#34;&gt;Joe Desbonnet&lt;/a&gt;. He realised you could also do some interesting things with the Balance Board and a Raspberry Pi and started hacking. Which of course made me realise I could control the i-racer with it!&lt;/p&gt;

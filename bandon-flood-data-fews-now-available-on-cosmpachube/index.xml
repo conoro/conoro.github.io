@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bandon-Flood-Data-Fews-Now-Available-On-Cosmpachubes on Cross Dominant</title>
-    <link>http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube.html</link>
+    <link>http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube/</link>
     <description>Recent content in Bandon-Flood-Data-Fews-Now-Available-On-Cosmpachubes on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Jun 2012 19:35:01 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bandon Flood Data (FEWS) now available on Cosm/Pachube</title>
-      <link>http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube/bandon-flood-data-fews-now-available-on-cosmpachube.html</link>
+      <link>http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube/bandon-flood-data-fews-now-available-on-cosmpachube/</link>
       <pubDate>Fri, 22 Jun 2012 19:35:01 +0100</pubDate>
       
-      <guid>http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube/bandon-flood-data-fews-now-available-on-cosmpachube.html</guid>
+      <guid>http://conoroneill.net/bandon-flood-data-fews-now-available-on-cosmpachube/bandon-flood-data-fews-now-available-on-cosmpachube/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Bandon Flood Data (FEWS) now available on Cosm/Pachube&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;When &lt;a href=&#34;http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/&#34;&gt;I announced the availablity of Open Data&lt;/a&gt; on Google Fusion Tables for the &lt;a href=&#34;http://bandonfloodwarning.ie/&#34;&gt;Bandon Flood Early Warning System (FEWS)&lt;/a&gt; last year, one suggestion that was made to me by Imogen Bertin was to put it up on &lt;a href=&#34;http://cosm.com&#34;&gt;Pachube&lt;/a&gt; (now renamed to the slightly less obscure &lt;a href=&#34;http://cosm.com&#34;&gt;Cosm&lt;/a&gt;). I gave it a go but couldn&amp;rsquo;t figure it out. Despite providing it with the CSV link to the Fusion Table, it never did anything with the data. So I gave up due to busyness.&lt;/p&gt;

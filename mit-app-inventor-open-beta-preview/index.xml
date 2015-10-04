@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mit-App-Inventor-Open-Beta-Previews on Cross Dominant</title>
-    <link>http://conoroneill.net/mit-app-inventor-open-beta-preview.html</link>
+    <link>http://conoroneill.net/mit-app-inventor-open-beta-preview/</link>
     <description>Recent content in Mit-App-Inventor-Open-Beta-Previews on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Mar 2012 08:15:48 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/mit-app-inventor-open-beta-preview.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/mit-app-inventor-open-beta-preview/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MIT App Inventor Open Beta Preview</title>
-      <link>http://conoroneill.net/mit-app-inventor-open-beta-preview/mit-app-inventor-open-beta-preview.html</link>
+      <link>http://conoroneill.net/mit-app-inventor-open-beta-preview/mit-app-inventor-open-beta-preview/</link>
       <pubDate>Tue, 06 Mar 2012 08:15:48 +0000</pubDate>
       
-      <guid>http://conoroneill.net/mit-app-inventor-open-beta-preview/mit-app-inventor-open-beta-preview.html</guid>
+      <guid>http://conoroneill.net/mit-app-inventor-open-beta-preview/mit-app-inventor-open-beta-preview/</guid>
       <description>&lt;p&gt;#&amp;ldquo;MIT App Inventor Open Beta Preview&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&lt;blockquote&gt;For the past two months, we have been conducting a closed test of the system for an increasing number of testers, and weve currently scaled to 5000 testers. Today, were taking the next step, and opening the MIT App Inventor service to everyone. All you will need is a Google ID for log-in (for example, a Gmail account).&lt;/blockquote&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongopress-A-Mongodb-Based-Cms-Inspired-By-Wordpresses on Cross Dominant</title>
-    <link>http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress.html</link>
+    <link>http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress/</link>
     <description>Recent content in Mongopress-A-Mongodb-Based-Cms-Inspired-By-Wordpresses on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Dec 2011 17:37:45 +0000</lastBuildDate>
-    <atom:link href="http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MongoPress - A MongoDB-based CMS inspired by WordPress</title>
-      <link>http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress/mongopress-a-mongodb-based-cms-inspired-by-wordpress.html</link>
+      <link>http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress/mongopress-a-mongodb-based-cms-inspired-by-wordpress/</link>
       <pubDate>Sun, 18 Dec 2011 17:37:45 +0000</pubDate>
       
-      <guid>http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress/mongopress-a-mongodb-based-cms-inspired-by-wordpress.html</guid>
+      <guid>http://conoroneill.net/mongopress-a-mongodb-based-cms-inspired-by-wordpress/mongopress-a-mongodb-based-cms-inspired-by-wordpress/</guid>
       <description>&lt;p&gt;#&amp;ldquo;MongoPress - A MongoDB-based CMS inspired by WordPress&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;These guys started out building a plugin for WordPress to make it use MongoDB instead of MySQL but found it was almost impossible. So they decided to build an alternative called &lt;a href=&#34;http://www.mongopress.org/&#34;&gt;MongoPress&lt;/a&gt; based on many of the good things about WordPress and hopefully none of the bad things (Die-WordPress-Editor-Die-Die-Die).&lt;p /&gt;&lt;div&gt;It&amp;#39;s early days but it looks interesting so far. I&amp;#39;ll play around over Christmas and see how it scales. &lt;p /&gt;&lt;div&gt;&lt;iframe src=&#34;http://www.youtube.com/embed/N37JulF8XTI?wmode=transparent&#34; allowfullscreen frameborder=&#34;0&#34; height=&#34;417&#34; width=&#34;500&#34;&gt;&lt;/iframe&gt; &lt;/div&gt;&lt;p /&gt;&lt;/div&gt;&lt;/p&gt;

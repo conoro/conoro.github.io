@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>We-Need-A-Computer-History-Museum-For-Web-Apps-Like-Facebook-And-Twitters on Cross Dominant</title>
-    <link>http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter.html</link>
+    <link>http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/</link>
     <description>Recent content in We-Need-A-Computer-History-Museum-For-Web-Apps-Like-Facebook-And-Twitters on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Sep 2011 13:05:51 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>We Need a Computer History Museum for Web Apps like Facebook and Twitter</title>
-      <link>http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter.html</link>
+      <link>http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/</link>
       <pubDate>Mon, 26 Sep 2011 13:05:51 +0100</pubDate>
       
-      <guid>http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter.html</guid>
+      <guid>http://conoroneill.net/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/we-need-a-computer-history-museum-for-web-apps-like-facebook-and-twitter/</guid>
       <description>&lt;p&gt;#&amp;ldquo;We Need a Computer History Museum for Web Apps like Facebook and Twitter&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I was just bitching on Facebook about the recent changes and one of the FB guys mentioned that he has seen the original Harvard version of it. I suddenly realised we need some way of capturing the activity and behaviour of important web-apps over time. We all remember the cultural terrorism of Carol Bartz in Yahoo shutting down GeoCities. How do you avoid the same fate for Buzz, Friendster, Orkut etc? &lt;p /&gt;&lt;div&gt;I&amp;#39;m not talking about getting your data out, I mean having some way of seeing what these apps did and how they did it. Some sort of EC2 instances running read-only &amp;quot;playback&amp;quot; or live demos of these apps?&lt;/div&gt; &lt;p /&gt;&lt;div&gt;Wouldn&amp;#39;t it be wonderful to see the evolution of Twitter over time, beyond static screenshots and HTML snapshots like the Wayback Machine.&lt;/div&gt;&lt;p /&gt;&lt;div&gt;Yeah, I know there are gigantic technical issues but I really treasure having ZX Spectrum emulators that let me play Manic Miner and my own games 30 years later. Surely people in the future would like to do similar with the major webapps?&lt;/div&gt;&lt;/p&gt;

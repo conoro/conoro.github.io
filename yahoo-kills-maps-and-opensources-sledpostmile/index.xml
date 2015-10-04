@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yahoo-Kills-Maps-And-Opensources-Sledpostmiles on Cross Dominant</title>
-    <link>http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile.html</link>
+    <link>http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile/</link>
     <description>Recent content in Yahoo-Kills-Maps-And-Opensources-Sledpostmiles on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Sep 2011 08:37:03 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Yahoo Kills Maps and OpenSources Sled/Postmile</title>
-      <link>http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile/yahoo-kills-maps-and-opensources-sledpostmile.html</link>
+      <link>http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile/yahoo-kills-maps-and-opensources-sledpostmile/</link>
       <pubDate>Fri, 02 Sep 2011 08:37:03 +0100</pubDate>
       
-      <guid>http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile/yahoo-kills-maps-and-opensources-sledpostmile.html</guid>
+      <guid>http://conoroneill.net/yahoo-kills-maps-and-opensources-sledpostmile/yahoo-kills-maps-and-opensources-sledpostmile/</guid>
       <description>&lt;p&gt;#&amp;ldquo;Yahoo Kills Maps and OpenSources Sled/Postmile&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;I gave up on Yahoo a long long time ago. The ultimate bungee VP company that came up with so many great products and ideas but followed through on almost none of them. I wouldn&amp;#39;t touch any new Yahoo web-app with a long shitty stick because I know it&amp;#39;ll be canned 12 months later. &lt;p /&gt;&lt;div&gt;The death of Yahoo Maps, once the absolute industry leader, is a case study in how Yahoo screws up. Brilliant piece on it over on &lt;a href=&#34;http://blog.programmableweb.com/2011/09/02/yahoo-maps-api-so-long-old-friend&#34;&gt;Programmable Web&lt;/a&gt;.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;But then, every once in a while, as with &lt;a href=&#34;http://pipes.yahoo.com/pipes/&#34;&gt;Pipes&lt;/a&gt;, Yahoo makes me smile and remember how &amp;quot;My Yahoo&amp;quot;was my home page for most of the 90s. It happened again last night with the &lt;a href=&#34;http://groups.google.com/group/nodejs/browse_thread/thread/90dde0c7ce9681e4&#34;&gt;Open Sourcing of Sled&lt;/a&gt; (and the rename to &lt;a href=&#34;https://github.com/hueniverse/postmile&#34;&gt;Postmile&lt;/a&gt;). You probably don&amp;#39;t know Sled but I played around with it a bit over the summer. It was a very neat, very responsive, list-making tool. The reason I was trying it was that it was built using &lt;a href=&#34;http://Node.js&#34;&gt;Node.js&lt;/a&gt; and our next project is doing the same.&lt;/div&gt; &lt;p /&gt;&lt;div&gt;The &lt;a href=&#34;http://groups.google.com/group/nodejs/browse_thread/thread/90dde0c7ce9681e4&#34;&gt;Google Groups post about it&lt;/a&gt; highlights the fact that Yahoo is still doing interesting stuff and doing virtual startups/skunkworks. The Open Sourcing of it is important for the Node community as there are very few complete end-to-end meaty sample Node Apps out there using&lt;span style=&#34;font-family: arial, sans-serif; font-size: 12px; background-color: rgb(255, 255, 255);&#34;&gt;MongoDB, Express, Socket.IO, Jade, JS, HTML5 and OAuth that people can learn from. This will hopefully be a showcase for what&amp;#39;s possible using the latest in web tech.&lt;/span&gt;&lt;/div&gt; &lt;div&gt;&lt;/div&gt;&lt;div&gt;Whilst I am thrilled with the project going up on &lt;a href=&#34;https://github.com/hueniverse/postmile&#34;&gt;GitHub&lt;/a&gt;, the fact that they are killing it internally in Yahoo tells the same old story. What is the future for Yahoo?&lt;/div&gt;&lt;/p&gt;
