@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Sep 2015 17:35:11 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/feed/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</title>
