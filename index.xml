@@ -6,8 +6,40 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Sep 2015 17:35:11 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2015 13:54:25 +0100</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Facebook is the Amazon AWS Killer</title>
+      <link>http://conoroneill.net/facebook-is-the-amazon-killer/</link>
+      <pubDate>Fri, 23 Oct 2015 13:54:25 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/facebook-is-the-amazon-killer/</guid>
+      <description>&lt;p&gt;AWS is now an $8Bn business for Amazon. Could anyone have predicted that in 1997 or even 2007? This week I was talking to a few people about who might be able to disrupt AWS. It won&amp;rsquo;t be easy. We immediately discounted the old guys like HP, IBM, Dell etc and even Google seems to be a complete also-ran in IaaS. Microsoft Azure might have potential.&lt;/p&gt;
+
+&lt;p&gt;PaaS is separate as it&amp;rsquo;s higher up the stack and makes use of IaaS. I expect Open Source PaaS like &lt;a href=&#34;http://www.openshift.com/&#34;&gt;OpenShift 3&lt;/a&gt; to grow very quickly in the coming years as it makes deployment and management of Apps incredibly easy. Where PaaS might hurt AWS is in abstracting what IaaS you are using, so as long as the feature set is there, you don&amp;rsquo;t care where your Apps are running (apart from Geo lag and data protection laws).&lt;/p&gt;
+
+&lt;p&gt;One of the people I talked to thinks that AWS will be slayed by a startup who may not even exist yet. He also felt that smart VPSes like &lt;a href=&#34;http://www.digitalocean.com&#34;&gt;DigitalOcean&lt;/a&gt; might do it. I&amp;rsquo;m a huge fan of DO and gained enormous reliability and speed by switching to it from Google Compute Engine/CloudSQL whilst reducing my bill by 2/3rds. But it still feels like an SME/SMB or individual developer solution.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m predicting it&amp;rsquo;ll be Facebook. Why? Think about the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;They understand building things at massive scale on a global basis&lt;/li&gt;
+&lt;li&gt;They build their &lt;a href=&#34;http://www.thejournal.ie/facebook-building-data-centre-in-meath-2161944-Jun2015/&#34;&gt;own datacenters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;They built the &lt;a href=&#34;http://www.theguardian.com/technology/2015/sep/25/facebook-datacentre-lulea-sweden-node-pole&#34;&gt;most energy efficient computing facility&lt;/a&gt; ever&lt;/li&gt;
+&lt;li&gt;They created the &lt;a href=&#34;http://www.opencompute.org/&#34;&gt;Open Compute&lt;/a&gt; project&lt;/li&gt;
+&lt;li&gt;They have incubated some &lt;a href=&#34;https://github.com/facebook&#34;&gt;incredible Open Source projects&lt;/a&gt; like &lt;a href=&#34;http://cassandra.apache.org/&#34;&gt;Cassandra&lt;/a&gt; and &lt;a href=&#34;https://facebook.github.io/react/&#34;&gt;React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;They use PHP. Forget I mentioned that ;-)&lt;/li&gt;
+&lt;li&gt;They understand that &lt;a href=&#34;http://ben-evans.com/benedictevans/2015/6/19/presentation-mobile-is-eating-the-world&#34;&gt;mobile is eating the world&lt;/a&gt; and they own &lt;a href=&#34;https://parse.com/&#34;&gt;Parse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;They understand real-time messaging &lt;a href=&#34;https://www.whatsapp.com/&#34;&gt;at massive scale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;They could do this in their sleep&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The big open question is how they do their virtualisation and containerisation. If they have that nailed, then I think they might go for it.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s re-visit this post in 5 years.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</title>
@@ -645,38 +677,6 @@ Front
 &lt;p&gt;Wearables.
 &lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit3.jpg&#34; alt=&#34;In its clip&#34; title=&#34;In its clip&#34; /&gt;
 &lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Some of my old Red Hat floppy disks from 2000-2004</title>
-      <link>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/</link>
-      <pubDate>Sat, 13 Dec 2014 14:35:30 +0000</pubDate>
-      
-      <guid>http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/</guid>
-      <description>&lt;p&gt;We had to empty our attic to get the house insulated this week. I uncovered some old Red Hat and Fedora floppies and CDs. I previously had much older ones but was quite ruthless about reusing floppies in the old days!&lt;/p&gt;
-
-&lt;p&gt;The very first Linux I installed was Slackware on a self-built AMD K5 PC in Sunnyvale in 1996 (I&amp;rsquo;ve never built a PC with Intel CPUs! Current box is self-built FX-8 Eight Core 8370). I was so traumatised by the Slackware experience, as a Windows 95 user, that I didn&amp;rsquo;t try again until &amp;lsquo;97 with Red Hat Linux 4. My oldest floppy is from Red Hat 6.2 in 2000:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_62b.jpg&#34; alt=&#34;Red Hat 6.2&#34; title=&#34;Red Hat 6.2&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;I then found a guy in the UK who would burn each new release of Red Hat onto CDs and send them to you for a few quid. That kept me going for ages. Here&amp;rsquo;s a Red Hat 7.0 boot floppy cunningly reusing a Windows NT disk:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_70b.jpg&#34; alt=&#34;Red Hat 7.0&#34; title=&#34;Red Hat 7.0&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Then Red Hat 7.3 updates on CD&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_73b.jpg&#34; alt=&#34;Red Hat 7.3&#34; title=&#34;Red Hat 7.3&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;And finally Fedora Core 1 boot disk:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fedora_fc1b.jpg&#34; alt=&#34;Fedora Core 1&#34; title=&#34;Fedora Core 1&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Next week I finally rid myself of the last vestiges of Ubuntu and move the home-office file server to CentOS 7 :-) I&amp;rsquo;m baaaaaaaack.&lt;/p&gt;
 </description>
     </item>
     
