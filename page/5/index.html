@@ -81,6 +81,49 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">13 Mar 2014, 08:35</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/upgrading-your-samsung-galaxy-s4-i9505-to-kitkat-4-4-2-on-osx/" class="post-title">Upgrading your Samsung Galaxy S4 i9505 to KitKat 4.4.2 on OSX</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Using an S4 on a Mac Book Pro is an exercise in futility now that it and other phones no longer appear as a disk drive but as a weird media device. The Samsung Kies software doesn&rsquo;t help and actually seems to make things worse. If you run Windows 7 inside VirtualBox you can see the phone&rsquo;s storage but doesn&rsquo;t see it when the phone is in upgrade mode. So you can&rsquo;t run the usual Odin software there.</p>
+
+<p>Then I found out about Heimdall, an open source tool for upgrading Galaxy phones on Windows, Linux and OSX. It looks scary and the UI is a horror but once you find out the command required, the whole thing only takes a few minutes.</p>
+
+<p>So assuming you want a Stock Android 4.2.2 ROM (rooted of course) on your phone and you are coming from some other ROM like the Google Play Edition ones, then the following will do the trick on An MBP.</p>
+
+<ul>
+<li>Uninstall Kies if it&rsquo;s installed. On a Mac, you stupidly have to re-download the <a href="http://www.samsung.com/uk/support/usefulsoftware/KIES/JSP">Kies installer</a> to get to its uninstall routine. Oh FFS.</li>
+<li>Download and install <a href="http://glassechidna.com.au/heimdall/">Heimdall</a></li>
+<li>Download the new 4.4.2 ROM. I <a href="http://forum.xda-developers.com/showthread.php?t=2250824">used this one</a></li>
+<li>Rename that file from .rar.md5 to .rar</li>
+<li>Install an Un-Rar tool like <a href="http://www.unrarx.com/">UnrarX</a></li>
+<li>If you are coming from a wildly different ROM, you&rsquo;ll probably have to Factory Reset. Before you do that, backup your Apps/Data using Titanium Backup and make bloody sure it backs up to SD Card, not internal memory (unlike me!).</li>
+<li>Power-off the phone and re-boot it by pressing Volume-Up and Power. When the bootloader menu appears, pick the factory reset option and then power-down</li>
+<li>Un-rar the downloaded file and you&rsquo;ll get a directory with a bunch of files in it.</li>
+<li>Put your S4 in download mode by shutting it off, then restarting it by holding Volume-Down and Power. At the prompt, press Volume-Up. Then connect it by USB to the Mac</li>
+<li>Open a terminal in OSX, cd to the directory that you un-rarred and type the following</li>
+</ul>
+
+<pre><code>sudo heimdall flash --APNHLOS NON-HLOS.bin --ABOOT aboot.mbn --BOOT boot.img --HIDDEN hidden.img.ext4 --MDM modem.bin --RECOVERY recovery.img --RPM rpm.mbn --SBL1 sbl1.mbn --SBL2 sbl2.mbn --SBL3 sbl3.mbn --SYSTEM system.img.ext4 --TZ tz.mbn --CACHE cache.img.ext4
+</code></pre>
+
+<ul>
+<li>That&rsquo;s it, after a few minutes you&rsquo;re done, the phone will reboot and give you an all clean setup.</li>
+<li>Optionally Run Titanium Backup to recover your Apps/Data</li>
+</ul>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">09 Mar 2014, 18:39</h1>
                 <section class="post">
                     <header class="post-header">
@@ -492,30 +535,6 @@ It can work with old TVs on SCART cable but picture is very fuzzy.</p>
 <p>The basics work ok. Finishing the steering is next along with an improved connection of the wheels to the motor.</p>
 
 <p>All for a fraction of what Mindstorms costs. Yes I know you can get motors for Technic but they are missing a big middle ground here by insisting on sticking with the over-thought over-designed over-priced under-achieving Mindstorms.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">04 Jan 2014, 13:28</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/displayport-to-dvi-to-hdmi-to-vga-to-monitor-and-it-works/" class="post-title">DisplayPort to DVI to HDMI to VGA to Monitor - And it works</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;DisplayPort to DVI to HDMI to VGA to Monitor - And it works&rdquo;</p>
-
-<p>Yesterday I got caught out in a meeting by having an MBP and a DVI adapter whilst the customer had a VGA projector. Luckily someone else saved the day with a proper Windows laptop with a VGA port :-)</p>
-
-<p>For giggles I just tried daisy-chaining a bunch of adapters I&rsquo;ve collected from various Chinese sources over the last two years. It works. <a href="http://www.youtube.com/watch?v=OHVjs4aobqs">Inconceivable</a>! That&rsquo;s $29 fewer dollars in Apple&rsquo;s cofffers.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/adapters.jpg"><img class="aligncenter size-full wp-image-1244" alt="adapters" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/01/adapters.jpg" width="1024" height="576" /></a></p>
 
                     </div>
                 </section>

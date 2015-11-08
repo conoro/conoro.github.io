@@ -6,8 +6,182 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2015 13:54:25 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2015 08:22:29 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>All the gory tech behind our Halloween Hallway of Horror</title>
+      <link>http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/</link>
+      <pubDate>Tue, 03 Nov 2015 08:22:29 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/</guid>
+      <description>
+
+&lt;p&gt;Despite starting weeks earlier than usual, Halloween still involved a day of last minute panic to bring everything together. The end result was this:&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/FClhSNwFfT0&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The basic setup was an update of ideas from previous years and consisted of the following.&lt;/p&gt;
+
+&lt;h2 id=&#34;3d-printed-mummy-in-coffin-doorbell:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;3D-printed Mummy in Coffin Doorbell&lt;/h2&gt;
+
+&lt;p&gt;This was my favourite aspect of the whole thing. I spotted a &lt;a href=&#34;http://www.thingiverse.com/thing:32905&#34;&gt;cool 3D design on Thingiverse&lt;/a&gt; and realised I could turn it into a doorbell by dremeling a hole in the back and hot-glueing the mummy to a simple push button.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy01b.jpg&#34; alt=&#34;Mummy Doorbell 1&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In fact the button was one I originally bought in 2012 when I got back into electronics. There was a small bug in my debounce code which I discovered too late and meant that kids had to press the button twice. But overall only a few failed to figure it out.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy02b.jpg&#34; alt=&#34;Mummy Doorbell 2&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;adafruit-audio-breakout-board-and-amp-with-speakers:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Adafruit Audio breakout board and amp with speakers&lt;/h2&gt;
+
+&lt;p&gt;I had intended everything to be Arduino and ESP8266 (running Arduino code) only so I needed some way of playing the scream. In previous years &lt;a href=&#34;http://conoroneill.net/the-raspberrypi-doorbell-of-dooooooooommmmmmmm/&#34;&gt;I used a Raspberry Pi&lt;/a&gt; (successfully) and &lt;a href=&#34;http://conoroneill.net/a-tech-halloween-mainly-made-of-fail/&#34;&gt;a really crappy device&lt;/a&gt; (less successfully).&lt;/p&gt;
+
+&lt;p&gt;In a bizarre twist to the &lt;a href=&#34;https://www.indiegogo.com/projects/be-maker-kit-plus-free-lessons-on-electronics-from-zero-to-internet-of-things&#34;&gt;BE Maker Kit Indiegogo scam&lt;/a&gt;, one of the people involved somehow got a Florida company to provide free electronics to the right amount. I used this to buy the &lt;a href=&#34;http://www.adafruit.com/products/1381&#34;&gt;Adafruit VS1053 Audio board&lt;/a&gt; and &lt;a href=&#34;https://www.adafruit.com/products/987&#34;&gt;Adafruit MAX98306 Audio Amp&lt;/a&gt;. The wiring on this looks complicated but it&amp;rsquo;s straight out of their tutorial.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/vs1053.jpg&#34; alt=&#34;Scary Sounds&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Audio was courtesy of &lt;a href=&#34;https://rg3.github.io/youtube-dl/&#34;&gt;youtube-dl&lt;/a&gt; and &lt;a href=&#34;http://winff.org/html_new/&#34;&gt;WinFF&lt;/a&gt; on &lt;a href=&#34;https://www.youtube.com/watch?v=BFqHyCoypfM&#34;&gt;this clip from YouTube&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Arduino Nano for this was the &amp;ldquo;Master&amp;rdquo; device. It detected the doorbell press and then started playing the file on the SD card and sent a high signal both to the Banana Pi for the LED strip and the Arduino Uno for the relays controlling the skull. It&amp;rsquo;s basically the Adafruit demo VS1053 code with a few extra lines added by me. The code for that &lt;a href=&#34;https://gist.github.com/conoro/58a028f7399b4e50619e&#34;&gt;is here on Gist&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;wifi-controlled-rgb-led-strip-using-a-banana-pi:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Wifi Controlled RGB LED Strip using a Banana Pi&lt;/h2&gt;
+
+&lt;p&gt;I finally ordered a bog-standard &lt;a href=&#34;http://eud.dx.com/product/waterproof-72w-4300lm-300-5050-smd-led-rgb-light-flexible-strip-w-44-key-controller-844233947&#34;&gt;5 metre 5050 RGB LED strip from dx.com&lt;/a&gt; over the summer. The value on these things is just staggering at less than €20.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/sku_233947_1.jpg&#34; alt=&#34;RGB LED&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;They come with a dedicated remote control and just need a decent PSU to provide the power. Myself and the kids had great fun illuminating my entire home office in a range of colours.&lt;/p&gt;
+
+&lt;p&gt;But the challenge for Halloween was how to control it. I could have run &lt;a href=&#34;http://www.lirc.org/html/irrecord.html&#34;&gt;irrecord&lt;/a&gt; on an &lt;a href=&#34;http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433&#34;&gt;ODROID C1&lt;/a&gt; or &lt;a href=&#34;http://www.bananapi.org/p/product.html&#34;&gt;Banana Pi&lt;/a&gt; to reverse engineer the remote control protocol and then use &lt;a href=&#34;http://eud.dx.com/product/38khz-ir-infrared-transmitter-module-for-arduino-844135040&#34;&gt;the RC transmitter&lt;/a&gt; I bought on DX. But luckily someone &lt;a href=&#34;http://hackaday.com/2015/08/25/esp8266-in-commercial-products/&#34;&gt;told Hackaday about the first ESP8266-powered commercial product&lt;/a&gt; they had found. It was a &lt;a href=&#34;http://es.aliexpress.com/item/rgb-strip-WiFi-controller-1-port-control-15-rgb-lights-communicate-with-Android-phone-to-dim/32301423622.html&#34;&gt;€9 Wifi H801 control module&lt;/a&gt; for RGB LED strips! I just had to get one.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/Rgbww-tira-llevada-regulador-wifi-1-port-control-200-luces-comunicar-con-tel%C3%A9fono-Android-a-trav%C3%A9s.jpg_350x350.jpg&#34; alt=&#34;Wifi RGB LED&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a brilliant little box that is easy to wire up and has a simple Android App for control. You connect to the internal Wifi Access Point it provides to do this. Here is the brilliant piece: You then use the app to tell the module to connect to your own Wifi router and then you do the same with the phone. Now your RGB LED strip is on your network!&lt;/p&gt;
+
+&lt;p&gt;But it gets better. A very smart person &lt;a href=&#34;https://www.domoticz.com/forum/viewtopic.php?f=38&amp;amp;t=7957&#34;&gt;reverse-engineered the basic over-the-air protocol&lt;/a&gt; that the app uses to control the Wifi module. Unfortunately he was using a slightly different module to me and it didn&amp;rsquo;t work. I then spent a week of evenings learning all about &lt;a href=&#34;https://www.wireshark.org/&#34;&gt;Wireshark&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Netcat&#34;&gt;Netcat&lt;/a&gt;. I was able to do the same as him and find the basic UDP control protocol (only minor difference in the packets)&lt;/p&gt;
+
+&lt;p&gt;In summary:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OFF: \xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00&lt;/li&gt;
+&lt;li&gt;RED: \xfb\xeb\xff\x00\x00\x00\x00\x9f\x97\x9d\x00&lt;/li&gt;
+&lt;li&gt;GREEN: \xfb\xeb\x00\xff\x00\x00\x00\x9f\x97\x9d\x00&lt;/li&gt;
+&lt;li&gt;BLUE: \xfb\xeb\x00\x00\xff\x00\x00\x9f\x97\x9d\x00&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;My plan was to use a &lt;a href=&#34;http://nodemcu.com/index_en.html&#34;&gt;NodeMCU ESP8266 module&lt;/a&gt; to send the relevant commands, using either NodeMCU LUA or the &lt;a href=&#34;https://github.com/esp8266/Arduino&#34;&gt;Arduino port to ESP8266&lt;/a&gt; but I ran out of time to experiment.&lt;/p&gt;
+
+&lt;p&gt;So I had Netcat working happily on the Banana Pi running Fedora but I also needed to be able to use the GPIO pins to tell the BPi when to turn on/off the LED strip. I then made the classic mistake of panicking on Halloween morning and switching to the RaspberryPi so I could use &lt;a href=&#34;http://wiringpi.com/&#34;&gt;WiringPi&lt;/a&gt; for GPIO. Except the Netcat commands hung on the RPi (still no idea why).&lt;/p&gt;
+
+&lt;p&gt;Some Googling revealed that WiringPi had been &lt;a href=&#34;https://github.com/LeMaker/WiringBP&#34;&gt;ported to Raspbian on the BPi&lt;/a&gt; so I tried that. Same Netcat problem! So I took a chance and re-inserted the Fedora SD card and downloaded the BPi version of WiringPi. Result! It compiled and ran perfectly.&lt;/p&gt;
+
+&lt;p&gt;The I moved on to several hours of trying to write a Bash script to monitor a GPIO pin using WiringPi and control the RGB LED strip with echo/netcat. All I will say about that is I am never ever writing a Bash script again (space-sensitive around brackets/equals for the love of god). This is the final result and, to be fair, it worked seamlessly:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;
+#!/bin/bash
+sets=`/usr/local/bin/gpio mode 7 down`
+setit=$sets
+state=&amp;quot;low&amp;quot;
+echo -e &#39;\xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00&#39; | nc -v -u 192.168.0.128 30977
+sleep 1
+while :
+do
+    pins=`/usr/local/bin/gpio read 7`
+    if [ $pins = &amp;quot;1&amp;quot; ]; then
+        if [ $state = &amp;quot;low&amp;quot; ]; then
+            echo -e &#39;\xfb\xeb\xff\x00\x00\x00\x00\x9f\x97\x9d\x00&#39; | nc -v -u 192.168.0.128 30977
+            state=&amp;quot;high&amp;quot;
+            echo high 
+        fi
+    else
+        if [ $state = &amp;quot;high&amp;quot; ]; then
+           echo -e &#39;\xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00&#39; | nc -v -u 192.168.0.128 30977
+           state=&amp;quot;low&amp;quot;
+           echo low
+        fi
+    fi
+done
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But I was so horrified by Bash, I did a quick and dirty re-write &lt;a href=&#34;https://gist.github.com/conoro/935e0fa3acc90d066b9a&#34;&gt;to Go this morning&lt;/a&gt;. It uses the &lt;a href=&#34;https://github.com/hugozhu/rpi&#34;&gt;Golang bindings to WiringPi&lt;/a&gt; and seems to work very well.&lt;/p&gt;
+
+&lt;p&gt;So the strip was now sorted. On to the rotating skull.&lt;/p&gt;
+
+&lt;h2 id=&#34;an-anatomically-correct-skull-with-scary-eyes:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;An anatomically correct skull with scary eyes&lt;/h2&gt;
+
+&lt;p&gt;The skull idea came from a wonderful &lt;a href=&#34;http://www.tested.com/art/makers/530668-how-make-realistic-horror-skull-prop/&#34;&gt;tested.com video&lt;/a&gt; where special effects artist Frank Ippolito bought a cheap skull on Amazon and then used latex, cotton wool and paint to turn it into a horrific burn-victim thing.&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/v8w4hufoujg&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I thought we could do the same and found a skull on Amazon UK. It arrived and looked great apart from the lack of a movable jaw. But it then sat there for months with no progress due to me being artistically challenged.&lt;/p&gt;
+
+&lt;p&gt;As an alternative I thought about doing something with eyes so I got some half-eyes from Amazon too They were a smidge small but fit for purpose. I grabbed some of my old tiny micro-servos which I have never found a use for and hot-glued the eyes to them. A bit of messing with the range of movement and I had a vaguely spooky setup.&lt;/p&gt;
+
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/EagDgNoEpTc&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;But the fact that you could see the servos and they move pretty slowly meant I was a bit disappointed. I tried to vamp them up a bit more by adding neopixel ring but it was too big so I switched to a single funky Adafruit RGB neopixel on each one. So now I had 6 wires coming out of each eye.&lt;/p&gt;
+
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/30LBjo5oG3I&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Finally on Saturday morning I went to finish this bit and decided it was too much work to get the Arduino code tweaked to do 2x Neopixels and 2x servos and somehow trigger them on/off on a potentially rotating head. At this point I found the silly fake-eye pingpong balls from last year. A quick cut in the back and I hot-glued a Neopixel to each one. I then hot-glued the eyes into the skull and wired the Neopixels to an Arduino Nano.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/skull_top.jpg&#34; alt=&#34;Skull Arduino&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I stuck the Nano and a Lipo battery to the top of the skull and covered it with a cool Buff. Having the eyes on permanently removed a little bit of the element of surprise but I still thought it worked well. The code for the Neopixels was just the &lt;a href=&#34;https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino&#34;&gt;standard Adafruit strand test&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/buff_skull.jpg&#34; alt=&#34;Buff Skull&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;making-the-skull-rotate:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Making the skull rotate&lt;/h2&gt;
+
+&lt;p&gt;I had always known I would rotate the skull in some fashion but for a while I wasn&amp;rsquo;t sure how. Quite a few weeks ago I came up with the idea to cement a hex driver into the bottom of the skull and sit it on top of a cheap crap €20 electric screwdriver I got ages ago from Woodies.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver1.jpg&#34; alt=&#34;Screwdriver1&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;As a screwdriver it was rubbish due to slowness and lack of torque. As a skull-rotator it was awesome, spinning the skull around at high speed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver2.jpg&#34; alt=&#34;Screwdriver2&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Of course I left the difficult bits until a week before Halloween when I sat down and tried to figure out how to control it all. The first attempt was with a dirt cheap double relay board I got 3 years ago and never used. But I couldn&amp;rsquo;t figure out how to make it go forwards and reverse. I then tried an old knock-off Adafruit Motor Shield but it couldn&amp;rsquo;t deliver enough juice (even with a 7.2V LiPo) to overcome the motor&amp;rsquo;s inertia. Finally I &lt;a href=&#34;http://arduino-info.wikispaces.com/ArduinoPower&#34;&gt;found a relay circuit&lt;/a&gt; that did forward/reverse and it worked like a charm.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/DC_Motor_2SPDT_Relay-450.jpg&#34; alt=&#34;Circuit&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/relay2.jpg&#34; alt=&#34;Relay&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;But how was I going to handle starting/stopping the skull so it was facing away (and potentially covered) initially and then rotating at the right time and stopping in the right position? Of course I left that to Halloween itself.&lt;/p&gt;
+
+&lt;p&gt;I used polystyrene and duct tape to brace the screwdriver. Then I setup two limit switches. I then applied power. The head spun around and ripped the switches off their mounts. Damn. So another quick executive decision was made. The head would start rotating when the doorbell was pressed and then stop after 10-15 seconds. Which meant some kids would get the full scary effect whilst others would see the flashing eyes before they got to the door.&lt;/p&gt;
+
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/_alMNaewNXw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;tying-it-all-together:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Tying it all together&lt;/h2&gt;
+
+&lt;p&gt;This turned out to be pretty easy. I have a ton of decent wire from a dead Christmas tree light string and used that to connect everything up. The doorbell connected to one Arudino which then toggled a pin which the other Arduinos were connected to. After N seconds, it toggled the pin the other way to shut it all down.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/wiring.jpg&#34; alt=&#34;Wiring&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;It worked very very well.&lt;/p&gt;
+
+&lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/JvAI6WQglpk&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;next-year:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Next year?&lt;/h2&gt;
+
+&lt;p&gt;Hmm not sure. I wanted to do something with ghosts flying down zip wires a few years ago but I just didn&amp;rsquo;t have the knowhow. I&amp;rsquo;m feeling a lot more confident about that now.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Facebook is the Amazon AWS Killer</title>
@@ -651,31 +825,6 @@ sudo cp -R * /usr/local/
       <description>&lt;p&gt;Finally the product that Superheroes everywhere have been crying out for - The FitBat. I&amp;rsquo;m sure the protector of Gotham would approve.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbat.jpg&#34; alt=&#34;FitBat&#34; title=&#34;FitBat&#34; /&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Say hello to my little friend. The Fitbit XL with external battery by Conor</title>
-      <link>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor/</link>
-      <pubDate>Sat, 13 Dec 2014 19:59:24 +0000</pubDate>
-      
-      <guid>http://conoroneill.net/say-hello-to-my-little-friend-the-fitbit-xl-with-external-battery-by-conor/</guid>
-      <description>&lt;p&gt;My first Fitbit died in the washing machine and they kindly replaced it for free. The replacement&amp;rsquo;s battery started acting up recently and finally gave up the ghost last night. You won&amp;rsquo;t believe what happens next ;-)&lt;/p&gt;
-
-&lt;p&gt;I figured out how to take apart the Fitbit One on the original dead one so this time I managed to do it with no damage. I de-soldered the battery and tried the old one instead. No joy. I&amp;rsquo;ve found some Chinese suppliers of 55mAh Lipos but I don&amp;rsquo;t have the patience to wait. One slightly too big battery and some hot-glue later and I give you the FitBit One XL.&lt;/p&gt;
-
-&lt;p&gt;Now that I know it works, I&amp;rsquo;ll remove most of the hot glue and try some Shoe Goo instead.
-Front
-&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit1.jpg&#34; alt=&#34;Front&#34; title=&#34;Front&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Back
-&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit2.jpg&#34; alt=&#34;Back&#34; title=&#34;Back&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Wearables.
-&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit3.jpg&#34; alt=&#34;In its clip&#34; title=&#34;In its clip&#34; /&gt;
 &lt;/p&gt;
 </description>
     </item>
