@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aws on Cross Dominant</title>
-    <link>http://conoroneill.net/tags/aws/</link>
+    <link>http://localhost:1313/tags/aws/</link>
     <description>Recent content in Aws on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Oct 2015 13:54:25 +0100</lastBuildDate>
-    <atom:link href="http://conoroneill.net/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Facebook is the Amazon AWS Killer</title>
-      <link>http://conoroneill.net/facebook-is-the-amazon-killer/</link>
+      <link>http://localhost:1313/facebook-is-the-amazon-killer/</link>
       <pubDate>Fri, 23 Oct 2015 13:54:25 +0100</pubDate>
       
-      <guid>http://conoroneill.net/facebook-is-the-amazon-killer/</guid>
+      <guid>http://localhost:1313/facebook-is-the-amazon-killer/</guid>
       <description>&lt;p&gt;AWS is now an $8Bn business for Amazon. Could anyone have predicted that in 1997 or even 2007? This week I was talking to a few people about who might be able to disrupt AWS. It won&amp;rsquo;t be easy. We immediately discounted the old guys like HP, IBM, Dell etc and even Google seems to be a complete also-ran in IaaS. Microsoft Azure might have potential.&lt;/p&gt;
 
 &lt;p&gt;PaaS is separate as it&amp;rsquo;s higher up the stack and makes use of IaaS. I expect Open Source PaaS like &lt;a href=&#34;http://www.openshift.com/&#34;&gt;OpenShift 3&lt;/a&gt; to grow very quickly in the coming years as it makes deployment and management of Apps incredibly easy. Where PaaS might hurt AWS is in abstracting what IaaS you are using, so as long as the feature set is there, you don&amp;rsquo;t care where your Apps are running (apart from Geo lag and data protection laws).&lt;/p&gt;

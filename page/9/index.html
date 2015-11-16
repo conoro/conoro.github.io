@@ -26,10 +26,10 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
 
-    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link rel="stylesheet" href="http://localhost:1313//css/all.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://localhost:1313/index.xml" />
 </head>
 <body>
 
@@ -39,7 +39,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h1 class="brand-title"><a href="http://localhost:1313/">Cross Dominant</a></h1>
             <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
         </hgroup>			
         <nav class="nav">
@@ -55,7 +55,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://conoroneill.net/index.xml"><i class="fa fa-rss"></i> rss</a>
+                    <a class="pure-button" href="http://localhost:1313/index.xml"><i class="fa fa-rss"></i> rss</a>
                 </li>
             </ul>
         </nav>
@@ -81,11 +81,94 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">07 May 2013, 08:17</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://localhost:1313/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/" class="post-title">Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi&rdquo;</p>
+
+<p>I love watching ideas bounce back and forward between people on Twitter and see them grow. The best for me recently started when <a href="http://www.theverge.com/2013/5/2/4292712/fitscales-wii-fit-balance-board-connected-scale">The Verge posted a story</a> about an OpenSource Android App which basically turned a <a href="http://wiibrew.org/wiki/Wii_Balance_Board">Wii Balance Board</a> into a Withings weighing scales, including RunKeeper and Fitbit integration. I retweeted it and it was picked up by <a href="https://twitter.com/joedesbonnet">Joe Desbonnet</a>. He realised you could also do some interesting things with the Balance Board and a Raspberry Pi and started hacking. Which of course made me realise I could control the i-racer with it!</p>
+
+<p>Here&rsquo;s a wee video of it in action:</p>
+
+<p>httpv://youtu.be/8cdn_LFKQXI</p>
+
+<p>Apologies for the mobile interference in the audio. I was using my new SGS4 to SSH to the Raspberry Pi to kick off the Python code. The ConnectBot guys really need to fix the microscopic font on screens like the SGS4!</p>
+
+<p>The car isn&rsquo;t very fast in the video as the Lego added a lot of weight and I hardcoded the speed to 50%. We&rsquo;ll try again next weekend using a lighter shell, full speed and tarmac instead of cobblelock.</p>
+
+<h2>Technical Nitty Gritty (not too Gritty!)</h2>
+My initial experiments with the Balance Board did not go well. Eventually I discovered that the version of the cwiid Wii library that is available on Raspberry Pi (and Ubuntu etc) is not able to deal with the Balance Board. See <a href="https://bugs.launchpad.net/ubuntu/+source/cwiid/+bug/509246">this bug</a>. I applied <a href="https://launchpadlibrarian.net/115501163/balanceboard.patch">the patch</a> and re-built my own deb files. To use them, just unzip them on the raspberry pi and install like so:
+
+<pre><code class="language-bash">
+wget https://github.com/conoro/iracer-controllers/raw/master/iracer_balance_board/cwiid_for_balance_board.zip
+unzip cwiid_for_balance_board.zip
+sudo dpkg -i *.deb
+</code></pre> 
+
+The rest of the time was just spent tweaking the numbers so that I could interpret someone leaning in various directions irrespective of their weight. It's still not great but works for me, a 7yo and a 6yo.
+
+All the old i-racer Bluetooth code carried over unchanged from our <a href="http://conoroneill.net/makey-makey-raspberry-pi-iracer-bluetooth-cheese-controlled-car-ccc/">Cheese Controlled Car</a>. Follow the instructions there for installing various Bluetooth bits and bobs on the Raspberry Pi.
+
+I was very surprised that I could talk to both the i-racer and the Balance Board over the same $2 Bluetooth adapter. I was sure I'd end up having to use two adapters.
+
+You can, as ever, <a href="https://github.com/conoro/iracer-controllers/tree/master/iracer_balance_board">grab the code from Github</a>. The only changes you need to make in the code are to set the Bluetooth MAC addresses of both the Balance Board and the i-racer.
+
+Sidenote: The Android App was a dead end. It doesn't work on Android 4.2 because Google decided to upgrade their broken Bluetooth stack and actually managed to make it worse.
+
+Any questions, leave a comment.
+
+<h2>Only if you really need it: Building those cwiid libraries yourself</h2>
+
+<pre><code class="language-bash">
+sudo nano /etc/apt/sources.list
+</code></pre>
+
+<p>Add the following line:
+<pre><code class="language-bash">
+deb-src <a href="http://archive.raspbian.org/raspbian">http://archive.raspbian.org/raspbian</a> wheezy main contrib non-free rpi
+</code></pre></p>
+
+<p>Then do the following:</p>
+
+<pre><code class="language-bash">
+mkdir ~/build
+cd build
+apt-get source python-cwiid
+apt-get build-dep python-cwiid
+cd cwiid-0.6.00+svn201/
+</code></pre>
+
+<p>Then edit these three files and add the changes from <a href="https://launchpadlibrarian.net/115501163/balanceboard.patch">https://launchpadlibrarian.net/115501163/balanceboard.patch</a> (or run &ldquo;patch&rdquo; if you are familiar with that)</p>
+
+<pre><code class="language-bash">
+nano libcwiid/cwiid_internal.h
+nano libcwiid/process.c
+nano libcwiid/thread.c
+dpkg-source --commit
+dpkg-buildpackage -us -uc
+cd ..
+sudo apt-get remove python-cwiid
+sudo dpkg -i *.deb
+</code></pre>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">03 May 2013, 07:45</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/fun-and-games-with-lipo-batteries-and-cheap-android-tablets/" class="post-title">Fun and games with LiPo batteries and cheap Android Tablets</a>
+                        <a href="http://localhost:1313/fun-and-games-with-lipo-batteries-and-cheap-android-tablets/" class="post-title">Fun and games with LiPo batteries and cheap Android Tablets</a>
 
                         <p class="post-meta">
                             
@@ -127,7 +210,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/an-evening-in-the-company-of-the-delightful-mr-samsung-galaxy-s4/" class="post-title">An evening in the company of the delightful Mr Samsung Galaxy S4</a>
+                        <a href="http://localhost:1313/an-evening-in-the-company-of-the-delightful-mr-samsung-galaxy-s4/" class="post-title">An evening in the company of the delightful Mr Samsung Galaxy S4</a>
 
                         <p class="post-meta">
                             
@@ -195,7 +278,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/my-smartphone-evolution-from-n95-8gb-to-samsung-galaxy-s4-sgs4/" class="post-title">My Smartphone evolution from N95-8GB to Samsung Galaxy S4 #SGS4</a>
+                        <a href="http://localhost:1313/my-smartphone-evolution-from-n95-8gb-to-samsung-galaxy-s4-sgs4/" class="post-title">My Smartphone evolution from N95-8GB to Samsung Galaxy S4 #SGS4</a>
 
                         <p class="post-meta">
                             
@@ -233,7 +316,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/amazing-kuvitteellinen-prizes-to-be-won-if-you-can-guess-what-this-is/" class="post-title">Amazing kuvitteellinen prizes to be won if you can guess what this is.</a>
+                        <a href="http://localhost:1313/amazing-kuvitteellinen-prizes-to-be-won-if-you-can-guess-what-this-is/" class="post-title">Amazing kuvitteellinen prizes to be won if you can guess what this is.</a>
 
                         <p class="post-meta">
                             
@@ -261,7 +344,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/your-prayers-answered-old-chapel-temperature-server-now-online/" class="post-title">Your prayers answered, Old Chapel temperature server now online</a>
+                        <a href="http://localhost:1313/your-prayers-answered-old-chapel-temperature-server-now-online/" class="post-title">Your prayers answered, Old Chapel temperature server now online</a>
 
                         <p class="post-meta">
                             
@@ -295,7 +378,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/what-the-inside-of-an-e88-android-tablet-looks-like/" class="post-title">What the inside of an 88 Android Tablet looks like</a>
+                        <a href="http://localhost:1313/what-the-inside-of-an-e88-android-tablet-looks-like/" class="post-title">What the inside of an 88 Android Tablet looks like</a>
 
                         <p class="post-meta">
                             
@@ -327,7 +410,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/adding-an-audio-amplifier-to-your-raspberry_pi/" class="post-title">Adding an audio amplifier to your @Raspberry_Pi</a>
+                        <a href="http://localhost:1313/adding-an-audio-amplifier-to-your-raspberry_pi/" class="post-title">Adding an audio amplifier to your @Raspberry_Pi</a>
 
                         <p class="post-meta">
                             
@@ -393,7 +476,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/endo2atom-an-endomondo-atomrss-feed-to-post-your-activities-via-tools-like-ifttt-opendata/" class="post-title">Endo2Atom - An Endomondo ATOM/RSS feed to post your activities via tools like IFTTT #OpenData</a>
+                        <a href="http://localhost:1313/endo2atom-an-endomondo-atomrss-feed-to-post-your-activities-via-tools-like-ifttt-opendata/" class="post-title">Endo2Atom - An Endomondo ATOM/RSS feed to post your activities via tools like IFTTT #OpenData</a>
 
                         <p class="post-meta">
                             
@@ -431,7 +514,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/tp-link-tl-wa830re-wifi-extender-a-pile-of-junk-until-you-install-dd-wrt/" class="post-title">TP-Link TL-WA830RE Wifi Extender - A pile of junk until you install DD-WRT</a>
+                        <a href="http://localhost:1313/tp-link-tl-wa830re-wifi-extender-a-pile-of-junk-until-you-install-dd-wrt/" class="post-title">TP-Link TL-WA830RE Wifi Extender - A pile of junk until you install DD-WRT</a>
 
                         <p class="post-meta">
                             
@@ -465,85 +548,6 @@
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">26 Mar 2013, 10:19</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/the-state-of-open-source-projects-in-ireland-vs-other-countries-based-on-github-activity/" class="post-title">The state of Open Source projects in Ireland vs other countries, based on GitHub activity</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;The state of Open Source projects in Ireland vs other countries, based on GitHub activity&rdquo;</p>
-
-<p>Last weekend I was working away on a personal side-project of mine and I suddenly realised I follow almost no Irish projects or developers on <a href="http://github.com/conoro">GitHub</a>. I then started writing this post which was going to be an attack on our lack of people who work on OSS projects outside of work.</p>
-
-<p>But rather than go with gut, I decided to see if I could back it up with data. I decided GitHub relative activity could give us a strong metric of where Ireland fits in to the Open Source world. Of course there are tons of other OSS project hosting sites like Sourceforge, BitBucket, Assembla, Gitorious and even self-hosting but GitHub should do as a rough measure.</p>
-
-<p>I assumed someone had done some simple analysis like this before but all I found were &ldquo;unusual&rdquo; visualisations. Then I discovered that GitHub posts all their <a href="https://github.com/blog/1112-data-at-github">public commit data</a> to <a href="https://bigquery.cloud.google.com/">Google BigQuery</a>. This is a big online DB that you can query in a simple SQL console. I lashed together some simple queries and the data basically proved me completely wrong.</p>
-
-<p>[sql]
-SELECT count(*) as commits, repository_owner, actor_attributes_location FROM [githubarchive:github.timeline] where actor_attributes_location CONTAINS &lsquo;Ireland&rsquo; group by actor_attributes_location, repository_owner order by commits DESC LIMIT 100000000
-[/sql]</p>
-
-<p>So in total, I can see 9381 repository committers that mention &ldquo;Ireland&rdquo; in their location and have done at least one commit.</p>
-
-<p>That drops to 5872 if we exclude people who have only ever done one commit.</p>
-
-<p>[sql]
-select commits, repository_owner, actor_attributes_location from (SELECT count(*) as commits, repository_owner, actor_attributes_location FROM [githubarchive:github.timeline] where actor_attributes_location CONTAINS &lsquo;Ireland&rsquo; group by actor_attributes_location, repository_owner order by commits DESC) where commits &gt; 1
-[/sql]</p>
-
-<p>And 1799 if we exclude those who have done 5 commits or fewer.</p>
-
-<p>Note that these are not repository owners, just people who have done commits.</p>
-
-<p>If we then filter it down by people who have committed to their own repos we get 970. So with a population of 4.6m, 970 people have setup a GitHub account with a public repository and committed at least once to it.</p>
-
-<p>[sql]
-SELECT count(*) as commits, repository_owner, actor_attributes_location FROM [githubarchive:github.timeline] where actor_attributes_location CONTAINS &lsquo;Ireland&rsquo; and actor=repository_owner group by actor_attributes_location, repository_owner order by commits DESC
-[/sql]</p>
-
-<p>At this point I was totally depressed. 970 repos. And many of these may be company ones or forks of other repos or school exercises. But then I decided to compare to some other countries.</p>
-
-<p>Let&rsquo;s start with the UK (Population: 63m): 7643 repos
-Using UK, United Kingdom, Great Britain, England, Wales, Scotland, Northern Ireland: 9929 repos
-Gives us 724 vs 970 using Ireland as the baseline</p>
-
-<p>Finland (Population: 5.4m): 1332 repos
-Using Suomi, Finland: 1333 repos
-Gives us 1135 vs 970 using Ireland as the baseline</p>
-
-<p>Australia (Population: 21.5m): 4375 repos
-Using Australia, Oz: 4375 repos
-Gives us 936 vs 970 using Ireland as the baseline</p>
-
-<p>New Zealand (Population: 4.5m): 1048 repos
-Using New Zealand, NZ: 1181 repos
-Gives us: 1207 vs 970 using Ireland as the baseline</p>
-
-<p>Canada (Population: 33.9m): 4526 repos
-Gives us: 614 vs 970 using Ireland as the baseline</p>
-
-<p>Finally, the spiritual home of OSS and the actual home of GitHub:</p>
-
-<p>USA (Population: 315.5m): 6146
-Using USA, US, United States: 7913
-Gives us: 115 vs 970 using Ireland as the baseline</p>
-
-<p>(My guess is this number is way too low and Americans just use city/state as they consider the country implied :-))</p>
-
-<p>So I was wrong. Ireland isn&rsquo;t particularly bad. Really, we&rsquo;re all in or around the same ballpark except for the US. So this isn&rsquo;t just an Irish thing. People working in the tech industry worldwide just don&rsquo;t seem that interested in writing code in their spare time and making it freely available to others.</p>
-
-<p>Thoughts? Corrections to my SQL? Anyone want to build a better query for the US?</p>
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
@@ -570,7 +574,7 @@ Gives us: 115 vs 970 using Ireland as the baseline</p>
         </ul>
     </div>
 </div>
-<script src="http://conoroneill.net/js/all.min.js"></script>
+<script src="http://localhost:1313/js/all.min.js"></script>
         </div>
     </div>
 </div>

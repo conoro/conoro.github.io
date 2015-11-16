@@ -26,10 +26,10 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
 
-    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link rel="stylesheet" href="http://localhost:1313//css/all.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://localhost:1313/index.xml" />
 </head>
 <body>
 
@@ -39,7 +39,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h1 class="brand-title"><a href="http://localhost:1313/">Cross Dominant</a></h1>
             <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
         </hgroup>			
         <nav class="nav">
@@ -55,7 +55,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://conoroneill.net/index.xml"><i class="fa fa-rss"></i> rss</a>
+                    <a class="pure-button" href="http://localhost:1313/index.xml"><i class="fa fa-rss"></i> rss</a>
                 </li>
             </ul>
         </nav>
@@ -81,11 +81,90 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">26 Mar 2013, 10:19</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://localhost:1313/the-state-of-open-source-projects-in-ireland-vs-other-countries-based-on-github-activity/" class="post-title">The state of Open Source projects in Ireland vs other countries, based on GitHub activity</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;The state of Open Source projects in Ireland vs other countries, based on GitHub activity&rdquo;</p>
+
+<p>Last weekend I was working away on a personal side-project of mine and I suddenly realised I follow almost no Irish projects or developers on <a href="http://github.com/conoro">GitHub</a>. I then started writing this post which was going to be an attack on our lack of people who work on OSS projects outside of work.</p>
+
+<p>But rather than go with gut, I decided to see if I could back it up with data. I decided GitHub relative activity could give us a strong metric of where Ireland fits in to the Open Source world. Of course there are tons of other OSS project hosting sites like Sourceforge, BitBucket, Assembla, Gitorious and even self-hosting but GitHub should do as a rough measure.</p>
+
+<p>I assumed someone had done some simple analysis like this before but all I found were &ldquo;unusual&rdquo; visualisations. Then I discovered that GitHub posts all their <a href="https://github.com/blog/1112-data-at-github">public commit data</a> to <a href="https://bigquery.cloud.google.com/">Google BigQuery</a>. This is a big online DB that you can query in a simple SQL console. I lashed together some simple queries and the data basically proved me completely wrong.</p>
+
+<p>[sql]
+SELECT count(*) as commits, repository_owner, actor_attributes_location FROM [githubarchive:github.timeline] where actor_attributes_location CONTAINS &lsquo;Ireland&rsquo; group by actor_attributes_location, repository_owner order by commits DESC LIMIT 100000000
+[/sql]</p>
+
+<p>So in total, I can see 9381 repository committers that mention &ldquo;Ireland&rdquo; in their location and have done at least one commit.</p>
+
+<p>That drops to 5872 if we exclude people who have only ever done one commit.</p>
+
+<p>[sql]
+select commits, repository_owner, actor_attributes_location from (SELECT count(*) as commits, repository_owner, actor_attributes_location FROM [githubarchive:github.timeline] where actor_attributes_location CONTAINS &lsquo;Ireland&rsquo; group by actor_attributes_location, repository_owner order by commits DESC) where commits &gt; 1
+[/sql]</p>
+
+<p>And 1799 if we exclude those who have done 5 commits or fewer.</p>
+
+<p>Note that these are not repository owners, just people who have done commits.</p>
+
+<p>If we then filter it down by people who have committed to their own repos we get 970. So with a population of 4.6m, 970 people have setup a GitHub account with a public repository and committed at least once to it.</p>
+
+<p>[sql]
+SELECT count(*) as commits, repository_owner, actor_attributes_location FROM [githubarchive:github.timeline] where actor_attributes_location CONTAINS &lsquo;Ireland&rsquo; and actor=repository_owner group by actor_attributes_location, repository_owner order by commits DESC
+[/sql]</p>
+
+<p>At this point I was totally depressed. 970 repos. And many of these may be company ones or forks of other repos or school exercises. But then I decided to compare to some other countries.</p>
+
+<p>Let&rsquo;s start with the UK (Population: 63m): 7643 repos
+Using UK, United Kingdom, Great Britain, England, Wales, Scotland, Northern Ireland: 9929 repos
+Gives us 724 vs 970 using Ireland as the baseline</p>
+
+<p>Finland (Population: 5.4m): 1332 repos
+Using Suomi, Finland: 1333 repos
+Gives us 1135 vs 970 using Ireland as the baseline</p>
+
+<p>Australia (Population: 21.5m): 4375 repos
+Using Australia, Oz: 4375 repos
+Gives us 936 vs 970 using Ireland as the baseline</p>
+
+<p>New Zealand (Population: 4.5m): 1048 repos
+Using New Zealand, NZ: 1181 repos
+Gives us: 1207 vs 970 using Ireland as the baseline</p>
+
+<p>Canada (Population: 33.9m): 4526 repos
+Gives us: 614 vs 970 using Ireland as the baseline</p>
+
+<p>Finally, the spiritual home of OSS and the actual home of GitHub:</p>
+
+<p>USA (Population: 315.5m): 6146
+Using USA, US, United States: 7913
+Gives us: 115 vs 970 using Ireland as the baseline</p>
+
+<p>(My guess is this number is way too low and Americans just use city/state as they consider the country implied :-))</p>
+
+<p>So I was wrong. Ireland isn&rsquo;t particularly bad. Really, we&rsquo;re all in or around the same ballpark except for the US. So this isn&rsquo;t just an Irish thing. People working in the tech industry worldwide just don&rsquo;t seem that interested in writing code in their spare time and making it freely available to others.</p>
+
+<p>Thoughts? Corrections to my SQL? Anyone want to build a better query for the US?</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">22 Mar 2013, 08:01</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/avoid-the-google-lock-in-by-using-picasa-with-dropbox/" class="post-title">Avoid Google&#43; lock-in by using Picasa with Dropbox</a>
+                        <a href="http://localhost:1313/avoid-the-google-lock-in-by-using-picasa-with-dropbox/" class="post-title">Avoid Google&#43; lock-in by using Picasa with Dropbox</a>
 
                         <p class="post-meta">
                             
@@ -109,7 +188,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/adam-savages-home-office-cabinet-wow/" class="post-title">Adam Savage&#39;s home office cabinet - Wow.</a>
+                        <a href="http://localhost:1313/adam-savages-home-office-cabinet-wow/" class="post-title">Adam Savage&#39;s home office cabinet - Wow.</a>
 
                         <p class="post-meta">
                             
@@ -137,7 +216,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/amazon-send-to-kindle-should-be-built-on-rss-to-replace-google-reader/" class="post-title">Amazon &#39;Send to Kindle&#39; should be built on RSS to replace Google Reader</a>
+                        <a href="http://localhost:1313/amazon-send-to-kindle-should-be-built-on-rss-to-replace-google-reader/" class="post-title">Amazon &#39;Send to Kindle&#39; should be built on RSS to replace Google Reader</a>
 
                         <p class="post-meta">
                             
@@ -167,7 +246,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/my-second-spring-cleaning/" class="post-title">My Second Spring Cleaning</a>
+                        <a href="http://localhost:1313/my-second-spring-cleaning/" class="post-title">My Second Spring Cleaning</a>
 
                         <p class="post-meta">
                             
@@ -192,7 +271,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/" class="post-title">Replacing Google Reader with a $25 Raspberry Pi in the immortal words of Jesse Pinkman</a>
+                        <a href="http://localhost:1313/replacing-google-reader-with-a-25-raspberry-pi-in-the-immortal-words-of-jesse-pinkman/" class="post-title">Replacing Google Reader with a $25 Raspberry Pi in the immortal words of Jesse Pinkman</a>
 
                         <p class="post-meta">
                             
@@ -220,7 +299,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/my-1-37-shrimp-computer/" class="post-title">My 1.37 Shrimp Computer</a>
+                        <a href="http://localhost:1313/my-1-37-shrimp-computer/" class="post-title">My 1.37 Shrimp Computer</a>
 
                         <p class="post-meta">
                             
@@ -254,7 +333,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/" class="post-title">A simple tool to bulk import your RunKeeper data into Endomondo</a>
+                        <a href="http://localhost:1313/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/" class="post-title">A simple tool to bulk import your RunKeeper data into Endomondo</a>
 
                         <p class="post-meta">
                             
@@ -333,7 +412,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/openvpn-on-windows-8/" class="post-title">OpenVPN on Windows 8</a>
+                        <a href="http://localhost:1313/openvpn-on-windows-8/" class="post-title">OpenVPN on Windows 8</a>
 
                         <p class="post-meta">
                             
@@ -359,7 +438,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/using-a-wii-nunchuck-instead-of-cheese-to-control-i-racer-rc-car-on-raspberry_pi-and-arduino/" class="post-title">Using a Wii Nunchuck instead of Cheese to control i-Racer RC car on @Raspberry_Pi and @Arduino</a>
+                        <a href="http://localhost:1313/using-a-wii-nunchuck-instead-of-cheese-to-control-i-racer-rc-car-on-raspberry_pi-and-arduino/" class="post-title">Using a Wii Nunchuck instead of Cheese to control i-Racer RC car on @Raspberry_Pi and @Arduino</a>
 
                         <p class="post-meta">
                             
@@ -505,30 +584,6 @@ Last week the HC-05 module finally arrived from China and I was able to start pl
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">26 Feb 2013, 11:34</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/ron-swanson-is-the-patron-saint-of-makers-his-finest-moment-on-parks-and-rec/" class="post-title">Ron Swanson is the Patron Saint of Makers - His Finest Moment on Parks and Rec</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Ron Swanson is the Patron Saint of Makers - His Finest Moment on Parks and Rec&rdquo;</p>
-
-<p>I am going to miss this show so much when it ends. Leslie needed two wedding rings asap. Ron took care of it.</p>
-
-<p>httpv://www.youtube.com/watch?v=d0YAhykMMxc</p>
-
-<p>When I grow up, I want to be Ron Swanson.</p>
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
@@ -555,7 +610,7 @@ Last week the HC-05 module finally arrived from China and I was able to start pl
         </ul>
     </div>
 </div>
-<script src="http://conoroneill.net/js/all.min.js"></script>
+<script src="http://localhost:1313/js/all.min.js"></script>
         </div>
     </div>
 </div>

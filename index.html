@@ -26,10 +26,10 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
 
-    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link rel="stylesheet" href="http://localhost:1313//css/all.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://localhost:1313/index.xml" />
 </head>
 <body>
 
@@ -39,7 +39,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h1 class="brand-title"><a href="http://localhost:1313/">Cross Dominant</a></h1>
             <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
         </hgroup>			
         <nav class="nav">
@@ -55,7 +55,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://conoroneill.net/index.xml"><i class="fa fa-rss"></i> rss</a>
+                    <a class="pure-button" href="http://localhost:1313/index.xml"><i class="fa fa-rss"></i> rss</a>
                 </li>
             </ul>
         </nav>
@@ -81,18 +81,281 @@
             
             <div class="posts">
                 
-                <h1 class="content-subhead">03 Nov 2015, 08:22</h1>
+                <h1 class="content-subhead">14 Nov 2015, 12:54</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/" class="post-title">All the gory tech behind our Halloween Hallway of Horror</a>
+                        <a href="http://localhost:1313/onion-omega-first-impressions-running-golang-nodejs/" class="post-title">First impressions of @OnionIoT Omega. Also running #golang 1.1.2 and #nodejs 0.10.5 on MIPS</a>
 
                         <p class="post-meta">
                             
                             
-                                under 
-                                
-                                
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>I did a splurge of backing IoT KickStarters a few months ago and the <a href="https://onion.io/omega/">Onion Omega</a> is the first one to land in my postbox. It&rsquo;s a tiny (barely bigger than an SD card) board running the same basic guts as many OpenWRT routers i.e. 400 MHz Atheros MIPS CPU with 64MB of DRAM and 16MB of Flash.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_sd.jpg" alt="Onion Omega" />
+</p>
+
+<p>If you&rsquo;re not familiar with <a href="https://openwrt.org/">OpenWRT</a>, it&rsquo;s an Open Source community replacement firmware for many routers (similar to DD-WRT that I&rsquo;ve used many times) and is Linux under the hood. You generally do your own custom Firmware builds which bundle exactly what you want but you can also install packages via the opkg tool.</p>
+
+<p>Obviously 400MHz with tiny RAM cannot compete with an RPi but it is far more powerful than most MCUs and runs Linux. The question is whether this middle ground addresses a big enough market, particularly when the price point is almost the same as an RPi Model A and you need to buy add-on cards to work easily with it. I&rsquo;m not sure yet.</p>
+
+<p>The Onion team are currently building a Web UI and an IoT &ldquo;Cloud&rdquo; as value-adds and of course everything is OpenSource.</p>
+
+<p>The fact that it just launched means that the software story isn&rsquo;t great right now. The KickStarter mentions things like Node but that isn&rsquo;t available in a supported way. Also the effort around accessing GPIOs etc is focused on Python. And add-on boards like the OLED screen I bought have no support yet.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_kit.jpg" alt="Onion Omega Kit" />
+</p>
+
+<h2 id="summary-opinion:6373a9f13467451d12a87cf58bb7873b">Summary Opinion</h2>
+
+<p>Overall it&rsquo;s a nice board but the lack of &ldquo;buzz&rdquo; around it has me a little worried. The number one thing that projects like this need is community. I think the CHiP might steal a lot of its thunder with more welly at a much lower pricepoint. But perhaps a focus on realtime embedded applications will help here.</p>
+
+<p>I&rsquo;d like to see a library like WiringPi built for it that can easily have wrappers for others languages implemented.</p>
+
+<p>I think it&rsquo;ll be ideal as a home API server that I can put anywhere and forget about.</p>
+
+<p>Another area it could shine, due to its tiny size and low power consumption is robotics. See my comment below about <a href="http://gobot.io/">Gobot</a>.</p>
+
+<h2 id="node-js-partial-success:6373a9f13467451d12a87cf58bb7873b">Node.js partial success</h2>
+
+<p>After an initial play around with it, I decided to try out Node and Go. Node was <a href="https://community.onion.io/topic/46/simple-node-js-wrapper-samples">built by a community member</a> but is back on version 0.10.5.</p>
+
+<p>I copied the Node executable and libv8 to a USB stick and plugged that into the Onion standard &ldquo;dock&rdquo;. I mounted it and ran hello world successfully. Hurrah!</p>
+
+<p>But then I realised it doesn&rsquo;t have NPM. So I put together a simple Tweeting App, did the NPM install on my Fedora VM and then copied everything to the USB stick.</p>
+
+<p>The code which ran fine on Fedora crapped out with &ldquo;not authenticated&rdquo; on the Onion. I tried two other Twitter modules with the same result. I wasn&rsquo;t able to see any other error apart from Twitter complaining about authentication.</p>
+
+<p>So I gave up on Node for the moment.</p>
+
+<h2 id="golang-1-1-2-first-failed-attempt:6373a9f13467451d12a87cf58bb7873b">Golang 1.1.2 first failed attempt</h2>
+
+<p>On to Go and a giant big rabbit hole.</p>
+
+<p>So you can&rsquo;t get a recent version of Go for MIPS. However, one smart person <a href="https://github.com/GeertJohan/openwrt-go">forked OpenWRT and added Go support</a> via <a href="https://gcc.gnu.org/onlinedocs/gccgo/Invoking-gccgo.html">gccgo</a>. Yay it&rsquo;s Go, boo it&rsquo;s Go 1.1.2.</p>
+
+<p>But I thought it&rsquo;d be a good experience to try building OpenWRT from scratch anyway. The <a href="https://github.com/GeertJohan/openwrt-go/issues/2">instructions here</a> and <a href="http://www.sajalkayan.com/post/golang-openwrt-mips.html">here</a> are pretty straightforward and I managed to build the Gnu cross-compile toolchain inside a Fedora 22 VM on Windows 10.</p>
+
+<p>NOTE: DO NOT DO THE FOLLOWING. IT DIDN&rsquo;T WORK. FOLLOW THE STEPS LATER FOR CLEAN NEW OPENWRT</p>
+
+<pre><code>git clone git@github.com:GeertJohan/openwrt-go.git openwrt
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+cp ~/Desktop/scons-2.3.5.tar.gz dl (needed to download this manually as it was missing)
+cp ~/Desktop/openssl-1.0.2c.tar.gz dl (needed to download this manually as it was missing)
+make menuconfig
+</code></pre>
+
+<p>In menuconfig you have to enable a few things:</p>
+
+<ul>
+<li>-&gt; Advanced configuration options</li>
+<li>&ndash;&gt; Toolchain options</li>
+<li>&mdash;&gt; C library implementation</li>
+<li>&mdash;-&gt; Use eglibc</li>
+<li>-&gt; Advanced configuration options</li>
+<li>&ndash;&gt; Toolchain options</li>
+<li>&mdash;&gt; Select Build/Install gccgo</li>
+</ul>
+
+<p>Then save and exit, followed by:</p>
+
+<pre><code>make
+</code></pre>
+
+<p>Several hours later on my old i7 laptop, I had everything I needed.</p>
+
+<p>Then a simple helloworld Web Server helloweb.go that only uses standard library features:</p>
+
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;net/http&quot;
+)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, &quot;Hi there, I love %s!&quot;, r.URL.Path[1:])
+}
+
+func main() {
+    http.HandleFunc(&quot;/&quot;, handler)
+    http.ListenAndServe(&quot;:8080&quot;, nil)
+}
+</code></pre>
+
+<p>Create ~/openwrt.config which consists of</p>
+
+<pre><code>export STAGING_DIR=/home/conor/openwrt/staging_dir 
+export TOOLCHAIN_DIR=$STAGING_DIR/toolchain-mips_34kc_gcc-4.8-linaro_glibc-2.19 
+export LDCFLAGS=$TOOLCHAIN_DIR/usr/lib 
+export LD_LIBRARY_PATH=$TOOLCHAIN_DIR/usr/lib 
+export PATH=$TOOLCHAIN_DIR/bin:$PATH
+</code></pre>
+
+<p>Then build it:</p>
+
+<pre><code>. ~/openwrt.config
+mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
+</code></pre>
+
+<p>I copied it over to the Onion but no joy. It just kept saying &ldquo;not found&rdquo;. Distant memories told me this was related to libraries and versions but nothing I tried worked. So I took a break.</p>
+
+<h2 id="golang-1-1-2-second-successful-attempt:6373a9f13467451d12a87cf58bb7873b">Golang 1.1.2 second successful attempt</h2>
+
+<p>A while later I decided that what I needed to do was build OpenWRT for the Onion but then I hit a blocker. Onion support was added to OpenWRT in July but the latest version of the toolchain that included Go was from May. So I bit the bullet and manually &ldquo;cherry-picked&rdquo; <a href="https://github.com/GeertJohan/openwrt-go/commits/add-gccgo-and-libgo?author=GeertJohan">all of the author&rsquo;s changes</a> from the older toolchain into the latest version of OpenWRT.</p>
+
+<p>You can get <a href="https://gist.github.com/conoro/887362ebdbbada2cfbc6">the patchfile I generated here</a> and apply it.</p>
+
+<p>NOTE: THESE STEPS WORK OK.</p>
+
+<p>Now to build from scratch again:</p>
+
+<pre><code>sudo dnf install -y subversion binutils bzip2 gcc gcc-c++ gawk gettext flex ncurses-devel zlib-devel zlib-static make patch unzip perl-ExtUtils-MakeMaker glibc glibc-devel glibc-static quilt sed sdcc intltool sharutils bison wget
+
+. ~/openwrt.config   (see the contents of that file in the first failed attempt)
+
+rm -rf ~/openwrt
+git clone git://git.openwrt.org/openwrt.git openwrt
+cd openwrt
+</code></pre>
+
+<pre><code>nano feeds.conf.default
+</code></pre>
+
+<p>and append the following:</p>
+
+<pre><code>src-git onion https://github.com/OnionIoT/OpenWRT-Packages.git
+</code></pre>
+
+<p>Then:</p>
+
+<pre><code>scripts/feeds update -a
+
+make menuconfig
+</code></pre>
+
+<p>Note you have to include the same menuconfig settings as before i.e.</p>
+
+<ul>
+<li>-&gt; Advanced configuration options</li>
+<li>&ndash;&gt; Toolchain options</li>
+<li>&mdash;&gt; C library implementation</li>
+<li>&mdash;-&gt; Use eglibc</li>
+<li>-&gt; Advanced configuration options</li>
+<li>&ndash;&gt; Toolchain options</li>
+<li>&mdash;&gt; Select Build/Install gccgo</li>
+</ul>
+
+<p>Plus the following for both the Onion and USB stick. This uses <a href="https://github.com/OnionIoT/OpenWRT-Packages/wiki/Setting-Up-the-Cross-Compile-Environment">some instructions from the Onion site</a>:</p>
+
+<ol>
+<li>Target System is Atheros AR7xxx/AR9xxx</li>
+<li>Subtarget is Generic</li>
+<li>Target Profile is Onion Omega</li>
+<li>Target Images is squashfs</li>
+<li>Add kmod-fs-vfat</li>
+<li>Add kmod-nls-cp437</li>
+</ol>
+
+<pre><code>make
+</code></pre>
+
+<p>Several hours later again, I finally had <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin">a version of the firmware that included Go support</a> and ran on the Onion by doing the following on the Onion:</p>
+
+<pre><code>cd /tmp
+scp conor@192.168.0.9:/mnt/disk2/software/openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin .
+sysupgrade openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin 
+</code></pre>
+
+<h2 id="hello-world-web-server-in-go-on-the-onion-omega:6373a9f13467451d12a87cf58bb7873b">Hello World Web Server in Go on the Onion Omega</h2>
+
+<p>Back to helloworld on the Fedora 22 VM:</p>
+
+<pre><code>alias mips_gccgo='mips-openwrt-linux-gccgo -Wl,-R,/home/conor/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_glibc-2.19/lib/gcc/mips-openwrt-linux-gnu/4.8.3 -L /home/conor/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8.0-linaro_glibc-2.19/lib'
+
+mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
+</code></pre>
+
+<p>Copy to the Onion and run it with a simple ./helloweb_static_libgo</p>
+
+<p>Hurrah, Hello World in Go on the Onion!</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/go_on_onion_omega_02.jpg" alt="I love mac and cheese" />
+</p>
+
+<h2 id="tweeting-from-the-onion-omega-in-go:6373a9f13467451d12a87cf58bb7873b">Tweeting from the Onion Omega in Go</h2>
+
+<p>I should have left it at that but no, I wanted to Tweet from the Onion. My problems multiplied. Basically, gccgo doesn&rsquo;t have all the bells and whistles of recent Go and can&rsquo;t handle included packages easily. After some reading and playing, I managed to build a Tweeting App that used the <a href="https://github.com/kurrik/twittergo">Twittergo package</a>. Note you need a local Fedora version of <a href="https://golang.org/dl/">Go installed and configured</a> for &ldquo;go get&rdquo; to work (or just git clone). My $GOPATH is /home/conor/gitwork/go</p>
+
+<p>I used the <a href="https://github.com/kurrik/twittergo-examples/blob/master/tweet/main.go">example from Twittergo</a> to send the tweet, with the same mods to remove paths from the imports as the other files.</p>
+
+<pre><code class="language-bash">. ~/openwrt.config
+
+cd ~/gitwork/go/src/github.com
+go get github.com/kurrik/twittergo
+go get github.com/kurrik/oauth1a
+go get github.com/kurrik/json
+cd kurrik/json
+mips-openwrt-linux-gccgo -c json.go
+cd ../oauth1a
+mips-openwrt-linux-gccgo -c oauth1a.go userconfig.go
+cd ../twittergo
+cp ../json/json.o .
+cp ../oauth1a/oauth1a.o .
+emacs twittergo.go  (change github.com/kurrik/oauth1a to oauth1a)
+emacs models.go  (change github.com/kurrik/json to json)
+mips-openwrt-linux-gccgo -c twittergo.go models.go
+emacs tweetomega.go
+mips_gccgo -Wall -o tweetomega main.go -static-libgo json.o  oauth1a.o twittergo.o
+gedit CREDENTIALS
+</code></pre>
+
+<p>I was nearly there. The code ran but threw an error almost immediately about x509 root certs being missing. I ran all of the following, which seemed to fix it (but I&rsquo;m not sure if all needed):</p>
+
+<pre><code class="language-bash">opkg update
+opkg install ca-certificates
+opkg install openssl-util
+opkg install curl
+wget http://curl.haxx.se/ca/cacert.pem
+mv cacert.pem /etc/ssl/certs/ca-certificates.crt
+scp conor@192.168.0.9:/mnt/disk2/software/CREDENTIALS .
+scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
+./tweetomega
+</code></pre>
+
+<p>And finally ta-daaaa, a Tweet from the Omega:</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/hushvine_onion_01.jpg" alt="Tweetin Omega" />
+</p>
+
+<p>I now suspect that the Node.js error may have been exactly the same thing but just hidden so I&rsquo;ll go back and try the same for it.</p>
+
+<h2 id="final-notes:6373a9f13467451d12a87cf58bb7873b">Final notes</h2>
+
+<ol>
+<li>That custom firmware I built is missing all of the Onion&rsquo;s own stuff and I&rsquo;m not sure how to add that. However you can easily re-install the latest factory Onion image by wgetting it using the URL you find <a href="http://cloud.onion.io/api/firmware/stable.json">in this file</a> into /tmp using sysupgrade name_of_image.</li>
+<li>We really need Go 1.6 to support MIPS. I think the Onion is a great device for running Go. We might even get <a href="http://gobot.io/">Gobots</a> running.</li>
+</ol>
+
+                    </div>
+                </section>
+                
+                <h1 class="content-subhead">03 Nov 2015, 08:22</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://localhost:1313/all-the-tech-behind-our-halloween-hallway-of-horror/" class="post-title">All the gory tech behind our Halloween Hallway of Horror</a>
+
+                        <p class="post-meta">
+                            
                             
                         </p>
                     </header>
@@ -271,14 +534,10 @@ done
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/facebook-is-the-amazon-killer/" class="post-title">Facebook is the Amazon AWS Killer</a>
+                        <a href="http://localhost:1313/facebook-is-the-amazon-killer/" class="post-title">Facebook is the Amazon AWS Killer</a>
 
                         <p class="post-meta">
                             
-                            
-                                under 
-                                
-                                
                             
                         </p>
                     </header>
@@ -315,7 +574,7 @@ done
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2/" class="post-title">Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</a>
+                        <a href="http://localhost:1313/running-the-latest-chromium-45-on-debian-jessie-on-your-raspberry-pi-2/" class="post-title">Running the latest Chromium 45 on Debian Jessie on your Raspberry Pi 2</a>
 
                         <p class="post-meta">
                             
@@ -357,7 +616,7 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/" class="post-title">TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi</a>
+                        <a href="http://localhost:1313/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/" class="post-title">TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi</a>
 
                         <p class="post-meta">
                             
@@ -393,7 +652,7 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi/" class="post-title">Running ZeroMQ with Node.js on Raspberry Pi</a>
+                        <a href="http://localhost:1313/running-zeromq-with-node-js-on-raspberry-pi/" class="post-title">Running ZeroMQ with Node.js on Raspberry Pi</a>
 
                         <p class="post-meta">
                             
@@ -501,7 +760,7 @@ socket.connect(&lsquo;tcp://127.0.0.1:9998&rsquo;);<br />
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/" class="post-title">TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?</a>
+                        <a href="http://localhost:1313/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/" class="post-title">TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?</a>
 
                         <p class="post-meta">
                             
@@ -529,7 +788,7 @@ socket.connect(&lsquo;tcp://127.0.0.1:9998&rsquo;);<br />
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/" class="post-title">Creating an OTP fob compatible with Google Authenticator using an Espruino Pico</a>
+                        <a href="http://localhost:1313/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/" class="post-title">Creating an OTP fob compatible with Google Authenticator using an Espruino Pico</a>
 
                         <p class="post-meta">
                             
@@ -652,7 +911,7 @@ setWatch(function() {
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/" class="post-title">Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available</a>
+                        <a href="http://localhost:1313/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/" class="post-title">Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available</a>
 
                         <p class="post-meta">
                             
@@ -700,7 +959,7 @@ sudo cp -R * /usr/local/
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/" class="post-title">Save your Yahoo Pipes as Node.js Apps for posterity</a>
+                        <a href="http://localhost:1313/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/" class="post-title">Save your Yahoo Pipes as Node.js Apps for posterity</a>
 
                         <p class="post-meta">
                             
@@ -736,69 +995,6 @@ sudo cp -R * /usr/local/
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">01 May 2015, 17:49</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow/" class="post-title">A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>I&rsquo;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi for quite a while. When it was originally announced, everyone seemed to think they were getting full-blown Windows for free on Pi. Many still think this. What you actually get is a GUI-less version of Windows on to which you can deploy Universal Apps (and others). So unlike Raspbian on Pi, you can&rsquo;t actually develop on it, you have to have full Windows 10 running somewhere else to develop, compile, deploy and debug. Or as I said on Twitter:</p>
-
-<p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;Install Visual Studio 2015 on your PC to develop Win10 IoT Apps for <a href="https://twitter.com/Raspberry_Pi">@Raspberry_Pi</a>&quot;. Install Fortran on your PDP-11 to use your ZX Spectrum?</p>&mdash; Conor O&#39;Neill (@conoro) <a href="https://twitter.com/conoro/status/593662573347794944">April 30, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
-<p>OK, snark over. Let&rsquo;s give this thing a go.</p>
-
-<p>Several hours later&hellip;&hellip;</p>
-
-<p>Installation is still a nightmare in this Preview version. Between clicking on hidden EULAs and installers failing with nonsense errors, not to mention having to install Windows 10 Preview in VirtualBox, this is not for the faint of heart.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi.jpg" alt="Win 10 VBox" />
-</p>
-
-<p>The RaspberryPi bit was ok and creating the image on an SD Card worked fine. Win 10 IoT booted first time with no issues.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot_rpi_05.jpg" alt="Win 10 IoT on Pi" />
-</p>
-
-<p>After several more rounds of messing with Visual Studio, I followed the Hello World Tutorial and pointed it at my Pi. I was rather shocked to see it worked!</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_02.jpg" alt="Screen" />
-</p>
-
-<p>That was the point the scales fell from my eyes. This is actually a very powerful offering to anyone who uses Microsoft tools already. You can build Drag n Drop Universal Apps which deploy just as easily to the Pi as they do to Windows Desktop/Tablets/Phones. I think Kiosks and Control Dashboards could be a big seller here, particularly for the Pi Compute Module. Obviously Visual Studio itself is damned powerful and is considered by most people, even MSFT haters, to be the most powerful IDE available today.</p>
-
-<p>Then I decided to go a step further. Could I get a Node.js program to deploy?</p>
-
-<p>A bunch more stupid installers later&hellip;&hellip;..</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_04.jpg" alt="Node.js on Vis Studio" />
-</p>
-
-<p>Deploy the code, annnnnnd</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot.jpg" alt="Node.js on Pi" />
-</p>
-
-<p>Oh wow, that is a bit brain melting. So now I have a web-server on Node.js on Windows on Pi on ARM, all debuggable with some kick-ass tools on my PC.</p>
-
-<p>The only major criticism I can make is that I&rsquo;d like every single piece including VisStudio and all the add-ons to be installable with a command-line package manager. Much easier for everyone.</p>
-
-<p>I doff my cap to you Mr Nadella, this really is the new Microsoft.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/doff_cap.gif" alt="Cap" />
-</p>
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
@@ -821,7 +1017,7 @@ sudo cp -R * /usr/local/
         </ul>
     </div>
 </div>
-<script src="http://conoroneill.net/js/all.min.js"></script>
+<script src="http://localhost:1313/js/all.min.js"></script>
         </div>
     </div>
 </div>

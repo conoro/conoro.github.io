@@ -26,10 +26,10 @@
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
 
-    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link rel="stylesheet" href="http://localhost:1313//css/all.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://conoroneill.net/index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="http://localhost:1313/index.xml" />
 </head>
 <body>
 
@@ -39,7 +39,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
     <div class="header">
         <hgroup>
-            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h1 class="brand-title"><a href="http://localhost:1313/">Cross Dominant</a></h1>
             <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
         </hgroup>			
         <nav class="nav">
@@ -55,7 +55,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="pure-button" href="http://conoroneill.net/index.xml"><i class="fa fa-rss"></i> rss</a>
+                    <a class="pure-button" href="http://localhost:1313/index.xml"><i class="fa fa-rss"></i> rss</a>
                 </li>
             </ul>
         </nav>
@@ -81,11 +81,82 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">31 Dec 2011, 17:50</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://localhost:1313/summary-of-setting-up-your-own-private-app-inventor-server-for-your-school/" class="post-title">Summary of Setting Up Your Own Private App Inventor Server For Your School</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Summary of Setting Up Your Own Private App Inventor Server For Your School&rdquo;</p>
+
+<p>It turns out that the setup of a private App Inventor server is easier than I thought. If you are used to Amazon EC2, it&rsquo;ll be a doddle for you. The Google App Engine bit is absolutely trivial. Full <a href="https://docs.google.com/document/d/124V0q-Jzs8n9LqAlFKnSWxGLei_KZAUQGJUZwlALVws/edit?hl=en_US">MIT documentation is here</a>.
+<ol>
+    <li>Go to appengine.google.com and sign-up with a GMail/GApps address.</li>
+    <li>Create an App. This only means giving the App an name.You&rsquo;ll have to confirm your identity by SMS from Google. We used a variation of the name of our school as the app name so that our private App Inventor will be accessible at <a href="http://nameofourschool.appspot.com">http://nameofourschool.appspot.com</a></li>
+    <li>Download and install the <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">latest Oracle/SUN JDK</a>on your PC</li>
+    <li>Download the <a href="http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Java">App Engine Java SDK</a></li>
+    <li>Unzip it to somewhere like c:\apps\appengine-java-sdk-1.6.1</li>
+    <li>Download the latest <a href="http://appinventoredu.mit.edu/download-jar-files">App Inventor zip</a> (currently Dec 20th 2011)</li>
+    <li>Unzip</li>
+    <li>Then un-gzip and un-tar theappinventor-Dec-20.tgz contained within. (Use 7-Zip for all these different archive formats if you are on a Windows PC)</li>
+    <li>Navigate down into the the directory tree created by all this unzipping and copy the appinventor sub-directory you find so that it is at something like c:\apps\appinventor</li>
+    <li>Now you need to setup a Build Server if you want to be able to download the Apps onto real phones. I did this on Amazon EC2</li>
+<ol>
+    <li>Go to <a href="http://aws.amazon.com">Amazon AWS</a> and Sign-Up for a new account</li>
+    <li>You will have to provide a Credit Card but it won&rsquo;t be charged</li>
+    <li>You will be verified by an automated phone call</li>
+    <li>Once the account is fully live, go to the AWS Console and make sure you are viewing EC2 instances in EU-West (Ireland)</li>
+    <li>Create a new Amazon Linux AMI Micro 32-Bit Instance in Ireland using their new Quick Wizard. (Go for 32-bit to save hassle)</li>
+    <li>This is free for a year so you don&rsquo;t have to worry about cost. Maybe a tenner a month after that?</li>
+    <li>Grab the PEM SSH Key and do the usual messing to convert it to a Putty ppk file so that you can SSH to the instance.</li>
+    <li>SSH to the instance</li>
+    <li>Grab that App Inventor zip from Step 6 using wget on the EC2 instance</li>
+    <li>Do all the unzipping etc again, but this time you want the other file contained within (for-BuildServer.tgz). Un-tar and un-gzip thatfor-BuildServer.tgz file</li>
+    <li>I found that the OpenJDK that comes pre-configured on the Amazon Linux instances threw an error when I tried to build using it. So I installed the Oracle/SUN JDK instead</li>
+<ol>
+    <li><del>Go to<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u2-download-1377129.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u2-download-1377129.html</a></del></li>
+    <li>It appears Java 1.7 has issues with signing the Apps. So you have to use the older 1.6 instead</li>
+    <li>Go to<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u30-download-1377139.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u30-download-1377139.html</a></li>
+    <li>Download the 32-bit RPM bin for Linux using wget on the instance</li>
+    <li>sudo sh thenameofthefile.rpm.bin</li>
+    <li>sudo alternatives &ndash;install /usr/bin/java java /usr/java/latest/bin/java 1500</li>
+    <li>sudo alternatives &ndash;set java /usr/java/latest/bin/java</li>
+</ol>
+    <li>Now you can run the build server by going to the for-BuildServer directory you created in Step J above and just running<strong>./launch-buildserver</strong></li>
+    <li>In the AWS Console, Open up port 9990 in the security groups</li>
+    <li>Copy the public DNS name of your server from the AWS console</li>
+</ol>
+    <li>Now back on your Windows machine, go to c:\apps\appinventor\war\WEB-INF\appengine-web.xml</li>
+<ol>
+    <li>Change localhost in&lt;property name=&ldquo;build.server.host&rdquo; value=&ldquo;localhost:9990&rdquo; /&gt; to the public DNS name of your build server</li>
+    <li>Change&lt;property name=&ldquo;use.whitelist&rdquo; value=&ldquo;false&rdquo;/&gt; to be true</li>
+    <li>Save the file</li>
+</ol>
+    <li>Now editc:\apps\appinventor\war\whitelist and add the GMail/GApps addresses of every account that you are allowing to use this App Inventor instance. In our case that it me, 2 teachers and 30 pairs of kids, all using the school Parent&rsquo;s Association GApps email addresses that I created.</li>
+    <li>In a Windows Command Prompt, cd to the c:\apps\appengine (or whatever) directory and then enter <strong>c:\apps\appengine-java-sdk-1.6.1\bin\appcfg.cmd -A myapplicationID update war</strong> (where myapplicationID is obviously the name you picked in Step 2)</li>
+    <li>The last step builds and uploads App Inventor to App Engine and runs it. If, after a few minutes, you get a Success message then you are in business! Just go to <a href="http://nameofyourapp.appspot.com">http://nameofyourapp.appspot.com</a> and you can login with your GMail/GApps account and start using App Inventor just like on the original Google site.</li>
+</ol>
+As I said in the last post, the only major concern is what number of simultaneous users will kick us out of the free tier on App Engine. Also, if lots of people are packaging Apps for phones, the Micro EC2 instance will take an age to build them. This isn&rsquo;t a huge issue for us as we spend 99% of our time either using the emulator or a live non-packaged debug session on the phones.</p>
+
+<p>Shout if you have any questions or comments.</p>
+
+<p>My next App Inventor post will be a status report on how the pilot in our school is going.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">31 Dec 2011, 15:19</h1>
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/just-in-the-nick-of-time-our-schools-own-app-inventor-setup/" class="post-title">Just in The Nick of Time - Our School&#39;s Own App Inventor Setup</a>
+                        <a href="http://localhost:1313/just-in-the-nick-of-time-our-schools-own-app-inventor-setup/" class="post-title">Just in The Nick of Time - Our School&#39;s Own App Inventor Setup</a>
 
                         <p class="post-meta">
                             
@@ -107,7 +178,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/time-for-an-irish-technology-industry-lobby/" class="post-title">Time for an Irish Technology Industry Lobby?</a>
+                        <a href="http://localhost:1313/time-for-an-irish-technology-industry-lobby/" class="post-title">Time for an Irish Technology Industry Lobby?</a>
 
                         <p class="post-meta">
                             
@@ -150,7 +221,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/hp-eprint-app-for-ipad-why-hp-was-right-to-exit-tablet-biz/" class="post-title">HP ePrint App for iPad - Why HP was right to exit Tablet Biz</a>
+                        <a href="http://localhost:1313/hp-eprint-app-for-ipad-why-hp-was-right-to-exit-tablet-biz/" class="post-title">HP ePrint App for iPad - Why HP was right to exit Tablet Biz</a>
 
                         <p class="post-meta">
                             
@@ -180,7 +251,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/mini-review-of-google-app-inventor-beginners-guide-by-ralph-roberts/" class="post-title">Mini-Review of Google App Inventor Beginner&#39;s Guide by Ralph Roberts</a>
+                        <a href="http://localhost:1313/mini-review-of-google-app-inventor-beginners-guide-by-ralph-roberts/" class="post-title">Mini-Review of Google App Inventor Beginner&#39;s Guide by Ralph Roberts</a>
 
                         <p class="post-meta">
                             
@@ -200,7 +271,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/just-had-a-horrible-thought-could-i-move-from-posterous-to-google/" class="post-title">Just had a Horrible Thought. Could I move from Posterous to Google&#43;?</a>
+                        <a href="http://localhost:1313/just-had-a-horrible-thought-could-i-move-from-posterous-to-google/" class="post-title">Just had a Horrible Thought. Could I move from Posterous to Google&#43;?</a>
 
                         <p class="post-meta">
                             
@@ -220,7 +291,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/the-death-of-boxee/" class="post-title">The Death of Boxee</a>
+                        <a href="http://localhost:1313/the-death-of-boxee/" class="post-title">The Death of Boxee</a>
 
                         <p class="post-meta">
                             
@@ -249,7 +320,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/the-technical-magic-of-playing-a-song-in-our-car-in-2011/" class="post-title">The Technical Magic of Playing a Song in Our Car in 2011</a>
+                        <a href="http://localhost:1313/the-technical-magic-of-playing-a-song-in-our-car-in-2011/" class="post-title">The Technical Magic of Playing a Song in Our Car in 2011</a>
 
                         <p class="post-meta">
                             
@@ -272,7 +343,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/this-is-facebooks-idea-of-chronological/" class="post-title">This is Facebook&#39;s Idea of Chronological</a>
+                        <a href="http://localhost:1313/this-is-facebooks-idea-of-chronological/" class="post-title">This is Facebook&#39;s Idea of Chronological</a>
 
                         <p class="post-meta">
                             
@@ -295,7 +366,7 @@
                 <section class="post">
                     <header class="post-header">
 
-                        <a href="http://conoroneill.net/lego-bring-back-beautiful/" class="post-title">LEGO - Bring Back Beautiful</a>
+                        <a href="http://localhost:1313/lego-bring-back-beautiful/" class="post-title">LEGO - Bring Back Beautiful</a>
 
                         <p class="post-meta">
                             
@@ -317,26 +388,6 @@
 </p><p>I'd love to see kits for London Eye, Empire State, Golden Gate, Olympics 2012 etc that would appeal to boys and girls. And, as I said before, a Mindstorms that average families can afford.
 </p><p>As for this pastel cutesie nonsense they are trying to do now for girls, we have enough stupid barbies in the house with the 5 y/o daughter's obsession, we don't need any more of that thanks.</p></div>
  
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">22 Dec 2011, 09:25</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/dont-forget-to-download-your-app-inventor-projects-shutdown-on-dec-31st/" class="post-title">Don&#39;t Forget to Download Your App Inventor Projects - Shutdown on Dec 31st</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Don&rsquo;t Forget to Download Your App Inventor Projects - Shutdown on Dec 31st&rdquo;</p>
-
-<p>If you ever did anything on Google<a href="http://www.appinventorbeta.com">App Inventor</a>, you have 9 days to download your code.<p /><div>I had to log in 30 times to download all the projects of the kids in our school (30 teams of 2). Next step is to setup a private instance of App Inventor on App Engine and EC2 in lieu of MIT being ready. </div></p>
 
                     </div>
                 </section>
@@ -367,7 +418,7 @@
         </ul>
     </div>
 </div>
-<script src="http://conoroneill.net/js/all.min.js"></script>
+<script src="http://localhost:1313/js/all.min.js"></script>
         </div>
     </div>
 </div>
