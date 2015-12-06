@@ -7,7 +7,7 @@
 
     <meta name="description" content="">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Slight screw-up by Facebook in move to https &middot; Cross Dominant">
@@ -104,7 +104,7 @@
                     <div class="post-description">
                         <p>#&ldquo;Slight screw-up by Facebook in move to https&rdquo;</p>
 
-<p>As you probably know, Facebook are transitioning over to https for security reasons. You can opt-in now but it will be mandatory in the coming months. I&#39;ve already written about the fact that every App developer will have to get an SSL cert but I discovered a bigger problem yesterday. <p /><div>If you are running the old Facebook Connect code on your site (and based on my experience, that&#39;s a <em>lot</em> of sites), you are probably accessing this URL:</div><p /><div><a href="http://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php">http://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php</a></div> <p /><div>Facebook now re-directs that to:</div><p /><div><a href="https://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php">https://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php</a></div> <p /><div>But their security Cert is only valid for <em>.<a href="http://facebook.com">facebook.com</a> not *.</em>.<a href="http://facebook.com">facebook.com</a> so Firefox 4 and Chrome 12 are refusing to access it and therefore disabling Facebook Connect on your site.</div> <p /><div>Whilst everyone <em>should</em> move to the new Graph API, not everyone has the time/money/resources to get it done. Hopefully Facebook can fix this soon and give sites more time to transition to the newer code.</div></p>
+<p>As you probably know, Facebook are transitioning over to https for security reasons. You can opt-in now but it will be mandatory in the coming months. I&#39;ve already written about the fact that every App developer will have to get an SSL cert but I discovered a bigger problem yesterday. <p /><div>If you are running the old Facebook Connect code on your site (and based on my experience, that&#39;s a <em>lot</em> of sites), you are probably accessing this URL:</div><p /><div><a href="http://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php">http://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php</a></div> <p /><div>Facebook now re-directs that to:</div><p /><div><a href="https://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php">https://apps.new.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php</a></div> <p /><div>But their security Cert is only valid for *.<a href="http://facebook.com">facebook.com</a> not <em>.</em>.<a href="http://facebook.com">facebook.com</a> so Firefox 4 and Chrome 12 are refusing to access it and therefore disabling Facebook Connect on your site.</div> <p /><div>Whilst everyone <em>should</em> move to the new Graph API, not everyone has the time/money/resources to get it done. Hopefully Facebook can fix this soon and give sites more time to transition to the newer code.</div></p>
 
                     </div>
                     <div id="disqus_thread"></div>

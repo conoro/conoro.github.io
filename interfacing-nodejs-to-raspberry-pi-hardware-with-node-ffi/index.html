@@ -7,7 +7,7 @@
 
     <meta name="description" content="Now that I can control the Efergy RC mains sockets easily with a DigiX Arduino, it&#39;s time to make the same thing work on Node.js running on a Raspberry Pi. Turns out it&#39;s not quite so easy!">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Interfacing Node.js to Raspberry Pi hardware like 433Mhz transmitters with node-ffi &middot; Cross Dominant">
@@ -108,8 +108,7 @@
 
 <p>But first, check out this gorgeous <a href="http://shop.pimoroni.com/products/pibow-timber">Pimoroni Pibow Timber</a> case that the RPi now lives in. Makes me smile every time I look at it.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/pibow_timber.jpg" alt="Pibow" title="Pibow Timber Raspberry Pi case" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/pibow_timber.jpg" alt="Pibow" title="Pibow Timber Raspberry Pi case" /></p>
 
 <p>Start by plugging in one of the Efergy switches and using its remote control to set its code. Use the sniffer program from <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">the last post</a> to find out what that code is.</p>
 
@@ -154,34 +153,32 @@ make
 <pre><code class="language-bash">cd ~/gitwork/rcswitch-pi
 </code></pre>
 
-<p>Create a file called efergy.cpp with the following contents
-```c
-#include &ldquo;RCSwitch.h&rdquo;
-#include <stdlib.h>
-#include <stdio.h></p>
+<p>Create a file called efergy.cpp with the following contents</p>
 
-<p>int main(int argc, char *argv[]) {</p>
+<pre><code class="language-c">#include &quot;RCSwitch.h&quot;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
 
-<pre><code>/*
- output PIN is hardcoded for testing purposes
- see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
- for pin mapping of the raspberry pi GPIO connector
- */
-int PIN = 0;
-int unitCode = atoi(argv[1]);
+int main(int argc, char *argv[]) {
 
-if (wiringPiSetup () == -1) return 1;
-    printf(&quot;sending unitCode[%i]\n&quot;, unitCode);
-    RCSwitch mySwitch = RCSwitch();
-    mySwitch.enableTransmit(PIN);
+    /*
+     output PIN is hardcoded for testing purposes
+     see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
+     for pin mapping of the raspberry pi GPIO connector
+     */
+    int PIN = 0;
+    int unitCode = atoi(argv[1]);
 
-    mySwitch.send(unitCode,24);
+    if (wiringPiSetup () == -1) return 1;
+        printf(&quot;sending unitCode[%i]\n&quot;, unitCode);
+        RCSwitch mySwitch = RCSwitch();
+        mySwitch.enableTransmit(PIN);
 
-    return 0;
+        mySwitch.send(unitCode,24);
+
+        return 0;
+}
 </code></pre>
-
-<p>}
-```</p>
 
 <p>Now compile and run it:</p>
 
@@ -218,66 +215,65 @@ sudo ./efergy 109019
 
 <p>Create wrapper.h and wrapper.c</p>
 
-<p>wrapper.h:
-```c
-#ifndef __MYWRAPPER_H
-#define __MYWRAPPER_H</p>
+<p>wrapper.h:</p>
 
-<p>#ifdef __cplusplus
-extern &ldquo;C&rdquo; {
-#endif</p>
+<pre><code class="language-c">#ifndef __MYWRAPPER_H
+#define __MYWRAPPER_H
 
-<p>typedef struct RCSwitch RCSwitch;</p>
-
-<p>RCSwitch* newRCSwitch();</p>
-
-<p>void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length);</p>
-
-<p>void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin);</p>
-
-<p>void deleteRCSwitch(RCSwitch* v);</p>
-
-<p>#ifdef __cplusplus
-}
-#endif
-#endif
-```</p>
-
-<p>wrapper.c:
-```c</p>
-
-<pre><code>#include &quot;RCSwitch.h&quot;
-#include &quot;wrapper.h&quot;
-#include &lt;stdio.h&gt;
-
+#ifdef __cplusplus
 extern &quot;C&quot; {
-  RCSwitch* newRCSwitch() {
-    //printf(&quot;Inside newRCSwitch&quot;);
-    return new RCSwitch();
-  }
+#endif
 
-  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
-    //printf(&quot;Inside RCSwitch_send&quot;);
-    v-&gt;send(Code, length);
-  }
+  typedef struct RCSwitch RCSwitch;
 
-  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
-    //printf(&quot;Inside RCSwitch_enableTransmit&quot;);
-    v-&gt;enableTransmit(nTransmitterPin);
-  }
+  RCSwitch* newRCSwitch();
 
-  void deleteRCSwitch(RCSwitch* v) {
-    delete v;
-  }
+  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length);
+
+  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin);
+
+  void deleteRCSwitch(RCSwitch* v);
+
+#ifdef __cplusplus
 }
+#endif
+#endif
 </code></pre>
 
-<pre><code>
-### Compile everything
-Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple [GDB Tutorial here](http://web.eecs.umich.edu/~sugih/pointers/summary.html) and some tips on [RPi Forums](http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312).
+<p>wrapper.c:</p>
 
-```bash
-g++ -g -c wrapper.c -o wrapper.o
+<pre><code class="language-c">
+    #include &quot;RCSwitch.h&quot;
+    #include &quot;wrapper.h&quot;
+    #include &lt;stdio.h&gt;
+
+    extern &quot;C&quot; {
+      RCSwitch* newRCSwitch() {
+        //printf(&quot;Inside newRCSwitch&quot;);
+        return new RCSwitch();
+      }
+
+      void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
+        //printf(&quot;Inside RCSwitch_send&quot;);
+        v-&gt;send(Code, length);
+      }
+
+      void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
+        //printf(&quot;Inside RCSwitch_enableTransmit&quot;);
+        v-&gt;enableTransmit(nTransmitterPin);
+      }
+
+      void deleteRCSwitch(RCSwitch* v) {
+        delete v;
+      }
+    }
+</code></pre>
+
+<h3 id="compile-everything:72ef235c1c656139694e1398dfdb61c0">Compile everything</h3>
+
+<p>Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple <a href="http://web.eecs.umich.edu/~sugih/pointers/summary.html">GDB Tutorial here</a> and some tips on <a href="http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312">RPi Forums</a>.</p>
+
+<pre><code class="language-bash">g++ -g -c wrapper.c -o wrapper.o
 gcc -g -c efergy.c -o efergy.o
 g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
 g++ -g efergy.o wrapper.o ./libRCSwitch.so -o efergy2

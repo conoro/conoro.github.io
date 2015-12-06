@@ -7,7 +7,7 @@
 
     <meta name="description" content="Now that the Espruino Pico has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I&#39;ve cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Creating an OTP fob compatible with Google Authenticator using an Espruino Pico &middot; Cross Dominant">
@@ -104,8 +104,7 @@
                     <div class="post-description">
                         <p>Now that the <a href="http://www.espruino.com/">Espruino Pico</a> has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I&rsquo;ve cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg" alt="Espruino Pico OTP" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg" alt="Espruino Pico OTP" /></p>
 
 <p>This code is basically just from three sources, merged together with a few tiny tweaks by me.</p>
 
@@ -180,8 +179,8 @@ TOTP = function() {
             var epoch = Math.round(new Date().getTime() / 1000.0);
             var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &quot;0&quot;);
             var hmacObj = new jsSHA(&quot;SHA-1&quot;, &quot;HEX&quot;);
-			hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
-			hmacObj.update(time);
+            hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
+            hmacObj.update(time);
             var hmac = hmacObj.getHMAC(&quot;HEX&quot;);
             var offset = hex2dec(hmac.substring(hmac.length - 1));
             var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp; hex2dec(&quot;7fffffff&quot;)) + &quot;&quot;;
@@ -201,7 +200,7 @@ var kb = require(&quot;USBKeyboard&quot;);
 
 setWatch(function() {
   // These two lines by Conor O'Neill :-)
-	var pin = &quot;put_your_PIN_Prefix_here&quot;;
+    var pin = &quot;put_your_PIN_Prefix_here&quot;;
   kb.type(pin + totpObj.getOTP(&quot;put_your_google_authenticator_secret_here&quot;).toString(), function() {
         kb.tap(kb.KEY.ENTER);
     });

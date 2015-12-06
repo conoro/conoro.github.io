@@ -7,7 +7,7 @@
 
     <meta name="description" content="ZeroMQ is a lightweight messaging library and looks ideal for lower powered devices like the RPi. Building and running is pretty easy. These are more notes for myself for future reference.">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Running ZeroMQ with Node.js on Raspberry Pi &middot; Cross Dominant">
@@ -130,69 +130,65 @@ sudo ldconfig
 
 <p>Test code for Request / Reply <a href="http://blog.rastating.com/using-zeromq-with-node-js/">from here</a>:</p>
 
-<p>server.js:
-```javascript
-var zmq = require(&ldquo;zmq&rdquo;);<br />
-var socket = zmq.socket(&ldquo;req&rdquo;);<br />
-var counter = 0;</p>
+<p>server.js:</p>
 
-<p>// Just a helper function for logging to the console with a timestamp.
-function logToConsole (message) {<br />
-    console.log(&rdquo;[&rdquo; + new Date().toLocaleTimeString() + &ldquo;] &rdquo; + message);
-}</p>
+<pre><code class="language-javascript">var zmq = require(&quot;zmq&quot;);  
+var socket = zmq.socket(&quot;req&quot;);  
+var counter = 0;
 
-<p>function sendMessage (message) {<br />
-    logToConsole(&ldquo;Sending: &ldquo; + message);
+// Just a helper function for logging to the console with a timestamp.
+function logToConsole (message) {  
+    console.log(&quot;[&quot; + new Date().toLocaleTimeString() + &quot;] &quot; + message);
+}
+
+function sendMessage (message) {  
+    logToConsole(&quot;Sending: &quot; + message);
     socket.send(message);
-}</p>
+}
 
-<p>// Add a callback for the event that is invoked when we receive a message.
-socket.on(&ldquo;message&rdquo;, function (message) {<br />
+// Add a callback for the event that is invoked when we receive a message.
+socket.on(&quot;message&quot;, function (message) {  
     // Convert the message into a string and log to the console.
-    logToConsole(&ldquo;Response: &ldquo; + message.toString(&ldquo;utf8&rdquo;));
-});</p>
+    logToConsole(&quot;Response: &quot; + message.toString(&quot;utf8&quot;));
+});
 
-<p>// Begin listening for connections on all IP addresses on port 9998.
-socket.bind(&ldquo;tcp://*:9998&rdquo;, function (error) {<br />
+// Begin listening for connections on all IP addresses on port 9998.
+socket.bind(&quot;tcp://*:9998&quot;, function (error) {  
     if (error) {
-        logToConsole(&ldquo;Failed to bind socket: &ldquo; + error.message);
+        logToConsole(&quot;Failed to bind socket: &quot; + error.message);
         process.exit(0);
     }
     else {
-        logToConsole(&ldquo;Server listening on port 9998&rdquo;);</p>
+        logToConsole(&quot;Server listening on port 9998&quot;);
 
-<pre><code>    // Increment the counter and send the value to the clients every second.
-    setInterval(function () { sendMessage(counter++); }, 1000);
+        // Increment the counter and send the value to the clients every second.
+        setInterval(function () { sendMessage(counter++); }, 1000);
+    }
+});
+</code></pre>
+
+<p>client.js:</p>
+
+<pre><code class="language-javascript">var zmq = require(&quot;zmq&quot;);  
+var socket = zmq.socket(&quot;rep&quot;);
+
+// Just a helper function for logging to the console with a timestamp.
+function logToConsole (message) {  
+    console.log(&quot;[&quot; + new Date().toLocaleTimeString() + &quot;] &quot; + message);
 }
-</code></pre>
 
-<p>});
-```</p>
-
-<p>client.js:
-```javascript
-var zmq = require(&ldquo;zmq&rdquo;);<br />
-var socket = zmq.socket(&ldquo;rep&rdquo;);</p>
-
-<p>// Just a helper function for logging to the console with a timestamp.
-function logToConsole (message) {<br />
-    console.log(&rdquo;[&rdquo; + new Date().toLocaleTimeString() + &ldquo;] &rdquo; + message);
-}</p>
-
-<p>// Add a callback for the event that is invoked when we receive a message.
-socket.on(&ldquo;message&rdquo;, function (message) {<br />
+// Add a callback for the event that is invoked when we receive a message.
+socket.on(&quot;message&quot;, function (message) {  
     // Convert the message into a string and log to the console.
-    logToConsole(&ldquo;Received message: &ldquo; + message.toString(&ldquo;utf8&rdquo;));</p>
+    logToConsole(&quot;Received message: &quot; + message.toString(&quot;utf8&quot;));
 
-<pre><code>// Send the message back aa a reply to the server.
-socket.send(message);
+    // Send the message back aa a reply to the server.
+    socket.send(message);
+});
+
+// Connect to the server instance.
+socket.connect('tcp://127.0.0.1:9998');  
 </code></pre>
-
-<p>});</p>
-
-<p>// Connect to the server instance.
-socket.connect(&lsquo;tcp://127.0.0.1:9998&rsquo;);<br />
-```</p>
 
                     </div>
                     <div id="disqus_thread"></div>

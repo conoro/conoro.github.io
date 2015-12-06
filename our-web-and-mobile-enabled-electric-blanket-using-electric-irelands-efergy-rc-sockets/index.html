@@ -7,7 +7,7 @@
 
     <meta name="description" content="Take some simple RC electric sockets that arrive in the post from Electric Ireland and make them web-powered, with almost no effort.">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Our web and mobile enabled electric blanket using Electric Ireland&#39;s Efergy RC sockets &middot; Cross Dominant">
@@ -108,8 +108,7 @@
 
 <p>Last Thursday I came home from work to discover that <a href="http://www.electricireland.ie/">Electric Ireland</a> had sent us three <a href="http://efergy.com/eu/products/remotecontrolledsocket">Efergy</a> remote control power sockets and a plugin energy monitor. I have no idea why they did so, apart perhaps from our crazy electricity use.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg" alt="Efergy" title="Efergy RC Switch" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg" alt="Efergy" title="Efergy RC Switch" /></p>
 
 <p>My mind immediately leaped to our electric blanket conundrum.</p>
 
@@ -125,13 +124,11 @@
 
 <p>Of course that was just step 1. What I really wanted to do was internet-enable these beauties. I&rsquo;ve been meaning to do something along these lines with the <a href="http://digistump.com/products/50">DigiX</a> board since I got it. The DigiX is a really powerful Arduino clone with a 32-bit Atmel ARM CPU, tons upon tons of IO, SD card, audio and, most importantly for this project, Wifi on-board.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg" alt="frontside" title="DigiX with module" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg" alt="frontside" title="DigiX with module" /></p>
 
 <p>Getting Wifi setup the way I wanted on the DigiX took more time than I&rsquo;d have liked yesterday but I finally figured out that the <a href="http://en.usr.cn/low-power-wifi-module.html">Chinese USR-wifi232-g module</a> web UI doesn&rsquo;t like Chrome! Once I switched to Firefox, all went swimmingly. I connected it to a Wifi AP, gave it a fixed IP address and then setup a port forward from the house router to it. Obviously I use <a href="http://dyn.com/">Dynamic DNS with Dyn</a> on the home router so that I don&rsquo;t have to track changing IP addresses manually.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg" alt="backside" title="DigiX other side" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg" alt="backside" title="DigiX other side" /></p>
 
 <p>The DigiX comes with an example Web Server built-in so I was able to just create a few simple URLs and paste the RCSwitch code into the relevant places. So within another few minutes I was toggling the switches over the internet.</p>
 
@@ -144,18 +141,15 @@ mySwitch.send(109323, 24);
 
 <p>But of course I wasn&rsquo;t happy there. I wanted a mobile app! Luckily, Colum Bennet in <a href="http://www.feedhenry.com">FeedHenry</a> has created a superb new Getting Started guide which will be released soon. It walks you through creating an <a href="http://angularjs.org/">Angular</a> Hybrid mobile app which talks to a FeedHenry Node.js back-end to do a really simple task. Despite only playing a programmer for the purposes of blogging, I was able to easily modify both the client and cloud apps to create what I needed with the Node request module.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App" /></p>
 
 <p>Of course I could send the commands directly from the mobile app to the DigiX, but routing it through the cloud means that eventually this can be multi-user, multi-switch, re-configurable and securely locked-down.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success" /></p>
 
 <p>One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing using a simple bookmarked CNAME.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App" /></p>
 
 <p>I&rsquo;ll upload everthing on to a public GitHub repo as soon as I have removed all the hard-coding and added a modicum of &ldquo;security&rdquo; with API keys etc. More posts on this technology combo coming in the next few weeks.</p>
 

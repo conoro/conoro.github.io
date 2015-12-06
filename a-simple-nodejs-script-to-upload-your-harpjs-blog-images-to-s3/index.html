@@ -7,7 +7,7 @@
 
     <meta name="description" content="Whilst there are tons of tools to do S3 upload, I wanted something tuned to how I blog, particularly with a static blog that used to be a WordPress one. I hope you find it useful.">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="A simple Node.js script to upload your Harp.js blog images to S3 &middot; Cross Dominant">
@@ -104,10 +104,10 @@
                     <div class="post-description">
                         <p>Whilst there are tons of tools to do S3 upload, I wanted something tuned to how I blog, particularly with a static blog that used to be a WordPress one with year/month directories for images.</p>
 
-<p>Usage:
-<code>bash
-node upload_s3_images.js image1.jpg image2.jpg image3.png etc
-</code></p>
+<p>Usage:</p>
+
+<pre><code class="language-bash">node upload_s3_images.js image1.jpg image2.jpg image3.png etc
+</code></pre>
 
 <p>It uses your AWS credentials in ~/aws_config.json { &ldquo;accessKeyId&rdquo;: &ldquo;akid&rdquo;, &ldquo;secretAccessKey&rdquo;: &ldquo;secret&rdquo;, &ldquo;region&rdquo;: &ldquo;us-west-2&rdquo; }</p>
 

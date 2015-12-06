@@ -7,7 +7,7 @@
 
     <meta name="description" content="Mixed laterality since 1968">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Cross Dominant &middot; Cross Dominant">
@@ -81,6 +81,96 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">16 Mar 2014, 12:46</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/saying-goodbye-to-wordpress-and-hello-to-harpjs/" class="post-title">Saying goodbye to WordPress and hello to HarpJS</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>My blogging history goes back to 2001 when I setup a Blogger/Blogspot blog in the hope that I would update things more quickly than with Geocities or my Frontpage98 home page. 4 months later I wrote my second post :-) For a long time it involved writing the posts on Blogger and then publishing them via FTP to my own domain. It was fiddly but it worked ok.</p>
+
+<p>Then around 2005 I discovered WordPress and realised blogging could be much much much easier. In the past 9 years I&rsquo;ve done an incredible amount of stuff with WP. From personal blogging to building core parts of a business on top of it. It has been both a delight and the source of my greatest frustrations (glares at the &ldquo;WYSIWYG&rdquo; editor).</p>
+
+<p>As with all great Open Source projects, the power of WP isn&rsquo;t really in the core product itself, but in the ecosystem and community that built up around it. I have never run into a situation where I couldn&rsquo;t find a WP plugin that matched my needs within a couple of minutes of googling.</p>
+
+<p>The old slow, awkward, manually marked-up, manually-published HTML method died under the onslaught of WP&rsquo;s ease-of-use. Bloggers no longer had to be programmers or web developers, they could be writers. And that was, without a doubt, a wonderful progression. Even tools that tried to straddle both worlds, like Movable Type, couldn&rsquo;t compete with WP&rsquo;s 2 minute install and one-click publish.</p>
+
+<p>WordPress has also created a swathe of job opportunities for people around the world who do design, web-site creation, SEO etc etc, and who wouldn&rsquo;t know a HTML tag if it slapped them in the face. This is both a blessing and a curse, as the number of security-compromised WP sites grows daily.</p>
+
+<p>The incredible flexibility and architecture openness is naturally also WP&rsquo;s greatest weakness. I&rsquo;ve lost track of the number of plugins that either destroyed the performance of my WP installations or opened up giant gaping security holes. The relentless Core+Plugins upgrade cycle has also become insufferable if you run more than one site.</p>
+
+<p>I&rsquo;ve recently been thinking a lot around the lifecycle of things and how we often focus on the wrong bit. In App development, the creation of the App is the shortest bit of its lifecycle, so you should think about what you need to manage it, once its deployed. Similarly with blogging, the creation bit can take minutes but those posts can be read by thousands of people over several years. So we should be thinking more about how we make sure those posts are delivered quickly, reliably and with zero security hazards to as many people as possible and with no ongoing maintenance.</p>
+
+<p>It was when we hit 2013 that I started to notice a change in the attitude towards WordPress. The WP features continued to pile up as it tried and failed to become a proper CMS. In reality most people want to create simple text+images blogposts with as little hassle as possible. So developers started going Back To The Future and using command-line tools, Markdown syntax, templating languages and, most importantly, GitHub Pages as the blog host.</p>
+
+<p>This is the bit that started to get me excited. Totally static blog web-pages. No PHP, no MySQL DB, no possibility for security holes. And best of all, blazingly fast performance.</p>
+
+<p>Of course these tools are currently completely opaque to non-technical people. You get ultimate control and flexibility but at the cost of having to learn Markdown, Jade, EJS, Stylus, Git, S3, JavaScript, etc etc.</p>
+
+<p>As 2013 progressed I did lots more reading on these tools like Jekyll and Octopress. Somehow Ghost got lumped in there too but it&rsquo;s not a static site generator, it&rsquo;s trying to be WP with PHP removed and Node.js inserted.</p>
+
+<p>My plan was to move some old work sites to be static. They have thousands of pages on them but despite little traffic, they regularly go offline as MySQL runs out of memory due to what appears to be some horrifically written SQL queries in WP or one of its plugins.</p>
+
+<p>Finally a few weeks ago, I went at it all again but decided to use a blog move as a way of learning how it all works. I had a few requirements:</p>
+
+<ul>
+<li>It had to work with GitHub Pages or similar</li>
+<li>It should be git friendly</li>
+<li>It should ideally use Node.js rather than Ruby or PHP</li>
+<li>It should support more that one templating language/styling language and possibly CoffeeScript</li>
+<li>The tools should run on Linux, OSX and ideally Windows</li>
+<li>It should have a good community of people building themes and improvements</li>
+<li>It should have some way of importing WordPress content</li>
+<li>It should have some blog-style templates rather than web-site ones</li>
+<li>It should have some support for commenting systems like Disqus, but ideally have its own JS commenting system</li>
+</ul>
+
+<p>There are quite a few tools out there that support most of the above but I did find that many of them are either dead projects or single-developer projects with no community. The small set of which I found the most mentions, in no particular order, were:</p>
+
+<ul>
+<li><a href="http://harpjs.com/">HarpJS</a></li>
+<li><a href="http://docpad.org/">DocPad</a></li>
+<li><a href="http://octopress.org/">Octopress</a></li>
+<li><a href="http://jekyllrb.com/">Jekyll</a></li>
+<li><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></li>
+<li><a href="https://github.com/flatiron/blacksmith">Blacksmith</a></li>
+</ul>
+
+<p>A bit more digging bubbled up HarpJS as the most likely winner based on the above requirements, with DocPad as a backup in case it failed. I had also seen some Mobile guys blogging about HarpJS, and two of the co-founders created PhoneGap, which immediately piqued my interest.</p>
+
+<p>It turned out to be a <em>lot</em> harder than I thought to move from WP to Harp. Wayyyy harder than the earlier move of that same blog from Posterous to WordPress. I&rsquo;ll be writing a separate post right after this on the nitty gritty of the move but in this post I really just wanted to focus on the &ldquo;Static Movement&rdquo; (geddit? static, movement).</p>
+
+<p>I really think there is a large opportunity for a mainstream Static Site/Blog platform and it many ways it&rsquo;ll probably be like Blogger of old. I really like where Dave Winer is going with the <a href="http://fargo.io/">Fargo outliner</a> and it has the potential to be such a tool. The Harp guys are also doing some interesting stuff with the <a href="https://www.harp.io/">harp.io</a> platform, but the entry price of $9.95 per month is probably too high for most non-commercial bloggers. The features an ideal platform would have include:</p>
+
+<ul>
+<li>Publishing of the static content to GitHub Pages, Dropbox and Google Drive via whatever APIs are appropriate, including Git</li>
+<li>Dropbox and Google Drive to provide CNAME support for these static sites</li>
+<li>Built-in hosting alternative like <a href="https://www.harp.io/">harp.io</a></li>
+<li>Command line flow using git etc for developers</li>
+<li>Online management/publishing dashboard for non-developers</li>
+<li>Online Markdown editing tool - I think Markdown could also go mainstream. Anyone can learn it in a few minutes.</li>
+<li>A split-screen online Markdown editor like Mou or Stackedit</li>
+<li>Online templates/themes management using something like Jade+Stylus or EJS</li>
+<li>Very fast compile/publish cycle</li>
+<li>Plugins only available as JavaScript snippets (Dropbox JavaScript &ldquo;App&rdquo; support is very cool)</li>
+</ul>
+
+<p>I just have this feeling that Dropbox/GoogleDrive could finally be the trigger that gets us back on the righteous path of people owning and publishing their own content instead of giving it for free to Facebook/Tumblr/Twitter where it could all disappear tomorrow (cf Geocities/Posterous/etc).</p>
+
+<p>I&rsquo;m probably a week or so away from pulling the trigger on the move. Some of the earliest content that originated on Posterous is well and truly messed up and I&rsquo;m not sure if I want to script up some cleanups or leave it. Finally, the lack of pagination is probably the last thing I want to look at before making the DNS change.</p>
+
+<p>It&rsquo;ll be interesting to watch how 2014 plays out. Will a new platform come to the fore which focuses on ownership, content portability, zero-maintenance, security and adding a bit of fun back into blogging?</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">14 Mar 2014, 20:50</h1>
                 <section class="post">
                     <header class="post-header">
@@ -98,8 +188,7 @@
 
 <p>Then this evening I asked myself the silly question &ldquo;I wonder can I run Node.js on Android?&rdquo;. It turns out you can. But it&rsquo;s a teensy bit fiddly to get going. The biggest problem turned out to be Android 4.4 KitKat which made the first few steps the hardest.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android_02.jpg" alt="Debian on Android" title="Debian and Harp" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android_02.jpg" alt="Debian on Android" title="Debian and Harp" /></p>
 
 <p>You are going to be running Debian Linux in a chrooted environment. For some weird reason I never even knew this was possible until today! In fact there are multiple projects out there that enable this. The main thing, of course, is that your phone must be rooted. A Stock Samsung ROM is fine and I&rsquo;m sure GPE and Cyanogen would also work.</p>
 
@@ -156,7 +245,6 @@ harp compile _harp ./
 <p>The two bits of oddness above were getting an error from curl trying to install npm, so I used wget. Also, very very strange node-gyp permissions errors installing Harp globally when it came to node-sass (hence the &ndash;unsafe-perm). Node-sass also causes problems on Windows I&rsquo;ve noticed.</p>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/harp_android.jpg" alt="Harp on Android" title="Harp and Android" />
-
 And that&rsquo;s it about it. Except for&hellip;&hellip;.</p>
 
 <pre><code>apt-get install emacs
@@ -164,8 +252,7 @@ And that&rsquo;s it about it. Except for&hellip;&hellip;.</p>
 
 <p>How could I not? :-)</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/emacs.png" alt="Emacs on Android" title="Emacs and Android" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/emacs.png" alt="Emacs on Android" title="Emacs and Android" /></p>
 
 <p>So I edit Markdown blogposts in Emacs, compile with Harp and commit to GitHub to publish. Simples.</p>
 
@@ -230,8 +317,7 @@ And that&rsquo;s it about it. Except for&hellip;&hellip;.</p>
                     <div class="post-description">
                         <p>In addition to the recent <a href="/the-and100-android-box-is-perfect-for-netflix-rte-player-etc/">Andro100</a> box, the guys in <a href="http://tvtrade.ie">TV Trade</a> also gave me a Sab Unix HD <a href="http://www.tvtrade.ie/triple-tuner.html">Triple Tuner</a> box to try out. The specs on this thing were pretty amazing for something that costs approx €130+VAT so I was intrigued to see how well it did. After the reliability horror that was the Ferguson Ariva 120 pile of junk, I went in with open eyes.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/sab.png" alt="Sab" title="SAB Triple Tuner" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/sab.png" alt="Sab" title="SAB Triple Tuner" /></p>
 
 <p>The box itself is pretty compact with a 1980s Amstrad stereo vibe off it with the chrome accents. Not exactly a looker but not offensive either. It has dual satellite inputs and a single &ldquo;Saorview&rdquo; DTT input. The usual outputs like HDMI etc are there along with wired LAN and a front and back USB port. I hate those front USB ports on all boxes as they are behind a flap which you then have to leave open if you use the port. But if you want to insert a wifi dongle, it probably makes sense for signal strength.</p>
 
@@ -249,8 +335,7 @@ And that&rsquo;s it about it. Except for&hellip;&hellip;.</p>
 
 <p>I was starting to get frustrated with the EPG setup and did some googling to discover that there is a PC app called dreamboxEDIT which lets you configure the EPG remotely. I was pleasantly surprised to find that it was very easy to use and I simply deleted all the &ldquo;bouquets&rdquo; and removed all the garbage channels so I just had the core Irish and UK ones.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/epg.jpg" alt="EPG" title="Enigma 2 EPG" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/epg.jpg" alt="EPG" title="Enigma 2 EPG" /></p>
 
 <p>So yes, it was fiddly to get that sorted but we now have a really nice program guide with 7 days of content. You can&rsquo;t do series link like Sky but you can set repeating timers for the same time.</p>
 
@@ -562,36 +647,6 @@ It can work with old TVs on SCART cable but picture is very fuzzy.</p>
 <p>The price is actually great compared to many of the Android sticks out there which are far less functional. You also know that if anything goes wrong, you have a local supplier and you won&rsquo;t have to deal with the black hole that is returns to China.</p>
 
 <p>Now if only House of Cards Season 2 would hurry up and get here.</p>
-
-<p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">18 Jan 2014, 13:36</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/when-a-10-year-old-tiny-utility-program-saves-your-ass/" class="post-title">When a 10 year old tiny utility program saves your ass</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;When a 10 year old tiny utility program saves your ass&rdquo;</p>
-
-<p>After many many years on a barely-used 1024-bit GPG/PGP key, I decided to go full-blown 4096-bit recently. More for the principle than anything else, but also to mess around with some secure apps like <a href="http://retroshare.sourceforge.net/">Retroshare</a>, as mentioned by <a href="https://twitter.com/onetruecathal">Cathal Garvey</a>.</p>
-
-<p>Whilst I was as it, I moved to a new much improved longer password and made sure to drill it into my brain over and over.</p>
-
-<p>Yeah, that worked brilliantly&hellip;&hellip;&hellip;..</p>
-
-<p>Last night I went to setup Retroshare properly and it rejected the password. 50 attempts later I was no closer to getting in. But I was sure I had the general pattern of the password correct.</p>
-
-<p>Normally you are screwed when this happens, but a bit of googling found program called &ldquo;<a href="http://www.roguedaemon.net/rephrase/README.html">Rephrase</a>&rdquo; which was last updated in 2003. You give it the general patter of your password along with possible character variations and it brute forces all of the possible combinations against GPG. e.g. (T|t)this(I|i)s(M|m)y(P|p)assword. And whaddya know, I was close, I just had a capitalisation wrong! Hurrah.</p>
 
 <p>&nbsp;</p>
 

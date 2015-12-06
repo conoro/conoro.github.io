@@ -7,7 +7,7 @@
 
     <meta name="description" content="Mixed laterality since 1968">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Cross Dominant &middot; Cross Dominant">
@@ -81,6 +81,104 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">22 Jun 2014, 19:35</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/a-simple-nodejs-script-to-upload-your-harpjs-blog-images-to-s3/" class="post-title">A simple Node.js script to upload your Harp.js blog images to S3</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Whilst there are tons of tools to do S3 upload, I wanted something tuned to how I blog, particularly with a static blog that used to be a WordPress one with year/month directories for images.</p>
+
+<p>Usage:</p>
+
+<pre><code class="language-bash">node upload_s3_images.js image1.jpg image2.jpg image3.png etc
+</code></pre>
+
+<p>It uses your AWS credentials in ~/aws_config.json { &ldquo;accessKeyId&rdquo;: &ldquo;akid&rdquo;, &ldquo;secretAccessKey&rdquo;: &ldquo;secret&rdquo;, &ldquo;region&rdquo;: &ldquo;us-west-2&rdquo; }</p>
+
+<p>It uses the bucket name and root upload directory from ./s3_blog_config.json {&ldquo;bucket&rdquo;: &ldquo;conoroneill.net&rdquo;, &ldquo;rootUploadDir&rdquo;: &ldquo;wp-content/uploads/&rdquo;}</p>
+
+<p>So if I have a file called s3_upload.jpg on my Desktop and I invoke as follows:</p>
+
+<pre><code class="language-bash">node upload_s3_images.js ~/Desktop/s3_upload.jpg
+</code></pre>
+
+<p>I end up with a file at: <a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/s3_upload.jpg">https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/s3_upload.jpg</a></p>
+
+<pre><code class="language-javascript">// upload_s3_images.js
+// Upload a space separated list of images to an S3 bucket for use by your Harp.js static blog
+// node upload_s3_images.js image1.jpg image2.jpg image3.png etc
+// Uses your AWS credentials in ~/aws_config.json { &quot;accessKeyId&quot;: &quot;akid&quot;, &quot;secretAccessKey&quot;: &quot;secret&quot;, &quot;region&quot;: &quot;us-west-2&quot; }
+// Uses bucket name and root upload directory from ./s3_blog_config.json {&quot;bucket&quot;: &quot;conoroneill.net&quot;, &quot;rootUploadDir&quot;: &quot;wp-content/uploads/&quot;}
+// My blog is exported from WordPress so it uses /wp-content/uploads/year/month/ as the directory stucture
+
+// Copyright (C) 2014 Conor O'Neill
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var AWS = require('aws-sdk');
+var fs = require('fs'); 
+var userHome = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
+AWS.config.loadFromPath(userHome + '/aws_config.json');
+var blogConfig = require('./s3_blog_config.json');
+
+
+var fileList = process.argv.slice(2);
+
+fileList.forEach(function (val, index, array) {
+
+  var fileName = val;
+  var currentTime = new Date();
+  var currentYear = currentTime.getFullYear();
+  var currentMonth = (&quot;0&quot; + (currentTime.getMonth() + 1)).slice(-2);
+
+  var uploadName = blogConfig.rootUploadDir + currentYear + '/' + currentMonth + '/' + fileName.split('/').pop();
+  var fileBuffer = fs.readFileSync(fileName);
+  var metaData = getContentTypeByFile(fileName);
+    
+  var s3 = new AWS.S3(); 
+
+  var params = {Bucket: blogConfig.bucket, Key: uploadName, Body: fileBuffer, ContentType: metaData};
+
+  s3.putObject(params, function(err, data) {
+    if (err)       
+      console.log(err)     
+    else console.log(&quot;Successfully uploaded: &quot; + blogConfig.blogS3Url + blogConfig.bucket + &quot;/&quot; + uploadName);   
+  });
+
+});
+
+function getContentTypeByFile(fileName) {
+  var rc = 'application/octet-stream';
+  var fn = fileName.toLowerCase();
+
+  if (fn.indexOf('.html') &gt;= 0) rc = 'text/html';
+  else if (fn.indexOf('.css') &gt;= 0) rc = 'text/css';
+  else if (fn.indexOf('.json') &gt;= 0) rc = 'application/json';
+  else if (fn.indexOf('.js') &gt;= 0) rc = 'application/x-javascript';
+  else if (fn.indexOf('.png') &gt;= 0) rc = 'image/png';
+  else if (fn.indexOf('.jpg') &gt;= 0) rc = 'image/jpg';
+
+  return rc;
+}
+
+</code></pre>
+
+<p>Source is <a href="https://github.com/conoro/conoro.github.io/blob/master/_harp/js/upload_s3_images.js">here on GitHub</a>.</p>
+
+<p>I hope you find it useful.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">13 Jun 2014, 18:11</h1>
                 <section class="post">
                     <header class="post-header">
@@ -96,11 +194,9 @@
                     <div class="post-description">
                         <p>Well&hellip;&hellip;almost</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/tesla2.jpg" alt="Tesla S" title="Tesla S" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/tesla2.jpg" alt="Tesla S" title="Tesla S" /></p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/tesla1.jpg" alt="Printrbot Simple" title="Printrbot Simple" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/tesla1.jpg" alt="Printrbot Simple" title="Printrbot Simple" /></p>
 
                     </div>
                 </section>
@@ -241,8 +337,7 @@
                     <div class="post-description">
                         <p>Messing with hardware and software can be both a joy and incredibly infuriating. Yesterday I spent a few intermittent hours trying to get Arduino and Espruino communicating reliably over NRF24L01+ wireless transceivers. I only half succeeded. I followed this with some reading up on both <a href="https://cloudpebble.net">CloudPebble</a> and <a href="http://simplyjs.io/">Simply.js</a>. Literally 5 minutes later I had my first Pebble App installed on my watch and was remotely controlling the <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">electric blanket in our bed</a>.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_blanket.jpg" alt="Bandon Blanket" title="Bandon Bed Button" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_blanket.jpg" alt="Bandon Blanket" title="Bandon Bed Button" /></p>
 
 <p>CloudPebble is a web-based IDE for building Pebble Apps. I believe it was started independently but is now run by <a href="http://getpebble.com">Pebble</a> themselves. Simply.js is a library/SDK for building Pebble Apps using only JavaScript. Pebble recently announced that CloudPebble now supports Simply.js and boy they weren&rsquo;t kidding. It&rsquo;s now childsplay to build Pebble Apps.</p>
 
@@ -316,8 +411,7 @@ simply.setText({
 
 <p>Just in case the data route for this is not clear, here&rsquo;s what it looks like:</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow" /></p>
 
 <p>I referred to this on Twitter last night as The Internet of Thangs. I&rsquo;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&rsquo;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&rsquo;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&rsquo;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p>
 
@@ -343,8 +437,7 @@ simply.setText({
 
 <p>But first, check out this gorgeous <a href="http://shop.pimoroni.com/products/pibow-timber">Pimoroni Pibow Timber</a> case that the RPi now lives in. Makes me smile every time I look at it.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/pibow_timber.jpg" alt="Pibow" title="Pibow Timber Raspberry Pi case" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/pibow_timber.jpg" alt="Pibow" title="Pibow Timber Raspberry Pi case" /></p>
 
 <p>Start by plugging in one of the Efergy switches and using its remote control to set its code. Use the sniffer program from <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">the last post</a> to find out what that code is.</p>
 
@@ -389,34 +482,32 @@ make
 <pre><code class="language-bash">cd ~/gitwork/rcswitch-pi
 </code></pre>
 
-<p>Create a file called efergy.cpp with the following contents
-```c
-#include &ldquo;RCSwitch.h&rdquo;
-#include <stdlib.h>
-#include <stdio.h></p>
+<p>Create a file called efergy.cpp with the following contents</p>
 
-<p>int main(int argc, char *argv[]) {</p>
+<pre><code class="language-c">#include &quot;RCSwitch.h&quot;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
 
-<pre><code>/*
- output PIN is hardcoded for testing purposes
- see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
- for pin mapping of the raspberry pi GPIO connector
- */
-int PIN = 0;
-int unitCode = atoi(argv[1]);
+int main(int argc, char *argv[]) {
 
-if (wiringPiSetup () == -1) return 1;
-    printf(&quot;sending unitCode[%i]\n&quot;, unitCode);
-    RCSwitch mySwitch = RCSwitch();
-    mySwitch.enableTransmit(PIN);
+    /*
+     output PIN is hardcoded for testing purposes
+     see https://projects.drogon.net/raspberry-pi/wiringpi/pins/
+     for pin mapping of the raspberry pi GPIO connector
+     */
+    int PIN = 0;
+    int unitCode = atoi(argv[1]);
 
-    mySwitch.send(unitCode,24);
+    if (wiringPiSetup () == -1) return 1;
+        printf(&quot;sending unitCode[%i]\n&quot;, unitCode);
+        RCSwitch mySwitch = RCSwitch();
+        mySwitch.enableTransmit(PIN);
 
-    return 0;
+        mySwitch.send(unitCode,24);
+
+        return 0;
+}
 </code></pre>
-
-<p>}
-```</p>
 
 <p>Now compile and run it:</p>
 
@@ -453,66 +544,65 @@ sudo ./efergy 109019
 
 <p>Create wrapper.h and wrapper.c</p>
 
-<p>wrapper.h:
-```c
-#ifndef __MYWRAPPER_H
-#define __MYWRAPPER_H</p>
+<p>wrapper.h:</p>
 
-<p>#ifdef __cplusplus
-extern &ldquo;C&rdquo; {
-#endif</p>
+<pre><code class="language-c">#ifndef __MYWRAPPER_H
+#define __MYWRAPPER_H
 
-<p>typedef struct RCSwitch RCSwitch;</p>
-
-<p>RCSwitch* newRCSwitch();</p>
-
-<p>void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length);</p>
-
-<p>void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin);</p>
-
-<p>void deleteRCSwitch(RCSwitch* v);</p>
-
-<p>#ifdef __cplusplus
-}
-#endif
-#endif
-```</p>
-
-<p>wrapper.c:
-```c</p>
-
-<pre><code>#include &quot;RCSwitch.h&quot;
-#include &quot;wrapper.h&quot;
-#include &lt;stdio.h&gt;
-
+#ifdef __cplusplus
 extern &quot;C&quot; {
-  RCSwitch* newRCSwitch() {
-    //printf(&quot;Inside newRCSwitch&quot;);
-    return new RCSwitch();
-  }
+#endif
 
-  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
-    //printf(&quot;Inside RCSwitch_send&quot;);
-    v-&gt;send(Code, length);
-  }
+  typedef struct RCSwitch RCSwitch;
 
-  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
-    //printf(&quot;Inside RCSwitch_enableTransmit&quot;);
-    v-&gt;enableTransmit(nTransmitterPin);
-  }
+  RCSwitch* newRCSwitch();
 
-  void deleteRCSwitch(RCSwitch* v) {
-    delete v;
-  }
+  void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length);
+
+  void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin);
+
+  void deleteRCSwitch(RCSwitch* v);
+
+#ifdef __cplusplus
 }
+#endif
+#endif
 </code></pre>
 
-<pre><code>
-### Compile everything
-Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple [GDB Tutorial here](http://web.eecs.umich.edu/~sugih/pointers/summary.html) and some tips on [RPi Forums](http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312).
+<p>wrapper.c:</p>
 
-```bash
-g++ -g -c wrapper.c -o wrapper.o
+<pre><code class="language-c">
+    #include &quot;RCSwitch.h&quot;
+    #include &quot;wrapper.h&quot;
+    #include &lt;stdio.h&gt;
+
+    extern &quot;C&quot; {
+      RCSwitch* newRCSwitch() {
+        //printf(&quot;Inside newRCSwitch&quot;);
+        return new RCSwitch();
+      }
+
+      void RCSwitch_send(RCSwitch* v, unsigned long Code, unsigned int length) {
+        //printf(&quot;Inside RCSwitch_send&quot;);
+        v-&gt;send(Code, length);
+      }
+
+      void RCSwitch_enableTransmit(RCSwitch* v, int nTransmitterPin) {
+        //printf(&quot;Inside RCSwitch_enableTransmit&quot;);
+        v-&gt;enableTransmit(nTransmitterPin);
+      }
+
+      void deleteRCSwitch(RCSwitch* v) {
+        delete v;
+      }
+    }
+</code></pre>
+
+<h3 id="compile-everything:72ef235c1c656139694e1398dfdb61c0">Compile everything</h3>
+
+<p>Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple <a href="http://web.eecs.umich.edu/~sugih/pointers/summary.html">GDB Tutorial here</a> and some tips on <a href="http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312">RPi Forums</a>.</p>
+
+<pre><code class="language-bash">g++ -g -c wrapper.c -o wrapper.o
 gcc -g -c efergy.c -o efergy.o
 g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
 g++ -g efergy.o wrapper.o ./libRCSwitch.so -o efergy2
@@ -607,8 +697,7 @@ g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
 
 <p>Last Thursday I came home from work to discover that <a href="http://www.electricireland.ie/">Electric Ireland</a> had sent us three <a href="http://efergy.com/eu/products/remotecontrolledsocket">Efergy</a> remote control power sockets and a plugin energy monitor. I have no idea why they did so, apart perhaps from our crazy electricity use.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg" alt="Efergy" title="Efergy RC Switch" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg" alt="Efergy" title="Efergy RC Switch" /></p>
 
 <p>My mind immediately leaped to our electric blanket conundrum.</p>
 
@@ -624,13 +713,11 @@ g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
 
 <p>Of course that was just step 1. What I really wanted to do was internet-enable these beauties. I&rsquo;ve been meaning to do something along these lines with the <a href="http://digistump.com/products/50">DigiX</a> board since I got it. The DigiX is a really powerful Arduino clone with a 32-bit Atmel ARM CPU, tons upon tons of IO, SD card, audio and, most importantly for this project, Wifi on-board.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg" alt="frontside" title="DigiX with module" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg" alt="frontside" title="DigiX with module" /></p>
 
 <p>Getting Wifi setup the way I wanted on the DigiX took more time than I&rsquo;d have liked yesterday but I finally figured out that the <a href="http://en.usr.cn/low-power-wifi-module.html">Chinese USR-wifi232-g module</a> web UI doesn&rsquo;t like Chrome! Once I switched to Firefox, all went swimmingly. I connected it to a Wifi AP, gave it a fixed IP address and then setup a port forward from the house router to it. Obviously I use <a href="http://dyn.com/">Dynamic DNS with Dyn</a> on the home router so that I don&rsquo;t have to track changing IP addresses manually.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg" alt="backside" title="DigiX other side" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg" alt="backside" title="DigiX other side" /></p>
 
 <p>The DigiX comes with an example Web Server built-in so I was able to just create a few simple URLs and paste the RCSwitch code into the relevant places. So within another few minutes I was toggling the switches over the internet.</p>
 
@@ -643,18 +730,15 @@ mySwitch.send(109323, 24);
 
 <p>But of course I wasn&rsquo;t happy there. I wanted a mobile app! Luckily, Colum Bennet in <a href="http://www.feedhenry.com">FeedHenry</a> has created a superb new Getting Started guide which will be released soon. It walks you through creating an <a href="http://angularjs.org/">Angular</a> Hybrid mobile app which talks to a FeedHenry Node.js back-end to do a really simple task. Despite only playing a programmer for the purposes of blogging, I was able to easily modify both the client and cloud apps to create what I needed with the Node request module.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App" /></p>
 
 <p>Of course I could send the commands directly from the mobile app to the DigiX, but routing it through the cloud means that eventually this can be multi-user, multi-switch, re-configurable and securely locked-down.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success" /></p>
 
 <p>One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing using a simple bookmarked CNAME.</p>
 
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App" />
-</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App" /></p>
 
 <p>I&rsquo;ll upload everthing on to a public GitHub repo as soon as I have removed all the hard-coding and added a modicum of &ldquo;security&rdquo; with API keys etc. More posts on this technology combo coming in the next few weeks.</p>
 
@@ -747,96 +831,6 @@ find . -name "*.md" -exec sh -c 'NEWDIR=`basename "$1" .md` ; mkdir "$NEWDIR" ; 
 </code></pre>
 
 <p>Update 4: Damn and blast, I forgot about /feed not redirecting too. So I created a /feed directory and put the feed.jade file in there as index.jade and set layout to false in a new _data.json file in that directory (after trying 20 other things!).</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">16 Mar 2014, 12:46</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/saying-goodbye-to-wordpress-and-hello-to-harpjs/" class="post-title">Saying goodbye to WordPress and hello to HarpJS</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>My blogging history goes back to 2001 when I setup a Blogger/Blogspot blog in the hope that I would update things more quickly than with Geocities or my Frontpage98 home page. 4 months later I wrote my second post :-) For a long time it involved writing the posts on Blogger and then publishing them via FTP to my own domain. It was fiddly but it worked ok.</p>
-
-<p>Then around 2005 I discovered WordPress and realised blogging could be much much much easier. In the past 9 years I&rsquo;ve done an incredible amount of stuff with WP. From personal blogging to building core parts of a business on top of it. It has been both a delight and the source of my greatest frustrations (glares at the &ldquo;WYSIWYG&rdquo; editor).</p>
-
-<p>As with all great Open Source projects, the power of WP isn&rsquo;t really in the core product itself, but in the ecosystem and community that built up around it. I have never run into a situation where I couldn&rsquo;t find a WP plugin that matched my needs within a couple of minutes of googling.</p>
-
-<p>The old slow, awkward, manually marked-up, manually-published HTML method died under the onslaught of WP&rsquo;s ease-of-use. Bloggers no longer had to be programmers or web developers, they could be writers. And that was, without a doubt, a wonderful progression. Even tools that tried to straddle both worlds, like Movable Type, couldn&rsquo;t compete with WP&rsquo;s 2 minute install and one-click publish.</p>
-
-<p>WordPress has also created a swathe of job opportunities for people around the world who do design, web-site creation, SEO etc etc, and who wouldn&rsquo;t know a HTML tag if it slapped them in the face. This is both a blessing and a curse, as the number of security-compromised WP sites grows daily.</p>
-
-<p>The incredible flexibility and architecture openness is naturally also WP&rsquo;s greatest weakness. I&rsquo;ve lost track of the number of plugins that either destroyed the performance of my WP installations or opened up giant gaping security holes. The relentless Core+Plugins upgrade cycle has also become insufferable if you run more than one site.</p>
-
-<p>I&rsquo;ve recently been thinking a lot around the lifecycle of things and how we often focus on the wrong bit. In App development, the creation of the App is the shortest bit of its lifecycle, so you should think about what you need to manage it, once its deployed. Similarly with blogging, the creation bit can take minutes but those posts can be read by thousands of people over several years. So we should be thinking more about how we make sure those posts are delivered quickly, reliably and with zero security hazards to as many people as possible and with no ongoing maintenance.</p>
-
-<p>It was when we hit 2013 that I started to notice a change in the attitude towards WordPress. The WP features continued to pile up as it tried and failed to become a proper CMS. In reality most people want to create simple text+images blogposts with as little hassle as possible. So developers started going Back To The Future and using command-line tools, Markdown syntax, templating languages and, most importantly, GitHub Pages as the blog host.</p>
-
-<p>This is the bit that started to get me excited. Totally static blog web-pages. No PHP, no MySQL DB, no possibility for security holes. And best of all, blazingly fast performance.</p>
-
-<p>Of course these tools are currently completely opaque to non-technical people. You get ultimate control and flexibility but at the cost of having to learn Markdown, Jade, EJS, Stylus, Git, S3, JavaScript, etc etc.</p>
-
-<p>As 2013 progressed I did lots more reading on these tools like Jekyll and Octopress. Somehow Ghost got lumped in there too but it&rsquo;s not a static site generator, it&rsquo;s trying to be WP with PHP removed and Node.js inserted.</p>
-
-<p>My plan was to move some old work sites to be static. They have thousands of pages on them but despite little traffic, they regularly go offline as MySQL runs out of memory due to what appears to be some horrifically written SQL queries in WP or one of its plugins.</p>
-
-<p>Finally a few weeks ago, I went at it all again but decided to use a blog move as a way of learning how it all works. I had a few requirements:</p>
-
-<ul>
-<li>It had to work with GitHub Pages or similar</li>
-<li>It should be git friendly</li>
-<li>It should ideally use Node.js rather than Ruby or PHP</li>
-<li>It should support more that one templating language/styling language and possibly CoffeeScript</li>
-<li>The tools should run on Linux, OSX and ideally Windows</li>
-<li>It should have a good community of people building themes and improvements</li>
-<li>It should have some way of importing WordPress content</li>
-<li>It should have some blog-style templates rather than web-site ones</li>
-<li>It should have some support for commenting systems like Disqus, but ideally have its own JS commenting system</li>
-</ul>
-
-<p>There are quite a few tools out there that support most of the above but I did find that many of them are either dead projects or single-developer projects with no community. The small set of which I found the most mentions, in no particular order, were:</p>
-
-<ul>
-<li><a href="http://harpjs.com/">HarpJS</a></li>
-<li><a href="http://docpad.org/">DocPad</a></li>
-<li><a href="http://octopress.org/">Octopress</a></li>
-<li><a href="http://jekyllrb.com/">Jekyll</a></li>
-<li><a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></li>
-<li><a href="https://github.com/flatiron/blacksmith">Blacksmith</a></li>
-</ul>
-
-<p>A bit more digging bubbled up HarpJS as the most likely winner based on the above requirements, with DocPad as a backup in case it failed. I had also seen some Mobile guys blogging about HarpJS, and two of the co-founders created PhoneGap, which immediately piqued my interest.</p>
-
-<p>It turned out to be a <em>lot</em> harder than I thought to move from WP to Harp. Wayyyy harder than the earlier move of that same blog from Posterous to WordPress. I&rsquo;ll be writing a separate post right after this on the nitty gritty of the move but in this post I really just wanted to focus on the &ldquo;Static Movement&rdquo; (geddit? static, movement).</p>
-
-<p>I really think there is a large opportunity for a mainstream Static Site/Blog platform and it many ways it&rsquo;ll probably be like Blogger of old. I really like where Dave Winer is going with the <a href="http://fargo.io/">Fargo outliner</a> and it has the potential to be such a tool. The Harp guys are also doing some interesting stuff with the <a href="https://www.harp.io/">harp.io</a> platform, but the entry price of $9.95 per month is probably too high for most non-commercial bloggers. The features an ideal platform would have include:</p>
-
-<ul>
-<li>Publishing of the static content to GitHub Pages, Dropbox and Google Drive via whatever APIs are appropriate, including Git</li>
-<li>Dropbox and Google Drive to provide CNAME support for these static sites</li>
-<li>Built-in hosting alternative like <a href="https://www.harp.io/">harp.io</a></li>
-<li>Command line flow using git etc for developers</li>
-<li>Online management/publishing dashboard for non-developers</li>
-<li>Online Markdown editing tool - I think Markdown could also go mainstream. Anyone can learn it in a few minutes.</li>
-<li>A split-screen online Markdown editor like Mou or Stackedit</li>
-<li>Online templates/themes management using something like Jade+Stylus or EJS</li>
-<li>Very fast compile/publish cycle</li>
-<li>Plugins only available as JavaScript snippets (Dropbox JavaScript &ldquo;App&rdquo; support is very cool)</li>
-</ul>
-
-<p>I just have this feeling that Dropbox/GoogleDrive could finally be the trigger that gets us back on the righteous path of people owning and publishing their own content instead of giving it for free to Facebook/Tumblr/Twitter where it could all disappear tomorrow (cf Geocities/Posterous/etc).</p>
-
-<p>I&rsquo;m probably a week or so away from pulling the trigger on the move. Some of the earliest content that originated on Posterous is well and truly messed up and I&rsquo;m not sure if I want to script up some cleanups or leave it. Finally, the lack of pagination is probably the last thing I want to look at before making the DNS change.</p>
-
-<p>It&rsquo;ll be interesting to watch how 2014 plays out. Will a new platform come to the fore which focuses on ownership, content portability, zero-maintenance, security and adding a bit of fun back into blogging?</p>
 
                     </div>
                 </section>

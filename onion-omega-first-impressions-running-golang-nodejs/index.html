@@ -7,7 +7,7 @@
 
     <meta name="description" content="This new $25 IoT board sits between microcontrollers and Raspberry Pis. Its small size is the big attraction. But language support is currently weak at this early stage">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="First impressions of @OnionIoT Omega. Also running #golang 1.1.2 and #nodejs 0.10.5 on MIPS &middot; Cross Dominant">
@@ -106,8 +106,7 @@
 
 <p>I did a splurge of backing IoT KickStarters a few months ago and the <a href="https://onion.io/omega/">Onion Omega</a> is the first one to land in my postbox. It&rsquo;s a tiny (barely bigger than an SD card) board running the same basic guts as many OpenWRT routers i.e. 400 MHz Atheros MIPS CPU with 64MB of DRAM and 16MB of Flash.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_sd.jpg" alt="Onion Omega" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_sd.jpg" alt="Onion Omega" /></p>
 
 <p>If you&rsquo;re not familiar with <a href="https://openwrt.org/">OpenWRT</a>, it&rsquo;s an Open Source community replacement firmware for many routers (similar to DD-WRT that I&rsquo;ve used many times) and is Linux under the hood. You generally do your own custom Firmware builds which bundle exactly what you want but you can also install packages via the opkg tool.</p>
 
@@ -117,8 +116,7 @@
 
 <p>The fact that it just launched means that the software story isn&rsquo;t great right now. The KickStarter mentions things like Node but that isn&rsquo;t available in a supported way. Also the effort around accessing GPIOs etc is focused on Python. And add-on boards like the OLED screen I bought have no support yet.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_kit.jpg" alt="Onion Omega Kit" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_kit.jpg" alt="Onion Omega Kit" /></p>
 
 <h2 id="summary-opinion:6373a9f13467451d12a87cf58bb7873b">Summary Opinion</h2>
 
@@ -296,8 +294,7 @@ mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
 
 <p>Hurrah, Hello World in Go on the Onion!</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/go_on_onion_omega_02.jpg" alt="I love mac and cheese" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/go_on_onion_omega_02.jpg" alt="I love mac and cheese" /></p>
 
 <h2 id="tweeting-from-the-onion-omega-in-go:6373a9f13467451d12a87cf58bb7873b">Tweeting from the Onion Omega in Go</h2>
 
@@ -341,8 +338,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
 
 <p>And finally ta-daaaa, a Tweet from the Omega:</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/hushvine_onion_01.jpg" alt="Tweetin Omega" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/hushvine_onion_01.jpg" alt="Tweetin Omega" /></p>
 
 <p>I now suspect that the Node.js error may have been exactly the same thing but just hidden so I&rsquo;ll go back and try the same for it.</p>
 

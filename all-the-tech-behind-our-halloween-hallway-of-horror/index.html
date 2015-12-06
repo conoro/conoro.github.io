@@ -7,7 +7,7 @@
 
     <meta name="description" content="This year&#39;s Halloween brought to you by 3x Arduino, 1x Banana Pi, 1x ESP8266 and some Adafruit modules">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="All the gory tech behind our Halloween Hallway of Horror &middot; Cross Dominant">
@@ -114,13 +114,11 @@
 
 <p>This was my favourite aspect of the whole thing. I spotted a <a href="http://www.thingiverse.com/thing:32905">cool 3D design on Thingiverse</a> and realised I could turn it into a doorbell by dremeling a hole in the back and hot-glueing the mummy to a simple push button.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy01b.jpg" alt="Mummy Doorbell 1" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy01b.jpg" alt="Mummy Doorbell 1" /></p>
 
 <p>In fact the button was one I originally bought in 2012 when I got back into electronics. There was a small bug in my debounce code which I discovered too late and meant that kids had to press the button twice. But overall only a few failed to figure it out.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy02b.jpg" alt="Mummy Doorbell 2" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy02b.jpg" alt="Mummy Doorbell 2" /></p>
 
 <h2 id="adafruit-audio-breakout-board-and-amp-with-speakers:308bcb7036a2d3eb810a4711be2b8022">Adafruit Audio breakout board and amp with speakers</h2>
 
@@ -128,8 +126,7 @@
 
 <p>In a bizarre twist to the <a href="https://www.indiegogo.com/projects/be-maker-kit-plus-free-lessons-on-electronics-from-zero-to-internet-of-things">BE Maker Kit Indiegogo scam</a>, one of the people involved somehow got a Florida company to provide free electronics to the right amount. I used this to buy the <a href="http://www.adafruit.com/products/1381">Adafruit VS1053 Audio board</a> and <a href="https://www.adafruit.com/products/987">Adafruit MAX98306 Audio Amp</a>. The wiring on this looks complicated but it&rsquo;s straight out of their tutorial.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/vs1053.jpg" alt="Scary Sounds" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/vs1053.jpg" alt="Scary Sounds" /></p>
 
 <p>Audio was courtesy of <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a> and <a href="http://winff.org/html_new/">WinFF</a> on <a href="https://www.youtube.com/watch?v=BFqHyCoypfM">this clip from YouTube</a>.</p>
 
@@ -139,15 +136,13 @@
 
 <p>I finally ordered a bog-standard <a href="http://eud.dx.com/product/waterproof-72w-4300lm-300-5050-smd-led-rgb-light-flexible-strip-w-44-key-controller-844233947">5 metre 5050 RGB LED strip from dx.com</a> over the summer. The value on these things is just staggering at less than €20.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/sku_233947_1.jpg" alt="RGB LED" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/sku_233947_1.jpg" alt="RGB LED" /></p>
 
 <p>They come with a dedicated remote control and just need a decent PSU to provide the power. Myself and the kids had great fun illuminating my entire home office in a range of colours.</p>
 
 <p>But the challenge for Halloween was how to control it. I could have run <a href="http://www.lirc.org/html/irrecord.html">irrecord</a> on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID C1</a> or <a href="http://www.bananapi.org/p/product.html">Banana Pi</a> to reverse engineer the remote control protocol and then use <a href="http://eud.dx.com/product/38khz-ir-infrared-transmitter-module-for-arduino-844135040">the RC transmitter</a> I bought on DX. But luckily someone <a href="http://hackaday.com/2015/08/25/esp8266-in-commercial-products/">told Hackaday about the first ESP8266-powered commercial product</a> they had found. It was a <a href="http://es.aliexpress.com/item/rgb-strip-WiFi-controller-1-port-control-15-rgb-lights-communicate-with-Android-phone-to-dim/32301423622.html">€9 Wifi H801 control module</a> for RGB LED strips! I just had to get one.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/Rgbww-tira-llevada-regulador-wifi-1-port-control-200-luces-comunicar-con-tel%C3%A9fono-Android-a-trav%C3%A9s.jpg_350x350.jpg" alt="Wifi RGB LED" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/Rgbww-tira-llevada-regulador-wifi-1-port-control-200-luces-comunicar-con-tel%C3%A9fono-Android-a-trav%C3%A9s.jpg_350x350.jpg" alt="Wifi RGB LED" /></p>
 
 <p>It&rsquo;s a brilliant little box that is easy to wire up and has a simple Android App for control. You connect to the internal Wifi Access Point it provides to do this. Here is the brilliant piece: You then use the app to tell the module to connect to your own Wifi router and then you do the same with the phone. Now your RGB LED strip is on your network!</p>
 
@@ -219,33 +214,27 @@ done
 
 <p>Finally on Saturday morning I went to finish this bit and decided it was too much work to get the Arduino code tweaked to do 2x Neopixels and 2x servos and somehow trigger them on/off on a potentially rotating head. At this point I found the silly fake-eye pingpong balls from last year. A quick cut in the back and I hot-glued a Neopixel to each one. I then hot-glued the eyes into the skull and wired the Neopixels to an Arduino Nano.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/skull_top.jpg" alt="Skull Arduino" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/skull_top.jpg" alt="Skull Arduino" /></p>
 
 <p>I stuck the Nano and a Lipo battery to the top of the skull and covered it with a cool Buff. Having the eyes on permanently removed a little bit of the element of surprise but I still thought it worked well. The code for the Neopixels was just the <a href="https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino">standard Adafruit strand test</a>.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/buff_skull.jpg" alt="Buff Skull" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/buff_skull.jpg" alt="Buff Skull" /></p>
 
 <h2 id="making-the-skull-rotate:308bcb7036a2d3eb810a4711be2b8022">Making the skull rotate</h2>
 
 <p>I had always known I would rotate the skull in some fashion but for a while I wasn&rsquo;t sure how. Quite a few weeks ago I came up with the idea to cement a hex driver into the bottom of the skull and sit it on top of a cheap crap €20 electric screwdriver I got ages ago from Woodies.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver1.jpg" alt="Screwdriver1" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver1.jpg" alt="Screwdriver1" /></p>
 
 <p>As a screwdriver it was rubbish due to slowness and lack of torque. As a skull-rotator it was awesome, spinning the skull around at high speed.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver2.jpg" alt="Screwdriver2" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver2.jpg" alt="Screwdriver2" /></p>
 
 <p>Of course I left the difficult bits until a week before Halloween when I sat down and tried to figure out how to control it all. The first attempt was with a dirt cheap double relay board I got 3 years ago and never used. But I couldn&rsquo;t figure out how to make it go forwards and reverse. I then tried an old knock-off Adafruit Motor Shield but it couldn&rsquo;t deliver enough juice (even with a 7.2V LiPo) to overcome the motor&rsquo;s inertia. Finally I <a href="http://arduino-info.wikispaces.com/ArduinoPower">found a relay circuit</a> that did forward/reverse and it worked like a charm.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/DC_Motor_2SPDT_Relay-450.jpg" alt="Circuit" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/DC_Motor_2SPDT_Relay-450.jpg" alt="Circuit" /></p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/relay2.jpg" alt="Relay" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/relay2.jpg" alt="Relay" /></p>
 
 <p>But how was I going to handle starting/stopping the skull so it was facing away (and potentially covered) initially and then rotating at the right time and stopping in the right position? Of course I left that to Halloween itself.</p>
 
@@ -257,8 +246,7 @@ done
 
 <p>This turned out to be pretty easy. I have a ton of decent wire from a dead Christmas tree light string and used that to connect everything up. The doorbell connected to one Arudino which then toggled a pin which the other Arduinos were connected to. After N seconds, it toggled the pin the other way to shut it all down.</p>
 
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/wiring.jpg" alt="Wiring" />
-</p>
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/wiring.jpg" alt="Wiring" /></p>
 
 <p>It worked very very well.</p>
 

@@ -7,7 +7,7 @@
 
     <meta name="description" content="Mixed laterality since 1968">
 
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.15" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Cross Dominant &middot; Cross Dominant">
@@ -80,6 +80,36 @@
         <div>
             
             <div class="posts">
+                
+                <h1 class="content-subhead">18 Jan 2014, 13:36</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/when-a-10-year-old-tiny-utility-program-saves-your-ass/" class="post-title">When a 10 year old tiny utility program saves your ass</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;When a 10 year old tiny utility program saves your ass&rdquo;</p>
+
+<p>After many many years on a barely-used 1024-bit GPG/PGP key, I decided to go full-blown 4096-bit recently. More for the principle than anything else, but also to mess around with some secure apps like <a href="http://retroshare.sourceforge.net/">Retroshare</a>, as mentioned by <a href="https://twitter.com/onetruecathal">Cathal Garvey</a>.</p>
+
+<p>Whilst I was as it, I moved to a new much improved longer password and made sure to drill it into my brain over and over.</p>
+
+<p>Yeah, that worked brilliantly&hellip;&hellip;&hellip;..</p>
+
+<p>Last night I went to setup Retroshare properly and it rejected the password. 50 attempts later I was no closer to getting in. But I was sure I had the general pattern of the password correct.</p>
+
+<p>Normally you are screwed when this happens, but a bit of googling found program called &ldquo;<a href="http://www.roguedaemon.net/rephrase/README.html">Rephrase</a>&rdquo; which was last updated in 2003. You give it the general patter of your password along with possible character variations and it brute forces all of the possible combinations against GPG. e.g. (T|t)this(I|i)s(M|m)y(P|p)assword. And whaddya know, I was close, I just had a capitalisation wrong! Hurrah.</p>
+
+<p>&nbsp;</p>
+
+                    </div>
+                </section>
                 
                 <h1 class="content-subhead">12 Jan 2014, 17:14</h1>
                 <section class="post">
@@ -527,69 +557,6 @@ My Arduino sketch and library are available <a href="https://github.com/conoro/b
 <p>At the very least, I am never doing unattended charging of any non-mainstream-brand that has a LiPo inside from now on. There&rsquo;s a reason a Mophie costs 70+ and it&rsquo;s not all about margin. There is <a href="http://www.amazon.co.uk/gp/product/B00BS99MRE/ref=noref?ie=UTF8&amp;psc=1&amp;s=electronics">a brand new one</a> winging its way from Amazon as we speak.</p>
 
 <p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">31 Oct 2013, 21:31</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/a-tech-halloween-mainly-made-of-fail/" class="post-title">A Tech Halloween mainly made of fail</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;A Tech Halloween mainly made of fail&rdquo;</p>
-
-<p>This year I decided to be completely out of character and start Halloween preparations over a month ahead of time. The plans were ambitious to put it mildly. Vampires flying along guidewires, 10 feet in the air. Screaming skeletons jumping up out of bushes. Creepy crawlies automatically lowering on the heads of trick-or-treaters. You get the idea.</p>
-
-<p>The reality was that almost everything took 4x as long to do as expected and I killed more tech trying to test things than actually survived. If you add in lots of work, travel and relentless human viruses and it was not a great month.</p>
-
-<p>So this evening was a little less extreme than expected but seems to be going well so far.
-<h2>Screaming Skulls</h2>
-These are some dirt cheap flashing LED skulls from Lidl, wired to an Arduino and relay, plus PIR sensor and an audio module connected to portable speakers.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/skulls.jpg"><img class="aligncenter size-full wp-image-1186" alt="skulls" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/skulls.jpg" width="1024" height="576" /></a></p>
-
-<p>Everything works well except for those damned <a href="http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;item=390608079828" target="_blank">WTV020-SD-16P</a>audio modules. They truly are so awful you can&rsquo;t even ignore a $4 price tag. Problems include: the serial interface just doesn&rsquo;t work; it needs 3.7V not 3.3V or 5V; it only plays ad4 files of very low volume; it only works with SD cards 2GB or less; it is totally unreliable. Avoid avoid avoid.</p>
-
-<p>The bit that made it all &ldquo;sing&rdquo; was 8yo Fionn doing an extended scream for me.</p>
-
-<p><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116102093" height="166" width="100%" frameborder="no" scrolling="no"></iframe>
-The PIR sensor is a little over-sensitive in an outdoor environment so I&rsquo;ll use Ultrasonic sensors from now on.</p>
-
-<p>httpv://youtu.be/b3SJWiBcuxw</p>
-
-<p><h2>Audio Player</h2>
-I used the same bloody audio module on a portable &ldquo;brains, brains, brains&rdquo; sound player for our youngest. She gave up after 20 minutes this evening due to the unreliability.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/brains.jpg"><img class="aligncenter size-full wp-image-1183" alt="brains" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/brains.jpg" width="1024" height="768" /></a></p>
-
-<p>httpv://www.youtube.com/watch?v=mv09-JhG9F4
-<h2>Motors and Relays</h2>
-All of the movement projects relied on motors/servos. I thought I only had ones which I had salvaged from a dead HP inkjet. None were strong enough and could only lift one plastic mouse.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/mouse.jpg"><img class="aligncenter size-full wp-image-1188" alt="mouse" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/mouse.jpg" width="1024" height="768" /></a></p>
-
-<p>Then I thought of my 13 year old Black and Decker drill which I had recently stripped apart and salvaged the gears/motor/switch. I actually go it working with Arduino and some 10A relays last weekend, but when smoke started coming out of the relays, I stopped. It looks like I killed the motor so sadly there are no moving scary things this halloween.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/drill.jpg"><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/drill.jpg" alt="drill" width="1024" height="768" class="aligncenter size-full wp-image-1190" /></a></p>
-
-<p><h2>Minecraft Steve</h2>
-I followed an Instructable. The head ended up 4 times too big. I stopped. The kids liked playing <em>in</em> it tho.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/steve.jpg"><img class="aligncenter size-large wp-image-1184" alt="steve" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/steve-1024x937.jpg" width="584" height="534" /></a>
-<h2>Pumpkin</h2>
-Actually pretty good but then, all I did was to print out a stencil and cut around it. Damn, we&rsquo;re now out of tea-lights so two bright-white LEDs will have to do instead.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/pumpkin.jpg"><img class="aligncenter size-full wp-image-1185" alt="pumpkin" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/10/pumpkin.jpg" width="1024" height="576" /></a>
-<h2>Rockets</h2>
-Next year will involve rockets, lots of rockets.</p>
 
                     </div>
                 </section>
