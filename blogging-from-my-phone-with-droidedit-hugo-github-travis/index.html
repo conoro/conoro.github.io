@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogging from my phone with DroidEdit, Hugo, GitHub Pages and Travis &middot; Cross Dominant</title>
 
-    <meta name="description" content="A cool Android text editor plus some back end tooling makes for a very useful blogging platform.">
+    <meta name="description" content="A cool Android text editor plus some back-end tooling makes for a very useful blogging platform.">
 
     <meta name="generator" content="Hugo 0.16-DEV" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Blogging from my phone with DroidEdit, Hugo, GitHub Pages and Travis &middot; Cross Dominant">
-    <meta name="twitter:description" content="A cool Android text editor plus some back end tooling makes for a very useful blogging platform.">
+    <meta name="twitter:description" content="A cool Android text editor plus some back-end tooling makes for a very useful blogging platform.">
 
     <meta property="og:type" content="article">
     <meta property="og:title" content="Blogging from my phone with DroidEdit, Hugo, GitHub Pages and Travis &middot; Cross Dominant">
-    <meta property="og:description" content="A cool Android text editor plus some back end tooling makes for a very useful blogging platform.">
+    <meta property="og:description" content="A cool Android text editor plus some back-end tooling makes for a very useful blogging platform.">
 
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
@@ -95,28 +95,42 @@
                     <div class="post-share">
                         <div class="post-share-links">
                             <h4 style="">Share</h4>
-                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/blogging-from-my-phone-with-droidedit-hugo-github-travis/" data-title="Blogging from my phone with DroidEdit, Hugo, GitHub Pages and Travis" data-description="A cool Android text editor plus some back end tooling makes for a very useful blogging platform." data-media="" class="prettySocial fa fa-facebook"></a>
-                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/blogging-from-my-phone-with-droidedit-hugo-github-travis/" data-description="A cool Android text editor plus some back end tooling makes for a very useful blogging platform." class="prettySocial fa fa-google-plus"></a>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/blogging-from-my-phone-with-droidedit-hugo-github-travis/" data-title="Blogging from my phone with DroidEdit, Hugo, GitHub Pages and Travis" data-description="A cool Android text editor plus some back-end tooling makes for a very useful blogging platform." data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/blogging-from-my-phone-with-droidedit-hugo-github-travis/" data-description="A cool Android text editor plus some back-end tooling makes for a very useful blogging platform." class="prettySocial fa fa-google-plus"></a>
                             
                             
                         </div>
                     </div>
                     <div class="post-description">
-                        <p>I switched this blog to the superb Go-based tool [Hugo]() earlier in the year. Its staggering speed compared to HarpJS plus a single executable you can drop in anywhere make it a no-brainer for static blogs.</p>
+                        <p>I switched this blog to the superb Go-based tool <a href="https://gohugo.io/overview/usage/">Hugo</a> earlier in the year. Its staggering speed compared to HarpJS and Hexo plus a single executable you can drop in anywhere, make it a no-brainer for static blogs.</p>
 
-<p>I continued to host for free on GitHub Pages which means you never ever ever have to worry about WordPress security exploits or badly written plugins again. However using GH Pages means you are quite limited in how things work.</p>
+<p>I continued to host for free on <a href="https://pages.github.com/">GitHub Pages</a> which means I never ever ever have to worry about WordPress security exploits or badly written plugins again. However using GH Pages means you are quite limited in how things work.</p>
 
-<p>For several months I used the Hugo recommended way of having one Git repo for the blog&rsquo;s &ldquo;source files&rdquo; and then the original conoro.github.io as a Git sub-module for the deployed HTML. I&rsquo;ve never heard a good word said about Git sub-modules and now I understand why. Nasty awkward things that mess everything up if you blink wrong. But it worked ok until I decided to try [Travis CI]().</p>
+<p>For several months I used Hugo in the recommended way of having <a href="https://github.com/conoro/hugo.conoroneill.net">one Git repo</a> for the blog&rsquo;s &ldquo;source files&rdquo; and then the original <a href="https://github.com/conoro/conoro.github.io">conoro.github.io repo</a> as a Git sub-module for the deployed HTML. I&rsquo;ve never heard a good word said about Git sub-modules and now I understand why. Nasty awkward things that mess everything up if you blink wrong. But it worked ok-ish until I decided to try <a href="https://travis-ci.org">Travis CI</a>.</p>
 
-<p>Travis is a continuous integration tool that can watch for changes in your GitHub repos and then run &ldquo;jobs&rdquo; on them. It&rsquo;s mainly used for building software but there is no reason you can&rsquo;t use it for buillding a blog. So the initial idea was that I would git add/commit a new blog post in my source repo and then Travis would run Hugo on it and commit the generated HTML to the blog, thereby publishing it.</p>
+<p>Travis is a continuous integration tool that can watch for changes in your GitHub repos and then run &ldquo;jobs&rdquo; on them. It&rsquo;s mainly used for building software but there is no reason you can&rsquo;t use it for building a blog. So the initial idea was that I would git add/commit a new blog post in my source repo and then Travis would run Hugo on it and commit the generated HTML to the blog, thereby publishing it.</p>
 
-<p>The real intent was so I could blog from devices that don&rsquo;t run Hugo like phones and tablets. They need to support a text editor and Git but not Hugo itself.</p>
+<p>The real intent was so I could blog from devices that don&rsquo;t run Hugo like phones and tablets. Of course they&rsquo;d somehow need to support a text editor and Git but not Hugo itself.</p>
 
-<p>For Android I quickly found the superb DroidEdit which has Git support built in. It was dead easy to use it to generate a new post and add that to my repo. So I would now have almost WordPress level of easiness in blogging on the fly.</p>
+<p>For Android I quickly found the superb <a href="https://play.google.com/store/apps/details?id=com.aor.droidedit.pro&amp;hl=en">DroidEdit</a> which has Git support built-in. It was dead easy to use it to generate a new post and add that to my repo. So I would have almost WordPress-level of easiness in blogging on the fly. Its only real drawback is the lack of Markdown syntax highlighting.</p>
 
-<p>Except then I tried to get it working with Travis. Several weekends of effort trying to wrangle the Git sub-module setup working ended in total frustration. Finally today I said &ldquo;sod sub-modules&rdquo; and went old-school &ldquo;copy the files from one repo to the other and commit them there.&rdquo;. And ye know what? It works!</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/Screenshot_2015-12-27-16-15-54.png" alt="DroidEdit" /></p>
 
-<p>So here you go:</p>
+<p>Except then I tried to get it working with Travis. Several weekends of effort trying to wrangle the Git sub-module setup into submission ended in total frustration. Finally today I said &ldquo;sod sub-modules&rdquo; and went old-school &ldquo;copy the files from one repo to the other and commit them there&rdquo;. And ye know what? <a href="https://travis-ci.org/conoro/hugo.conoroneill.net">It worked</a>!</p>
+
+<p>There&rsquo;s a few bits in there to do with using https:// instead of git://. But the critical one-off steps on your PC are:</p>
+
+<ol>
+<li>get a <a href="https://github.com/settings/applications">Github token</a> for Travis</li>
+<li>Then <a href="https://docs.travis-ci.com/user/encryption-keys/">install Travis locally</a></li>
+<li>and encrypt your token via:
+<code>bash
+travis encrypt GH_TOKEN=&lt;secret token here&gt;  
+</code></li>
+<li>Finally add that output to the &ldquo;secure&rdquo; string in .travis.yml.</li>
+</ol>
+
+<p>So here you go with the files you need to do the same:</p>
 
 <p>.travis.yml</p>
 
@@ -145,7 +159,23 @@ script: bash ./deploy.sh
 
 <p>deploy.sh</p>
 
-<pre><code class="language-bash">
+<pre><code class="language-bash">#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+git config --global user.email &quot;cwjoneill@gmail.com&quot;
+git config --global user.name &quot;Conor O'Neill&quot;
+
+# Build the project.
+hugo # if using a theme, replace by `hugo -t &lt;yourtheme&gt;`
+
+git clone https://github.com/conoro/conoro.github.io.git
+cp -R public/* ${REPO}
+cd ${REPO}
+git remote
+git add -A :/
+git commit -a -m &quot;latest via travis&quot;
+git push &quot;https://${GH_TOKEN}@${GH_REPO}&quot; master &gt; /dev/null 2&gt;&amp;1
 </code></pre>
 
                     </div>
