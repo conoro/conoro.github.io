@@ -81,6 +81,40 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">09 Sep 2012, 19:09</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/how-the-hell-did-i-miss-the-upcoming-shutdown-of-feedburner-another-lesson-in-lock-in/" class="post-title">How the hell did I miss the upcoming shutdown of FeedBurner? Another lesson in lock-in.</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;How the hell did I miss the upcoming shutdown of FeedBurner? Another lesson in lock-in.&rdquo;</p>
+
+<p>How the hell did I miss the fact that Google is shutting down FeedBurner in October?</p>
+
+<p>I always remember Dave Winer <a href="http://scripting.com/stories/2007/07/21/whyFeedburnerIsTrouble.html">warning all us bloggers</a> back in 2007 that we were nuts to insert a single company between us and our readers.Most of us thought he was being a crank. It turns out he was right.</p>
+
+<p>My big worry is that we will all lose all of our Blog Subscribers. In my case, built up over 11 years. I&rsquo;ll be optimistic and assume some sort of skeleton FeedBurner service will exist which will 301 re-direct all the feeds to the original sources.</p>
+
+<p>Great round-up piece on the problem by <a href="http://www.nevillehobson.com/2012/09/09/prepare-for-goodbye-feedburner-in-october-2012/">Neville Hobson</a>. Two solutions <a href="http://threads.scripting.com/8312ByDw/theFutureOfFeedburner">offered by Dave</a>.</p>
+
+<p>How many times are we going to fall for this before we learn? We see a service that offers us some really nice benefits for free (FeedBurner, Facebook , Twitter, etc etc). Then we choose to ignore what will happen if they go away or change the rules or just break. We decide lock-in is a fair swap for free. Then they go away or change the rules or just break. And we&rsquo;re left high and dry, swearing never again. Until the next time.</p>
+
+<p>Luckily I&rsquo;ve only got two blogs left using FeedBurner. Unluckily they are the two most trafficked. I&rsquo;ll see if I can do the CNAME transition before D-Day and report back.</p>
+
+<p>UPDATE: Someone left a comment on Google+ saying that it is just specific APIs that are getting shutdown, not the overall service. If I can confirm that, I&rsquo;ll report back. Meanwhile, I&rsquo;m still going to make the CNAME move.</p>
+
+<p>&nbsp;</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">08 Sep 2012, 17:17</h1>
                 <section class="post">
                     <header class="post-header">
@@ -340,39 +374,6 @@ I love the concept and I think it&rsquo;ll be a huge help in kids understanding 
 <p>One final note - at the start of the video I mention that littleBits is probably two simplistic for our older two boys but when Oisn (aged 10) saw littleBits last night, he insisted he had a go on his own today.</p>
 
 <p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">21 Aug 2012, 09:17</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/amazon-glacier-looks-ideal-for-cheaper-long-term-storagebackup/" class="post-title">Amazon Glacier looks ideal for cheaper long-term storage/backup</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Amazon Glacier looks ideal for cheaper long-term storage/backup&rdquo;</p>
-
-<p>Amazon <a href="http://aws.typepad.com/aws/2012/08/amazon-glacier-offsite-archival-storage-for-one-penny-per-gb-per-month.html">just announced</a> <a href="http://aws.amazon.com/glacier">Glacier</a>:
-<blockquote>Amazon Glacier is an extremely low-cost storage service that provides secure and durable storage for data archiving and backup. In order to keep costs low, Amazon Glacier is optimized for data that is infrequently accessed and for which retrieval times of several hours are suitable. With Amazon Glacier, customers can reliably store large or small amounts of data for as little as $0.01 per gigabyte per month, a significant savings compared to on-premises solutions.</blockquote></p>
-
-<p>We use variety of backup and online storage approaches. Dropbox for commonly accessed data for individuals, S3 for backups/archival and S3+Cloudfront for CDN. There has been the option of reduced redundacy S3 for quite a while but we haven&rsquo;t bothered as we want the extra comfort level.</p>
-
-<p>But looking at our S3 usage, the bulk of it is never accessed, it is only there for long-term archival. Old code, old server images, old documents etc. Some of it hasn&rsquo;t been touched in over 4 years. That&rsquo;s perfect for Glacier, which, based on its description, seems to be tape storage?</p>
-
-<p>Just to give a simple comparison on pricing (storage only, not transfer):</p>
-
-<p>S3: $0.125 per GB / month
-S3 reduced Redundancy: $0.093 per GB / month
-Glacier: $0.01 per GB / month</p>
-
-<p>We&rsquo;ll start the move in the next week or so.</p>
 
                     </div>
                 </section>

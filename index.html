@@ -81,6 +81,48 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">27 Dec 2015, 11:34</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/simple-individual-150-rgb-led-control/" class="post-title">Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>One mistake I made with our <a href="http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/">Halloween setup</a> was buying an analogue RGB LED strip where all the LEDs had to be set to the same colour. Then a few weeks ago, <a href="https://twitter.com/joedesbonnet">Joe Desbonnet</a> Facebooked about getting a waterproof WS2812 strip with individual LED control. And it wasn&rsquo;t that much more expensive than the analogue one. Off to eBay I went <a href="http://www.ebay.com/itm/141757617308?_trksid=p2057872.m2749.l2649&amp;var=440868603421&amp;ssPageName=STRK%3AMEBIDX%3AIT">and ordered one</a>, far too late for Christmas.</p>
+
+<p>So I was chuffed that it arrived on Christmas Eve. Unfortunately the 8 amp PSU I ordered on Aliexpress didn&rsquo;t arrive. A quick rustle in my psu drawer found a 4 amp one. Another quick rustle in another box found an old <a href="https://www.arduino.cc/en/Main/ArduinoBoardNano">Arduino Nano</a> and it took barely 5 mins to load it up with the <a href="https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino">Adafruit strand test code</a> and wire everything together (one digital pin, gnd, 5v) to give this:</p>
+
+<p><iframe src="https://vine.co/v/iAaKnlhxXWX/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+
+<p>The psu was running warm but not crazily so. However the Arduino kept crashing which hinted that the psu was dropping below 5V to power all those LEDs. So I ran separate power to the Arduino from a phone charger.</p>
+
+<p>This was followed by 4km of duct tape as the connections and Arduino would have to live outside. A gale was blowing as I tried to attach it to the window frame so I switched to the more sheltered door frame. This <a href="http://www.everbuild.co.uk/index.php?route=product/product&amp;product_id=364">Mammoth tape</a> worked <em>really</em> well:</p>
+
+<div>
+<iframe src="https://vine.co/v/iAWEdMizFbB/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+</div>
+
+<p>And that was it. Almost zero effort for the best house light decoration we&rsquo;ve ever done. Since these strips can be cut to any length you want and also spliced together, I&rsquo;ll be fashioning a full house-length monstrosity for next Christmas. However I doubt I&rsquo;ll ever reach this level:</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/90oZ52M4IC0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">18 Nov 2015, 17:38</h1>
                 <section class="post">
                     <header class="post-header">
@@ -867,8 +909,8 @@ TOTP = function() {
             var epoch = Math.round(new Date().getTime() / 1000.0);
             var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &quot;0&quot;);
             var hmacObj = new jsSHA(&quot;SHA-1&quot;, &quot;HEX&quot;);
-            hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
-            hmacObj.update(time);
+			hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
+			hmacObj.update(time);
             var hmac = hmacObj.getHMAC(&quot;HEX&quot;);
             var offset = hex2dec(hmac.substring(hmac.length - 1));
             var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp; hex2dec(&quot;7fffffff&quot;)) + &quot;&quot;;
@@ -888,61 +930,13 @@ var kb = require(&quot;USBKeyboard&quot;);
 
 setWatch(function() {
   // These two lines by Conor O'Neill :-)
-    var pin = &quot;put_your_PIN_Prefix_here&quot;;
+	var pin = &quot;put_your_PIN_Prefix_here&quot;;
   kb.type(pin + totpObj.getOTP(&quot;put_your_google_authenticator_secret_here&quot;).toString(), function() {
         kb.tap(kb.KEY.ENTER);
     });
 }, BTN, {debounce:100,repeat:true, edge:&quot;rising&quot;});
 
 </code></pre>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">11 Jul 2015, 19:56</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/" class="post-title">Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>I compiled both on a Banana Pi for a change. Nothing special for the 0.12 build, and ./configure &ndash;without-snapshot for the 0.10 build.</p>
-
-<p>&ldquo;make test&rdquo; threw up the usual 7 minor errors or so.</p>
-
-<p>I ran both Banana Pi and Raspberry Pi 2 without any immediate obvious issues.</p>
-
-<p>Enjoy.</p>
-
-<ul>
-<li><a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz">node-v0.10.40-linux-arm-v7.tar.gz</a></li>
-
-<li><p><a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.12.7-linux-arm-v7.tar.gz">node-v0.12.7-linux-arm-v7.tar.gz</a></p></li>
-
-<li><p><a href="http://blog.nodejs.org/2015/07/09/node-v0-10-40-maintenance/">node v0.10.40 release notes</a></p></li>
-
-<li><p><a href="http://blog.nodejs.org/2015/07/10/node-v0-12-7-stable/">node-v0.12.7 release notes</a></p></li>
-</ul>
-
-<pre><code class="language-bash">mkdir nodetemp
-cd nodetemp
-wget http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz
-tar -zxvf node-v0.10.40-linux-arm-v7.tar.gz
-cd usr/local
-sudo cp -R * /usr/local/
-</code></pre>
-
-<p>UPDATE: I also built 0.10.40 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
-* <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v6.tar.gz">node-v0.10.40-linux-arm-v6.tar.gz</a></p>
-
-<p>UPDATE 2: I also built 0.12.7 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
-* <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/node-v0.12.7-linux-arm-v6.tar.gz">node-v0.12.7-linux-arm-v6.tar.gz</a></p>
 
                     </div>
                 </section>

@@ -179,8 +179,8 @@ TOTP = function() {
             var epoch = Math.round(new Date().getTime() / 1000.0);
             var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &quot;0&quot;);
             var hmacObj = new jsSHA(&quot;SHA-1&quot;, &quot;HEX&quot;);
-            hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
-            hmacObj.update(time);
+			hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
+			hmacObj.update(time);
             var hmac = hmacObj.getHMAC(&quot;HEX&quot;);
             var offset = hex2dec(hmac.substring(hmac.length - 1));
             var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp; hex2dec(&quot;7fffffff&quot;)) + &quot;&quot;;
@@ -200,7 +200,7 @@ var kb = require(&quot;USBKeyboard&quot;);
 
 setWatch(function() {
   // These two lines by Conor O'Neill :-)
-    var pin = &quot;put_your_PIN_Prefix_here&quot;;
+	var pin = &quot;put_your_PIN_Prefix_here&quot;;
   kb.type(pin + totpObj.getOTP(&quot;put_your_google_authenticator_secret_here&quot;).toString(), function() {
         kb.tap(kb.KEY.ENTER);
     });

@@ -81,6 +81,44 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">12 Apr 2013, 18:44</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/endo2atom-an-endomondo-atomrss-feed-to-post-your-activities-via-tools-like-ifttt-opendata/" class="post-title">Endo2Atom - An Endomondo ATOM/RSS feed to post your activities via tools like IFTTT #OpenData</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Endo2Atom - An Endomondo ATOM/RSS feed to post your activities via tools like IFTTT #OpenData&rdquo;</p>
+
+<p>I was very disappointed to realise that <a href="http://www.endomondo.com/">Endomondo</a> has no API. The best they can do for pushing your activities elsewhere is built-in Facebook/Twitter and some widgets. When will companies learn that lock-in is not how you keep customers?</p>
+
+<p>I&rsquo;d like to be able to push my activities to sites like App.net, Tumblr or anywhere really. The best way to do that is with ATOM/RSS and great tools like <a href="http://ifttt.com">IFTTT</a> and <a href="http://dlvr.it">dlvr.it</a>.</p>
+
+<p>A bit of poking around last night led me to good old screen-scraping. Their widgets are publicly accessible so it wasn&rsquo;t too hard to scrape one of them and generate an ATOM feed. I used it as an opportunity to try out <a href="http://bottlepy.org/docs/dev/">Bottle</a>. If you need to build a simple web-app fast, with minimal overhead and you use Python, I think you&rsquo;ll like it. For kicks and giggles I decided to put it up on <a href="https://www.heroku.com/">Heroku</a> - my first time to do so properly. That&rsquo;s a very nice deployment flow indeed.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/marathon.jpg"><img class="aligncenter size-large wp-image-979" alt="marathon" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/marathon-1024x423.jpg" width="584" height="241" /></a></p>
+
+<p>So here you go. If you want the ATOM feed of your public Endomondo activities, just grab your numeric user ID from your profile page and tack it onto <a href="http://endo2atom.conoroneill.com">http://endo2atom.conoroneill.com</a></p>
+
+<p>For example, my Endomondo profile is <a href="http://www.endomondo.com/profile/8922951">http://www.endomondo.com/profile/8922951</a> so my ATOM feed is <a href="http://endo2atom.conoroneill.com/8922951">http://endo2atom.conoroneill.com/8922951</a></p>
+
+<p>Code, as ever, is<a href="https://github.com/conoro/endo2atom">on GitHub</a>.</p>
+
+<p>I have also created <a href="https://ifttt.com/recipes/89309">a simple IFTTT Recipe</a> for auto-posting those activities to <a href="https://alpha.app.net/conor">App.Net</a>. I&rsquo;ll try some other targets over the weekend.</p>
+
+<p>It has only been tested on treadmill running, treadmill walking and road running. There is no error checking so it may fall over on non-distance-based activities. Let me know if it does and I&rsquo;ll improve. The code is also limited to the first page of activities and doesn&rsquo;t crawl backwards on the other pages. That should be easy enough to add.</p>
+
+<p>Hope you find it useful.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">30 Mar 2013, 16:32</h1>
                 <section class="post">
                     <header class="post-header">
@@ -442,32 +480,6 @@ Gives us: 115 vs 970 using Ireland as the baseline</p>
 <p>All of the source code is, as always, <a href="https://github.com/conoro/runkeeper2endomondo">up on GitHub</a>, for you to change as you see fit</p>
 
 <p>Questions or Problems or Expressions of Horror at the awfulness of the code? Leave a comment here. Not on Facebook or Twitter.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">06 Mar 2013, 08:52</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/openvpn-on-windows-8/" class="post-title">OpenVPN on Windows 8</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;OpenVPN on Windows 8&rdquo;</p>
-
-<p>I&rsquo;m two months using Windows 8 64-bit on my desktop and I&rsquo;m still ok with it. The only real weirdness is a lot of disk churning even when nothing is happening. I turned off indexing but to no avail.</p>
-
-<p>The only major annoyance has been OpenVPN. Whilst it works fine when it&rsquo;s on, the problem arises when I disconnect or shut it down. The routing gets all messed up and I cannot connect to any external site. The fix is to disable/re-enable the network adapter which is a total pain in the ass.</p>
-
-<p>I did some searching but didn&rsquo;t find anyone else having the same issue. But I did find that there is finally [a] a new version of OpenVPN and [b] a 64-bit version. Even better, <a href="http://openvpn.net/index.php/open-source/downloads.html">this official version</a> works with saved passwords, which the old one didn&rsquo;t.</p>
-
-<p>I&rsquo;ve been running it all morning and testing disconnect/re-connect. All seems fine. So if you are a BlackVPN or similar user and you are having Win 8 issues, give it a go. Obviously, like all other versions of OpenVPN, run as Administrator.</p>
 
                     </div>
                 </section>

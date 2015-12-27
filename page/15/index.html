@@ -81,6 +81,39 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">21 Aug 2012, 09:17</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/amazon-glacier-looks-ideal-for-cheaper-long-term-storagebackup/" class="post-title">Amazon Glacier looks ideal for cheaper long-term storage/backup</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Amazon Glacier looks ideal for cheaper long-term storage/backup&rdquo;</p>
+
+<p>Amazon <a href="http://aws.typepad.com/aws/2012/08/amazon-glacier-offsite-archival-storage-for-one-penny-per-gb-per-month.html">just announced</a> <a href="http://aws.amazon.com/glacier">Glacier</a>:
+<blockquote>Amazon Glacier is an extremely low-cost storage service that provides secure and durable storage for data archiving and backup. In order to keep costs low, Amazon Glacier is optimized for data that is infrequently accessed and for which retrieval times of several hours are suitable. With Amazon Glacier, customers can reliably store large or small amounts of data for as little as $0.01 per gigabyte per month, a significant savings compared to on-premises solutions.</blockquote></p>
+
+<p>We use variety of backup and online storage approaches. Dropbox for commonly accessed data for individuals, S3 for backups/archival and S3+Cloudfront for CDN. There has been the option of reduced redundacy S3 for quite a while but we haven&rsquo;t bothered as we want the extra comfort level.</p>
+
+<p>But looking at our S3 usage, the bulk of it is never accessed, it is only there for long-term archival. Old code, old server images, old documents etc. Some of it hasn&rsquo;t been touched in over 4 years. That&rsquo;s perfect for Glacier, which, based on its description, seems to be tape storage?</p>
+
+<p>Just to give a simple comparison on pricing (storage only, not transfer):</p>
+
+<p>S3: $0.125 per GB / month
+S3 reduced Redundancy: $0.093 per GB / month
+Glacier: $0.01 per GB / month</p>
+
+<p>We&rsquo;ll start the move in the next week or so.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">17 Aug 2012, 00:19</h1>
                 <section class="post">
                     <header class="post-header">
@@ -379,28 +412,6 @@
 <p>httpv://www.youtube.com/watch?v=CGShXu7jJUc</p>
 
 <p>He has a blogpost which digs even deeper into the <a href="http://www.sparkfun.com/news/909">Pit of Despair Projects</a>.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">14 Jul 2012, 20:11</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/well-thats-my-christmas-present-sorted-sonic-screwdriver-universal-remote-control/" class="post-title">Well that&#39;s my Christmas present sorted - Sonic Screwdriver Universal Remote Control</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Well that&rsquo;s my Christmas present sorted - Sonic Screwdriver Universal Remote Control&rdquo;</p>
-
-<p>Kinda speaks for itself really. OK, <a href="http://www.thewandcompany.com/sonic/">it doesn&rsquo;t actually speak</a>, but you know what I mean.</p>
-
-<p><a href="http://www.thewandcompany.com/sonic/"><img class="alignnone size-full wp-image-799" title="sonic" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/sonic.jpg" alt="" width="800" height="520" /></a></p>
 
                     </div>
                 </section>

@@ -6,8 +6,38 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2015 17:38:29 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Dec 2015 11:34:18 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip</title>
+      <link>http://conoroneill.net/simple-individual-150-rgb-led-control/</link>
+      <pubDate>Sun, 27 Dec 2015 11:34:18 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/simple-individual-150-rgb-led-control/</guid>
+      <description>&lt;p&gt;One mistake I made with our &lt;a href=&#34;http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/&#34;&gt;Halloween setup&lt;/a&gt; was buying an analogue RGB LED strip where all the LEDs had to be set to the same colour. Then a few weeks ago, &lt;a href=&#34;https://twitter.com/joedesbonnet&#34;&gt;Joe Desbonnet&lt;/a&gt; Facebooked about getting a waterproof WS2812 strip with individual LED control. And it wasn&amp;rsquo;t that much more expensive than the analogue one. Off to eBay I went &lt;a href=&#34;http://www.ebay.com/itm/141757617308?_trksid=p2057872.m2749.l2649&amp;amp;var=440868603421&amp;amp;ssPageName=STRK%3AMEBIDX%3AIT&#34;&gt;and ordered one&lt;/a&gt;, far too late for Christmas.&lt;/p&gt;
+
+&lt;p&gt;So I was chuffed that it arrived on Christmas Eve. Unfortunately the 8 amp PSU I ordered on Aliexpress didn&amp;rsquo;t arrive. A quick rustle in my psu drawer found a 4 amp one. Another quick rustle in another box found an old &lt;a href=&#34;https://www.arduino.cc/en/Main/ArduinoBoardNano&#34;&gt;Arduino Nano&lt;/a&gt; and it took barely 5 mins to load it up with the &lt;a href=&#34;https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino&#34;&gt;Adafruit strand test code&lt;/a&gt; and wire everything together (one digital pin, gnd, 5v) to give this:&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;https://vine.co/v/iAaKnlhxXWX/embed/simple&#34; width=&#34;600&#34; height=&#34;600&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;script src=&#34;https://platform.vine.co/static/scripts/embed.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;The psu was running warm but not crazily so. However the Arduino kept crashing which hinted that the psu was dropping below 5V to power all those LEDs. So I ran separate power to the Arduino from a phone charger.&lt;/p&gt;
+
+&lt;p&gt;This was followed by 4km of duct tape as the connections and Arduino would have to live outside. A gale was blowing as I tried to attach it to the window frame so I switched to the more sheltered door frame. This &lt;a href=&#34;http://www.everbuild.co.uk/index.php?route=product/product&amp;amp;product_id=364&#34;&gt;Mammoth tape&lt;/a&gt; worked &lt;em&gt;really&lt;/em&gt; well:&lt;/p&gt;
+
+&lt;div&gt;
+&lt;iframe src=&#34;https://vine.co/v/iAWEdMizFbB/embed/simple&#34; width=&#34;600&#34; height=&#34;600&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;&lt;script src=&#34;https://platform.vine.co/static/scripts/embed.js&#34;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And that was it. Almost zero effort for the best house light decoration we&amp;rsquo;ve ever done. Since these strips can be cut to any length you want and also spliced together, I&amp;rsquo;ll be fashioning a full house-length monstrosity for next Christmas. However I doubt I&amp;rsquo;ll ever reach this level:&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/90oZ52M4IC0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Blogging from my phone with DroidEdit, Hugo, GitHub and Travis</title>
@@ -724,8 +754,8 @@ TOTP = function() {
             var epoch = Math.round(new Date().getTime() / 1000.0);
             var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &amp;quot;0&amp;quot;);
             var hmacObj = new jsSHA(&amp;quot;SHA-1&amp;quot;, &amp;quot;HEX&amp;quot;);
-            hmacObj.setHMACKey(base32tohex(secret), &amp;quot;HEX&amp;quot;)
-            hmacObj.update(time);
+			hmacObj.setHMACKey(base32tohex(secret), &amp;quot;HEX&amp;quot;)
+			hmacObj.update(time);
             var hmac = hmacObj.getHMAC(&amp;quot;HEX&amp;quot;);
             var offset = hex2dec(hmac.substring(hmac.length - 1));
             var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp;amp; hex2dec(&amp;quot;7fffffff&amp;quot;)) + &amp;quot;&amp;quot;;
@@ -745,7 +775,7 @@ var kb = require(&amp;quot;USBKeyboard&amp;quot;);
 
 setWatch(function() {
   // These two lines by Conor O&#39;Neill :-)
-    var pin = &amp;quot;put_your_PIN_Prefix_here&amp;quot;;
+	var pin = &amp;quot;put_your_PIN_Prefix_here&amp;quot;;
   kb.type(pin + totpObj.getOTP(&amp;quot;put_your_google_authenticator_secret_here&amp;quot;).toString(), function() {
         kb.tap(kb.KEY.ENTER);
     });
@@ -955,32 +985,6 @@ sudo cp -R * /usr/local/
 &lt;li&gt;Make Test Output: [25:08|% 100|+ 775|-   6]: Done
 (failures seem to be timeouts mainly)&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Download compiled version of Node.js 0.12.0 Stable for Raspberry Pi here</title>
-      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here/</link>
-      <pubDate>Sun, 08 Feb 2015 12:45:55 +0000</pubDate>
-      
-      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0120-stable-for-raspberry-pi-here/</guid>
-      <description>&lt;p&gt;Unfortunately the &lt;a href=&#34;http://blog.nodejs.org/2015/02/06/node-v0-12-0-stable/&#34;&gt;0.12.0 release&lt;/a&gt; of Node won&amp;rsquo;t compile on a non-V2 Raspberry Pi so I took a patch from &lt;a href=&#34;http://iojs.org&#34;&gt;io.js&lt;/a&gt; and was able to build it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The problem is due to recent releases of Raspbian mis-identifying the ARM version so Node tries to build for V7 instead of V6. These &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/6f7494292e22b1f1050abeaa43f257ac466edf2b&#34;&gt;two&lt;/a&gt; &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/8afcc5e701538e5a442a0334d781eac202cc4e1d&#34;&gt;changes&lt;/a&gt; from this &lt;a href=&#34;https://github.com/iojs/io.js/issues/283&#34;&gt;io.js thread&lt;/a&gt; sort it out.&lt;/p&gt;
-
-&lt;p&gt;It took a lonnnngggg time to build directly on my RPi Model B+.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/node-v0.12.0-linux-arm-pi.tar.gz&#34;&gt;Download here&lt;/a&gt; and enjoy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;wget https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/node-v0.12.0-linux-arm-pi.tar.gz
-tar -zxvf node-v0.12.0-linux-arm-pi.tar.gz
-cd node-v0.12.0-linux-arm-pi
-sudo cp -R * /usr/local/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Works perfectly for &lt;a href=&#34;http://harpjs.com/&#34;&gt;Harp.js&lt;/a&gt;, including the ever-problematic node-sass with its native bits.&lt;/p&gt;
 </description>
     </item>
     

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip &middot; Cross Dominant</title>
+
+    <meta name="description" content="Controlling each LED in a 150 RGB LED strip with an Arduino Nano">
+
+    <meta name="generator" content="Hugo 0.15" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip &middot; Cross Dominant">
+    <meta name="twitter:description" content="Controlling each LED in a 150 RGB LED strip with an Arduino Nano">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip &middot; Cross Dominant">
+    <meta property="og:description" content="Controlling each LED in a 150 RGB LED strip with an Arduino Nano">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net/index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">27 Dec 2015, 11:34</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/simple-individual-150-rgb-led-control/" class="post-title">Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/simple-individual-150-rgb-led-control/" data-title="Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip" data-description="Controlling each LED in a 150 RGB LED strip with an Arduino Nano" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/simple-individual-150-rgb-led-control/" data-description="Controlling each LED in a 150 RGB LED strip with an Arduino Nano" class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        <p>One mistake I made with our <a href="http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/">Halloween setup</a> was buying an analogue RGB LED strip where all the LEDs had to be set to the same colour. Then a few weeks ago, <a href="https://twitter.com/joedesbonnet">Joe Desbonnet</a> Facebooked about getting a waterproof WS2812 strip with individual LED control. And it wasn&rsquo;t that much more expensive than the analogue one. Off to eBay I went <a href="http://www.ebay.com/itm/141757617308?_trksid=p2057872.m2749.l2649&amp;var=440868603421&amp;ssPageName=STRK%3AMEBIDX%3AIT">and ordered one</a>, far too late for Christmas.</p>
+
+<p>So I was chuffed that it arrived on Christmas Eve. Unfortunately the 8 amp PSU I ordered on Aliexpress didn&rsquo;t arrive. A quick rustle in my psu drawer found a 4 amp one. Another quick rustle in another box found an old <a href="https://www.arduino.cc/en/Main/ArduinoBoardNano">Arduino Nano</a> and it took barely 5 mins to load it up with the <a href="https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino">Adafruit strand test code</a> and wire everything together (one digital pin, gnd, 5v) to give this:</p>
+
+<p><iframe src="https://vine.co/v/iAaKnlhxXWX/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+
+<p>The psu was running warm but not crazily so. However the Arduino kept crashing which hinted that the psu was dropping below 5V to power all those LEDs. So I ran separate power to the Arduino from a phone charger.</p>
+
+<p>This was followed by 4km of duct tape as the connections and Arduino would have to live outside. A gale was blowing as I tried to attach it to the window frame so I switched to the more sheltered door frame. This <a href="http://www.everbuild.co.uk/index.php?route=product/product&amp;product_id=364">Mammoth tape</a> worked <em>really</em> well:</p>
+
+<div>
+<iframe src="https://vine.co/v/iAWEdMizFbB/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+</div>
+
+<p>And that was it. Almost zero effort for the best house light decoration we&rsquo;ve ever done. Since these strips can be cut to any length you want and also spliced together, I&rsquo;ll be fashioning a full house-length monstrosity for next Christmas. However I doubt I&rsquo;ll ever reach this level:</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/90oZ52M4IC0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/simple-individual-150-rgb-led-control\/';
+    var disqus_title = 'Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip';
+    var disqus_url = 'http:\/\/conoroneill.net\/simple-individual-150-rgb-led-control\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net/js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

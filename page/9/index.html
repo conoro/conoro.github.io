@@ -81,6 +81,44 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">16 May 2013, 08:11</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/using-nfc-to-connect-your-sgs4-phone-to-your-cars-bluetooth/" class="post-title">Using NFC to connect your #SGS4 phone to your car&#39;s Bluetooth</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Using NFC to connect your #SGS4 phone to your car&rsquo;s Bluetooth&rdquo;</p>
+
+<p>I&rsquo;ve been wanting to play with NFC for ages so when I got an SGS4 recently, my chance finally came. I ordered a pack of 10 stickers from <a href="http://www.shop4nfc.com/product-details/NTAG203-type-2-nfc-tags-shop4nfc">Shop4NFC.com</a> in China for $8.99 and they arrived about a week later.</p>
+
+<p>To try them out, I installed the <a href="https://play.google.com/store/apps/details?id=com.jwsoft.nfcactionlauncher&amp;hl=en">NFC Task Launcher</a> and <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&amp;feature=search_result#?t=W251bGwsMSwxLDEsIm5ldC5kaW5nbGlzY2guYW5kcm9pZC50YXNrZXJtIl0.">Tasker</a> Apps. The former enables you to do things like change Wifi settings, volume, display, sync email or even Tweet when it detects a configured NFC sticker. One of the most common use cases is for people to have a sticker at work which puts the phone on mute when you lay the phone on top of it.</p>
+
+<p>Tasker is a general automation app that is not reliant on NFC and can do a ton of different complex things based on context and actions. The reason I installed it is that it can do more complex stuff with Bluetooth than NFC Task Launcher.</p>
+
+<p>I was really disappointed to discover that Bluetooth on the SGS4 is as buggy and glitchy as every other Android phone I&rsquo;ve owned. Google&rsquo;s announcement at I/O yesterday that they are going to improve things this year doesn&rsquo;t convince me. They&rsquo;ve had 4 years to get it right. The fact that they broke access to Wiimotes etc in 4.2 tells you just how bad they are at Bluetooth.</p>
+
+<p>The place where this causes me the most grief is in the car. All I want is for the bloody phone to auto-connect over A2DP to my Lidl Car stereo when the car is on so I can play my podcasts and listen to music. In theory the SGS4 can do this but simply fails to, 9 times out of 10. HTC&rsquo;s Android was similarly bad. AOSP/Cyanogen in some versions worked perfectly but it was a crapshoot whether any version would work or not.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/nfc.jpg"><img class="aligncenter size-full wp-image-1041" alt="nfc" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/nfc.jpg" width="500" height="707" /></a></p>
+
+<p>So I thought NFC might solve this. Rather than letting Android itself auto-connect, use Tasker to force a connection. And whaddya know, it seems to work. I tap the phone off the sticker after I turn on the ignition and it connects over Bluetooth to the car stereo. It&rsquo;s only failed once in 10 and I&rsquo;m pretty sure that&rsquo;s because I didn&rsquo;t hold the phone to the sticker long enough.</p>
+
+<p>Actually, that&rsquo;s really the only downside of NFC that I&rsquo;ve seen so far. A swipe or momentary tap is not good enough, it requires a very distinct touch and hold for a moment before the tag powers up and sends its ID info to the phone. You can tell by the audio cue on the SGS4 whether it worked or not.</p>
+
+<p>Now I need to find uses for the other 9 stickers. Suggestions?</p>
+
+<p>&nbsp;</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">11 May 2013, 14:54</h1>
                 <section class="post">
                     <header class="post-header">
@@ -490,44 +528,6 @@ sudo dpkg -i *.deb
 <p>So either buy the bigger packs on the basis that you&rsquo;ll be making other things or do it as part of something like a Coder Dojo where lots of you pitch in together to make lots of these.</p>
 
 <iframe width='500' height='300' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0AlXqHmc-oA0odGZ2ZlVVTGRpZmpSM3IzS1U0N2pOY0E&single=true&gid=0&output=html&widget=true'></iframe>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">12 Apr 2013, 18:44</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/endo2atom-an-endomondo-atomrss-feed-to-post-your-activities-via-tools-like-ifttt-opendata/" class="post-title">Endo2Atom - An Endomondo ATOM/RSS feed to post your activities via tools like IFTTT #OpenData</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Endo2Atom - An Endomondo ATOM/RSS feed to post your activities via tools like IFTTT #OpenData&rdquo;</p>
-
-<p>I was very disappointed to realise that <a href="http://www.endomondo.com/">Endomondo</a> has no API. The best they can do for pushing your activities elsewhere is built-in Facebook/Twitter and some widgets. When will companies learn that lock-in is not how you keep customers?</p>
-
-<p>I&rsquo;d like to be able to push my activities to sites like App.net, Tumblr or anywhere really. The best way to do that is with ATOM/RSS and great tools like <a href="http://ifttt.com">IFTTT</a> and <a href="http://dlvr.it">dlvr.it</a>.</p>
-
-<p>A bit of poking around last night led me to good old screen-scraping. Their widgets are publicly accessible so it wasn&rsquo;t too hard to scrape one of them and generate an ATOM feed. I used it as an opportunity to try out <a href="http://bottlepy.org/docs/dev/">Bottle</a>. If you need to build a simple web-app fast, with minimal overhead and you use Python, I think you&rsquo;ll like it. For kicks and giggles I decided to put it up on <a href="https://www.heroku.com/">Heroku</a> - my first time to do so properly. That&rsquo;s a very nice deployment flow indeed.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/marathon.jpg"><img class="aligncenter size-large wp-image-979" alt="marathon" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/marathon-1024x423.jpg" width="584" height="241" /></a></p>
-
-<p>So here you go. If you want the ATOM feed of your public Endomondo activities, just grab your numeric user ID from your profile page and tack it onto <a href="http://endo2atom.conoroneill.com">http://endo2atom.conoroneill.com</a></p>
-
-<p>For example, my Endomondo profile is <a href="http://www.endomondo.com/profile/8922951">http://www.endomondo.com/profile/8922951</a> so my ATOM feed is <a href="http://endo2atom.conoroneill.com/8922951">http://endo2atom.conoroneill.com/8922951</a></p>
-
-<p>Code, as ever, is<a href="https://github.com/conoro/endo2atom">on GitHub</a>.</p>
-
-<p>I have also created <a href="https://ifttt.com/recipes/89309">a simple IFTTT Recipe</a> for auto-posting those activities to <a href="https://alpha.app.net/conor">App.Net</a>. I&rsquo;ll try some other targets over the weekend.</p>
-
-<p>It has only been tested on treadmill running, treadmill walking and road running. There is no error checking so it may fall over on non-distance-based activities. Let me know if it does and I&rsquo;ll improve. The code is also limited to the first page of activities and doesn&rsquo;t crawl backwards on the other pages. That should be easy enough to add.</p>
-
-<p>Hope you find it useful.</p>
 
                     </div>
                 </section>
