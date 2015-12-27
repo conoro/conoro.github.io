@@ -27,7 +27,7 @@
 
 &lt;p&gt;For Android I quickly found the superb &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.aor.droidedit.pro&amp;amp;hl=en&#34;&gt;DroidEdit&lt;/a&gt; which has Git support built-in. It was dead easy to use it to generate a new post and add that to my repo. So I would have almost WordPress-level of easiness in blogging on the fly. Its only real drawback is the lack of Markdown syntax highlighting.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/Screenshot_2015-12-27-16-15-54.png&#34; alt=&#34;DroidEdit&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/droidedit.png&#34; alt=&#34;DroidEdit&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Except then I tried to get it working with Travis. Several weekends of effort trying to wrangle the Git sub-module setup into submission ended in total frustration. Finally today I said &amp;ldquo;sod sub-modules&amp;rdquo; and went old-school &amp;ldquo;copy the files from one repo to the other and commit them there&amp;rdquo;. And ye know what? &lt;a href=&#34;https://travis-ci.org/conoro/hugo.conoroneill.net&#34;&gt;It worked&lt;/a&gt;!&lt;/p&gt;
 
