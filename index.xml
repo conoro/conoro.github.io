@@ -6,8 +6,263 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Dec 2015 16:38:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Dec 2015 17:15:23 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Auto-tweeting the #Bandon floods with Twilio, Tasker, Let&#39;s Encrypt, a #PiZero, golang, Caddy and an Asus router</title>
+      <link>http://conoroneill.net/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router/</link>
+      <pubDate>Wed, 30 Dec 2015 17:15:23 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router/</guid>
+      <description>
+
+&lt;h2 id=&#34;intro:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t blogged properly about the $5 &lt;a href=&#34;https://www.raspberrypi.org/blog/raspberry-pi-zero/&#34;&gt;Raspberry Pi Zero&lt;/a&gt; computer yet, despite Tweeting non-stop about it. I will soon. In the meantime, I&amp;rsquo;ll just repeat that&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;It&amp;rsquo;s a major moment in computing&lt;/em&gt;&lt;/p&gt;
+
+&lt;iframe src=&#34;https://player.vimeo.com/video/146893658&#34; width=&#34;500&#34; height=&#34;281&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The inclusion of a free one on the cover of the &lt;a href=&#34;https://www.raspberrypi.org/magpi/raspberry-pi-zero-out-today-get-it-free-with-the-magpi-40/&#34;&gt;MagPi Magazine&lt;/a&gt; will be remembered for years to come.&lt;/p&gt;
+
+&lt;p&gt;The town in which I live, Bandon, flooded again recently, because Ireland. I&amp;rsquo;ve had &lt;a href=&#34;https://github.com/conoro/bandonfews-nodejs&#34;&gt;a simple Node.js app&lt;/a&gt; running on a Gen 1 Raspberry Pi B, scraping the &lt;a href=&#34;http://www.bandonfloodwarning.ie/&#34;&gt;Bandon Flood Warning&lt;/a&gt; site every 15 minutes for the past four years and saving the data in &lt;a href=&#34;https://www.google.com/fusiontables/DataSource?docid=103YIcARoxuaWT7NfZ8mVBzY554sF_3ONYC1N3DE&amp;amp;pli=1#chartnew:id=5&#34;&gt;Google Fusion Tables&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Yes that&amp;rsquo;s how Cork County Council&amp;rsquo;s/OPW&amp;rsquo;s Flood Warning site looks in the middle of one of our biggest floods ever:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/service_unavailable.jpg&#34; alt=&#34;FEWS Unavailable&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With all this flooding, I decided to finally create a related setup which takes the SMS Flood alerts from the County Council and auto-tweets them to the &lt;a href=&#34;https://twitter.com/bandonfews&#34;&gt;@BandonFEWS&lt;/a&gt; Twitter account which I created and have manually updated since 2011.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-details:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;The Details&lt;/h2&gt;
+
+&lt;p&gt;So the final $7 hardware (including Wifi adapter) now looks as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/pizero_fews.jpg&#34; alt=&#34;PiZero FEWS&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;My phone is registered with the Bandon Flood Warning site (it has been for years)&lt;/li&gt;
+&lt;li&gt;I have a &lt;a href=&#34;https://www.twilio.com/&#34;&gt;Twilio&lt;/a&gt; account with a $1 per month UK SMS number. Irish numbers are $6 per month :-(&lt;/li&gt;
+&lt;li&gt;SMSes are sent to my phone from Cork CoCo announcing a new flood warning level or severe weather alert (two different systems and numbers)&lt;/li&gt;
+&lt;li&gt;The Android &lt;a href=&#34;https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&amp;amp;hl=en&#34;&gt;Tasker App&lt;/a&gt; watches for SMS from these sources with particular contents&lt;/li&gt;
+&lt;li&gt;Tasker auto-forwards these SMSes to my Twilio number&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/tasker.jpg&#34; alt=&#34;Tasker&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I have the Twilio number configured to call a my simple API end-point with the SMS contents&lt;/li&gt;
+&lt;li&gt;The API end-point is running on one of my $5 Raspberry Pi Zeros and is written in &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt;. Code below.&lt;/li&gt;
+&lt;li&gt;The PiZero is behind my home router which is an &lt;a href=&#34;https://www.asus.com/ie/Networking/RTAC68U/&#34;&gt;Asus RT-AC68&lt;/a&gt; so somehow Twilio had to connect through that to the Zero&lt;/li&gt;
+&lt;li&gt;I initially setup a simple port forward to the Zero and I already use &lt;a href=&#34;http://no-IP.com&#34;&gt;no-IP.com&lt;/a&gt; for Dynamic DNS. So Twilio called &lt;a href=&#34;http://something.no-ip.net:1234&#34;&gt;http://something.no-ip.net:1234&lt;/a&gt; and my router passed the request to the PiZero server app on port blah&lt;/li&gt;
+&lt;li&gt;The PiZero server app parsed the POST request and extracted out the SMS. It split this into multiple Tweets (a la Tweetstorm) if more than 140 chars and used the &lt;a href=&#34;https://github.com/ChimeraCoder/anaconda&#34;&gt;Anaconda Go client library&lt;/a&gt; to post that to @BandonFEWS on Twitter&lt;/li&gt;
+&lt;li&gt;Done&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But I wasn&amp;rsquo;t happy with http, nooooo, I wanted https and I wanted to use &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;. Cue rabbit hole.&lt;/p&gt;
+
+&lt;h2 id=&#34;let-s-encrypt-and-caddy:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Let&amp;rsquo;s Encrypt and Caddy&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s Encrypt offers free https certs.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;It&amp;rsquo;s as revolutionary as the PiZero.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It also provides APIs so this can be done completely automatically. This resulted in lots of people adding easy Let&amp;rsquo;s Encrypt integration and client libraries very quickly.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://caddyserver.com/&#34;&gt;Caddy&lt;/a&gt; is a really nice simple-to-use web-server written in Go. It runs perfectly on the PiZero. It also has completely automatic Let&amp;rsquo;s Encrypt integration if you want it. So I stuck it in front of my Go server to turn it into a https server. Except life is never that easy.&lt;/li&gt;
+&lt;li&gt;I hit two immediate problems:
+
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;d have to drop no-IP for Dynamic DNS since I&amp;rsquo;m trying to register for my own https cert&lt;/li&gt;
+&lt;li&gt;To stop baddies registering domains they don&amp;rsquo;t own, Let&amp;rsquo;s Encrypt calls back to you and insists on doing that on port 443. So my random high port number on my router wasn&amp;rsquo;t going to work&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Then I realised that my DNS provider, &lt;a href=&#34;http://www.dnsmadeeasy.com/&#34;&gt;DNSMadeEasy&lt;/a&gt; has Dynamic DNS built-in. So I grabbed one of my parked domains and set it up with a Dynamic DNS A Record, giving it a dedicated password. But then of course I discovered that my Asus Router doesn&amp;rsquo;t have support for Custom Dynamic DNS out of the box.&lt;/li&gt;
+&lt;li&gt;I quickly found the &lt;a href=&#34;http://asuswrt.lostrealm.ca/&#34;&gt;Merlin Firmware&lt;/a&gt; which is interesting. The standard Asus firmware is just a simplified fork of &lt;a href=&#34;http://www.polarcloud.com/tomato&#34;&gt;Tomato&lt;/a&gt; so Merlin forks again and adds back in the stuff that Asus removed. So you keep the same UI and general functionality, just with more customisation.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/RMerl/asuswrt-merlin/wiki/Installation&#34;&gt;Installation was a doddle&lt;/a&gt; and then I just had to whip up a simple script a few lines long to call out to DNSMadeEasy whenever the router&amp;rsquo;s IP address changed (see below).&lt;/li&gt;
+&lt;li&gt;I then temporarily port forwarded 443 on the router to the Pi Zero and started Caddy with this incredibly complicated config file :-)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Caddyfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;file
+https://www.conorsdomain.com
+proxy / localhost:9998
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Caddy saw that I wanted https, so it connected to Let&amp;rsquo;s Encrypt and a minute later I had everything necessary for my secure web-server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Jaw-drop time&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Once the registration was done I could remove the 443 port forward and switch to a non-standard port&lt;/li&gt;
+&lt;li&gt;I went over to Twilio and provided the new &lt;a href=&#34;https://conorsdomain.com:9999&#34;&gt;https://conorsdomain.com:9999&lt;/a&gt; as the end-point to call. No joy. But a quick support ticket later and they made a change over the weekend(!) to fix it. Boom, everything working fine.&lt;/li&gt;
+&lt;li&gt;With the terrible weather, I didn&amp;rsquo;t have to wait long for the first non-test SMS to appear. A couple of seconds later it was on Twitter:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/flood_alert.jpg&#34; alt=&#34;Bandon Flood Warning&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;alternatives:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Alternatives&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Of course I could exclude Twilio from this entire flow and call the end-point directly from Tasker but SMS will often work when no data connection is available.&lt;/li&gt;
+&lt;li&gt;Having said that, the connection to the phone is a big worry as we are in a poor signal area. But registering my UK Twilio number on the Flood Warning site didn&amp;rsquo;t work (local warnings for local people) and I&amp;rsquo;m not paying $6 a month for an Irish number.&lt;/li&gt;
+&lt;li&gt;In theory I could take the scraped data from the site and generate my own alerts but the Council rightly overrides the default trigger levels on occasion to warn people of impending flooding.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Go Code (See for &lt;a href=&#34;https://gist.github.com/conoro/f1a3f7c5b96e2b033119&#34;&gt;https://gist.github.com/conoro/f1a3f7c5b96e2b033119&lt;/a&gt; for latest)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+	&amp;quot;encoding/json&amp;quot;
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;log&amp;quot;
+	&amp;quot;net/http&amp;quot;
+	&amp;quot;net/url&amp;quot;
+	&amp;quot;os&amp;quot;
+	&amp;quot;strconv&amp;quot;
+	&amp;quot;strings&amp;quot;
+	&amp;quot;time&amp;quot;
+
+	&amp;quot;github.com/ChimeraCoder/anaconda&amp;quot;
+)
+
+type Configuration struct {
+	ConsumerKey       string
+	ConsumerSecret    string
+	AccessToken       string
+	AccessTokenSecret string
+}
+
+func main() {
+	file, _ := os.Open(&amp;quot;conf.json&amp;quot;)
+	//file, _ := os.Open(&amp;quot;conf-test.json&amp;quot;)
+	decoder := json.NewDecoder(file)
+	configuration := Configuration{}
+	err := decoder.Decode(&amp;amp;configuration)
+	if err != nil {
+		fmt.Println(&amp;quot;config error:&amp;quot;, err)
+	}
+	anaconda.SetConsumerKey(configuration.ConsumerKey)
+	anaconda.SetConsumerSecret(configuration.ConsumerSecret)
+	api := anaconda.NewTwitterApi(configuration.AccessToken, configuration.AccessTokenSecret)
+
+	http.HandleFunc(&amp;quot;/&amp;quot;, func(w http.ResponseWriter, r *http.Request) {
+		body := r.PostFormValue(&amp;quot;Body&amp;quot;)
+		log.Println(string(body))
+		if strings.Contains(body, &amp;quot;Bandon FEWS&amp;quot;) || strings.Contains(body, &amp;quot;Met Eireann&amp;quot;) {
+			fmt.Fprintf(w, &amp;quot;Thanks for the update&amp;quot;)
+
+			a := []rune(body)
+			if len(a) &amp;lt;= 140 {
+				// Just post normal Tweet
+				result, err := api.PostTweet(body, nil)
+				if err != nil {
+					fmt.Println(err)
+				} else {
+					fmt.Println(result)
+					fmt.Println(&amp;quot;Tweet ID: &amp;quot;, result.Id)
+				}
+			} else {
+				// have to split into a Tweetstorm
+				var originalTweetID int64
+				var subTweet string = &amp;quot;&amp;quot;
+				var tweetCount int64 = 0
+				tweetParams := url.Values{}
+				for i, r := range a {
+					subTweet = subTweet + string(r)
+					if i &amp;gt; 0 &amp;amp;&amp;amp; (i+1)%137 == 0 {
+						tweetCount++
+						// Need to do normal first tweet but in_reply_to successive tweets
+						if tweetCount == 1 {
+							// Just Tweet and extract the ID from the response
+							result, err := api.PostTweet(&amp;quot;1/ &amp;quot;+subTweet, nil)
+							if err != nil {
+								fmt.Println(err)
+							} else {
+								fmt.Println(result)
+								originalTweetID = result.Id
+							}
+						} else {
+							// adding one second delay in Tweetstorm to prevent any throttling by Twitter
+							time.Sleep(time.Second)
+							// Tweet in reply to the first tweet by setting in_reply_to_status_id
+							// originalTweetID
+							tweetParams.Set(&amp;quot;in_reply_to_status_id&amp;quot;, strconv.FormatInt(originalTweetID, 10))
+							result, err := api.PostTweet(strconv.FormatInt(tweetCount, 10)+&amp;quot;/ &amp;quot;+subTweet, tweetParams)
+							if err != nil {
+								fmt.Println(err)
+							} else {
+								fmt.Println(result)
+							}
+						}
+						subTweet = &amp;quot;&amp;quot;
+					}
+					if i == len(a)-1 &amp;amp;&amp;amp; subTweet != &amp;quot;&amp;quot; {
+						// just Tweet whatever text is left at the end
+						time.Sleep(time.Second)
+						tweetCount++
+						// Tweet in reply to the first tweet by setting in_reply_to_status_id
+						// originalTweetID
+						tweetParams.Set(&amp;quot;in_reply_to_status_id&amp;quot;, strconv.FormatInt(originalTweetID, 10))
+						result, err := api.PostTweet(strconv.FormatInt(tweetCount, 10)+&amp;quot;/ &amp;quot;+subTweet, tweetParams)
+						if err != nil {
+							fmt.Println(err)
+						} else {
+							fmt.Println(result)
+						}
+					}
+				}
+			}
+		}
+	})
+
+	log.Fatal(http.ListenAndServe(&amp;quot;:8333&amp;quot;, nil))
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;asus-dnsmadeeasy-update:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Asus DNSMadeEasy Update&lt;/h2&gt;
+
+&lt;p&gt;This is smidge fiddly. &lt;a href=&#34;https://github.com/RMerl/asuswrt-merlin/wiki/Custom-DDNS&#34;&gt;More details here&lt;/a&gt;. Once you have Merlin installed and you are happily connected to the internet again (you did remember to write down all the settings for your ISP didn&amp;rsquo;t you?). You need to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go to Administration -&amp;gt; System&lt;/li&gt;
+&lt;li&gt;Enable SSH, which also obviously gives you SFTP&lt;/li&gt;
+&lt;li&gt;Toggle &amp;ldquo;Format JFFS partition at next boot&amp;rdquo; to Yes&lt;/li&gt;
+&lt;li&gt;Toggle &amp;ldquo;Enable JFFS custom scripts and configs&amp;rdquo; to Yes&lt;/li&gt;
+&lt;li&gt;Click Apply&lt;/li&gt;
+&lt;li&gt;SSH on to the box with your router&amp;rsquo;s Admin username and password&lt;/li&gt;
+&lt;li&gt;Create a file called /jffs/scripts/ddns-start&lt;/li&gt;
+&lt;li&gt;Make it executable (chmod 755 ddns-start)&lt;/li&gt;
+&lt;li&gt;Copy these contents into ddns-start&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
+USERNAME=&amp;quot;yourDNSMadeEasyUsername&amp;quot;
+PASSWORD=&amp;quot;TheSpecificPasswordYouSetOnThatDNSRecord&amp;quot;
+IP=${1}
+ID=&amp;quot;TheSpecificRecordIDAssignedbyDNSMaseEasy&amp;quot;
+
+curl -k &amp;quot;https://cp.dnsmadeeasy.com/servlet/updateip?username=${USERNAME}&amp;amp;password=${PASSWORD}&amp;amp;id=${ID}&amp;amp;ip=${IP}&amp;quot; &amp;gt;/dev/null
+
+if [ $? -eq 0 ]; then
+    /sbin/ddns_custom_updated 1
+else
+    /sbin/ddns_custom_updated 0
+fi
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Do a reboot for good measure and you should see DDNS displaying success on the main dashboard&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Blogging from my phone with DroidEdit, Hugo, GitHub Pages and Travis</title>
@@ -993,73 +1248,6 @@ sudo cp -R * /usr/local/
 &lt;p&gt;I&amp;rsquo;ve built for &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-pi.tar.gz&#34;&gt;Pi 1 (ARM v6)&lt;/a&gt; and &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-v7.tar.gz&#34;&gt;ODROID-C1/Pi2 (ARM v7)&lt;/a&gt;. The latter was built on an &lt;a href=&#34;http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433&#34;&gt;ODROID-C1&lt;/a&gt; and it seems to run fine on the Pi 2 since both are ARM v7. It took 1 hr 15 mins to compile compared to 4+ hrs on the Pi 1.&lt;/p&gt;
 
 &lt;p&gt;&amp;ldquo;make test&amp;rdquo; on the ODROID gave the same results as on the Pi 1: [10:33|% 100|+ 784|-   4]: Done&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Download compiled version of Node.js 0.12.1 Stable for Raspberry Pi here</title>
-      <link>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here/</link>
-      <pubDate>Thu, 26 Mar 2015 09:56:57 +0000</pubDate>
-      
-      <guid>http://conoroneill.net/download-compiled-version-of-nodejs-0121-stable-for-raspberry-pi-here/</guid>
-      <description>&lt;p&gt;Unfortunately, just like 0.12.0, the 0.12.1 release of Node won&amp;rsquo;t compile on Raspberry Pi (pre 2) so I took a patch from &lt;a href=&#34;http://iojs.org&#34;&gt;io.js&lt;/a&gt; and was able to build it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The problem is due to recent releases of Raspbian mis-identifying the ARM version so Node tries to build for V7 instead of V6. These &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/6f7494292e22b1f1050abeaa43f257ac466edf2b&#34;&gt;two&lt;/a&gt; &lt;a href=&#34;https://github.com/bnoordhuis/io.js/commit/8afcc5e701538e5a442a0334d781eac202cc4e1d&#34;&gt;changes&lt;/a&gt; from this &lt;a href=&#34;https://github.com/iojs/io.js/issues/283&#34;&gt;io.js thread&lt;/a&gt; sort it out.&lt;/p&gt;
-
-&lt;p&gt;I set the Raspberry Pi B+ to Turbo mode and it took 4ish hours to build&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz&#34;&gt;Download here&lt;/a&gt; and enjoy.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;wget https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/node-v0.12.1-linux-arm-pi.tar.gz
-tar -zxvf node-v0.12.1-linux-arm-pi.tar.gz
-cd node-v0.12.1-linux-arm-pi
-sudo cp -R * /usr/local/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Updated files:
-* &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/configure&#34;&gt;configure&lt;/a&gt;
-* &lt;a href=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/03/cpu.cc&#34;&gt;cpu.cc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Diffs:
-* configure&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;493a494,495
-&amp;gt;     o[&#39;variables&#39;][&#39;arm_fpu&#39;] = &#39;vfpv3&#39;
-&amp;gt;     o[&#39;variables&#39;][&#39;arm_neon&#39;] = int(is_arm_neon())
-495,496d496
-&amp;lt;   elif is_arch_armv6():
-&amp;lt;     o[&#39;variables&#39;][&#39;arm_version&#39;] = &#39;6&#39;
-498c498,500
-&amp;lt;     o[&#39;variables&#39;][&#39;arm_version&#39;] = &#39;default&#39;
----
-&amp;gt;     o[&#39;variables&#39;][&#39;arm_fpu&#39;] = &#39;vfpv2&#39;
-&amp;gt;     o[&#39;variables&#39;][&#39;arm_neon&#39;] = 0
-&amp;gt;     o[&#39;variables&#39;][&#39;arm_version&#39;] = &#39;6&#39; if is_arch_armv6() else &#39;default&#39;
-500,501d501
-&amp;lt;   o[&#39;variables&#39;][&#39;arm_fpu&#39;] = &#39;vfpv3&#39;  # V8 3.18 no longer supports VFP2.
-&amp;lt;   o[&#39;variables&#39;][&#39;arm_neon&#39;] = int(is_arm_neon())
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;cpu.cc&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-diff&#34;&gt;368c368
-&amp;lt;     // We try to correct this by looking at the &#39;elf_platform&#39;
----
-&amp;gt;     // We try to correct this by looking at the &#39;elf_format&#39;
-374c374
-&amp;lt;       char* processor = cpu_info.ExtractField(&amp;quot;model name&amp;quot;);
----
-&amp;gt;       char* processor = cpu_info.ExtractField(&amp;quot;Processor&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Make Test Output: [25:08|% 100|+ 775|-   6]: Done
-(failures seem to be timeouts mainly)&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

@@ -81,6 +81,128 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">22 Jul 2015, 08:14</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/" class="post-title">Creating an OTP fob compatible with Google Authenticator using an Espruino Pico</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Now that the <a href="http://www.espruino.com/">Espruino Pico</a> has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I&rsquo;ve cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg" alt="Espruino Pico OTP" /></p>
+
+<p>This code is basically just from three sources, merged together with a few tiny tweaks by me.</p>
+
+<ul>
+<li><a href="https://github.com/Caligatio/jsSHA">jsSHA, a JavaScript implementation of SHA/HMAC</a></li>
+<li><a href="https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/">Generate Time-Based One-Time Passwords With JavaScript</a></li>
+<li><a href="http://www.espruino.com/USB">Espruino HID Example</a></li>
+</ul>
+
+<p>(Note I&rsquo;ve just discovered that Espruino has its own hmac implementation so I can possibly drop jsSHA)</p>
+
+<p>The main thing you need for this is your Google Authenticator Secret. Unfortunately you can only get this when you have access to the original QR code that you scanned (it&rsquo;s in the URL). But if you are setting up 2FA access to a new service e.g. Digital Ocean, then you can grab the secret and save it in the code. If your system also uses a PIN (e.g. SSO on some corporate sites), save that in the code too.</p>
+
+<p>You&rsquo;ll need a very recent pre-release Firmware for this to work at all e.g. <a href="http://www.espruino.com/binaries/git/commits/d3b43aab7efcc42e6f1584c340bd855b1e5af4c6/">from here</a></p>
+
+<p>Once that&rsquo;s flashed, go into Settings on the Web IDE and make sure &ldquo;Set Current Time&rdquo; is ticked in the Communications section. Auth Fobs rely on having an accurate time and that setting keeps unsetting itself on my PC.</p>
+
+<p>Now copy the code below onto the Espruino using the Web IDE and then type save() to make sure it can survive a power-cycle. Remove and re-insert the Pico, press the button and you should get the auth code you need.</p>
+
+<p>Now for the bad news: This currently doesn&rsquo;t work on my Windows 8.1 PC but works semi-reliably on my work MBP. Once the HID code makes it to production, I&rsquo;m sure it will work fine.</p>
+
+<pre><code class="language-javascript">// Code assembled by Conor O'Neill from three sources. None of it copyright me.
+// This code copyright Brian Turek https://github.com/Caligatio/jsSHA https://github.com/Caligatio/jsSHA/blob/master/LICENSE
+'use strict';(function(E){function t(c,a,e){var g=0,b=[],d=0,f,k,l,h,m,w,n,q=!1,r=!1,p=[],t=[],v,u=!1;e=e||{};f=e.encoding||&quot;UTF8&quot;;v=e.numRounds||1;l=y(a,f);if(v!==parseInt(v,10)||1&gt;v)throw Error(&quot;numRounds must a integer &gt;= 1&quot;);if(&quot;SHA-1&quot;===c)m=512,w=z,n=F,h=160;else throw Error(&quot;Chosen SHA variant is not supported&quot;);k=x(c);this.setHMACKey=function(a,b,d){var e;if(!0===r)throw Error(&quot;HMAC key already set&quot;);if(!0===q)throw Error(&quot;Cannot set HMAC key after finalizing hash&quot;);if(!0===u)throw Error(&quot;Cannot set HMAC key after calling update&quot;);
+f=(d||{}).encoding||&quot;UTF8&quot;;b=y(b,f)(a);a=b.binLen;b=b.value;e=m&gt;&gt;&gt;3;d=e/4-1;if(e&lt;a/8){for(b=n(b,a,0,x(c));b.length&lt;=d;)b.push(0);b[d]&amp;=4294967040}else if(e&gt;a/8){for(;b.length&lt;=d;)b.push(0);b[d]&amp;=4294967040}for(a=0;a&lt;=d;a+=1)p[a]=b[a]^909522486,t[a]=b[a]^1549556828;k=w(p,k);g=m;r=!0};this.update=function(a){var c,e,f,h=0,n=m&gt;&gt;&gt;5;c=l(a,b,d);a=c.binLen;e=c.value;c=a&gt;&gt;&gt;5;for(f=0;f&lt;c;f+=n)h+m&lt;=a&amp;&amp;(k=w(e.slice(f,f+n),k),h+=m);g+=h;b=e.slice(h&gt;&gt;&gt;5);d=a%m;u=!0};this.getHash=function(a,e){var f,l,m;if(!0===
+r)throw Error(&quot;Cannot call getHash after setting HMAC key&quot;);m=A(e);switch(a){case &quot;HEX&quot;:f=function(a){return B(a,m)};break;case &quot;B64&quot;:f=function(a){return C(a,m)};break;case &quot;BYTES&quot;:f=D;break;default:throw Error(&quot;format must be HEX, B64, or BYTES&quot;);}if(!1===q)for(k=n(b,d,g,k),l=1;l&lt;v;l+=1)k=n(k,h,0,x(c));q=!0;return f(k)};this.getHMAC=function(a,e){var f,l,p;if(!1===r)throw Error(&quot;Cannot call getHMAC without first setting HMAC key&quot;);p=A(e);switch(a){case &quot;HEX&quot;:f=function(a){return B(a,p)};break;case &quot;B64&quot;:f=
+function(a){return C(a,p)};break;case &quot;BYTES&quot;:f=D;break;default:throw Error(&quot;outputFormat must be HEX, B64, or BYTES&quot;);}!1===q&amp;&amp;(l=n(b,d,g,k),k=w(t,x(c)),k=n(l,h,m,k));q=!0;return f(k)}}function G(c,a,e){var g=c.length,b,d,f,k,l;a=a||[0];e=e||0;l=e&gt;&gt;&gt;3;if(0!==g%2)throw Error(&quot;String of HEX type must be in byte increments&quot;);for(b=0;b&lt;g;b+=2){d=parseInt(c.substr(b,2),16);if(isNaN(d))throw Error(&quot;String of HEX type contains invalid characters&quot;);k=(b&gt;&gt;&gt;1)+l;for(f=k&gt;&gt;&gt;2;a.length&lt;=f;)a.push(0);a[f]|=d&lt;&lt;
+8*(3-k%4)}return{value:a,binLen:4*g+e}}function H(c,a,e){var g=[],b,d,f,k,g=a||[0];e=e||0;d=e&gt;&gt;&gt;3;for(b=0;b&lt;c.length;b+=1)a=c.charCodeAt(b),k=b+d,f=k&gt;&gt;&gt;2,g.length&lt;=f&amp;&amp;g.push(0),g[f]|=a&lt;&lt;8*(3-k%4);return{value:g,binLen:8*c.length+e}}function I(c,a,e){var g=[],b=0,d,f,k,l,h,m,g=a||[0];e=e||0;a=e&gt;&gt;&gt;3;if(-1===c.search(/^[a-zA-Z0-9=+\/]+$/))throw Error(&quot;Invalid character in base-64 string&quot;);f=c.indexOf(&quot;=&quot;);c=c.replace(/\=/g,&quot;&quot;);if(-1!==f&amp;&amp;f&lt;c.length)throw Error(&quot;Invalid '=' found in base-64 string&quot;);
+for(f=0;f&lt;c.length;f+=4){h=c.substr(f,4);for(k=l=0;k&lt;h.length;k+=1)d=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;.indexOf(h[k]),l|=d&lt;&lt;18-6*k;for(k=0;k&lt;h.length-1;k+=1){m=b+a;for(d=m&gt;&gt;&gt;2;g.length&lt;=d;)g.push(0);g[d]|=(l&gt;&gt;&gt;16-8*k&amp;255)&lt;&lt;8*(3-m%4);b+=1}}return{value:g,binLen:8*b+e}}function B(c,a){var e=&quot;&quot;,g=4*c.length,b,d;for(b=0;b&lt;g;b+=1)d=c[b&gt;&gt;&gt;2]&gt;&gt;&gt;8*(3-b%4),e+=&quot;0123456789abcdef&quot;.charAt(d&gt;&gt;&gt;4&amp;15)+&quot;0123456789abcdef&quot;.charAt(d&amp;15);return a.outputUpper?e.toUpperCase():e}function C(c,
+a){var e=&quot;&quot;,g=4*c.length,b,d,f;for(b=0;b&lt;g;b+=3)for(f=b+1&gt;&gt;&gt;2,d=c.length&lt;=f?0:c[f],f=b+2&gt;&gt;&gt;2,f=c.length&lt;=f?0:c[f],f=(c[b&gt;&gt;&gt;2]&gt;&gt;&gt;8*(3-b%4)&amp;255)&lt;&lt;16|(d&gt;&gt;&gt;8*(3-(b+1)%4)&amp;255)&lt;&lt;8|f&gt;&gt;&gt;8*(3-(b+2)%4)&amp;255,d=0;4&gt;d;d+=1)8*b+6*d&lt;=32*c.length?e+=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;.charAt(f&gt;&gt;&gt;6*(3-d)&amp;63):e+=a.b64Pad;return e}function D(c){var a=&quot;&quot;,e=4*c.length,g,b;for(g=0;g&lt;e;g+=1)b=c[g&gt;&gt;&gt;2]&gt;&gt;&gt;8*(3-g%4)&amp;255,a+=String.fromCharCode(b);return a}function A(c){var a={outputUpper:!1,b64Pad:&quot;=&quot;};
+c=c||{};a.outputUpper=c.outputUpper||!1;a.b64Pad=c.b64Pad||&quot;=&quot;;if(&quot;boolean&quot;!==typeof a.outputUpper)throw Error(&quot;Invalid outputUpper formatting option&quot;);if(&quot;string&quot;!==typeof a.b64Pad)throw Error(&quot;Invalid b64Pad formatting option&quot;);return a}function y(c,a){var e;switch(a){case &quot;UTF8&quot;:case &quot;UTF16BE&quot;:case &quot;UTF16LE&quot;:break;default:throw Error(&quot;encoding must be UTF8, UTF16BE, or UTF16LE&quot;);}switch(c){case &quot;HEX&quot;:e=G;break;case &quot;TEXT&quot;:e=function(e,b,d){var f=[],c=[],l=0,h,m,p,n,q,f=b||[0];b=d||0;p=b&gt;&gt;&gt;3;if(&quot;UTF8&quot;===
+a)for(h=0;h&lt;e.length;h+=1)for(d=e.charCodeAt(h),c=[],128&gt;d?c.push(d):2048&gt;d?(c.push(192|d&gt;&gt;&gt;6),c.push(128|d&amp;63)):55296&gt;d||57344&lt;=d?c.push(224|d&gt;&gt;&gt;12,128|d&gt;&gt;&gt;6&amp;63,128|d&amp;63):(h+=1,d=65536+((d&amp;1023)&lt;&lt;10|e.charCodeAt(h)&amp;1023),c.push(240|d&gt;&gt;&gt;18,128|d&gt;&gt;&gt;12&amp;63,128|d&gt;&gt;&gt;6&amp;63,128|d&amp;63)),m=0;m&lt;c.length;m+=1){q=l+p;for(n=q&gt;&gt;&gt;2;f.length&lt;=n;)f.push(0);f[n]|=c[m]&lt;&lt;8*(3-q%4);l+=1}else if(&quot;UTF16BE&quot;===a||&quot;UTF16LE&quot;===a)for(h=0;h&lt;e.length;h+=1){d=e.charCodeAt(h);&quot;UTF16LE&quot;===a&amp;&amp;(m=d&amp;255,d=m&lt;&lt;8|d&gt;&gt;&gt;8);q=l+p;for(n=q&gt;&gt;&gt;
+2;f.length&lt;=n;)f.push(0);f[n]|=d&lt;&lt;8*(2-q%4);l+=2}return{value:f,binLen:8*l+b}};break;case &quot;B64&quot;:e=I;break;case &quot;BYTES&quot;:e=H;break;default:throw Error(&quot;format must be HEX, TEXT, B64, or BYTES&quot;);}return e}function r(c,a){return c&lt;&lt;a|c&gt;&gt;&gt;32-a}function p(c,a){var e=(c&amp;65535)+(a&amp;65535);return((c&gt;&gt;&gt;16)+(a&gt;&gt;&gt;16)+(e&gt;&gt;&gt;16)&amp;65535)&lt;&lt;16|e&amp;65535}function u(c,a,e,g,b){var d=(c&amp;65535)+(a&amp;65535)+(e&amp;65535)+(g&amp;65535)+(b&amp;65535);return((c&gt;&gt;&gt;16)+(a&gt;&gt;&gt;16)+(e&gt;&gt;&gt;16)+(g&gt;&gt;&gt;16)+(b&gt;&gt;&gt;16)+(d&gt;&gt;&gt;16)&amp;65535)&lt;&lt;16|d&amp;65535}function x(c){if(&quot;SHA-1&quot;===
+c)c=[1732584193,4023233417,2562383102,271733878,3285377520];else throw Error(&quot;No SHA variants supported&quot;);return c}function z(c,a){var e=[],g,b,d,f,k,l,h;g=a[0];b=a[1];d=a[2];f=a[3];k=a[4];for(h=0;80&gt;h;h+=1)e[h]=16&gt;h?c[h]:r(e[h-3]^e[h-8]^e[h-14]^e[h-16],1),l=20&gt;h?u(r(g,5),b&amp;d^~b&amp;f,k,1518500249,e[h]):40&gt;h?u(r(g,5),b^d^f,k,1859775393,e[h]):60&gt;h?u(r(g,5),b&amp;d^b&amp;f^d&amp;f,k,2400959708,e[h]):u(r(g,5),b^d^f,k,3395469782,e[h]),k=f,f=d,d=r(b,30),b=g,g=l;a[0]=p(g,a[0]);a[1]=p(b,a[1]);a[2]=p(d,a[2]);a[3]=p(f,a[3]);
+a[4]=p(k,a[4]);return a}function F(c,a,e,g){var b;for(b=(a+65&gt;&gt;&gt;9&lt;&lt;4)+15;c.length&lt;=b;)c.push(0);c[a&gt;&gt;&gt;5]|=128&lt;&lt;24-a%32;c[b]=a+e;e=c.length;for(a=0;a&lt;e;a+=16)g=z(c.slice(a,a+16),g);return g}&quot;function&quot;===typeof define&amp;&amp;define.amd?define(function(){return t}):&quot;undefined&quot;!==typeof exports?&quot;undefined&quot;!==typeof module&amp;&amp;module.exports?module.exports=exports=t:exports=t:E.jsSHA=t})(this);
+
+// This code copyright Nic Raboy https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/
+TOTP = function() {
+
+    var dec2hex = function(s) {
+        return (s &lt; 15.5 ? &quot;0&quot; : &quot;&quot;) + Math.round(s).toString(16);
+    };
+
+    var hex2dec = function(s) {
+        return parseInt(s, 16);
+    };
+
+    var leftpad = function(s, l, p) {
+        if(l + 1 &gt;= s.length) {
+            s = Array(l + 1 - s.length).join(p) + s;
+        }
+        return s;
+    };
+
+    var base32tohex = function(base32) {
+        var base32chars = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ234567&quot;;
+        var bits = &quot;&quot;;
+        var hex = &quot;&quot;;
+        for(var i = 0; i &lt; base32.length; i++) {
+            var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
+            bits += leftpad(val.toString(2), 5, '0');
+        }
+        for(var i = 0; i + 4 &lt;= bits.length; i+=4) {
+            var chunk = bits.substr(i, 4);
+            hex = hex + parseInt(chunk, 2).toString(16) ;
+        }
+        return hex;
+    };
+
+    this.getOTP = function(secret) {
+        try {
+            var epoch = Math.round(new Date().getTime() / 1000.0);
+            var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &quot;0&quot;);
+            var hmacObj = new jsSHA(&quot;SHA-1&quot;, &quot;HEX&quot;);
+			hmacObj.setHMACKey(base32tohex(secret), &quot;HEX&quot;)
+			hmacObj.update(time);
+            var hmac = hmacObj.getHMAC(&quot;HEX&quot;);
+            var offset = hex2dec(hmac.substring(hmac.length - 1));
+            var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp; hex2dec(&quot;7fffffff&quot;)) + &quot;&quot;;
+            otp = (otp).substr(otp.length - 6, 6);
+        } catch (error) {
+            throw error;
+        }
+        return otp;
+    };
+
+}
+
+var totpObj = new TOTP();
+
+// This code copyright Gordon Williams, Pur3 Ltd.,  https://github.com/espruino/Espruino/blob/master/LICENSE
+var kb = require(&quot;USBKeyboard&quot;);
+
+setWatch(function() {
+  // These two lines by Conor O'Neill :-)
+	var pin = &quot;put_your_PIN_Prefix_here&quot;;
+  kb.type(pin + totpObj.getOTP(&quot;put_your_google_authenticator_secret_here&quot;).toString(), function() {
+        kb.tap(kb.KEY.ENTER);
+    });
+}, BTN, {debounce:100,repeat:true, edge:&quot;rising&quot;});
+
+</code></pre>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">11 Jul 2015, 19:56</h1>
                 <section class="post">
                     <header class="post-header">
@@ -476,42 +598,6 @@ Front
 
 <p>Wearables.
 <img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fitbit3.jpg" alt="In its clip" title="In its clip" /></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">13 Dec 2014, 14:35</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/some-of-my-old-red-hat-floppy-disks-from-2000-2004/" class="post-title">Some of my old Red Hat floppy disks from 2000-2004</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>We had to empty our attic to get the house insulated this week. I uncovered some old Red Hat and Fedora floppies and CDs. I previously had much older ones but was quite ruthless about reusing floppies in the old days!</p>
-
-<p>The very first Linux I installed was Slackware on a self-built AMD K5 PC in Sunnyvale in 1996 (I&rsquo;ve never built a PC with Intel CPUs! Current box is self-built FX-8 Eight Core 8370). I was so traumatised by the Slackware experience, as a Windows 95 user, that I didn&rsquo;t try again until &lsquo;97 with Red Hat Linux 4. My oldest floppy is from Red Hat 6.2 in 2000:</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_62b.jpg" alt="Red Hat 6.2" title="Red Hat 6.2" /></p>
-
-<p>I then found a guy in the UK who would burn each new release of Red Hat onto CDs and send them to you for a few quid. That kept me going for ages. Here&rsquo;s a Red Hat 7.0 boot floppy cunningly reusing a Windows NT disk:</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_70b.jpg" alt="Red Hat 7.0" title="Red Hat 7.0" /></p>
-
-<p>Then Red Hat 7.3 updates on CD</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/redhat_73b.jpg" alt="Red Hat 7.3" title="Red Hat 7.3" /></p>
-
-<p>And finally Fedora Core 1 boot disk:</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/12/fedora_fc1b.jpg" alt="Fedora Core 1" title="Fedora Core 1" /></p>
-
-<p>Next week I finally rid myself of the last vestiges of Ubuntu and move the home-office file server to CentOS 7 :-) I&rsquo;m baaaaaaaack.</p>
 
                     </div>
                 </section>

@@ -81,6 +81,83 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">16 Oct 2012, 15:02</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/playing-1980s-games-on-your-raspberry-pi-and-remembering-mike-singleton/" class="post-title">Playing 1980s games on your Raspberry Pi and remembering Mike Singleton</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Playing 1980s games on your Raspberry Pi and remembering Mike Singleton&rdquo;</p>
+
+<p>This post was going to be just an up-to-date summary of many other articles out there on this subject. With the rapid rate of change in the RPi world, even very recent guides have proven to be unusable quite quickly.</p>
+
+<p>However I&rsquo;d first like to remember Mike Singleton who died last week. I didn&rsquo;t know his name until today when I read <a href="http://www.giantbomb.com/forums/general-discussion/30/the-father-of-home-computer-gaming-died-last-week/564063/">this lovely piece about him</a>. But what I did know about was <a href="http://en.wikipedia.org/wiki/The_Lords_of_Midnight">Lords of Midnight</a> and Doomdark&rsquo;s Revenge. Those two adventure games dominated that category on the ZX Spectrum in the mid-80s. Mike was still creating new games until very recently. It&rsquo;s just another reminder of how important the 1980s UK home computer scene has been to the current gaming industry. In memory of Mike, I&rsquo;m playing Lords of Midnight from the start again this evening on the Raspberry Pi. RIP.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/10/Fuse_001.png"><img class="alignnone size-full wp-image-875" title="Fuse_001" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/10/Fuse_001.png" alt="" width="962" height="776" /></a></p>
+
+<p>The Raspberry Pi makes a brilliant base for old-school game emulation, just as it does for <a href="http://www.raspbmc.com/">XBMC</a>. You literally just need it, a USB joystick, maybe a wireless dongle, a TV and you are in business. I&rsquo;ve been very tempted to double-sided-sticky-tape one to the side of the TV without a case, it&rsquo;s that small. I&rsquo;m currently using an ancient 14&rdquo; Philips portable CRT to get the full retro effect, including blinding flickering.
+<h2>Atari 2600</h2>
+OK, I have to admit my rose-tinted spectacle were on overdrive here. The Atari 2600 Pacman in my head was actually thearcadeversion. The real thing is pretty awful. This console was a bit before my time and the main thing I remember about it were the completely unusable joysticks. But if you want to re-live that horror, then it&rsquo;s really very simple.</p>
+
+<p>Grab all the Atari 2600 ROMs from one of many sites. They are tiny so the download takes no time at all.</p>
+
+<p>Then install the Stella emulator:
+<pre><code class="language-bash">sudo apt-get install stella</code></pre>
+Then just run stella inside X Windows. More details <a href="http://www.engadget.com/2012/09/28/how-to-set-up-your-raspberry-pi-to-play-atari-2600-games/">here</a>.
+<h2>MAME Arcade</h2>
+MAME seems to have been around forever. It enables you to play old arcade games on a wide variety of machines. I remember using it on my brother-in-law&rsquo;s Atari 520ST in the 90s.</p>
+
+<p>So it&rsquo;s no surprise it works well on the Raspberry Pi. Compiling from source apparently takes forever and some of the binaries from this summer don&rsquo;t work on the latest Debian release. However<a href="http://sheasilverman.com/rpi/raspbian/mameBin.zip">this latest compiled version</a> of Advance MAME <a href="http://blog.sheasilverman.com/2012/07/raspbian-on-raspberry-pi-mame-mess-quake3-neogeo-and-cave-story-binaries/">by Shea Silverman</a> runs perfectly on the latest Debian.</p>
+
+<p>Download it to your home directory, then
+<pre><code class="language-bash">
+unzip mameBin.zip
+sudo chmod 777 /dev/fb0
+</code>
+</pre>
+Put your roms into ~/mame/share/advance/rom/
+<pre><code class="language-bash">
+cd mame/bin/
+./advmame
+</code>
+</pre>
+Edit the config file
+<pre><code class="language-bash">nano ~/.advance/advmame.rc</code></pre>
+to include the proper display configuration</p>
+
+<p>For HDMI try:
+<pre><code class="language-bash">device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60</code></pre>
+For NTSC TVs try:
+<pre><code class="language-bash">device_video_clock 5 - 50 / 15.73 / 60</code></pre>
+For Composite PAL TVs:
+<pre>device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60</pre>
+Then run MAME with the name of the game e.g. pacman or zaxxon.</p>
+
+<p>I&rsquo;ll leave it as an exercise for the reader to source their own legal ROMs.
+<pre><code class="language-bash">
+ cd mame/bin/
+./advmame gamename
+</code>
+</pre>
+<h2>ZX Spectrum</h2>
+Installing the Fuse emulator is now trivial to do:
+<pre><code class="language-bash">sudo apt-get install fuse-emulator-common fuse-emulator-utils spectrum-roms</code></pre>
+Then grab your favourite games from <a href="http://www.worldofspectrum.org/">World of Spectrum</a> and run fuse inside X Windows. More details <a href="http://raspi.tv/2012/how-to-install-fuse-zx-spectrum-emulator-on-raspberry-pi">here</a>. And <a href="http://www.worldofspectrum.org/infoseekid.cgi?id=0006604">Lords of Midnight here</a>.</p>
+
+<p>There are ton of other emulators out there, at various levels of usability. Our eldest has already been asking about SNES.</p>
+
+<p>&nbsp;</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">09 Oct 2012, 10:09</h1>
                 <section class="post">
                     <header class="post-header">
@@ -380,36 +457,6 @@ Coming whenever conversion is complete. Now waiting 2 hours!</p>
 This won&rsquo;t be a geek-out session, it will be a business-centric talk where I hope those who are looking at the cloud get a lot of useful tips and cautions.</p>
 
 <p>Let me know if there is anything in particular you would like to hear about.</p>
-
-<p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">17 Sep 2012, 11:04</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/standing-desk-update-2/" class="post-title">Standing Desk Update</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Standing Desk Update&rdquo;</p>
-
-<p>My standing desk experiments have been intermittent but I&rsquo;ve put some renewed effort in recently due to some back twinges. I finally cleared out the tiny annex office off my main office and changed the standing desk over to my main laptop.</p>
-
-<p><img class="alignnone" src="https://lh6.googleusercontent.com/-PHy7o9YZt-s/UFbu2t09wdI/AAAAAAAAi0M/ADd7EW7ZTQ4/s800/2012-09-17%25252009.58.27.jpg" alt="" width="600" height="800" /></p>
-
-<p>Overall it works brilliantly and is more stable than the previous set of cardboard boxes :-) The floor mat is important to avoid getting sore heels. I either go barefoot or wear the Vibrams when standing.</p>
-
-<p>The main lesson learned is that it&rsquo;s not something you should do 12 hours a day. Mix it up and make sure to keep moving, don&rsquo;t stay stationary for long periods. I generally take phone calls sitting down or when I have to read long technical documents. I think trying to read too much from a screen that is a few feet away whilst swaying slightly on your feet is just too hard.</p>
-
-<p>Anyone else been trying it out? Any lessons learned you&rsquo;d like to share?</p>
 
 <p>&nbsp;</p>
 

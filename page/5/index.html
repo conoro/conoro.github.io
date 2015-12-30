@@ -81,6 +81,75 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">23 Mar 2014, 15:10</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets/" class="post-title">Our web and mobile enabled electric blanket using Electric Ireland&#39;s Efergy RC sockets</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>A major ongoing struggle in our household is convincing one of our many children to go upstairs and put on the electric blanket for us. I honestly don&rsquo;t know how we get through the winter.</p>
+
+<p>Wouldn&rsquo;t it be fantastic if we could use technology instead of children to do this?</p>
+
+<p>Last Thursday I came home from work to discover that <a href="http://www.electricireland.ie/">Electric Ireland</a> had sent us three <a href="http://efergy.com/eu/products/remotecontrolledsocket">Efergy</a> remote control power sockets and a plugin energy monitor. I have no idea why they did so, apart perhaps from our crazy electricity use.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/efergy01.jpg" alt="Efergy" title="Efergy RC Switch" /></p>
+
+<p>My mind immediately leaped to our electric blanket conundrum.</p>
+
+<p>A quick look at the label and I was pleased to see they worked at 433Mhz. What were the chances that the <a href="http://dx.com/p/433mhz-wireless-transmitter-module-superregeneration-for-arduino-green-149254">$1.99 wireless modules</a> I bought from DX in China would work with them? Oh the joy to discover that, not only do the modules work with them, some genius has already built <a href="https://code.google.com/p/rc-switch/">a powerful Arduino library</a> to do so!</p>
+
+<p>It turns out that the Efergy brand uses the same simple protocol as a wide range of others around the world. I guess they are all OEMing something.</p>
+
+<p>A 2 minute setup on my Arduino Uno with a receiver and the relevant sniffer code loaded up and I had the 11 codes (5 on, 5 off, 1 all-off) that my specific remote control used. They are all 24bit, protocol &ldquo;1&rdquo; with 6 decimal digits like 109223. I assume they distribute a range of remotes to avoid neighbours clashing. The RC switches themselves are not locked to a specific code, they have to be set by the remote control at power up.</p>
+
+<p>2 more minutes to setup a transmitter to cycle between the codes and I was toggling the RC switches on and off.</p>
+
+<p>I really was gobsmacked how easy it was. It was a lovely reminder of how incredible the internet really is. We&rsquo;ve become so used to it, we forget that the above would have taken me months (or never!) in pre-internet days instead of 10 minutes total.</p>
+
+<p>Of course that was just step 1. What I really wanted to do was internet-enable these beauties. I&rsquo;ve been meaning to do something along these lines with the <a href="http://digistump.com/products/50">DigiX</a> board since I got it. The DigiX is a really powerful Arduino clone with a 32-bit Atmel ARM CPU, tons upon tons of IO, SD card, audio and, most importantly for this project, Wifi on-board.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix01.jpg" alt="frontside" title="DigiX with module" /></p>
+
+<p>Getting Wifi setup the way I wanted on the DigiX took more time than I&rsquo;d have liked yesterday but I finally figured out that the <a href="http://en.usr.cn/low-power-wifi-module.html">Chinese USR-wifi232-g module</a> web UI doesn&rsquo;t like Chrome! Once I switched to Firefox, all went swimmingly. I connected it to a Wifi AP, gave it a fixed IP address and then setup a port forward from the house router to it. Obviously I use <a href="http://dyn.com/">Dynamic DNS with Dyn</a> on the home router so that I don&rsquo;t have to track changing IP addresses manually.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/digix02.jpg" alt="backside" title="DigiX other side" /></p>
+
+<p>The DigiX comes with an example Web Server built-in so I was able to just create a few simple URLs and paste the RCSwitch code into the relevant places. So within another few minutes I was toggling the switches over the internet.</p>
+
+<pre><code>switch1State = 1;
+mySwitch.send(109323, 24);
+
+</code></pre>
+
+<p>Another moment when I forced myself to stop and think about how incredibly easy all this stuff has become. And all of it sitting on the shoulders of giants. So far, all I&rsquo;ve done is copy and paste stuff together.</p>
+
+<p>But of course I wasn&rsquo;t happy there. I wanted a mobile app! Luckily, Colum Bennet in <a href="http://www.feedhenry.com">FeedHenry</a> has created a superb new Getting Started guide which will be released soon. It walks you through creating an <a href="http://angularjs.org/">Angular</a> Hybrid mobile app which talks to a FeedHenry Node.js back-end to do a really simple task. Despite only playing a programmer for the purposes of blogging, I was able to easily modify both the client and cloud apps to create what I needed with the Node request module.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app01.jpg" alt="Angular" title="FeedHenry Angular App" /></p>
+
+<p>Of course I could send the commands directly from the mobile app to the DigiX, but routing it through the cloud means that eventually this can be multi-user, multi-switch, re-configurable and securely locked-down.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/app02.jpg" alt="Success" title="Mobile App Success" /></p>
+
+<p>One really nice feature of the FeedHenry platform is that you can generate hosted Web Apps from your mobile Apps. This means that whilst I now have a lovely Android APK on my Galaxy S4, my wife can use the web app on her iPhone to achieve exactly the same thing using a simple bookmarked CNAME.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/03/webapp.jpg" alt="Web App" title="FeedHenry Web App" /></p>
+
+<p>I&rsquo;ll upload everthing on to a public GitHub repo as soon as I have removed all the hard-coding and added a modicum of &ldquo;security&rdquo; with API keys etc. More posts on this technology combo coming in the next few weeks.</p>
+
+<p>With the Bandon Bed Button, we have now achieved Electric Blanket Nirvana.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">16 Mar 2014, 18:33</h1>
                 <section class="post">
                     <header class="post-header">
@@ -649,48 +718,6 @@ It can work with old TVs on SCART cable but picture is very fuzzy.</p>
 <p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/4907766957_165ce2990d.jpg"><img class="aligncenter size-full wp-image-1267" alt="4907766957_165ce2990d" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/4907766957_165ce2990d.jpg" width="500" height="309" /></a>Secret codes and invisible ink were major parts of my youth. I wonder if we could use something similar to get kids interested in privacy and crypto ;-)</p>
 
 <p>&nbsp;</p>
-
-<p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">01 Feb 2014, 16:13</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/" class="post-title">Run the @espruino JS interpreter on Windows</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Run the @espruino JS interpreter on Windows&rdquo;</p>
-
-<p>I just got my Kickstarter <a href="http://www.espruino.com/">Espruino</a> yesterday. It&rsquo;s one of those projects that just makes me smile. A tiny board with an ST ARM MCU running a special JavaScript interpreter that can do all the stuff with hardware you would normally associate with C/C++/Assembler/Wiring.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino_board.jpg"><img class="aligncenter size-full wp-image-1261" alt="espruino_board" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino_board.jpg" width="640" height="322" /></a></p>
-
-<p>I&rsquo;ve only just got started playing with it and I swear it feels like my first days using a ZX Spectrum. The instant feedback of interpreted JS in a console feels exactly like typing BASIC into the Speccy (blog post coming on my Speccy and the Interface1bis soon).</p>
-
-<p>The Espruino Chrome App is pretty basic but I was really excited to see that it has a Scratch-style blocks-editor for generating JS. I love the whole JavaScript/Node-everywhere movement but all those damned brackets/braces are a real hurdle for anyone trying to learn programming.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino.jpg"><img class="aligncenter size-large wp-image-1262" alt="espruino" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino-1024x601.jpg" width="584" height="342" /></a></p>
-
-<p>The Espruino interpreter itself can be compiled for a variety of ST Eval boards, the Raspberry Pi and most boxes that run Linux. I&rsquo;d love to get it running on my DigiX too since its processor specs are almost identical to the Espruino. But it&rsquo;s been over 14 years since I played with BSPs and cross-compilers and I&rsquo;m not sure I have the chops any more.</p>
-
-<p>Gordon, the man responsible for it all, mentioned in the forums that it should compile on Windows using Cygwin. Speaking of 14 years ago, it&rsquo;s about that long since I used Cygwin too. I spent so many hours in the late 90s building XEmacs for Cygwin on my PC.</p>
-
-<p>And whaddya know, it works! It took forever to download all the necessary bits of Cygwin on our crappy DSL but compilation of Espruino took about 30 seconds with no errors. Here&rsquo;s some code in action which grabs the contents of the Espruino web-site home page:</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/http.jpg"><img class="aligncenter size-full wp-image-1260" alt="http" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/http.jpg" width="675" height="339" /></a></p>
-
-<p>So if your curiosity is piqued by this very cool project, you can play with the core interpreter on Windows whilst you wait for your board to arrive. I was chuffed to see that the http functionality works fine.</p>
-
-<p>I built it on Windows 7 64-bit so I&rsquo;ve no idea if it runs on 32-bit Windows. You should just need the <a href="https://dl.dropboxusercontent.com/u/1535134/espruino_cygwin/espruino.exe">EXE here</a> and the <a href="https://dl.dropboxusercontent.com/u/1535134/espruino_cygwin/cygwin1.dll">Cygwin1.dll here</a>to try it out. Let me know how you get on. I&rsquo;m not 100% sure yet if you need any more of the Cygwin DLLs to access other functionality.</p>
 
 <p>&nbsp;</p>
 

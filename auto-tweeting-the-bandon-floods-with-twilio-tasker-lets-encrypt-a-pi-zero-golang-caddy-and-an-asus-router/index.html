@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-tweeting the #Bandon floods with Twilio, Tasker, Let&#39;s Encrypt, a #PiZero, golang, Caddy and an Asus router &middot; Cross Dominant</title>
+
+    <meta name="description" content="I&#39;m still flabbergasted you can get a https cert for $0 to run a secure web-server on a $5 computer behind an Asus RT-AC68 Merlin router">
+
+    <meta name="generator" content="Hugo 0.16-DEV" />
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Auto-tweeting the #Bandon floods with Twilio, Tasker, Let&#39;s Encrypt, a #PiZero, golang, Caddy and an Asus router &middot; Cross Dominant">
+    <meta name="twitter:description" content="I&#39;m still flabbergasted you can get a https cert for $0 to run a secure web-server on a $5 computer behind an Asus RT-AC68 Merlin router">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Auto-tweeting the #Bandon floods with Twilio, Tasker, Let&#39;s Encrypt, a #PiZero, golang, Caddy and an Asus router &middot; Cross Dominant">
+    <meta property="og:description" content="I&#39;m still flabbergasted you can get a https cert for $0 to run a secure web-server on a $5 computer behind an Asus RT-AC68 Merlin router">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="http://conoroneill.net//css/all.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Cross Dominant" href="" />
+</head>
+<body>
+
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <h1 class="brand-title"><a href="http://conoroneill.net/">Cross Dominant</a></h1>
+            <h2 class="brand-tagline"> Mixed laterality since 1968 </h2>
+        </hgroup>			
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/conoro"><i class="fa fa-twitter"></i> Twitter</a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/conoro "><i class="fa fa-github-alt"></i> github</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="http://conoroneill.net/index.xml"><i class="fa fa-rss"></i> rss</a>
+                </li>
+            </ul>
+        </nav>
+		<script>
+  (function() {
+    var cx = '001461447920948202874:5htheqgvd1w';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">30 Dec 2015, 17:15</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router/" class="post-title">Auto-tweeting the #Bandon floods with Twilio, Tasker, Let&#39;s Encrypt, a #PiZero, golang, Caddy and an Asus router</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-share">
+                        <div class="post-share-links">
+                            <h4 style="">Share</h4>
+                            <a href="#" data-type="facebook" data-url="http://conoroneill.net/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router/" data-title="Auto-tweeting the #Bandon floods with Twilio, Tasker, Let&#39;s Encrypt, a #PiZero, golang, Caddy and an Asus router" data-description="I&#39;m still flabbergasted you can get a https cert for $0 to run a secure web-server on a $5 computer behind an Asus RT-AC68 Merlin router" data-media="" class="prettySocial fa fa-facebook"></a>
+                            <a href="#" data-type="googleplus" data-url="http://conoroneill.net/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router/" data-description="I&#39;m still flabbergasted you can get a https cert for $0 to run a secure web-server on a $5 computer behind an Asus RT-AC68 Merlin router" class="prettySocial fa fa-google-plus"></a>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="post-description">
+                        
+
+<h2 id="intro:e19abcb8e6b6d101fc1a316dfdf4aa74">Intro</h2>
+
+<p>I haven&rsquo;t blogged properly about the $5 <a href="https://www.raspberrypi.org/blog/raspberry-pi-zero/">Raspberry Pi Zero</a> computer yet, despite Tweeting non-stop about it. I will soon. In the meantime, I&rsquo;ll just repeat that</p>
+
+<p><em>It&rsquo;s a major moment in computing</em></p>
+
+<iframe src="https://player.vimeo.com/video/146893658" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<p>The inclusion of a free one on the cover of the <a href="https://www.raspberrypi.org/magpi/raspberry-pi-zero-out-today-get-it-free-with-the-magpi-40/">MagPi Magazine</a> will be remembered for years to come.</p>
+
+<p>The town in which I live, Bandon, flooded again recently, because Ireland. I&rsquo;ve had <a href="https://github.com/conoro/bandonfews-nodejs">a simple Node.js app</a> running on a Gen 1 Raspberry Pi B, scraping the <a href="http://www.bandonfloodwarning.ie/">Bandon Flood Warning</a> site every 15 minutes for the past four years and saving the data in <a href="https://www.google.com/fusiontables/DataSource?docid=103YIcARoxuaWT7NfZ8mVBzY554sF_3ONYC1N3DE&amp;pli=1#chartnew:id=5">Google Fusion Tables</a>.</p>
+
+<p>Yes that&rsquo;s how Cork County Council&rsquo;s/OPW&rsquo;s Flood Warning site looks in the middle of one of our biggest floods ever:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/service_unavailable.jpg" alt="FEWS Unavailable" /></p>
+
+<p>With all this flooding, I decided to finally create a related setup which takes the SMS Flood alerts from the County Council and auto-tweets them to the <a href="https://twitter.com/bandonfews">@BandonFEWS</a> Twitter account which I created and have manually updated since 2011.</p>
+
+<h2 id="the-details:e19abcb8e6b6d101fc1a316dfdf4aa74">The Details</h2>
+
+<p>So the final $7 hardware (including Wifi adapter) now looks as follows:</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/pizero_fews.jpg" alt="PiZero FEWS" /></p>
+
+<ul>
+<li>My phone is registered with the Bandon Flood Warning site (it has been for years)</li>
+<li>I have a <a href="https://www.twilio.com/">Twilio</a> account with a $1 per month UK SMS number. Irish numbers are $6 per month :-(</li>
+<li>SMSes are sent to my phone from Cork CoCo announcing a new flood warning level or severe weather alert (two different systems and numbers)</li>
+<li>The Android <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&amp;hl=en">Tasker App</a> watches for SMS from these sources with particular contents</li>
+<li>Tasker auto-forwards these SMSes to my Twilio number</li>
+</ul>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/tasker.jpg" alt="Tasker" /></p>
+
+<ul>
+<li>I have the Twilio number configured to call a my simple API end-point with the SMS contents</li>
+<li>The API end-point is running on one of my $5 Raspberry Pi Zeros and is written in <a href="https://golang.org/">Go</a>. Code below.</li>
+<li>The PiZero is behind my home router which is an <a href="https://www.asus.com/ie/Networking/RTAC68U/">Asus RT-AC68</a> so somehow Twilio had to connect through that to the Zero</li>
+<li>I initially setup a simple port forward to the Zero and I already use <a href="http://no-IP.com">no-IP.com</a> for Dynamic DNS. So Twilio called <a href="http://something.no-ip.net:1234">http://something.no-ip.net:1234</a> and my router passed the request to the PiZero server app on port blah</li>
+<li>The PiZero server app parsed the POST request and extracted out the SMS. It split this into multiple Tweets (a la Tweetstorm) if more than 140 chars and used the <a href="https://github.com/ChimeraCoder/anaconda">Anaconda Go client library</a> to post that to @BandonFEWS on Twitter</li>
+<li>Done</li>
+</ul>
+
+<p>But I wasn&rsquo;t happy with http, nooooo, I wanted https and I wanted to use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>. Cue rabbit hole.</p>
+
+<h2 id="let-s-encrypt-and-caddy:e19abcb8e6b6d101fc1a316dfdf4aa74">Let&rsquo;s Encrypt and Caddy</h2>
+
+<p>Let&rsquo;s Encrypt offers free https certs.</p>
+
+<p><em>It&rsquo;s as revolutionary as the PiZero.</em></p>
+
+<p>It also provides APIs so this can be done completely automatically. This resulted in lots of people adding easy Let&rsquo;s Encrypt integration and client libraries very quickly.</p>
+
+<ul>
+<li><a href="https://caddyserver.com/">Caddy</a> is a really nice simple-to-use web-server written in Go. It runs perfectly on the PiZero. It also has completely automatic Let&rsquo;s Encrypt integration if you want it. So I stuck it in front of my Go server to turn it into a https server. Except life is never that easy.</li>
+<li>I hit two immediate problems:
+
+<ul>
+<li>I&rsquo;d have to drop no-IP for Dynamic DNS since I&rsquo;m trying to register for my own https cert</li>
+<li>To stop baddies registering domains they don&rsquo;t own, Let&rsquo;s Encrypt calls back to you and insists on doing that on port 443. So my random high port number on my router wasn&rsquo;t going to work</li>
+</ul></li>
+<li>Then I realised that my DNS provider, <a href="http://www.dnsmadeeasy.com/">DNSMadeEasy</a> has Dynamic DNS built-in. So I grabbed one of my parked domains and set it up with a Dynamic DNS A Record, giving it a dedicated password. But then of course I discovered that my Asus Router doesn&rsquo;t have support for Custom Dynamic DNS out of the box.</li>
+<li>I quickly found the <a href="http://asuswrt.lostrealm.ca/">Merlin Firmware</a> which is interesting. The standard Asus firmware is just a simplified fork of <a href="http://www.polarcloud.com/tomato">Tomato</a> so Merlin forks again and adds back in the stuff that Asus removed. So you keep the same UI and general functionality, just with more customisation.</li>
+<li><a href="https://github.com/RMerl/asuswrt-merlin/wiki/Installation">Installation was a doddle</a> and then I just had to whip up a simple script a few lines long to call out to DNSMadeEasy whenever the router&rsquo;s IP address changed (see below).</li>
+<li>I then temporarily port forwarded 443 on the router to the Pi Zero and started Caddy with this incredibly complicated config file :-)</li>
+</ul>
+
+<p>Caddyfile:</p>
+
+<pre><code>file
+https://www.conorsdomain.com
+proxy / localhost:9998
+</code></pre>
+
+<ul>
+<li>Caddy saw that I wanted https, so it connected to Let&rsquo;s Encrypt and a minute later I had everything necessary for my secure web-server.</li>
+</ul>
+
+<p><em>Jaw-drop time</em></p>
+
+<ul>
+<li>Once the registration was done I could remove the 443 port forward and switch to a non-standard port</li>
+<li>I went over to Twilio and provided the new <a href="https://conorsdomain.com:9999">https://conorsdomain.com:9999</a> as the end-point to call. No joy. But a quick support ticket later and they made a change over the weekend(!) to fix it. Boom, everything working fine.</li>
+<li>With the terrible weather, I didn&rsquo;t have to wait long for the first non-test SMS to appear. A couple of seconds later it was on Twitter:</li>
+</ul>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/flood_alert.jpg" alt="Bandon Flood Warning" /></p>
+
+<h2 id="alternatives:e19abcb8e6b6d101fc1a316dfdf4aa74">Alternatives</h2>
+
+<ul>
+<li>Of course I could exclude Twilio from this entire flow and call the end-point directly from Tasker but SMS will often work when no data connection is available.</li>
+<li>Having said that, the connection to the phone is a big worry as we are in a poor signal area. But registering my UK Twilio number on the Flood Warning site didn&rsquo;t work (local warnings for local people) and I&rsquo;m not paying $6 a month for an Irish number.</li>
+<li>In theory I could take the scraped data from the site and generate my own alerts but the Council rightly overrides the default trigger levels on occasion to warn people of impending flooding.</li>
+</ul>
+
+<h2 id="go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest:e19abcb8e6b6d101fc1a316dfdf4aa74">Go Code (See for <a href="https://gist.github.com/conoro/f1a3f7c5b96e2b033119">https://gist.github.com/conoro/f1a3f7c5b96e2b033119</a> for latest)</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;encoding/json&quot;
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;net/url&quot;
+	&quot;os&quot;
+	&quot;strconv&quot;
+	&quot;strings&quot;
+	&quot;time&quot;
+
+	&quot;github.com/ChimeraCoder/anaconda&quot;
+)
+
+type Configuration struct {
+	ConsumerKey       string
+	ConsumerSecret    string
+	AccessToken       string
+	AccessTokenSecret string
+}
+
+func main() {
+	file, _ := os.Open(&quot;conf.json&quot;)
+	//file, _ := os.Open(&quot;conf-test.json&quot;)
+	decoder := json.NewDecoder(file)
+	configuration := Configuration{}
+	err := decoder.Decode(&amp;configuration)
+	if err != nil {
+		fmt.Println(&quot;config error:&quot;, err)
+	}
+	anaconda.SetConsumerKey(configuration.ConsumerKey)
+	anaconda.SetConsumerSecret(configuration.ConsumerSecret)
+	api := anaconda.NewTwitterApi(configuration.AccessToken, configuration.AccessTokenSecret)
+
+	http.HandleFunc(&quot;/&quot;, func(w http.ResponseWriter, r *http.Request) {
+		body := r.PostFormValue(&quot;Body&quot;)
+		log.Println(string(body))
+		if strings.Contains(body, &quot;Bandon FEWS&quot;) || strings.Contains(body, &quot;Met Eireann&quot;) {
+			fmt.Fprintf(w, &quot;Thanks for the update&quot;)
+
+			a := []rune(body)
+			if len(a) &lt;= 140 {
+				// Just post normal Tweet
+				result, err := api.PostTweet(body, nil)
+				if err != nil {
+					fmt.Println(err)
+				} else {
+					fmt.Println(result)
+					fmt.Println(&quot;Tweet ID: &quot;, result.Id)
+				}
+			} else {
+				// have to split into a Tweetstorm
+				var originalTweetID int64
+				var subTweet string = &quot;&quot;
+				var tweetCount int64 = 0
+				tweetParams := url.Values{}
+				for i, r := range a {
+					subTweet = subTweet + string(r)
+					if i &gt; 0 &amp;&amp; (i+1)%137 == 0 {
+						tweetCount++
+						// Need to do normal first tweet but in_reply_to successive tweets
+						if tweetCount == 1 {
+							// Just Tweet and extract the ID from the response
+							result, err := api.PostTweet(&quot;1/ &quot;+subTweet, nil)
+							if err != nil {
+								fmt.Println(err)
+							} else {
+								fmt.Println(result)
+								originalTweetID = result.Id
+							}
+						} else {
+							// adding one second delay in Tweetstorm to prevent any throttling by Twitter
+							time.Sleep(time.Second)
+							// Tweet in reply to the first tweet by setting in_reply_to_status_id
+							// originalTweetID
+							tweetParams.Set(&quot;in_reply_to_status_id&quot;, strconv.FormatInt(originalTweetID, 10))
+							result, err := api.PostTweet(strconv.FormatInt(tweetCount, 10)+&quot;/ &quot;+subTweet, tweetParams)
+							if err != nil {
+								fmt.Println(err)
+							} else {
+								fmt.Println(result)
+							}
+						}
+						subTweet = &quot;&quot;
+					}
+					if i == len(a)-1 &amp;&amp; subTweet != &quot;&quot; {
+						// just Tweet whatever text is left at the end
+						time.Sleep(time.Second)
+						tweetCount++
+						// Tweet in reply to the first tweet by setting in_reply_to_status_id
+						// originalTweetID
+						tweetParams.Set(&quot;in_reply_to_status_id&quot;, strconv.FormatInt(originalTweetID, 10))
+						result, err := api.PostTweet(strconv.FormatInt(tweetCount, 10)+&quot;/ &quot;+subTweet, tweetParams)
+						if err != nil {
+							fmt.Println(err)
+						} else {
+							fmt.Println(result)
+						}
+					}
+				}
+			}
+		}
+	})
+
+	log.Fatal(http.ListenAndServe(&quot;:8333&quot;, nil))
+
+}
+</code></pre>
+
+<h2 id="asus-dnsmadeeasy-update:e19abcb8e6b6d101fc1a316dfdf4aa74">Asus DNSMadeEasy Update</h2>
+
+<p>This is smidge fiddly. <a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-DDNS">More details here</a>. Once you have Merlin installed and you are happily connected to the internet again (you did remember to write down all the settings for your ISP didn&rsquo;t you?). You need to:</p>
+
+<ul>
+<li>Go to Administration -&gt; System</li>
+<li>Enable SSH, which also obviously gives you SFTP</li>
+<li>Toggle &ldquo;Format JFFS partition at next boot&rdquo; to Yes</li>
+<li>Toggle &ldquo;Enable JFFS custom scripts and configs&rdquo; to Yes</li>
+<li>Click Apply</li>
+<li>SSH on to the box with your router&rsquo;s Admin username and password</li>
+<li>Create a file called /jffs/scripts/ddns-start</li>
+<li>Make it executable (chmod 755 ddns-start)</li>
+<li>Copy these contents into ddns-start</li>
+</ul>
+
+<pre><code class="language-bash">#!/bin/sh
+USERNAME=&quot;yourDNSMadeEasyUsername&quot;
+PASSWORD=&quot;TheSpecificPasswordYouSetOnThatDNSRecord&quot;
+IP=${1}
+ID=&quot;TheSpecificRecordIDAssignedbyDNSMaseEasy&quot;
+
+curl -k &quot;https://cp.dnsmadeeasy.com/servlet/updateip?username=${USERNAME}&amp;password=${PASSWORD}&amp;id=${ID}&amp;ip=${IP}&quot; &gt;/dev/null
+
+if [ $? -eq 0 ]; then
+    /sbin/ddns_custom_updated 1
+else
+    /sbin/ddns_custom_updated 0
+fi
+
+</code></pre>
+
+<ul>
+<li>Do a reboot for good measure and you should see DDNS displaying success on the main dashboard</li>
+</ul>
+
+                    </div>
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'crossdominant';
+    var disqus_identifier = 'http:\/\/conoroneill.net\/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router\/';
+    var disqus_title = 'Auto-tweeting the #Bandon floods with Twilio, Tasker, Let\x27s Encrypt, a #PiZero, golang, Caddy and an Asus router';
+    var disqus_url = 'http:\/\/conoroneill.net\/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="http://hugo.spf13.com/" target="_blank">hugo</a>. Copyright Conor O'Neill 2010</li>
+        </ul>
+    </div>
+</div>
+<script src="http://conoroneill.net/js/all.min.js"></script>
+        </div>
+    </div>
+</div>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88610-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

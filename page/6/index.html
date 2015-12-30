@@ -81,6 +81,48 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">01 Feb 2014, 16:13</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/run-the-espruino-js-interpreter-on-windows/" class="post-title">Run the @espruino JS interpreter on Windows</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Run the @espruino JS interpreter on Windows&rdquo;</p>
+
+<p>I just got my Kickstarter <a href="http://www.espruino.com/">Espruino</a> yesterday. It&rsquo;s one of those projects that just makes me smile. A tiny board with an ST ARM MCU running a special JavaScript interpreter that can do all the stuff with hardware you would normally associate with C/C++/Assembler/Wiring.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino_board.jpg"><img class="aligncenter size-full wp-image-1261" alt="espruino_board" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino_board.jpg" width="640" height="322" /></a></p>
+
+<p>I&rsquo;ve only just got started playing with it and I swear it feels like my first days using a ZX Spectrum. The instant feedback of interpreted JS in a console feels exactly like typing BASIC into the Speccy (blog post coming on my Speccy and the Interface1bis soon).</p>
+
+<p>The Espruino Chrome App is pretty basic but I was really excited to see that it has a Scratch-style blocks-editor for generating JS. I love the whole JavaScript/Node-everywhere movement but all those damned brackets/braces are a real hurdle for anyone trying to learn programming.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino.jpg"><img class="aligncenter size-large wp-image-1262" alt="espruino" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/espruino-1024x601.jpg" width="584" height="342" /></a></p>
+
+<p>The Espruino interpreter itself can be compiled for a variety of ST Eval boards, the Raspberry Pi and most boxes that run Linux. I&rsquo;d love to get it running on my DigiX too since its processor specs are almost identical to the Espruino. But it&rsquo;s been over 14 years since I played with BSPs and cross-compilers and I&rsquo;m not sure I have the chops any more.</p>
+
+<p>Gordon, the man responsible for it all, mentioned in the forums that it should compile on Windows using Cygwin. Speaking of 14 years ago, it&rsquo;s about that long since I used Cygwin too. I spent so many hours in the late 90s building XEmacs for Cygwin on my PC.</p>
+
+<p>And whaddya know, it works! It took forever to download all the necessary bits of Cygwin on our crappy DSL but compilation of Espruino took about 30 seconds with no errors. Here&rsquo;s some code in action which grabs the contents of the Espruino web-site home page:</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/http.jpg"><img class="aligncenter size-full wp-image-1260" alt="http" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/02/http.jpg" width="675" height="339" /></a></p>
+
+<p>So if your curiosity is piqued by this very cool project, you can play with the core interpreter on Windows whilst you wait for your board to arrive. I was chuffed to see that the http functionality works fine.</p>
+
+<p>I built it on Windows 7 64-bit so I&rsquo;ve no idea if it runs on 32-bit Windows. You should just need the <a href="https://dl.dropboxusercontent.com/u/1535134/espruino_cygwin/espruino.exe">EXE here</a> and the <a href="https://dl.dropboxusercontent.com/u/1535134/espruino_cygwin/cygwin1.dll">Cygwin1.dll here</a>to try it out. Let me know how you get on. I&rsquo;m not 100% sure yet if you need any more of the Cygwin DLLs to access other functionality.</p>
+
+<p>&nbsp;</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">26 Jan 2014, 19:43</h1>
                 <section class="post">
                     <header class="post-header">
@@ -523,32 +565,6 @@ My Arduino sketch and library are available <a href="https://github.com/conoro/b
 <p>Of course yesterday I discovered <a href="https://www.sparkfun.com/products/10823">a similar Roving Networks product</a>variant that does exactly what I want and was released 2 years ago! And it comes with full configurable HID support unlike the still fixed-function HID of the Bluefruit (v1.7 next week?). The RN42 is also available <a href="http://embeddedwirelesssolutions.com/rn-42_HID_breakout_board">here on a breakout board</a>. Then I found that HID is now built-in by default to the RN42 and I can get it for <a href="http://ie.farnell.com/microchip/rn42n-i-rm/module-bluetooth-class-2/dp/2143324">16.50 in Farnell in Ireland</a>. Sure it&rsquo;ll need some soldering etc, but I can live with that.</p>
 
 <p>For me, two of the brightest lights of the Maker movement have been Sparkfun and Adafruit. After this experience, one of those LEDs is just a little dimmer.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">03 Nov 2013, 17:33</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/adding-a-realtime-clock-to-the-raspberry-pi-and-the-sweetbox-ii/" class="post-title">Adding a realtime clock to the Raspberry Pi and the Sweetbox II</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Adding a realtime clock to the Raspberry Pi and the Sweetbox II&rdquo;</p>
-
-<p>I got one of these <a href="http://dx.com/p/meeeno-ds1307-real-time-clock-brick-module-for-arduino-yellow-works-with-official-arduino-boards-213941">$3 RTC modules</a>a few months back and I finally set it up this weekend. It simply has a battery-backed clock so when your Raspberry Pi (or Arduino) boots up, it has the correct time immediately. For a network-connected Pi, it&rsquo;s not really necessary as you can have the time updated regularly via NTP but not all Pis spend their life connected to the network. So if you are working away locally on your Pi, your files will no longer look like they were all created in 1970. This <a href="http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/overview">Adafruit tutorial</a> explains exactly how to do it. You could even get <a href="http://www.adafruit.com/products/264">their RTC module</a> instead.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc1.jpg"><img class="aligncenter size-full wp-image-1199" alt="rtc1" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc1.jpg" width="1024" height="768" /></a></p>
-
-<p>On a totally unrelated note, I finally got my <a href="http://www.kickstarter.com/projects/677951563/sweetbox-ii-the-perfect-case-for-your-raspberry-pi/">Sweetbox II</a> case for the Raspberry Pi which I backed on Kickstarter. It&rsquo;s a minimalist low-profile case that comes with cute heatsinks and a cut-out for the header pins. I&rsquo;m not a huge fan of the semi-translucent look of the plastic but I do love how little space it takes up. And unlike many cases, you don&rsquo;t have to take it apart to plug/unplug the ribbon cable. And finally, it&rsquo;s nice to have more good tech coming out of Greece.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc2.jpg"><img class="aligncenter size-full wp-image-1200" alt="rtc2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/11/rtc2.jpg" width="1024" height="768" /></a></p>
 
                     </div>
                 </section>
