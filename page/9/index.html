@@ -81,6 +81,52 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">19 May 2013, 15:04</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/remote-control-implementation-for-an-rc-car-part-1/" class="post-title">Remote Control implementation for an RC Car - Part 1</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Remote Control implementation for an RC Car - Part 1&rdquo;</p>
+
+<p>There are many ways you can add remote control to a project. Off the shelf modules; Bluetooth; 2.4GHz NRF24L01+ transceivers; 433MHz/434Mhz modules or even Infra-red.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control.jpg"><img class="aligncenter size-large wp-image-1059" alt="remote_control" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control-1024x576.jpg" width="584" height="328" /></a></p>
+
+<p>My plan with <a href="http://conoroneill.net/progress-so-far-with-a-kids-e21-self-assemble-remote-control-car/">our ZL-4 el-cheapo RC</a> car was to use an <a href="http://www.elecfreaks.com/1999.html">Elecfreaks Joystick Shield</a>, an Arduino board and the<a href="http://www.ebay.ie/itm/1X-NRF24L01-2-4GHz-Antenna-Wireless-Transceiver-Module-For-Microcontroller-WST-/271133536748?ssPageName=ADME:L:OC:IE:3160#ht_5792wt_1385">NRF24L01+</a> modules mainly because [a] the joystick shield has a connector for one and [b] I want to use them in another potentiallycommercialproject and thought it would be a good learning exercise. They are also stunningly cheap at 1.26,includingshipping, for each transceiver.</p>
+
+<p>Unfortunately Idiscovered that the Adafruit Motor Shield on the RC car uses up a ton of the pins on the Arduino and makes it very hard to add theNRF24L01+. In particular it uses the SPI pins which you need to talk to theNRF24L01+.</p>
+
+<p>So I went with Plan B which was the 433Mhz modules. These things are fab. They work in the unregulated ISM band like most weather stations etc and, like the NRF24L01+,are gob-smackingly cheap - 1.97 for <a href="http://dx.com/p/diy-433mhz-wireless-receiving-module-for-arduino-green-149252?Utm_rid=73941134&Utm_source=affiliate">the receiver</a> and 2.14 for <a href="http://dx.com/p/433mhz-wireless-transmitter-module-superregeneration-for-arduino-green-149254?Utm_rid=73941134&Utm_source=affiliate">the transmitter</a>. When I see people creating really simple projects but with 2x 20+ Zigbee modules, I just don&rsquo;t understand it.</p>
+
+<p>The 433MHz modules main advantage relative to theNRF24L01+ is that they can cover longer distances with a properly setup aerial. The main disadvantages are that they generally need that aerial, they have a very low bit-rate and you have to deal with most of the error correction etc yourself.</p>
+
+<p>What transforms these modules into something pretty spectacular is the <a href="http://www.airspayce.com/mikem/arduino/">VirtualWire</a> library for Arduino. This takes care of all the low-level transmit/receive code and you have to do little more than the equivalent of a print statement. Just think about this. You can send any information you like over hundreds of feet using 4 worth of electronics by simply calling:
+<pre><code class="language-bash">vw_send((uint8_t *)msg, strlen(msg));</code></pre>
+No Wifi or SMS needed! Of course this is a broadcast message and anyone can pick it up but who cares.</p>
+
+<p>The one thing we do have to figure out is what happens when multiple devices are broadcasting locally. Will they interfere with each other? I know VirtualWire has CRC checking but that&rsquo;s not much use if every message is corrupt.</p>
+
+<p>For the remote control I have created an extremely simplistic &ldquo;protocol&rdquo;. The transmitter sends out the following every 200ms:
+<pre><code class="language-bash">XnnnnYnnnnAnBnCnDn</code></pre>
+Where Xnnnn is the X-axis of the joystick from 0 to 1024, Ynnnn is the Y-axis of the joystick from 0 to 1024, An is button-A 0 or 1, Bn is button-B 0 or 1, Cn is button-C 0 or 1 and Dn is button-D 0 or 1.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2.jpg"><img class="aligncenter size-large wp-image-1063" alt="remote_control2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/remote_control2-1024x748.jpg" width="584" height="426" /></a></p>
+
+<p>We are now successfully receiving and interpreting those messages on the RC car and doing forward/reverse. The bit we have to figure out is turning, as the car doesn&rsquo;t have any steering.</p>
+
+<p>More updates in a few days when we crack that nut. And I&rsquo;ll obviously have to add some sort of &ldquo;addressing&rdquo; for the scenario where more that one RC car is being controlled in the house.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">16 May 2013, 20:35</h1>
                 <section class="post">
                     <header class="post-header">
@@ -492,38 +538,6 @@ sudo dpkg -i *.deb
 <p><img class="aligncenter size-large wp-image-1000" style="color: #333333; font-style: normal; line-height: 24px;" alt="nano2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/nano2-1024x768.jpg" width="584" height="438" /></p>
 
 <p>Of course it doesn&rsquo;t really make sense to have low-powered nodes being read by anyone. As several people pointed out on Sunday, a DDoS (heck, even a DoS) attack would be ridiculously easy. The nodes should either be reporting to central server(s) or queried on a regular basis by a small number of systems. That&rsquo;s phase 2 for my little side project and it&rsquo;s a bit more complex than temperature. More updates in a few weeks.</p>
-
-<p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">21 Apr 2013, 15:48</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/what-the-inside-of-an-e88-android-tablet-looks-like/" class="post-title">What the inside of an 88 Android Tablet looks like</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;What the inside of an \u008088 Android Tablet looks like&rdquo;</p>
-
-<p>My daughter&rsquo;s Eken T02 is still going strong after nearly a year but it still has the same two problems as ever. [a] the accuracy of the touch screen is awful and [b] it barely lasts 45mins on battery.</p>
-
-<p>I don&rsquo;t think I can do anything about the first problem but I decided last week to sort out the second one. Particularly considering Scribblenauts is now fiiiiiiinally available on Android (currently requires a US VPN, Market Enabler, Amazon App Store and a US virtual credit card. Slick ;-p )</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130421_151828.jpg"><img class="aligncenter size-large wp-image-996" alt="IMG_20130421_151828" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130421_151828-1024x768.jpg" width="584" height="438" /></a></p>
-
-<p>I popped it open quite easily by removing 4 screws and a few plastic tabs. It&rsquo;s surprisingly neat inside but has a really weird smell!</p>
-
-<p>Obviously the batteries are garbage based on how long they last so I ordered <a href="http://www.ebay.com/itm/3-7V-3500mAh-lithium-Battery-Rechargeable-Polymer-Li-Po-For-Tablet-PC-B-3768112-/321105035375?ssPageName=ADME:L:OC:IE:3160">a replacement</a> on eBay. It&rsquo;s a &ldquo;3500mAh&rdquo; unit with the usual proviso that Chinese mAh tend to be a bit different from the mAh the rest of the world measures in. It&rsquo;s also the usual China story where they&rsquo;ll arrive at some indeterminate point in the next few weeks. Should only take a minute to swap them. Fingers crossed it sorts the problem out.</p>
-
-<p>I&rsquo;ll let ye know how it goes.</p>
 
 <p>&nbsp;</p>
 

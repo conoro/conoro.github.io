@@ -81,6 +81,223 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">31 Dec 2015, 18:41</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/my-2015-christmas-turkey-oven-thermometer/" class="post-title">My 2015 Christmas turkey oven thermometer and clock</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>For the <a href="http://conoroneill.net/our-first-arduino-christmas-turkey/">third year</a> in a row I decided to build a new oven thermometer for the Christmas turkey, as all of the markings on our temperature knob have been gone for years. We also have one of those mechanical dial thermometers you place inside the oven but they are hard to read and get in the way. My last two attempts worked ok but I was concerned about accuracy. I also used a temperature probe in the meat for belt and braces. The setup was as follows:</p>
+
+<ul>
+<li><a href="https://www.pjrc.com/store/teensy31.html">Teensy 3.1</a> which has 16-bit (13-bit effective) ADCs rather than the usual Arduino 10-bit</li>
+<li>The same <a href="https://www.adafruit.com/products/1778">Adafruit AD8495</a> thermocouple amplifier as last year</li>
+<li>A new long, slightly more expensive K-type thermocouple</li>
+<li>A <a href="http://www.dx.com/p/produino-5v-voltage-boost-mobile-power-module-green-1a-282899">voltage-booster and battery charging module</a> from DX</li>
+<li>A dirt-cheap <a href="http://www.ebay.co.uk/sch/i.html?_nkw=ILI9341">ILI9341 TFT LCD</a> from eBay</li>
+<li><a href="http://www.dx.com/p/meeeno-ds1307-real-time-clock-brick-module-for-arduino-yellow-works-with-official-arduino-boards-213941">DS1307 Realtime Clock</a> from DX using an <a href="https://github.com/adafruit/RTClib">Adafruit library</a></li>
+<li>A small 3.7V Lipo battery</li>
+<li>Lego, as I didn&rsquo;t have enough time to design a 3D-printable case and last year&rsquo;s cardboard was just <a href="https://twitter.com/conoro/status/554986388861779968">too klassy</a></li>
+</ul>
+
+<p>The code is a mix of Adafruit, <a href="https://github.com/PaulStoffregen/ILI9341_t3">Paul Stoffregen</a> for the improved LCD code with lovely Magenta Comic Sans Font :-) and my own.</p>
+
+<p>I didn&rsquo;t bother with averaging the values but the jumpiness of the temperature compared to room temp or boiling water tells me our old oven is a disaster and needs replacing.</p>
+
+<p>And just like the previous two years, the turkey was dry despite <a href="http://www.seriouseats.com/2012/11/how-to-spatchcock-cook-turkey-thanksgiving-fast-easy-way-spatchcocked-slideshow.html">spatchcocking it</a>, <a href="http://www.seriouseats.com/2014/11/quick-and-dirty-guide-to-brining-turkey-chicken-thanksgiving.html">dry-brining it</a> and watching the temperature closely :-( Next year I&rsquo;m doing a boned and rolled one and I&rsquo;ve ordered a cheap but protected Chinese <a href="http://www.aliexpress.com/item/Generic-New-3-Meter-High-Temperature-100-1250-C-Thermocouple-K-Type-50mm-Probe-Sensors/32334218983.html">oven probe</a> and <a href="http://www.aliexpress.com/item/Brand-New-TM-902C-Black-K-Type-Digital-LCD-Temperature-Detector-Thermometer-Industrial-Thermodetector-Meter-Thermocouple/32220138975.html">temperature readout</a>.</p>
+
+<p>I really like the DX voltage booster. It enables you to connect a LiPo battery and a micro-USB power source. It then provides 5V on a standard USB socket. The power source can also charge the battery whilst powering the device. You can then remove the power source and the battery will power the device without interruption. It&rsquo;s almost perfect except for one stupid feature. You can&rsquo;t connect a battery to it to power a device without connecting (even momentarily) the power source (e.g. a phone charger). If it could do that then it&rsquo;d be pretty much at the same level as the Adafruit boost devices. I&rsquo;ve been unable to find any datasheets for it but ordered two more anyway.</p>
+
+<h2 id="prototype:711c6bef540d9f4341e884a7bd9c92f3">Prototype</h2>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer05.jpg" alt="Prototype" /></p>
+
+<h2 id="completed-board:711c6bef540d9f4341e884a7bd9c92f3">Completed Board</h2>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer02.jpg" alt="Completed board" /></p>
+
+<h2 id="lego-case:711c6bef540d9f4341e884a7bd9c92f3">Lego Case</h2>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer03.jpg" alt="Lego Case" /></p>
+
+<h2 id="side-view:711c6bef540d9f4341e884a7bd9c92f3">Side View</h2>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer04.jpg" alt="Side View" /></p>
+
+<h1 id="code-latest-always-on-gist-here-https-gist-github-com-conoro-2875556b7477e443ae0a:711c6bef540d9f4341e884a7bd9c92f3">Code (latest always <a href="https://gist.github.com/conoro/2875556b7477e443ae0a">on Gist here</a> )</h1>
+
+<pre><code class="language-c++">// Temperature from AD8495 K-type Thermocoule adapter and Datetime from DS1307 RTC. Displayed on ILI9341 LCD.
+//
+// MIT License (MIT)
+// Copyright (c) 2015 Conor O'Neill
+// Portions copyright Limor Fried/Ladyada for Adafruit Industries and others
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#include &lt;Wire.h&gt;
+#include &quot;RTClib.h&quot;
+
+#include &quot;SPI.h&quot;
+#include &quot;Adafruit_GFX.h&quot;
+#include &quot;ILI9341_t3.h&quot;
+#include &quot;font_ComicSansMSBold.h&quot;
+
+#if defined(__SAM3X8E__)
+    #undef __FlashStringHelper::F(string_literal)
+    #define F(string_literal) string_literal
+#endif
+
+// These are the pins used for the UNO and Teensy
+#define _sclk 13
+#define _miso 12
+#define _mosi 11
+#define _cs 10
+#define _dc 9
+#define _rst 8
+
+// Using software SPI is really not suggested, its incredibly slow
+//Adafruit_ILI9340 tft = Adafruit_ILI9340(_cs, _dc, _mosi, _sclk, _rst, _miso);
+// Use hardware SPI
+ILI9341_t3 tft = ILI9341_t3(_cs, _dc, _rst);
+
+RTC_DS1307 RTC;
+
+String dateOut=&quot;&quot;;
+String timeOut=&quot;&quot;;
+String datePrev=&quot;&quot;;
+String timePrev=&quot;&quot;;
+float temperature=0;
+float temperaturePrev=0;
+
+void setup () {
+    Serial.begin(57600);
+
+    tft.begin();  
+    tft.fillScreen(ILI9341_BLACK);
+
+    Wire.begin();
+    RTC.begin();
+
+    // following line sets the RTC to the date &amp; time this sketch was compiled
+    // Uncomment this once per power down of the RTC and flash it. Then re-comment-out and reflash
+    //RTC.adjust(DateTime(__DATE__, __TIME__));
+
+  if (! RTC.isrunning()) {
+    Serial.println(&quot;RTC is NOT running!&quot;);
+    // following line sets the RTC to the date &amp; time this sketch was compiled
+    //RTC.adjust(DateTime(__DATE__, __TIME__));
+  }
+
+}
+
+void loop () {
+
+    // Read temperature as analogue voltage from AD8495
+    analogReadResolution(13);  
+    int raw = analogRead(A7);
+    float Vout = raw * (3.3 / 8191.0);
+    temperature = (Vout - 1.25)/0.005;
+
+    // Print Temperature to Serial console
+    Serial.println(temperature);
+
+    // Get current DateTime from DS1307 RTC
+    DateTime now = RTC.now();
+
+    // Print it to Serial Console
+    Serial.print(now.year(), DEC);
+    Serial.print('/');
+    Serial.print(now.month(), DEC);
+    Serial.print('/');
+    Serial.print(now.day(), DEC);
+    Serial.print(' ');
+    Serial.print(now.hour(), DEC);
+    Serial.print(':');
+    Serial.print(now.minute(), DEC);
+    Serial.print(':');
+    Serial.print(now.second(), DEC);
+
+    // Generate nicely formatted datetime string for ILI9341
+    dateOut=&quot;&quot;;
+    timeOut=&quot;&quot;;
+    if (now.hour() &lt; 10){
+        timeOut += &quot;0&quot;;
+    }
+    timeOut += now.hour();
+    timeOut += ':';
+    if (now.minute() &lt; 10){
+        timeOut += &quot;0&quot;;
+    }
+    timeOut += now.minute();
+    timeOut += ':';
+    if (now.second() &lt; 10){
+        timeOut += &quot;0&quot;;
+    }
+    timeOut += now.second();
+    Serial.println();
+    if (now.day() &lt; 10){
+        dateOut += &quot;0&quot;;
+    }
+    dateOut += now.day();
+    dateOut += '/';
+    if (now.month() &lt; 10){
+        dateOut += &quot;0&quot;;
+    }
+    dateOut += now.month();
+    dateOut += '/';
+    dateOut += now.year();
+
+    // Print Temperature and Datetime to ILI9341 LCD
+    unsigned long start = micros();
+    tft.setCursor(0, 0);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.setFont(ComicSansMS_24_Bold);
+    tft.println(&quot;Temperature:&quot;);
+
+    // Wipe out previous text and write new text
+    tft.setCursor(0, 45);
+    tft.setTextColor(ILI9341_BLACK);
+    tft.println(temperaturePrev);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.println(temperature);
+    temperaturePrev = temperature;
+
+    // Wipe out previous text and write new text
+    tft.setCursor(0, 100);
+    tft.setTextColor(ILI9341_BLACK);
+    tft.println(datePrev);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.println(dateOut);
+    datePrev = dateOut;
+
+    // Wipe out previous text and write new text
+    tft.setCursor(0, 145);
+    tft.setTextColor(ILI9341_BLACK);
+    tft.println(timePrev);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.println(timeOut);
+    timePrev = timeOut;
+
+    delay(1000);
+}
+</code></pre>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">30 Dec 2015, 17:15</h1>
                 <section class="post">
                     <header class="post-header">
@@ -1127,32 +1344,6 @@ socket.on(&quot;message&quot;, function (message) {
 // Connect to the server instance.
 socket.connect('tcp://127.0.0.1:9998');  
 </code></pre>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">23 Aug 2015, 14:42</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/" class="post-title">TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>We had friends over from the US last weekend and their kids loved my <a href="http://printrbot.com/project/simple-makers/">Printrbot 3D printer</a>. They had learned <a href="https://www.tinkercad.com/">Tinkercad</a> in school so that&rsquo;s what they used to create things so they could print them out. They are now hounding their parents for a printer. Oops :-) But I noticed a &ldquo;Download to Minecraft&rdquo; option in Tinkercad and finally just had a chance to try it out. Wow!</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker02b.jpg" alt="In Tinkercad" /></p>
-
-<p><a href="http://blog.tinkercad.com/2013/08/15/tinkercraft/">It&rsquo;s incredibly easy</a>. Take any model from Tinkercad and pick the Minecraft option. You may have to tweak the sizing when you are doing it seriously. Then install the <a href="http://www.mcedit.net/downloads.html">MCEdit Minecraft editor</a> and import the file into one of your worlds. Then load up Minecraft and thar she blows.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker01b.jpg" alt="In Minecraft" /></p>
-
-<p>I totally love the intersection of 3D design, 3D printing and Minecraft - the real and the virtual coming together. The younger kids are gonna be psyched when I show em!</p>
 
                     </div>
                 </section>

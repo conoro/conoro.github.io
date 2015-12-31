@@ -81,6 +81,46 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">01 Jul 2012, 18:56</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/using-your-media-player-tablet-or-raspberry-pi-on-a-hotel-tv/" class="post-title">Using your Media Player, Tablet or Raspberry Pi on a Hotel TV</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Using your Media Player, Tablet or Raspberry Pi on a Hotel TV&rdquo;</p>
+
+<p>One thing that has driven me mad for the past several years is hotels making it hard to connect your gear to their TVs. Older TVs are usually easier and have a SCART at the back. LCDs bolted into a wall-unit tend to be the worst.</p>
+
+<p>I usually travel with a media player, a variety of cables and a universal remote control. Most of the time I can get something working. I&rsquo;ve only been beaten once by a recessed LCD where I was very tempted to take my leatherman tool to the entire wall unit to disassemble it. But I managed to stop myself.</p>
+
+<p>Last week I thought I was stymied again. It took me a good 15 mins of my arm up the back of the LCD to find a HDMI socket but I finally did. However I couldn&rsquo;t get the TV to switch to the AV ports no matter what I did on my or their remote.</p>
+
+<p>The culprit is that Hotel TV system. You know the one, with the welcome video and the &ldquo;premium&rdquo; channels. It locks the TV down so you can only see what they want you to see. Very frustrating.</p>
+
+<p>But I do hate to be beaten so I did a bit of googling and hurrah, <a href="http://www.rownet.co.uk/hacking-philips-hotel-televisions/">it&rsquo;s a doddle to work around</a>. This should work for any Philips Hotel TV setup and possibly others.
+<ol>
+    <li>Connect your media player, Android Tablet with HDMI-out or Raspberry Pi to the TV</li>
+    <li>Go to a high numbered channel, ideally one that is used for nothing</li>
+    <li>Quickly type <strong>3 1 9 7 5 3 mute</strong> on the TV remote and you&rsquo;ll get access to a secret admin menu.</li>
+    <li>Choose Program Install and then cycle through the inputs until you see the expected screen of your connected device</li>
+    <li>Exit out and your&rsquo;re done!</li>
+</ol>
+To avoid annoying the hotel, you should do the decent thing and re-run the procedure above just before you leave and change the input back to tuner (or whatever it was set to originally).</p>
+
+<p>I smugly used my Raspberry Pi running the <a href="http://www.raspbmc.com/">Raspbmc distribution</a> to play a variety of videos in my hotel room last week using XBMC.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/2012-06-26-18.42.21.png"><img class="size-full wp-image-776 aligncenter" title="2012-06-26 18.42.21" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/07/2012-06-26-18.42.21.png" alt="" width="800" height="600" /></a></p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">30 Jun 2012, 20:23</h1>
                 <section class="post">
                     <header class="post-header">
@@ -321,46 +361,6 @@ Realtime it ain&rsquo;t! But it&rsquo;s a river so that speed of reporting shoul
 <p><a href="http://5thavefrogger.com/">Fan-bloody-tastic idea</a>. My only disappointment is that you are not controlling real robotic squishy frogs but I guess that would be illegal. And a bit too close to Ender&rsquo;s Game.</p>
 
 <p><iframe src="http://player.vimeo.com/video/40653482?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/40653482">5th Ave Frogger</a> from <a href="http://vimeo.com/workvideos">Tyler DeAngelo</a> on <a href="http://vimeo.com">Vimeo</a>.</p></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">10 Jun 2012, 20:33</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/two-tutorials-later-and-the-kids-are-liking-the-arduino-a-lot/" class="post-title">Two tutorials later and the kids are liking the Arduino a lot</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Two tutorials later and the kids are liking the Arduino a lot&rdquo;</p>
-
-<p>I sat down with 8 y/o daughter and 10 y/o son this afternoon to try out our <a href="http://www.seeedstudio.com/depot/ardx-the-starter-kit-for-arduino-p-1153.html?cPath=138">ARDX starter kit</a> for <a href="http://arduino.cc/">Arduino</a>. The first tutorial is a simple single LED which you flash on/off in software. But I was horrified to find myself stumped!</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/ardx01.jpg"><img class="alignnone size-full wp-image-756" title="ardx01" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/ardx01.jpg" alt="" width="800" height="600" /></a></p>
-
-<p>Yes, I may have a Masters in Electronic Engineering from UCD but, as anyone who did Electronics there prior to the mid-90s knows, a certain lecturer ensured that we all left completely clueless in basic circuit cop-on.</p>
-
-<p>The ARDX kit on the surface has a lovely introductory booklet but it really misses the mark on practical instructions. So they tell you what every component does which is good but nowhere does it explain how the holes in a breadboard are connected. Are they long columns of commonality or short rows? Do the power lines go from top to bottom or only in small blocks? Kind of important information!</p>
-
-<p>Add to that a completely indecipheral diagram for where the components should go plus several connections which were totally unnecessary and I ended up totally flustered with the two kids getting bored.</p>
-
-<p>Finally I threw away the instructions, thought about it for a second and realised it was dead easy. Some trial/error figured out the breadboard layout and hurrah, a blinking LED! We played a bit with on/off timings and we were immediately ready for more.</p>
-
-<p>This time we did 8 LEDs which worked right first time and we loved the default on/off pattern. One thing we realised was that a magnifying glass is a big help when trying to see the individual breadboard holes.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/ardx02.jpg"><img class="alignnone size-full wp-image-757" title="ardx02" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/06/ardx02.jpg" alt="" width="800" height="600" /></a></p>
-
-<p>And that&rsquo;s as far as we got. They both want to try some more interesting LED patterns and then move on to the motors, servos and sensors. The long term plan is to build something &ldquo;robotic&rdquo;.</p>
-
-<p>More on that next weekend.</p>
-
-<p>Then of course I found this site called <a href="http://diydrones.com/">DIYDrones</a> about UAVs&hellip;&hellip;&hellip;</p>
 
                     </div>
                 </section>

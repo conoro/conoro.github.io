@@ -6,8 +6,217 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Dec 2015 17:15:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2015 18:41:12 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My 2015 Christmas turkey oven thermometer and clock</title>
+      <link>http://conoroneill.net/my-2015-christmas-turkey-oven-thermometer/</link>
+      <pubDate>Thu, 31 Dec 2015 18:41:12 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/my-2015-christmas-turkey-oven-thermometer/</guid>
+      <description>
+
+&lt;p&gt;For the &lt;a href=&#34;http://conoroneill.net/our-first-arduino-christmas-turkey/&#34;&gt;third year&lt;/a&gt; in a row I decided to build a new oven thermometer for the Christmas turkey, as all of the markings on our temperature knob have been gone for years. We also have one of those mechanical dial thermometers you place inside the oven but they are hard to read and get in the way. My last two attempts worked ok but I was concerned about accuracy. I also used a temperature probe in the meat for belt and braces. The setup was as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pjrc.com/store/teensy31.html&#34;&gt;Teensy 3.1&lt;/a&gt; which has 16-bit (13-bit effective) ADCs rather than the usual Arduino 10-bit&lt;/li&gt;
+&lt;li&gt;The same &lt;a href=&#34;https://www.adafruit.com/products/1778&#34;&gt;Adafruit AD8495&lt;/a&gt; thermocouple amplifier as last year&lt;/li&gt;
+&lt;li&gt;A new long, slightly more expensive K-type thermocouple&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;http://www.dx.com/p/produino-5v-voltage-boost-mobile-power-module-green-1a-282899&#34;&gt;voltage-booster and battery charging module&lt;/a&gt; from DX&lt;/li&gt;
+&lt;li&gt;A dirt-cheap &lt;a href=&#34;http://www.ebay.co.uk/sch/i.html?_nkw=ILI9341&#34;&gt;ILI9341 TFT LCD&lt;/a&gt; from eBay&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dx.com/p/meeeno-ds1307-real-time-clock-brick-module-for-arduino-yellow-works-with-official-arduino-boards-213941&#34;&gt;DS1307 Realtime Clock&lt;/a&gt; from DX using an &lt;a href=&#34;https://github.com/adafruit/RTClib&#34;&gt;Adafruit library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A small 3.7V Lipo battery&lt;/li&gt;
+&lt;li&gt;Lego, as I didn&amp;rsquo;t have enough time to design a 3D-printable case and last year&amp;rsquo;s cardboard was just &lt;a href=&#34;https://twitter.com/conoro/status/554986388861779968&#34;&gt;too klassy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The code is a mix of Adafruit, &lt;a href=&#34;https://github.com/PaulStoffregen/ILI9341_t3&#34;&gt;Paul Stoffregen&lt;/a&gt; for the improved LCD code with lovely Magenta Comic Sans Font :-) and my own.&lt;/p&gt;
+
+&lt;p&gt;I didn&amp;rsquo;t bother with averaging the values but the jumpiness of the temperature compared to room temp or boiling water tells me our old oven is a disaster and needs replacing.&lt;/p&gt;
+
+&lt;p&gt;And just like the previous two years, the turkey was dry despite &lt;a href=&#34;http://www.seriouseats.com/2012/11/how-to-spatchcock-cook-turkey-thanksgiving-fast-easy-way-spatchcocked-slideshow.html&#34;&gt;spatchcocking it&lt;/a&gt;, &lt;a href=&#34;http://www.seriouseats.com/2014/11/quick-and-dirty-guide-to-brining-turkey-chicken-thanksgiving.html&#34;&gt;dry-brining it&lt;/a&gt; and watching the temperature closely :-( Next year I&amp;rsquo;m doing a boned and rolled one and I&amp;rsquo;ve ordered a cheap but protected Chinese &lt;a href=&#34;http://www.aliexpress.com/item/Generic-New-3-Meter-High-Temperature-100-1250-C-Thermocouple-K-Type-50mm-Probe-Sensors/32334218983.html&#34;&gt;oven probe&lt;/a&gt; and &lt;a href=&#34;http://www.aliexpress.com/item/Brand-New-TM-902C-Black-K-Type-Digital-LCD-Temperature-Detector-Thermometer-Industrial-Thermodetector-Meter-Thermocouple/32220138975.html&#34;&gt;temperature readout&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I really like the DX voltage booster. It enables you to connect a LiPo battery and a micro-USB power source. It then provides 5V on a standard USB socket. The power source can also charge the battery whilst powering the device. You can then remove the power source and the battery will power the device without interruption. It&amp;rsquo;s almost perfect except for one stupid feature. You can&amp;rsquo;t connect a battery to it to power a device without connecting (even momentarily) the power source (e.g. a phone charger). If it could do that then it&amp;rsquo;d be pretty much at the same level as the Adafruit boost devices. I&amp;rsquo;ve been unable to find any datasheets for it but ordered two more anyway.&lt;/p&gt;
+
+&lt;h2 id=&#34;prototype:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Prototype&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer05.jpg&#34; alt=&#34;Prototype&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;completed-board:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Completed Board&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer02.jpg&#34; alt=&#34;Completed board&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;lego-case:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Lego Case&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer03.jpg&#34; alt=&#34;Lego Case&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;side-view:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Side View&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer04.jpg&#34; alt=&#34;Side View&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;code-latest-always-on-gist-here-https-gist-github-com-conoro-2875556b7477e443ae0a:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Code (latest always &lt;a href=&#34;https://gist.github.com/conoro/2875556b7477e443ae0a&#34;&gt;on Gist here&lt;/a&gt; )&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;// Temperature from AD8495 K-type Thermocoule adapter and Datetime from DS1307 RTC. Displayed on ILI9341 LCD.
+//
+// MIT License (MIT)
+// Copyright (c) 2015 Conor O&#39;Neill
+// Portions copyright Limor Fried/Ladyada for Adafruit Industries and others
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#include &amp;lt;Wire.h&amp;gt;
+#include &amp;quot;RTClib.h&amp;quot;
+
+#include &amp;quot;SPI.h&amp;quot;
+#include &amp;quot;Adafruit_GFX.h&amp;quot;
+#include &amp;quot;ILI9341_t3.h&amp;quot;
+#include &amp;quot;font_ComicSansMSBold.h&amp;quot;
+
+#if defined(__SAM3X8E__)
+    #undef __FlashStringHelper::F(string_literal)
+    #define F(string_literal) string_literal
+#endif
+
+// These are the pins used for the UNO and Teensy
+#define _sclk 13
+#define _miso 12
+#define _mosi 11
+#define _cs 10
+#define _dc 9
+#define _rst 8
+
+// Using software SPI is really not suggested, its incredibly slow
+//Adafruit_ILI9340 tft = Adafruit_ILI9340(_cs, _dc, _mosi, _sclk, _rst, _miso);
+// Use hardware SPI
+ILI9341_t3 tft = ILI9341_t3(_cs, _dc, _rst);
+
+RTC_DS1307 RTC;
+
+String dateOut=&amp;quot;&amp;quot;;
+String timeOut=&amp;quot;&amp;quot;;
+String datePrev=&amp;quot;&amp;quot;;
+String timePrev=&amp;quot;&amp;quot;;
+float temperature=0;
+float temperaturePrev=0;
+
+void setup () {
+    Serial.begin(57600);
+
+    tft.begin();  
+    tft.fillScreen(ILI9341_BLACK);
+
+    Wire.begin();
+    RTC.begin();
+
+    // following line sets the RTC to the date &amp;amp; time this sketch was compiled
+    // Uncomment this once per power down of the RTC and flash it. Then re-comment-out and reflash
+    //RTC.adjust(DateTime(__DATE__, __TIME__));
+
+  if (! RTC.isrunning()) {
+    Serial.println(&amp;quot;RTC is NOT running!&amp;quot;);
+    // following line sets the RTC to the date &amp;amp; time this sketch was compiled
+    //RTC.adjust(DateTime(__DATE__, __TIME__));
+  }
+
+}
+
+void loop () {
+
+    // Read temperature as analogue voltage from AD8495
+    analogReadResolution(13);  
+    int raw = analogRead(A7);
+    float Vout = raw * (3.3 / 8191.0);
+    temperature = (Vout - 1.25)/0.005;
+
+    // Print Temperature to Serial console
+    Serial.println(temperature);
+
+    // Get current DateTime from DS1307 RTC
+    DateTime now = RTC.now();
+
+    // Print it to Serial Console
+    Serial.print(now.year(), DEC);
+    Serial.print(&#39;/&#39;);
+    Serial.print(now.month(), DEC);
+    Serial.print(&#39;/&#39;);
+    Serial.print(now.day(), DEC);
+    Serial.print(&#39; &#39;);
+    Serial.print(now.hour(), DEC);
+    Serial.print(&#39;:&#39;);
+    Serial.print(now.minute(), DEC);
+    Serial.print(&#39;:&#39;);
+    Serial.print(now.second(), DEC);
+
+    // Generate nicely formatted datetime string for ILI9341
+    dateOut=&amp;quot;&amp;quot;;
+    timeOut=&amp;quot;&amp;quot;;
+    if (now.hour() &amp;lt; 10){
+        timeOut += &amp;quot;0&amp;quot;;
+    }
+    timeOut += now.hour();
+    timeOut += &#39;:&#39;;
+    if (now.minute() &amp;lt; 10){
+        timeOut += &amp;quot;0&amp;quot;;
+    }
+    timeOut += now.minute();
+    timeOut += &#39;:&#39;;
+    if (now.second() &amp;lt; 10){
+        timeOut += &amp;quot;0&amp;quot;;
+    }
+    timeOut += now.second();
+    Serial.println();
+    if (now.day() &amp;lt; 10){
+        dateOut += &amp;quot;0&amp;quot;;
+    }
+    dateOut += now.day();
+    dateOut += &#39;/&#39;;
+    if (now.month() &amp;lt; 10){
+        dateOut += &amp;quot;0&amp;quot;;
+    }
+    dateOut += now.month();
+    dateOut += &#39;/&#39;;
+    dateOut += now.year();
+
+    // Print Temperature and Datetime to ILI9341 LCD
+    unsigned long start = micros();
+    tft.setCursor(0, 0);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.setFont(ComicSansMS_24_Bold);
+    tft.println(&amp;quot;Temperature:&amp;quot;);
+
+    // Wipe out previous text and write new text
+    tft.setCursor(0, 45);
+    tft.setTextColor(ILI9341_BLACK);
+    tft.println(temperaturePrev);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.println(temperature);
+    temperaturePrev = temperature;
+
+    // Wipe out previous text and write new text
+    tft.setCursor(0, 100);
+    tft.setTextColor(ILI9341_BLACK);
+    tft.println(datePrev);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.println(dateOut);
+    datePrev = dateOut;
+
+    // Wipe out previous text and write new text
+    tft.setCursor(0, 145);
+    tft.setTextColor(ILI9341_BLACK);
+    tft.println(timePrev);
+    tft.setTextColor(ILI9341_MAGENTA);
+    tft.println(timeOut);
+    timePrev = timeOut;
+
+    delay(1000);
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Auto-tweeting the #Bandon floods with Twilio, Tasker, Let&#39;s Encrypt, a #PiZero, golang, Caddy and an Asus router</title>
@@ -1232,22 +1441,6 @@ sudo cp -R * /usr/local/
 &lt;p&gt;I doff my cap to you Mr Nadella, this really is the new Microsoft.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/doff_cap.gif&#34; alt=&#34;Cap&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Node v0.12.2 for ARM V6/V7 including Raspberry Pi, Raspberry Pi 2 and ODROID-C1</title>
-      <link>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1/</link>
-      <pubDate>Fri, 03 Apr 2015 11:32:07 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1/</guid>
-      <description>&lt;p&gt;As with Node 0.12.0 and 0.12.1, there are no-precompiled ARM versions of &lt;a href=&#34;http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/&#34;&gt;0.12.2&lt;/a&gt; on the main site.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg&#34; alt=&#34;Node.js&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve built for &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-pi.tar.gz&#34;&gt;Pi 1 (ARM v6)&lt;/a&gt; and &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-v7.tar.gz&#34;&gt;ODROID-C1/Pi2 (ARM v7)&lt;/a&gt;. The latter was built on an &lt;a href=&#34;http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433&#34;&gt;ODROID-C1&lt;/a&gt; and it seems to run fine on the Pi 2 since both are ARM v7. It took 1 hr 15 mins to compile compared to 4+ hrs on the Pi 1.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;make test&amp;rdquo; on the ODROID gave the same results as on the Pi 1: [10:33|% 100|+ 784|-   4]: Done&lt;/p&gt;
 </description>
     </item>
     
