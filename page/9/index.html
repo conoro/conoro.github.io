@@ -81,6 +81,38 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">19 May 2013, 18:40</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/check-out-scratch-for-arduino-s4a-easier-electronics-for-kids/" class="post-title">Check out Scratch for Arduino S4A. Easier electronics for kids</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Check out Scratch for Arduino (S4A). Easier electronics for kids&rdquo;</p>
+
+<p>Whilst I&rsquo;m a huge fan of the Arduinoinitiative(is &ldquo;initiative&rdquo;the right word?), its programming language, Wiring, is still fundamentally C with most of its power but also most of its difficulty.</p>
+
+<p>C was the fifth language I learned after ZX Spectrum BASIC, Forth, Z80 assembler and Fortran (spit). I then spent the next 13 years using little else. But here I am still struggling to read a number from a sensor, add it to an ascii string, send it over a wireless link and then convert that back to a number at the far end. The wireless link bit is trivial using <a href="http://www.airspayce.com/mikem/arduino/">VirtualWire</a>, whilst the pain is all in the int/char/char */char []/String rubbish that would make most kids give up after an hour of hair pulling. And don&rsquo;t get me started on Null termination.</p>
+
+<p>That&rsquo;s why I&rsquo;m very positive about both <a href="http://www.modk.it/">Modkit</a> and <a href="http://seaside.citilab.eu/scratch">S4A</a>. Modkit is a pay-for in-browser Scratch-like environment and I&rsquo;m impressed with it, but I&rsquo;ll blog about that another day. Today is about S4A which came out of a <a href="http://citilab.eu/en/citilab/what-is">Citilab team</a> in Spain. It&rsquo;s a modified version of Scratch that can interact with Arduino boards and electronics connected to it. I tested using an Arduino UNO and it worked perfectly.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/s4a.jpg"><img class="aligncenter size-large wp-image-1057" alt="s4a" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/05/s4a-1024x635.jpg" width="584" height="362" /></a></p>
+
+<p>Getting started is very easy. You <a href="http://seaside.citilab.eu/S4AFirmware15.ino">download some code</a> for the Arduino which you put on the board using the usual <a href="http://arduino.cc/en/Main/Software">Arduino IDE</a>. Then you <a href="http://seaside.citilab.eu/S4A15.exe">install S4A</a>on your PC and run it.</p>
+
+<p>There are <a href="http://seaside.citilab.eu/s4a_basic_examples.zip">some basic examples</a>available to learn the core ideas.The examples all come with simple wiring diagrams which are appropriate for anyone with one of the UNO Starter Kits.</p>
+
+<p>It&rsquo;ll be interesting to see what we can do beyond simple button+led. I&rsquo;m trying out some of the servo stuff with Oisn this afternoon.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">19 May 2013, 15:04</h1>
                 <section class="post">
                     <header class="post-header">
@@ -504,40 +536,6 @@ sudo dpkg -i *.deb
 <p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130427_122738.jpg"><img class="aligncenter size-large wp-image-1006" alt="IMG_20130427_122738" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/IMG_20130427_122738-1024x768.jpg" width="584" height="438" /></a></p>
 
 <p>Hint: It&rsquo;s not crystal meth, washing soda, fish food or a new type of running shoe compound.</p>
-
-<p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">23 Apr 2013, 09:00</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/your-prayers-answered-old-chapel-temperature-server-now-online/" class="post-title">Your prayers answered, Old Chapel temperature server now online</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Your prayers answered, Old Chapel temperature server now online&rdquo;</p>
-
-<p>I must get 20 emails a day asking the same question: &ldquo;Conor, what temperature is it,<em>right now,</em> outside your office window?&ldquo;. Thankfully, after literally several minutes work, <a href="http://nano.conoroneill.com:9999/">you have your answer</a>.</p>
-
-<p>Courtesy of an <a href="http://dx.com/p/nano-v3-0-avr-atmega328-p-20au-module-board-usb-cable-for-arduino-118037">Arduino Nano</a>, <a href="http://www.ebay.com/itm/MIni-3-3v-ENC28J60-LAN-Ethernet-Network-Module-Shield-For-Arduino-MCU-AVR-51-LPC-/390511080956?ssPageName=ADME:L:OC:IE:3160">Ethernet adapter</a> and <a href="https://www.sparkfun.com/products/9418">Sparkfun temperature breakout board</a>, I can exclusively reveal the temperature is<a href="http://nano.conoroneill.com:9999/">12.44C and 54.39F</a> i.e. about 2C higher than reality.</p>
-
-<p>To get something more accurate I&rsquo;ll need to put the sensor away from the building, away from the ground, out of direct sunlight and with good air flow. Then I&rsquo;ll auto-post the values to <a href="http://openweathermap.org/">Open Weather Map</a> and <a href="https://cosm.com">COSM</a>.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2602.jpg"><img class="aligncenter size-large wp-image-1002" alt="DSCF2602" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/DSCF2602-1024x768.jpg" width="584" height="438" /></a></p>
-
-<p>I was genuinely surprised on Sunday at the level of interest in the Arduino web-server I mentioned. I think a mixture of the tiny cost and 8-bit nature of the whole thing intrigued people. It was also trivial to puttogetherwith <a href="https://github.com/jcw/ethercard">some sample code</a>. The only difficulty I&rsquo;ve found with Arduino in general is handling floating point values easily.</p>
-
-<p><img class="aligncenter size-large wp-image-1000" style="color: #333333; font-style: normal; line-height: 24px;" alt="nano2" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/04/nano2-1024x768.jpg" width="584" height="438" /></p>
-
-<p>Of course it doesn&rsquo;t really make sense to have low-powered nodes being read by anyone. As several people pointed out on Sunday, a DDoS (heck, even a DoS) attack would be ridiculously easy. The nodes should either be reporting to central server(s) or queried on a regular basis by a small number of systems. That&rsquo;s phase 2 for my little side project and it&rsquo;s a bit more complex than temperature. More updates in a few weeks.</p>
 
 <p>&nbsp;</p>
 

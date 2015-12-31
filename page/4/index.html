@@ -81,6 +81,26 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">30 Jun 2014, 18:34</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/im-going-to-miss-all-those-great-times-on-orkut/" class="post-title">I&#39;m going to miss all those great times on Orkut.</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>All two of them. In 2007. 7 years and 2 days ago.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/orkut.jpg" alt="Orkut" title="Google+ 1.0" /></p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">30 Jun 2014, 08:27</h1>
                 <section class="post">
                     <header class="post-header">
@@ -487,102 +507,6 @@ function getContentTypeByFile(fileName) {
                         <p>I&rsquo;ve been meaning to go to 3D Camp since it first started. It has been about a lot more than 3D for many years. I finally did it on Saturday and had an absolute blast. I met people I&rsquo;ve been tweeting at since 2007 and really got the full BarCamp mojo whilst I was there. James Corbett, the organiser, was kind enough to mention that I helped to organise the first <a href="http://en.wikipedia.org/wiki/BarCamp">BarCamp</a> in Ireland with <a href="http://walterhiggins.net/blog/">Walter</a> and <a href="http://www.mulley.net/">Damien</a> way back in 2006. My only regret is that instead of a BarCamp in every town and village of Ireland every weekend, we now only have 3D Camp. I hope people will realise again soon how important it is to have regular free unconferences with no one hawking their wares, just sharing knowledge, the love of technology and what it can do for people.</p>
 
 <p>OK, rant over, here&rsquo;s my deck. It&rsquo;s called <a href="http://conoroneill.net/3dcamp2014/">Hacking by Google Search - Building hardware with no electronics knowledge</a>. It&rsquo;s basically a summary of all the messing I&rsquo;ve been doing since mid-2012 when I got the electronics bug again. Anyone who follows this blog regularly will know most of it. But this one has animated gifs and some extra thoughts. It&rsquo;s also all HTML, done using a tool called <a href="http://lab.hakim.se/reveal-js/#/">reveal.js</a>. I really enoyed using this approach and it means it can be hosted on GitHub Pages, just like this blog. Well worth checking out for your own decks. You only need minimal HTML knowledge.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">13 Apr 2014, 10:48</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/pebble-controlled-electric-blanket-using-cloud-pebble-simply-js/" class="post-title">My Pebble controlled electric blanket using CloudPebble and Simply.js</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>Messing with hardware and software can be both a joy and incredibly infuriating. Yesterday I spent a few intermittent hours trying to get Arduino and Espruino communicating reliably over NRF24L01+ wireless transceivers. I only half succeeded. I followed this with some reading up on both <a href="https://cloudpebble.net">CloudPebble</a> and <a href="http://simplyjs.io/">Simply.js</a>. Literally 5 minutes later I had my first Pebble App installed on my watch and was remotely controlling the <a href="http://conoroneill.net/our-web-and-mobile-enabled-electric-blanket-using-electric-irelands-efergy-rc-sockets">electric blanket in our bed</a>.</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_blanket.jpg" alt="Bandon Blanket" title="Bandon Bed Button" /></p>
-
-<p>CloudPebble is a web-based IDE for building Pebble Apps. I believe it was started independently but is now run by <a href="http://getpebble.com">Pebble</a> themselves. Simply.js is a library/SDK for building Pebble Apps using only JavaScript. Pebble recently announced that CloudPebble now supports Simply.js and boy they weren&rsquo;t kidding. It&rsquo;s now childsplay to build Pebble Apps.</p>
-
-<p>This is how quickly I built the App:</p>
-
-<ul>
-<li>Create a free Pebble <a href="https://developer.getpebble.com/">Developer account</a></li>
-<li>Login to CloudPebble using your Pebble credentials</li>
-<li>Create a project and pick Simply.js as the type</li>
-<li>You automatically get the sample Simply.js App in the IDE</li>
-<li>Compile that and send it to your Watch. You of course need the Pebble App on your phone with developer options enabled. The Pebble App will also tell you your phone&rsquo;s IP address which CloudPebble may ask for.</li>
-<li>I&rsquo;ve found that I can&rsquo;t install from desktop but if I load the IDE URL on my phone I can do it from there. I assume this is because I&rsquo;m on house wifi and behind a firewall with a private IP.</li>
-</ul>
-
-<p>That first App looks like this:</p>
-
-<pre><code class="language-javascript">console.log('Simply.js demo!');
-
-simply.on('singleClick', function(e) {
-  console.log(util2.format('single clicked $button!', e));
-  simply.subtitle('Pressed ' + e.button + '!');
-});
-
-simply.on('longClick', function(e) {
-  console.log(util2.format('long clicked $button!', e));
-  simply.vibe();
-  simply.scrollable(e.button !== 'select');
-});
-
-simply.on('accelTap', function(e) {
-  console.log(util2.format('tapped accel axis $axis $direction!', e));
-  simply.subtitle('Tapped ' + (e.direction &gt; 0 ? '+' : '-') + e.axis + '!');
-});
-
-simply.setText({
-  title: 'Simply Demo!',
-  body: 'This is a demo. Press buttons or tap the watch!',
-}, true);
-</code></pre>
-
-<p>And it you read the Simply.js site, you can access URLs like this:</p>
-
-<pre><code class="language-javascript">ajax({ url: 'http://simplyjs.io' }, function(data){
-  var headline = data.match(/&lt;h1&gt;(.*?)&lt;\/h1&gt;/)[1];
-  simply.title(headline);
-});
-</code></pre>
-
-<p>Merge the two together and ta-daaaaa, the Bandon Bed Button Pebble App.</p>
-
-<pre><code class="language-javascript">console.log('Bandon Bed Button!');
-
-simply.on('singleClick', function(e) {
-  console.log(util2.format('single clicked $button!', e));
-  if (e.button == &quot;up&quot;){
-    ajax({ url: 'http://url-of-conors-thing-to-turn-on' }, function(data){
-      simply.subtitle('Turned on Blanket!');  
-    });    
-  } else if (e.button == &quot;down&quot;){
-    ajax({ url: 'http://url-of-conors-thing-to-turn-off' }, function(data){
-      simply.subtitle('Turned off Blanket!');  
-    });        
-  }
-});
-
-simply.setText({
-  title: 'Bandon Bed Button!',
-  body: 'Press Up to turn on the blanket. Press Down to turn off the blanket.',
-}, true);
-</code></pre>
-
-<p>Just in case the data route for this is not clear, here&rsquo;s what it looks like:</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/04/pebble_data_flow.png" alt="From Pebble to Switch" title="Pebble Data Flow" /></p>
-
-<p>I referred to this on Twitter last night as The Internet of Thangs. I&rsquo;m already sick of The Internet of Things. The IoT hype cycle is completely out of control before the first killer apps/products have even been created. Big Data has become Big Bullshit. I sincerely hope that the winner in this area hasn&rsquo;t even incorporated as a business yet. If we leave it to Google, Cisco, GE or any of the other behemoths, we&rsquo;ll end up with whatever they read in the last Suarez book rather than something that is a fundamental change in how we benefit from technology. The Pebble is never going to end up on everyone&rsquo;s wrists but by providing simple tools that any idiot like me can play with, it could be the seed that eventually leads to something huge. cf Altair, ZX Spectrum, BBC Micro, ARM, Arduino, Raspberry Pi.</p>
 
                     </div>
                 </section>

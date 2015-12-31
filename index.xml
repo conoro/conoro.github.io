@@ -6,8 +6,150 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2015 18:41:12 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2015 21:20:12 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What excited Conor in tech in 2015?</title>
+      <link>http://conoroneill.net/what-excited-me-in-tech-in-2015/</link>
+      <pubDate>Thu, 31 Dec 2015 21:20:12 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/what-excited-me-in-tech-in-2015/</guid>
+      <description>
+
+&lt;p&gt;A completely random braindump of stuff that got my juices flowing this year.&lt;/p&gt;
+
+&lt;h1 id=&#34;esp8266-1-wifi-modules:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;ESP8266 $1 Wifi modules&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;ve talked about &lt;a href=&#34;http://espressif.com/en/products/esp8266/&#34;&gt;the ESP8266&lt;/a&gt; constantly all year. A price-point of ~$1 in volume means that you can wifi-enable anything. Where previously you might have used one of the many low bandwidth &amp;ldquo;IoT&amp;rdquo; protocols internally and connected them to hub-device, now you can do Wifi and IP end-to-end. The only downside is high power consumption. I&amp;rsquo;d actually prefer if they did a low-power V2 instead of the bells-and-whistles ESP32.&lt;/p&gt;
+
+&lt;p&gt;The number of projects and initiatives that have grown up around ESP8266 is impossible to keep track of. Ones to check out are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://nodemcu.com/index_en.html&#34;&gt;NodeMCU&lt;/a&gt; - A really nice &lt;a href=&#34;http://www.electrodragon.com/product/nodemcu-lua-amica-r2-esp8266-wifi-board/&#34;&gt;dev board&lt;/a&gt; and Lua-based stack. This is what I used for most of this year but will be switching to [Espruino]()&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tve/EspruinoDocs/blob/master/boards/EspruinoESP8266.md&#34;&gt;Espruino on ESP8266&lt;/a&gt; - Still in heavy development but feels like a complete winner. JavaScript + Wifi for $4 is a killer solution.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.cesanta.com/esp8266-and-iot-smartjs-starter-guide&#34;&gt;Cesanta Smart.js&lt;/a&gt; - A Dublin-based company. Ex-Googlers I think. Similar to Espruino but without the community. Wish they&amp;rsquo;d join forces instead.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/esp8266/Arduino/&#34;&gt;Arduino&lt;/a&gt; - Yup, you can run a huge amount of Arduino code straight on the ESP8266. Really exciting to have this. Only drawback is that native AVR code and (I think) interrupt-driven code will not compile. Also far fewer IOs than normal Arduinos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;raspberry-pi-zero-and-the-mag-pi-issue-40:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Raspberry Pi Zero and The Mag Pi Issue 40&lt;/h1&gt;
+
+&lt;p&gt;A &lt;a href=&#34;https://www.raspberrypi.org/blog/raspberry-pi-zero/&#34;&gt;$5 computer&lt;/a&gt; that came free on the front of a magazine. Very little else needs to be said here. $5 for 1GHz, 512MB RAM, 1080p HDMI, Linux, Mathematica, Node-Red, Kodi and anything else you want to try. I still get the shivers thinking about it. Meanwhile the never-satisfieds will whine about $1 adapters or the fact that it needs electricity. I&amp;rsquo;m framing my first one.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/raspberry-pi-zero-_3510859b.jpg&#34; alt=&#34;PiZero&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;let-s-encrypt:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/h1&gt;
+
+&lt;p&gt;Anyone who has had to go through the rigmarole of setting up a https server knows what a pain it is. The certs are generally completely overpriced too. &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt; Certs are free and full automation is already available for Apache, NGINX, Caddy and more. Now you basically have no reason not to use https.&lt;/p&gt;
+
+&lt;p&gt;This is a massive industry segment disruption. I&amp;rsquo;m thrilled to see it happen.&lt;/p&gt;
+
+&lt;h1 id=&#34;security-first-and-privacy-first:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Security First and Privacy First&lt;/h1&gt;
+
+&lt;p&gt;I use uBlock Origin, Pop-up Blocker, Do Not Track and Ghostery on all my browsers. A lot of the time I use &lt;a href=&#34;https://www.blackvpn.com/&#34;&gt;BlackVPN&lt;/a&gt; too. Yet somehow, with my anti-business setup, many many companies received online orders and money from me this Christmas. I&amp;rsquo;m done with the online advertising industry. All the stuff Doc Searls has been talking about for years is still valid. As for governments thinking our online activities are their business, you need to start fighting back now.&lt;/p&gt;
+
+&lt;h1 id=&#34;google-cardboard-and-youtube-360:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Google Cardboard and YouTube 360&lt;/h1&gt;
+
+&lt;p&gt;Somehow I completely missed the launch of Cardboard support in YouTube and the creation of 360 videos by an ever growing set of people. The first one I saw was &lt;a href=&#34;https://www.youtube.com/watch?v=QnYncJdEh64&#34;&gt;Colin Furze&lt;/a&gt; and it&amp;rsquo;s just incredible. The &lt;a href=&#34;https://www.youtube.com/watch?v=f-7qq8n2iqw&#34;&gt;second&lt;/a&gt; was one based on Star Wars The Force Awakens, and is 100x better than the movie. I went and got a much more &lt;a href=&#34;http://eud.dx.com/product/844380189&#34;&gt;high quality plastic&lt;/a&gt; &amp;ldquo;Cardboard&amp;rdquo; as a result. It&amp;rsquo;s excellent. The recently launched &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.vr.cyclops&#34;&gt;Google Cardboard Camera&lt;/a&gt; is also superb but images are sadly locked to the device the panoramic photo was taken on.&lt;/p&gt;
+
+&lt;p&gt;This is one overall technology-set that myself and the kids are 100% in agreement on. It rocks. The next Star Wars movie should be launched on Cardboard (or Oculus or whatevs).&lt;/p&gt;
+
+&lt;h1 id=&#34;node-js-4-x:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Node.js 4.x&lt;/h1&gt;
+
+&lt;p&gt;Phew. The schism has been healed and 4.x is a really great release. Initially I had lots of problems with native modules on Windows which I hope are finally starting to settle down now. Node is still the best choice for a huge range of workloads and cannot be beaten for mobile back-ends.&lt;/p&gt;
+
+&lt;h1 id=&#34;embedded-javascript:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Embedded JavaScript&lt;/h1&gt;
+
+&lt;p&gt;I think JavaScript will completely take over the Embedded world where hard realtime is not required. The &lt;a href=&#34;http://www.espruino.com/&#34;&gt;Espruino project&lt;/a&gt; has shown what is possible here and should be much more widely used. I&amp;rsquo;m looking forward to seeing it running on the BBC&amp;rsquo;s micro:bit. Other projects like &lt;a href=&#34;http://cylonjs.com/&#34;&gt;Cylon.js&lt;/a&gt; are also worth a look.&lt;/p&gt;
+
+&lt;h1 id=&#34;go-golang:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Go/Golang&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;ll be honest, C has been the only language I really loved working in. I like Python and I really enjoy the productivity of Node.js but C was what I spent most of my real programming years using. C++ is an abomination and Java always feels like a crazy amount of work to eventually run some bloated barely-portable thing.&lt;/p&gt;
+
+&lt;p&gt;And then I found &lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt; and immediately felt comfortable. It&amp;rsquo;s C with the sharp edges removed and some really useful stuff added. Static compilation is the killer feature for me. Just drop the very-quickly-compiled binary in anywhere and run it. I&amp;rsquo;m using it more and more for small projects that aren&amp;rsquo;t backing a webapp or mobile app. It could work in both those cases too but it just doesn&amp;rsquo;t have the community in that area the way Node.js has.&lt;/p&gt;
+
+&lt;p&gt;I think Node.js and Go will dominate software development over the next few years.&lt;/p&gt;
+
+&lt;h1 id=&#34;scriptcraft-minecraft:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Scriptcraft &amp;amp; Minecraft&lt;/h1&gt;
+
+&lt;p&gt;Minecraft continues to dominate my younger kids&amp;rsquo; lives. From Stampy to Servers, they are never bored playing it or watching videos about it. My buddy Walter built the amazing &lt;a href=&#34;http://scriptcraftjs.org/&#34;&gt;Scriptcraft&lt;/a&gt; which enables you to build mods and control Minecraft in, yes you guessed it, JavaScript. &lt;a href=&#34;http://www.peachpit.com/store/beginners-guide-to-writing-minecraft-plugins-in-javascript-9780133930146&#34;&gt;His book&lt;/a&gt; is a must-read for anyone looking for an interesting way to teach kids how to program. I really want to try out some stuff where it interfaces with the real world. I think Microsoft are missing a trick by not rowing in behind Walter and this wonderful project.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s also a huge pity to watch Lego completely miss the boat here and continue to sell the crazily overpriced and overspecced Mindstorms. There is a sweetspot to be found in an online-world + real-world + electronics + JavaScript and it ain&amp;rsquo;t Lego bleedin Dimensions.&lt;/p&gt;
+
+&lt;h1 id=&#34;particle-photon:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Particle Photon&lt;/h1&gt;
+
+&lt;p&gt;I was given a &lt;a href=&#34;https://www.particle.io/&#34;&gt;Particle Photon&lt;/a&gt; recently and was blown away by how easy the setup was and how slickly the Cloud IDE works even through firewalls and NAT. Despite the Open Source nature of it, I still worry about lock-in to some degree. Having said that, my &lt;a href=&#34;https://www.kickstarter.com/projects/digistump/oak-by-digistump-wi-fi-for-all-things-arduino-comp&#34;&gt;DigiStump Oak&lt;/a&gt; just shipped (ESP8266 again!) and it it now Particle API compatible. I&amp;rsquo;d love to see some sort of multi-vendor federated distributed Particle clouds where you aren&amp;rsquo;t betting your IoT strategy on the financial stability of one startup.&lt;/p&gt;
+
+&lt;h1 id=&#34;react-native:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;React Native&lt;/h1&gt;
+
+&lt;p&gt;Use JavaScript to &lt;a href=&#34;https://facebook.github.io/react-native/&#34;&gt;build Native Apps on iOS and Android&lt;/a&gt;. What&amp;rsquo;s not to like? Weird how I hate Facebook the site/app but love so much of their Engineering.&lt;/p&gt;
+
+&lt;h1 id=&#34;rgb-leds-neopixels:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;RGB LEDs / Neopixels&lt;/h1&gt;
+
+&lt;p&gt;Ridiculous amount of fun with simple individually controllable RGB LEDs. These are going to be everywhere in 2016. Everywhere.&lt;/p&gt;
+
+&lt;h1 id=&#34;3d-printing:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;3D Printing&lt;/h1&gt;
+
+&lt;p&gt;I still adore my &lt;a href=&#34;https://printrbot.dozuki.com/Guide/Assembling+the+NEW+Printrbot+Simple+Maker&#39;s+Kit/123&#34;&gt;Printrbot Simple Maker&amp;rsquo;s Edition&lt;/a&gt;. I continue to be surprised by the quality of prints from such a cheap printer. I&amp;rsquo;ve had some fun with Ninjaflex and unusual colours this year. Also a multitude of #PiZero cases! If funds permit, I&amp;rsquo;ll probably start looking at one of the &lt;a href=&#34;http://www.bq.com/es/prusa&#34;&gt;Prusa i3 variants&lt;/a&gt; to get a bigger print area but otherwise it does everything I need.&lt;/p&gt;
+
+&lt;h1 id=&#34;efibre-by-eir:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;eFibre by Eir&lt;/h1&gt;
+
+&lt;p&gt;We get 92Mbs down, 19Mbs up. It&amp;rsquo;s completely changed how we use the internet. Bravo Eir(com). Genuinely surpassed all expectations. Getting speeds like that on a poxy twisted pair is staggering.&lt;/p&gt;
+
+&lt;p&gt;But let&amp;rsquo;s be absolutely clear about broadband in this country, the Government&amp;rsquo;s latest target of 30Mbs for everyone is a joke. By the time it&amp;rsquo;s done, it&amp;rsquo;ll be completely out of date. Why can these people not understand that ultra-fast broadband everywhere will do more for employment in this country than anything else. They&amp;rsquo;d be heroes in history for doing this right, not remembered as a bunch of clowns who couldn&amp;rsquo;t properly roll out a water quango and postcode quango.&lt;/p&gt;
+
+&lt;h1 id=&#34;statically-hosted-blogs:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Statically hosted Blogs&lt;/h1&gt;
+
+&lt;p&gt;It feels like every day there is another WordPress security scare. And that&amp;rsquo;s without mentioning the plugin ecosystem horror. I got sick of the upgrade cycle treadmill and constant exploits last year and moved everything to statically hosted blogs. First with &lt;a href=&#34;http://harpjs.com/&#34;&gt;Harp.js&lt;/a&gt;, then with &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt; and now with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. All fine tools, all work well with GitHub Pages and OpenShift. The incredible speed of Hugo is what makes it my current favourite. Edit, build, deploy, fuggedaboudit. I will never go back to a traditional DB-backed CMS.&lt;/p&gt;
+
+&lt;h1 id=&#34;dirt-cheap-android-phones-and-tablets:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Dirt-cheap Android phones and tablets&lt;/h1&gt;
+
+&lt;p&gt;I got a &lt;a href=&#34;http://www.dx.com/p/presale-doogee-x5-quad-core-android-5-1-wcdma-bar-phone-w-5-0-ips-hd-8gb-rom-gps-xender-black-400551&#34;&gt;Doogee X5 Android phone for €55&lt;/a&gt; a few weeks ago as a backup device. Apart from the case being a bit plasticky, it could pass for €200 worth. It has a great screen and surprising speed. 2 SIM slots and an SD card slot. Samsung could learn a lot from Doogee.&lt;/p&gt;
+
+&lt;p&gt;One of my daughters got the lowest-level Kindle Fire as a Christmas present. The specs are garbage. She loves it. It does absolutely everything she needs and she hasn&amp;rsquo;t asked to use the iPad Mini once since she got it.&lt;/p&gt;
+
+&lt;p&gt;I seriously doubt I&amp;rsquo;ll ever buy a premium phone on contract again. Once One Plus return to removable backs, replaceable batteries and SD card slots, I&amp;rsquo;ll jump to either them or the Wileyfox.&lt;/p&gt;
+
+&lt;h1 id=&#34;linux-everywhere:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Linux everywhere&lt;/h1&gt;
+
+&lt;p&gt;Everywhere. This makes me happy. I was very surprised my other daughter was more than happy to get an old hand-me-down laptop running Fedora 23. As long as it had Chrome, YouTube, Kodi and Minecraft she didn&amp;rsquo;t give a damn what the OS was. The OS is irrelevant to all my kids. In our house we segue seamlessly from Android to iOS to Windows to OSX to Fedora to Raspbian. The only things that matter are the apps and the content.&lt;/p&gt;
+
+&lt;h1 id=&#34;messaging-apps:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Messaging Apps&lt;/h1&gt;
+
+&lt;p&gt;Our entire extended family is on WhatsApp including grandparents. SMS is dead to us. MMS was never a thing. I&amp;rsquo;d prefer if we were all using an Open Source secure P2P system but we&amp;rsquo;ll get there. The family breakdown is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Adults: WhatsApp. Tiny amount of FB Messenger&lt;/li&gt;
+&lt;li&gt;Teens: FB Messenger, some Viber and some WhatsApp to the (grand)parents&lt;/li&gt;
+&lt;li&gt;Tweens/Smallies: Viber, Snapchat and some WhatsApp to the (grand)parents&lt;/li&gt;
+&lt;li&gt;No one: Telegram.&lt;/li&gt;
+&lt;li&gt;Curveball - Tweens using Instagram comments as a weird chat channel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;2fa-and-authy:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;2FA and Authy&lt;/h1&gt;
+
+&lt;p&gt;Two Factor Authentication is a complete pain in the neck. It really is.&lt;/p&gt;
+
+&lt;p&gt;Turn it on everywhere now. Do it. Do it now.&lt;/p&gt;
+
+&lt;p&gt;The fact that PayPal still doesn&amp;rsquo;t have it is a complete disgrace. I&amp;rsquo;d strongly recommend using &lt;a href=&#34;https://www.authy.com/&#34;&gt;Authy&lt;/a&gt; instead of the Google Authenticator App. The main reason is that you can install Authy on multiple phones/tablets which you cannot do with Authenticator. They also have a Chrome extension.&lt;/p&gt;
+
+&lt;h1 id=&#34;things-that-continue-to-disappoint:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Things that continue to disappoint&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Twitter - Useless Web App and Mobile App. Still hostile to developers who make better ones. And still no Filters, in 2015!&lt;/li&gt;
+&lt;li&gt;Facebook - Uninstalled the mobile Apps. A hand-crafted List is the only way to put it under your control. Impossible to use FB for realtime events. Ugh.&lt;/li&gt;
+&lt;li&gt;Google - Local Search and Reviews remain a complete embarrassment. Have them AdBlocked and Ghostery-ed. Maps degenerating. Photos great tho!&lt;/li&gt;
+&lt;li&gt;Google Compute Cloud - Awful. Amateur hour. Avoid. Particularly the MySQL service.&lt;/li&gt;
+&lt;li&gt;Mobile device form factors - Nothing new since 2007. Bored to death of glass slabs.&lt;/li&gt;
+&lt;li&gt;Mobile device usability - I&amp;rsquo;ll still use a desktop for anything other than quick glance. Everything feels slow and awkward. Android and iOS&lt;/li&gt;
+&lt;li&gt;Batteries - Hurry up already. The only excitement here seems to be exploding LiPos&lt;/li&gt;
+&lt;li&gt;AMD CPUs - RIP AMD. After decades of building PCs with AMD CPUs, I got my first i7 in December. It&amp;rsquo;s over AMD, give up.&lt;/li&gt;
+&lt;li&gt;Emojis - All those emojis but they never have the one I want.&lt;/li&gt;
+&lt;li&gt;Blockchain - Hype machine in overdrive far too soon. Show me something a kid can understand in 30 seconds and delivers immediate benefit. Everything I&amp;rsquo;ve tried has been a giant pain in the arse including Identity, Money, DNS and Messaging.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>My 2015 Christmas turkey oven thermometer and clock</title>
@@ -1392,55 +1534,6 @@ sudo cp -R * /usr/local/
 &lt;p&gt;The sad reality for me is that most of my Pipes are no longer functional as they use the old brilliantly simple but deprecated Twitter APIs (shakes fist at Twitter too). But it&amp;rsquo;s nice to be able to keep some sort of copy and give 2 fingers to the purple charlatans.&lt;/p&gt;
 
 &lt;p&gt;Update: It runs fine on Windows 8.1 if you have the various Visual Studio Express bits installed to compile Native Node modules. You may also have to run pipes2js with the full path to pipes2js.cmd so Windows can find it.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A Node.js web-server running on Windows 10 IoT on a @Raspberry_Pi 2. Wow!</title>
-      <link>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow/</link>
-      <pubDate>Fri, 01 May 2015 17:49:50 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/a-nodejs-web-server-running-on-windows-10-iot-on-a-raspberry_pi-2-wow/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve been Snarky McSnarkenstein about Windows 10 IoT on Raspberry Pi for quite a while. When it was originally announced, everyone seemed to think they were getting full-blown Windows for free on Pi. Many still think this. What you actually get is a GUI-less version of Windows on to which you can deploy Universal Apps (and others). So unlike Raspbian on Pi, you can&amp;rsquo;t actually develop on it, you have to have full Windows 10 running somewhere else to develop, compile, deploy and debug. Or as I said on Twitter:&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;&amp;quot;Install Visual Studio 2015 on your PC to develop Win10 IoT Apps for &lt;a href=&#34;https://twitter.com/Raspberry_Pi&#34;&gt;@Raspberry_Pi&lt;/a&gt;&amp;quot;. Install Fortran on your PDP-11 to use your ZX Spectrum?&lt;/p&gt;&amp;mdash; Conor O&amp;#39;Neill (@conoro) &lt;a href=&#34;https://twitter.com/conoro/status/593662573347794944&#34;&gt;April 30, 2015&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;OK, snark over. Let&amp;rsquo;s give this thing a go.&lt;/p&gt;
-
-&lt;p&gt;Several hours later&amp;hellip;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Installation is still a nightmare in this Preview version. Between clicking on hidden EULAs and installers failing with nonsense errors, not to mention having to install Windows 10 Preview in VirtualBox, this is not for the faint of heart.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi.jpg&#34; alt=&#34;Win 10 VBox&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The RaspberryPi bit was ok and creating the image on an SD Card worked fine. Win 10 IoT booted first time with no issues.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot_rpi_05.jpg&#34; alt=&#34;Win 10 IoT on Pi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After several more rounds of messing with Visual Studio, I followed the Hello World Tutorial and pointed it at my Pi. I was rather shocked to see it worked!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_02.jpg&#34; alt=&#34;Screen&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That was the point the scales fell from my eyes. This is actually a very powerful offering to anyone who uses Microsoft tools already. You can build Drag n Drop Universal Apps which deploy just as easily to the Pi as they do to Windows Desktop/Tablets/Phones. I think Kiosks and Control Dashboards could be a big seller here, particularly for the Pi Compute Module. Obviously Visual Studio itself is damned powerful and is considered by most people, even MSFT haters, to be the most powerful IDE available today.&lt;/p&gt;
-
-&lt;p&gt;Then I decided to go a step further. Could I get a Node.js program to deploy?&lt;/p&gt;
-
-&lt;p&gt;A bunch more stupid installers later&amp;hellip;&amp;hellip;..&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/Win_10_IOT_RPi_04.jpg&#34; alt=&#34;Node.js on Vis Studio&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Deploy the code, annnnnnd&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/win10_iot.jpg&#34; alt=&#34;Node.js on Pi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Oh wow, that is a bit brain melting. So now I have a web-server on Node.js on Windows on Pi on ARM, all debuggable with some kick-ass tools on my PC.&lt;/p&gt;
-
-&lt;p&gt;The only major criticism I can make is that I&amp;rsquo;d like every single piece including VisStudio and all the add-ons to be installable with a command-line package manager. Much easier for everyone.&lt;/p&gt;
-
-&lt;p&gt;I doff my cap to you Mr Nadella, this really is the new Microsoft.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/doff_cap.gif&#34; alt=&#34;Cap&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

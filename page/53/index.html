@@ -81,6 +81,26 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">23 Aug 2010, 07:52</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/getting-openvpn-working-on-android/" class="post-title">Getting OpenVPN working on Android</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Getting OpenVPN working on Android&rdquo;</p>
+
+<p>There are many uses for a VPN and they are generally very easy to setup on desktop computers. The experience with phones can be variable. iPhone is a doddle but Android is a horror (see my last post). The built-in PPTN VPN is utterly broken and does not work over 3G at all or for more than a few minutes on Wifi. The steps to get an alternative working on a HTC Desire are as follows:<br /> <ol><li>Brace yourself</li><li>Install Windows OpenVPN and get it working on your PC with your VPN provider</li><li>Root your Android phone. If you don&#39;t know how to do this, stop reading now.</li><li>Replace the standard ROM with the latest community Froyo. Either <a href="http://forum.xda-developers.com/showthread.php?t=719544">Cyanogen 6.0 Nightly</a> or <a href="http://forum.xda-developers.com/showthread.php?t=690477">DeFroST </a>are good(I use DeFroST). OpenDesire does not seem to work in the later steps of this process and I haven&#39;t had a chance to try any of the Modaco ones with Sense still enabled.</li> <li>Install the Google Apps add-on too if your ROM doesn&#39;t include them.</li><li>In Android Market, install the &quot;OpenVPN Settings App&quot;</li><li>Note this is not the same as the OpenVPN Settings Page in Network-&gt;Settings. I wasted a ridiculous amount of time trying to get Cert files etc working there. Avoid it. That settings page is the source of most of the confusion around OpenVPN on all the forums. I&#39;m sure there is a use for it if you have your own keys/certs etc but not for generic VPN users.</li> <li>Copy the config directory from C:Program FilesOpenVPN (including the sub-dir) on your PC to a directory like openvpn on the SD Card on your phone</li><li>Go to that OpenVPN Settings App you installed</li><li>Tell it where you have stored the config files and it should show you the configurations you copied from the PC</li> <li>Tap on the config you want and all going well, it will connect for you</li><li>You are in business!</li><li>I&#39;ve noticed that it sometimes disconnects after a minute or so and then reconnects and stays solid after that.</li> <li>All of the above works on both WiFi and 3G</li></ol><br />So Google, any ETA on fixing all those built-in VPN bugs?</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">22 Aug 2010, 15:51</h1>
                 <section class="post">
                     <header class="post-header">
@@ -318,38 +338,6 @@ A bunch of blindingly obvious &ldquo;You&rsquo;re 42, of course you like The God
 </p>
 <p></p>
 <p>UPDATE 1: Title changed from &ldquo;Bloody Brabantia Bin&rdquo; to &ldquo;Lovely Brabantia Bin&rdquo; because they <a href="http://twitter.com/BrabantiaLife/status/19648754318">reached out to me on Twitter</a> and pointed out that I could get an entire replacement lid for free on their web-site under the 10 year guarantee. Fantastic customer service. But a bit of Googling reveals the problem above is rampant which surely must be costing them a fortune? I hereby offer my Sugru &ldquo;distributed load&rdquo; design to Brabantia&rsquo;s engineers for free :-)</p></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">27 Jul 2010, 08:56</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/froyo-running-on-htc-g1/" class="post-title">Froyo running on HTC G1</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Froyo running on HTC G1&rdquo;</p>
-
-<p><p>This is CyanogenMod 6.0RC2. Working brilliantly on old hardware.</p>
-<p></p>
-<p>
-<object align="middle" height="319" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425">
-<param name="allowScriptAccess" value="sameDomain" />
-<param name="allowFullScreen" value="true" />
-<param name="movie" value="http://qik.com/swfs/qikPlayer5.swf" />
-<param name="quality" value="high" />
-<param name="bgcolor" value="#333333" />
-<param name="FlashVars" value="streamID=d3dad2a32a7745b2afb6f11fed213c4a&amp;autoplay=false" />
-<embed src="http://qik.com/swfs/qikPlayer5.swf" type="application/x-shockwave-flash" height="319" flashvars="streamID=d3dad2a32a7745b2afb6f11fed213c4a&amp;autoplay=false" width="425"></embed>
-</object>
-</p></p>
 
                     </div>
                 </section>
