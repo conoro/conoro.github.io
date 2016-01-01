@@ -6,8 +6,48 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2015 21:20:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jan 2016 10:59:32 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How cheaply can you build a full Raspberry #PiZero computer?</title>
+      <link>http://conoroneill.net/how-cheaply-can-you-do-a-full-pi-zero-computer/</link>
+      <pubDate>Fri, 01 Jan 2016 10:59:32 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/how-cheaply-can-you-do-a-full-pi-zero-computer/</guid>
+      <description>&lt;p&gt;When the incredible &lt;a href=&#34;https://www.raspberrypi.org/blog/raspberry-pi-zero/&#34;&gt;$5 Pi Zero was launched&lt;/a&gt;, the usual suspects were so busy snarking how it wasn&amp;rsquo;t really $5, that they completely missed what an important moment in computer history this is. You know the type. The ones who would have ridiculed Tim Berners-Lee&amp;rsquo;s design for the web. Or would have told Linus in no uncertain terms that he was misguided and that microkernels were the future.&lt;/p&gt;
+
+&lt;p&gt;Whilst you can&amp;rsquo;t turn on a #PiZero for $5, you also can&amp;rsquo;t connect to the LAN with your $1500 Macbook Pro without buying an adapter.&lt;/p&gt;
+
+&lt;p&gt;So assuming we don&amp;rsquo;t factor in electricity costs, carbon credits and depreciation on your chair, how cheaply can you build a fully functioning Raspberry Pi Zero, living in the UK?&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s what you need:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://swag.raspberrypi.org/collections/pi-zero/products/pi-zero&#34;&gt;Pi Zero&lt;/a&gt; £4 + £3 shipping&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ebay.ie/itm/USB-2-0-High-Speed-4-Port-Power-On-Off-Switch-LED-Hub-for-PC-Laptop-Notebook-HC-/281721438658?hash=item4197e801c2:g:T8sAAOSwKrhVe~h~&#34;&gt;Powered USB Hub&lt;/a&gt; £1.48&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ebay.ie/itm/New-Micro-USB-Male-to-Female-OTG-Cable-Adapter-for-Mobile-Cell-Phone-/301681189117?hash=item463d99a0fd:g:AtgAAOSwu4BVmnrL&#34;&gt;USB OTG adapter&lt;/a&gt; £1.10&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.aliexpress.com/item/Mini-2-4G-150Mbps-USB-WiFi-Adapter-802-11-b-g-n-Wi-Fi-Dongle-computer/32349764969.html&#34;&gt;Wifi Adapter&lt;/a&gt; - £1.25&lt;/li&gt;
+&lt;li&gt;Power Supply - Either spare phone charger or &lt;a href=&#34;http://www.aliexpress.com/item/white-1set-Dual-2A-USB-EU-Plug-Wall-Charger-micro-USB-cable-for-Samsung-galaxy-S4/32337450240.html?ws_ab_test=searchweb201556_3,searchweb201644_1_79_78_77_82_80_62_81,searchweb201560_6&#34;&gt;anything like this&lt;/a&gt; £2.05&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.aliexpress.com/item/Hot-2Pcs-USB-2-0-to-DC-3-5mm-Barrel-Connector-Jack-Power-Cable-5v-For/32219412146.html&#34;&gt;USB to Power converter&lt;/a&gt; - 62p&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.uk/gp/offer-listing/B0162YQEIE&#34;&gt;SD Card&lt;/a&gt; - 16GB Class 10 MicroSD + Adapter - £3.95&lt;/li&gt;
+&lt;li&gt;Keyboard and Mouse - Any recycling centre for free. Or if you really can&amp;rsquo;t beg borrow or steal one. &lt;a href=&#34;http://www.aliexpress.com/item/Modern-Design-Pure-White-Ultra-Thin-Design-2-4GHz-Wireless-Keyboard-Cover-Mouse-Kit-for-Desktop/32325530848.html?ws_ab_test=searchweb201556_3,searchweb201644_1_79_78_77_82_80_62_81,searchweb201560_6&#34;&gt;This is&lt;/a&gt; £10.26&lt;/li&gt;
+&lt;li&gt;Mini-HDMI cable/adapter - &lt;a href=&#34;http://www.aliexpress.com/item/High-quality-1-5M-1-4-Version-mini-HDMI-male-cable-to-hdmi-cable-for-tablet/1509136887.html?ws_ab_test=searchweb201556_3,searchweb201644_1_79_78_77_82_80_62_81,searchweb201560_6&#34;&gt;Cable&lt;/a&gt; = £1.30 or &lt;a href=&#34;http://www.aliexpress.com/item/2pcs-set-HDMI-to-Mini-HDMI-to-Micro-HDMI-Adapter-Male-to-Female-Converter-for-Xbox/2048848371.html?ws_ab_test=searchweb201556_3,searchweb201644_1_79_78_77_82_80_62_81,searchweb201560_6&#34;&gt;Adapter&lt;/a&gt; = 97p&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Total: £29.01&lt;/p&gt;
+
+&lt;p&gt;Or with obvious re-use/borrowing of stuff: £16.70&lt;/p&gt;
+
+&lt;p&gt;In Ireland? Add £1 extra for shipping the Pi Zero. Possibly a bit for the SD card from Amazon. Everything else free P&amp;amp;P from China.&lt;/p&gt;
+
+&lt;p&gt;Do you need a screen? Yup. Now walk into the sitting room and see if you can spot one. Well done.&lt;/p&gt;
+
+&lt;p&gt;A £29 fully fitted-out computer, that you could build the next global webapp on, remains completely revolutionary. All for around the same price as an Apple Thunderbolt-to-Ethernet adapter :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2016/01/quacked_the_case.gif&#34; alt=&#34;You&#39;ve Quacked the case&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>What excited Conor in tech in 2015?</title>
@@ -1505,37 +1545,6 @@ sudo cp -R * /usr/local/
 
 &lt;p&gt;UPDATE 2: I also built 0.12.7 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
 * &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/node-v0.12.7-linux-arm-v6.tar.gz&#34;&gt;node-v0.12.7-linux-arm-v6.tar.gz&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Save your Yahoo Pipes as Node.js Apps for posterity</title>
-      <link>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/</link>
-      <pubDate>Sat, 06 Jun 2015 15:06:15 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/</guid>
-      <description>&lt;p&gt;I swore I&amp;rsquo;d never use another Yahoo product after the cultural terrorism of their Geocities shutdown. Now one of their few bright lights of the past decade, Pipes, is biting the dust. However a very very smart person wrote a program called &lt;a href=&#34;https://github.com/neyric/pipes2js&#34;&gt;pipes2js&lt;/a&gt; three years ago which you may find useful. It converts your Pipes to Node.js apps!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/06/rip_pipes.png&#34; alt=&#34;RIP Pipes&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Installation is a tiny bit different from the instructions as it doesn&amp;rsquo;t seem to be on NPM any more. Here&amp;rsquo;s what worked for me on a Fedora 22 Virtual Box. I assume OSX would be similar. I might try Windows 8.1 later for the laugh.&lt;/p&gt;
-
-&lt;p&gt;The steps are as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;sudo npm install -g git://github.com/neyric/pipes2js.git&lt;/li&gt;
-&lt;li&gt;Go to &lt;a href=&#34;https://pipes.yahoo.com/pipes/&#34;&gt;Yahoo Pipes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Get the ID of each Pipe from its URL&lt;/li&gt;
-&lt;li&gt;pipes2js the_id_of_your_pipe&lt;/li&gt;
-&lt;li&gt;cd pipes/the_id_of_your_pipe/&lt;/li&gt;
-&lt;li&gt;Edit package.json and change &amp;ldquo;pipes2js&amp;rdquo;: &amp;ldquo;0.0.1&amp;rdquo; to &amp;ldquo;pipes2js&amp;rdquo;: &amp;ldquo;git://github.com/neyric/pipes2js.git&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;npm install .&lt;/li&gt;
-&lt;li&gt;node run.js&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The sad reality for me is that most of my Pipes are no longer functional as they use the old brilliantly simple but deprecated Twitter APIs (shakes fist at Twitter too). But it&amp;rsquo;s nice to be able to keep some sort of copy and give 2 fingers to the purple charlatans.&lt;/p&gt;
-
-&lt;p&gt;Update: It runs fine on Windows 8.1 if you have the various Visual Studio Express bits installed to compile Native Node modules. You may also have to run pipes2js with the full path to pipes2js.cmd so Windows can find it.&lt;/p&gt;
 </description>
     </item>
     

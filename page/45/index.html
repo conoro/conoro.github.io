@@ -81,6 +81,30 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">06 Feb 2011, 14:59</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/sorry-foursquare-forget-europe-facebook-wins/" class="post-title">Sorry Foursquare, Forget Europe, Facebook Wins</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Sorry Foursquare, Forget Europe, Facebook Wins&rdquo;</p>
+
+<p><p>I normally wouldn&rsquo;t call a result a few days after a new release but bloody hell, Facebook Places has gone mental in Ireland in less than a week. And I&rsquo;m not talking about geeks. Most of the people I am friends with on Facebook have never heard of Foursquare or Gowalla and yet they are checking in all over the place on FB. It&rsquo;s amazing to watch.</p>
+<p>How many years have we banged on about Location Based Services to no avail outside of the early adopter brigade?</p>
+<p>All Facebook has to do now to keep the momentum going is to get deals/discounts in place everywhere.</p>
+<p>I have been a dedicated 4SQ user since it launched here and an intermittent Gowalla user but I honestly think I&rsquo;ll be giving up on both over the next few weeks.</p>
+<p>I&rsquo;ll finally get my thoughts down here in the next few days about why Facebook Places will slaughter Google Places too.</p></p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">06 Feb 2011, 12:27</h1>
                 <section class="post">
                     <header class="post-header">
@@ -307,56 +331,6 @@
 <p>Soldering is not a skill anyone really needs or wants unless they are totally hardcore into hardware. The only thing it teaches smaller kids is that it burns when you accidentally touch your finger.</p>
 <p>The Hexapod is a cool project that could be interesting to a much wider range of children. My 7 y/o daughter sat and watched us doing the assembly for the entire time. So they just need to junk the soldering and replace it with some sort of component push-in system. A custom breadboard thingy I guess. As it stands I can&rsquo;t recommend it to anyone except those who are very familiar with the inside of Maplin.</p>
 <p>&nbsp;</p></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">20 Jan 2011, 17:20</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/from-zero-to-web2ireland-using-wordpress-on-digital-mines-in-15-mins/" class="post-title">From Zero to Web2Ireland using Wordpress on Digital Mines in 15 mins</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;From Zero to Web2Ireland using Wordpress on Digital Mines in 15 mins&rdquo;</p>
-
-<p><div style="background-color: transparent; margin: 0px;"><span style="font-family: Arial;"><span style="font-size: 15px;">We decided to move <a href="http://Web2Ireland.org">Web2Ireland.org</a> over to <a href="http://www.digitalmines.com/">Digital Mines</a> for AWS hosting. I&rsquo;m a big fan of how easy Digital Mines has made the deployment of Amazon servers. I thought it might be useful to show the steps to get a Wordpress blog up and running with such a setup.&nbsp;</span></span></div>
-<p />
-<div style="background-color: transparent; margin: 0px;"><span style="font-family: Arial;"><span style="font-size: 15px;">Note this doesn&rsquo;t include the incredibly simple steps to sign-up for Digital Mines itself and to click &ldquo;Deploy&rdquo; to get your server. All of the steps below were carried out in <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">Putty</a> on Windows connected by SSH to the deployed server.<br /> </span></span>
-<ul>
-<li style="font-family: Times New Roman; font-size: medium;"><span style="font-family: Arial; font-size: 15px;">Setup Apache, MySQL and PHP <br />sudo tasksel <br /></span><span style="font-family: Arial; font-size: 15px;">Select LAMP server <br /></span><span style="font-family: Arial; font-size: 15px;">Give a root password for MySQL when asked </span></li>
-<li style="font-family: Times New Roman; font-size: medium;"><span style="font-family: Arial; font-size: 15px;">Create directory for Wordpress <br />cd /var/www <br /></span><span style="font-family: Arial; font-size: 15px;">sudo mkdir vhosts <br /></span><span style="font-family: Arial; font-size: 15px;">cd vhosts/ <br /></span><span style="font-family: Arial; font-size: 15px;">sudo mkdir <a href="http://blahblahblah.com">blahblahblah.com</a> <br /></span><span style="font-family: Arial; font-size: 15px;">cd </span><span style="font-family: Arial; font-size: 15px;"><a href="http://blahblahblah.com">blahblahblah.com</a> </span></li>
-<li style="font-family: Times New Roman; font-size: medium;"><span style="font-family: Arial; font-size: 15px;">Get and uncompress Wordpress <br />sudo wget <a href="http://wordpress.org/latest.zip">http://wordpress.org/latest.zip</a> <br /></span><span style="font-family: Arial; font-size: 15px;">sudo apt-get install unzip <br /></span><span style="font-family: Arial; font-size: 15px;">sudo unzip latest.zip <br /></span><span style="font-family: Arial; font-size: 15px;">sudo rm latest.zip <br /></span><span style="font-family: Arial; font-size: 15px;">sudo chown -R www-data.www-data * <br /></span><span style="font-family: Arial; font-size: 15px;">cd wordpress/ <br /></span><span style="font-family: Arial; font-size: 15px;">sudo mv * .. <br /></span><span style="font-family: Arial; font-size: 15px;">cd .. <br /></span><span style="font-family: Arial; font-size: 15px;">sudo rm -rf wordpress/ </span></li>
-<li style="font-size: medium;"><span style="font-family: Arial; font-size: 15px;">Create a database for Wordpress <br />mysql -u root -p <br /></span><span style="font-size: 15px;"><span style="font-family: courier new, monospace;">c</span></span><span style="font-size: 15px;"><span style="font-family: courier new, monospace;">reate database blahblah; <br /></span></span><span style="font-family: courier new, monospace; font-size: small;"><span style="font-size: 15px;">GRANT ALL PRIVILEGES ON blahblah.* TO &ldquo;blahblahuser&rdquo;@&ldquo;localhost&rdquo; IDENTIFIED BY &ldquo;blahblahpassword&rdquo;;</span><span style="font-size: 15px;">quit; </span></span></li>
-<li style="font-family: Times New Roman; font-size: medium;"><span style="font-family: Arial; font-size: 15px;">Tell Wordpress about the Database <br /></span><span style="font-family: Arial; font-size: 15px;">sudo cp wp-config-sample.php wp-config.php <br /></span><span style="font-family: Arial; font-size: 15px;">sudo vim wp-config.php <br /></span><span style="font-family: Arial; font-size: 15px;">Edit the database details in that file </span></li>
-<li style="font-family: Times New Roman; font-size: medium;"><span style="font-family: arial; font-size: small;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; vertical-align: baseline;">Configure Apache <br /></span></span><span style="font-family: arial; font-size: small;"><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; vertical-align: baseline;">cd /etc/apache2/</span><span style="font-size: 11pt; font-family: Arial; color: #000000; background-color: transparent; font-weight: normal; font-style: normal; text-decoration: none; vertical-align: baseline;">sites-enabled/ <br /></span></span><span style="font-family: arial; font-size: small;"><span style="font-family: Arial; font-size: 15px;">sudo cp 000-default </span><span style="font-family: Arial; font-size: 15px;"><a href="http://blahblahblah.com">blahblahblah.com</a> <br />sudo rm 000-default <br /></span></span><span style="font-family: Arial; font-size: 15px;">sudo vim <a href="http://blahblahblah.com">blahblahblah.com</a>&nbsp;<br /></span><span style="font-family: courier new, monospace; font-size: 15px;">&lt;VirtualHost *:80&gt; </span><span style="font-family: courier new, monospace; font-size: 15px;">&nbsp;<br /></span><span style="font-family: courier new, monospace; font-size: 15px;">ServerAdmin <a href="mailto:conor@blahblah.com">conor@blahblah.com</a> </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />ServerName <a href="http://blahblahblah.com">blahblahblah.com</a> </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />ServerAlias <a href="http://www.blahblahblah.com">www.blahblahblah.com</a> </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />DocumentRoot /var/www/vhosts/<a href="http://blahblahblah.com">blahblahblah.com</a> </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />&lt;Directory /&gt; </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />Options FollowSymLinks </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />AllowOverride None </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />&lt;/Directory&gt; </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />&lt;Directory /var/www/vhosts/<a href="http://blahblahblah.com">blahblahblah.com</a>&gt; </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />Options Indexes FollowSymLinks MultiViews </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />AllowOverride All </span><span style="font-family: courier new, monospace; font-size: 15px;"> Order allow,deny </span><span style="font-family: courier new, monospace; font-size: 15px;"> allow from all </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />&lt;/Directory&gt; </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />ErrorLog ${APACHE_LOG_DIR}/error.log </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br /># alert, emerg. </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />LogLevel warn </span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />CustomLog ${APACHE_LOG_DIR}/access.log combined</span><span style="font-family: courier new, monospace; font-size: 15px;"> <br />&lt;/VirtualHost&gt; </span></li>
-<li><span style="font-family: Arial;"><span style="font-size: 15px;">Setup URL rewriting</span></span>&nbsp;<br /><span style="font-family: Arial;"><span style="font-size: 15px;">sudo vim /var/www/vhosts/<a href="http://blahblahblah.com/.htaccess">blahblahblah.com/.htaccess</a></span></span> <br /><span style="font-size: 15px;"><span style="font-family: courier new, monospace;">&lt;IfModule mod_rewrite.c&gt; <br />RewriteEngine On <br />RewriteBase / <br />RewriteRule ^index.php$ - [L] <br />RewriteCond %{REQUEST_FILENAME} !-f <br />RewriteCond %{REQUEST_FILENAME} !-d <br />RewriteRule . /index.php [L] &lt;/IfModule&gt; </span></span> <br /><span style="font-family: Arial;"><span style="font-size: 15px;">sudo a2enmod rewrite</span></span> <br /><span style="font-family: Arial; font-size: 15px;">sudo service apache2 restart </span></li>
-<li style="font-family: Times New Roman; font-size: medium;"><span style="font-family: Arial; font-size: 15px;">Install APC for improved performance <br /></span><span style="font-family: Arial; font-size: 15px;">sudo apt-get install php-apc <br /></span><span style="font-family: Arial; font-size: 15px;">cd /etc/php5/conf.d <br /></span><span style="font-family: Arial; font-size: 15px;">sudo vim apc.ini <br /></span><span style="font-family: courier new, monospace; font-size: 15px;">extension=apc.so <br /></span><span style="font-family: courier new, monospace; font-size: 15px;">apc.enabled=1 <br /></span><span style="font-family: courier new, monospace; font-size: 15px;">apc.enable_cli=1 <br /></span><span style="font-family: courier new, monospace; font-size: 15px;">apc.shm_segments=1 <br /></span><span style="font-family: courier new, monospace; font-size: 15px;">apc.shm_size=32 <br /></span><span style="font-family: courier new, monospace; font-size: 15px;">apc.cache_by_default=1 <br /></span><span style="font-family: courier new, monospace; font-size: 15px;">apc.stat=1 </span></li>
-<li><span style="font-family: Arial; font-size: 15px;">Restart Apache sudo service apache2 restart</span></li>
-</ul>
-<div><span style="font-family: Arial;"><span style="font-size: 15px;">Outside of that we had to:</span></span></div>
-<div>
-<ul>
-<li><span style="font-family: Arial; font-size: 15px;">Move DNS servers from old provider to DNSMadeEasy&nbsp;</span></li>
-<li><span style="font-family: Arial; font-size: 15px;">Add an entry to AuthSMTP to handle email sending</span></li>
-<li><span style="font-family: Arial; font-size: 15px;">Do a Database Import/Export from existing Web2Ireland server</span></li>
-<li><span style="font-family: Arial; font-size: 15px;">Copy over theme files and old uploads from existing Web2Ireland server</span></li>
-</ul>
-<div><span style="font-family: Arial;"><span style="font-size: 15px;">Obviously you want to install other performance doo-dahs like Donncha&rsquo;s WP-Supercache too.&nbsp;</span></span></div>
-<p />
-<div><span style="font-family: Arial;"><span style="font-size: 15px;">Done!</span></span></div>
-<p />
-<div><span style="font-family: Arial;"><span style="font-size: 15px;">If you want to know the couple of steps to get Putty talking to your server, let me know in the comments.</span></span></div>
-<p />
-<p />
-</div>
-</div></p>
 
                     </div>
                 </section>

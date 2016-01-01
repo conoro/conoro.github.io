@@ -81,6 +81,42 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">20 Sep 2015, 13:03</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/" class="post-title">TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>As an old Embedded guy who actually cares about resource usage, I&rsquo;ve been bothered for quite a while by the number of trivial Node.js projects out there that require a full-blown MongoDB or MySQL server to operate. It&rsquo;s a particular problem on the Raspberry Pi or small <a href="https://www.digitalocean.com/">DigitalOcean</a> Droplets. In many cases a simple SQLite DB or TingoDB is more than sufficient.</p>
+
+<p>If your Web App has 2 registered users and 100 visitors per day, may just maybe you don&rsquo;t need MongoDB or MySQL. I have a set of small Node.js projects now where I use the following combinations and they all work well. Anything you are doing in-house on a Raspberry Pi should absolutely use one of these. In fact I&rsquo;m not even sure recent Mongos run on the RPi 1?</p>
+
+<h2 id="dulcimer-levelup-and-leveldb:b9c1e366c3521fb5cdf8cf868ebc63d4">Dulcimer, LevelUP and LevelDB</h2>
+
+<p><a href="https://github.com/google/leveldb">LevelDB</a> and <a href="https://github.com/Level/levelup">LevelUP</a> are well known and widely used. I think <a href="https://github.com/fritzy/Dulcimer">Dulcimer</a> probably less so. It&rsquo;s a <a href="http://mongoosejs.com/">Mongoose-ish</a> ORM for LevelDB. I was able to tie it into <a href="http://passportjs.org/">PassportJS</a> without much effort to handle users/sessions/etc. I have two setups using it and both have been running for many months on d&rsquo;internet with zero problems. In one case it&rsquo;s a small stats dashboard running on DigitalOcean with a few registered users who check it maybe once a day. The other one is a registration system for people requesting access to some internal work resources. All submissions go into LevelDB. This is running on <a href="https://www.openshift.com/products/online">OpenShift Online</a>.</p>
+
+<h2 id="tingodb-and-tungus:b9c1e366c3521fb5cdf8cf868ebc63d4">TingoDB and Tungus</h2>
+
+<p>Of the NoSQL file-based databases, this seems to have the lowest profile and I think it deserves a <em>lot</em> of attention. <a href="https://github.com/sergeyksv/tingodb">TingoDB</a> emulates most of the common MongoDB APIs and <a href="https://github.com/sergeyksv/tungus">Tungus</a> emulates most of the Mongoose ones. I was able to take a <a href="https://github.com/sahat/tvshow-tracker">random Node.js project</a> off GitHub which is based on MongoDB/Mongoose/Mongoskin and get it running using TingoDB/Tungus on an RPi with only a tiny bit of fiddling with the <a href="https://github.com/rschmukler/agenda/">Agenda</a> module. This is huge for those wanting to do NoSQL on Raspberry Pi. I&rsquo;ll be playing a lot more with this setup in the coming weeks. You really should too.</p>
+
+<h2 id="sqlite-knex-and-bookshelf:b9c1e366c3521fb5cdf8cf868ebc63d4">SQLite, Knex and Bookshelf</h2>
+
+<p>Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&rsquo;ve used <a href="https://www.sqlite.org/">SQLite</a> many times over the years for simple projects and it has always worked well. I hadn&rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&rsquo;t need huge scale, you should be looking at SQLite. I&rsquo;m currently wrapping up a simple in-house project using SQLite with <a href="http://knexjs.org/">Knex</a> and <a href="http://bookshelfjs.org/">Bookshelf</a> on a Raspberry Pi. The DB hold simple relationships between devices and their status.</p>
+
+<p>The latter two setups above also have the big advantage that you can use them in development or in the early production stages and then you can drop in MongoDB or MySQL at a later stage if needed, without any re-coding.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">20 Sep 2015, 11:38</h1>
                 <section class="post">
                     <header class="post-header">
@@ -606,78 +642,6 @@ sudo cp -R * /usr/local/
 </code></pre>
 
 <p>Works perfectly for <a href="http://harpjs.com/">Harp.js</a>, including the ever-problematic node-sass with its native bits.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">04 Jan 2015, 13:42</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/bandon-flood-warning-data-now-scraped-to-google-fusion-tables-using-nodejs/" class="post-title">Bandon Flood Warning data now scraped to Google Fusion Tables using Node.js on ODROID-C1 and OpenShift</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        
-
-<p>After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift.</p>
-
-<h2 id="introduction:68488b35c9290c9755b8db0d35a0e512">Introduction</h2>
-
-<p>Cork County Council in Ireland has a site called <a href="http://www.bandonfloodwarning.ie/">Bandon FEWS</a> (Bandon Flood Early Warning System). When the Bandon river hits certain levels near Bandon town, it alerts registered users via SMS in case they need to take emergency measures. It&rsquo;s a very useful service and is very necessary due to the regular flooding that occurs. However the historical river level data is not available in any useful form and that&rsquo;s the point of this project.</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/01/Nov09Hickeys.jpg" alt="Hickey's Bandon" title="Flooding in 2009" /></p>
-
-<p>In November 2011, I created <a href="http://conoroneill.com/2011/11/17/bandon-flood-fews-open-data-now-available/">a simple Python script</a> which scrapes the site every 15 minutes and saves the river level to a Google Fusions Table &ldquo;spreadsheet&rdquo; <a href="https://www.google.com/fusiontables/DataSource?docid=103YIcARoxuaWT7NfZ8mVBzY554sF_3ONYC1N3DE#rows:id=1">here</a>. This now has (with a few interruptions) 3 years of data which anyone can query, re-use or slice-dice and mashup with weather info. Not that anyone has done this :-)</p>
-
-<p>The script has been running on a small home Ubuntu fileserver all this time but stopped working mid-December 2014 either due to changes with the page structure of the Council site or as unexpected fallout from upgrading to Ubuntu 14.04. I have therefore re-written it in Node.js which has the big added advantage that there are free hosting possibilities for this code such as my employer Red Hat&rsquo;s <a href="https://www.openshift.com/">OpenShift</a>.</p>
-
-<p>Code is now available on <a href="https://github.com/conoro/bandonfews-nodejs">GitHub here</a>.</p>
-
-<p>The code started as Google&rsquo;s example G+ OAuth code but now has the bulk of the functionality completed. It is running reliably under Supervisor on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID-C1</a> single-board computer on my desk.</p>
-
-<p>To use it for something else on Fusion Tables, the main thing you need to do is setup an App in the <a href="https://console.developers.google.com/project?authuser=0">Google API Console</a>, enable Fusion Tables API access and use those keys in the placeholders in the config files.</p>
-
-<h2 id="files:68488b35c9290c9755b8db0d35a0e512">Files</h2>
-
-<ul>
-<li>main.js - The main code</li>
-<li>bandonfews.conf - Supervisor config file. Copy to /etc/supervisor/conf.d/bandonfews.conf then <code>sudo supervisorctl reread</code> and <code>sudo supervisorctl reread</code></li>
-<li>tokens-example.json - rename to tokens.json. Will be auto-generated by the code on first run in any case</li>
-<li>config-example.json - Rename to config.json and fill out the Google OAuth API key/secret, the URL of the FEWS site and the id of the Fusion Table</li>
-<li>index.html - Placeholder for upcoming landing page</li>
-<li>server.js - Placeholder for upcoming API server</li>
-<li>package.json - Required Node.js packages. <code>npm install</code> to install everything</li>
-<li>.gitignore - Stuff that shouldn&rsquo;t go under Git control</li>
-</ul>
-
-<h2 id="openshift-environment-variables:68488b35c9290c9755b8db0d35a0e512">OpenShift Environment Variables</h2>
-
-<p>If you are running on OpenShift, you need a way to set various keys etc without adding them to files in Git which could potentially leak accidentally if you also put a copy up on GitHub. So set the following (mirroring the equivalent ones in config.json and tokens.json):</p>
-
-<p><code>rhc set-env access_token=&quot;blah&quot; token_type=&quot;Bearer&quot; refresh_token=&quot;blah&quot; expiry_date=1419970265050 client_id=&quot;blah&quot; client_secret=&quot;blah&quot; redirect_url=&quot;http://localhost&quot; fews_url=&quot;http://www.bandonfloodwarning.ie/main.php&quot; fusiontables_id=&quot;blah&quot; -a bandonfews</code></p>
-
-<h2 id="to-do:68488b35c9290c9755b8db0d35a0e512">TO-DO</h2>
-
-<ul>
-<li>The first time run is currently broken for the OAuth credentials. Easy fix coming.</li>
-<li>OpenShift is SIGINT&rsquo;ing it for some unknown reason after a random time which is why it&rsquo;s running on the ODROID for the moment</li>
-<li>It should have a simple Express based API so others can avoid the pain of dealing with the Fusion Tables API for basic queries</li>
-<li>It should have a simple landing page showing the latest water level and maybe a graph</li>
-<li>It should add back in the functionality of the old Python code for posting to COSM</li>
-<li>???</li>
-</ul>
-
-<h2 id="release-notes:68488b35c9290c9755b8db0d35a0e512">Release Notes</h2>
-
-<ul>
-<li>04/01/2015 - First public usable version</li>
-</ul>
 
                     </div>
                 </section>
