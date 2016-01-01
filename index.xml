@@ -26,7 +26,7 @@
 &lt;p&gt;The number of projects and initiatives that have grown up around ESP8266 is impossible to keep track of. Ones to check out are:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://nodemcu.com/index_en.html&#34;&gt;NodeMCU&lt;/a&gt; - A really nice &lt;a href=&#34;http://www.electrodragon.com/product/nodemcu-lua-amica-r2-esp8266-wifi-board/&#34;&gt;dev board&lt;/a&gt; and Lua-based stack. This is what I used for most of this year but will be switching to [Espruino]()&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nodemcu.com/index_en.html&#34;&gt;NodeMCU&lt;/a&gt; - A really nice &lt;a href=&#34;http://www.electrodragon.com/product/nodemcu-lua-amica-r2-esp8266-wifi-board/&#34;&gt;dev board&lt;/a&gt; and Lua-based stack. This is what I used for most of this year but will be switching to &lt;a href=&#34;http://www.espruino.com/&#34;&gt;Espruino&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/tve/EspruinoDocs/blob/master/boards/EspruinoESP8266.md&#34;&gt;Espruino on ESP8266&lt;/a&gt; - Still in heavy development but feels like a complete winner. JavaScript + Wifi for $4 is a killer solution.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.cesanta.com/esp8266-and-iot-smartjs-starter-guide&#34;&gt;Cesanta Smart.js&lt;/a&gt; - A Dublin-based company. Ex-Googlers I think. Similar to Espruino but without the community. Wish they&amp;rsquo;d join forces instead.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/esp8266/Arduino/&#34;&gt;Arduino&lt;/a&gt; - Yup, you can run a huge amount of Arduino code straight on the ESP8266. Really exciting to have this. Only drawback is that native AVR code and (I think) interrupt-driven code will not compile. Also far fewer IOs than normal Arduinos.&lt;/li&gt;
@@ -108,7 +108,7 @@
 
 &lt;p&gt;One of my daughters got the lowest-level Kindle Fire as a Christmas present. The specs are garbage. She loves it. It does absolutely everything she needs and she hasn&amp;rsquo;t asked to use the iPad Mini once since she got it.&lt;/p&gt;
 
-&lt;p&gt;I seriously doubt I&amp;rsquo;ll ever buy a premium phone on contract again. Once One Plus return to removable backs, replaceable batteries and SD card slots, I&amp;rsquo;ll jump to either them or the Wileyfox.&lt;/p&gt;
+&lt;p&gt;I seriously doubt I&amp;rsquo;ll ever buy a premium phone on contract again. Once One Plus return to removable backs, replaceable batteries and SD card slots, I&amp;rsquo;ll jump to either them or the Wileyfox. Apart from the camera, there is practically nothing on my Galaxy S6 that I couldn&amp;rsquo;t do with an S4 or HTC Sensation. And they are both more robust and have replaceable batteries and SD card slots.&lt;/p&gt;
 
 &lt;h1 id=&#34;linux-everywhere:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Linux everywhere&lt;/h1&gt;
 
@@ -125,6 +125,8 @@
 &lt;li&gt;No one: Telegram.&lt;/li&gt;
 &lt;li&gt;Curveball - Tweens using Instagram comments as a weird chat channel&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Top tip - WhatsApp needs a phone number, Viber doesn&amp;rsquo;t. Many many smaller kids have tablets, not phones. WhatsApp really missing out here. Our solution is to put free Tesco Mobile SIMs in old phones and never put credit on them. Gets over the WhatsApp problem.&lt;/p&gt;
 
 &lt;h1 id=&#34;2fa-and-authy:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;2FA and Authy&lt;/h1&gt;
 
