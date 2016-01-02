@@ -81,6 +81,63 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">01 Jun 2014, 15:48</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/creating-a-valid-ops-file-in-json-format-for-minecraft-179/" class="post-title">Creating a valid ops file in JSON format for Minecraft 1.7.9</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Our 8yo wanted a local server on his laptop today so I grabbed the latest 1.7.9 server exe from the Minecraft site and ran it in its own directory. It created the usual files and gave a GUI-style interface with no obvious console like the raw Java version. Fionn then asked me to make him an Op so he could change things. And it was all downhill from there.</p>
+
+<p>The standard ops.txt was missing but there was an ops.json containing just two square brackets. No amount of messing with creating an ops.txt or putting his username inside the brackets of the json file worked. Over an hour of googling finally got me close. In the recent versions of Minecraft, they have moved to using JSON instead of .txt for config files and they are rolling out the idea of UUIDs so that you can easily change your username. Both are reasonable changes but implemented terribly in this case. Unless the format of your json file in 100% correct, it doesn&rsquo;t throw an error, it just deletes it!</p>
+
+<p>So after more than 10 attempts, this is what you need:</p>
+
+<ul>
+<li><p>Find your UUID. Note that several sites claim to generate this for you but they are missing the dashes in the UUID. The one that worked for me was <a href="http://minecraft-techworld.com/uuid-lookup-tool">this one</a>. Enter your username and get something like 54d61e19-71cc-477d-8215-8a11c41f5211 back.</p></li>
+
+<li><p>Edit ops.json in a text editor and replace the contents as follows:</p></li>
+</ul>
+
+<pre><code class="language-javascript">[
+  {
+    &quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
+    &quot;name&quot;: &quot;bobloblaw&quot;,
+    &quot;level&quot;: 4
+  }
+] 
+</code></pre>
+
+<ul>
+<li>If you need more than one Op, do it like so.
+<code>javascript
+[
+{
+&quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
+&quot;name&quot;: &quot;bobloblaw&quot;,
+&quot;level&quot;: 4
+},
+{
+&quot;uuid&quot;: &quot;44d61e69-6166-444d-8665-6a11567f5211&quot;,
+&quot;name&quot;: &quot;mrsmines&quot;,
+&quot;level&quot;: 4
+}
+] 
+</code></li>
+</ul>
+
+<p>That should be all you need. Leave a comment if any problems with it.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">21 May 2014, 07:08</h1>
                 <section class="post">
                     <header class="post-header">
@@ -889,119 +946,6 @@ And that&rsquo;s it about it. Except for&hellip;&hellip;.</p>
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">28 Feb 2014, 17:34</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/my-arduino-and-raspberry-pi-links-for-newbies/" class="post-title">My Arduino and Raspberry Pi links for newbies</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        
-
-<p>I generated this list a few months ago for <a href="http://coderdojowestcork.wordpress.com/">Clonakilty Coder Dojo</a> after demoing a pile of my projects/gadgets to them. Can&rsquo;t believe I&rsquo;m only blogging it now. Hope you find it useful.</p>
-
-<h3 id="learning-about-arduino:a83d6f58acb25aae038879179db7d57b">Learning about Arduino</h3>
-
-<ul>
-<li>Adafruit has a ton of stuff on <a href="http://learn.adafruit.com/category/learn-arduino">their learing site</a></li>
-<li>MAKE Magazine is amazing. <a href="http://makezine.com/">Get a subscription</a></li>
-<li>Watch the Sparkfun <a href="https://www.sparkfun.com/news/1141">Friday New Products Videos</a></li>
-<li>Watch the <a href="http://revision3.com/tbhs">Ben Heck Show</a> every week</li>
-<li><a href="http://hackaday.com/">Hack a Day</a> is very hardcore but amazing to see how hackers think.</li>
-</ul>
-
-<h3 id="making-arduino-and-raspberry-pi-work-together:a83d6f58acb25aae038879179db7d57b">Making Arduino and Raspberry Pi work together</h3>
-
-<p>Gert van Loo who did the original design for the Raspberry Pi now has an <a href="http://www.element14.com/community/docs/DOC-64326">RPi board called the GertDuino</a> that contains an Arduino and can use Arduino add-on shields. It seems like the best of both worlds and I&rsquo;ll be getting one for myself.</p>
-
-<h3 id="learning-about-raspberry-pi:a83d6f58acb25aae038879179db7d57b">Learning about Raspberry Pi</h3>
-
-<ul>
-<li><a href="http://learn.adafruit.com/category/raspberry-pi">Adafruit again</a></li>
-<li><a href="http://www.themagpi.com/">The MagPi Magazine</a> (a bit too techy)</li>
-<li><a href="http://www.recantha.co.uk/blog/">Recantha</a>- Michael mainly links to other sites but it&rsquo;s a great way to see what&rsquo;s happening out there.</li>
-<li>The <a href="http://www.raspberrypi.org/">Raspberry Pi blog</a> itself</li>
-</ul>
-
-<h3 id="raspberry-pi-minimum-setup:a83d6f58acb25aae038879179db7d57b">Raspberry Pi Minimum setup</h3>
-
-<p>Raspberry Pi + 4GB SD Card (Class 10) + 1.1 Amp Phone Charger + HDMI cable + Wireless KB/Mouse + Wifi Dongle
-It can work with old TVs on SCART cable but picture is very fuzzy.</p>
-
-<h3 id="very-cheap-chinese-electronics-including-arduino-clones:a83d6f58acb25aae038879179db7d57b">Very cheap Chinese Electronics including Arduino clones</h3>
-
-<p>The main site is <a href="http://dx.com/">DX.COM</a> - They have tons of stuff. Very cheap. No postage charges but takes a minimum of 3 weeks (usually more) for things to arrive. Make sure to keep orders less than approx €50 to avoid import duties. Just split large orders up. Assume that if things break, you&rsquo;ll either repair or bin them. Doing returns to China is a disaster.</p>
-
-<p><a href="http://www.elecfreaks.com/">Elecfreaks</a> in China is also very good.</p>
-
-<ul>
-<li>[RC Car]() <a href="http://dx.com/p/zl-4-smart-car-chassis-kit-for-arduino-black-yellow-152992" target="_blank"><a href="http://dx.com/p/zl-4-">http://dx.com/p/zl-4-</a><wbr />smart-car-chassis-kit-for-ardu<wbr />ino-black-yellow-152992</a></li>
-<li><a href="http://dx.com/p/diy-funduino-uno-r3-development-board-microcontroller-w-usb-cable-240588">Cheap Arduino UNO</a></li>
-<li><a href="http://dx.com/p/arduino-compatible-2-channel-relay-shield-module-138600">Cheap Motor Shield</a></li>
-<li><a href="http://dx.com/s/arduino+starter+kit">Cheap Starter Kits</a></li>
-<li><a href="http://dx.com/p/arduino-digital-temperature-humidity-sensor-module-121350">Temperature Sensor</a></li>
-</ul>
-
-<p>###Other Arduino Starter Kits
-* <a href="http://store.arduino.cc/eu/index.php?main_page=product_info&amp;amp;cPath=2&amp;amp;products_id=185">Official Kit</a>
-* <a href="http://www.alpha-crucis.com/en/intermediaires/4082-arduino-starter-kit-370038669007.html">Alpha Crucis</a>
-* <a href="http://www.coolcomponents.co.uk/catalog/arduino-starter-p-596.html">Cool Components</a>
-* <a href="http://www.seeedstudio.com/depot/ardx-the-starter-kit-for-arduino-p-1153.html?cPath=138">SeeedStudio</a></p>
-
-<h3 id="us-suppliers:a83d6f58acb25aae038879179db7d57b">US Suppliers</h3>
-
-<p>Sparkfun and Adafruit are the main ones. Can be pricey to buy from US due to postage and import duties.</p>
-
-<h3 id="uk-suppliers:a83d6f58acb25aae038879179db7d57b">UK Suppliers</h3>
-
-<p><a href="http://www.coolcomponents.co.uk">Cool Components</a> are good but postage can be pricey</p>
-
-<h3 id="french-suppliers:a83d6f58acb25aae038879179db7d57b">French Suppliers</h3>
-
-<p><a href="http://www.alpha-crucis.com/en/intermediaires/4082-arduino-starter-kit-370038669007.html">Alpha Crucis</a> seems like good value, particularly when Euro weak, but I haven&rsquo;t used them yet.</p>
-
-<h3 id="irish-suppliers:a83d6f58acb25aae038879179db7d57b">Irish Suppliers</h3>
-
-<p><a href="http://ie.farnell.com/">Farnell</a> has a large Irish warehouse. Incredible selection of components mainly targeting Trade. But cheapest way to get Raspberry Pi in Ireland. They have a minimum order of €20 but then deliver by courier which is good. If you need to bulk buy wires, switches, ICs etc, they are the best/fastest option.</p>
-
-<h3 id="makey-makey:a83d6f58acb25aae038879179db7d57b">Makey Makey</h3>
-
-<p>Available on <a href="http://www.makeymakey.com/">their own site</a> and on <a href="https://www.sparkfun.com/products/11511">Sparkfun</a> in the US and <a href="http://www.coolcomponents.co.uk/catalog/makey-makey-standard-p-1091.html">Cool Components</a> in the UK</p>
-
-<h3 id="bare-conductive-ink:a83d6f58acb25aae038879179db7d57b">Bare Conductive Ink</h3>
-
-<p><a href="http://www.bareconductive.com/">On their own site</a> in the UK.</p>
-
-<h3 id="maplin-rpi-kit:a83d6f58acb25aae038879179db7d57b">Maplin RPi Kit</h3>
-
-<p>Everything you need in one box on the <a href="http://www.maplin.co.uk/raspberry-pi-board-and-starter-kit-652805">Maplin site</a>.</p>
-
-<p>They had them in Maplin Blackpool the last time I was there (opposite Argos). Approx €95. Not cheap but you are guaranteed that all the parts will work together. The RPi is particularly finnicky about USB devices and power supplies.</p>
-
-<h3 id="i-racer:a83d6f58acb25aae038879179db7d57b">i-racer</h3>
-
-<p>From <a href="http://www.coolcomponents.co.uk/catalog/racer-p-993.html">Cool Components</a> in the UK or <a href="https://www.sparkfun.com/products/11162">Sparkfun</a> in the US.</p>
-
-<h3 id="remote-control-car-batteries:a83d6f58acb25aae038879179db7d57b">Remote Control Car Batteries</h3>
-
-<p><a href="http://www.hobbyking.com/">Hobbyking</a> is best for these type of batteries. Hong Kong store has biggest range but obviously longest delay. UK store has quite a bit of stock but charges a lot for postage. I use <a href="http://www.parcelmotel.com/">Parcel Motel</a> to order from UK store at UK postage rates and then collect in Bandon:</p>
-
-<ul>
-<li><a href="http://www.hobbyking.com/hobbyking/store/__26653__Turnigy_nano_tech_2200mah_2S_35_70C_Lipo_Pack_UK_Warehouse_.html">LiPo Battery</a></li>
-<li><a href="http://www.hobbyking.com/hobbyking/store/__26010__HobbyKing_E4_Balance_Charger_UK_Warehouse_.html">LiPo Charger</a></li>
-<li><a href="http://www.hobbyking.com/hobbyking/store/__22749__On_Board_Lipoly_Low_Voltage_Alarm_2s_3s.html">Low battery alarm</a></li>
-<li><a href="http://www.ebay.co.uk/itm/Nylon-XT60-Connectors-5-Pairs-HeatShrink-Male-female-GENUINE-/230932287734?ssPageName=ADME:L:OC:IE:3160">Connectors</a> (eBay seller in Donegal)</li>
-</ul>
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
@@ -1011,7 +955,7 @@ It can work with old TVs on SCART cable but picture is very fuzzy.</p>
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 5 of 73</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 5 of 74</span>
     
       <a href="/page/6/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

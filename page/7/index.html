@@ -81,6 +81,110 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">25 Dec 2013, 13:43</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/our-first-arduino-christmas-turkey/" class="post-title">Our first Arduino Christmas Turkey</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Our first Arduino Christmas Turkey&rdquo;</p>
+
+<p>Take one turkey, an oven with the temperature markings rubbed-off, a food thermometer with a broken probe and you have a recipe for either incineration or salmonella.</p>
+
+<p>Enter an <a href="http://store.arduino.cc/index.php?main_page=product_info&amp;cPath=11&amp;products_id=195">Arduino Uno</a>, a <a href="https://www.olimex.com/Products/Components/Misc/TC-K-TYPE/">K-Type thermocouple</a>, a sample <a href="http://www.maximintegrated.com/datasheet/index.mvp/id/7273">MAX31855</a> IC, some dodgy soldering from a few weeks ago, an <a href="https://github.com/adafruit/Adafruit-MAX31855-library">Adafruit library</a> and a <a href="https://www.sparkfun.com/products/9393">Sparkfun LCD</a> and you get this:</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45.jpg"><img class="aligncenter size-large wp-image-1229" alt="2013-12-25 12.43.45" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2013/12/2013-12-25-12.43.45-1024x768.jpg" width="584" height="438" /></a></p>
+
+<p>All rustled up in 15 minutes.</p>
+
+<p>Code and circuit to follow.</p>
+
+<p>I haven&rsquo;t bothered to average out the values so using a bit of human judgement on the instantaneous ones.</p>
+
+<p>UPDATE: So the turkey ended up very dry. I&rsquo;m not sure if the cooking time was excessive or the thermocouple was reading low. I wasn&rsquo;t impressed with its accuracy at room temperature (+/- 2C at least) but I suspect it may have been 10C or more off at 180C. Hmm, just tried it on boiling water and it read 100-104 so perhaps I just cooked the turkey for far too long.</p>
+
+<p>Also, if you want to try this, do yourself a favour and get the <a href="http://www.adafruit.com/products/269">Adafruit MAX31855 breakout board</a>. Soldering to the chip directly was a pain in the ass.</p>
+
+<p>CODE (based on the Adafruit and Sparkfun sample code):</p>
+
+<p>[sourcecode]
+/***************************************************
+ This is an example for the Adafruit Thermocouple Sensor w/MAX31855K</p>
+
+<p>Designed specifically to work with the Adafruit Thermocouple Sensor
+ &mdash;-&gt; <a href="https://www.adafruit.com/products/269">https://www.adafruit.com/products/269</a></p>
+
+<p>These displays use SPI to communicate, 3 pins are required to
+ interface
+ Adafruit invests time and resources providing this open source code,
+ please support Adafruit and open-source hardware by purchasing
+ products from Adafruit!</p>
+
+<p>Written by Limor Fried/Ladyada for Adafruit Industries.
+ BSD license, all text above must be included in any redistribution
+ ****************************************************/</p>
+
+<p>#include &quot;Adafruit_MAX31855.h&quot;
+#include &lt;SoftwareSerial.h&gt;
+#include&lt;stdlib.h&gt;</p>
+
+<p>int thermoCLK = 5;
+int thermoCS = 4;
+int thermoDO = 3;</p>
+
+<p>// Initialize the Thermocouple
+Adafruit_MAX31855 thermocouple(thermoCLK, thermoCS, thermoDO);
+SoftwareSerial mySerial(6,2); // pin 2 = TX, pin 3 = RX (unused)</p>
+
+<p>void setup() {
+ mySerial.begin(9600);
+ Serial.begin(9600);
+ delay(500);
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);
+ mySerial.write(&quot;Hello, Thermocouple!&quot;);</p>
+
+<p>// wait for MAX chip to stabilize
+ delay(1000);
+}</p>
+
+<p>char tempstring[16];
+void loop() {
+ // basic readout test, just print the current temp
+ mySerial.write(254); // move cursor to beginning of first line
+ mySerial.write(128);
+ mySerial.write(&quot; &quot;); // clear display
+ mySerial.write(&quot; &quot;);</p>
+
+<p>double c = thermocouple.readCelsius();
+ if (isnan&copy;)
+ {
+ mySerial.write(&quot;T/C Problem&quot;);
+ }
+ else
+ {
+ mySerial.write(&quot;C = &quot;);
+ mySerial.write(dtostrf(c,4,1,tempstring));
+ Serial.println&copy;;
+ mySerial.write(&quot; &quot;);
+ }</p>
+
+<p>delay(1000);
+}
+[/sourcecode]</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">01 Dec 2013, 13:20</h1>
                 <section class="post">
                     <header class="post-header">
@@ -733,46 +837,6 @@ The Raspberry Pi libraries and sample code are obviously in C which is probably 
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">07 Sep 2013, 11:21</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/another-big-brain-dump-of-interesting-tech-bits-over-the-past-few-weeks/" class="post-title">Another big brain dump of interesting tech bits over the past few weeks</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Another big brain dump of interesting tech bits over the past few weeks&rdquo;</p>
-
-<ul>
-    <li><span style="line-height: 15px;">Thrilled to find that Bluetooth on <a href="http://forum.xda-developers.com/showthread.php?t=2348272">this Play Edition ROM</a> for SGS4 works perfectly. I've gone from 20% success rate auto-connecting to my Lidl car stereo to 100%, Finally!</span></li>
-    <li><a href="http://nodeconf.eu/">Nodeconf Europe</a> is on in Waterford Mon-Wed. Incredible line-up of speakers. Superb IoT sessions set for Monday. A conference driven by expertise, not bullshit-artists hyping vapourware.</li>
-    <li>Ordered an <a href="http://www.espruino.com/">Espruino</a> - run JS on an MCU</li>
-    <li>This --------&gt; &lt;-------- close to ordering a <a href="http://technical.io/">Tessel</a> - moar JS on an MCU, this time with NPM support</li>
-    <li>Waiting to order an <a href="http://blog.arduino.cc/2013/09/05/hands-on-the-arduino-yuns-bridge/">Arduino Yun</a>= Arduino + Wifi machine + bridge libraries</li>
-    <li>Of course I had to back this <a href="http://www.kickstarter.com/projects/556341540/pressy-the-almighty-android-button">Pressy button</a> for my Android phone. One of those slap-head projects that you can't believe you never thought of yourself.</li>
-    <li>What has happened to <a href="http://ql.io">ql.io</a>? Was a very cool open source Node.js project from eBay for querying a variety of web-services using a SQL like language. Doing joins across data from multiple sites was damned impressive. Have they shut it down?</li>
-    <li>Finally got <a href="https://twitter.com/conoro/status/374180519564836864">Arduino talking to Raspberry Pi</a> using two nRF24L01+ 2.4GHz devices. The libraries work great but it was the error-riddled blogposts by the author that made it take so long. I'll write up my own with the correct info soon. However it is not "<a href="https://twitter.com/AndrewGraley/status/374229759150264320">Intrinsically Safe</a>".</li>
-    <li>More MBP stupidity - horrible monochrome mini icons; favicons on Safari?; How do I discover that Safari is how to access the internet?; Caps Lock key in 2013 why?; but tiny arrow keys; no UK layout keymap for external keyboards; try to remember print-screen three-finger-salute; Magic Mouse hurts; DMG files - oh my god; Finder, oh hello 1989.</li>
-    <li><a href="http://www.amazon.com/Apple-iPad-Keyboard-Dock-Package/dp/B0040HEMP8">Apple keyboard dock for iPad</a> is one of the worst pieces of industrial design of all time. Hilariously unstable and unusable. Going to hack a USB cable for it to see if it'll work as a PC keyboard since the buttons are nice.</li>
-    <li><a href="http://www.amazon.co.uk/Logitech-Ultrathin-Keyboard-Cover-iPad/dp/B00835UQK8/">Logitech Ultra-thin keyboard case</a> for iPad is one of the best pieces of industrial design I've used. My Dad liking it a lot too. He may say bye bye to his heavy laptop.</li>
-    <li><a href="http://fromscratched.nl/index.php/shrimpkey-maak-je-eigen-makeymakey-deel-1/?lang=en">ShrimpKey</a> - Take the Shrimp DIY Arduino and turn it into a DIY Makey Makey. Neat.</li>
-    <li>Two different HDMI to VGA adapters cause horrendous pulsating noise on the analogue audio output of all my Raspberry Pis. Anyone else seeing/hearing this?</li>
-    <li>Only getting a 65Mbs connection from SGS4 phone to a Wireless-N AP when I'm right beside it. I have channel set not to overlap with any others. Where the hell is this mythical 300Mbs then?</li>
-    <li>My <a href="http://conoroneill.net/a-simple-tool-to-bulk-import-your-runkeeper-data-into-endomondo/">Runkeeper to Endomondo import tool</a> now supports Sports Tracker too</li>
-    <li><a href="http://jasonmadigan.com/2013/07/04/high-altitude-adventures-part-3/">Very very neat helium balloon project</a> by Jason Madigan</li>
-    <li>XBMC now supports <a href="http://xbmc.org/xbmc-13-gotham-august-cycle/">hardware video decoding on Android</a>. Unfortunately not on Allwinner or AMLogic chips which is a total bummer as a large percentage of cheap devices use them. Fault lies totally with Allwinner and AMLogic. The <a href="http://www.xbmcandroid.com/2013/05/04/finally-a-stable-release-of-our-end-user-friendly-xaf-custom-build-of-xbmc-for-android-is-out/">unofficial XBMC for Android</a> works like a charm on my SGS4.</li>
-    <li>No software application is complete until you can write code inside it. <a href="https://plus.google.com/100132233764003563318/posts/JMM8j4sPbsk">Code editor with Git support inside Chrome</a>.</li>
-    <li>I'm sure I've forgotten 10 other things.</li>
-</ul>
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
@@ -782,7 +846,7 @@ The Raspberry Pi libraries and sample code are obviously in C which is probably 
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 7 of 73</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 7 of 74</span>
     
       <a href="/page/8/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

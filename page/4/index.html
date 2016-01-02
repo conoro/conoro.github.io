@@ -81,6 +81,40 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">09 Sep 2014, 06:45</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/hi-im-batman-check-out-my-motorised-lego-helicopter/" class="post-title">Hi I&#39;m Batman. Check out my motorised Lego helicopter.</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>I have long bemoaned Lego&rsquo;s approach to adding electronics/power to their kits. Technics seems to be its own little sub-section and Mindstorms is a crazy waste of money in an Arduino and Raspberry Pi world. Now that they are the biggest toy company globally, I&rsquo;d love to see how either of those product ranges are adding to the bottom line.</p>
+
+<p>In that spirit I was very excited about the possibilities of the Lego Batman kit I got in Hamley&rsquo;s recently. After beating back the sales people who tried to sell me blue or white Batmen (are they completely insane?), I finally found a proper black one from the movie.</p>
+
+<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/09/lego_batman_helicopter.jpg" alt="First Time" title="Lego Batman Helicopter" /></p>
+
+<p>On Saturday, I started assembly with my two daughters and a small bit of help/interest from one of the boys. When I say &ldquo;I started assembly&rdquo;, I really mean I handed the pieces to the girls who then clicked them into place with zero delay and almost no reference to the instructions. Their spatial reasoning seems to be at 1000x the speed of mine.</p>
+
+<p>We were thrilled with the result but I have bigger plans for this helicopter. Phase one was the motor for the rotor. I have a bunch of a rumble motors from broken original XBOX controllers and it was a trivial task to hotglue on a piece of metal to connect it to the rotor.</p>
+
+<p>I tried to zip tie the motor to the helicopter but then the general solution dawned on me: I should be hotgluing these add-ons to pieces of lego and then it becomes a simple exercise to add/remove them from kits, depending on the mood you are in.</p>
+
+<p>This worked like a charm and all of the kids were suitably impressed. Here it is in action. Watch those fingers!</p>
+
+<iframe width="853" height="480" src="//www.youtube.com/embed/w0WKrfKpE7g" frameborder="0" allowfullscreen></iframe>
+
+<p>We&rsquo;ll switch to a LiPo battery and smaller switch and wiring later in the week. The kids have also suggested the next set of improvements which we&rsquo;ll do next weekend. Yes of course it involves LEDs.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">05 Jul 2014, 12:02</h1>
                 <section class="post">
                     <header class="post-header">
@@ -454,63 +488,6 @@ function getContentTypeByFile(fileName) {
                     </div>
                 </section>
                 
-                <h1 class="content-subhead">01 Jun 2014, 15:48</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/creating-a-valid-ops-file-in-json-format-for-minecraft-179/" class="post-title">Creating a valid ops file in JSON format for Minecraft 1.7.9</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>Our 8yo wanted a local server on his laptop today so I grabbed the latest 1.7.9 server exe from the Minecraft site and ran it in its own directory. It created the usual files and gave a GUI-style interface with no obvious console like the raw Java version. Fionn then asked me to make him an Op so he could change things. And it was all downhill from there.</p>
-
-<p>The standard ops.txt was missing but there was an ops.json containing just two square brackets. No amount of messing with creating an ops.txt or putting his username inside the brackets of the json file worked. Over an hour of googling finally got me close. In the recent versions of Minecraft, they have moved to using JSON instead of .txt for config files and they are rolling out the idea of UUIDs so that you can easily change your username. Both are reasonable changes but implemented terribly in this case. Unless the format of your json file in 100% correct, it doesn&rsquo;t throw an error, it just deletes it!</p>
-
-<p>So after more than 10 attempts, this is what you need:</p>
-
-<ul>
-<li><p>Find your UUID. Note that several sites claim to generate this for you but they are missing the dashes in the UUID. The one that worked for me was <a href="http://minecraft-techworld.com/uuid-lookup-tool">this one</a>. Enter your username and get something like 54d61e19-71cc-477d-8215-8a11c41f5211 back.</p></li>
-
-<li><p>Edit ops.json in a text editor and replace the contents as follows:</p></li>
-</ul>
-
-<pre><code class="language-javascript">[
-  {
-    &quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
-    &quot;name&quot;: &quot;bobloblaw&quot;,
-    &quot;level&quot;: 4
-  }
-] 
-</code></pre>
-
-<ul>
-<li>If you need more than one Op, do it like so.
-<code>javascript
-[
-{
-&quot;uuid&quot;: &quot;54d61e19-71cc-477d-8215-8a11c41f5211&quot;,
-&quot;name&quot;: &quot;bobloblaw&quot;,
-&quot;level&quot;: 4
-},
-{
-&quot;uuid&quot;: &quot;44d61e69-6166-444d-8665-6a11567f5211&quot;,
-&quot;name&quot;: &quot;mrsmines&quot;,
-&quot;level&quot;: 4
-}
-] 
-</code></li>
-</ul>
-
-<p>That should be all you need. Leave a comment if any problems with it.</p>
-
-                    </div>
-                </section>
-                
             </div>
             
 <div class="pagination">
@@ -520,7 +497,7 @@ function getContentTypeByFile(fileName) {
         <i class="fa fa-angle-double-left"></i>&nbsp;Newer
       </a>
       
-    <span class="post-list-pagination-item post-list-pagination-item-current">Page 4 of 73</span>
+    <span class="post-list-pagination-item post-list-pagination-item-current">Page 4 of 74</span>
     
       <a href="/page/5/" class="post-list-pagination-item pure-button post-list-pagination-item-next">
         Older&nbsp;<i class="fa fa-angle-double-right"></i>

@@ -6,8 +6,28 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 2016 10:59:32 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Jan 2016 13:00:29 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>When will Car Insurance Monitoring Apps become mandatory? 5yrs?</title>
+      <link>http://conoroneill.net/when-will-car-insurance-monitoring-apps-become-mandatory/</link>
+      <pubDate>Sat, 02 Jan 2016 13:00:29 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/when-will-car-insurance-monitoring-apps-become-mandatory/</guid>
+      <description>
+
+&lt;p&gt;My Car Insurance Broker, 123.ie just offered me up to 10% off my 2016 premium if I installed a driving monitoring app on my phone.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ia801809.us.archive.org/32/items/Orwell1984preywo/orwell1984preywo.pdf&#34;&gt;No thanks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;But when does it go from &amp;ldquo;get a discount&amp;rdquo; to &amp;ldquo;we won&amp;rsquo;t insure you unless you install this app&amp;rdquo;?&lt;/p&gt;
+
+&lt;h2 id=&#34;the-email:e2b6c4ebc89eb12d3dc2d0642245ebc1&#34;&gt;The email:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/01/123discount.jpg&#34; alt=&#34;123 Discount&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>How cheaply can you build a full Raspberry #PiZero computer?</title>
@@ -1505,46 +1525,6 @@ setWatch(function() {
 }, BTN, {debounce:100,repeat:true, edge:&amp;quot;rising&amp;quot;});
 
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Node v0.10.40 and v0.12.7 for ARM v7 and v6 (Raspberry Pi, Raspberry Pi 2, Banana Pi, ODroid C1) available</title>
-      <link>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/</link>
-      <pubDate>Sat, 11 Jul 2015 19:56:57 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/node-v01040-and-v0127-for-arm-v7-raspberry-pi-2-banana-pi-odroid-c1-available/</guid>
-      <description>&lt;p&gt;I compiled both on a Banana Pi for a change. Nothing special for the 0.12 build, and ./configure &amp;ndash;without-snapshot for the 0.10 build.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;make test&amp;rdquo; threw up the usual 7 minor errors or so.&lt;/p&gt;
-
-&lt;p&gt;I ran both Banana Pi and Raspberry Pi 2 without any immediate obvious issues.&lt;/p&gt;
-
-&lt;p&gt;Enjoy.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz&#34;&gt;node-v0.10.40-linux-arm-v7.tar.gz&lt;/a&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.12.7-linux-arm-v7.tar.gz&#34;&gt;node-v0.12.7-linux-arm-v7.tar.gz&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://blog.nodejs.org/2015/07/09/node-v0-10-40-maintenance/&#34;&gt;node v0.10.40 release notes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://blog.nodejs.org/2015/07/10/node-v0-12-7-stable/&#34;&gt;node-v0.12.7 release notes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir nodetemp
-cd nodetemp
-wget http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v7.tar.gz
-tar -zxvf node-v0.10.40-linux-arm-v7.tar.gz
-cd usr/local
-sudo cp -R * /usr/local/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;UPDATE: I also built 0.10.40 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
-* &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/node-v0.10.40-linux-arm-v6.tar.gz&#34;&gt;node-v0.10.40-linux-arm-v6.tar.gz&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;UPDATE 2: I also built 0.12.7 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
-* &lt;a href=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/node-v0.12.7-linux-arm-v6.tar.gz&#34;&gt;node-v0.12.7-linux-arm-v6.tar.gz&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
