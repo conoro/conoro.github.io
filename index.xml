@@ -188,13 +188,13 @@ func main() {
 
 &lt;h2 id=&#34;database:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Database&lt;/h2&gt;
 
-&lt;p&gt;Not so much luck with embedded databases I&amp;rsquo;m afraid. I&amp;rsquo;ll have to stick to JSON files only.&lt;/p&gt;
+&lt;p&gt;Not so much luck with embedded databases I&amp;rsquo;m afraid. I&amp;rsquo;ll have to stick to JSON files only (or try &lt;a href=&#34;https://github.com/cznic/kv&#34;&gt;kv&lt;/a&gt;, &lt;a href=&#34;https://github.com/peterbourgon/diskv&#34;&gt;diskv&lt;/a&gt;, &lt;a href=&#34;https://github.com/steveyen/gkvlite&#34;&gt;gkvlite&lt;/a&gt;).&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;Bolt&lt;/a&gt; has some native code which isn&amp;rsquo;t available on MIPS32 so it won&amp;rsquo;t compile. Otherwise I&amp;rsquo;m using this on another project.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/mattn/go-sqlite3&#34;&gt;go-sqlite3&lt;/a&gt; has a C library dependency so it also won&amp;rsquo;t cross-compile.&lt;/li&gt;
 &lt;li&gt;I gave up trying to get &lt;a href=&#34;https://github.com/cznic/ql&#34;&gt;ql&lt;/a&gt; to do anything, even on Windows and Linux. It doesn&amp;rsquo;t like standard SQL syntax and I ran out of patience with the lack of example code.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;tiedot&lt;/a&gt; generates a large number of massive files which the Onion wouldn&amp;rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;tiedot&lt;/a&gt; generates a large number of massive files which the Onion wouldn&amp;rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry. Actually it doesn&amp;rsquo;t like 32-bit systems so forget that.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/syndtr/goleveldb&#34;&gt;goleveldb&lt;/a&gt; looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB. it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows. Anyway, here&amp;rsquo;s the code which crashes if you want to try it out yourself:&lt;/li&gt;
 &lt;/ul&gt;
 

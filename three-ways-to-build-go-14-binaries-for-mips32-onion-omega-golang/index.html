@@ -279,13 +279,13 @@ func main() {
 
 <h2 id="database:d02f86b4d8f79af4cbc61b2378ee241c">Database</h2>
 
-<p>Not so much luck with embedded databases I&rsquo;m afraid. I&rsquo;ll have to stick to JSON files only.</p>
+<p>Not so much luck with embedded databases I&rsquo;m afraid. I&rsquo;ll have to stick to JSON files only (or try <a href="https://github.com/cznic/kv">kv</a>, <a href="https://github.com/peterbourgon/diskv">diskv</a>, <a href="https://github.com/steveyen/gkvlite">gkvlite</a>).</p>
 
 <ul>
 <li><a href="https://github.com/boltdb/bolt">Bolt</a> has some native code which isn&rsquo;t available on MIPS32 so it won&rsquo;t compile. Otherwise I&rsquo;m using this on another project.</li>
 <li><a href="https://github.com/mattn/go-sqlite3">go-sqlite3</a> has a C library dependency so it also won&rsquo;t cross-compile.</li>
 <li>I gave up trying to get <a href="https://github.com/cznic/ql">ql</a> to do anything, even on Windows and Linux. It doesn&rsquo;t like standard SQL syntax and I ran out of patience with the lack of example code.</li>
-<li><a href="https://github.com/HouzuoGuo/tiedot">tiedot</a> generates a large number of massive files which the Onion wouldn&rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry.</li>
+<li><a href="https://github.com/HouzuoGuo/tiedot">tiedot</a> generates a large number of massive files which the Onion wouldn&rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry. Actually it doesn&rsquo;t like 32-bit systems so forget that.</li>
 <li><a href="https://github.com/syndtr/goleveldb">goleveldb</a> looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB. it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows. Anyway, here&rsquo;s the code which crashes if you want to try it out yourself:</li>
 </ul>
 
