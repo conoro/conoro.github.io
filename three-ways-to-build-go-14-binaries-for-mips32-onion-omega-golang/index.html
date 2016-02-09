@@ -120,7 +120,7 @@
 
 <p>I&rsquo;ve been able to build the binaries on Linux, Windows and in a Docker container. All are easy.</p>
 
-<h2 id="linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Linux (or Linux VM on Windows)</h2>
+<h1 id="linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Linux (or Linux VM on Windows)</h1>
 
 <p>Following <a href="http://www.black-swift.com/forum/suggestion-box/59-go-1-4-2-on-black-swift">Cathal&rsquo;s simple instructions</a>, I was able to build Go for MIPS32 in a few minutes in a Linux VM on my main Windows machine. I then cross-compiled a Hello World and scp&rsquo;ed it to the Omega. It worked first time!</p>
 
@@ -141,13 +141,13 @@ vi helloworld.go
 go build helloworld.go
 </code></pre>
 
-<h2 id="windows-10:d02f86b4d8f79af4cbc61b2378ee241c">Windows 10</h2>
+<h1 id="windows-10:d02f86b4d8f79af4cbc61b2378ee241c">Windows 10</h1>
 
 <p>I was very surprised this worked but of course Go is strongly cross-platform. My standard build setup for Node.js native modules did the trick. You&rsquo;ll probably need Visual Studio Community 2015 and Git for Windows. Then:</p>
 
 <p>Open a CMD prompt (note I have all my code on D: drive)</p>
 
-<pre><code>d:
+<pre><code class="language-dos">d:
 cd gitwork
 git clone https://github.com/gomini/go-mips32.git
 cd go-mips32\src
@@ -158,7 +158,7 @@ make.bat
 
 <p>I then created a simple CMD file which sets everything up when I need to build for MIPS so it doesn&rsquo;t interfere with my main Go install.</p>
 
-<pre><code class="language-bat">set GOOS=linux
+<pre><code class="language-dos">set GOOS=linux
 set GOARCH=mips32
 set GOROOT=d:\gitwork\go-mips32
 set GOPATH=d:\gitwork\go
@@ -170,7 +170,9 @@ CMD
 
 <p>For Windows I use WinSCP to copy the files to the Omega. For some reason Filezilla SFTP has a problem talking to it.</p>
 
-<h2 id="docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Docker Container on Windows</h2>
+<h1 id="docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Docker Container on Windows</h1>
+
+<h2 id="hello-world:d02f86b4d8f79af4cbc61b2378ee241c">Hello World</h2>
 
 <p>To get more familiar with Docker I decided to create a Docker image that others can use. That turned out to be pretty easy too. Here is the Dockerfile:</p>
 
@@ -214,18 +216,20 @@ WORKDIR $GOPATH/src
 
 <p>The full set of steps for Windows are as follows:</p>
 
-<ol>
+<ul>
 <li>Install <a href="https://www.docker.com/products/docker-toolbox">Docker Toolbox for Windows</a>. It&rsquo;ll also install VirtualBox if you don&rsquo;t already have it.</li>
 <li>Run a Docker shell and type:</li>
-</ol>
+</ul>
 
-<pre><code>docker run -t -i conoro/go-mips32:v2 /bin/sh
+<pre><code>docker run -t -i conoro/go-mips32:v1 /bin/sh
 </code></pre>
 
-<ol>
+<p>(Note v2 has some problems I need to fix so you&rsquo;ll need to manually install openssh and git)</p>
+
+<ul>
 <li>You&rsquo;ll now be at a Linux prompt and you can type:   <em>go version</em></li>
 <li>Then create a Hello World using:    <em>vi helloworld.go</em></li>
-</ol>
+</ul>
 
 <pre><code class="language-go">package main
 
@@ -236,11 +240,13 @@ func main() {
 }
 </code></pre>
 
-<ol>
+<ul>
 <li>Compile it with:   <em>go build helloworld.go</em></li>
 <li>Copy it to the Onion Omega with:     <em>scp helloworld root@ip-of-your-onion/helloworld</em></li>
 <li>Open a shell on your Omega with the webapp or Putty and just type:   <em>helloworld</em></li>
-</ol>
+</ul>
+
+<h2 id="web-app:d02f86b4d8f79af4cbc61b2378ee241c">Web App</h2>
 
 <p>A more advanced example which also works perfectly is to run a web-app using the <a href="https://github.com/gin-gonic/gin">Gin</a> framework. For that, all you need to do is:</p>
 
@@ -270,6 +276,46 @@ func main() {
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/02/gin_ping_omega.jpg" alt="Gin Ping Onion Omega" /></p>
 
 <p>Note I also built this using the Windows setup for comparison and it worked too.</p>
+
+<h2 id="database:d02f86b4d8f79af4cbc61b2378ee241c">Database</h2>
+
+<p>Not so much luck with embedded databases I&rsquo;m afraid. I&rsquo;ll have to stick to JSON files only.</p>
+
+<ul>
+<li><a href="https://github.com/boltdb/bolt">Bolt</a> has some native code which isn&rsquo;t available on MIPS32 so it won&rsquo;t compile. Otherwise I&rsquo;m using this on another project.</li>
+<li><a href="https://github.com/mattn/go-sqlite3">go-sqlite3</a> has a C library dependency so it also won&rsquo;t cross-compile.</li>
+<li>I gave up trying to get <a href="https://github.com/cznic/ql">ql</a> to do anything, even on Windows and Linux. It doesn&rsquo;t like standard SQL syntax and I ran out of patience with the lack of example code.</li>
+<li><a href="https://github.com/HouzuoGuo/tiedot">tiedot</a> generates a large number of massive files which the Onion wouldn&rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry.</li>
+<li><a href="https://github.com/syndtr/goleveldb">goleveldb</a> looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB. it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows. Anyway, here&rsquo;s the code which crashes if you want to try it out yourself:</li>
+</ul>
+
+<pre><code class="language-bash">go get github.com/syndtr/goleveldb/leveldb
+</code></pre>
+
+<p>then in vi:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;github.com/syndtr/goleveldb/leveldb&quot;
+)
+
+func main() {
+	db, _ := leveldb.OpenFile(&quot;./leveltest.db&quot;, nil)
+	defer db.Close()
+	data, err := db.Get([]byte(&quot;keyyeah&quot;), nil)
+	if err == leveldb.ErrNotFound {
+		_ = db.Put([]byte(&quot;keyyeah&quot;), []byte(&quot;valueyeah&quot;), nil)
+		fmt.Println(&quot;Inserted Key/Value&quot;)
+	}
+	data, _ = db.Get([]byte(&quot;keyyeah&quot;), nil)
+	fmt.Println(string(data))
+}
+</code></pre>
+
+<h1 id="conclusion:d02f86b4d8f79af4cbc61b2378ee241c">Conclusion</h1>
 
 <p>I&rsquo;m looking forward to running a lot more code on the Omega now.</p>
 

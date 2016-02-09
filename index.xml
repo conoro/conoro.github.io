@@ -29,7 +29,7 @@
 
 &lt;p&gt;I&amp;rsquo;ve been able to build the binaries on Linux, Windows and in a Docker container. All are easy.&lt;/p&gt;
 
-&lt;h2 id=&#34;linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Linux (or Linux VM on Windows)&lt;/h2&gt;
+&lt;h1 id=&#34;linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Linux (or Linux VM on Windows)&lt;/h1&gt;
 
 &lt;p&gt;Following &lt;a href=&#34;http://www.black-swift.com/forum/suggestion-box/59-go-1-4-2-on-black-swift&#34;&gt;Cathal&amp;rsquo;s simple instructions&lt;/a&gt;, I was able to build Go for MIPS32 in a few minutes in a Linux VM on my main Windows machine. I then cross-compiled a Hello World and scp&amp;rsquo;ed it to the Omega. It worked first time!&lt;/p&gt;
 
@@ -50,13 +50,13 @@ vi helloworld.go
 go build helloworld.go
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;windows-10:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Windows 10&lt;/h2&gt;
+&lt;h1 id=&#34;windows-10:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Windows 10&lt;/h1&gt;
 
 &lt;p&gt;I was very surprised this worked but of course Go is strongly cross-platform. My standard build setup for Node.js native modules did the trick. You&amp;rsquo;ll probably need Visual Studio Community 2015 and Git for Windows. Then:&lt;/p&gt;
 
 &lt;p&gt;Open a CMD prompt (note I have all my code on D: drive)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;d:
+&lt;pre&gt;&lt;code class=&#34;language-dos&#34;&gt;d:
 cd gitwork
 git clone https://github.com/gomini/go-mips32.git
 cd go-mips32\src
@@ -67,7 +67,7 @@ make.bat
 
 &lt;p&gt;I then created a simple CMD file which sets everything up when I need to build for MIPS so it doesn&amp;rsquo;t interfere with my main Go install.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;set GOOS=linux
+&lt;pre&gt;&lt;code class=&#34;language-dos&#34;&gt;set GOOS=linux
 set GOARCH=mips32
 set GOROOT=d:\gitwork\go-mips32
 set GOPATH=d:\gitwork\go
@@ -79,7 +79,9 @@ CMD
 
 &lt;p&gt;For Windows I use WinSCP to copy the files to the Omega. For some reason Filezilla SFTP has a problem talking to it.&lt;/p&gt;
 
-&lt;h2 id=&#34;docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Docker Container on Windows&lt;/h2&gt;
+&lt;h1 id=&#34;docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Docker Container on Windows&lt;/h1&gt;
+
+&lt;h2 id=&#34;hello-world:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Hello World&lt;/h2&gt;
 
 &lt;p&gt;To get more familiar with Docker I decided to create a Docker image that others can use. That turned out to be pretty easy too. Here is the Dockerfile:&lt;/p&gt;
 
@@ -123,18 +125,20 @@ WORKDIR $GOPATH/src
 
 &lt;p&gt;The full set of steps for Windows are as follows:&lt;/p&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Install &lt;a href=&#34;https://www.docker.com/products/docker-toolbox&#34;&gt;Docker Toolbox for Windows&lt;/a&gt;. It&amp;rsquo;ll also install VirtualBox if you don&amp;rsquo;t already have it.&lt;/li&gt;
 &lt;li&gt;Run a Docker shell and type:&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;docker run -t -i conoro/go-mips32:v2 /bin/sh
+&lt;pre&gt;&lt;code&gt;docker run -t -i conoro/go-mips32:v1 /bin/sh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
+&lt;p&gt;(Note v2 has some problems I need to fix so you&amp;rsquo;ll need to manually install openssh and git)&lt;/p&gt;
+
+&lt;ul&gt;
 &lt;li&gt;You&amp;rsquo;ll now be at a Linux prompt and you can type:   &lt;em&gt;go version&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Then create a Hello World using:    &lt;em&gt;vi helloworld.go&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
 
@@ -145,11 +149,13 @@ func main() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Compile it with:   &lt;em&gt;go build helloworld.go&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Copy it to the Onion Omega with:     &lt;em&gt;scp helloworld root@ip-of-your-onion/helloworld&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Open a shell on your Omega with the webapp or Putty and just type:   &lt;em&gt;helloworld&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;web-app:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Web App&lt;/h2&gt;
 
 &lt;p&gt;A more advanced example which also works perfectly is to run a web-app using the &lt;a href=&#34;https://github.com/gin-gonic/gin&#34;&gt;Gin&lt;/a&gt; framework. For that, all you need to do is:&lt;/p&gt;
 
@@ -179,6 +185,46 @@ func main() {
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/02/gin_ping_omega.jpg&#34; alt=&#34;Gin Ping Onion Omega&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Note I also built this using the Windows setup for comparison and it worked too.&lt;/p&gt;
+
+&lt;h2 id=&#34;database:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Database&lt;/h2&gt;
+
+&lt;p&gt;Not so much luck with embedded databases I&amp;rsquo;m afraid. I&amp;rsquo;ll have to stick to JSON files only.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;Bolt&lt;/a&gt; has some native code which isn&amp;rsquo;t available on MIPS32 so it won&amp;rsquo;t compile. Otherwise I&amp;rsquo;m using this on another project.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mattn/go-sqlite3&#34;&gt;go-sqlite3&lt;/a&gt; has a C library dependency so it also won&amp;rsquo;t cross-compile.&lt;/li&gt;
+&lt;li&gt;I gave up trying to get &lt;a href=&#34;https://github.com/cznic/ql&#34;&gt;ql&lt;/a&gt; to do anything, even on Windows and Linux. It doesn&amp;rsquo;t like standard SQL syntax and I ran out of patience with the lack of example code.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;tiedot&lt;/a&gt; generates a large number of massive files which the Onion wouldn&amp;rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/syndtr/goleveldb&#34;&gt;goleveldb&lt;/a&gt; looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB. it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows. Anyway, here&amp;rsquo;s the code which crashes if you want to try it out yourself:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get github.com/syndtr/goleveldb/leveldb
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then in vi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+
+	&amp;quot;github.com/syndtr/goleveldb/leveldb&amp;quot;
+)
+
+func main() {
+	db, _ := leveldb.OpenFile(&amp;quot;./leveltest.db&amp;quot;, nil)
+	defer db.Close()
+	data, err := db.Get([]byte(&amp;quot;keyyeah&amp;quot;), nil)
+	if err == leveldb.ErrNotFound {
+		_ = db.Put([]byte(&amp;quot;keyyeah&amp;quot;), []byte(&amp;quot;valueyeah&amp;quot;), nil)
+		fmt.Println(&amp;quot;Inserted Key/Value&amp;quot;)
+	}
+	data, _ = db.Get([]byte(&amp;quot;keyyeah&amp;quot;), nil)
+	fmt.Println(string(data))
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;conclusion:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Conclusion&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;m looking forward to running a lot more code on the Omega now.&lt;/p&gt;
 
