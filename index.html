@@ -81,6 +81,195 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">08 Feb 2016, 17:43</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/three-ways-to-build-go-14-binaries-for-mips32-onion-omega-golang/" class="post-title">Three ways to build Go 1.4 binaries for MIPS32 Onion Omega #golang #docker</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>I previously <a href="http://conoroneill.net/onion-omega-first-impressions-running-golang-nodejs/">wrote about using gccgo</a> to build Go binaries for the <a href="https://onion.io/">Onion Omega</a> due to Go&rsquo;s lack of support for MIPS CPUs. But TBH it&rsquo;s a pain in the butt. Things were looking up when it was revealed that Go 1.6 would have MIPS support but sadly it&rsquo;s for MIPS64 only, for datacenter applications I guess.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/02/onion_omega_small.jpg" alt="Onion Omega" /></p>
+
+<p>However <a href="https://twitter.com/onetruecathal">Cathal Garvey</a> discovered a <a href="https://github.com/gomini/go-mips32">GitHub repo</a> where some lovely person has ported v1.4.2 of Go to MIPS32 and it works perfectly on the Onion Omega (and presumably all other Atheros AR9331 boards).</p>
+
+<p>This is a huge jump forward for the Onion Omega. Language support has been a bit of a problem for me with both Node.js and Go not really being usable there until now.</p>
+
+<p>Due to the lack of storage on the Omega, you won&rsquo;t be able to install the full Go build system there so a cross-compilation setup is needed.</p>
+
+<p>I&rsquo;ve been able to build the binaries on Linux, Windows and in a Docker container. All are easy.</p>
+
+<h2 id="linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Linux (or Linux VM on Windows)</h2>
+
+<p>Following <a href="http://www.black-swift.com/forum/suggestion-box/59-go-1-4-2-on-black-swift">Cathal&rsquo;s simple instructions</a>, I was able to build Go for MIPS32 in a few minutes in a Linux VM on my main Windows machine. I then cross-compiled a Hello World and scp&rsquo;ed it to the Omega. It worked first time!</p>
+
+<p>My steps:</p>
+
+<pre><code>cd
+git clone https://github.com/gomini/go-mips32.git
+cd go-mips32/src
+export GOOS=linux
+export GOARCH=mips32
+sudo mkdir /opt/mipsgo
+./make.bash
+cd ..
+sudo cp -R * /opt/mipsgo
+export GOROOT=/opt/mipsgo
+export PATH=/opt/mipsgo/bin:$PATH
+vi helloworld.go
+go build helloworld.go
+</code></pre>
+
+<h2 id="windows-10:d02f86b4d8f79af4cbc61b2378ee241c">Windows 10</h2>
+
+<p>I was very surprised this worked but of course Go is strongly cross-platform. My standard build setup for Node.js native modules did the trick. You&rsquo;ll probably need Visual Studio Community 2015 and Git for Windows. Then:</p>
+
+<p>Open a CMD prompt (note I have all my code on D: drive)</p>
+
+<pre><code>d:
+cd gitwork
+git clone https://github.com/gomini/go-mips32.git
+cd go-mips32\src
+set GOOS=linux
+set GOARCH=mips32
+make.bat
+</code></pre>
+
+<p>I then created a simple CMD file which sets everything up when I need to build for MIPS so it doesn&rsquo;t interfere with my main Go install.</p>
+
+<pre><code class="language-bat">set GOOS=linux
+set GOARCH=mips32
+set GOROOT=d:\gitwork\go-mips32
+set GOPATH=d:\gitwork\go
+set PATH=d:\gitwork\go-mips32\bin;%PATH%
+CMD
+</code></pre>
+
+<p>When I launch that, I can do the usual go build filename.go. Note that the MIPS port seems to be able to share the same GOPATH as my x86-64 one. Not sure that will work in every case tho e.g. If C modules are bound?</p>
+
+<p>For Windows I use WinSCP to copy the files to the Omega. For some reason Filezilla SFTP has a problem talking to it.</p>
+
+<h2 id="docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Docker Container on Windows</h2>
+
+<p>To get more familiar with Docker I decided to create a Docker image that others can use. That turned out to be pretty easy too. Here is the Dockerfile:</p>
+
+<pre><code>FROM alpine:3.3
+
+ENV GOLANG_VERSION 1.4.2
+ENV GOLANG_SRC_URL https://github.com/gomini/go-mips32.git
+ENV GOOS linux
+ENV GOARCH mips32
+ENV GOROOT /usr/local/go
+
+RUN set -ex \
+	&amp;&amp; apk add --no-cache --virtual .build-deps \
+		bash \
+    git \
+    file \
+		ca-certificates \
+		gcc \
+		musl-dev \
+		openssl \
+    openssh \
+	\
+  &amp;&amp; cd /usr/local/ \
+	&amp;&amp; git clone &quot;$GOLANG_SRC_URL&quot; go \
+	&amp;&amp; cd /usr/local/go/src \
+	&amp;&amp; ./make.bash \
+	\
+	&amp;&amp; apk del .build-deps
+
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+
+RUN rm -rf &quot;$GOROOT/src&quot;
+RUN rm -rf &quot;$GOROOT/test&quot;
+RUN rm -rf &quot;$GOROOT/doc&quot;
+RUN mkdir -p &quot;$GOPATH/src&quot; &quot;$GOPATH/pkg&quot; &quot;$GOPATH/bin&quot; &amp;&amp; chmod -R 777 &quot;$GOPATH&quot;
+WORKDIR $GOPATH/src
+</code></pre>
+
+<p>And you can grab the image from <a href="https://hub.docker.com/r/conoro/go-mips32/">Docker Hub here</a>.</p>
+
+<p>The full set of steps for Windows are as follows:</p>
+
+<ol>
+<li>Install <a href="https://www.docker.com/products/docker-toolbox">Docker Toolbox for Windows</a>. It&rsquo;ll also install VirtualBox if you don&rsquo;t already have it.</li>
+<li>Run a Docker shell and type:</li>
+</ol>
+
+<pre><code>docker run -t -i conoro/go-mips32:v2 /bin/sh
+</code></pre>
+
+<ol>
+<li>You&rsquo;ll now be at a Linux prompt and you can type:   <em>go version</em></li>
+<li>Then create a Hello World using:    <em>vi helloworld.go</em></li>
+</ol>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+	fmt.Println(&quot;Hello, Conor&quot;)
+}
+</code></pre>
+
+<ol>
+<li>Compile it with:   <em>go build helloworld.go</em></li>
+<li>Copy it to the Onion Omega with:     <em>scp helloworld root@ip-of-your-onion/helloworld</em></li>
+<li>Open a shell on your Omega with the webapp or Putty and just type:   <em>helloworld</em></li>
+</ol>
+
+<p>A more advanced example which also works perfectly is to run a web-app using the <a href="https://github.com/gin-gonic/gin">Gin</a> framework. For that, all you need to do is:</p>
+
+<pre><code class="language-bash">go get github.com/gin-gonic/gin
+vi gintest.go
+</code></pre>
+
+<p>then in vi:</p>
+
+<pre><code class="language-go">package main
+
+import &quot;github.com/gin-gonic/gin&quot;
+
+func main() {
+    r := gin.Default()
+    r.GET(&quot;/ping&quot;, func(c *gin.Context) {
+        c.JSON(200, gin.H{
+            &quot;message&quot;: &quot;pong&quot;,
+        })
+    })
+    r.Run() // listen and server on 0.0.0.0:8080
+}
+</code></pre>
+
+<p>Then build that, scp it to the Omega and run it. Then open <a href="http://ip-of-your-onion:8080/ping">http://ip-of-your-onion:8080/ping</a> to see everything working nicely.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/02/gin_ping_omega.jpg" alt="Gin Ping Onion Omega" /></p>
+
+<p>Note I also built this using the Windows setup for comparison and it worked too.</p>
+
+<p>I&rsquo;m looking forward to running a lot more code on the Omega now.</p>
+
+<p>Next step with the Dockerfile is to add some shared directories so I can develop in the main OS and just use Docker for the compilation piece.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">02 Jan 2016, 13:00</h1>
                 <section class="post">
                     <header class="post-header">
@@ -1357,46 +1546,6 @@ done
 <h2 id="next-year:308bcb7036a2d3eb810a4711be2b8022">Next year?</h2>
 
 <p>Hmm not sure. I wanted to do something with ghosts flying down zip wires a few years ago but I just didn&rsquo;t have the knowhow. I&rsquo;m feeling a lot more confident about that now.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">23 Oct 2015, 13:54</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/facebook-is-the-amazon-killer/" class="post-title">Facebook is the Amazon AWS Killer</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>AWS is now an $8Bn business for Amazon. Could anyone have predicted that in 1997 or even 2007? This week I was talking to a few people about who might be able to disrupt AWS. It won&rsquo;t be easy. We immediately discounted the old guys like HP, IBM, Dell etc and even Google seems to be a complete also-ran in IaaS. Microsoft Azure might have potential.</p>
-
-<p>PaaS is separate as it&rsquo;s higher up the stack and makes use of IaaS. I expect Open Source PaaS like <a href="http://www.openshift.com/">OpenShift 3</a> to grow very quickly in the coming years as it makes deployment and management of Apps incredibly easy. Where PaaS might hurt AWS is in abstracting what IaaS you are using, so as long as the feature set is there, you don&rsquo;t care where your Apps are running (apart from Geo lag and data protection laws).</p>
-
-<p>One of the people I talked to thinks that AWS will be slayed by a startup who may not even exist yet. He also felt that smart VPSes like <a href="http://www.digitalocean.com">DigitalOcean</a> might do it. I&rsquo;m a huge fan of DO and gained enormous reliability and speed by switching to it from Google Compute Engine/CloudSQL whilst reducing my bill by 2/3rds. But it still feels like an SME/SMB or individual developer solution.</p>
-
-<p>So I&rsquo;m predicting it&rsquo;ll be Facebook. Why? Think about the following:</p>
-
-<ul>
-<li>They understand building things at massive scale on a global basis</li>
-<li>They build their <a href="http://www.thejournal.ie/facebook-building-data-centre-in-meath-2161944-Jun2015/">own datacenters</a></li>
-<li>They built the <a href="http://www.theguardian.com/technology/2015/sep/25/facebook-datacentre-lulea-sweden-node-pole">most energy efficient computing facility</a> ever</li>
-<li>They created the <a href="http://www.opencompute.org/">Open Compute</a> project</li>
-<li>They have incubated some <a href="https://github.com/facebook">incredible Open Source projects</a> like <a href="http://cassandra.apache.org/">Cassandra</a> and <a href="https://facebook.github.io/react/">React</a></li>
-<li>They use PHP. Forget I mentioned that ;-)</li>
-<li>They understand that <a href="http://ben-evans.com/benedictevans/2015/6/19/presentation-mobile-is-eating-the-world">mobile is eating the world</a> and they own <a href="https://parse.com/">Parse</a></li>
-<li>They understand real-time messaging <a href="https://www.whatsapp.com/">at massive scale</a></li>
-<li>They could do this in their sleep</li>
-</ul>
-
-<p>The big open question is how they do their virtualisation and containerisation. If they have that nailed, then I think they might go for it.</p>
-
-<p>Let&rsquo;s re-visit this post in 5 years.</p>
 
                     </div>
                 </section>

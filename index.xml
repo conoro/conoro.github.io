@@ -6,8 +6,185 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jan 2016 13:00:29 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Feb 2016 17:43:26 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Three ways to build Go 1.4 binaries for MIPS32 Onion Omega #golang #docker</title>
+      <link>http://conoroneill.net/three-ways-to-build-go-14-binaries-for-mips32-onion-omega-golang/</link>
+      <pubDate>Mon, 08 Feb 2016 17:43:26 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/three-ways-to-build-go-14-binaries-for-mips32-onion-omega-golang/</guid>
+      <description>
+
+&lt;p&gt;I previously &lt;a href=&#34;http://conoroneill.net/onion-omega-first-impressions-running-golang-nodejs/&#34;&gt;wrote about using gccgo&lt;/a&gt; to build Go binaries for the &lt;a href=&#34;https://onion.io/&#34;&gt;Onion Omega&lt;/a&gt; due to Go&amp;rsquo;s lack of support for MIPS CPUs. But TBH it&amp;rsquo;s a pain in the butt. Things were looking up when it was revealed that Go 1.6 would have MIPS support but sadly it&amp;rsquo;s for MIPS64 only, for datacenter applications I guess.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/02/onion_omega_small.jpg&#34; alt=&#34;Onion Omega&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However &lt;a href=&#34;https://twitter.com/onetruecathal&#34;&gt;Cathal Garvey&lt;/a&gt; discovered a &lt;a href=&#34;https://github.com/gomini/go-mips32&#34;&gt;GitHub repo&lt;/a&gt; where some lovely person has ported v1.4.2 of Go to MIPS32 and it works perfectly on the Onion Omega (and presumably all other Atheros AR9331 boards).&lt;/p&gt;
+
+&lt;p&gt;This is a huge jump forward for the Onion Omega. Language support has been a bit of a problem for me with both Node.js and Go not really being usable there until now.&lt;/p&gt;
+
+&lt;p&gt;Due to the lack of storage on the Omega, you won&amp;rsquo;t be able to install the full Go build system there so a cross-compilation setup is needed.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been able to build the binaries on Linux, Windows and in a Docker container. All are easy.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Linux (or Linux VM on Windows)&lt;/h2&gt;
+
+&lt;p&gt;Following &lt;a href=&#34;http://www.black-swift.com/forum/suggestion-box/59-go-1-4-2-on-black-swift&#34;&gt;Cathal&amp;rsquo;s simple instructions&lt;/a&gt;, I was able to build Go for MIPS32 in a few minutes in a Linux VM on my main Windows machine. I then cross-compiled a Hello World and scp&amp;rsquo;ed it to the Omega. It worked first time!&lt;/p&gt;
+
+&lt;p&gt;My steps:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd
+git clone https://github.com/gomini/go-mips32.git
+cd go-mips32/src
+export GOOS=linux
+export GOARCH=mips32
+sudo mkdir /opt/mipsgo
+./make.bash
+cd ..
+sudo cp -R * /opt/mipsgo
+export GOROOT=/opt/mipsgo
+export PATH=/opt/mipsgo/bin:$PATH
+vi helloworld.go
+go build helloworld.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;windows-10:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Windows 10&lt;/h2&gt;
+
+&lt;p&gt;I was very surprised this worked but of course Go is strongly cross-platform. My standard build setup for Node.js native modules did the trick. You&amp;rsquo;ll probably need Visual Studio Community 2015 and Git for Windows. Then:&lt;/p&gt;
+
+&lt;p&gt;Open a CMD prompt (note I have all my code on D: drive)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;d:
+cd gitwork
+git clone https://github.com/gomini/go-mips32.git
+cd go-mips32\src
+set GOOS=linux
+set GOARCH=mips32
+make.bat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then created a simple CMD file which sets everything up when I need to build for MIPS so it doesn&amp;rsquo;t interfere with my main Go install.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bat&#34;&gt;set GOOS=linux
+set GOARCH=mips32
+set GOROOT=d:\gitwork\go-mips32
+set GOPATH=d:\gitwork\go
+set PATH=d:\gitwork\go-mips32\bin;%PATH%
+CMD
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When I launch that, I can do the usual go build filename.go. Note that the MIPS port seems to be able to share the same GOPATH as my x86-64 one. Not sure that will work in every case tho e.g. If C modules are bound?&lt;/p&gt;
+
+&lt;p&gt;For Windows I use WinSCP to copy the files to the Omega. For some reason Filezilla SFTP has a problem talking to it.&lt;/p&gt;
+
+&lt;h2 id=&#34;docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Docker Container on Windows&lt;/h2&gt;
+
+&lt;p&gt;To get more familiar with Docker I decided to create a Docker image that others can use. That turned out to be pretty easy too. Here is the Dockerfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM alpine:3.3
+
+ENV GOLANG_VERSION 1.4.2
+ENV GOLANG_SRC_URL https://github.com/gomini/go-mips32.git
+ENV GOOS linux
+ENV GOARCH mips32
+ENV GOROOT /usr/local/go
+
+RUN set -ex \
+	&amp;amp;&amp;amp; apk add --no-cache --virtual .build-deps \
+		bash \
+    git \
+    file \
+		ca-certificates \
+		gcc \
+		musl-dev \
+		openssl \
+    openssh \
+	\
+  &amp;amp;&amp;amp; cd /usr/local/ \
+	&amp;amp;&amp;amp; git clone &amp;quot;$GOLANG_SRC_URL&amp;quot; go \
+	&amp;amp;&amp;amp; cd /usr/local/go/src \
+	&amp;amp;&amp;amp; ./make.bash \
+	\
+	&amp;amp;&amp;amp; apk del .build-deps
+
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+
+RUN rm -rf &amp;quot;$GOROOT/src&amp;quot;
+RUN rm -rf &amp;quot;$GOROOT/test&amp;quot;
+RUN rm -rf &amp;quot;$GOROOT/doc&amp;quot;
+RUN mkdir -p &amp;quot;$GOPATH/src&amp;quot; &amp;quot;$GOPATH/pkg&amp;quot; &amp;quot;$GOPATH/bin&amp;quot; &amp;amp;&amp;amp; chmod -R 777 &amp;quot;$GOPATH&amp;quot;
+WORKDIR $GOPATH/src
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And you can grab the image from &lt;a href=&#34;https://hub.docker.com/r/conoro/go-mips32/&#34;&gt;Docker Hub here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The full set of steps for Windows are as follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a href=&#34;https://www.docker.com/products/docker-toolbox&#34;&gt;Docker Toolbox for Windows&lt;/a&gt;. It&amp;rsquo;ll also install VirtualBox if you don&amp;rsquo;t already have it.&lt;/li&gt;
+&lt;li&gt;Run a Docker shell and type:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;docker run -t -i conoro/go-mips32:v2 /bin/sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;You&amp;rsquo;ll now be at a Linux prompt and you can type:   &lt;em&gt;go version&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Then create a Hello World using:    &lt;em&gt;vi helloworld.go&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import &amp;quot;fmt&amp;quot;
+
+func main() {
+	fmt.Println(&amp;quot;Hello, Conor&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Compile it with:   &lt;em&gt;go build helloworld.go&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Copy it to the Onion Omega with:     &lt;em&gt;scp helloworld root@ip-of-your-onion/helloworld&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open a shell on your Omega with the webapp or Putty and just type:   &lt;em&gt;helloworld&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A more advanced example which also works perfectly is to run a web-app using the &lt;a href=&#34;https://github.com/gin-gonic/gin&#34;&gt;Gin&lt;/a&gt; framework. For that, all you need to do is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get github.com/gin-gonic/gin
+vi gintest.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then in vi:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import &amp;quot;github.com/gin-gonic/gin&amp;quot;
+
+func main() {
+    r := gin.Default()
+    r.GET(&amp;quot;/ping&amp;quot;, func(c *gin.Context) {
+        c.JSON(200, gin.H{
+            &amp;quot;message&amp;quot;: &amp;quot;pong&amp;quot;,
+        })
+    })
+    r.Run() // listen and server on 0.0.0.0:8080
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then build that, scp it to the Omega and run it. Then open &lt;a href=&#34;http://ip-of-your-onion:8080/ping&#34;&gt;http://ip-of-your-onion:8080/ping&lt;/a&gt; to see everything working nicely.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/02/gin_ping_omega.jpg&#34; alt=&#34;Gin Ping Onion Omega&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note I also built this using the Windows setup for comparison and it worked too.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m looking forward to running a lot more code on the Omega now.&lt;/p&gt;
+
+&lt;p&gt;Next step with the Dockerfile is to add some shared directories so I can develop in the main OS and just use Docker for the compilation piece.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>When will Car Insurance Monitoring Apps become mandatory? 5yrs?</title>
@@ -1416,120 +1593,6 @@ socket.connect(&#39;tcp://127.0.0.1:9998&#39;);
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker01b.jpg&#34; alt=&#34;In Minecraft&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I totally love the intersection of 3D design, 3D printing and Minecraft - the real and the virtual coming together. The younger kids are gonna be psyched when I show em!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Creating an OTP fob compatible with Google Authenticator using an Espruino Pico</title>
-      <link>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/</link>
-      <pubDate>Wed, 22 Jul 2015 08:14:26 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/creating-an-otp-fob-compatible-with-google-authenticator-using-an-espruino-pico/</guid>
-      <description>&lt;p&gt;Now that the &lt;a href=&#34;http://www.espruino.com/&#34;&gt;Espruino Pico&lt;/a&gt; has (beta) HID support, it can pretend to be a keyboard or mouse (or other HID compatible device). This makes it possible to send characters to the active window on your Windows/Linux/Mac PC. I&amp;rsquo;ve cobbled together some code which turns the Pico into a device like a YubiKey. Press the button and get the latest auth code pasted automatically for you.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/07/espruino_otp.jpg&#34; alt=&#34;Espruino Pico OTP&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This code is basically just from three sources, merged together with a few tiny tweaks by me.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Caligatio/jsSHA&#34;&gt;jsSHA, a JavaScript implementation of SHA/HMAC&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/&#34;&gt;Generate Time-Based One-Time Passwords With JavaScript&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.espruino.com/USB&#34;&gt;Espruino HID Example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(Note I&amp;rsquo;ve just discovered that Espruino has its own hmac implementation so I can possibly drop jsSHA)&lt;/p&gt;
-
-&lt;p&gt;The main thing you need for this is your Google Authenticator Secret. Unfortunately you can only get this when you have access to the original QR code that you scanned (it&amp;rsquo;s in the URL). But if you are setting up 2FA access to a new service e.g. Digital Ocean, then you can grab the secret and save it in the code. If your system also uses a PIN (e.g. SSO on some corporate sites), save that in the code too.&lt;/p&gt;
-
-&lt;p&gt;You&amp;rsquo;ll need a very recent pre-release Firmware for this to work at all e.g. &lt;a href=&#34;http://www.espruino.com/binaries/git/commits/d3b43aab7efcc42e6f1584c340bd855b1e5af4c6/&#34;&gt;from here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Once that&amp;rsquo;s flashed, go into Settings on the Web IDE and make sure &amp;ldquo;Set Current Time&amp;rdquo; is ticked in the Communications section. Auth Fobs rely on having an accurate time and that setting keeps unsetting itself on my PC.&lt;/p&gt;
-
-&lt;p&gt;Now copy the code below onto the Espruino using the Web IDE and then type save() to make sure it can survive a power-cycle. Remove and re-insert the Pico, press the button and you should get the auth code you need.&lt;/p&gt;
-
-&lt;p&gt;Now for the bad news: This currently doesn&amp;rsquo;t work on my Windows 8.1 PC but works semi-reliably on my work MBP. Once the HID code makes it to production, I&amp;rsquo;m sure it will work fine.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// Code assembled by Conor O&#39;Neill from three sources. None of it copyright me.
-// This code copyright Brian Turek https://github.com/Caligatio/jsSHA https://github.com/Caligatio/jsSHA/blob/master/LICENSE
-&#39;use strict&#39;;(function(E){function t(c,a,e){var g=0,b=[],d=0,f,k,l,h,m,w,n,q=!1,r=!1,p=[],t=[],v,u=!1;e=e||{};f=e.encoding||&amp;quot;UTF8&amp;quot;;v=e.numRounds||1;l=y(a,f);if(v!==parseInt(v,10)||1&amp;gt;v)throw Error(&amp;quot;numRounds must a integer &amp;gt;= 1&amp;quot;);if(&amp;quot;SHA-1&amp;quot;===c)m=512,w=z,n=F,h=160;else throw Error(&amp;quot;Chosen SHA variant is not supported&amp;quot;);k=x(c);this.setHMACKey=function(a,b,d){var e;if(!0===r)throw Error(&amp;quot;HMAC key already set&amp;quot;);if(!0===q)throw Error(&amp;quot;Cannot set HMAC key after finalizing hash&amp;quot;);if(!0===u)throw Error(&amp;quot;Cannot set HMAC key after calling update&amp;quot;);
-f=(d||{}).encoding||&amp;quot;UTF8&amp;quot;;b=y(b,f)(a);a=b.binLen;b=b.value;e=m&amp;gt;&amp;gt;&amp;gt;3;d=e/4-1;if(e&amp;lt;a/8){for(b=n(b,a,0,x(c));b.length&amp;lt;=d;)b.push(0);b[d]&amp;amp;=4294967040}else if(e&amp;gt;a/8){for(;b.length&amp;lt;=d;)b.push(0);b[d]&amp;amp;=4294967040}for(a=0;a&amp;lt;=d;a+=1)p[a]=b[a]^909522486,t[a]=b[a]^1549556828;k=w(p,k);g=m;r=!0};this.update=function(a){var c,e,f,h=0,n=m&amp;gt;&amp;gt;&amp;gt;5;c=l(a,b,d);a=c.binLen;e=c.value;c=a&amp;gt;&amp;gt;&amp;gt;5;for(f=0;f&amp;lt;c;f+=n)h+m&amp;lt;=a&amp;amp;&amp;amp;(k=w(e.slice(f,f+n),k),h+=m);g+=h;b=e.slice(h&amp;gt;&amp;gt;&amp;gt;5);d=a%m;u=!0};this.getHash=function(a,e){var f,l,m;if(!0===
-r)throw Error(&amp;quot;Cannot call getHash after setting HMAC key&amp;quot;);m=A(e);switch(a){case &amp;quot;HEX&amp;quot;:f=function(a){return B(a,m)};break;case &amp;quot;B64&amp;quot;:f=function(a){return C(a,m)};break;case &amp;quot;BYTES&amp;quot;:f=D;break;default:throw Error(&amp;quot;format must be HEX, B64, or BYTES&amp;quot;);}if(!1===q)for(k=n(b,d,g,k),l=1;l&amp;lt;v;l+=1)k=n(k,h,0,x(c));q=!0;return f(k)};this.getHMAC=function(a,e){var f,l,p;if(!1===r)throw Error(&amp;quot;Cannot call getHMAC without first setting HMAC key&amp;quot;);p=A(e);switch(a){case &amp;quot;HEX&amp;quot;:f=function(a){return B(a,p)};break;case &amp;quot;B64&amp;quot;:f=
-function(a){return C(a,p)};break;case &amp;quot;BYTES&amp;quot;:f=D;break;default:throw Error(&amp;quot;outputFormat must be HEX, B64, or BYTES&amp;quot;);}!1===q&amp;amp;&amp;amp;(l=n(b,d,g,k),k=w(t,x(c)),k=n(l,h,m,k));q=!0;return f(k)}}function G(c,a,e){var g=c.length,b,d,f,k,l;a=a||[0];e=e||0;l=e&amp;gt;&amp;gt;&amp;gt;3;if(0!==g%2)throw Error(&amp;quot;String of HEX type must be in byte increments&amp;quot;);for(b=0;b&amp;lt;g;b+=2){d=parseInt(c.substr(b,2),16);if(isNaN(d))throw Error(&amp;quot;String of HEX type contains invalid characters&amp;quot;);k=(b&amp;gt;&amp;gt;&amp;gt;1)+l;for(f=k&amp;gt;&amp;gt;&amp;gt;2;a.length&amp;lt;=f;)a.push(0);a[f]|=d&amp;lt;&amp;lt;
-8*(3-k%4)}return{value:a,binLen:4*g+e}}function H(c,a,e){var g=[],b,d,f,k,g=a||[0];e=e||0;d=e&amp;gt;&amp;gt;&amp;gt;3;for(b=0;b&amp;lt;c.length;b+=1)a=c.charCodeAt(b),k=b+d,f=k&amp;gt;&amp;gt;&amp;gt;2,g.length&amp;lt;=f&amp;amp;&amp;amp;g.push(0),g[f]|=a&amp;lt;&amp;lt;8*(3-k%4);return{value:g,binLen:8*c.length+e}}function I(c,a,e){var g=[],b=0,d,f,k,l,h,m,g=a||[0];e=e||0;a=e&amp;gt;&amp;gt;&amp;gt;3;if(-1===c.search(/^[a-zA-Z0-9=+\/]+$/))throw Error(&amp;quot;Invalid character in base-64 string&amp;quot;);f=c.indexOf(&amp;quot;=&amp;quot;);c=c.replace(/\=/g,&amp;quot;&amp;quot;);if(-1!==f&amp;amp;&amp;amp;f&amp;lt;c.length)throw Error(&amp;quot;Invalid &#39;=&#39; found in base-64 string&amp;quot;);
-for(f=0;f&amp;lt;c.length;f+=4){h=c.substr(f,4);for(k=l=0;k&amp;lt;h.length;k+=1)d=&amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&amp;quot;.indexOf(h[k]),l|=d&amp;lt;&amp;lt;18-6*k;for(k=0;k&amp;lt;h.length-1;k+=1){m=b+a;for(d=m&amp;gt;&amp;gt;&amp;gt;2;g.length&amp;lt;=d;)g.push(0);g[d]|=(l&amp;gt;&amp;gt;&amp;gt;16-8*k&amp;amp;255)&amp;lt;&amp;lt;8*(3-m%4);b+=1}}return{value:g,binLen:8*b+e}}function B(c,a){var e=&amp;quot;&amp;quot;,g=4*c.length,b,d;for(b=0;b&amp;lt;g;b+=1)d=c[b&amp;gt;&amp;gt;&amp;gt;2]&amp;gt;&amp;gt;&amp;gt;8*(3-b%4),e+=&amp;quot;0123456789abcdef&amp;quot;.charAt(d&amp;gt;&amp;gt;&amp;gt;4&amp;amp;15)+&amp;quot;0123456789abcdef&amp;quot;.charAt(d&amp;amp;15);return a.outputUpper?e.toUpperCase():e}function C(c,
-a){var e=&amp;quot;&amp;quot;,g=4*c.length,b,d,f;for(b=0;b&amp;lt;g;b+=3)for(f=b+1&amp;gt;&amp;gt;&amp;gt;2,d=c.length&amp;lt;=f?0:c[f],f=b+2&amp;gt;&amp;gt;&amp;gt;2,f=c.length&amp;lt;=f?0:c[f],f=(c[b&amp;gt;&amp;gt;&amp;gt;2]&amp;gt;&amp;gt;&amp;gt;8*(3-b%4)&amp;amp;255)&amp;lt;&amp;lt;16|(d&amp;gt;&amp;gt;&amp;gt;8*(3-(b+1)%4)&amp;amp;255)&amp;lt;&amp;lt;8|f&amp;gt;&amp;gt;&amp;gt;8*(3-(b+2)%4)&amp;amp;255,d=0;4&amp;gt;d;d+=1)8*b+6*d&amp;lt;=32*c.length?e+=&amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&amp;quot;.charAt(f&amp;gt;&amp;gt;&amp;gt;6*(3-d)&amp;amp;63):e+=a.b64Pad;return e}function D(c){var a=&amp;quot;&amp;quot;,e=4*c.length,g,b;for(g=0;g&amp;lt;e;g+=1)b=c[g&amp;gt;&amp;gt;&amp;gt;2]&amp;gt;&amp;gt;&amp;gt;8*(3-g%4)&amp;amp;255,a+=String.fromCharCode(b);return a}function A(c){var a={outputUpper:!1,b64Pad:&amp;quot;=&amp;quot;};
-c=c||{};a.outputUpper=c.outputUpper||!1;a.b64Pad=c.b64Pad||&amp;quot;=&amp;quot;;if(&amp;quot;boolean&amp;quot;!==typeof a.outputUpper)throw Error(&amp;quot;Invalid outputUpper formatting option&amp;quot;);if(&amp;quot;string&amp;quot;!==typeof a.b64Pad)throw Error(&amp;quot;Invalid b64Pad formatting option&amp;quot;);return a}function y(c,a){var e;switch(a){case &amp;quot;UTF8&amp;quot;:case &amp;quot;UTF16BE&amp;quot;:case &amp;quot;UTF16LE&amp;quot;:break;default:throw Error(&amp;quot;encoding must be UTF8, UTF16BE, or UTF16LE&amp;quot;);}switch(c){case &amp;quot;HEX&amp;quot;:e=G;break;case &amp;quot;TEXT&amp;quot;:e=function(e,b,d){var f=[],c=[],l=0,h,m,p,n,q,f=b||[0];b=d||0;p=b&amp;gt;&amp;gt;&amp;gt;3;if(&amp;quot;UTF8&amp;quot;===
-a)for(h=0;h&amp;lt;e.length;h+=1)for(d=e.charCodeAt(h),c=[],128&amp;gt;d?c.push(d):2048&amp;gt;d?(c.push(192|d&amp;gt;&amp;gt;&amp;gt;6),c.push(128|d&amp;amp;63)):55296&amp;gt;d||57344&amp;lt;=d?c.push(224|d&amp;gt;&amp;gt;&amp;gt;12,128|d&amp;gt;&amp;gt;&amp;gt;6&amp;amp;63,128|d&amp;amp;63):(h+=1,d=65536+((d&amp;amp;1023)&amp;lt;&amp;lt;10|e.charCodeAt(h)&amp;amp;1023),c.push(240|d&amp;gt;&amp;gt;&amp;gt;18,128|d&amp;gt;&amp;gt;&amp;gt;12&amp;amp;63,128|d&amp;gt;&amp;gt;&amp;gt;6&amp;amp;63,128|d&amp;amp;63)),m=0;m&amp;lt;c.length;m+=1){q=l+p;for(n=q&amp;gt;&amp;gt;&amp;gt;2;f.length&amp;lt;=n;)f.push(0);f[n]|=c[m]&amp;lt;&amp;lt;8*(3-q%4);l+=1}else if(&amp;quot;UTF16BE&amp;quot;===a||&amp;quot;UTF16LE&amp;quot;===a)for(h=0;h&amp;lt;e.length;h+=1){d=e.charCodeAt(h);&amp;quot;UTF16LE&amp;quot;===a&amp;amp;&amp;amp;(m=d&amp;amp;255,d=m&amp;lt;&amp;lt;8|d&amp;gt;&amp;gt;&amp;gt;8);q=l+p;for(n=q&amp;gt;&amp;gt;&amp;gt;
-2;f.length&amp;lt;=n;)f.push(0);f[n]|=d&amp;lt;&amp;lt;8*(2-q%4);l+=2}return{value:f,binLen:8*l+b}};break;case &amp;quot;B64&amp;quot;:e=I;break;case &amp;quot;BYTES&amp;quot;:e=H;break;default:throw Error(&amp;quot;format must be HEX, TEXT, B64, or BYTES&amp;quot;);}return e}function r(c,a){return c&amp;lt;&amp;lt;a|c&amp;gt;&amp;gt;&amp;gt;32-a}function p(c,a){var e=(c&amp;amp;65535)+(a&amp;amp;65535);return((c&amp;gt;&amp;gt;&amp;gt;16)+(a&amp;gt;&amp;gt;&amp;gt;16)+(e&amp;gt;&amp;gt;&amp;gt;16)&amp;amp;65535)&amp;lt;&amp;lt;16|e&amp;amp;65535}function u(c,a,e,g,b){var d=(c&amp;amp;65535)+(a&amp;amp;65535)+(e&amp;amp;65535)+(g&amp;amp;65535)+(b&amp;amp;65535);return((c&amp;gt;&amp;gt;&amp;gt;16)+(a&amp;gt;&amp;gt;&amp;gt;16)+(e&amp;gt;&amp;gt;&amp;gt;16)+(g&amp;gt;&amp;gt;&amp;gt;16)+(b&amp;gt;&amp;gt;&amp;gt;16)+(d&amp;gt;&amp;gt;&amp;gt;16)&amp;amp;65535)&amp;lt;&amp;lt;16|d&amp;amp;65535}function x(c){if(&amp;quot;SHA-1&amp;quot;===
-c)c=[1732584193,4023233417,2562383102,271733878,3285377520];else throw Error(&amp;quot;No SHA variants supported&amp;quot;);return c}function z(c,a){var e=[],g,b,d,f,k,l,h;g=a[0];b=a[1];d=a[2];f=a[3];k=a[4];for(h=0;80&amp;gt;h;h+=1)e[h]=16&amp;gt;h?c[h]:r(e[h-3]^e[h-8]^e[h-14]^e[h-16],1),l=20&amp;gt;h?u(r(g,5),b&amp;amp;d^~b&amp;amp;f,k,1518500249,e[h]):40&amp;gt;h?u(r(g,5),b^d^f,k,1859775393,e[h]):60&amp;gt;h?u(r(g,5),b&amp;amp;d^b&amp;amp;f^d&amp;amp;f,k,2400959708,e[h]):u(r(g,5),b^d^f,k,3395469782,e[h]),k=f,f=d,d=r(b,30),b=g,g=l;a[0]=p(g,a[0]);a[1]=p(b,a[1]);a[2]=p(d,a[2]);a[3]=p(f,a[3]);
-a[4]=p(k,a[4]);return a}function F(c,a,e,g){var b;for(b=(a+65&amp;gt;&amp;gt;&amp;gt;9&amp;lt;&amp;lt;4)+15;c.length&amp;lt;=b;)c.push(0);c[a&amp;gt;&amp;gt;&amp;gt;5]|=128&amp;lt;&amp;lt;24-a%32;c[b]=a+e;e=c.length;for(a=0;a&amp;lt;e;a+=16)g=z(c.slice(a,a+16),g);return g}&amp;quot;function&amp;quot;===typeof define&amp;amp;&amp;amp;define.amd?define(function(){return t}):&amp;quot;undefined&amp;quot;!==typeof exports?&amp;quot;undefined&amp;quot;!==typeof module&amp;amp;&amp;amp;module.exports?module.exports=exports=t:exports=t:E.jsSHA=t})(this);
-
-// This code copyright Nic Raboy https://blog.nraboy.com/2014/10/generate-time-based-one-time-passwords-javascript/
-TOTP = function() {
-
-    var dec2hex = function(s) {
-        return (s &amp;lt; 15.5 ? &amp;quot;0&amp;quot; : &amp;quot;&amp;quot;) + Math.round(s).toString(16);
-    };
-
-    var hex2dec = function(s) {
-        return parseInt(s, 16);
-    };
-
-    var leftpad = function(s, l, p) {
-        if(l + 1 &amp;gt;= s.length) {
-            s = Array(l + 1 - s.length).join(p) + s;
-        }
-        return s;
-    };
-
-    var base32tohex = function(base32) {
-        var base32chars = &amp;quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ234567&amp;quot;;
-        var bits = &amp;quot;&amp;quot;;
-        var hex = &amp;quot;&amp;quot;;
-        for(var i = 0; i &amp;lt; base32.length; i++) {
-            var val = base32chars.indexOf(base32.charAt(i).toUpperCase());
-            bits += leftpad(val.toString(2), 5, &#39;0&#39;);
-        }
-        for(var i = 0; i + 4 &amp;lt;= bits.length; i+=4) {
-            var chunk = bits.substr(i, 4);
-            hex = hex + parseInt(chunk, 2).toString(16) ;
-        }
-        return hex;
-    };
-
-    this.getOTP = function(secret) {
-        try {
-            var epoch = Math.round(new Date().getTime() / 1000.0);
-            var time = leftpad(dec2hex(Math.floor(epoch / 30)), 16, &amp;quot;0&amp;quot;);
-            var hmacObj = new jsSHA(&amp;quot;SHA-1&amp;quot;, &amp;quot;HEX&amp;quot;);
-			hmacObj.setHMACKey(base32tohex(secret), &amp;quot;HEX&amp;quot;)
-			hmacObj.update(time);
-            var hmac = hmacObj.getHMAC(&amp;quot;HEX&amp;quot;);
-            var offset = hex2dec(hmac.substring(hmac.length - 1));
-            var otp = (hex2dec(hmac.substr(offset * 2, 8)) &amp;amp; hex2dec(&amp;quot;7fffffff&amp;quot;)) + &amp;quot;&amp;quot;;
-            otp = (otp).substr(otp.length - 6, 6);
-        } catch (error) {
-            throw error;
-        }
-        return otp;
-    };
-
-}
-
-var totpObj = new TOTP();
-
-// This code copyright Gordon Williams, Pur3 Ltd.,  https://github.com/espruino/Espruino/blob/master/LICENSE
-var kb = require(&amp;quot;USBKeyboard&amp;quot;);
-
-setWatch(function() {
-  // These two lines by Conor O&#39;Neill :-)
-	var pin = &amp;quot;put_your_PIN_Prefix_here&amp;quot;;
-  kb.type(pin + totpObj.getOTP(&amp;quot;put_your_google_authenticator_secret_here&amp;quot;).toString(), function() {
-        kb.tap(kb.KEY.ENTER);
-    });
-}, BTN, {debounce:100,repeat:true, edge:&amp;quot;rising&amp;quot;});
-
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

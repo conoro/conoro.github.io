@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://conoroneill.net/</loc>
-    <lastmod>2016-01-02T13:00:29+00:00</lastmod>
+    <lastmod>2016-02-08T17:43:26+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://conoroneill.net/three-ways-to-build-go-14-binaries-for-mips32-onion-omega-golang/</loc>
+    <lastmod>2016-02-08T17:43:26+00:00</lastmod>
   </url>
   
   <url>
