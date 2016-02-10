@@ -95,14 +95,14 @@ ENV GOROOT /usr/local/go
 
 RUN set -ex \
 	&amp;amp;&amp;amp; apk add --no-cache --virtual .build-deps \
-		bash \
-    git \
-    file \
-		ca-certificates \
-		gcc \
-		musl-dev \
-		openssl \
-    openssh \
+        bash \
+        git \
+        file \
+        ca-certificates \
+        gcc \
+        musl-dev \
+        openssl \
+        openssh \
 	\
   &amp;amp;&amp;amp; cd /usr/local/ \
 	&amp;amp;&amp;amp; git clone &amp;quot;$GOLANG_SRC_URL&amp;quot; go \
@@ -133,7 +133,7 @@ WORKDIR $GOPATH/src
 &lt;pre&gt;&lt;code&gt;docker run -t -i conoro/go-mips32:v1 /bin/sh
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;(Note v2 has some problems I need to fix so you&amp;rsquo;ll need to manually install openssh and git)&lt;/p&gt;
+&lt;p&gt;(Note v2 has some problems I need to fix so you&amp;rsquo;ll need to manually install openssh and git on v1)&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;You&amp;rsquo;ll now be at a Linux prompt and you can type:   &lt;em&gt;go version&lt;/em&gt;&lt;/li&gt;
@@ -188,47 +188,22 @@ func main() {
 
 &lt;h2 id=&#34;database:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Database&lt;/h2&gt;
 
-&lt;p&gt;Not so much luck with embedded databases I&amp;rsquo;m afraid. I&amp;rsquo;ll have to stick to JSON files only (or try &lt;a href=&#34;https://github.com/cznic/kv&#34;&gt;kv&lt;/a&gt;, &lt;a href=&#34;https://github.com/peterbourgon/diskv&#34;&gt;diskv&lt;/a&gt;, &lt;a href=&#34;https://github.com/steveyen/gkvlite&#34;&gt;gkvlite&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Not so much luck with embedded databases I&amp;rsquo;m afraid. I suspect Bolt and LevelDB are using some more advanced filesystem features which are causing issues on OpenWRT. I lack the expertise to debug.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;Bolt&lt;/a&gt; has some native code which isn&amp;rsquo;t available on MIPS32 so it won&amp;rsquo;t compile. Otherwise I&amp;rsquo;m using this on another project.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/boltdb/bolt&#34;&gt;Bolt&lt;/a&gt; has some CPU specific code which prevented building. I added an entry for MIPS32 (based on i386) and it then cross-compiled but throws error EINVAL when opening DB. Possibly OpenWRT FS related or down to bug in the Go MIPS port. But I&amp;rsquo;m using Bolt with Stow successfully on another non-MIPS32 project.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/mattn/go-sqlite3&#34;&gt;go-sqlite3&lt;/a&gt; has a C library dependency so it also won&amp;rsquo;t cross-compile.&lt;/li&gt;
 &lt;li&gt;I gave up trying to get &lt;a href=&#34;https://github.com/cznic/ql&#34;&gt;ql&lt;/a&gt; to do anything, even on Windows and Linux. It doesn&amp;rsquo;t like standard SQL syntax and I ran out of patience with the lack of example code.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cznic/kv&#34;&gt;kv&lt;/a&gt; has no sample code and my frustration levels with nothing working meant I gave up instantly&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/HouzuoGuo/tiedot&#34;&gt;tiedot&lt;/a&gt; generates a large number of massive files which the Onion wouldn&amp;rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry. Actually it doesn&amp;rsquo;t like 32-bit systems so forget that.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/syndtr/goleveldb&#34;&gt;goleveldb&lt;/a&gt; looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB. it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows. Anyway, here&amp;rsquo;s the code which crashes if you want to try it out yourself:&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/syndtr/goleveldb&#34;&gt;goleveldb&lt;/a&gt; looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB and it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/steveyen/gkvlite&#34;&gt;gkvlite&lt;/a&gt; - It works! Hurrah! Well the sample code works. Now to try it on some simple stuff I&amp;rsquo;ve done elsewhere&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/peterbourgon/diskv&#34;&gt;diskv&lt;/a&gt; - Double hurrah, it seems to work too.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;go get github.com/syndtr/goleveldb/leveldb
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;then in vi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
-
-import (
-	&amp;quot;fmt&amp;quot;
-
-	&amp;quot;github.com/syndtr/goleveldb/leveldb&amp;quot;
-)
-
-func main() {
-	db, _ := leveldb.OpenFile(&amp;quot;./leveltest.db&amp;quot;, nil)
-	defer db.Close()
-	data, err := db.Get([]byte(&amp;quot;keyyeah&amp;quot;), nil)
-	if err == leveldb.ErrNotFound {
-		_ = db.Put([]byte(&amp;quot;keyyeah&amp;quot;), []byte(&amp;quot;valueyeah&amp;quot;), nil)
-		fmt.Println(&amp;quot;Inserted Key/Value&amp;quot;)
-	}
-	data, _ = db.Get([]byte(&amp;quot;keyyeah&amp;quot;), nil)
-	fmt.Println(string(data))
-}
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h1 id=&#34;conclusion:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Conclusion&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;m looking forward to running a lot more code on the Omega now.&lt;/p&gt;
-
-&lt;p&gt;Next step with the Dockerfile is to add some shared directories so I can develop in the main OS and just use Docker for the compilation piece.&lt;/p&gt;
 </description>
     </item>
     

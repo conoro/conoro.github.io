@@ -186,14 +186,14 @@ ENV GOROOT /usr/local/go
 
 RUN set -ex \
 	&amp;&amp; apk add --no-cache --virtual .build-deps \
-		bash \
-    git \
-    file \
-		ca-certificates \
-		gcc \
-		musl-dev \
-		openssl \
-    openssh \
+        bash \
+        git \
+        file \
+        ca-certificates \
+        gcc \
+        musl-dev \
+        openssl \
+        openssh \
 	\
   &amp;&amp; cd /usr/local/ \
 	&amp;&amp; git clone &quot;$GOLANG_SRC_URL&quot; go \
@@ -224,7 +224,7 @@ WORKDIR $GOPATH/src
 <pre><code>docker run -t -i conoro/go-mips32:v1 /bin/sh
 </code></pre>
 
-<p>(Note v2 has some problems I need to fix so you&rsquo;ll need to manually install openssh and git)</p>
+<p>(Note v2 has some problems I need to fix so you&rsquo;ll need to manually install openssh and git on v1)</p>
 
 <ul>
 <li>You&rsquo;ll now be at a Linux prompt and you can type:   <em>go version</em></li>
@@ -279,47 +279,22 @@ func main() {
 
 <h2 id="database:d02f86b4d8f79af4cbc61b2378ee241c">Database</h2>
 
-<p>Not so much luck with embedded databases I&rsquo;m afraid. I&rsquo;ll have to stick to JSON files only (or try <a href="https://github.com/cznic/kv">kv</a>, <a href="https://github.com/peterbourgon/diskv">diskv</a>, <a href="https://github.com/steveyen/gkvlite">gkvlite</a>).</p>
+<p>Not so much luck with embedded databases I&rsquo;m afraid. I suspect Bolt and LevelDB are using some more advanced filesystem features which are causing issues on OpenWRT. I lack the expertise to debug.</p>
 
 <ul>
-<li><a href="https://github.com/boltdb/bolt">Bolt</a> has some native code which isn&rsquo;t available on MIPS32 so it won&rsquo;t compile. Otherwise I&rsquo;m using this on another project.</li>
+<li><a href="https://github.com/boltdb/bolt">Bolt</a> has some CPU specific code which prevented building. I added an entry for MIPS32 (based on i386) and it then cross-compiled but throws error EINVAL when opening DB. Possibly OpenWRT FS related or down to bug in the Go MIPS port. But I&rsquo;m using Bolt with Stow successfully on another non-MIPS32 project.</li>
 <li><a href="https://github.com/mattn/go-sqlite3">go-sqlite3</a> has a C library dependency so it also won&rsquo;t cross-compile.</li>
 <li>I gave up trying to get <a href="https://github.com/cznic/ql">ql</a> to do anything, even on Windows and Linux. It doesn&rsquo;t like standard SQL syntax and I ran out of patience with the lack of example code.</li>
+<li><a href="https://github.com/cznic/kv">kv</a> has no sample code and my frustration levels with nothing working meant I gave up instantly</li>
 <li><a href="https://github.com/HouzuoGuo/tiedot">tiedot</a> generates a large number of massive files which the Onion wouldn&rsquo;t be able to handle. If I can get it down to LevelDB sizes, I might retry. Actually it doesn&rsquo;t like 32-bit systems so forget that.</li>
-<li><a href="https://github.com/syndtr/goleveldb">goleveldb</a> looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB. it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows. Anyway, here&rsquo;s the code which crashes if you want to try it out yourself:</li>
+<li><a href="https://github.com/syndtr/goleveldb">goleveldb</a> looked like it would be perfect but it crashes trying to open a DB it created on the Onion. I have a feeling this is a bug in the MIPS32 port of Go. The crash happens in the Snappy library from what I can see. It can create an empty DB and it can read an empty DB but it crashes on a DB that has entries whether the DB was created on the Onion or on Windows.</li>
+<li><a href="https://github.com/steveyen/gkvlite">gkvlite</a> - It works! Hurrah! Well the sample code works. Now to try it on some simple stuff I&rsquo;ve done elsewhere</li>
+<li><a href="https://github.com/peterbourgon/diskv">diskv</a> - Double hurrah, it seems to work too.</li>
 </ul>
-
-<pre><code class="language-bash">go get github.com/syndtr/goleveldb/leveldb
-</code></pre>
-
-<p>then in vi:</p>
-
-<pre><code class="language-go">package main
-
-import (
-	&quot;fmt&quot;
-
-	&quot;github.com/syndtr/goleveldb/leveldb&quot;
-)
-
-func main() {
-	db, _ := leveldb.OpenFile(&quot;./leveltest.db&quot;, nil)
-	defer db.Close()
-	data, err := db.Get([]byte(&quot;keyyeah&quot;), nil)
-	if err == leveldb.ErrNotFound {
-		_ = db.Put([]byte(&quot;keyyeah&quot;), []byte(&quot;valueyeah&quot;), nil)
-		fmt.Println(&quot;Inserted Key/Value&quot;)
-	}
-	data, _ = db.Get([]byte(&quot;keyyeah&quot;), nil)
-	fmt.Println(string(data))
-}
-</code></pre>
 
 <h1 id="conclusion:d02f86b4d8f79af4cbc61b2378ee241c">Conclusion</h1>
 
 <p>I&rsquo;m looking forward to running a lot more code on the Omega now.</p>
-
-<p>Next step with the Dockerfile is to add some shared directories so I can develop in the main OS and just use Docker for the compilation piece.</p>
 
                     </div>
                     <div id="disqus_thread"></div>
