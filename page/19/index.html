@@ -81,6 +81,44 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">20 May 2012, 10:56</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/lego-case-and-sugru-for-raspberry-pi/" class="post-title">Lego Case and Sugru for Raspberry Pi</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Lego Case and Sugru for Raspberry Pi&rdquo;</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1499.jpg"><img class="alignnone size-large wp-image-734" title="DSCF1499" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1499-1024x768.jpg" alt="" width="584" height="438" /></a></p>
+
+<p>My 8 y/o daughter and I put together this Lego case for <a href="http://www.raspberrypi.org/">Raspberry Pi</a>. All design concepts are hers and she built it. My job was to make it all fit and not wobble. Which of course we did using <a href="http://sugru.com/">Sugru</a>.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1500.jpg"><img class="alignnone size-large wp-image-735" title="DSCF1500" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1500-1024x768.jpg" alt="" width="584" height="438" /></a></p>
+
+<p>The case is a lot bigger than the RPi but that gives us expansion opportunities for USB hubs and battery packs. I like it and it will be our official Raspberry Pi case from now on.</p>
+
+<p>Here are theinsides:</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1503.jpg"><img class="alignnone size-large wp-image-738" title="DSCF1503" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1503-1024x768.jpg" alt="" width="584" height="438" /></a></p>
+
+<p>Finally a video showing it in action with the<a href="http://openelec.tv/">OpenElec</a> version of <a href="http://xbmc.org/">XBMC</a> playing Peppa Pig.</p>
+
+<p>httpv://www.youtube.com/watch?v=vc6RQejTv6Q</p>
+
+<p>Oh, and here&rsquo;s another setup I did last week. RPi running on battery power with wireless mouse and Bluetooth portable fold-up keyboard. I&rsquo;ve ordered a cheap bluetooth mouse so I only need one USB port.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1483.jpg"><img class="alignnone size-large wp-image-737" title="DSCF1483" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/05/DSCF1483-1024x768.jpg" alt="" width="584" height="438" /></a></p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">16 May 2012, 13:52</h1>
                 <section class="post">
                     <header class="post-header">
@@ -363,42 +401,6 @@ I got mine on <a href="http://www.pandawill.com/eken-t02-tablet-pc-7-inch-androi
 <p>Did I mention that it&rsquo;s88, in total, including EMS shipping?</p>
 
 <p>httpv://youtu.be/F2fXHlFTi6E</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">28 Apr 2012, 13:10</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/" class="post-title">First two trivial parts of getting App Inventor working on Raspberry Pi done</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;First two trivial parts of getting App Inventor working on Raspberry Pi done&rdquo;</p>
-
-<p>I&rsquo;ve been playing a small bit with the Raspberry Pi VM on VMware to see what&rsquo;s possible and what isn&rsquo;t. One thing I am eager to try when it arrives on the week of May 14th (YAY!), is to get App Inventor working on it.</p>
-
-<p>There are three basic user parts to App Inventor. The browser-based Designer, the Java-based Blocks Editor and the Phone Emulator (if you don&rsquo;t have a phone).</p>
-
-<p>Yesterday I got the first two bits working with about 2 minutes work. All you need to do is install the OpenJDK. <del>SUN</del>Oracle Java is not available yet.</p>
-
-<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/appinventor_raspberrypi.png"><img class="alignnone size-large wp-image-706" title="appinventor_raspberrypi" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/appinventor_raspberrypi-1024x888.png" alt="" width="584" height="506" /></a></p>
-
-<p>The bit that will need more work is the emulator. I think. Ye see, I grabbed the code for the Linux version of the emulator and followed the simple instructions to build it. Then I saw it was building for i386 and of course the RPi is ARM-based. Damn.</p>
-
-<p>A bit of poking around and I realised we were almost in a recursive loop. I was running ARM Linux in qemu i386 emulator on a Virtual Machine and I was trying to run an ARM emulator inside a another qemu i386 emulator inside that. Yes my head exploded too.</p>
-
-<p>But then sense prevailed and I realised that Android is ARM and RPi is ARM, so do we need an emulator at all, or just an Android image compiled for ARM11 inside some sort of wrapper/container?</p>
-
-<p>As an old Embedded guy I should be all over this but I&rsquo;ve forgotten more than I ever learned about cross-compiling and building OS images. Anyone have any ideas on where to start? I popped a question on the relevant App Inventor Google Group too.</p>
-
-<p>Of course all of this may be moot if the 256MB of RAM and 700MHz CPU is not enough to support all of this. But it&rsquo;s worth a try.</p>
 
                     </div>
                 </section>

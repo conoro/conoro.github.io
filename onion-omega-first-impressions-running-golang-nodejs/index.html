@@ -118,7 +118,7 @@
 
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_kit.jpg" alt="Onion Omega Kit" /></p>
 
-<h2 id="summary-opinion:6373a9f13467451d12a87cf58bb7873b">Summary Opinion</h2>
+<h2 id="summary-opinion">Summary Opinion</h2>
 
 <p>Overall it&rsquo;s a nice board but the lack of &ldquo;buzz&rdquo; around it has me a little worried. The number one thing that projects like this need is community. I think the CHiP might steal a lot of its thunder with more welly at a much lower pricepoint. But perhaps a focus on realtime embedded applications will help here.</p>
 
@@ -128,7 +128,7 @@
 
 <p>Another area it could shine, due to its tiny size and low power consumption is robotics. See my comment below about <a href="http://gobot.io/">Gobot</a>.</p>
 
-<h2 id="node-js-partial-success:6373a9f13467451d12a87cf58bb7873b">Node.js partial success</h2>
+<h2 id="node-js-partial-success">Node.js partial success</h2>
 
 <p>After an initial play around with it, I decided to try out Node and Go. Node was <a href="https://community.onion.io/topic/46/simple-node-js-wrapper-samples">built by a community member</a> but is back on version 0.10.5.</p>
 
@@ -140,7 +140,7 @@
 
 <p>So I gave up on Node for the moment.</p>
 
-<h2 id="golang-1-1-2-first-failed-attempt:6373a9f13467451d12a87cf58bb7873b">Golang 1.1.2 first failed attempt</h2>
+<h2 id="golang-1-1-2-first-failed-attempt">Golang 1.1.2 first failed attempt</h2>
 
 <p>On to Go and a giant big rabbit hole.</p>
 
@@ -214,7 +214,7 @@ mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
 
 <p>I copied it over to the Onion but no joy. It just kept saying &ldquo;not found&rdquo;. Distant memories told me this was related to libraries and versions but nothing I tried worked. So I took a break.</p>
 
-<h2 id="golang-1-1-2-second-successful-attempt:6373a9f13467451d12a87cf58bb7873b">Golang 1.1.2 second successful attempt</h2>
+<h2 id="golang-1-1-2-second-successful-attempt">Golang 1.1.2 second successful attempt</h2>
 
 <p>A while later I decided that what I needed to do was build OpenWRT for the Onion but then I hit a blocker. Onion support was added to OpenWRT in July but the latest version of the toolchain that included Go was from May. So I bit the bullet and manually &ldquo;cherry-picked&rdquo; <a href="https://github.com/GeertJohan/openwrt-go/commits/add-gccgo-and-libgo?author=GeertJohan">all of the author&rsquo;s changes</a> from the older toolchain into the latest version of OpenWRT.</p>
 
@@ -281,7 +281,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/openwrt-ar71xx-generic-onion-omega-squ
 sysupgrade openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin 
 </code></pre>
 
-<h2 id="hello-world-web-server-in-go-on-the-onion-omega:6373a9f13467451d12a87cf58bb7873b">Hello World Web Server in Go on the Onion Omega</h2>
+<h2 id="hello-world-web-server-in-go-on-the-onion-omega">Hello World Web Server in Go on the Onion Omega</h2>
 
 <p>Back to helloworld on the Fedora 22 VM:</p>
 
@@ -296,7 +296,7 @@ mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
 
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/go_on_onion_omega_02.jpg" alt="I love mac and cheese" /></p>
 
-<h2 id="tweeting-from-the-onion-omega-in-go:6373a9f13467451d12a87cf58bb7873b">Tweeting from the Onion Omega in Go</h2>
+<h2 id="tweeting-from-the-onion-omega-in-go">Tweeting from the Onion Omega in Go</h2>
 
 <p>I should have left it at that but no, I wanted to Tweet from the Onion. My problems multiplied. Basically, gccgo doesn&rsquo;t have all the bells and whistles of recent Go and can&rsquo;t handle included packages easily. After some reading and playing, I managed to build a Tweeting App that used the <a href="https://github.com/kurrik/twittergo">Twittergo package</a>. Note you need a local Fedora version of <a href="https://golang.org/dl/">Go installed and configured</a> for &ldquo;go get&rdquo; to work (or just git clone). My $GOPATH is /home/conor/gitwork/go</p>
 
@@ -342,7 +342,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
 
 <p>I now suspect that the Node.js error may have been exactly the same thing but just hidden so I&rsquo;ll go back and try the same for it.</p>
 
-<h2 id="final-notes:6373a9f13467451d12a87cf58bb7873b">Final notes</h2>
+<h2 id="final-notes">Final notes</h2>
 
 <ol>
 <li>That custom firmware I built is missing all of the Onion&rsquo;s own stuff and I&rsquo;m not sure how to add that. However you can easily re-install the latest factory Onion image by wgetting it using the URL you find <a href="http://cloud.onion.io/api/firmware/stable.json">in this file</a> into /tmp using sysupgrade name_of_image.</li>

@@ -81,6 +81,63 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">02 May 2016, 19:32</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/introducing-ytpodders-get-your-fave-youtubers-as-audio-podcasts-on-your-phone/" class="post-title">Introducing YTPodders - Get your fave YouTubers as audio podcasts on your phone</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>Like my kids, I love regular YouTubers. My particular favourites are the tech, craft, metal and woodworking people who make amazing things every week. <a href="https://www.youtube.com/channel/UCjA8vRlL1c7BDixQRJ39-LQ">Those</a> <a href="https://www.youtube.com/user/darbinorvar">gals</a> <a href="https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ">and</a> <a href="https://www.youtube.com/user/jimmydiresta">guys</a> <a href="https://www.youtube.com/channel/UCHWvlZ6jGmXKYa1w8yRVcbA">have</a> <a href="https://www.youtube.com/channel/UCETeXD_3awsQv-9rSdCYXQQ">to</a> <a href="https://www.youtube.com/user/urbanTrash">be</a> <a href="https://www.youtube.com/user/Jayscustomcreations">watched</a> <a href="https://www.youtube.com/channel/UCYdkEm-NjhS8TmLVt_qZy9g">to</a> <a href="https://www.youtube.com/channel/UCkhZ3X6pVbrEs_VzIPfwWgQ">really</a> <a href="https://www.youtube.com/user/arduinoversusevil">get</a> <a href="https://www.youtube.com/user/colinfurze">the</a> <a href="https://www.youtube.com/channel/UCV8D6u7_jkuGf_iUvNzXpmg">value</a> <a href="https://www.youtube.com/user/rusticman1973">from</a> <a href="https://www.youtube.com/user/JoergSprave">them</a> <a href="https://www.youtube.com/channel/UCpV7D0LoRbYhdx2G-whWyog">and</a> <a href="https://www.youtube.com/channel/UCfCKUsN2HmXfjiOJc7z7xBw">here&rsquo;s</a> <a href="https://www.youtube.com/channel/UC6x7GwJxuoABSosgVXDYtTw">a</a> <a href="https://www.youtube.com/channel/UCUaiGrBfRCaC6pL7ZnZjWbg">few</a> <a href="https://www.youtube.com/channel/UCHvBHWBzzB7NyU5tIiEZHBg">more</a> <a href="https://www.youtube.com/user/punishedprops">worth</a> <a href="https://www.youtube.com/user/stevinmarin">looking</a> <a href="https://www.youtube.com/channel/UCAL3JXZSzSm8AlZyD3nQdBA">at</a> <a href="https://www.youtube.com/user/testedcom">too</a>, <a href="https://www.youtube.com/channel/UCupK5wJGXHDemXmHFMCMtHA">of</a> <a href="https://www.youtube.com/user/DrunkenWoodworker">course</a> <a href="https://www.youtube.com/user/thebenheckshow">not</a> <a href="https://www.youtube.com/user/Matthiaswandel">forgetting</a> <a href="https://www.youtube.com/user/ferrynick">these</a> <a href="https://www.youtube.com/user/makemagazine">other</a> <a href="https://www.youtube.com/user/benbrandt22">gems</a>.</p>
+
+<p>But there are others I love equally where it&rsquo;s mostly about what they are saying. For example, <a href="https://www.youtube.com/user/TheGingerRunner">Ethan Newberry</a> (aka The Ginger Runner) does a fantastic weekly live session where he mostly interviews Ultra runners. This works just as well without the video. I listen to this when running or driving. It&rsquo;s seriously one of the best motivational things you can listen to on a marathon!</p>
+
+<p>For a few months I was using <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a> to grab the latest episode video file, then <a href="http://winff.org/html_new/">Winff/ffmeg</a> to convert to MP3, then I manually copied the file to the music player on my Android phone. Not exactly slick.</p>
+
+<p>Of course, I decided to automate it and figured it&rsquo;d take a couple of evenings. Two months later, here we are :-)</p>
+
+<p><img src="https://ytpodders.com/images/YTPodders_256x256_gradient.png" alt="YTPodders" /></p>
+
+<p>Introducing <a href="https://ytpodders.com">YTPodders</a>, an App that does everything you need to have automated podcastification of YouTube Users and Channels. It works very similarly to my manual process as follows:</p>
+
+<ul>
+<li>When you run ytpodders, it checks the list of YouTube Users and Channels you previously added for any new content. It downloads any new ones it finds using youtube-dl</li>
+<li>As part of that download process, youtube-dl uses ffmpeg to convert the videos to MP3 audio</li>
+<li>It copies the MP3s to the YTPodders App directory in Dropbox and waits until they are all synced properly with Dropbox</li>
+<li>It then generates an rss.xml file containing all the entries and tells you the URL of that rss.xml file</li>
+<li>You subscribe to that rss.xml file in your Podcasting App on your phone e.g. <a href="https://play.google.com/store/apps/details?id=mobi.beyondpod&amp;hl=en">BeyondPod</a> on Android.</li>
+<li>The Podcasting App then regularly checks for updates and pulls any new content from Dropbox on to your phone for offline listening.</li>
+</ul>
+
+<p><img src="https://www.dropbox.com/s/22pziqm50ep9r55/beyondpod.png?raw=1" alt="BeyondPod" /></p>
+
+<p>This has been working really well for me for several weeks now. I have a Windows 10 Scheduled Task setup which runs it every morning at 6am. And I have BeyondPod checking a few times a day too. So my phone always has the latest and greatest YouTube MP3s.</p>
+
+<p>The code needs lots of work and there is still a lot of maintenance type functionality that needs to be added (pruning old MP3s; cleaning up when you remove subscriptions etc).</p>
+
+<p>The important thing you need to do is to give <a href="https://ytpodders.com">YTPodders authorisation</a> to access your Dropbox. It only gets access to its own sub-directory in the Apps directory in Dropbox so it can&rsquo;t mess anything else up.</p>
+
+<p>Full installation and usage instructions for End-Users and Developers are over <a href="https://github.com/conoro/ytpodders">on GitHub here</a>.</p>
+
+<p>It has been mostly tested on Windows 10 but also runs on Mac and Linux. The server runs on Windows, OSX, CentOS and Fedora too (presumably any Linux distro).</p>
+
+<p>As this is basically time-shifting for personal use only, it should come under US fair use. The download of the video by youtube-dl should count as a view for advertising purposes. If you are concerned about depriving your favourite YouTubers of income, why not back them on <a href="http://www.patreon.com">Patreon</a>, if they use it? I did that for <a href="https://www.patreon.com/thegingerrunner?ty=c">Ethan</a> because I get so much value as a runner from the videos he creates and the interviews that he does.</p>
+
+<p>Improvements, suggestions and bug reports all gladly accepted <a href="https://github.com/conoro/ytpodders">over on GitHub</a>. The code is written in Go/GoLang, yes it&rsquo;s a giant awful ball of mud hack and it doesn&rsquo;t do multiple downloads in parallel on purpose, not because I can&rsquo;t figure out goroutines :-) But it works.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">08 Feb 2016, 17:43</h1>
                 <section class="post">
                     <header class="post-header">
@@ -112,7 +169,7 @@
 
 <p>I&rsquo;ve been able to build the binaries on Linux, Windows and in a Docker container. All are easy.</p>
 
-<h1 id="linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Linux (or Linux VM on Windows)</h1>
+<h1 id="linux-or-linux-vm-on-windows">Linux (or Linux VM on Windows)</h1>
 
 <p>Following <a href="http://www.black-swift.com/forum/suggestion-box/59-go-1-4-2-on-black-swift">Cathal&rsquo;s simple instructions</a>, I was able to build Go for MIPS32 in a few minutes in a Linux VM on my main Windows machine. I then cross-compiled a Hello World and scp&rsquo;ed it to the Omega. It worked first time!</p>
 
@@ -133,7 +190,7 @@ vi helloworld.go
 go build helloworld.go
 </code></pre>
 
-<h1 id="windows-10:d02f86b4d8f79af4cbc61b2378ee241c">Windows 10</h1>
+<h1 id="windows-10">Windows 10</h1>
 
 <p>I was very surprised this worked but of course Go is strongly cross-platform. My standard build setup for Node.js native modules did the trick. You&rsquo;ll probably need Visual Studio Community 2015 and Git for Windows. Then:</p>
 
@@ -162,9 +219,9 @@ CMD
 
 <p>For Windows I use WinSCP to copy the files to the Omega. For some reason Filezilla SFTP has a problem talking to it.</p>
 
-<h1 id="docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Docker Container on Windows</h1>
+<h1 id="docker-container-on-windows">Docker Container on Windows</h1>
 
-<h2 id="hello-world:d02f86b4d8f79af4cbc61b2378ee241c">Hello World</h2>
+<h2 id="hello-world">Hello World</h2>
 
 <p>To get more familiar with Docker I decided to create a Docker image that others can use. That turned out to be pretty easy too. Here is the Dockerfile:</p>
 
@@ -238,7 +295,7 @@ func main() {
 <li>Open a shell on your Omega with the webapp or Putty and just type:   <em>helloworld</em></li>
 </ul>
 
-<h2 id="web-app:d02f86b4d8f79af4cbc61b2378ee241c">Web App</h2>
+<h2 id="web-app">Web App</h2>
 
 <p>A more advanced example which also works perfectly is to run a web-app using the <a href="https://github.com/gin-gonic/gin">Gin</a> framework. For that, all you need to do is:</p>
 
@@ -269,7 +326,7 @@ func main() {
 
 <p>Note I also built this using the Windows setup for comparison and it worked too.</p>
 
-<h2 id="database:d02f86b4d8f79af4cbc61b2378ee241c">Database</h2>
+<h2 id="database">Database</h2>
 
 <p>Not so much luck with embedded databases I&rsquo;m afraid. I suspect Bolt and LevelDB are using some more advanced filesystem features which are causing issues on OpenWRT. I lack the expertise to debug.</p>
 
@@ -284,7 +341,7 @@ func main() {
 <li><a href="https://github.com/peterbourgon/diskv">diskv</a> - Double hurrah, it seems to work too.</li>
 </ul>
 
-<h1 id="conclusion:d02f86b4d8f79af4cbc61b2378ee241c">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>I&rsquo;m looking forward to running a lot more code on the Omega now.</p>
 
@@ -312,7 +369,7 @@ func main() {
 
 <p>But when does it go from &ldquo;get a discount&rdquo; to &ldquo;we won&rsquo;t insure you unless you install this app&rdquo;?</p>
 
-<h2 id="the-email:e2b6c4ebc89eb12d3dc2d0642245ebc1">The email:</h2>
+<h2 id="the-email">The email:</h2>
 
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/01/123discount.jpg" alt="123 Discount" /></p>
 
@@ -384,7 +441,7 @@ func main() {
 
 <p>A completely random braindump of stuff that got my juices flowing this year.</p>
 
-<h1 id="esp8266-1-wifi-modules:3ae191ff0530ded325f31357fd1b08a5">ESP8266 $1 Wifi modules</h1>
+<h1 id="esp8266-1-wifi-modules">ESP8266 $1 Wifi modules</h1>
 
 <p>I&rsquo;ve talked about <a href="http://espressif.com/en/products/esp8266/">the ESP8266</a> constantly all year. A price-point of ~$1 in volume means that you can wifi-enable anything. Where previously you might have used one of the many low bandwidth &ldquo;IoT&rdquo; protocols internally and connected them to hub-device, now you can do Wifi and IP end-to-end. The only downside is high power consumption. I&rsquo;d actually prefer if they did a low-power V2 instead of the bells-and-whistles ESP32.</p>
 
@@ -397,37 +454,37 @@ func main() {
 <li><a href="https://github.com/esp8266/Arduino/">Arduino</a> - Yup, you can run a huge amount of Arduino code straight on the ESP8266. Really exciting to have this. Only drawback is that native AVR code and (I think) interrupt-driven code will not compile. Also far fewer IOs than normal Arduinos.</li>
 </ul>
 
-<h1 id="raspberry-pi-zero-and-the-mag-pi-issue-40:3ae191ff0530ded325f31357fd1b08a5">Raspberry Pi Zero and The Mag Pi Issue 40</h1>
+<h1 id="raspberry-pi-zero-and-the-mag-pi-issue-40">Raspberry Pi Zero and The Mag Pi Issue 40</h1>
 
 <p>A <a href="https://www.raspberrypi.org/blog/raspberry-pi-zero/">$5 computer</a> that came free on the front of a magazine. Very little else needs to be said here. $5 for 1GHz, 512MB RAM, 1080p HDMI, Linux, Mathematica, Node-Red, Kodi and anything else you want to try. I still get the shivers thinking about it. Meanwhile the never-satisfieds will whine about $1 adapters or the fact that it needs electricity. I&rsquo;m framing my first one.</p>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/raspberry-pi-zero-_3510859b.jpg" alt="PiZero" /></p>
 
-<h1 id="let-s-encrypt:3ae191ff0530ded325f31357fd1b08a5">Let&rsquo;s Encrypt</h1>
+<h1 id="let-s-encrypt">Let&rsquo;s Encrypt</h1>
 
 <p>Anyone who has had to go through the rigmarole of setting up a https server knows what a pain it is. The certs are generally completely overpriced too. <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a> Certs are free and full automation is already available for Apache, NGINX, Caddy and more. Now you basically have no reason not to use https.</p>
 
 <p>This is a massive industry segment disruption. I&rsquo;m thrilled to see it happen.</p>
 
-<h1 id="security-first-and-privacy-first:3ae191ff0530ded325f31357fd1b08a5">Security First and Privacy First</h1>
+<h1 id="security-first-and-privacy-first">Security First and Privacy First</h1>
 
 <p>I use uBlock Origin, Pop-up Blocker, Do Not Track and Ghostery on all my browsers. A lot of the time I use <a href="https://www.blackvpn.com/">BlackVPN</a> too. Yet somehow, with my anti-business setup, many many companies received online orders and money from me this Christmas. I&rsquo;m done with the online advertising industry. All the stuff Doc Searls has been talking about for years is still valid. As for governments thinking our online activities are their business, you need to start fighting back now.</p>
 
-<h1 id="google-cardboard-and-youtube-360:3ae191ff0530ded325f31357fd1b08a5">Google Cardboard and YouTube 360</h1>
+<h1 id="google-cardboard-and-youtube-360">Google Cardboard and YouTube 360</h1>
 
 <p>Somehow I completely missed the launch of Cardboard support in YouTube and the creation of 360 videos by an ever growing set of people. The first one I saw was <a href="https://www.youtube.com/watch?v=QnYncJdEh64">Colin Furze</a> and it&rsquo;s just incredible. The <a href="https://www.youtube.com/watch?v=f-7qq8n2iqw">second</a> was one based on Star Wars The Force Awakens, and is 100x better than the movie. I went and got a much more <a href="http://eud.dx.com/product/844380189">high quality plastic</a> &ldquo;Cardboard&rdquo; as a result. It&rsquo;s excellent. The recently launched <a href="https://play.google.com/store/apps/details?id=com.google.vr.cyclops">Google Cardboard Camera</a> is also superb but images are sadly locked to the device the panoramic photo was taken on.</p>
 
 <p>This is one overall technology-set that myself and the kids are 100% in agreement on. It rocks. The next Star Wars movie should be launched on Cardboard (or Oculus or whatevs).</p>
 
-<h1 id="node-js-4-x:3ae191ff0530ded325f31357fd1b08a5">Node.js 4.x</h1>
+<h1 id="node-js-4-x">Node.js 4.x</h1>
 
 <p>Phew. The schism has been healed and 4.x is a really great release. Initially I had lots of problems with native modules on Windows which I hope are finally starting to settle down now. Node is still the best choice for a huge range of workloads and cannot be beaten for mobile back-ends.</p>
 
-<h1 id="embedded-javascript:3ae191ff0530ded325f31357fd1b08a5">Embedded JavaScript</h1>
+<h1 id="embedded-javascript">Embedded JavaScript</h1>
 
 <p>I think JavaScript will completely take over the Embedded world where hard realtime is not required. The <a href="http://www.espruino.com/">Espruino project</a> has shown what is possible here and should be much more widely used. I&rsquo;m looking forward to seeing it running on the BBC&rsquo;s micro:bit. Other projects like <a href="http://cylonjs.com/">Cylon.js</a> are also worth a look.</p>
 
-<h1 id="go-golang:3ae191ff0530ded325f31357fd1b08a5">Go/Golang</h1>
+<h1 id="go-golang">Go/Golang</h1>
 
 <p>I&rsquo;ll be honest, C has been the only language I really loved working in. I like Python and I really enjoy the productivity of Node.js but C was what I spent most of my real programming years using. C++ is an abomination and Java always feels like a crazy amount of work to eventually run some bloated barely-portable thing.</p>
 
@@ -437,39 +494,39 @@ func main() {
 
 <p>Left-field: Go is slowly getting some Android capabilities. Google should go all-in on it and replace Java. If Apple can manage it so well with the move to Swift on iOS (and they used 3 CPU architectures on Mac!), why not? It would kill all the Oracle problems completely and move them away from a legacy language.</p>
 
-<h1 id="scriptcraft-minecraft:3ae191ff0530ded325f31357fd1b08a5">Scriptcraft &amp; Minecraft</h1>
+<h1 id="scriptcraft-minecraft">Scriptcraft &amp; Minecraft</h1>
 
 <p>Minecraft continues to dominate my younger kids&rsquo; lives. From Stampy to Servers, they are never bored playing it or watching videos about it. My buddy Walter built the amazing <a href="http://scriptcraftjs.org/">Scriptcraft</a> which enables you to build mods and control Minecraft in, yes you guessed it, JavaScript. <a href="http://www.peachpit.com/store/beginners-guide-to-writing-minecraft-plugins-in-javascript-9780133930146">His book</a> is a must-read for anyone looking for an interesting way to teach kids how to program. I really want to try out some stuff where it interfaces with the real world. I think Microsoft are missing a trick by not rowing in behind Walter and this wonderful project.</p>
 
 <p>It&rsquo;s also a huge pity to watch Lego completely miss the boat here and continue to sell the crazily overpriced and overspecced Mindstorms. There is a sweetspot to be found in an online-world + real-world + electronics + JavaScript and it ain&rsquo;t Lego bleedin Dimensions.</p>
 
-<h1 id="particle-photon:3ae191ff0530ded325f31357fd1b08a5">Particle Photon</h1>
+<h1 id="particle-photon">Particle Photon</h1>
 
 <p>I was given a <a href="https://www.particle.io/">Particle Photon</a> recently and was blown away by how easy the setup was and how slickly the Cloud IDE works even through firewalls and NAT. Despite the Open Source nature of it, I still worry about lock-in to some degree. Having said that, my <a href="https://www.kickstarter.com/projects/digistump/oak-by-digistump-wi-fi-for-all-things-arduino-comp">DigiStump Oak</a> just shipped (ESP8266 again!) and it it now Particle API compatible. I&rsquo;d love to see some sort of multi-vendor federated distributed Particle clouds where you aren&rsquo;t betting your IoT strategy on the financial stability of one startup.</p>
 
-<h1 id="react-native:3ae191ff0530ded325f31357fd1b08a5">React Native</h1>
+<h1 id="react-native">React Native</h1>
 
 <p>Use JavaScript to <a href="https://facebook.github.io/react-native/">build Native Apps on iOS and Android</a>. What&rsquo;s not to like? Weird how I hate Facebook the site/app but love so much of their Engineering.</p>
 
-<h1 id="rgb-leds-neopixels:3ae191ff0530ded325f31357fd1b08a5">RGB LEDs / Neopixels</h1>
+<h1 id="rgb-leds-neopixels">RGB LEDs / Neopixels</h1>
 
 <p>Ridiculous amount of fun with simple individually controllable RGB LEDs. These are going to be everywhere in 2016. Everywhere.</p>
 
-<h1 id="3d-printing:3ae191ff0530ded325f31357fd1b08a5">3D Printing</h1>
+<h1 id="3d-printing">3D Printing</h1>
 
 <p>I still adore my <a href="https://printrbot.dozuki.com/Guide/Assembling+the+NEW+Printrbot+Simple+Maker's+Kit/123">Printrbot Simple Maker&rsquo;s Edition</a>. I continue to be surprised by the quality of prints from such a cheap printer. I&rsquo;ve had some fun with Ninjaflex and unusual colours this year. Also a multitude of #PiZero cases! If funds permit, I&rsquo;ll probably start looking at one of the <a href="http://www.bq.com/es/prusa">Prusa i3 variants</a> to get a bigger print area but otherwise it does everything I need.</p>
 
-<h1 id="efibre-by-eir:3ae191ff0530ded325f31357fd1b08a5">eFibre by Eir</h1>
+<h1 id="efibre-by-eir">eFibre by Eir</h1>
 
 <p>We get 92Mbs down, 19Mbs up. It&rsquo;s completely changed how we use the internet. Bravo Eir(com). Genuinely surpassed all expectations. Getting speeds like that on a poxy twisted pair is staggering.</p>
 
 <p>But let&rsquo;s be absolutely clear about broadband in this country, the Government&rsquo;s latest target of 30Mbs for everyone is a joke. By the time it&rsquo;s done, it&rsquo;ll be completely out of date. Why can these people not understand that ultra-fast broadband everywhere will do more for employment in this country than anything else. They&rsquo;d be heroes in history for doing this right, not remembered as a bunch of clowns who couldn&rsquo;t properly roll out a water quango and postcode quango.</p>
 
-<h1 id="statically-hosted-blogs:3ae191ff0530ded325f31357fd1b08a5">Statically hosted Blogs</h1>
+<h1 id="statically-hosted-blogs">Statically hosted Blogs</h1>
 
 <p>It feels like every day there is another WordPress security scare. And that&rsquo;s without mentioning the plugin ecosystem horror. I got sick of the upgrade cycle treadmill and constant exploits last year and moved everything to statically hosted blogs. First with <a href="http://harpjs.com/">Harp.js</a>, then with <a href="https://hexo.io/">Hexo</a> and now with <a href="https://gohugo.io/">Hugo</a>. All fine tools, all work well with GitHub Pages and OpenShift. The incredible speed of Hugo is what makes it my current favourite. Edit, build, deploy, fuggedaboudit. I will never go back to a traditional DB-backed CMS.</p>
 
-<h1 id="dirt-cheap-android-phones-and-tablets:3ae191ff0530ded325f31357fd1b08a5">Dirt-cheap Android phones and tablets</h1>
+<h1 id="dirt-cheap-android-phones-and-tablets">Dirt-cheap Android phones and tablets</h1>
 
 <p>I got a <a href="http://www.dx.com/p/presale-doogee-x5-quad-core-android-5-1-wcdma-bar-phone-w-5-0-ips-hd-8gb-rom-gps-xender-black-400551">Doogee X5 Android phone for €55</a> a few weeks ago as a backup device. Apart from the case being a bit plasticky, it could pass for €200 worth. It has a great screen and surprising speed. 2 SIM slots and an SD card slot. Samsung could learn a lot from Doogee.</p>
 
@@ -477,11 +534,11 @@ func main() {
 
 <p>I seriously doubt I&rsquo;ll ever buy a premium phone on contract again. Once One Plus return to removable backs, replaceable batteries and SD card slots, I&rsquo;ll jump to either them or the Wileyfox. Apart from the camera, there is practically nothing on my Galaxy S6 that I couldn&rsquo;t do with an S4 or HTC Sensation. And they are both more robust and have replaceable batteries and SD card slots.</p>
 
-<h1 id="linux-everywhere:3ae191ff0530ded325f31357fd1b08a5">Linux everywhere</h1>
+<h1 id="linux-everywhere">Linux everywhere</h1>
 
 <p>Everywhere. This makes me happy. I was very surprised my other daughter was more than happy to get an old hand-me-down laptop running Fedora 23. As long as it had Chrome, YouTube, Kodi and Minecraft she didn&rsquo;t give a damn what the OS was. The OS is irrelevant to all my kids. In our house we segue seamlessly from Android to iOS to Windows to OSX to Fedora to Raspbian. The only things that matter are the apps and the content.</p>
 
-<h1 id="messaging-apps:3ae191ff0530ded325f31357fd1b08a5">Messaging Apps</h1>
+<h1 id="messaging-apps">Messaging Apps</h1>
 
 <p>Our entire extended family is on WhatsApp including grandparents. SMS is dead to us. MMS was never a thing. I&rsquo;d prefer if we were all using an Open Source secure P2P system but we&rsquo;ll get there. The family breakdown is as follows:</p>
 
@@ -498,7 +555,7 @@ func main() {
 
 <p>9yo yesterday: &ldquo;What&rsquo;s &lsquo;Messaging&rsquo; on my iPhone&rdquo;. Me: &ldquo;It&rsquo;s SMS&rdquo;. Her: &ldquo;What&rsquo;s that&rdquo;. Me: &ldquo;Texts&rdquo;. Her: &ldquo;Ah ok. Why are there so many apps for messaging? Why not just one?&rdquo;</p>
 
-<h1 id="2fa-and-authy:3ae191ff0530ded325f31357fd1b08a5">2FA and Authy</h1>
+<h1 id="2fa-and-authy">2FA and Authy</h1>
 
 <p>Two Factor Authentication is a complete pain in the neck. It really is.</p>
 
@@ -506,7 +563,7 @@ func main() {
 
 <p>The fact that PayPal still doesn&rsquo;t have it is a complete disgrace. I&rsquo;d strongly recommend using <a href="https://www.authy.com/">Authy</a> instead of the Google Authenticator App. The main reason is that you can install Authy on multiple phones/tablets which you cannot do with Authenticator. They also have a Chrome extension.</p>
 
-<h1 id="things-that-continue-to-disappoint:3ae191ff0530ded325f31357fd1b08a5">Things that continue to disappoint</h1>
+<h1 id="things-that-continue-to-disappoint">Things that continue to disappoint</h1>
 
 <ul>
 <li>Twitter - Useless Web App and Mobile App. Still hostile to developers who make better ones. And still no Filters, in 2015!</li>
@@ -560,23 +617,23 @@ func main() {
 
 <p>I really like the DX voltage booster. It enables you to connect a LiPo battery and a micro-USB power source. It then provides 5V on a standard USB socket. The power source can also charge the battery whilst powering the device. You can then remove the power source and the battery will power the device without interruption. It&rsquo;s almost perfect except for one stupid feature. You can&rsquo;t connect a battery to it to power a device without connecting (even momentarily) the power source (e.g. a phone charger). If it could do that then it&rsquo;d be pretty much at the same level as the Adafruit boost devices. I&rsquo;ve been unable to find any datasheets for it but ordered two more anyway.</p>
 
-<h2 id="prototype:711c6bef540d9f4341e884a7bd9c92f3">Prototype</h2>
+<h2 id="prototype">Prototype</h2>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer05.jpg" alt="Prototype" /></p>
 
-<h2 id="completed-board:711c6bef540d9f4341e884a7bd9c92f3">Completed Board</h2>
+<h2 id="completed-board">Completed Board</h2>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer02.jpg" alt="Completed board" /></p>
 
-<h2 id="lego-case:711c6bef540d9f4341e884a7bd9c92f3">Lego Case</h2>
+<h2 id="lego-case">Lego Case</h2>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer03.jpg" alt="Lego Case" /></p>
 
-<h2 id="side-view:711c6bef540d9f4341e884a7bd9c92f3">Side View</h2>
+<h2 id="side-view">Side View</h2>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer04.jpg" alt="Side View" /></p>
 
-<h1 id="code-latest-always-on-gist-here-https-gist-github-com-conoro-2875556b7477e443ae0a:711c6bef540d9f4341e884a7bd9c92f3">Code (latest always <a href="https://gist.github.com/conoro/2875556b7477e443ae0a">on Gist here</a> )</h1>
+<h1 id="code-latest-always-on-gist-here-https-gist-github-com-conoro-2875556b7477e443ae0a">Code (latest always <a href="https://gist.github.com/conoro/2875556b7477e443ae0a">on Gist here</a> )</h1>
 
 <pre><code class="language-c++">// Temperature from AD8495 K-type Thermocoule adapter and Datetime from DS1307 RTC. Displayed on ILI9341 LCD.
 //
@@ -760,7 +817,7 @@ void loop () {
                     <div class="post-description">
                         
 
-<h2 id="intro:e19abcb8e6b6d101fc1a316dfdf4aa74">Intro</h2>
+<h2 id="intro">Intro</h2>
 
 <p>I haven&rsquo;t blogged properly about the $5 <a href="https://www.raspberrypi.org/blog/raspberry-pi-zero/">Raspberry Pi Zero</a> computer yet, despite Tweeting non-stop about it. I will soon. In the meantime, I&rsquo;ll just repeat that</p>
 
@@ -778,7 +835,7 @@ void loop () {
 
 <p>With all this flooding, I decided to finally create a related setup which takes the SMS Flood alerts from the County Council and auto-tweets them to the <a href="https://twitter.com/bandonfews">@BandonFEWS</a> Twitter account which I created and have manually updated since 2011.</p>
 
-<h2 id="the-details:e19abcb8e6b6d101fc1a316dfdf4aa74">The Details</h2>
+<h2 id="the-details">The Details</h2>
 
 <p>So the final $7 hardware (including Wifi adapter) now looks as follows:</p>
 
@@ -805,7 +862,7 @@ void loop () {
 
 <p>But I wasn&rsquo;t happy with http, nooooo, I wanted https and I wanted to use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>. Cue rabbit hole.</p>
 
-<h2 id="let-s-encrypt-and-caddy:e19abcb8e6b6d101fc1a316dfdf4aa74">Let&rsquo;s Encrypt and Caddy</h2>
+<h2 id="let-s-encrypt-and-caddy">Let&rsquo;s Encrypt and Caddy</h2>
 
 <p>Let&rsquo;s Encrypt offers free https certs.</p>
 
@@ -848,7 +905,7 @@ proxy / localhost:9998
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/flood_alert.jpg" alt="Bandon Flood Warning" /></p>
 
-<h2 id="alternatives:e19abcb8e6b6d101fc1a316dfdf4aa74">Alternatives</h2>
+<h2 id="alternatives">Alternatives</h2>
 
 <ul>
 <li>Of course I could exclude Twilio from this entire flow and call the end-point directly from Tasker but SMS will often work when no data connection is available.</li>
@@ -856,7 +913,7 @@ proxy / localhost:9998
 <li>In theory I could take the scraped data from the site and generate my own alerts but the Council rightly overrides the default trigger levels on occasion to warn people of impending flooding.</li>
 </ul>
 
-<h2 id="go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest:e19abcb8e6b6d101fc1a316dfdf4aa74">Go Code (See for <a href="https://gist.github.com/conoro/f1a3f7c5b96e2b033119">https://gist.github.com/conoro/f1a3f7c5b96e2b033119</a> for latest)</h2>
+<h2 id="go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest">Go Code (See for <a href="https://gist.github.com/conoro/f1a3f7c5b96e2b033119">https://gist.github.com/conoro/f1a3f7c5b96e2b033119</a> for latest)</h2>
 
 <pre><code class="language-go">package main
 
@@ -969,7 +1026,7 @@ func main() {
 }
 </code></pre>
 
-<h2 id="asus-dnsmadeeasy-update:e19abcb8e6b6d101fc1a316dfdf4aa74">Asus DNSMadeEasy Update</h2>
+<h2 id="asus-dnsmadeeasy-update">Asus DNSMadeEasy Update</h2>
 
 <p>This is smidge fiddly. <a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-DDNS">More details here</a>. Once you have Merlin installed and you are happily connected to the internet again (you did remember to write down all the settings for your ISP didn&rsquo;t you?). You need to:</p>
 
@@ -1167,7 +1224,7 @@ git push &quot;https://${GH_TOKEN}@${GH_REPO}&quot; master &gt; /dev/null 2&gt;&
 
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_kit.jpg" alt="Onion Omega Kit" /></p>
 
-<h2 id="summary-opinion:6373a9f13467451d12a87cf58bb7873b">Summary Opinion</h2>
+<h2 id="summary-opinion">Summary Opinion</h2>
 
 <p>Overall it&rsquo;s a nice board but the lack of &ldquo;buzz&rdquo; around it has me a little worried. The number one thing that projects like this need is community. I think the CHiP might steal a lot of its thunder with more welly at a much lower pricepoint. But perhaps a focus on realtime embedded applications will help here.</p>
 
@@ -1177,7 +1234,7 @@ git push &quot;https://${GH_TOKEN}@${GH_REPO}&quot; master &gt; /dev/null 2&gt;&
 
 <p>Another area it could shine, due to its tiny size and low power consumption is robotics. See my comment below about <a href="http://gobot.io/">Gobot</a>.</p>
 
-<h2 id="node-js-partial-success:6373a9f13467451d12a87cf58bb7873b">Node.js partial success</h2>
+<h2 id="node-js-partial-success">Node.js partial success</h2>
 
 <p>After an initial play around with it, I decided to try out Node and Go. Node was <a href="https://community.onion.io/topic/46/simple-node-js-wrapper-samples">built by a community member</a> but is back on version 0.10.5.</p>
 
@@ -1189,7 +1246,7 @@ git push &quot;https://${GH_TOKEN}@${GH_REPO}&quot; master &gt; /dev/null 2&gt;&
 
 <p>So I gave up on Node for the moment.</p>
 
-<h2 id="golang-1-1-2-first-failed-attempt:6373a9f13467451d12a87cf58bb7873b">Golang 1.1.2 first failed attempt</h2>
+<h2 id="golang-1-1-2-first-failed-attempt">Golang 1.1.2 first failed attempt</h2>
 
 <p>On to Go and a giant big rabbit hole.</p>
 
@@ -1263,7 +1320,7 @@ mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
 
 <p>I copied it over to the Onion but no joy. It just kept saying &ldquo;not found&rdquo;. Distant memories told me this was related to libraries and versions but nothing I tried worked. So I took a break.</p>
 
-<h2 id="golang-1-1-2-second-successful-attempt:6373a9f13467451d12a87cf58bb7873b">Golang 1.1.2 second successful attempt</h2>
+<h2 id="golang-1-1-2-second-successful-attempt">Golang 1.1.2 second successful attempt</h2>
 
 <p>A while later I decided that what I needed to do was build OpenWRT for the Onion but then I hit a blocker. Onion support was added to OpenWRT in July but the latest version of the toolchain that included Go was from May. So I bit the bullet and manually &ldquo;cherry-picked&rdquo; <a href="https://github.com/GeertJohan/openwrt-go/commits/add-gccgo-and-libgo?author=GeertJohan">all of the author&rsquo;s changes</a> from the older toolchain into the latest version of OpenWRT.</p>
 
@@ -1330,7 +1387,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/openwrt-ar71xx-generic-onion-omega-squ
 sysupgrade openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin 
 </code></pre>
 
-<h2 id="hello-world-web-server-in-go-on-the-onion-omega:6373a9f13467451d12a87cf58bb7873b">Hello World Web Server in Go on the Onion Omega</h2>
+<h2 id="hello-world-web-server-in-go-on-the-onion-omega">Hello World Web Server in Go on the Onion Omega</h2>
 
 <p>Back to helloworld on the Fedora 22 VM:</p>
 
@@ -1345,7 +1402,7 @@ mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
 
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/go_on_onion_omega_02.jpg" alt="I love mac and cheese" /></p>
 
-<h2 id="tweeting-from-the-onion-omega-in-go:6373a9f13467451d12a87cf58bb7873b">Tweeting from the Onion Omega in Go</h2>
+<h2 id="tweeting-from-the-onion-omega-in-go">Tweeting from the Onion Omega in Go</h2>
 
 <p>I should have left it at that but no, I wanted to Tweet from the Onion. My problems multiplied. Basically, gccgo doesn&rsquo;t have all the bells and whistles of recent Go and can&rsquo;t handle included packages easily. After some reading and playing, I managed to build a Tweeting App that used the <a href="https://github.com/kurrik/twittergo">Twittergo package</a>. Note you need a local Fedora version of <a href="https://golang.org/dl/">Go installed and configured</a> for &ldquo;go get&rdquo; to work (or just git clone). My $GOPATH is /home/conor/gitwork/go</p>
 
@@ -1391,182 +1448,12 @@ scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
 
 <p>I now suspect that the Node.js error may have been exactly the same thing but just hidden so I&rsquo;ll go back and try the same for it.</p>
 
-<h2 id="final-notes:6373a9f13467451d12a87cf58bb7873b">Final notes</h2>
+<h2 id="final-notes">Final notes</h2>
 
 <ol>
 <li>That custom firmware I built is missing all of the Onion&rsquo;s own stuff and I&rsquo;m not sure how to add that. However you can easily re-install the latest factory Onion image by wgetting it using the URL you find <a href="http://cloud.onion.io/api/firmware/stable.json">in this file</a> into /tmp using sysupgrade name_of_image.</li>
 <li>We really need Go 1.6 to support MIPS. I think the Onion is a great device for running Go. We might even get <a href="http://gobot.io/">Gobots</a> running.</li>
 </ol>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">03 Nov 2015, 08:22</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/" class="post-title">All the gory tech behind our Halloween Hallway of Horror</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        
-
-<p>Despite starting weeks earlier than usual, Halloween still involved a day of last minute panic to bring everything together. The end result was this:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FClhSNwFfT0" frameborder="0" allowfullscreen></iframe>
-
-<p>The basic setup was an update of ideas from previous years and consisted of the following.</p>
-
-<h2 id="3d-printed-mummy-in-coffin-doorbell:308bcb7036a2d3eb810a4711be2b8022">3D-printed Mummy in Coffin Doorbell</h2>
-
-<p>This was my favourite aspect of the whole thing. I spotted a <a href="http://www.thingiverse.com/thing:32905">cool 3D design on Thingiverse</a> and realised I could turn it into a doorbell by dremeling a hole in the back and hot-glueing the mummy to a simple push button.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy01b.jpg" alt="Mummy Doorbell 1" /></p>
-
-<p>In fact the button was one I originally bought in 2012 when I got back into electronics. There was a small bug in my debounce code which I discovered too late and meant that kids had to press the button twice. But overall only a few failed to figure it out.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy02b.jpg" alt="Mummy Doorbell 2" /></p>
-
-<h2 id="adafruit-audio-breakout-board-and-amp-with-speakers:308bcb7036a2d3eb810a4711be2b8022">Adafruit Audio breakout board and amp with speakers</h2>
-
-<p>I had intended everything to be Arduino and ESP8266 (running Arduino code) only so I needed some way of playing the scream. In previous years <a href="http://conoroneill.net/the-raspberrypi-doorbell-of-dooooooooommmmmmmm/">I used a Raspberry Pi</a> (successfully) and <a href="http://conoroneill.net/a-tech-halloween-mainly-made-of-fail/">a really crappy device</a> (less successfully).</p>
-
-<p>In a bizarre twist to the <a href="https://www.indiegogo.com/projects/be-maker-kit-plus-free-lessons-on-electronics-from-zero-to-internet-of-things">BE Maker Kit Indiegogo scam</a>, one of the people involved somehow got a Florida company to provide free electronics to the right amount. I used this to buy the <a href="http://www.adafruit.com/products/1381">Adafruit VS1053 Audio board</a> and <a href="https://www.adafruit.com/products/987">Adafruit MAX98306 Audio Amp</a>. The wiring on this looks complicated but it&rsquo;s straight out of their tutorial.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/vs1053.jpg" alt="Scary Sounds" /></p>
-
-<p>Audio was courtesy of <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a> and <a href="http://winff.org/html_new/">WinFF</a> on <a href="https://www.youtube.com/watch?v=BFqHyCoypfM">this clip from YouTube</a>.</p>
-
-<p>The Arduino Nano for this was the &ldquo;Master&rdquo; device. It detected the doorbell press and then started playing the file on the SD card and sent a high signal both to the Banana Pi for the LED strip and the Arduino Uno for the relays controlling the skull. It&rsquo;s basically the Adafruit demo VS1053 code with a few extra lines added by me. The code for that <a href="https://gist.github.com/conoro/58a028f7399b4e50619e">is here on Gist</a>.</p>
-
-<h2 id="wifi-controlled-rgb-led-strip-using-a-banana-pi:308bcb7036a2d3eb810a4711be2b8022">Wifi Controlled RGB LED Strip using a Banana Pi</h2>
-
-<p>I finally ordered a bog-standard <a href="http://eud.dx.com/product/waterproof-72w-4300lm-300-5050-smd-led-rgb-light-flexible-strip-w-44-key-controller-844233947">5 metre 5050 RGB LED strip from dx.com</a> over the summer. The value on these things is just staggering at less than €20.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/sku_233947_1.jpg" alt="RGB LED" /></p>
-
-<p>They come with a dedicated remote control and just need a decent PSU to provide the power. Myself and the kids had great fun illuminating my entire home office in a range of colours.</p>
-
-<p>But the challenge for Halloween was how to control it. I could have run <a href="http://www.lirc.org/html/irrecord.html">irrecord</a> on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID C1</a> or <a href="http://www.bananapi.org/p/product.html">Banana Pi</a> to reverse engineer the remote control protocol and then use <a href="http://eud.dx.com/product/38khz-ir-infrared-transmitter-module-for-arduino-844135040">the RC transmitter</a> I bought on DX. But luckily someone <a href="http://hackaday.com/2015/08/25/esp8266-in-commercial-products/">told Hackaday about the first ESP8266-powered commercial product</a> they had found. It was a <a href="http://es.aliexpress.com/item/rgb-strip-WiFi-controller-1-port-control-15-rgb-lights-communicate-with-Android-phone-to-dim/32301423622.html">€9 Wifi H801 control module</a> for RGB LED strips! I just had to get one.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/Rgbww-tira-llevada-regulador-wifi-1-port-control-200-luces-comunicar-con-tel%C3%A9fono-Android-a-trav%C3%A9s.jpg_350x350.jpg" alt="Wifi RGB LED" /></p>
-
-<p>It&rsquo;s a brilliant little box that is easy to wire up and has a simple Android App for control. You connect to the internal Wifi Access Point it provides to do this. Here is the brilliant piece: You then use the app to tell the module to connect to your own Wifi router and then you do the same with the phone. Now your RGB LED strip is on your network!</p>
-
-<p>But it gets better. A very smart person <a href="https://www.domoticz.com/forum/viewtopic.php?f=38&amp;t=7957">reverse-engineered the basic over-the-air protocol</a> that the app uses to control the Wifi module. Unfortunately he was using a slightly different module to me and it didn&rsquo;t work. I then spent a week of evenings learning all about <a href="https://www.wireshark.org/">Wireshark</a> and <a href="https://en.wikipedia.org/wiki/Netcat">Netcat</a>. I was able to do the same as him and find the basic UDP control protocol (only minor difference in the packets)</p>
-
-<p>In summary:</p>
-
-<ul>
-<li>OFF: \xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00</li>
-<li>RED: \xfb\xeb\xff\x00\x00\x00\x00\x9f\x97\x9d\x00</li>
-<li>GREEN: \xfb\xeb\x00\xff\x00\x00\x00\x9f\x97\x9d\x00</li>
-<li>BLUE: \xfb\xeb\x00\x00\xff\x00\x00\x9f\x97\x9d\x00</li>
-</ul>
-
-<p>My plan was to use a <a href="http://nodemcu.com/index_en.html">NodeMCU ESP8266 module</a> to send the relevant commands, using either NodeMCU LUA or the <a href="https://github.com/esp8266/Arduino">Arduino port to ESP8266</a> but I ran out of time to experiment.</p>
-
-<p>So I had Netcat working happily on the Banana Pi running Fedora but I also needed to be able to use the GPIO pins to tell the BPi when to turn on/off the LED strip. I then made the classic mistake of panicking on Halloween morning and switching to the RaspberryPi so I could use <a href="http://wiringpi.com/">WiringPi</a> for GPIO. Except the Netcat commands hung on the RPi (still no idea why).</p>
-
-<p>Some Googling revealed that WiringPi had been <a href="https://github.com/LeMaker/WiringBP">ported to Raspbian on the BPi</a> so I tried that. Same Netcat problem! So I took a chance and re-inserted the Fedora SD card and downloaded the BPi version of WiringPi. Result! It compiled and ran perfectly.</p>
-
-<p>The I moved on to several hours of trying to write a Bash script to monitor a GPIO pin using WiringPi and control the RGB LED strip with echo/netcat. All I will say about that is I am never ever writing a Bash script again (space-sensitive around brackets/equals for the love of god). This is the final result and, to be fair, it worked seamlessly:</p>
-
-<pre><code class="language-bash">
-#!/bin/bash
-sets=`/usr/local/bin/gpio mode 7 down`
-setit=$sets
-state=&quot;low&quot;
-echo -e '\xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00' | nc -v -u 192.168.0.128 30977
-sleep 1
-while :
-do
-    pins=`/usr/local/bin/gpio read 7`
-    if [ $pins = &quot;1&quot; ]; then
-        if [ $state = &quot;low&quot; ]; then
-            echo -e '\xfb\xeb\xff\x00\x00\x00\x00\x9f\x97\x9d\x00' | nc -v -u 192.168.0.128 30977
-            state=&quot;high&quot;
-            echo high 
-        fi
-    else
-        if [ $state = &quot;high&quot; ]; then
-           echo -e '\xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00' | nc -v -u 192.168.0.128 30977
-           state=&quot;low&quot;
-           echo low
-        fi
-    fi
-done
-
-</code></pre>
-
-<p>But I was so horrified by Bash, I did a quick and dirty re-write <a href="https://gist.github.com/conoro/935e0fa3acc90d066b9a">to Go this morning</a>. It uses the <a href="https://github.com/hugozhu/rpi">Golang bindings to WiringPi</a> and seems to work very well.</p>
-
-<p>So the strip was now sorted. On to the rotating skull.</p>
-
-<h2 id="an-anatomically-correct-skull-with-scary-eyes:308bcb7036a2d3eb810a4711be2b8022">An anatomically correct skull with scary eyes</h2>
-
-<p>The skull idea came from a wonderful <a href="http://www.tested.com/art/makers/530668-how-make-realistic-horror-skull-prop/">tested.com video</a> where special effects artist Frank Ippolito bought a cheap skull on Amazon and then used latex, cotton wool and paint to turn it into a horrific burn-victim thing.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v8w4hufoujg" frameborder="0" allowfullscreen></iframe>
-
-<p>I thought we could do the same and found a skull on Amazon UK. It arrived and looked great apart from the lack of a movable jaw. But it then sat there for months with no progress due to me being artistically challenged.</p>
-
-<p>As an alternative I thought about doing something with eyes so I got some half-eyes from Amazon too They were a smidge small but fit for purpose. I grabbed some of my old tiny micro-servos which I have never found a use for and hot-glued the eyes to them. A bit of messing with the range of movement and I had a vaguely spooky setup.</p>
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/EagDgNoEpTc" frameborder="0" allowfullscreen></iframe>
-
-<p>But the fact that you could see the servos and they move pretty slowly meant I was a bit disappointed. I tried to vamp them up a bit more by adding neopixel ring but it was too big so I switched to a single funky Adafruit RGB neopixel on each one. So now I had 6 wires coming out of each eye.</p>
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/30LBjo5oG3I" frameborder="0" allowfullscreen></iframe>
-
-<p>Finally on Saturday morning I went to finish this bit and decided it was too much work to get the Arduino code tweaked to do 2x Neopixels and 2x servos and somehow trigger them on/off on a potentially rotating head. At this point I found the silly fake-eye pingpong balls from last year. A quick cut in the back and I hot-glued a Neopixel to each one. I then hot-glued the eyes into the skull and wired the Neopixels to an Arduino Nano.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/skull_top.jpg" alt="Skull Arduino" /></p>
-
-<p>I stuck the Nano and a Lipo battery to the top of the skull and covered it with a cool Buff. Having the eyes on permanently removed a little bit of the element of surprise but I still thought it worked well. The code for the Neopixels was just the <a href="https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino">standard Adafruit strand test</a>.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/buff_skull.jpg" alt="Buff Skull" /></p>
-
-<h2 id="making-the-skull-rotate:308bcb7036a2d3eb810a4711be2b8022">Making the skull rotate</h2>
-
-<p>I had always known I would rotate the skull in some fashion but for a while I wasn&rsquo;t sure how. Quite a few weeks ago I came up with the idea to cement a hex driver into the bottom of the skull and sit it on top of a cheap crap €20 electric screwdriver I got ages ago from Woodies.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver1.jpg" alt="Screwdriver1" /></p>
-
-<p>As a screwdriver it was rubbish due to slowness and lack of torque. As a skull-rotator it was awesome, spinning the skull around at high speed.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver2.jpg" alt="Screwdriver2" /></p>
-
-<p>Of course I left the difficult bits until a week before Halloween when I sat down and tried to figure out how to control it all. The first attempt was with a dirt cheap double relay board I got 3 years ago and never used. But I couldn&rsquo;t figure out how to make it go forwards and reverse. I then tried an old knock-off Adafruit Motor Shield but it couldn&rsquo;t deliver enough juice (even with a 7.2V LiPo) to overcome the motor&rsquo;s inertia. Finally I <a href="http://arduino-info.wikispaces.com/ArduinoPower">found a relay circuit</a> that did forward/reverse and it worked like a charm.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/DC_Motor_2SPDT_Relay-450.jpg" alt="Circuit" /></p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/relay2.jpg" alt="Relay" /></p>
-
-<p>But how was I going to handle starting/stopping the skull so it was facing away (and potentially covered) initially and then rotating at the right time and stopping in the right position? Of course I left that to Halloween itself.</p>
-
-<p>I used polystyrene and duct tape to brace the screwdriver. Then I setup two limit switches. I then applied power. The head spun around and ripped the switches off their mounts. Damn. So another quick executive decision was made. The head would start rotating when the doorbell was pressed and then stop after 10-15 seconds. Which meant some kids would get the full scary effect whilst others would see the flashing eyes before they got to the door.</p>
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/_alMNaewNXw" frameborder="0" allowfullscreen></iframe>
-
-<h2 id="tying-it-all-together:308bcb7036a2d3eb810a4711be2b8022">Tying it all together</h2>
-
-<p>This turned out to be pretty easy. I have a ton of decent wire from a dead Christmas tree light string and used that to connect everything up. The doorbell connected to one Arudino which then toggled a pin which the other Arduinos were connected to. After N seconds, it toggled the pin the other way to shut it all down.</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/wiring.jpg" alt="Wiring" /></p>
-
-<p>It worked very very well.</p>
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/JvAI6WQglpk" frameborder="0" allowfullscreen></iframe>
-
-<h2 id="next-year:308bcb7036a2d3eb810a4711be2b8022">Next year?</h2>
-
-<p>Hmm not sure. I wanted to do something with ghosts flying down zip wires a few years ago but I just didn&rsquo;t have the knowhow. I&rsquo;m feeling a lot more confident about that now.</p>
 
                     </div>
                 </section>

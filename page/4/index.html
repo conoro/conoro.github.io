@@ -81,6 +81,58 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">30 Oct 2014, 09:24</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/as-promised-yet-more-tech-goodie-backlog-for-your-entertainment/" class="post-title">As promised, yet more tech goodie backlog for your entertainment</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>This time it&rsquo;s more about software than hardware. But first, hardware.</p>
+
+<ul>
+<li><p><strong>Lightning</strong>: We had a lightning strike near our home a few weeks back and my main Windows desktop has been acting dodgy ever since. I swapped the PSU but that didn&rsquo;t help and finally came to the conclusion that some of the USB ports were damaged on the motherboard. One replacement Gigabyte 970A-DS3P later and all seems to be well. I also replaced an older hard-disk that sounded like a machine-gun since day 1 with a combo one that has a small amount of SSD. The silence is a joy.</p></li>
+
+<li><p><strong>Node.js</strong>: I built a small mini stats portal for a side-project in Node.js with a bit of Bootstrap, Google Charts and Passport. I still believe that a lot of Node&rsquo;s power comes from the ecosystem and community. There are just so many good tutorials and sample applications out there that you can always find a good starting point. For example <a href="http://scottksmith.com/blog/2014/10/05/twitatron-building-a-production-web-app-with-node/">this one</a>. This also means that you have the combined knowledge of a ton of people who have sorted out nasties like CSRF, CORS, Auth, etc. already. Everything I&rsquo;ve done has been based on Express and MongoDB but <a href="http://hapijs.com/">HAPI</a> is starting to get that community energy too. My first failed attempt at that portal was in Go, which leads nicely to&hellip;.</p></li>
+
+<li><p><strong>Go</strong>: I&rsquo;ve also been playing around with <a href="https://golang.org/">Go</a> (#golang) which is a very interesting language built by Robert Griesemer, Rob Pike, Ken Thompson and others in Google. Anyone who knows C will feel very comfortable with it. It&rsquo;s like C with all the badness removed. I took to it like a duck to water and found it extremely easy to learn and become productive with. It&rsquo;s designed as a language for server apps and my first real app was a re-write of a database maintenance tool that started in Python, moved to Node.js and is now running perfectly in Go. The whole workflow around Go is a real strength and I can see why it&rsquo;s gaining a lot of traction in the past 24 months with companies like Bitly, Docker, Apcera etc. Its two main weaknesses are not language related. First is the small size of the community - you cannot &ldquo;program via Stack Overflow&rdquo; the way you can with Node, there just isn&rsquo;t the volume of information out there. Second is the state of Go web frameworks - there seems to be a strong anti-framework mindset in the community which thinks everyone should build from first principles. That&rsquo;s fine for full-time hardcore developers but it puts off tinkerers like me who find frameworks a nice entry point into a language. So whilst full-stack frameworks like <a href="http://beego.me/">Beego</a> have great potential (as do smaller ones like <a href="http://revel.github.io/">Revel</a> etc), the number of developers is tiny and once again you are back to the community-size and availability of learning-material problem. So for the moment I&rsquo;m going to focus on using it for tools, utilities and some fun stuff on the Raspberry Pi. Actually, the fact that it works seamlessly across Windows, OSX, Linux and generates static binaries for them is one of the other reasons I like it so much. If you have an hour, watch Rob Pike&rsquo;s <a href="http://www.youtube.com/watch?v=VoS7DsT1rdM">wonderful keynote at GopherCon</a> in April where he deconstructs hello world.</p></li>
+
+<li><p><strong>Re-factoring</strong>: A major mistake I made back in 2008 was taking a short-cut and telling a developer to build a start-up’s Admin back-end on top of Django Admin. Initially it made lots of sense when most of the functionality was just interacting with the models, but as soon as you try to do anything new, you realise you have to do it as a bloody mishmash of hacks, workarounds and copy/pasted code. In a way I&rsquo;m contradicting the previous point I made about Go but actually the error was more about not biting the bullet and re-implementing the Admin from scratch in the early days, once the initial prototype had done its job. The question now is whether it would be worth someone&rsquo;s time, even as a multi-weekend/Christmas learning exercise, to re-do in Node and Express. The system actually started as a Turbogears application so this wouldn&rsquo;t be the first time to make such a move!</p></li>
+
+<li><p><strong>Win8.1</strong>: Switched from Windows 7 to Windows 8.1. It&rsquo;s still getting in the way and slowing me down, but less so than Win 8.0. The driver-signing nonsense is still infuriating, as is the method of turning that off. However I did learn the WinKey-X short-cut which gives you quick access to everything you need like Control Panel, Command Prompt and Shut-down menu.</p></li>
+
+<li><p><strong>Harp.js</strong>: This static blog you are reading is hosted on <a href="https://pages.github.com/">GitHub Pages</a> and generated by <a href="http://harpjs.com/">Harp.js</a>. I&rsquo;m still a big fan of Harp and I&rsquo;m thrilled it now works end-to-end on Windows. Just install Node.js and do npm install -g harp. I used to have a plethora of WordPress sites and blogs but after the relentless hacks of <sup>2013</sup>&frasl;<sub>2014</sub>, I&rsquo;m done with it. I have two sites left to port over to being based on Harp.js and then it&rsquo;s buh-bye WordPress/PHP/MySQL/Insert-name-of-security-hole-riddled-plugin-here. We all moved to WordPress from Blogger/MT/etc for its ease of use and quick install but I think the move away will become a flood as people grow tired of the upgrade treadmill. The next major version of WordPress should be about security not just of the core but of every plugin too.</p></li>
+
+<li><p><strong>Inbox</strong>: Got an invite to Google Inbox. Once signed up, I spent my entire time worried I was missing an email or that I&rsquo;d accidentally archived it or trying to find the &ldquo;Mark as Unread&rdquo; button in Chrome. Sorry Google, but my first 5 minutes on GMail were a complete joy back in the day, whilst Inbox was an exercise is &ldquo;what&rsquo;s the actual point here, apart from being different?&rdquo;.</p></li>
+
+<li><p><strong>IRC</strong>: It&rsquo;s huge in Red Hat. I really love using it. Could it have a resurgence or will it go the way of Usenet? I&rsquo;m using <a href="http://hexchat.github.io/">HexChat</a> on Windows which is rather good. I think the mIRC UI is what kept me away for all those years.</p></li>
+
+<li><p><strong>Linux</strong>: I&rsquo;m moving from Ubuntu/Lubuntu/Mint in all my VirtualBox VMs to CentOS 7 and Fedora 20. Apart from yum instead of apt-get, there really isn&rsquo;t that much difference for normal day-to-day stuff. I can install all the usual tools and work as I did previously. The lack of window minimise/maximise/close buttons on Fedora is completely ridiculous tho.</p></li>
+
+<li><p><strong><a href="https://www.docker.com/">Docker</a></strong>: Cos, SEO :-) But srsly, I&rsquo;ve been kicking off some Docker instances of Mongo and Node apps inside a VBox VM and liking it a lot. Setting up the inter-instance networking is a bit of a pain tho. One thing that bothers me is the initial promise of tiny images seems to have fallen by the wayside. You really should avoid playing with it on home broadband if your base OS is different to the base OS used to build the image you want to play with. Also be very specific about what version of something you want or it&rsquo;ll download all available versions.</p></li>
+
+<li><p><strong>OpenShift</strong>: Doing a bit of playing with Red Hat&rsquo;s <a href="https://www.openshift.com/products/online">OpenShift</a> PaaS. So far so good but I haven&rsquo;t gone much further than Node.js hello world.</p></li>
+
+<li><p><strong>GoRead</strong>: Discovered a brilliant RSS reader a few months ago called <a href="https://www.goread.io/">GoRead</a> that looks and acts a lot like good old Google Reader. This one is written in Go and you have to self-host. But I was thrilled to find that I can host it on Google App Engine on the free tier. I&rsquo;ve stopped using all the centralised readers like Feedly since.</p></li>
+
+<li><p><strong>Bitbucket</strong>: I don&rsquo;t think many people realise that <a href="https://bitbucket.org/">BitBucket</a> has most of the same features as GitHub but provides private repos for free. Its only real flaws are the lack of a GitHub Pages equivalent and the lack of 2 Factor Authentication (which is really unforgivable at this stage.)</p></li>
+
+<li><p><strong>Pinboard</strong>: I finally dumped Delicious a few months back and paid the tiny few quid to get a <a href="https://pinboard.in/u:conoro">Pinboard</a> account. Not only is it a great bookmarking service that just works (and works quickly), the guy who runs it has one of the <a href="https://twitter.com/pinboard">best Twitter accounts</a> out there. It was able to import all of my Delicious bookmarks and the IFTTT  and Twitter integrations means that all my tweeted links, re-tweets and favourites automatically get saved as bookmarks.</p></li>
+
+<li><p><strong><a href="http://janetter.net/">Janetter</a></strong>: It&rsquo;s still the best Tweetdeck-multi-column-style Twitter client on Windows and OSX (but not brilliant on Android). The word/user filters alone would cause me to pay many many Euro for it but the regex filters make it invaluable.</p></li>
+</ul>
+
+<p>More tomorrow.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">29 Oct 2014, 11:21</h1>
                 <section class="post">
                     <header class="post-header">
@@ -494,24 +546,6 @@ function getContentTypeByFile(fileName) {
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/tesla2.jpg" alt="Tesla S" title="Tesla S" /></p>
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/tesla1.jpg" alt="Printrbot Simple" title="Printrbot Simple" /></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">11 Jun 2014, 08:48</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/how-twitter-can-make-one-beeeeelllllllion-dollars-in-the-next-few-weeks/" class="post-title">How Twitter can make one beeeeelllllllion dollars in the next few weeks</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>After 7 long years, Twitter finally added people muting recently. Meanwhile those of us who never use the official apps and use Janetter etc instead have had powerful keyword filtering for years. I see Twitter has some silly &ldquo;which team do you support in the World Cup&rdquo; nonsense now. But they really aren&rsquo;t thinking this through. There are many many many many people on Twitter who would happily never see a World Cup tweet. Why not make that happen as an opt-in but instead of just hiding them, replace each World Cup tweet with an Ad for something non-sport-related (in third party clients too). Finally a sustainable business model for Twitter. For the summer at least :-) You&rsquo;re welcome Twitter.</p>
 
                     </div>
                 </section>

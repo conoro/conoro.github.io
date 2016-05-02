@@ -81,6 +81,176 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">03 Nov 2015, 08:22</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/" class="post-title">All the gory tech behind our Halloween Hallway of Horror</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        
+
+<p>Despite starting weeks earlier than usual, Halloween still involved a day of last minute panic to bring everything together. The end result was this:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FClhSNwFfT0" frameborder="0" allowfullscreen></iframe>
+
+<p>The basic setup was an update of ideas from previous years and consisted of the following.</p>
+
+<h2 id="3d-printed-mummy-in-coffin-doorbell">3D-printed Mummy in Coffin Doorbell</h2>
+
+<p>This was my favourite aspect of the whole thing. I spotted a <a href="http://www.thingiverse.com/thing:32905">cool 3D design on Thingiverse</a> and realised I could turn it into a doorbell by dremeling a hole in the back and hot-glueing the mummy to a simple push button.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy01b.jpg" alt="Mummy Doorbell 1" /></p>
+
+<p>In fact the button was one I originally bought in 2012 when I got back into electronics. There was a small bug in my debounce code which I discovered too late and meant that kids had to press the button twice. But overall only a few failed to figure it out.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy02b.jpg" alt="Mummy Doorbell 2" /></p>
+
+<h2 id="adafruit-audio-breakout-board-and-amp-with-speakers">Adafruit Audio breakout board and amp with speakers</h2>
+
+<p>I had intended everything to be Arduino and ESP8266 (running Arduino code) only so I needed some way of playing the scream. In previous years <a href="http://conoroneill.net/the-raspberrypi-doorbell-of-dooooooooommmmmmmm/">I used a Raspberry Pi</a> (successfully) and <a href="http://conoroneill.net/a-tech-halloween-mainly-made-of-fail/">a really crappy device</a> (less successfully).</p>
+
+<p>In a bizarre twist to the <a href="https://www.indiegogo.com/projects/be-maker-kit-plus-free-lessons-on-electronics-from-zero-to-internet-of-things">BE Maker Kit Indiegogo scam</a>, one of the people involved somehow got a Florida company to provide free electronics to the right amount. I used this to buy the <a href="http://www.adafruit.com/products/1381">Adafruit VS1053 Audio board</a> and <a href="https://www.adafruit.com/products/987">Adafruit MAX98306 Audio Amp</a>. The wiring on this looks complicated but it&rsquo;s straight out of their tutorial.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/vs1053.jpg" alt="Scary Sounds" /></p>
+
+<p>Audio was courtesy of <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a> and <a href="http://winff.org/html_new/">WinFF</a> on <a href="https://www.youtube.com/watch?v=BFqHyCoypfM">this clip from YouTube</a>.</p>
+
+<p>The Arduino Nano for this was the &ldquo;Master&rdquo; device. It detected the doorbell press and then started playing the file on the SD card and sent a high signal both to the Banana Pi for the LED strip and the Arduino Uno for the relays controlling the skull. It&rsquo;s basically the Adafruit demo VS1053 code with a few extra lines added by me. The code for that <a href="https://gist.github.com/conoro/58a028f7399b4e50619e">is here on Gist</a>.</p>
+
+<h2 id="wifi-controlled-rgb-led-strip-using-a-banana-pi">Wifi Controlled RGB LED Strip using a Banana Pi</h2>
+
+<p>I finally ordered a bog-standard <a href="http://eud.dx.com/product/waterproof-72w-4300lm-300-5050-smd-led-rgb-light-flexible-strip-w-44-key-controller-844233947">5 metre 5050 RGB LED strip from dx.com</a> over the summer. The value on these things is just staggering at less than €20.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/sku_233947_1.jpg" alt="RGB LED" /></p>
+
+<p>They come with a dedicated remote control and just need a decent PSU to provide the power. Myself and the kids had great fun illuminating my entire home office in a range of colours.</p>
+
+<p>But the challenge for Halloween was how to control it. I could have run <a href="http://www.lirc.org/html/irrecord.html">irrecord</a> on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID C1</a> or <a href="http://www.bananapi.org/p/product.html">Banana Pi</a> to reverse engineer the remote control protocol and then use <a href="http://eud.dx.com/product/38khz-ir-infrared-transmitter-module-for-arduino-844135040">the RC transmitter</a> I bought on DX. But luckily someone <a href="http://hackaday.com/2015/08/25/esp8266-in-commercial-products/">told Hackaday about the first ESP8266-powered commercial product</a> they had found. It was a <a href="http://es.aliexpress.com/item/rgb-strip-WiFi-controller-1-port-control-15-rgb-lights-communicate-with-Android-phone-to-dim/32301423622.html">€9 Wifi H801 control module</a> for RGB LED strips! I just had to get one.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/Rgbww-tira-llevada-regulador-wifi-1-port-control-200-luces-comunicar-con-tel%C3%A9fono-Android-a-trav%C3%A9s.jpg_350x350.jpg" alt="Wifi RGB LED" /></p>
+
+<p>It&rsquo;s a brilliant little box that is easy to wire up and has a simple Android App for control. You connect to the internal Wifi Access Point it provides to do this. Here is the brilliant piece: You then use the app to tell the module to connect to your own Wifi router and then you do the same with the phone. Now your RGB LED strip is on your network!</p>
+
+<p>But it gets better. A very smart person <a href="https://www.domoticz.com/forum/viewtopic.php?f=38&amp;t=7957">reverse-engineered the basic over-the-air protocol</a> that the app uses to control the Wifi module. Unfortunately he was using a slightly different module to me and it didn&rsquo;t work. I then spent a week of evenings learning all about <a href="https://www.wireshark.org/">Wireshark</a> and <a href="https://en.wikipedia.org/wiki/Netcat">Netcat</a>. I was able to do the same as him and find the basic UDP control protocol (only minor difference in the packets)</p>
+
+<p>In summary:</p>
+
+<ul>
+<li>OFF: \xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00</li>
+<li>RED: \xfb\xeb\xff\x00\x00\x00\x00\x9f\x97\x9d\x00</li>
+<li>GREEN: \xfb\xeb\x00\xff\x00\x00\x00\x9f\x97\x9d\x00</li>
+<li>BLUE: \xfb\xeb\x00\x00\xff\x00\x00\x9f\x97\x9d\x00</li>
+</ul>
+
+<p>My plan was to use a <a href="http://nodemcu.com/index_en.html">NodeMCU ESP8266 module</a> to send the relevant commands, using either NodeMCU LUA or the <a href="https://github.com/esp8266/Arduino">Arduino port to ESP8266</a> but I ran out of time to experiment.</p>
+
+<p>So I had Netcat working happily on the Banana Pi running Fedora but I also needed to be able to use the GPIO pins to tell the BPi when to turn on/off the LED strip. I then made the classic mistake of panicking on Halloween morning and switching to the RaspberryPi so I could use <a href="http://wiringpi.com/">WiringPi</a> for GPIO. Except the Netcat commands hung on the RPi (still no idea why).</p>
+
+<p>Some Googling revealed that WiringPi had been <a href="https://github.com/LeMaker/WiringBP">ported to Raspbian on the BPi</a> so I tried that. Same Netcat problem! So I took a chance and re-inserted the Fedora SD card and downloaded the BPi version of WiringPi. Result! It compiled and ran perfectly.</p>
+
+<p>The I moved on to several hours of trying to write a Bash script to monitor a GPIO pin using WiringPi and control the RGB LED strip with echo/netcat. All I will say about that is I am never ever writing a Bash script again (space-sensitive around brackets/equals for the love of god). This is the final result and, to be fair, it worked seamlessly:</p>
+
+<pre><code class="language-bash">
+#!/bin/bash
+sets=`/usr/local/bin/gpio mode 7 down`
+setit=$sets
+state=&quot;low&quot;
+echo -e '\xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00' | nc -v -u 192.168.0.128 30977
+sleep 1
+while :
+do
+    pins=`/usr/local/bin/gpio read 7`
+    if [ $pins = &quot;1&quot; ]; then
+        if [ $state = &quot;low&quot; ]; then
+            echo -e '\xfb\xeb\xff\x00\x00\x00\x00\x9f\x97\x9d\x00' | nc -v -u 192.168.0.128 30977
+            state=&quot;high&quot;
+            echo high 
+        fi
+    else
+        if [ $state = &quot;high&quot; ]; then
+           echo -e '\xfb\xeb\x00\x00\x00\x00\x00\x9f\x97\x9d\x00' | nc -v -u 192.168.0.128 30977
+           state=&quot;low&quot;
+           echo low
+        fi
+    fi
+done
+
+</code></pre>
+
+<p>But I was so horrified by Bash, I did a quick and dirty re-write <a href="https://gist.github.com/conoro/935e0fa3acc90d066b9a">to Go this morning</a>. It uses the <a href="https://github.com/hugozhu/rpi">Golang bindings to WiringPi</a> and seems to work very well.</p>
+
+<p>So the strip was now sorted. On to the rotating skull.</p>
+
+<h2 id="an-anatomically-correct-skull-with-scary-eyes">An anatomically correct skull with scary eyes</h2>
+
+<p>The skull idea came from a wonderful <a href="http://www.tested.com/art/makers/530668-how-make-realistic-horror-skull-prop/">tested.com video</a> where special effects artist Frank Ippolito bought a cheap skull on Amazon and then used latex, cotton wool and paint to turn it into a horrific burn-victim thing.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v8w4hufoujg" frameborder="0" allowfullscreen></iframe>
+
+<p>I thought we could do the same and found a skull on Amazon UK. It arrived and looked great apart from the lack of a movable jaw. But it then sat there for months with no progress due to me being artistically challenged.</p>
+
+<p>As an alternative I thought about doing something with eyes so I got some half-eyes from Amazon too They were a smidge small but fit for purpose. I grabbed some of my old tiny micro-servos which I have never found a use for and hot-glued the eyes to them. A bit of messing with the range of movement and I had a vaguely spooky setup.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/EagDgNoEpTc" frameborder="0" allowfullscreen></iframe>
+
+<p>But the fact that you could see the servos and they move pretty slowly meant I was a bit disappointed. I tried to vamp them up a bit more by adding neopixel ring but it was too big so I switched to a single funky Adafruit RGB neopixel on each one. So now I had 6 wires coming out of each eye.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/30LBjo5oG3I" frameborder="0" allowfullscreen></iframe>
+
+<p>Finally on Saturday morning I went to finish this bit and decided it was too much work to get the Arduino code tweaked to do 2x Neopixels and 2x servos and somehow trigger them on/off on a potentially rotating head. At this point I found the silly fake-eye pingpong balls from last year. A quick cut in the back and I hot-glued a Neopixel to each one. I then hot-glued the eyes into the skull and wired the Neopixels to an Arduino Nano.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/skull_top.jpg" alt="Skull Arduino" /></p>
+
+<p>I stuck the Nano and a Lipo battery to the top of the skull and covered it with a cool Buff. Having the eyes on permanently removed a little bit of the element of surprise but I still thought it worked well. The code for the Neopixels was just the <a href="https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino">standard Adafruit strand test</a>.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/buff_skull.jpg" alt="Buff Skull" /></p>
+
+<h2 id="making-the-skull-rotate">Making the skull rotate</h2>
+
+<p>I had always known I would rotate the skull in some fashion but for a while I wasn&rsquo;t sure how. Quite a few weeks ago I came up with the idea to cement a hex driver into the bottom of the skull and sit it on top of a cheap crap €20 electric screwdriver I got ages ago from Woodies.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver1.jpg" alt="Screwdriver1" /></p>
+
+<p>As a screwdriver it was rubbish due to slowness and lack of torque. As a skull-rotator it was awesome, spinning the skull around at high speed.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/screwdriver2.jpg" alt="Screwdriver2" /></p>
+
+<p>Of course I left the difficult bits until a week before Halloween when I sat down and tried to figure out how to control it all. The first attempt was with a dirt cheap double relay board I got 3 years ago and never used. But I couldn&rsquo;t figure out how to make it go forwards and reverse. I then tried an old knock-off Adafruit Motor Shield but it couldn&rsquo;t deliver enough juice (even with a 7.2V LiPo) to overcome the motor&rsquo;s inertia. Finally I <a href="http://arduino-info.wikispaces.com/ArduinoPower">found a relay circuit</a> that did forward/reverse and it worked like a charm.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/DC_Motor_2SPDT_Relay-450.jpg" alt="Circuit" /></p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/relay2.jpg" alt="Relay" /></p>
+
+<p>But how was I going to handle starting/stopping the skull so it was facing away (and potentially covered) initially and then rotating at the right time and stopping in the right position? Of course I left that to Halloween itself.</p>
+
+<p>I used polystyrene and duct tape to brace the screwdriver. Then I setup two limit switches. I then applied power. The head spun around and ripped the switches off their mounts. Damn. So another quick executive decision was made. The head would start rotating when the doorbell was pressed and then stop after 10-15 seconds. Which meant some kids would get the full scary effect whilst others would see the flashing eyes before they got to the door.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/_alMNaewNXw" frameborder="0" allowfullscreen></iframe>
+
+<h2 id="tying-it-all-together">Tying it all together</h2>
+
+<p>This turned out to be pretty easy. I have a ton of decent wire from a dead Christmas tree light string and used that to connect everything up. The doorbell connected to one Arudino which then toggled a pin which the other Arduinos were connected to. After N seconds, it toggled the pin the other way to shut it all down.</p>
+
+<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/wiring.jpg" alt="Wiring" /></p>
+
+<p>It worked very very well.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/JvAI6WQglpk" frameborder="0" allowfullscreen></iframe>
+
+<h2 id="next-year">Next year?</h2>
+
+<p>Hmm not sure. I wanted to do something with ghosts flying down zip wires a few years ago but I just didn&rsquo;t have the knowhow. I&rsquo;m feeling a lot more confident about that now.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">23 Oct 2015, 13:54</h1>
                 <section class="post">
                     <header class="post-header">
@@ -180,15 +350,15 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 
 <p>If your Web App has 2 registered users and 100 visitors per day, may just maybe you don&rsquo;t need MongoDB or MySQL. I have a set of small Node.js projects now where I use the following combinations and they all work well. Anything you are doing in-house on a Raspberry Pi should absolutely use one of these. In fact I&rsquo;m not even sure recent Mongos run on the RPi 1?</p>
 
-<h2 id="dulcimer-levelup-and-leveldb:b9c1e366c3521fb5cdf8cf868ebc63d4">Dulcimer, LevelUP and LevelDB</h2>
+<h2 id="dulcimer-levelup-and-leveldb">Dulcimer, LevelUP and LevelDB</h2>
 
 <p><a href="https://github.com/google/leveldb">LevelDB</a> and <a href="https://github.com/Level/levelup">LevelUP</a> are well known and widely used. I think <a href="https://github.com/fritzy/Dulcimer">Dulcimer</a> probably less so. It&rsquo;s a <a href="http://mongoosejs.com/">Mongoose-ish</a> ORM for LevelDB. I was able to tie it into <a href="http://passportjs.org/">PassportJS</a> without much effort to handle users/sessions/etc. I have two setups using it and both have been running for many months on d&rsquo;internet with zero problems. In one case it&rsquo;s a small stats dashboard running on DigitalOcean with a few registered users who check it maybe once a day. The other one is a registration system for people requesting access to some internal work resources. All submissions go into LevelDB. This is running on <a href="https://www.openshift.com/products/online">OpenShift Online</a>.</p>
 
-<h2 id="tingodb-and-tungus:b9c1e366c3521fb5cdf8cf868ebc63d4">TingoDB and Tungus</h2>
+<h2 id="tingodb-and-tungus">TingoDB and Tungus</h2>
 
 <p>Of the NoSQL file-based databases, this seems to have the lowest profile and I think it deserves a <em>lot</em> of attention. <a href="https://github.com/sergeyksv/tingodb">TingoDB</a> emulates most of the common MongoDB APIs and <a href="https://github.com/sergeyksv/tungus">Tungus</a> emulates most of the Mongoose ones. I was able to take a <a href="https://github.com/sahat/tvshow-tracker">random Node.js project</a> off GitHub which is based on MongoDB/Mongoose/Mongoskin and get it running using TingoDB/Tungus on an RPi with only a tiny bit of fiddling with the <a href="https://github.com/rschmukler/agenda/">Agenda</a> module. This is huge for those wanting to do NoSQL on Raspberry Pi. I&rsquo;ll be playing a lot more with this setup in the coming weeks. You really should too.</p>
 
-<h2 id="sqlite-knex-and-bookshelf:b9c1e366c3521fb5cdf8cf868ebc63d4">SQLite, Knex and Bookshelf</h2>
+<h2 id="sqlite-knex-and-bookshelf">SQLite, Knex and Bookshelf</h2>
 
 <p>Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&rsquo;ve used <a href="https://www.sqlite.org/">SQLite</a> many times over the years for simple projects and it has always worked well. I hadn&rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&rsquo;t need huge scale, you should be looking at SQLite. I&rsquo;m currently wrapping up a simple in-house project using SQLite with <a href="http://knexjs.org/">Knex</a> and <a href="http://bookshelfjs.org/">Bookshelf</a> on a Raspberry Pi. The DB hold simple relationships between devices and their status.</p>
 
@@ -589,30 +759,6 @@ sudo cp -R * /usr/local/
 <p>I doff my cap to you Mr Nadella, this really is the new Microsoft.</p>
 
 <p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/05/doff_cap.gif" alt="Cap" /></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">03 Apr 2015, 11:32</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/node-v0122-for-arm-v6v7-including-raspberry-pi-raspberry-pi-2-and-odroid-c1/" class="post-title">Node v0.12.2 for ARM V6/V7 including Raspberry Pi, Raspberry Pi 2 and ODROID-C1</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>As with Node 0.12.0 and 0.12.1, there are no-precompiled ARM versions of <a href="http://blog.nodejs.org/2015/03/31/node-v0-12-2-stable/">0.12.2</a> on the main site.</p>
-
-<p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/02/nodejs.jpg" alt="Node.js" /></p>
-
-<p>I&rsquo;ve built for <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-pi.tar.gz">Pi 1 (ARM v6)</a> and <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/04/node-v0.12.2-linux-arm-v7.tar.gz">ODROID-C1/Pi2 (ARM v7)</a>. The latter was built on an <a href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G141578608433">ODROID-C1</a> and it seems to run fine on the Pi 2 since both are ARM v7. It took 1 hr 15 mins to compile compared to 4+ hrs on the Pi 1.</p>
-
-<p>&ldquo;make test&rdquo; on the ODROID gave the same results as on the Pi 1: [10:33|% 100|+ 784|-   4]: Done</p>
 
                     </div>
                 </section>

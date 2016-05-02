@@ -108,7 +108,7 @@
                     <div class="post-description">
                         
 
-<h2 id="intro:e19abcb8e6b6d101fc1a316dfdf4aa74">Intro</h2>
+<h2 id="intro">Intro</h2>
 
 <p>I haven&rsquo;t blogged properly about the $5 <a href="https://www.raspberrypi.org/blog/raspberry-pi-zero/">Raspberry Pi Zero</a> computer yet, despite Tweeting non-stop about it. I will soon. In the meantime, I&rsquo;ll just repeat that</p>
 
@@ -126,7 +126,7 @@
 
 <p>With all this flooding, I decided to finally create a related setup which takes the SMS Flood alerts from the County Council and auto-tweets them to the <a href="https://twitter.com/bandonfews">@BandonFEWS</a> Twitter account which I created and have manually updated since 2011.</p>
 
-<h2 id="the-details:e19abcb8e6b6d101fc1a316dfdf4aa74">The Details</h2>
+<h2 id="the-details">The Details</h2>
 
 <p>So the final $7 hardware (including Wifi adapter) now looks as follows:</p>
 
@@ -153,7 +153,7 @@
 
 <p>But I wasn&rsquo;t happy with http, nooooo, I wanted https and I wanted to use <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>. Cue rabbit hole.</p>
 
-<h2 id="let-s-encrypt-and-caddy:e19abcb8e6b6d101fc1a316dfdf4aa74">Let&rsquo;s Encrypt and Caddy</h2>
+<h2 id="let-s-encrypt-and-caddy">Let&rsquo;s Encrypt and Caddy</h2>
 
 <p>Let&rsquo;s Encrypt offers free https certs.</p>
 
@@ -196,7 +196,7 @@ proxy / localhost:9998
 
 <p><img src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/flood_alert.jpg" alt="Bandon Flood Warning" /></p>
 
-<h2 id="alternatives:e19abcb8e6b6d101fc1a316dfdf4aa74">Alternatives</h2>
+<h2 id="alternatives">Alternatives</h2>
 
 <ul>
 <li>Of course I could exclude Twilio from this entire flow and call the end-point directly from Tasker but SMS will often work when no data connection is available.</li>
@@ -204,7 +204,7 @@ proxy / localhost:9998
 <li>In theory I could take the scraped data from the site and generate my own alerts but the Council rightly overrides the default trigger levels on occasion to warn people of impending flooding.</li>
 </ul>
 
-<h2 id="go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest:e19abcb8e6b6d101fc1a316dfdf4aa74">Go Code (See for <a href="https://gist.github.com/conoro/f1a3f7c5b96e2b033119">https://gist.github.com/conoro/f1a3f7c5b96e2b033119</a> for latest)</h2>
+<h2 id="go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest">Go Code (See for <a href="https://gist.github.com/conoro/f1a3f7c5b96e2b033119">https://gist.github.com/conoro/f1a3f7c5b96e2b033119</a> for latest)</h2>
 
 <pre><code class="language-go">package main
 
@@ -317,7 +317,7 @@ func main() {
 }
 </code></pre>
 
-<h2 id="asus-dnsmadeeasy-update:e19abcb8e6b6d101fc1a316dfdf4aa74">Asus DNSMadeEasy Update</h2>
+<h2 id="asus-dnsmadeeasy-update">Asus DNSMadeEasy Update</h2>
 
 <p>This is smidge fiddly. <a href="https://github.com/RMerl/asuswrt-merlin/wiki/Custom-DDNS">More details here</a>. Once you have Merlin installed and you are happily connected to the internet again (you did remember to write down all the settings for your ISP didn&rsquo;t you?). You need to:</p>
 

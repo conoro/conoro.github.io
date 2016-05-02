@@ -120,7 +120,7 @@
 
 <p>I&rsquo;ve been able to build the binaries on Linux, Windows and in a Docker container. All are easy.</p>
 
-<h1 id="linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Linux (or Linux VM on Windows)</h1>
+<h1 id="linux-or-linux-vm-on-windows">Linux (or Linux VM on Windows)</h1>
 
 <p>Following <a href="http://www.black-swift.com/forum/suggestion-box/59-go-1-4-2-on-black-swift">Cathal&rsquo;s simple instructions</a>, I was able to build Go for MIPS32 in a few minutes in a Linux VM on my main Windows machine. I then cross-compiled a Hello World and scp&rsquo;ed it to the Omega. It worked first time!</p>
 
@@ -141,7 +141,7 @@ vi helloworld.go
 go build helloworld.go
 </code></pre>
 
-<h1 id="windows-10:d02f86b4d8f79af4cbc61b2378ee241c">Windows 10</h1>
+<h1 id="windows-10">Windows 10</h1>
 
 <p>I was very surprised this worked but of course Go is strongly cross-platform. My standard build setup for Node.js native modules did the trick. You&rsquo;ll probably need Visual Studio Community 2015 and Git for Windows. Then:</p>
 
@@ -170,9 +170,9 @@ CMD
 
 <p>For Windows I use WinSCP to copy the files to the Omega. For some reason Filezilla SFTP has a problem talking to it.</p>
 
-<h1 id="docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c">Docker Container on Windows</h1>
+<h1 id="docker-container-on-windows">Docker Container on Windows</h1>
 
-<h2 id="hello-world:d02f86b4d8f79af4cbc61b2378ee241c">Hello World</h2>
+<h2 id="hello-world">Hello World</h2>
 
 <p>To get more familiar with Docker I decided to create a Docker image that others can use. That turned out to be pretty easy too. Here is the Dockerfile:</p>
 
@@ -246,7 +246,7 @@ func main() {
 <li>Open a shell on your Omega with the webapp or Putty and just type:   <em>helloworld</em></li>
 </ul>
 
-<h2 id="web-app:d02f86b4d8f79af4cbc61b2378ee241c">Web App</h2>
+<h2 id="web-app">Web App</h2>
 
 <p>A more advanced example which also works perfectly is to run a web-app using the <a href="https://github.com/gin-gonic/gin">Gin</a> framework. For that, all you need to do is:</p>
 
@@ -277,7 +277,7 @@ func main() {
 
 <p>Note I also built this using the Windows setup for comparison and it worked too.</p>
 
-<h2 id="database:d02f86b4d8f79af4cbc61b2378ee241c">Database</h2>
+<h2 id="database">Database</h2>
 
 <p>Not so much luck with embedded databases I&rsquo;m afraid. I suspect Bolt and LevelDB are using some more advanced filesystem features which are causing issues on OpenWRT. I lack the expertise to debug.</p>
 
@@ -292,7 +292,7 @@ func main() {
 <li><a href="https://github.com/peterbourgon/diskv">diskv</a> - Double hurrah, it seems to work too.</li>
 </ul>
 
-<h1 id="conclusion:d02f86b4d8f79af4cbc61b2378ee241c">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>I&rsquo;m looking forward to running a lot more code on the Omega now.</p>
 

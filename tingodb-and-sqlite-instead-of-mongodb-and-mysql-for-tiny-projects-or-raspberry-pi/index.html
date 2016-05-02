@@ -108,15 +108,15 @@
 
 <p>If your Web App has 2 registered users and 100 visitors per day, may just maybe you don&rsquo;t need MongoDB or MySQL. I have a set of small Node.js projects now where I use the following combinations and they all work well. Anything you are doing in-house on a Raspberry Pi should absolutely use one of these. In fact I&rsquo;m not even sure recent Mongos run on the RPi 1?</p>
 
-<h2 id="dulcimer-levelup-and-leveldb:b9c1e366c3521fb5cdf8cf868ebc63d4">Dulcimer, LevelUP and LevelDB</h2>
+<h2 id="dulcimer-levelup-and-leveldb">Dulcimer, LevelUP and LevelDB</h2>
 
 <p><a href="https://github.com/google/leveldb">LevelDB</a> and <a href="https://github.com/Level/levelup">LevelUP</a> are well known and widely used. I think <a href="https://github.com/fritzy/Dulcimer">Dulcimer</a> probably less so. It&rsquo;s a <a href="http://mongoosejs.com/">Mongoose-ish</a> ORM for LevelDB. I was able to tie it into <a href="http://passportjs.org/">PassportJS</a> without much effort to handle users/sessions/etc. I have two setups using it and both have been running for many months on d&rsquo;internet with zero problems. In one case it&rsquo;s a small stats dashboard running on DigitalOcean with a few registered users who check it maybe once a day. The other one is a registration system for people requesting access to some internal work resources. All submissions go into LevelDB. This is running on <a href="https://www.openshift.com/products/online">OpenShift Online</a>.</p>
 
-<h2 id="tingodb-and-tungus:b9c1e366c3521fb5cdf8cf868ebc63d4">TingoDB and Tungus</h2>
+<h2 id="tingodb-and-tungus">TingoDB and Tungus</h2>
 
 <p>Of the NoSQL file-based databases, this seems to have the lowest profile and I think it deserves a <em>lot</em> of attention. <a href="https://github.com/sergeyksv/tingodb">TingoDB</a> emulates most of the common MongoDB APIs and <a href="https://github.com/sergeyksv/tungus">Tungus</a> emulates most of the Mongoose ones. I was able to take a <a href="https://github.com/sahat/tvshow-tracker">random Node.js project</a> off GitHub which is based on MongoDB/Mongoose/Mongoskin and get it running using TingoDB/Tungus on an RPi with only a tiny bit of fiddling with the <a href="https://github.com/rschmukler/agenda/">Agenda</a> module. This is huge for those wanting to do NoSQL on Raspberry Pi. I&rsquo;ll be playing a lot more with this setup in the coming weeks. You really should too.</p>
 
-<h2 id="sqlite-knex-and-bookshelf:b9c1e366c3521fb5cdf8cf868ebc63d4">SQLite, Knex and Bookshelf</h2>
+<h2 id="sqlite-knex-and-bookshelf">SQLite, Knex and Bookshelf</h2>
 
 <p>Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&rsquo;ve used <a href="https://www.sqlite.org/">SQLite</a> many times over the years for simple projects and it has always worked well. I hadn&rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&rsquo;t need huge scale, you should be looking at SQLite. I&rsquo;m currently wrapping up a simple in-house project using SQLite with <a href="http://knexjs.org/">Knex</a> and <a href="http://bookshelfjs.org/">Bookshelf</a> on a Raspberry Pi. The DB hold simple relationships between devices and their status.</p>
 

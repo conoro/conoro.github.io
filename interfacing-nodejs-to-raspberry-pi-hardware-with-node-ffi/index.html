@@ -128,7 +128,7 @@
 
 <p>The final set of steps are actually quite simple. All the effort was in the learning.</p>
 
-<h3 id="install-wiringpi:72ef235c1c656139694e1398dfdb61c0">Install WiringPi</h3>
+<h3 id="install-wiringpi">Install WiringPi</h3>
 
 <pre><code class="language-bash">mkdir ~/gitwork
 cd gitwork
@@ -143,12 +143,12 @@ cd rcswitch-pi
 make
 </code></pre>
 
-<h3 id="build-an-rcswitch-pi-library:72ef235c1c656139694e1398dfdb61c0">Build an RCSwitch-Pi library</h3>
+<h3 id="build-an-rcswitch-pi-library">Build an RCSwitch-Pi library</h3>
 
 <pre><code class="language-bash">gcc -shared -fpic RCSwitch.cpp -o libRCSwitch.so
 </code></pre>
 
-<h3 id="simple-c-test-to-make-sure-you-can-talk-to-efergy:72ef235c1c656139694e1398dfdb61c0">Simple C++ test to make sure you can talk to Efergy</h3>
+<h3 id="simple-c-test-to-make-sure-you-can-talk-to-efergy">Simple C++ test to make sure you can talk to Efergy</h3>
 
 <pre><code class="language-bash">cd ~/gitwork/rcswitch-pi
 </code></pre>
@@ -190,7 +190,7 @@ sudo ./efergy 109019
 
 <p>If all is working ok, the switch will turn on and off.</p>
 
-<h3 id="install-node-npm-on-raspberry-pi:72ef235c1c656139694e1398dfdb61c0">Install Node/NPM on Raspberry Pi</h3>
+<h3 id="install-node-npm-on-raspberry-pi">Install Node/NPM on Raspberry Pi</h3>
 
 <pre><code class="language-bash">    cd ~
     sudo mkdir /opt/node
@@ -211,7 +211,7 @@ sudo ./efergy 109019
     npm -v
 </code></pre>
 
-<h3 id="wrapping-c-so-it-can-be-called-by-c:72ef235c1c656139694e1398dfdb61c0">Wrapping C++ so it can be called by C</h3>
+<h3 id="wrapping-c-so-it-can-be-called-by-c">Wrapping C++ so it can be called by C</h3>
 
 <p>Create wrapper.h and wrapper.c</p>
 
@@ -269,7 +269,7 @@ extern &quot;C&quot; {
     }
 </code></pre>
 
-<h3 id="compile-everything:72ef235c1c656139694e1398dfdb61c0">Compile everything</h3>
+<h3 id="compile-everything">Compile everything</h3>
 
 <p>Use -g flag everywhere if you want to debug with GDB (gdb efergy2, break main, run 109011, next, next). Simple <a href="http://web.eecs.umich.edu/~sugih/pointers/summary.html">GDB Tutorial here</a> and some tips on <a href="http://www.raspberrypi.org/forum/viewtopic.php?f=33&amp;t=15312">RPi Forums</a>.</p>
 
@@ -279,7 +279,7 @@ g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
 g++ -g efergy.o wrapper.o ./libRCSwitch.so -o efergy2
 </code></pre>
 
-<h3 id="run-the-c-program:72ef235c1c656139694e1398dfdb61c0">Run the C program</h3>
+<h3 id="run-the-c-program">Run the C program</h3>
 
 <pre><code class="language-bash">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
 sudo ./efergy2 109011
@@ -287,12 +287,12 @@ sudo ./efergy2 109011
 
 <p>Now to get everything running in Node/JavaScript</p>
 
-<h3 id="install-node-ffi:72ef235c1c656139694e1398dfdb61c0">Install Node FFI</h3>
+<h3 id="install-node-ffi">Install Node FFI</h3>
 
 <pre><code class="language-bash">sudo npm install -g ffi
 </code></pre>
 
-<h3 id="create-send-js:72ef235c1c656139694e1398dfdb61c0">Create send.js</h3>
+<h3 id="create-send-js">Create send.js</h3>
 
 <pre><code class="language-javascript">var ffi = require(&quot;ffi&quot;)
 
@@ -331,13 +331,13 @@ if (mySwitch.isNull()) {
 }
 </code></pre>
 
-<h3 id="compile-the-libraries:72ef235c1c656139694e1398dfdb61c0">Compile the libraries</h3>
+<h3 id="compile-the-libraries">Compile the libraries</h3>
 
 <pre><code class="language-bash">g++ -shared -fpic -g wrapper.c -L ./ -l RCSwitch -o libwrapper.so
 g++ -shared -fpic -g RCSwitch.cpp -L ./ -l wiringPi -o libRCSwitch.so
 </code></pre>
 
-<h3 id="run-send-js:72ef235c1c656139694e1398dfdb61c0">Run send.js</h3>
+<h3 id="run-send-js">Run send.js</h3>
 
 <p>Note that anything which uses WiringPi has to be run sudo. A bit of a pain. Not sure I want to be running the Node process as root?</p>
 

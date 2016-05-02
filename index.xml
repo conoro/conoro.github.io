@@ -6,8 +6,53 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Feb 2016 17:43:26 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 May 2016 19:32:32 +0100</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introducing YTPodders - Get your fave YouTubers as audio podcasts on your phone</title>
+      <link>http://conoroneill.net/introducing-ytpodders-get-your-fave-youtubers-as-audio-podcasts-on-your-phone/</link>
+      <pubDate>Mon, 02 May 2016 19:32:32 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/introducing-ytpodders-get-your-fave-youtubers-as-audio-podcasts-on-your-phone/</guid>
+      <description>&lt;p&gt;Like my kids, I love regular YouTubers. My particular favourites are the tech, craft, metal and woodworking people who make amazing things every week. &lt;a href=&#34;https://www.youtube.com/channel/UCjA8vRlL1c7BDixQRJ39-LQ&#34;&gt;Those&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/darbinorvar&#34;&gt;gals&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ&#34;&gt;and&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/jimmydiresta&#34;&gt;guys&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCHWvlZ6jGmXKYa1w8yRVcbA&#34;&gt;have&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCETeXD_3awsQv-9rSdCYXQQ&#34;&gt;to&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/urbanTrash&#34;&gt;be&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/Jayscustomcreations&#34;&gt;watched&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCYdkEm-NjhS8TmLVt_qZy9g&#34;&gt;to&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCkhZ3X6pVbrEs_VzIPfwWgQ&#34;&gt;really&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/arduinoversusevil&#34;&gt;get&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/colinfurze&#34;&gt;the&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCV8D6u7_jkuGf_iUvNzXpmg&#34;&gt;value&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/rusticman1973&#34;&gt;from&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/JoergSprave&#34;&gt;them&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCpV7D0LoRbYhdx2G-whWyog&#34;&gt;and&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCfCKUsN2HmXfjiOJc7z7xBw&#34;&gt;here&amp;rsquo;s&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UC6x7GwJxuoABSosgVXDYtTw&#34;&gt;a&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCUaiGrBfRCaC6pL7ZnZjWbg&#34;&gt;few&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCHvBHWBzzB7NyU5tIiEZHBg&#34;&gt;more&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/punishedprops&#34;&gt;worth&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/stevinmarin&#34;&gt;looking&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/channel/UCAL3JXZSzSm8AlZyD3nQdBA&#34;&gt;at&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/testedcom&#34;&gt;too&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/channel/UCupK5wJGXHDemXmHFMCMtHA&#34;&gt;of&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/DrunkenWoodworker&#34;&gt;course&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/thebenheckshow&#34;&gt;not&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/Matthiaswandel&#34;&gt;forgetting&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/ferrynick&#34;&gt;these&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/makemagazine&#34;&gt;other&lt;/a&gt; &lt;a href=&#34;https://www.youtube.com/user/benbrandt22&#34;&gt;gems&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But there are others I love equally where it&amp;rsquo;s mostly about what they are saying. For example, &lt;a href=&#34;https://www.youtube.com/user/TheGingerRunner&#34;&gt;Ethan Newberry&lt;/a&gt; (aka The Ginger Runner) does a fantastic weekly live session where he mostly interviews Ultra runners. This works just as well without the video. I listen to this when running or driving. It&amp;rsquo;s seriously one of the best motivational things you can listen to on a marathon!&lt;/p&gt;
+
+&lt;p&gt;For a few months I was using &lt;a href=&#34;https://rg3.github.io/youtube-dl/&#34;&gt;youtube-dl&lt;/a&gt; to grab the latest episode video file, then &lt;a href=&#34;http://winff.org/html_new/&#34;&gt;Winff/ffmeg&lt;/a&gt; to convert to MP3, then I manually copied the file to the music player on my Android phone. Not exactly slick.&lt;/p&gt;
+
+&lt;p&gt;Of course, I decided to automate it and figured it&amp;rsquo;d take a couple of evenings. Two months later, here we are :-)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ytpodders.com/images/YTPodders_256x256_gradient.png&#34; alt=&#34;YTPodders&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Introducing &lt;a href=&#34;https://ytpodders.com&#34;&gt;YTPodders&lt;/a&gt;, an App that does everything you need to have automated podcastification of YouTube Users and Channels. It works very similarly to my manual process as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;When you run ytpodders, it checks the list of YouTube Users and Channels you previously added for any new content. It downloads any new ones it finds using youtube-dl&lt;/li&gt;
+&lt;li&gt;As part of that download process, youtube-dl uses ffmpeg to convert the videos to MP3 audio&lt;/li&gt;
+&lt;li&gt;It copies the MP3s to the YTPodders App directory in Dropbox and waits until they are all synced properly with Dropbox&lt;/li&gt;
+&lt;li&gt;It then generates an rss.xml file containing all the entries and tells you the URL of that rss.xml file&lt;/li&gt;
+&lt;li&gt;You subscribe to that rss.xml file in your Podcasting App on your phone e.g. &lt;a href=&#34;https://play.google.com/store/apps/details?id=mobi.beyondpod&amp;amp;hl=en&#34;&gt;BeyondPod&lt;/a&gt; on Android.&lt;/li&gt;
+&lt;li&gt;The Podcasting App then regularly checks for updates and pulls any new content from Dropbox on to your phone for offline listening.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.dropbox.com/s/22pziqm50ep9r55/beyondpod.png?raw=1&#34; alt=&#34;BeyondPod&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This has been working really well for me for several weeks now. I have a Windows 10 Scheduled Task setup which runs it every morning at 6am. And I have BeyondPod checking a few times a day too. So my phone always has the latest and greatest YouTube MP3s.&lt;/p&gt;
+
+&lt;p&gt;The code needs lots of work and there is still a lot of maintenance type functionality that needs to be added (pruning old MP3s; cleaning up when you remove subscriptions etc).&lt;/p&gt;
+
+&lt;p&gt;The important thing you need to do is to give &lt;a href=&#34;https://ytpodders.com&#34;&gt;YTPodders authorisation&lt;/a&gt; to access your Dropbox. It only gets access to its own sub-directory in the Apps directory in Dropbox so it can&amp;rsquo;t mess anything else up.&lt;/p&gt;
+
+&lt;p&gt;Full installation and usage instructions for End-Users and Developers are over &lt;a href=&#34;https://github.com/conoro/ytpodders&#34;&gt;on GitHub here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It has been mostly tested on Windows 10 but also runs on Mac and Linux. The server runs on Windows, OSX, CentOS and Fedora too (presumably any Linux distro).&lt;/p&gt;
+
+&lt;p&gt;As this is basically time-shifting for personal use only, it should come under US fair use. The download of the video by youtube-dl should count as a view for advertising purposes. If you are concerned about depriving your favourite YouTubers of income, why not back them on &lt;a href=&#34;http://www.patreon.com&#34;&gt;Patreon&lt;/a&gt;, if they use it? I did that for &lt;a href=&#34;https://www.patreon.com/thegingerrunner?ty=c&#34;&gt;Ethan&lt;/a&gt; because I get so much value as a runner from the videos he creates and the interviews that he does.&lt;/p&gt;
+
+&lt;p&gt;Improvements, suggestions and bug reports all gladly accepted &lt;a href=&#34;https://github.com/conoro/ytpodders&#34;&gt;over on GitHub&lt;/a&gt;. The code is written in Go/GoLang, yes it&amp;rsquo;s a giant awful ball of mud hack and it doesn&amp;rsquo;t do multiple downloads in parallel on purpose, not because I can&amp;rsquo;t figure out goroutines :-) But it works.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Three ways to build Go 1.4 binaries for MIPS32 Onion Omega #golang #docker</title>
@@ -29,7 +74,7 @@
 
 &lt;p&gt;I&amp;rsquo;ve been able to build the binaries on Linux, Windows and in a Docker container. All are easy.&lt;/p&gt;
 
-&lt;h1 id=&#34;linux-or-linux-vm-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Linux (or Linux VM on Windows)&lt;/h1&gt;
+&lt;h1 id=&#34;linux-or-linux-vm-on-windows&#34;&gt;Linux (or Linux VM on Windows)&lt;/h1&gt;
 
 &lt;p&gt;Following &lt;a href=&#34;http://www.black-swift.com/forum/suggestion-box/59-go-1-4-2-on-black-swift&#34;&gt;Cathal&amp;rsquo;s simple instructions&lt;/a&gt;, I was able to build Go for MIPS32 in a few minutes in a Linux VM on my main Windows machine. I then cross-compiled a Hello World and scp&amp;rsquo;ed it to the Omega. It worked first time!&lt;/p&gt;
 
@@ -50,7 +95,7 @@ vi helloworld.go
 go build helloworld.go
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;windows-10:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Windows 10&lt;/h1&gt;
+&lt;h1 id=&#34;windows-10&#34;&gt;Windows 10&lt;/h1&gt;
 
 &lt;p&gt;I was very surprised this worked but of course Go is strongly cross-platform. My standard build setup for Node.js native modules did the trick. You&amp;rsquo;ll probably need Visual Studio Community 2015 and Git for Windows. Then:&lt;/p&gt;
 
@@ -79,9 +124,9 @@ CMD
 
 &lt;p&gt;For Windows I use WinSCP to copy the files to the Omega. For some reason Filezilla SFTP has a problem talking to it.&lt;/p&gt;
 
-&lt;h1 id=&#34;docker-container-on-windows:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Docker Container on Windows&lt;/h1&gt;
+&lt;h1 id=&#34;docker-container-on-windows&#34;&gt;Docker Container on Windows&lt;/h1&gt;
 
-&lt;h2 id=&#34;hello-world:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Hello World&lt;/h2&gt;
+&lt;h2 id=&#34;hello-world&#34;&gt;Hello World&lt;/h2&gt;
 
 &lt;p&gt;To get more familiar with Docker I decided to create a Docker image that others can use. That turned out to be pretty easy too. Here is the Dockerfile:&lt;/p&gt;
 
@@ -155,7 +200,7 @@ func main() {
 &lt;li&gt;Open a shell on your Omega with the webapp or Putty and just type:   &lt;em&gt;helloworld&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;web-app:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Web App&lt;/h2&gt;
+&lt;h2 id=&#34;web-app&#34;&gt;Web App&lt;/h2&gt;
 
 &lt;p&gt;A more advanced example which also works perfectly is to run a web-app using the &lt;a href=&#34;https://github.com/gin-gonic/gin&#34;&gt;Gin&lt;/a&gt; framework. For that, all you need to do is:&lt;/p&gt;
 
@@ -186,7 +231,7 @@ func main() {
 
 &lt;p&gt;Note I also built this using the Windows setup for comparison and it worked too.&lt;/p&gt;
 
-&lt;h2 id=&#34;database:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Database&lt;/h2&gt;
+&lt;h2 id=&#34;database&#34;&gt;Database&lt;/h2&gt;
 
 &lt;p&gt;Not so much luck with embedded databases I&amp;rsquo;m afraid. I suspect Bolt and LevelDB are using some more advanced filesystem features which are causing issues on OpenWRT. I lack the expertise to debug.&lt;/p&gt;
 
@@ -201,7 +246,7 @@ func main() {
 &lt;li&gt;&lt;a href=&#34;https://github.com/peterbourgon/diskv&#34;&gt;diskv&lt;/a&gt; - Double hurrah, it seems to work too.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;conclusion:d02f86b4d8f79af4cbc61b2378ee241c&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;m looking forward to running a lot more code on the Omega now.&lt;/p&gt;
 </description>
@@ -221,7 +266,7 @@ func main() {
 
 &lt;p&gt;But when does it go from &amp;ldquo;get a discount&amp;rdquo; to &amp;ldquo;we won&amp;rsquo;t insure you unless you install this app&amp;rdquo;?&lt;/p&gt;
 
-&lt;h2 id=&#34;the-email:e2b6c4ebc89eb12d3dc2d0642245ebc1&#34;&gt;The email:&lt;/h2&gt;
+&lt;h2 id=&#34;the-email&#34;&gt;The email:&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/01/123discount.jpg&#34; alt=&#34;123 Discount&#34; /&gt;&lt;/p&gt;
 </description>
@@ -277,7 +322,7 @@ func main() {
 
 &lt;p&gt;A completely random braindump of stuff that got my juices flowing this year.&lt;/p&gt;
 
-&lt;h1 id=&#34;esp8266-1-wifi-modules:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;ESP8266 $1 Wifi modules&lt;/h1&gt;
+&lt;h1 id=&#34;esp8266-1-wifi-modules&#34;&gt;ESP8266 $1 Wifi modules&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;ve talked about &lt;a href=&#34;http://espressif.com/en/products/esp8266/&#34;&gt;the ESP8266&lt;/a&gt; constantly all year. A price-point of ~$1 in volume means that you can wifi-enable anything. Where previously you might have used one of the many low bandwidth &amp;ldquo;IoT&amp;rdquo; protocols internally and connected them to hub-device, now you can do Wifi and IP end-to-end. The only downside is high power consumption. I&amp;rsquo;d actually prefer if they did a low-power V2 instead of the bells-and-whistles ESP32.&lt;/p&gt;
 
@@ -290,37 +335,37 @@ func main() {
 &lt;li&gt;&lt;a href=&#34;https://github.com/esp8266/Arduino/&#34;&gt;Arduino&lt;/a&gt; - Yup, you can run a huge amount of Arduino code straight on the ESP8266. Really exciting to have this. Only drawback is that native AVR code and (I think) interrupt-driven code will not compile. Also far fewer IOs than normal Arduinos.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;raspberry-pi-zero-and-the-mag-pi-issue-40:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Raspberry Pi Zero and The Mag Pi Issue 40&lt;/h1&gt;
+&lt;h1 id=&#34;raspberry-pi-zero-and-the-mag-pi-issue-40&#34;&gt;Raspberry Pi Zero and The Mag Pi Issue 40&lt;/h1&gt;
 
 &lt;p&gt;A &lt;a href=&#34;https://www.raspberrypi.org/blog/raspberry-pi-zero/&#34;&gt;$5 computer&lt;/a&gt; that came free on the front of a magazine. Very little else needs to be said here. $5 for 1GHz, 512MB RAM, 1080p HDMI, Linux, Mathematica, Node-Red, Kodi and anything else you want to try. I still get the shivers thinking about it. Meanwhile the never-satisfieds will whine about $1 adapters or the fact that it needs electricity. I&amp;rsquo;m framing my first one.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/raspberry-pi-zero-_3510859b.jpg&#34; alt=&#34;PiZero&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;let-s-encrypt:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/h1&gt;
+&lt;h1 id=&#34;let-s-encrypt&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/h1&gt;
 
 &lt;p&gt;Anyone who has had to go through the rigmarole of setting up a https server knows what a pain it is. The certs are generally completely overpriced too. &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt; Certs are free and full automation is already available for Apache, NGINX, Caddy and more. Now you basically have no reason not to use https.&lt;/p&gt;
 
 &lt;p&gt;This is a massive industry segment disruption. I&amp;rsquo;m thrilled to see it happen.&lt;/p&gt;
 
-&lt;h1 id=&#34;security-first-and-privacy-first:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Security First and Privacy First&lt;/h1&gt;
+&lt;h1 id=&#34;security-first-and-privacy-first&#34;&gt;Security First and Privacy First&lt;/h1&gt;
 
 &lt;p&gt;I use uBlock Origin, Pop-up Blocker, Do Not Track and Ghostery on all my browsers. A lot of the time I use &lt;a href=&#34;https://www.blackvpn.com/&#34;&gt;BlackVPN&lt;/a&gt; too. Yet somehow, with my anti-business setup, many many companies received online orders and money from me this Christmas. I&amp;rsquo;m done with the online advertising industry. All the stuff Doc Searls has been talking about for years is still valid. As for governments thinking our online activities are their business, you need to start fighting back now.&lt;/p&gt;
 
-&lt;h1 id=&#34;google-cardboard-and-youtube-360:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Google Cardboard and YouTube 360&lt;/h1&gt;
+&lt;h1 id=&#34;google-cardboard-and-youtube-360&#34;&gt;Google Cardboard and YouTube 360&lt;/h1&gt;
 
 &lt;p&gt;Somehow I completely missed the launch of Cardboard support in YouTube and the creation of 360 videos by an ever growing set of people. The first one I saw was &lt;a href=&#34;https://www.youtube.com/watch?v=QnYncJdEh64&#34;&gt;Colin Furze&lt;/a&gt; and it&amp;rsquo;s just incredible. The &lt;a href=&#34;https://www.youtube.com/watch?v=f-7qq8n2iqw&#34;&gt;second&lt;/a&gt; was one based on Star Wars The Force Awakens, and is 100x better than the movie. I went and got a much more &lt;a href=&#34;http://eud.dx.com/product/844380189&#34;&gt;high quality plastic&lt;/a&gt; &amp;ldquo;Cardboard&amp;rdquo; as a result. It&amp;rsquo;s excellent. The recently launched &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.vr.cyclops&#34;&gt;Google Cardboard Camera&lt;/a&gt; is also superb but images are sadly locked to the device the panoramic photo was taken on.&lt;/p&gt;
 
 &lt;p&gt;This is one overall technology-set that myself and the kids are 100% in agreement on. It rocks. The next Star Wars movie should be launched on Cardboard (or Oculus or whatevs).&lt;/p&gt;
 
-&lt;h1 id=&#34;node-js-4-x:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Node.js 4.x&lt;/h1&gt;
+&lt;h1 id=&#34;node-js-4-x&#34;&gt;Node.js 4.x&lt;/h1&gt;
 
 &lt;p&gt;Phew. The schism has been healed and 4.x is a really great release. Initially I had lots of problems with native modules on Windows which I hope are finally starting to settle down now. Node is still the best choice for a huge range of workloads and cannot be beaten for mobile back-ends.&lt;/p&gt;
 
-&lt;h1 id=&#34;embedded-javascript:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Embedded JavaScript&lt;/h1&gt;
+&lt;h1 id=&#34;embedded-javascript&#34;&gt;Embedded JavaScript&lt;/h1&gt;
 
 &lt;p&gt;I think JavaScript will completely take over the Embedded world where hard realtime is not required. The &lt;a href=&#34;http://www.espruino.com/&#34;&gt;Espruino project&lt;/a&gt; has shown what is possible here and should be much more widely used. I&amp;rsquo;m looking forward to seeing it running on the BBC&amp;rsquo;s micro:bit. Other projects like &lt;a href=&#34;http://cylonjs.com/&#34;&gt;Cylon.js&lt;/a&gt; are also worth a look.&lt;/p&gt;
 
-&lt;h1 id=&#34;go-golang:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Go/Golang&lt;/h1&gt;
+&lt;h1 id=&#34;go-golang&#34;&gt;Go/Golang&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;ll be honest, C has been the only language I really loved working in. I like Python and I really enjoy the productivity of Node.js but C was what I spent most of my real programming years using. C++ is an abomination and Java always feels like a crazy amount of work to eventually run some bloated barely-portable thing.&lt;/p&gt;
 
@@ -330,39 +375,39 @@ func main() {
 
 &lt;p&gt;Left-field: Go is slowly getting some Android capabilities. Google should go all-in on it and replace Java. If Apple can manage it so well with the move to Swift on iOS (and they used 3 CPU architectures on Mac!), why not? It would kill all the Oracle problems completely and move them away from a legacy language.&lt;/p&gt;
 
-&lt;h1 id=&#34;scriptcraft-minecraft:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Scriptcraft &amp;amp; Minecraft&lt;/h1&gt;
+&lt;h1 id=&#34;scriptcraft-minecraft&#34;&gt;Scriptcraft &amp;amp; Minecraft&lt;/h1&gt;
 
 &lt;p&gt;Minecraft continues to dominate my younger kids&amp;rsquo; lives. From Stampy to Servers, they are never bored playing it or watching videos about it. My buddy Walter built the amazing &lt;a href=&#34;http://scriptcraftjs.org/&#34;&gt;Scriptcraft&lt;/a&gt; which enables you to build mods and control Minecraft in, yes you guessed it, JavaScript. &lt;a href=&#34;http://www.peachpit.com/store/beginners-guide-to-writing-minecraft-plugins-in-javascript-9780133930146&#34;&gt;His book&lt;/a&gt; is a must-read for anyone looking for an interesting way to teach kids how to program. I really want to try out some stuff where it interfaces with the real world. I think Microsoft are missing a trick by not rowing in behind Walter and this wonderful project.&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s also a huge pity to watch Lego completely miss the boat here and continue to sell the crazily overpriced and overspecced Mindstorms. There is a sweetspot to be found in an online-world + real-world + electronics + JavaScript and it ain&amp;rsquo;t Lego bleedin Dimensions.&lt;/p&gt;
 
-&lt;h1 id=&#34;particle-photon:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Particle Photon&lt;/h1&gt;
+&lt;h1 id=&#34;particle-photon&#34;&gt;Particle Photon&lt;/h1&gt;
 
 &lt;p&gt;I was given a &lt;a href=&#34;https://www.particle.io/&#34;&gt;Particle Photon&lt;/a&gt; recently and was blown away by how easy the setup was and how slickly the Cloud IDE works even through firewalls and NAT. Despite the Open Source nature of it, I still worry about lock-in to some degree. Having said that, my &lt;a href=&#34;https://www.kickstarter.com/projects/digistump/oak-by-digistump-wi-fi-for-all-things-arduino-comp&#34;&gt;DigiStump Oak&lt;/a&gt; just shipped (ESP8266 again!) and it it now Particle API compatible. I&amp;rsquo;d love to see some sort of multi-vendor federated distributed Particle clouds where you aren&amp;rsquo;t betting your IoT strategy on the financial stability of one startup.&lt;/p&gt;
 
-&lt;h1 id=&#34;react-native:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;React Native&lt;/h1&gt;
+&lt;h1 id=&#34;react-native&#34;&gt;React Native&lt;/h1&gt;
 
 &lt;p&gt;Use JavaScript to &lt;a href=&#34;https://facebook.github.io/react-native/&#34;&gt;build Native Apps on iOS and Android&lt;/a&gt;. What&amp;rsquo;s not to like? Weird how I hate Facebook the site/app but love so much of their Engineering.&lt;/p&gt;
 
-&lt;h1 id=&#34;rgb-leds-neopixels:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;RGB LEDs / Neopixels&lt;/h1&gt;
+&lt;h1 id=&#34;rgb-leds-neopixels&#34;&gt;RGB LEDs / Neopixels&lt;/h1&gt;
 
 &lt;p&gt;Ridiculous amount of fun with simple individually controllable RGB LEDs. These are going to be everywhere in 2016. Everywhere.&lt;/p&gt;
 
-&lt;h1 id=&#34;3d-printing:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;3D Printing&lt;/h1&gt;
+&lt;h1 id=&#34;3d-printing&#34;&gt;3D Printing&lt;/h1&gt;
 
 &lt;p&gt;I still adore my &lt;a href=&#34;https://printrbot.dozuki.com/Guide/Assembling+the+NEW+Printrbot+Simple+Maker&#39;s+Kit/123&#34;&gt;Printrbot Simple Maker&amp;rsquo;s Edition&lt;/a&gt;. I continue to be surprised by the quality of prints from such a cheap printer. I&amp;rsquo;ve had some fun with Ninjaflex and unusual colours this year. Also a multitude of #PiZero cases! If funds permit, I&amp;rsquo;ll probably start looking at one of the &lt;a href=&#34;http://www.bq.com/es/prusa&#34;&gt;Prusa i3 variants&lt;/a&gt; to get a bigger print area but otherwise it does everything I need.&lt;/p&gt;
 
-&lt;h1 id=&#34;efibre-by-eir:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;eFibre by Eir&lt;/h1&gt;
+&lt;h1 id=&#34;efibre-by-eir&#34;&gt;eFibre by Eir&lt;/h1&gt;
 
 &lt;p&gt;We get 92Mbs down, 19Mbs up. It&amp;rsquo;s completely changed how we use the internet. Bravo Eir(com). Genuinely surpassed all expectations. Getting speeds like that on a poxy twisted pair is staggering.&lt;/p&gt;
 
 &lt;p&gt;But let&amp;rsquo;s be absolutely clear about broadband in this country, the Government&amp;rsquo;s latest target of 30Mbs for everyone is a joke. By the time it&amp;rsquo;s done, it&amp;rsquo;ll be completely out of date. Why can these people not understand that ultra-fast broadband everywhere will do more for employment in this country than anything else. They&amp;rsquo;d be heroes in history for doing this right, not remembered as a bunch of clowns who couldn&amp;rsquo;t properly roll out a water quango and postcode quango.&lt;/p&gt;
 
-&lt;h1 id=&#34;statically-hosted-blogs:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Statically hosted Blogs&lt;/h1&gt;
+&lt;h1 id=&#34;statically-hosted-blogs&#34;&gt;Statically hosted Blogs&lt;/h1&gt;
 
 &lt;p&gt;It feels like every day there is another WordPress security scare. And that&amp;rsquo;s without mentioning the plugin ecosystem horror. I got sick of the upgrade cycle treadmill and constant exploits last year and moved everything to statically hosted blogs. First with &lt;a href=&#34;http://harpjs.com/&#34;&gt;Harp.js&lt;/a&gt;, then with &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt; and now with &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. All fine tools, all work well with GitHub Pages and OpenShift. The incredible speed of Hugo is what makes it my current favourite. Edit, build, deploy, fuggedaboudit. I will never go back to a traditional DB-backed CMS.&lt;/p&gt;
 
-&lt;h1 id=&#34;dirt-cheap-android-phones-and-tablets:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Dirt-cheap Android phones and tablets&lt;/h1&gt;
+&lt;h1 id=&#34;dirt-cheap-android-phones-and-tablets&#34;&gt;Dirt-cheap Android phones and tablets&lt;/h1&gt;
 
 &lt;p&gt;I got a &lt;a href=&#34;http://www.dx.com/p/presale-doogee-x5-quad-core-android-5-1-wcdma-bar-phone-w-5-0-ips-hd-8gb-rom-gps-xender-black-400551&#34;&gt;Doogee X5 Android phone for €55&lt;/a&gt; a few weeks ago as a backup device. Apart from the case being a bit plasticky, it could pass for €200 worth. It has a great screen and surprising speed. 2 SIM slots and an SD card slot. Samsung could learn a lot from Doogee.&lt;/p&gt;
 
@@ -370,11 +415,11 @@ func main() {
 
 &lt;p&gt;I seriously doubt I&amp;rsquo;ll ever buy a premium phone on contract again. Once One Plus return to removable backs, replaceable batteries and SD card slots, I&amp;rsquo;ll jump to either them or the Wileyfox. Apart from the camera, there is practically nothing on my Galaxy S6 that I couldn&amp;rsquo;t do with an S4 or HTC Sensation. And they are both more robust and have replaceable batteries and SD card slots.&lt;/p&gt;
 
-&lt;h1 id=&#34;linux-everywhere:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Linux everywhere&lt;/h1&gt;
+&lt;h1 id=&#34;linux-everywhere&#34;&gt;Linux everywhere&lt;/h1&gt;
 
 &lt;p&gt;Everywhere. This makes me happy. I was very surprised my other daughter was more than happy to get an old hand-me-down laptop running Fedora 23. As long as it had Chrome, YouTube, Kodi and Minecraft she didn&amp;rsquo;t give a damn what the OS was. The OS is irrelevant to all my kids. In our house we segue seamlessly from Android to iOS to Windows to OSX to Fedora to Raspbian. The only things that matter are the apps and the content.&lt;/p&gt;
 
-&lt;h1 id=&#34;messaging-apps:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Messaging Apps&lt;/h1&gt;
+&lt;h1 id=&#34;messaging-apps&#34;&gt;Messaging Apps&lt;/h1&gt;
 
 &lt;p&gt;Our entire extended family is on WhatsApp including grandparents. SMS is dead to us. MMS was never a thing. I&amp;rsquo;d prefer if we were all using an Open Source secure P2P system but we&amp;rsquo;ll get there. The family breakdown is as follows:&lt;/p&gt;
 
@@ -391,7 +436,7 @@ func main() {
 
 &lt;p&gt;9yo yesterday: &amp;ldquo;What&amp;rsquo;s &amp;lsquo;Messaging&amp;rsquo; on my iPhone&amp;rdquo;. Me: &amp;ldquo;It&amp;rsquo;s SMS&amp;rdquo;. Her: &amp;ldquo;What&amp;rsquo;s that&amp;rdquo;. Me: &amp;ldquo;Texts&amp;rdquo;. Her: &amp;ldquo;Ah ok. Why are there so many apps for messaging? Why not just one?&amp;rdquo;&lt;/p&gt;
 
-&lt;h1 id=&#34;2fa-and-authy:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;2FA and Authy&lt;/h1&gt;
+&lt;h1 id=&#34;2fa-and-authy&#34;&gt;2FA and Authy&lt;/h1&gt;
 
 &lt;p&gt;Two Factor Authentication is a complete pain in the neck. It really is.&lt;/p&gt;
 
@@ -399,7 +444,7 @@ func main() {
 
 &lt;p&gt;The fact that PayPal still doesn&amp;rsquo;t have it is a complete disgrace. I&amp;rsquo;d strongly recommend using &lt;a href=&#34;https://www.authy.com/&#34;&gt;Authy&lt;/a&gt; instead of the Google Authenticator App. The main reason is that you can install Authy on multiple phones/tablets which you cannot do with Authenticator. They also have a Chrome extension.&lt;/p&gt;
 
-&lt;h1 id=&#34;things-that-continue-to-disappoint:3ae191ff0530ded325f31357fd1b08a5&#34;&gt;Things that continue to disappoint&lt;/h1&gt;
+&lt;h1 id=&#34;things-that-continue-to-disappoint&#34;&gt;Things that continue to disappoint&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Twitter - Useless Web App and Mobile App. Still hostile to developers who make better ones. And still no Filters, in 2015!&lt;/li&gt;
@@ -445,23 +490,23 @@ func main() {
 
 &lt;p&gt;I really like the DX voltage booster. It enables you to connect a LiPo battery and a micro-USB power source. It then provides 5V on a standard USB socket. The power source can also charge the battery whilst powering the device. You can then remove the power source and the battery will power the device without interruption. It&amp;rsquo;s almost perfect except for one stupid feature. You can&amp;rsquo;t connect a battery to it to power a device without connecting (even momentarily) the power source (e.g. a phone charger). If it could do that then it&amp;rsquo;d be pretty much at the same level as the Adafruit boost devices. I&amp;rsquo;ve been unable to find any datasheets for it but ordered two more anyway.&lt;/p&gt;
 
-&lt;h2 id=&#34;prototype:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Prototype&lt;/h2&gt;
+&lt;h2 id=&#34;prototype&#34;&gt;Prototype&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer05.jpg&#34; alt=&#34;Prototype&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;completed-board:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Completed Board&lt;/h2&gt;
+&lt;h2 id=&#34;completed-board&#34;&gt;Completed Board&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer02.jpg&#34; alt=&#34;Completed board&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;lego-case:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Lego Case&lt;/h2&gt;
+&lt;h2 id=&#34;lego-case&#34;&gt;Lego Case&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer03.jpg&#34; alt=&#34;Lego Case&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;side-view:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Side View&lt;/h2&gt;
+&lt;h2 id=&#34;side-view&#34;&gt;Side View&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/thermometer04.jpg&#34; alt=&#34;Side View&#34; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;code-latest-always-on-gist-here-https-gist-github-com-conoro-2875556b7477e443ae0a:711c6bef540d9f4341e884a7bd9c92f3&#34;&gt;Code (latest always &lt;a href=&#34;https://gist.github.com/conoro/2875556b7477e443ae0a&#34;&gt;on Gist here&lt;/a&gt; )&lt;/h1&gt;
+&lt;h1 id=&#34;code-latest-always-on-gist-here-https-gist-github-com-conoro-2875556b7477e443ae0a&#34;&gt;Code (latest always &lt;a href=&#34;https://gist.github.com/conoro/2875556b7477e443ae0a&#34;&gt;on Gist here&lt;/a&gt; )&lt;/h1&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;// Temperature from AD8495 K-type Thermocoule adapter and Datetime from DS1307 RTC. Displayed on ILI9341 LCD.
 //
@@ -633,7 +678,7 @@ void loop () {
       <guid>http://conoroneill.net/auto-tweeting-the-bandon-floods-with-twilio-tasker-lets-encrypt-a-pi-zero-golang-caddy-and-an-asus-router/</guid>
       <description>
 
-&lt;h2 id=&#34;intro:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Intro&lt;/h2&gt;
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
 
 &lt;p&gt;I haven&amp;rsquo;t blogged properly about the $5 &lt;a href=&#34;https://www.raspberrypi.org/blog/raspberry-pi-zero/&#34;&gt;Raspberry Pi Zero&lt;/a&gt; computer yet, despite Tweeting non-stop about it. I will soon. In the meantime, I&amp;rsquo;ll just repeat that&lt;/p&gt;
 
@@ -651,7 +696,7 @@ void loop () {
 
 &lt;p&gt;With all this flooding, I decided to finally create a related setup which takes the SMS Flood alerts from the County Council and auto-tweets them to the &lt;a href=&#34;https://twitter.com/bandonfews&#34;&gt;@BandonFEWS&lt;/a&gt; Twitter account which I created and have manually updated since 2011.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-details:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;The Details&lt;/h2&gt;
+&lt;h2 id=&#34;the-details&#34;&gt;The Details&lt;/h2&gt;
 
 &lt;p&gt;So the final $7 hardware (including Wifi adapter) now looks as follows:&lt;/p&gt;
 
@@ -678,7 +723,7 @@ void loop () {
 
 &lt;p&gt;But I wasn&amp;rsquo;t happy with http, nooooo, I wanted https and I wanted to use &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;. Cue rabbit hole.&lt;/p&gt;
 
-&lt;h2 id=&#34;let-s-encrypt-and-caddy:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Let&amp;rsquo;s Encrypt and Caddy&lt;/h2&gt;
+&lt;h2 id=&#34;let-s-encrypt-and-caddy&#34;&gt;Let&amp;rsquo;s Encrypt and Caddy&lt;/h2&gt;
 
 &lt;p&gt;Let&amp;rsquo;s Encrypt offers free https certs.&lt;/p&gt;
 
@@ -721,7 +766,7 @@ proxy / localhost:9998
 
 &lt;p&gt;&lt;img src=&#34;https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2015/12/flood_alert.jpg&#34; alt=&#34;Bandon Flood Warning&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;alternatives:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Alternatives&lt;/h2&gt;
+&lt;h2 id=&#34;alternatives&#34;&gt;Alternatives&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Of course I could exclude Twilio from this entire flow and call the end-point directly from Tasker but SMS will often work when no data connection is available.&lt;/li&gt;
@@ -729,7 +774,7 @@ proxy / localhost:9998
 &lt;li&gt;In theory I could take the scraped data from the site and generate my own alerts but the Council rightly overrides the default trigger levels on occasion to warn people of impending flooding.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Go Code (See for &lt;a href=&#34;https://gist.github.com/conoro/f1a3f7c5b96e2b033119&#34;&gt;https://gist.github.com/conoro/f1a3f7c5b96e2b033119&lt;/a&gt; for latest)&lt;/h2&gt;
+&lt;h2 id=&#34;go-code-see-for-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-https-gist-github-com-conoro-f1a3f7c5b96e2b033119-for-latest&#34;&gt;Go Code (See for &lt;a href=&#34;https://gist.github.com/conoro/f1a3f7c5b96e2b033119&#34;&gt;https://gist.github.com/conoro/f1a3f7c5b96e2b033119&lt;/a&gt; for latest)&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
 
@@ -842,7 +887,7 @@ func main() {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;asus-dnsmadeeasy-update:e19abcb8e6b6d101fc1a316dfdf4aa74&#34;&gt;Asus DNSMadeEasy Update&lt;/h2&gt;
+&lt;h2 id=&#34;asus-dnsmadeeasy-update&#34;&gt;Asus DNSMadeEasy Update&lt;/h2&gt;
 
 &lt;p&gt;This is smidge fiddly. &lt;a href=&#34;https://github.com/RMerl/asuswrt-merlin/wiki/Custom-DDNS&#34;&gt;More details here&lt;/a&gt;. Once you have Merlin installed and you are happily connected to the internet again (you did remember to write down all the settings for your ISP didn&amp;rsquo;t you?). You need to:&lt;/p&gt;
 
@@ -1016,7 +1061,7 @@ git push &amp;quot;https://${GH_TOKEN}@${GH_REPO}&amp;quot; master &amp;gt; /dev
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/omega_kit.jpg&#34; alt=&#34;Onion Omega Kit&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;summary-opinion:6373a9f13467451d12a87cf58bb7873b&#34;&gt;Summary Opinion&lt;/h2&gt;
+&lt;h2 id=&#34;summary-opinion&#34;&gt;Summary Opinion&lt;/h2&gt;
 
 &lt;p&gt;Overall it&amp;rsquo;s a nice board but the lack of &amp;ldquo;buzz&amp;rdquo; around it has me a little worried. The number one thing that projects like this need is community. I think the CHiP might steal a lot of its thunder with more welly at a much lower pricepoint. But perhaps a focus on realtime embedded applications will help here.&lt;/p&gt;
 
@@ -1026,7 +1071,7 @@ git push &amp;quot;https://${GH_TOKEN}@${GH_REPO}&amp;quot; master &amp;gt; /dev
 
 &lt;p&gt;Another area it could shine, due to its tiny size and low power consumption is robotics. See my comment below about &lt;a href=&#34;http://gobot.io/&#34;&gt;Gobot&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;node-js-partial-success:6373a9f13467451d12a87cf58bb7873b&#34;&gt;Node.js partial success&lt;/h2&gt;
+&lt;h2 id=&#34;node-js-partial-success&#34;&gt;Node.js partial success&lt;/h2&gt;
 
 &lt;p&gt;After an initial play around with it, I decided to try out Node and Go. Node was &lt;a href=&#34;https://community.onion.io/topic/46/simple-node-js-wrapper-samples&#34;&gt;built by a community member&lt;/a&gt; but is back on version 0.10.5.&lt;/p&gt;
 
@@ -1038,7 +1083,7 @@ git push &amp;quot;https://${GH_TOKEN}@${GH_REPO}&amp;quot; master &amp;gt; /dev
 
 &lt;p&gt;So I gave up on Node for the moment.&lt;/p&gt;
 
-&lt;h2 id=&#34;golang-1-1-2-first-failed-attempt:6373a9f13467451d12a87cf58bb7873b&#34;&gt;Golang 1.1.2 first failed attempt&lt;/h2&gt;
+&lt;h2 id=&#34;golang-1-1-2-first-failed-attempt&#34;&gt;Golang 1.1.2 first failed attempt&lt;/h2&gt;
 
 &lt;p&gt;On to Go and a giant big rabbit hole.&lt;/p&gt;
 
@@ -1112,7 +1157,7 @@ mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
 
 &lt;p&gt;I copied it over to the Onion but no joy. It just kept saying &amp;ldquo;not found&amp;rdquo;. Distant memories told me this was related to libraries and versions but nothing I tried worked. So I took a break.&lt;/p&gt;
 
-&lt;h2 id=&#34;golang-1-1-2-second-successful-attempt:6373a9f13467451d12a87cf58bb7873b&#34;&gt;Golang 1.1.2 second successful attempt&lt;/h2&gt;
+&lt;h2 id=&#34;golang-1-1-2-second-successful-attempt&#34;&gt;Golang 1.1.2 second successful attempt&lt;/h2&gt;
 
 &lt;p&gt;A while later I decided that what I needed to do was build OpenWRT for the Onion but then I hit a blocker. Onion support was added to OpenWRT in July but the latest version of the toolchain that included Go was from May. So I bit the bullet and manually &amp;ldquo;cherry-picked&amp;rdquo; &lt;a href=&#34;https://github.com/GeertJohan/openwrt-go/commits/add-gccgo-and-libgo?author=GeertJohan&#34;&gt;all of the author&amp;rsquo;s changes&lt;/a&gt; from the older toolchain into the latest version of OpenWRT.&lt;/p&gt;
 
@@ -1179,7 +1224,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/openwrt-ar71xx-generic-onion-omega-squ
 sysupgrade openwrt-ar71xx-generic-onion-omega-squashfs-factory.bin 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;hello-world-web-server-in-go-on-the-onion-omega:6373a9f13467451d12a87cf58bb7873b&#34;&gt;Hello World Web Server in Go on the Onion Omega&lt;/h2&gt;
+&lt;h2 id=&#34;hello-world-web-server-in-go-on-the-onion-omega&#34;&gt;Hello World Web Server in Go on the Onion Omega&lt;/h2&gt;
 
 &lt;p&gt;Back to helloworld on the Fedora 22 VM:&lt;/p&gt;
 
@@ -1194,7 +1239,7 @@ mips_gccgo -Wall -o helloweb_static_libgo helloweb.go -static-libgo
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/go_on_onion_omega_02.jpg&#34; alt=&#34;I love mac and cheese&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tweeting-from-the-onion-omega-in-go:6373a9f13467451d12a87cf58bb7873b&#34;&gt;Tweeting from the Onion Omega in Go&lt;/h2&gt;
+&lt;h2 id=&#34;tweeting-from-the-onion-omega-in-go&#34;&gt;Tweeting from the Onion Omega in Go&lt;/h2&gt;
 
 &lt;p&gt;I should have left it at that but no, I wanted to Tweet from the Onion. My problems multiplied. Basically, gccgo doesn&amp;rsquo;t have all the bells and whistles of recent Go and can&amp;rsquo;t handle included packages easily. After some reading and playing, I managed to build a Tweeting App that used the &lt;a href=&#34;https://github.com/kurrik/twittergo&#34;&gt;Twittergo package&lt;/a&gt;. Note you need a local Fedora version of &lt;a href=&#34;https://golang.org/dl/&#34;&gt;Go installed and configured&lt;/a&gt; for &amp;ldquo;go get&amp;rdquo; to work (or just git clone). My $GOPATH is /home/conor/gitwork/go&lt;/p&gt;
 
@@ -1240,7 +1285,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
 
 &lt;p&gt;I now suspect that the Node.js error may have been exactly the same thing but just hidden so I&amp;rsquo;ll go back and try the same for it.&lt;/p&gt;
 
-&lt;h2 id=&#34;final-notes:6373a9f13467451d12a87cf58bb7873b&#34;&gt;Final notes&lt;/h2&gt;
+&lt;h2 id=&#34;final-notes&#34;&gt;Final notes&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;That custom firmware I built is missing all of the Onion&amp;rsquo;s own stuff and I&amp;rsquo;m not sure how to add that. However you can easily re-install the latest factory Onion image by wgetting it using the URL you find &lt;a href=&#34;http://cloud.onion.io/api/firmware/stable.json&#34;&gt;in this file&lt;/a&gt; into /tmp using sysupgrade name_of_image.&lt;/li&gt;
@@ -1263,7 +1308,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
 
 &lt;p&gt;The basic setup was an update of ideas from previous years and consisted of the following.&lt;/p&gt;
 
-&lt;h2 id=&#34;3d-printed-mummy-in-coffin-doorbell:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;3D-printed Mummy in Coffin Doorbell&lt;/h2&gt;
+&lt;h2 id=&#34;3d-printed-mummy-in-coffin-doorbell&#34;&gt;3D-printed Mummy in Coffin Doorbell&lt;/h2&gt;
 
 &lt;p&gt;This was my favourite aspect of the whole thing. I spotted a &lt;a href=&#34;http://www.thingiverse.com/thing:32905&#34;&gt;cool 3D design on Thingiverse&lt;/a&gt; and realised I could turn it into a doorbell by dremeling a hole in the back and hot-glueing the mummy to a simple push button.&lt;/p&gt;
 
@@ -1273,7 +1318,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/mummy02b.jpg&#34; alt=&#34;Mummy Doorbell 2&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;adafruit-audio-breakout-board-and-amp-with-speakers:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Adafruit Audio breakout board and amp with speakers&lt;/h2&gt;
+&lt;h2 id=&#34;adafruit-audio-breakout-board-and-amp-with-speakers&#34;&gt;Adafruit Audio breakout board and amp with speakers&lt;/h2&gt;
 
 &lt;p&gt;I had intended everything to be Arduino and ESP8266 (running Arduino code) only so I needed some way of playing the scream. In previous years &lt;a href=&#34;http://conoroneill.net/the-raspberrypi-doorbell-of-dooooooooommmmmmmm/&#34;&gt;I used a Raspberry Pi&lt;/a&gt; (successfully) and &lt;a href=&#34;http://conoroneill.net/a-tech-halloween-mainly-made-of-fail/&#34;&gt;a really crappy device&lt;/a&gt; (less successfully).&lt;/p&gt;
 
@@ -1285,7 +1330,7 @@ scp conor@192.168.0.9:/mnt/disk2/software/tweetomega .
 
 &lt;p&gt;The Arduino Nano for this was the &amp;ldquo;Master&amp;rdquo; device. It detected the doorbell press and then started playing the file on the SD card and sent a high signal both to the Banana Pi for the LED strip and the Arduino Uno for the relays controlling the skull. It&amp;rsquo;s basically the Adafruit demo VS1053 code with a few extra lines added by me. The code for that &lt;a href=&#34;https://gist.github.com/conoro/58a028f7399b4e50619e&#34;&gt;is here on Gist&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;wifi-controlled-rgb-led-strip-using-a-banana-pi:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Wifi Controlled RGB LED Strip using a Banana Pi&lt;/h2&gt;
+&lt;h2 id=&#34;wifi-controlled-rgb-led-strip-using-a-banana-pi&#34;&gt;Wifi Controlled RGB LED Strip using a Banana Pi&lt;/h2&gt;
 
 &lt;p&gt;I finally ordered a bog-standard &lt;a href=&#34;http://eud.dx.com/product/waterproof-72w-4300lm-300-5050-smd-led-rgb-light-flexible-strip-w-44-key-controller-844233947&#34;&gt;5 metre 5050 RGB LED strip from dx.com&lt;/a&gt; over the summer. The value on these things is just staggering at less than €20.&lt;/p&gt;
 
@@ -1349,7 +1394,7 @@ done
 
 &lt;p&gt;So the strip was now sorted. On to the rotating skull.&lt;/p&gt;
 
-&lt;h2 id=&#34;an-anatomically-correct-skull-with-scary-eyes:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;An anatomically correct skull with scary eyes&lt;/h2&gt;
+&lt;h2 id=&#34;an-anatomically-correct-skull-with-scary-eyes&#34;&gt;An anatomically correct skull with scary eyes&lt;/h2&gt;
 
 &lt;p&gt;The skull idea came from a wonderful &lt;a href=&#34;http://www.tested.com/art/makers/530668-how-make-realistic-horror-skull-prop/&#34;&gt;tested.com video&lt;/a&gt; where special effects artist Frank Ippolito bought a cheap skull on Amazon and then used latex, cotton wool and paint to turn it into a horrific burn-victim thing.&lt;/p&gt;
 
@@ -1373,7 +1418,7 @@ done
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/11/buff_skull.jpg&#34; alt=&#34;Buff Skull&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;making-the-skull-rotate:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Making the skull rotate&lt;/h2&gt;
+&lt;h2 id=&#34;making-the-skull-rotate&#34;&gt;Making the skull rotate&lt;/h2&gt;
 
 &lt;p&gt;I had always known I would rotate the skull in some fashion but for a while I wasn&amp;rsquo;t sure how. Quite a few weeks ago I came up with the idea to cement a hex driver into the bottom of the skull and sit it on top of a cheap crap €20 electric screwdriver I got ages ago from Woodies.&lt;/p&gt;
 
@@ -1395,7 +1440,7 @@ done
 
 &lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/_alMNaewNXw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;h2 id=&#34;tying-it-all-together:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Tying it all together&lt;/h2&gt;
+&lt;h2 id=&#34;tying-it-all-together&#34;&gt;Tying it all together&lt;/h2&gt;
 
 &lt;p&gt;This turned out to be pretty easy. I have a ton of decent wire from a dead Christmas tree light string and used that to connect everything up. The doorbell connected to one Arudino which then toggled a pin which the other Arduinos were connected to. After N seconds, it toggled the pin the other way to shut it all down.&lt;/p&gt;
 
@@ -1405,7 +1450,7 @@ done
 
 &lt;iframe width=&#34;420&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/JvAI6WQglpk&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;h2 id=&#34;next-year:308bcb7036a2d3eb810a4711be2b8022&#34;&gt;Next year?&lt;/h2&gt;
+&lt;h2 id=&#34;next-year&#34;&gt;Next year?&lt;/h2&gt;
 
 &lt;p&gt;Hmm not sure. I wanted to do something with ghosts flying down zip wires a few years ago but I just didn&amp;rsquo;t have the knowhow. I&amp;rsquo;m feeling a lot more confident about that now.&lt;/p&gt;
 </description>
@@ -1487,15 +1532,15 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 
 &lt;p&gt;If your Web App has 2 registered users and 100 visitors per day, may just maybe you don&amp;rsquo;t need MongoDB or MySQL. I have a set of small Node.js projects now where I use the following combinations and they all work well. Anything you are doing in-house on a Raspberry Pi should absolutely use one of these. In fact I&amp;rsquo;m not even sure recent Mongos run on the RPi 1?&lt;/p&gt;
 
-&lt;h2 id=&#34;dulcimer-levelup-and-leveldb:b9c1e366c3521fb5cdf8cf868ebc63d4&#34;&gt;Dulcimer, LevelUP and LevelDB&lt;/h2&gt;
+&lt;h2 id=&#34;dulcimer-levelup-and-leveldb&#34;&gt;Dulcimer, LevelUP and LevelDB&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/google/leveldb&#34;&gt;LevelDB&lt;/a&gt; and &lt;a href=&#34;https://github.com/Level/levelup&#34;&gt;LevelUP&lt;/a&gt; are well known and widely used. I think &lt;a href=&#34;https://github.com/fritzy/Dulcimer&#34;&gt;Dulcimer&lt;/a&gt; probably less so. It&amp;rsquo;s a &lt;a href=&#34;http://mongoosejs.com/&#34;&gt;Mongoose-ish&lt;/a&gt; ORM for LevelDB. I was able to tie it into &lt;a href=&#34;http://passportjs.org/&#34;&gt;PassportJS&lt;/a&gt; without much effort to handle users/sessions/etc. I have two setups using it and both have been running for many months on d&amp;rsquo;internet with zero problems. In one case it&amp;rsquo;s a small stats dashboard running on DigitalOcean with a few registered users who check it maybe once a day. The other one is a registration system for people requesting access to some internal work resources. All submissions go into LevelDB. This is running on &lt;a href=&#34;https://www.openshift.com/products/online&#34;&gt;OpenShift Online&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;tingodb-and-tungus:b9c1e366c3521fb5cdf8cf868ebc63d4&#34;&gt;TingoDB and Tungus&lt;/h2&gt;
+&lt;h2 id=&#34;tingodb-and-tungus&#34;&gt;TingoDB and Tungus&lt;/h2&gt;
 
 &lt;p&gt;Of the NoSQL file-based databases, this seems to have the lowest profile and I think it deserves a &lt;em&gt;lot&lt;/em&gt; of attention. &lt;a href=&#34;https://github.com/sergeyksv/tingodb&#34;&gt;TingoDB&lt;/a&gt; emulates most of the common MongoDB APIs and &lt;a href=&#34;https://github.com/sergeyksv/tungus&#34;&gt;Tungus&lt;/a&gt; emulates most of the Mongoose ones. I was able to take a &lt;a href=&#34;https://github.com/sahat/tvshow-tracker&#34;&gt;random Node.js project&lt;/a&gt; off GitHub which is based on MongoDB/Mongoose/Mongoskin and get it running using TingoDB/Tungus on an RPi with only a tiny bit of fiddling with the &lt;a href=&#34;https://github.com/rschmukler/agenda/&#34;&gt;Agenda&lt;/a&gt; module. This is huge for those wanting to do NoSQL on Raspberry Pi. I&amp;rsquo;ll be playing a lot more with this setup in the coming weeks. You really should too.&lt;/p&gt;
 
-&lt;h2 id=&#34;sqlite-knex-and-bookshelf:b9c1e366c3521fb5cdf8cf868ebc63d4&#34;&gt;SQLite, Knex and Bookshelf&lt;/h2&gt;
+&lt;h2 id=&#34;sqlite-knex-and-bookshelf&#34;&gt;SQLite, Knex and Bookshelf&lt;/h2&gt;
 
 &lt;p&gt;Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&amp;rsquo;ve used &lt;a href=&#34;https://www.sqlite.org/&#34;&gt;SQLite&lt;/a&gt; many times over the years for simple projects and it has always worked well. I hadn&amp;rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&amp;rsquo;t need huge scale, you should be looking at SQLite. I&amp;rsquo;m currently wrapping up a simple in-house project using SQLite with &lt;a href=&#34;http://knexjs.org/&#34;&gt;Knex&lt;/a&gt; and &lt;a href=&#34;http://bookshelfjs.org/&#34;&gt;Bookshelf&lt;/a&gt; on a Raspberry Pi. The DB hold simple relationships between devices and their status.&lt;/p&gt;
 
@@ -1596,24 +1641,6 @@ socket.on(&amp;quot;message&amp;quot;, function (message) {
 // Connect to the server instance.
 socket.connect(&#39;tcp://127.0.0.1:9998&#39;);  
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>TIL you can import 3D models from Tinkercad to Minecraft. How cool is that?</title>
-      <link>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/</link>
-      <pubDate>Sun, 23 Aug 2015 14:42:32 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/til-you-can-import-3d-models-from-tinkercad-to-minecraft-how-cool-is-that/</guid>
-      <description>&lt;p&gt;We had friends over from the US last weekend and their kids loved my &lt;a href=&#34;http://printrbot.com/project/simple-makers/&#34;&gt;Printrbot 3D printer&lt;/a&gt;. They had learned &lt;a href=&#34;https://www.tinkercad.com/&#34;&gt;Tinkercad&lt;/a&gt; in school so that&amp;rsquo;s what they used to create things so they could print them out. They are now hounding their parents for a printer. Oops :-) But I noticed a &amp;ldquo;Download to Minecraft&amp;rdquo; option in Tinkercad and finally just had a chance to try it out. Wow!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker02b.jpg&#34; alt=&#34;In Tinkercad&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://blog.tinkercad.com/2013/08/15/tinkercraft/&#34;&gt;It&amp;rsquo;s incredibly easy&lt;/a&gt;. Take any model from Tinkercad and pick the Minecraft option. You may have to tweak the sizing when you are doing it seriously. Then install the &lt;a href=&#34;http://www.mcedit.net/downloads.html&#34;&gt;MCEdit Minecraft editor&lt;/a&gt; and import the file into one of your worlds. Then load up Minecraft and thar she blows.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/08/tinker01b.jpg&#34; alt=&#34;In Minecraft&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I totally love the intersection of 3D design, 3D printing and Minecraft - the real and the virtual coming together. The younger kids are gonna be psyched when I show em!&lt;/p&gt;
 </description>
     </item>
     

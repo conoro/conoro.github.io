@@ -81,6 +81,42 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">28 Apr 2012, 13:10</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/first-two-trivial-parts-of-getting-app-inventor-working-on-raspberry-pi-done/" class="post-title">First two trivial parts of getting App Inventor working on Raspberry Pi done</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;First two trivial parts of getting App Inventor working on Raspberry Pi done&rdquo;</p>
+
+<p>I&rsquo;ve been playing a small bit with the Raspberry Pi VM on VMware to see what&rsquo;s possible and what isn&rsquo;t. One thing I am eager to try when it arrives on the week of May 14th (YAY!), is to get App Inventor working on it.</p>
+
+<p>There are three basic user parts to App Inventor. The browser-based Designer, the Java-based Blocks Editor and the Phone Emulator (if you don&rsquo;t have a phone).</p>
+
+<p>Yesterday I got the first two bits working with about 2 minutes work. All you need to do is install the OpenJDK. <del>SUN</del>Oracle Java is not available yet.</p>
+
+<p><a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/appinventor_raspberrypi.png"><img class="alignnone size-large wp-image-706" title="appinventor_raspberrypi" src="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2012/04/appinventor_raspberrypi-1024x888.png" alt="" width="584" height="506" /></a></p>
+
+<p>The bit that will need more work is the emulator. I think. Ye see, I grabbed the code for the Linux version of the emulator and followed the simple instructions to build it. Then I saw it was building for i386 and of course the RPi is ARM-based. Damn.</p>
+
+<p>A bit of poking around and I realised we were almost in a recursive loop. I was running ARM Linux in qemu i386 emulator on a Virtual Machine and I was trying to run an ARM emulator inside a another qemu i386 emulator inside that. Yes my head exploded too.</p>
+
+<p>But then sense prevailed and I realised that Android is ARM and RPi is ARM, so do we need an emulator at all, or just an Android image compiled for ARM11 inside some sort of wrapper/container?</p>
+
+<p>As an old Embedded guy I should be all over this but I&rsquo;ve forgotten more than I ever learned about cross-compiling and building OS images. Anyone have any ideas on where to start? I popped a question on the relevant App Inventor Google Group too.</p>
+
+<p>Of course all of this may be moot if the 256MB of RAM and 700MHz CPU is not enough to support all of this. But it&rsquo;s worth a try.</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">27 Apr 2012, 16:02</h1>
                 <section class="post">
                     <header class="post-header">
@@ -392,34 +428,6 @@ Enjoy!</p>
 <p>So to everyone in Philips TV in Eindhoven, my lifelong respect.</p>
 
 <p>&nbsp;</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">13 Apr 2012, 09:48</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/xbmc-running-on-raspberry-pi-i-may-faint-with-the-anticipation/" class="post-title">XBMC running on Raspberry Pi. I may faint with the anticipation</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;XBMC running on Raspberry Pi. I may faint with the anticipation&rdquo;</p>
-
-<p>The kids&rsquo; non-360 XBOX running XBMC has been an amazing piece of kit. We&rsquo;ve had it for over 4 years and got it second-hand for approx 60 but it maxes out at 480p content. I had thought that getting a replacement like the Patriot or WD Live TV would cost north of 80. But some geniuses have got XBMC running on the Raspberry Pi. A streaming media player with HDMI, LAN and 1080p support for 31 including VAT and delivery? Yes please.</p>
-
-<p>&nbsp;</p>
-
-<p>httpv://www.youtube.com/watch?v=4NR57ELY28s</p>
-
-<p>Also, someone has already beaten me to the punch by getting a ZX Spectrum emulator running on it. We need someone to make cases that look exactly like 48K Spectrums, including a working keyboard, that the RPi can slot into. Do it!</p>
-
-<p>httpv://www.youtube.com/watch?v=zkbvDO1K_-c</p>
 
                     </div>
                 </section>

@@ -106,7 +106,7 @@
 
 <p>After 3 years running as a Python script on a file server, the Bandon FEWS scraper is now running on an ODROID-C1 under Node.js and soon on OpenShift.</p>
 
-<h2 id="introduction:68488b35c9290c9755b8db0d35a0e512">Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>Cork County Council in Ireland has a site called <a href="http://www.bandonfloodwarning.ie/">Bandon FEWS</a> (Bandon Flood Early Warning System). When the Bandon river hits certain levels near Bandon town, it alerts registered users via SMS in case they need to take emergency measures. It&rsquo;s a very useful service and is very necessary due to the regular flooding that occurs. However the historical river level data is not available in any useful form and that&rsquo;s the point of this project.</p>
 
@@ -122,7 +122,7 @@
 
 <p>To use it for something else on Fusion Tables, the main thing you need to do is setup an App in the <a href="https://console.developers.google.com/project?authuser=0">Google API Console</a>, enable Fusion Tables API access and use those keys in the placeholders in the config files.</p>
 
-<h2 id="files:68488b35c9290c9755b8db0d35a0e512">Files</h2>
+<h2 id="files">Files</h2>
 
 <ul>
 <li>main.js - The main code</li>
@@ -135,13 +135,13 @@
 <li>.gitignore - Stuff that shouldn&rsquo;t go under Git control</li>
 </ul>
 
-<h2 id="openshift-environment-variables:68488b35c9290c9755b8db0d35a0e512">OpenShift Environment Variables</h2>
+<h2 id="openshift-environment-variables">OpenShift Environment Variables</h2>
 
 <p>If you are running on OpenShift, you need a way to set various keys etc without adding them to files in Git which could potentially leak accidentally if you also put a copy up on GitHub. So set the following (mirroring the equivalent ones in config.json and tokens.json):</p>
 
 <p><code>rhc set-env access_token=&quot;blah&quot; token_type=&quot;Bearer&quot; refresh_token=&quot;blah&quot; expiry_date=1419970265050 client_id=&quot;blah&quot; client_secret=&quot;blah&quot; redirect_url=&quot;http://localhost&quot; fews_url=&quot;http://www.bandonfloodwarning.ie/main.php&quot; fusiontables_id=&quot;blah&quot; -a bandonfews</code></p>
 
-<h2 id="to-do:68488b35c9290c9755b8db0d35a0e512">TO-DO</h2>
+<h2 id="to-do">TO-DO</h2>
 
 <ul>
 <li>The first time run is currently broken for the OAuth credentials. Easy fix coming.</li>
@@ -152,7 +152,7 @@
 <li>???</li>
 </ul>
 
-<h2 id="release-notes:68488b35c9290c9755b8db0d35a0e512">Release Notes</h2>
+<h2 id="release-notes">Release Notes</h2>
 
 <ul>
 <li>04/01/2015 - First public usable version</li>
