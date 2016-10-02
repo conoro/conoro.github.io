@@ -2,12 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cross Dominant</title>
-    <link>http://conoroneill.net/</link>
+    <link>http://conoroneill.net/index.xml</link>
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 May 2016 19:32:32 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 02 Oct 2016 17:45:00 +0100</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Quick review of the BLU Life Mark £80 Android phone</title>
+      <link>http://conoroneill.net/quick-review-of-the-blu-life-mark-android-phone/</link>
+      <pubDate>Sun, 02 Oct 2016 17:45:00 +0100</pubDate>
+      
+      <guid>http://conoroneill.net/quick-review-of-the-blu-life-mark-android-phone/</guid>
+      <description>&lt;p&gt;A couple of weeks ago, I took my Galaxy S6 out for a run in the rain and it died. Based on previous experience with the horror known as Vodafone Ireland Insurance, I figured I&amp;rsquo;d be looking at 10 days minimum to get a replacement. This proved 100% accurate as the usual completely inept software that connects Vodafone&amp;rsquo;s PDP-11 to Stay Mobile&amp;rsquo;s Commodore 64 had cancelled my insurance without notification several months previously. It took them a week to sort this out before they could even look at replacing the phone.&lt;/p&gt;
+
+&lt;p&gt;So the same day it died, I ordered a cheap replacement backup phone which arrived within 2 days from &lt;a href=&#34;https://www.amazon.co.uk/BLU-Life-Mark-SIM-Free-Smartphone/dp/B01CG0U6U0/&#34;&gt;Amazon UK&lt;/a&gt;. Yep, you can order and receive a new phone from the UK faster than two groups of circus clowns in Dublin can fix a mistake they made.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.com.s3.amazonaws.com/wp-content/uploads/2016/10/grey.png&#34; alt=&#34;BLU Life Mark&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://bluproducts.com/life-mark&#34;&gt;BLU Life Mark&lt;/a&gt; is an utterly generic low-mid range Android phone from a US-based company. It&amp;rsquo;s very similar to the Wileyfox Swift I got my mother-in-law a few months back, which she loves.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.com.s3.amazonaws.com/wp-content/uploads/2016/10/blu_life_mark_bits.jpg&#34; alt=&#34;BLU Life Mark Bits&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This won&amp;rsquo;t be a long review as there really isn&amp;rsquo;t anything new to say about modern smartphones. Slabs of glass that still can&amp;rsquo;t tell the difference between accidental and intended touch or learn anything about your usage and optimise accordingly.&lt;/p&gt;
+
+&lt;p&gt;It has a 720p screen of decent brightness and perfectly acceptable touch responsiveness. It uses a Mediatek chipset which, whilst it isn&amp;rsquo;t particularly fast, is fine for 90% of the population. It lags when opening the camera or launching Facebook but otherwise it&amp;rsquo;s grand.&lt;/p&gt;
+
+&lt;p&gt;It can take 2 SIM cards or a SIM plus an SD Card. Which is more than can be said for Samsung or HTC.&lt;/p&gt;
+
+&lt;p&gt;Battery life seemed a bit weak compared to an S6.&lt;/p&gt;
+
+&lt;p&gt;The fingerprint scanner is superb. It&amp;rsquo;s not only in the correct place, the back, it is also extremely fast. I can&amp;rsquo;t abide the one on the S6 and have it disabled.&lt;/p&gt;
+
+&lt;p&gt;The camera isn&amp;rsquo;t brilliant. 13MP in theory but nowhere close to the S6. But for day to day, it does the job.&lt;/p&gt;
+
+&lt;p&gt;The GPS/Compass is a bit crap. Google Maps spun around like a tasmanian devil whilst trying to navigate on foot around Berlin. Positional accuracy seemed ok tho. Both Google Maps and Scout worked fine otherwise in Berlin.&lt;/p&gt;
+
+&lt;p&gt;The only seriously bad part of using it for a week was the Bluetooth. I paired it to Sync 2 on my Mondeo and initially it streamed my &lt;a href=&#34;https://soundcloud.com/adam-buxton&#34;&gt;Adam Buxton podcast&lt;/a&gt; perfectly. But after a few miles driving, it started cutting in and out &amp;ldquo;randomly&amp;rdquo;. It was driving me nuts. Then I sussed that the cut-outs happened when I was passing other cars. So I&amp;rsquo;m now pretty sure the bloody thing was trying to have a Bluetooth chat with every phone and car it could see. Unfortunately this high-speed connect/disconnect sent the car&amp;rsquo;s Bluetooth stack nuts. I then couldn&amp;rsquo;t connect properly from any phone. Factory defaults and Master Reset failed to fix it. Eventually I had to disconnect the car battery to reboot the car! That worked. Now I know this might have been the car&amp;rsquo;s fault but it has worked seamlessly with the S6 and an iPhone for months so I&amp;rsquo;m blaming the BLU.&lt;/p&gt;
+
+&lt;p&gt;Overall, unless you are a Bluetooth streaming fiend like me, you&amp;rsquo;ll find little to complain about in this phone. It&amp;rsquo;s really quite wonderful that you can have a supercomputer in your hand with access to all the world&amp;rsquo;s information for £80 without any contract. It&amp;rsquo;s a great time to be alive.&lt;/p&gt;
+
+&lt;p&gt;Oh and the S6 somehow fully recovered after I kept it in a very warm place for a few days. So that&amp;rsquo;s €60 I won&amp;rsquo;t be giving to the Stay Mobile Clown Retirement Fund.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Introducing YTPodders - Get your fave YouTubers as audio podcasts on your phone</title>
@@ -1545,102 +1583,6 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 &lt;p&gt;Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&amp;rsquo;ve used &lt;a href=&#34;https://www.sqlite.org/&#34;&gt;SQLite&lt;/a&gt; many times over the years for simple projects and it has always worked well. I hadn&amp;rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&amp;rsquo;t need huge scale, you should be looking at SQLite. I&amp;rsquo;m currently wrapping up a simple in-house project using SQLite with &lt;a href=&#34;http://knexjs.org/&#34;&gt;Knex&lt;/a&gt; and &lt;a href=&#34;http://bookshelfjs.org/&#34;&gt;Bookshelf&lt;/a&gt; on a Raspberry Pi. The DB hold simple relationships between devices and their status.&lt;/p&gt;
 
 &lt;p&gt;The latter two setups above also have the big advantage that you can use them in development or in the early production stages and then you can drop in MongoDB or MySQL at a later stage if needed, without any re-coding.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Running ZeroMQ with Node.js on Raspberry Pi</title>
-      <link>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi/</link>
-      <pubDate>Sun, 20 Sep 2015 11:38:46 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/running-zeromq-with-node-js-on-raspberry-pi/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://zeromq.org/&#34;&gt;ZeroMQ&lt;/a&gt; is a lightweight messaging library and looks ideal for lower powered devices like the RPi. Building and running is pretty easy. These are really just notes for myself for future reference.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;rsquo;t actually need a messaging system yet but I wanted to play around with one. Running a simple Request / Reply setup with Node.js on both Windows 10 and RPi was interesting. One advantage a message queue gives you over REST is that the receiver can be out of action and still get all transmitted messages when it recovers. You also have things like Pub/Sub etc. I&amp;rsquo;ve been running the code &lt;a href=&#34;http://blog.rastating.com/using-zeromq-with-node-js/&#34;&gt;from here&lt;/a&gt; 100% reliably for two days now on both setups. At some point I&amp;rsquo;ll check max throughput on a Pi.&lt;/p&gt;
-
-&lt;p&gt;Installation on Raspberry Pi:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd
-sudo apt-get install libtool pkg-config build-essential autoconf automake
-mkdir build
-cd build/
-wget https://download.libsodium.org/libsodium/releases/libsodium-1.0.3.tar.gz
-tar -zxvf libsodium-1.0.3.tar.gz
-cd libsodium-1.0.3/
-./configure
-make
-sudo make install
-cd ..
-wget http://download.zeromq.org/zeromq-4.1.3.tar.gz
-tar -zxvf zeromq-4.1.3.tar.gz
-cd zeromq-4.1.3/
-./configure
-make
-sudo make install
-sudo ldconfig
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Test code for Request / Reply &lt;a href=&#34;http://blog.rastating.com/using-zeromq-with-node-js/&#34;&gt;from here&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;server.js:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var zmq = require(&amp;quot;zmq&amp;quot;);  
-var socket = zmq.socket(&amp;quot;req&amp;quot;);  
-var counter = 0;
-
-// Just a helper function for logging to the console with a timestamp.
-function logToConsole (message) {  
-    console.log(&amp;quot;[&amp;quot; + new Date().toLocaleTimeString() + &amp;quot;] &amp;quot; + message);
-}
-
-function sendMessage (message) {  
-    logToConsole(&amp;quot;Sending: &amp;quot; + message);
-    socket.send(message);
-}
-
-// Add a callback for the event that is invoked when we receive a message.
-socket.on(&amp;quot;message&amp;quot;, function (message) {  
-    // Convert the message into a string and log to the console.
-    logToConsole(&amp;quot;Response: &amp;quot; + message.toString(&amp;quot;utf8&amp;quot;));
-});
-
-// Begin listening for connections on all IP addresses on port 9998.
-socket.bind(&amp;quot;tcp://*:9998&amp;quot;, function (error) {  
-    if (error) {
-        logToConsole(&amp;quot;Failed to bind socket: &amp;quot; + error.message);
-        process.exit(0);
-    }
-    else {
-        logToConsole(&amp;quot;Server listening on port 9998&amp;quot;);
-
-        // Increment the counter and send the value to the clients every second.
-        setInterval(function () { sendMessage(counter++); }, 1000);
-    }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;client.js:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var zmq = require(&amp;quot;zmq&amp;quot;);  
-var socket = zmq.socket(&amp;quot;rep&amp;quot;);
-
-// Just a helper function for logging to the console with a timestamp.
-function logToConsole (message) {  
-    console.log(&amp;quot;[&amp;quot; + new Date().toLocaleTimeString() + &amp;quot;] &amp;quot; + message);
-}
-
-// Add a callback for the event that is invoked when we receive a message.
-socket.on(&amp;quot;message&amp;quot;, function (message) {  
-    // Convert the message into a string and log to the console.
-    logToConsole(&amp;quot;Received message: &amp;quot; + message.toString(&amp;quot;utf8&amp;quot;));
-
-    // Send the message back aa a reply to the server.
-    socket.send(message);
-});
-
-// Connect to the server instance.
-socket.connect(&#39;tcp://127.0.0.1:9998&#39;);  
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

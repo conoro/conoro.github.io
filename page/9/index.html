@@ -7,7 +7,7 @@
 
     <meta name="description" content="Mixed laterality since 1968">
 
-    <meta name="generator" content="Hugo 0.16-DEV" />
+    <meta name="generator" content="Hugo 0.17-DEV" />
     <meta name="twitter:card" content="summary">
     
     <meta name="twitter:title" content="Cross Dominant &middot; Cross Dominant">
@@ -80,6 +80,36 @@
         <div>
             
             <div class="posts">
+                
+                <h1 class="content-subhead">07 Jun 2013, 16:59</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/is-the-e10-lidl-soldering-iron-worth-it-i-think-so-video/" class="post-title">Is the 10 Lidl Soldering Iron worth it? I think so.</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>#&ldquo;Is the \u008010 Lidl Soldering Iron worth it? I think so.&rdquo;</p>
+
+<p>I grabbed one of the Lidl Soldering Iron Kits yesterday in Dungarvan. Video below with my thoughts. Apologies for some of the stuff being off camera.</p>
+
+<p>httpv://youtu.be/UrQyGAgDACo</p>
+
+<p>Overall, at 10 it is totally worth a punt if you don&rsquo;t have an iron already.</p>
+
+<p>Regarding the non-standard tips, it turns out there are compatible replacements out there. <a href="http://www.ebay.co.uk/itm/0-5mm-Pointed-Soldering-Iron-Spare-Tip-Fits-Duratool-D00803-Variable-Temperature-/360559527019">This seller on eBay</a> has some. Also, <a href="http://ie.farnell.com/duratool/d00803-b8-1/spare-tip-d00803/dp/2081159">Farnell do them</a> for 1.15 each, but with the usual proviso that it&rsquo;s a minimum 20 order with them, so you&rsquo;ll need to find some other stuff to buy on the site. Shouldn&rsquo;t be hard :-)</p>
+
+<p>Maybe next time around, Lidl could go with standard tips, dump the &ldquo;burning tips&rdquo; and include some parts to do a simple project.</p>
+
+<p>As I mentioned in the video, a huge part of my DIY and electronics gear comes from Lidl and Aldi. I think there is a real opportunity for one/both of them to do a lot more in the Maker area. An Arduino Start Kit for maybe 19.99 would fly out the door once word-of-mouth got started. I predict a 3D Printer &ldquo;Thursday Special Offer&rdquo; sometime around 2016.</p>
+
+                    </div>
+                </section>
                 
                 <h1 class="content-subhead">05 Jun 2013, 08:27</h1>
                 <section class="post">
@@ -453,89 +483,6 @@ It&rsquo;s very simple to program and has a connector for an <a href="http://dx.
 <p>Oh dear, I appear to have a hair or some grit in my eye.</p>
 
 <p>httpv://www.youtube.com/watch?v=WT3772yhr0o</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">07 May 2013, 08:17</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/controlling-an-i-racer-rc-car-using-a-wii-balance-board-and-raspberry_pi/" class="post-title">Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>#&ldquo;Controlling an i-racer RC car using a Wii Balance Board and @Raspberry_Pi&rdquo;</p>
-
-<p>I love watching ideas bounce back and forward between people on Twitter and see them grow. The best for me recently started when <a href="http://www.theverge.com/2013/5/2/4292712/fitscales-wii-fit-balance-board-connected-scale">The Verge posted a story</a> about an OpenSource Android App which basically turned a <a href="http://wiibrew.org/wiki/Wii_Balance_Board">Wii Balance Board</a> into a Withings weighing scales, including RunKeeper and Fitbit integration. I retweeted it and it was picked up by <a href="https://twitter.com/joedesbonnet">Joe Desbonnet</a>. He realised you could also do some interesting things with the Balance Board and a Raspberry Pi and started hacking. Which of course made me realise I could control the i-racer with it!</p>
-
-<p>Here&rsquo;s a wee video of it in action:</p>
-
-<p>httpv://youtu.be/8cdn_LFKQXI</p>
-
-<p>Apologies for the mobile interference in the audio. I was using my new SGS4 to SSH to the Raspberry Pi to kick off the Python code. The ConnectBot guys really need to fix the microscopic font on screens like the SGS4!</p>
-
-<p>The car isn&rsquo;t very fast in the video as the Lego added a lot of weight and I hardcoded the speed to 50%. We&rsquo;ll try again next weekend using a lighter shell, full speed and tarmac instead of cobblelock.</p>
-
-<h2>Technical Nitty Gritty (not too Gritty!)</h2>
-My initial experiments with the Balance Board did not go well. Eventually I discovered that the version of the cwiid Wii library that is available on Raspberry Pi (and Ubuntu etc) is not able to deal with the Balance Board. See <a href="https://bugs.launchpad.net/ubuntu/+source/cwiid/+bug/509246">this bug</a>. I applied <a href="https://launchpadlibrarian.net/115501163/balanceboard.patch">the patch</a> and re-built my own deb files. To use them, just unzip them on the raspberry pi and install like so:
-
-<pre><code class="language-bash">
-wget https://github.com/conoro/iracer-controllers/raw/master/iracer_balance_board/cwiid_for_balance_board.zip
-unzip cwiid_for_balance_board.zip
-sudo dpkg -i *.deb
-</code></pre> 
-
-The rest of the time was just spent tweaking the numbers so that I could interpret someone leaning in various directions irrespective of their weight. It's still not great but works for me, a 7yo and a 6yo.
-
-All the old i-racer Bluetooth code carried over unchanged from our <a href="http://conoroneill.net/makey-makey-raspberry-pi-iracer-bluetooth-cheese-controlled-car-ccc/">Cheese Controlled Car</a>. Follow the instructions there for installing various Bluetooth bits and bobs on the Raspberry Pi.
-
-I was very surprised that I could talk to both the i-racer and the Balance Board over the same $2 Bluetooth adapter. I was sure I'd end up having to use two adapters.
-
-You can, as ever, <a href="https://github.com/conoro/iracer-controllers/tree/master/iracer_balance_board">grab the code from Github</a>. The only changes you need to make in the code are to set the Bluetooth MAC addresses of both the Balance Board and the i-racer.
-
-Sidenote: The Android App was a dead end. It doesn't work on Android 4.2 because Google decided to upgrade their broken Bluetooth stack and actually managed to make it worse.
-
-Any questions, leave a comment.
-
-<h2>Only if you really need it: Building those cwiid libraries yourself</h2>
-
-<pre><code class="language-bash">
-sudo nano /etc/apt/sources.list
-</code></pre>
-
-<p>Add the following line:
-<pre><code class="language-bash">
-deb-src <a href="http://archive.raspbian.org/raspbian">http://archive.raspbian.org/raspbian</a> wheezy main contrib non-free rpi
-</code></pre></p>
-
-<p>Then do the following:</p>
-
-<pre><code class="language-bash">
-mkdir ~/build
-cd build
-apt-get source python-cwiid
-apt-get build-dep python-cwiid
-cd cwiid-0.6.00+svn201/
-</code></pre>
-
-<p>Then edit these three files and add the changes from <a href="https://launchpadlibrarian.net/115501163/balanceboard.patch">https://launchpadlibrarian.net/115501163/balanceboard.patch</a> (or run &ldquo;patch&rdquo; if you are familiar with that)</p>
-
-<pre><code class="language-bash">
-nano libcwiid/cwiid_internal.h
-nano libcwiid/process.c
-nano libcwiid/thread.c
-dpkg-source --commit
-dpkg-buildpackage -us -uc
-cd ..
-sudo apt-get remove python-cwiid
-sudo dpkg -i *.deb
-</code></pre>
 
                     </div>
                 </section>
