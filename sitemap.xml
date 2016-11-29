@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://conoroneill.net/</loc>
-    <lastmod>2016-10-02T17:45:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://conoroneill.net/quick-review-of-the-blu-life-mark-android-phone/</loc>
     <lastmod>2016-10-02T17:45:00+01:00</lastmod>
   </url>
@@ -3671,6 +3666,12 @@
   
   <url>
     <loc>http://conoroneill.net/some-personal-thoughts-on-red-hats-acquistion-of-feedhenry/</loc>
+  </url>
+  
+  <url>
+    <loc>http://conoroneill.net/</loc>
+    <lastmod>2016-10-02T17:45:00+01:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
