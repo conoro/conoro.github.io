@@ -81,6 +81,34 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">28 Nov 2014, 14:39</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/some-personal-thoughts-on-the-red-hat-acquisition-of-feedhenry/" class="post-title">Some personal thoughts on the Red Hat acquisition of FeedHenry</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>The acquisition of FeedHenry by Red Hat isn&rsquo;t just one the most exciting tech stories in Ireland in 2014, it is also wonderfully satisfying for me as one of only two people in Product Management.</p>
+
+<p>When I found out that Red Hat was negotiating to buy the company, I couldn&rsquo;t have been happier. Apart from the almost perfect cultural fit, it was very cool to be joining a company whose products I first used in 1997 with Red Hat Linux 4. By 1999, I told my CTO in Integral Design that PCs running Red Hat Linux would wipe his beloved Sun out. To be fair to him, he agreed. A day hasn&rsquo;t gone by since &lsquo;97 that I haven&rsquo;t had Linux running somewhere, whether in skunkworks boxes under my desk; using VMware from &lsquo;99; powering my startup from 2006 onwards; or powering FeedHenry from day 1.</p>
+
+<p>The acquisition itself brought a perfect end to an incredible year for me with FeedHenry as director of Product Management. When I joined in July 2013, we had an excellent developer product but one whose capabilities were often hard to find or use. Some development had begun on a complete re-vamp based on the same core technology but hadn&rsquo;t kicked into high gear yet.</p>
+
+<p>The most important thing for me and our VP of Product and Services, Javier Perez, was to get a really productive relationship cemented between Product, Engineering, Ops and Sales/Pre-Sales. The other critical thing was to get a big customer, our own PS developers, heavily involved in the direction of the Product. Succeeding with this ensured that we didn&rsquo;t just achieve product-market fit, but we did it in a very effective way.</p>
+
+<p>We continued to release customer-driven new features and upgrades on the existing platform throughout 2013. As the year closed, we got the upcoming Product to a place where Sales could demo it to customers and we began giving ultra-early access to a select few as we moved into 2014. The feedback was phenomenal. Everyone wanted it now! But we continued to refine and improve and dogfood it until we were happy that we had leapfrogged absolutely everyone in the industry. Finally in April we released FeedHenry 3. Shortly afterwards, the acquisition was underway.</p>
+
+<p>We are now a few weeks post-closing and I realise daily just what a great fit the company and the product is with Red Hat and the middleware suite. In fact, a cross-functional team put together a demo for the Devoxx conference in Antwerp 2 weeks ago which showed a real-world integration of FeedHenry with AeroGear and JBoss Fuse. If we can achieve that so quickly, you&rsquo;d better watch out for what&rsquo;s coming in 2015!</p>
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">01 Nov 2014, 16:10</h1>
                 <section class="post">
                     <header class="post-header">
@@ -495,104 +523,6 @@ fs.readFile(file, 'utf8', function (err, data) {
 <p>Sourcecode <a href="https://github.com/conoro/conoro.github.io/blob/master/_harp/js/newpost.js">is on GitHub</a> as always.</p>
 
 <p>One interesting side-note was how much effort it was to find a Node module that asks for user input in the way I needed. There are lots of modules out there for Q&amp;A and some of them make it very easy to ask lots of questions, but not one of them (not one!) is able to deal with input that stretches over more than the terminal width. All of them start overwriting what you write on the screen instead of scrolling up. That&rsquo;s a pretty staggering oversight by a lot of developers. Eventually I found the classic readline library which I have used in many languages over the years and it worked like a charm.</p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">22 Jun 2014, 19:35</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/a-simple-nodejs-script-to-upload-your-harpjs-blog-images-to-s3/" class="post-title">A simple Node.js script to upload your Harp.js blog images to S3</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>Whilst there are tons of tools to do S3 upload, I wanted something tuned to how I blog, particularly with a static blog that used to be a WordPress one with year/month directories for images.</p>
-
-<p>Usage:</p>
-
-<pre><code class="language-bash">node upload_s3_images.js image1.jpg image2.jpg image3.png etc
-</code></pre>
-
-<p>It uses your AWS credentials in ~/aws_config.json { &ldquo;accessKeyId&rdquo;: &ldquo;akid&rdquo;, &ldquo;secretAccessKey&rdquo;: &ldquo;secret&rdquo;, &ldquo;region&rdquo;: &ldquo;us-west-2&rdquo; }</p>
-
-<p>It uses the bucket name and root upload directory from ./s3_blog_config.json {&ldquo;bucket&rdquo;: &ldquo;conoroneill.net&rdquo;, &ldquo;rootUploadDir&rdquo;: &ldquo;wp-content/uploads/&rdquo;}</p>
-
-<p>So if I have a file called s3_upload.jpg on my Desktop and I invoke as follows:</p>
-
-<pre><code class="language-bash">node upload_s3_images.js ~/Desktop/s3_upload.jpg
-</code></pre>
-
-<p>I end up with a file at: <a href="https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/s3_upload.jpg">https://s3-eu-west-1.amazonaws.com/conoroneill.net/wp-content/uploads/2014/06/s3_upload.jpg</a></p>
-
-<pre><code class="language-javascript">// upload_s3_images.js
-// Upload a space separated list of images to an S3 bucket for use by your Harp.js static blog
-// node upload_s3_images.js image1.jpg image2.jpg image3.png etc
-// Uses your AWS credentials in ~/aws_config.json { &quot;accessKeyId&quot;: &quot;akid&quot;, &quot;secretAccessKey&quot;: &quot;secret&quot;, &quot;region&quot;: &quot;us-west-2&quot; }
-// Uses bucket name and root upload directory from ./s3_blog_config.json {&quot;bucket&quot;: &quot;conoroneill.net&quot;, &quot;rootUploadDir&quot;: &quot;wp-content/uploads/&quot;}
-// My blog is exported from WordPress so it uses /wp-content/uploads/year/month/ as the directory stucture
-
-// Copyright (C) 2014 Conor O'Neill
-// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-// THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-var AWS = require('aws-sdk');
-var fs = require('fs'); 
-var userHome = process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
-AWS.config.loadFromPath(userHome + '/aws_config.json');
-var blogConfig = require('./s3_blog_config.json');
-
-
-var fileList = process.argv.slice(2);
-
-fileList.forEach(function (val, index, array) {
-
-  var fileName = val;
-  var currentTime = new Date();
-  var currentYear = currentTime.getFullYear();
-  var currentMonth = (&quot;0&quot; + (currentTime.getMonth() + 1)).slice(-2);
-
-  var uploadName = blogConfig.rootUploadDir + currentYear + '/' + currentMonth + '/' + fileName.split('/').pop();
-  var fileBuffer = fs.readFileSync(fileName);
-  var metaData = getContentTypeByFile(fileName);
-    
-  var s3 = new AWS.S3(); 
-
-  var params = {Bucket: blogConfig.bucket, Key: uploadName, Body: fileBuffer, ContentType: metaData};
-
-  s3.putObject(params, function(err, data) {
-    if (err)       
-      console.log(err)     
-    else console.log(&quot;Successfully uploaded: &quot; + blogConfig.blogS3Url + blogConfig.bucket + &quot;/&quot; + uploadName);   
-  });
-
-});
-
-function getContentTypeByFile(fileName) {
-  var rc = 'application/octet-stream';
-  var fn = fileName.toLowerCase();
-
-  if (fn.indexOf('.html') &gt;= 0) rc = 'text/html';
-  else if (fn.indexOf('.css') &gt;= 0) rc = 'text/css';
-  else if (fn.indexOf('.json') &gt;= 0) rc = 'application/json';
-  else if (fn.indexOf('.js') &gt;= 0) rc = 'application/x-javascript';
-  else if (fn.indexOf('.png') &gt;= 0) rc = 'image/png';
-  else if (fn.indexOf('.jpg') &gt;= 0) rc = 'image/jpg';
-
-  return rc;
-}
-
-</code></pre>
-
-<p>Source is <a href="https://github.com/conoro/conoro.github.io/blob/master/_harp/js/upload_s3_images.js">here on GitHub</a>.</p>
-
-<p>I hope you find it useful.</p>
 
                     </div>
                 </section>

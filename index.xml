@@ -6,8 +6,210 @@
     <description>Recent content on Cross Dominant</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Oct 2016 17:45:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 29 Nov 2016 20:45:00 +0000</lastBuildDate>
     <atom:link href="http://conoroneill.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>All the grisly details of Skeletony and the Halloween Doorbell of Doooooom V2.0</title>
+      <link>http://conoroneill.net/all-the-grisly-details-of-skeletony-and-the-halloween-doorbell-of-doom-v20/</link>
+      <pubDate>Tue, 29 Nov 2016 20:45:00 +0000</pubDate>
+      
+      <guid>http://conoroneill.net/all-the-grisly-details-of-skeletony-and-the-halloween-doorbell-of-doom-v20/</guid>
+      <description>
+
+&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;After the &lt;a href=&#34;http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/&#34;&gt;silly complexity&lt;/a&gt; and &lt;a href=&#34;http://hackaday.com/2015/11/14/halloween-doorbell-prop-in-rube-goldberg-overdrive/&#34;&gt;Hackaday article&lt;/a&gt;! of last year, I decided to keep it simple for Halloween this year. Of course that worked out :-)&lt;/p&gt;
+
+&lt;p&gt;The kids&amp;rsquo; favourite thing from all our Halloweens was the doorbell that made scary sounds. So that became the focus. As I hadn&amp;rsquo;t really done anything with my two &lt;a href=&#34;https://getchip.com/pages/chip&#34;&gt;C.H.I.P.s&lt;/a&gt;, I picked one to handle the bulk of the activity. I immediately became a big fan of its small size, built-in Wifi and simple Linux UI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/11/chip01c.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But of course I couldn&amp;rsquo;t leave it at that. I hauled out an old cheap scary mini skeleton we bought a few years back in Woodies and decided to add him to the mix.&lt;/p&gt;
+
+&lt;p&gt;It also wouldn&amp;rsquo;t be Halloween/Christmas without a touch of the Griswalds, so I added some LED strips to light the way.&lt;/p&gt;
+
+&lt;p&gt;The &amp;ldquo;smoke machines&amp;rdquo; weren&amp;rsquo;t great but added another layer of spookiness.&lt;/p&gt;
+
+&lt;p&gt;Finally, the disco lights in the entrance pillars were the icing on the cake.&lt;/p&gt;
+
+&lt;p&gt;The result was something that seemed to go down very well with all the trick-or-treaters and even had a neighbour come down to check out what was going on.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/APMgVqd7wNs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;All of the code is &lt;a href=&#34;https://github.com/conoro/halloween2016&#34;&gt;in this repo on GitHub&lt;/a&gt; (Arduino, Go, C, STL, F3D) if you don&amp;rsquo;t want to read further.&lt;/p&gt;
+
+&lt;h2 id=&#34;doorbell-of-doooooom-v2-0&#34;&gt;Doorbell of Doooooom V2.0&lt;/h2&gt;
+
+&lt;p&gt;The initial setup for the Doorbell was dead simple. A push-to-make button connected to a GPIO on the C.H.I.P which caused some code to randomly play out various MP3 files over the audio-out to some big speakers cunningly hidden near the door.&lt;/p&gt;
+
+&lt;p&gt;The end result was far far more complex than I ever imagined.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I decided to use &lt;a href=&#34;http://github.com/hybridgroup/gobot&#34;&gt;Gobot&lt;/a&gt; to handle the pin scanning and calling out to mpg123 to play the mp3 files. Of course I used &lt;a href=&#34;https://rg3.github.io/youtube-dl/&#34;&gt;youtube-dl&lt;/a&gt; to download videos from YouTube and then &lt;a href=&#34;http://winff.org/html_new/&#34;&gt;WinFF&lt;/a&gt; to convert to MP3 followed by &lt;a href=&#34;http://www.audacityteam.org/&#34;&gt;Audacity&lt;/a&gt; to clip them appropriately.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I had a couple of problems with Gobot initially. The main one was that all of the GPIOs were renamed in Linux 4.4 on the C.H.I.P. So I vendored in Gobot to my project and manually changed them all to be correct. I really such PR my changes on GitHub.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Once that was done, the sample code for reading the XIO-P0 pin connected to the button worked perfectly and calling out to mpg123 also worked well. I added a few extra lines of code to ignore multiple button presses during music playing and finally I added a simple http GET to Skeletony&amp;rsquo;s API end-point over Wifi to get him to do his magic when the button was pressed.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;please-press-the-button-pretty-please&#34;&gt;&amp;ldquo;Please press the button, pretty please&amp;rdquo;&lt;/h2&gt;
+
+&lt;p&gt;Every year I&amp;rsquo;ve done a doorbell I&amp;rsquo;ve had to put up some sort of sign saying &amp;ldquo;please press the button&amp;rdquo;. I&amp;rsquo;ve also had to cover over our normal doorbell to really get people to focus.&lt;/p&gt;
+
+&lt;p&gt;This year I thouhgt &amp;ldquo;I&amp;rsquo;ll add a simple LCD message to guide people&amp;rdquo;. Then I thought I&amp;rsquo;d use my Adafruit OLED screen. Luckily most of the code I needed was out there and it was case of a few evenings of tying it all together.&lt;/p&gt;
+
+&lt;p&gt;A very nice person has created &lt;a href=&#34;https://github.com/vkomenda/ssd1306&#34;&gt;https://github.com/vkomenda/ssd1306&lt;/a&gt; which is C code for the &lt;a href=&#34;https://www.adafruit.com/product/326&#34;&gt;SSD1306 OLED display&lt;/a&gt;. It basically worked on the C.H.I.P. with some changes for my particular setup.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;I had to use the 2nd I2C port for some reason so I used:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;#define SSD1306_I2C_ADDR 0x3D 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in ssd1306.h&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;https://www.adafruit.com/product/326&#34;&gt;Adafruit SSD1306 screen&lt;/a&gt; also needed to have its reset pin pulled low before it would work. So I added a variation of some code from &lt;a href=&#34;http://www.eddy2099.com/accessing-chip-gpio-xojo/&#34;&gt;here&lt;/a&gt; to both setup the GPIO pin XIO-P1 correctly and toggle it in ssd1306_demo.c. My final version of that code is &lt;a href=&#34;https://github.com/conoro/halloween2016/tree/master/ssd1306&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The pin connections from the C.H.I.P to the screen are as follows:&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I2C SLK - TWI2-SCK&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I2C SDA - TWI2-SDA&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;VCC - VCC-3V&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;GND - GND&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;RESET - XIO-P1&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You then run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;make
+sudo ./ssd1306_demo /dev/i2c-2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That shows some demo text as an image.&lt;/p&gt;
+
+&lt;p&gt;To show your own image you need to create it in Windows Paint (for realz) as a 128x64 monochrome BMP. Here&amp;rsquo;s &lt;a href=&#34;https://raw.githubusercontent.com/conoro/halloween2016/master/doorbell5.bmp&#34;&gt;mine&lt;/a&gt;. Then use &lt;a href=&#34;http://en.radzio.dxp.pl/bitmap_converter/&#34;&gt;LCD Asistant&lt;/a&gt; which is a simple Windows tool that takes the BMP file and turns it into a .h file. I then replaced the array in font5x7.h with that one in the generated h file. I re-ran Make and then ran the code. It took a few iterations to get an image I was happy with.&lt;/p&gt;
+
+&lt;h2 id=&#34;doorbell-enclosure&#34;&gt;Doorbell Enclosure&lt;/h2&gt;
+
+&lt;p&gt;I had a few goes at creating an enclosure for the doorbell button itself in &lt;a href=&#34;http://www.autodesk.com/products/fusion-360/overview&#34;&gt;Autodesk Fusion 360&lt;/a&gt;. The end-result was fine but not perfect.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/11/doorbell03c.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/conoro/halloween2016/blob/master/Doorbell_Casing_04.f3d&#34;&gt;Fusion 360 File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/conoro/halloween2016/blob/master/Doorbell_Casing_04.stl&#34;&gt;STL File&lt;/a&gt; (love how GitHub shows it in 3D!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also printed off a bunch of halloween designs from Thingiverse to act as the think you pushed rather than a raw button. The skull ones were scary but awkward to attach. In the end I used this &lt;a href=&#34;http://www.thingiverse.com/thing:251853&#34;&gt;pumpkin one&lt;/a&gt;. But I had to create a simple attachment for it too in Fusion.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/conoro/halloween2016/blob/master/DoorBell%20Button%20Mount%20v2.f3d&#34;&gt;Fusion 360 File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/conoro/halloween2016/blob/master/DoorBell%20Button%20Mount%20v2.stl&#34;&gt;STL File&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I then poked an LED out through a hole I&amp;rsquo;d designed into the enclosure. Rather than make the wiring any messier. I wired it up to a tiny LiPo battery with a tiny switch. It worked well and lit up the pumpkin nicely, if a little lopsidedly. I then added a small metal nail to the back of the pumpkin to stop the button rotating.&lt;/p&gt;
+
+&lt;p&gt;I needed an enclosure for the OLED screen. That worked well but was slightly too big. I forgot to add a cut-out for the wires to escape so a soldering iron was used to melt the plastic.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/conoro/halloween2016/blob/master/SSD1306_OLED_Box.f3d&#34;&gt;Fusion 360 File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/conoro/halloween2016/blob/master/SSD1306_OLED_Box.stl&#34;&gt;STL File&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I ran the wiring for the screen and the switch iself in through the letterbox and had the C.H.I.P. dangling inside and powered by a phone charger.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/11/doorbell01c.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;skeletony&#34;&gt;Skeletony&lt;/h2&gt;
+
+&lt;p&gt;Now that the main aim of the project was achieved I could relax since if nothing else worked, I still had the doorbell. I thought more about Skeletony and started &amp;ldquo;upgrading&amp;rdquo; him in iterations.&lt;/p&gt;
+
+&lt;h3 id=&#34;heart&#34;&gt;Heart&lt;/h3&gt;
+
+&lt;p&gt;This gave huge bang for the buck. I took this &lt;a href=&#34;http://www.thingiverse.com/thing:1544213&#34;&gt;3D design from Thingiverse&lt;/a&gt; and printed it in semi-transparent red. I then dremeled a hole into and and stuck a bright LED in. Then I found some &amp;ldquo;pulse&amp;rdquo; Arduino code &lt;a href=&#34;https://www.sparkfun.com/tutorials/329&#34;&gt;from here&lt;/a&gt; which looked a lot better than simple on-off. Job done.&lt;/p&gt;
+
+&lt;h3 id=&#34;eyes&#34;&gt;Eyes&lt;/h3&gt;
+
+&lt;p&gt;Even easier. Dremel out holes in the eye sockets and stuff two orange LEDs with wires into the holes. Bring wires out to the back of the head. The LEDs are just toggled on/off but due to the power glitching caused by the servo, they actually glowed. So a feature for free.&lt;/p&gt;
+
+&lt;h3 id=&#34;head&#34;&gt;Head&lt;/h3&gt;
+
+&lt;p&gt;This glitched a lot but again, huge impact for such a simple idea. I ripped Skeletony&amp;rsquo;s head off and hot-glued it to a generic &lt;a href=&#34;http://www.dx.com/p/towerpro-sg90-9g-mini-servo-with-accessories-12859&#34;&gt;dx.com&lt;/a&gt; tiny servo. I cable-tied and hot glued the servo onto Skeletony&amp;rsquo;s spine. The bog-standard Arduino Servo code &lt;a href=&#34;https://www.arduino.cc/en/Tutorial/Sweep&#34;&gt;from here&lt;/a&gt; did the job and I just made go 90 degrees, pause and return. The servo was very noisy at rest so I found some good tips on turning it off rather than holding it at a point.&lt;/p&gt;
+
+&lt;h3 id=&#34;guts&#34;&gt;Guts&lt;/h3&gt;
+
+&lt;p&gt;I hot-glued some creepy crawlies to his belly to hide all of the electronics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/11/skeletony01c.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ears&#34;&gt;Ears&lt;/h3&gt;
+
+&lt;p&gt;So at this point we have heart, eyes and head all controlled by an Arduino Nano and kicking off whenever a particular pin was toggled. I could have run some wires from the C.H.I.P around the door frame and onto Skeletony but of course I wasn&amp;rsquo;t happy with that.&lt;/p&gt;
+
+&lt;p&gt;I needed to wifi-enabled Skeletony and we all know what that means - yep our old friend the ESP8266. Over the past year I&amp;rsquo;ve gone from using NodeMCU Lua to Espruino to Arduino on the ESP. The biggest community seems to be Arduino so that&amp;rsquo;s what I&amp;rsquo;ve settled on.&lt;/p&gt;
+
+&lt;p&gt;The basic code was trivial really. Run the off-the-shelf server code with a single API end-point. When C.H.I.P calls the end-point, toggle a GPIO pin which in turn is connected to the Arudino Nano and causes all of Skeletony&amp;rsquo;s shenanigans.&lt;/p&gt;
+
+&lt;p&gt;But I&amp;rsquo;ve also been playing with the fantastic &lt;a href=&#34;https://github.com/tzapu/WiFiManager&#34;&gt;Wifi Manager&lt;/a&gt; code for Arduino on ESP8266. It gives you the ability to run the ESP as a Wifi access point, connect to it with your phone/tablet/laptop and configure with the usual access point it should connect to. This means you don&amp;rsquo;t have to hard-code the SSID/Password into your Arduino code. Awesome!&lt;/p&gt;
+
+&lt;p&gt;But I went a step further and spent quite a while figuring out how mDNS works. It&amp;rsquo;s actually very cool and much more than &amp;ldquo;DNS&amp;rdquo;. It meant I could have N Skeletonys all advertising themselves as Skeletonies and then I could dynamically get their IP addresses on the C.H.I.P. and communicate with them. It makes everything extremely flexible.&lt;/p&gt;
+
+&lt;p&gt;It all worked beautifully until the day itself and, as ever, something went wrong. In this case it was the mDNS piece only. But some quick hard-coding of IP addresses in the C.H.I.P code at the last minute took care of that.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;My &lt;a href=&#34;https://github.com/conoro/halloween2016/blob/master/arduino-skeletony/arduino-skeletony.ino&#34;&gt;ESP8266 Arduino sketch is here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;All of my &lt;a href=&#34;https://github.com/conoro/halloween2016/tree/master/Skeletonys_Head_Heart_And_Eyes&#34;&gt;Arduino Nano code is here&lt;/a&gt; for Skeletony&amp;rsquo;s head, heart and eyes&lt;/li&gt;
+&lt;li&gt;My &lt;a href=&#34;https://github.com/conoro/halloween2016/tree/master/go-skeletony&#34;&gt;C.H.I.P Go code is here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I powered him from two USB powerbanks on his back. (The two were an unsuccessful attempt to deal with the servo glitching).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/11/skeletony02c.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;led-strips&#34;&gt;LED strips&lt;/h2&gt;
+
+&lt;p&gt;Just a quick note about the analogue RGB LED strips I put down to guide people to the door. Wow, did they exceed expectations! They lit up the entire house and make it look extremely spooky. The spookiness doesn&amp;rsquo;t really come across in the video. These were bog standard 5050 waterproof strips that you can get on DX.com or &lt;a href=&#34;https://www.aliexpress.com/item-img/Tanbaby-RGB-Led-Strip-5050-Waterproof-flexible-Rope-44key-RGB-LED-controller-12V-5A-60W-Power/32452459271.html&#34;&gt;Aliexpress&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2016/11/led_strip_5050.jpg&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;rotating-lightbulbs&#34;&gt;Rotating Lightbulbs&lt;/h2&gt;
+
+&lt;p&gt;I learned about these from &lt;a href=&#34;https://www.youtube.com/user/bigclivedotcom&#34;&gt;Big Clive on YouTube&lt;/a&gt;. His channel is a geek delight and highly recommended. He breaks apart electronic gadgets and lights from eBay and explains how they work. It&amp;rsquo;s nearly always interesting and he comes across as a thoroughly nice man. I got mine from &lt;a href=&#34;http://www.ebay.co.uk/itm/151947698357&#34;&gt;here on eBay&lt;/a&gt;. They worked ok but really aren&amp;rsquo;t intended for outdoors. They work brilliantly indoors.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/VDFNA97mS58&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;h2 id=&#34;fog-smoke-steam-machine&#34;&gt;Fog/Smoke/Steam Machine&lt;/h2&gt;
+
+&lt;p&gt;I learned about these devices from &lt;a href=&#34;https://www.youtube.com/channel/UCFtc3XdXgLFwhlDajMGK69w&#34;&gt;NightHawkInLight&lt;/a&gt; on YouTube. They were fine but the &amp;ldquo;fog&amp;rdquo; was not that impressive. The &lt;a href=&#34;http://www.ebay.ie/itm/Air-Humidifier-Ultrasonic-Mist-Maker-Fogger-Water-Fountain-Pond-Atomizer-/350927796713?hash=item51b4ed39e9&#34;&gt;cheaper ones&lt;/a&gt; seemed to work slightly better than the &lt;a href=&#34;http://www.ebay.ie/itm/Ultrasonic-12-LED-Mist-Maker-Fogger-Atomizer-Air-Humidifer-Water-Fountain-Pond-/371501512336?hash=item567f373690&#34;&gt;bigger one with the LED&lt;/a&gt;. All from eBay obvs.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/5Ep0lWrprlE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;h2 id=&#34;and-finally&#34;&gt;And finally&lt;/h2&gt;
+
+&lt;p&gt;Next year? Yeah, next year we go simple. I swear. Says the man who has already set reminders in Google Calendar for purchases and 3D printing in September 2017.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Quick review of the BLU Life Mark £80 Android phone</title>
@@ -1555,34 +1757,6 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 &lt;p&gt;Apart from security fixes and the latest Chromium features, you also get full access to most of the Apps and Extensions in the Chrome Web Store. This includes the &lt;a href=&#34;http://www.espruino.com/Order#distributors&#34;&gt;Espruino&lt;/a&gt; Chrome &lt;a href=&#34;https://chrome.google.com/webstore/detail/espruino-web-ide/bleoifhkdalbjfbobjackfdifdneehpo&#34;&gt;App&lt;/a&gt;, which means you or your kids now have everything you need to develop and deploy Embedded and IoT projects for under €100. Honestly, that&amp;rsquo;s revolutionary.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/pi_plus_espruino_small.jpg&#34; alt=&#34;Pi loves Espruino&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>TingoDB and SQLite instead of MongoDB and MySQL for tiny projects or Raspberry Pi</title>
-      <link>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/</link>
-      <pubDate>Sun, 20 Sep 2015 13:03:54 +0100</pubDate>
-      
-      <guid>http://conoroneill.net/tingodb-and-sqlite-instead-of-mongodb-and-mysql-for-tiny-projects-or-raspberry-pi/</guid>
-      <description>
-
-&lt;p&gt;As an old Embedded guy who actually cares about resource usage, I&amp;rsquo;ve been bothered for quite a while by the number of trivial Node.js projects out there that require a full-blown MongoDB or MySQL server to operate. It&amp;rsquo;s a particular problem on the Raspberry Pi or small &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt; Droplets. In many cases a simple SQLite DB or TingoDB is more than sufficient.&lt;/p&gt;
-
-&lt;p&gt;If your Web App has 2 registered users and 100 visitors per day, may just maybe you don&amp;rsquo;t need MongoDB or MySQL. I have a set of small Node.js projects now where I use the following combinations and they all work well. Anything you are doing in-house on a Raspberry Pi should absolutely use one of these. In fact I&amp;rsquo;m not even sure recent Mongos run on the RPi 1?&lt;/p&gt;
-
-&lt;h2 id=&#34;dulcimer-levelup-and-leveldb&#34;&gt;Dulcimer, LevelUP and LevelDB&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/google/leveldb&#34;&gt;LevelDB&lt;/a&gt; and &lt;a href=&#34;https://github.com/Level/levelup&#34;&gt;LevelUP&lt;/a&gt; are well known and widely used. I think &lt;a href=&#34;https://github.com/fritzy/Dulcimer&#34;&gt;Dulcimer&lt;/a&gt; probably less so. It&amp;rsquo;s a &lt;a href=&#34;http://mongoosejs.com/&#34;&gt;Mongoose-ish&lt;/a&gt; ORM for LevelDB. I was able to tie it into &lt;a href=&#34;http://passportjs.org/&#34;&gt;PassportJS&lt;/a&gt; without much effort to handle users/sessions/etc. I have two setups using it and both have been running for many months on d&amp;rsquo;internet with zero problems. In one case it&amp;rsquo;s a small stats dashboard running on DigitalOcean with a few registered users who check it maybe once a day. The other one is a registration system for people requesting access to some internal work resources. All submissions go into LevelDB. This is running on &lt;a href=&#34;https://www.openshift.com/products/online&#34;&gt;OpenShift Online&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;tingodb-and-tungus&#34;&gt;TingoDB and Tungus&lt;/h2&gt;
-
-&lt;p&gt;Of the NoSQL file-based databases, this seems to have the lowest profile and I think it deserves a &lt;em&gt;lot&lt;/em&gt; of attention. &lt;a href=&#34;https://github.com/sergeyksv/tingodb&#34;&gt;TingoDB&lt;/a&gt; emulates most of the common MongoDB APIs and &lt;a href=&#34;https://github.com/sergeyksv/tungus&#34;&gt;Tungus&lt;/a&gt; emulates most of the Mongoose ones. I was able to take a &lt;a href=&#34;https://github.com/sahat/tvshow-tracker&#34;&gt;random Node.js project&lt;/a&gt; off GitHub which is based on MongoDB/Mongoose/Mongoskin and get it running using TingoDB/Tungus on an RPi with only a tiny bit of fiddling with the &lt;a href=&#34;https://github.com/rschmukler/agenda/&#34;&gt;Agenda&lt;/a&gt; module. This is huge for those wanting to do NoSQL on Raspberry Pi. I&amp;rsquo;ll be playing a lot more with this setup in the coming weeks. You really should too.&lt;/p&gt;
-
-&lt;h2 id=&#34;sqlite-knex-and-bookshelf&#34;&gt;SQLite, Knex and Bookshelf&lt;/h2&gt;
-
-&lt;p&gt;Whilst the whole hipster dev world thinks NoSQL is the answer to everything, good old relational databases just keep on trucking. I&amp;rsquo;ve used &lt;a href=&#34;https://www.sqlite.org/&#34;&gt;SQLite&lt;/a&gt; many times over the years for simple projects and it has always worked well. I hadn&amp;rsquo;t realised until recently that the main SQL ORMs on Node.js support it out of the box. So again, if you have a project that needs a relational DB and doesn&amp;rsquo;t need huge scale, you should be looking at SQLite. I&amp;rsquo;m currently wrapping up a simple in-house project using SQLite with &lt;a href=&#34;http://knexjs.org/&#34;&gt;Knex&lt;/a&gt; and &lt;a href=&#34;http://bookshelfjs.org/&#34;&gt;Bookshelf&lt;/a&gt; on a Raspberry Pi. The DB hold simple relationships between devices and their status.&lt;/p&gt;
-
-&lt;p&gt;The latter two setups above also have the big advantage that you can use them in development or in the early production stages and then you can drop in MongoDB or MySQL at a later stage if needed, without any re-coding.&lt;/p&gt;
 </description>
     </item>
     

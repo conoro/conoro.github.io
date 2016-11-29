@@ -81,6 +81,44 @@
             
             <div class="posts">
                 
+                <h1 class="content-subhead">27 Dec 2015, 11:34</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="http://conoroneill.net/simple-individual-150-rgb-led-control/" class="post-title">Simple Christmas Control of each LED in a 150 RGB LED WS2812 strip</a>
+
+                        <p class="post-meta">
+                            
+                            
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>One mistake I made with our <a href="http://conoroneill.net/all-the-tech-behind-our-halloween-hallway-of-horror/">Halloween setup</a> was buying an analogue RGB LED strip where all the LEDs had to be set to the same colour. Then a few weeks ago, <a href="https://twitter.com/joedesbonnet">Joe Desbonnet</a> Facebooked about getting a waterproof WS2812 strip with individual LED control. And it wasn&rsquo;t that much more expensive than the analogue one. Off to eBay I went <a href="http://www.ebay.com/itm/141757617308?_trksid=p2057872.m2749.l2649&amp;var=440868603421&amp;ssPageName=STRK%3AMEBIDX%3AIT">and ordered one</a>, far too late for Christmas.</p>
+
+<p>So I was chuffed that it arrived on Christmas Eve. Unfortunately the 8 amp PSU I ordered on Aliexpress didn&rsquo;t arrive. A quick rustle in my psu drawer found a 4 amp one. Another quick rustle in another box found an old <a href="https://www.arduino.cc/en/Main/ArduinoBoardNano">Arduino Nano</a> and it took barely 5 mins to load it up with the <a href="https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino">Adafruit strand test code</a> and wire everything together (one digital pin, gnd, 5v) to give this:</p>
+
+<p><iframe src="https://vine.co/v/iAaKnlhxXWX/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></p>
+
+<p>The psu was running warm but not crazily so. However the Arduino kept crashing which hinted that the psu was dropping below 5V to power all those LEDs. So I ran separate power to the Arduino from a phone charger.</p>
+
+<p>This was followed by 4km of duct tape as the connections and Arduino would have to live outside. A gale was blowing as I tried to attach it to the window frame so I switched to the more sheltered door frame. This <a href="http://www.everbuild.co.uk/index.php?route=product/product&amp;product_id=364">Mammoth tape</a> worked <em>really</em> well:</p>
+
+<div>
+<iframe src="https://vine.co/v/iAWEdMizFbB/embed/simple" width="600" height="600" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+</div>
+
+<p>And that was it. Almost zero effort for the best house light decoration we&rsquo;ve ever done. Since these strips can be cut to any length you want and also spliced together, I&rsquo;ll be fashioning a full house-length monstrosity for next Christmas. However I doubt I&rsquo;ll ever reach this level:</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/90oZ52M4IC0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe>
+ </div>
+
+
+                    </div>
+                </section>
+                
                 <h1 class="content-subhead">16 Nov 2015, 22:35</h1>
                 <section class="post">
                     <header class="post-header">
@@ -926,45 +964,6 @@ sudo cp -R * /usr/local/
 
 <p>UPDATE 2: I also built 0.12.7 for Raspberry Pi 1 (i.e. Original Model) ARM V6 on a Series 1 Model B:
 * <a href="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/09/node-v0.12.7-linux-arm-v6.tar.gz">node-v0.12.7-linux-arm-v6.tar.gz</a></p>
-
-                    </div>
-                </section>
-                
-                <h1 class="content-subhead">06 Jun 2015, 15:06</h1>
-                <section class="post">
-                    <header class="post-header">
-
-                        <a href="http://conoroneill.net/save-your-yahoo-pipes-as-nodejs-apps-for-posterity/" class="post-title">Save your Yahoo Pipes as Node.js Apps for posterity</a>
-
-                        <p class="post-meta">
-                            
-                            
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>I swore I&rsquo;d never use another Yahoo product after the cultural terrorism of their Geocities shutdown. Now one of their few bright lights of the past decade, Pipes, is biting the dust. However a very very smart person wrote a program called <a href="https://github.com/neyric/pipes2js">pipes2js</a> three years ago which you may find useful. It converts your Pipes to Node.js apps!</p>
-
-<p><img src="http://conoroneill.net.s3.amazonaws.com/wp-content/uploads/2015/06/rip_pipes.png" alt="RIP Pipes" /></p>
-
-<p>Installation is a tiny bit different from the instructions as it doesn&rsquo;t seem to be on NPM any more. Here&rsquo;s what worked for me on a Fedora 22 Virtual Box. I assume OSX would be similar. I might try Windows 8.1 later for the laugh.</p>
-
-<p>The steps are as follows:</p>
-
-<ul>
-<li>sudo npm install -g git://github.com/neyric/pipes2js.git</li>
-<li>Go to <a href="https://pipes.yahoo.com/pipes/">Yahoo Pipes</a></li>
-<li>Get the ID of each Pipe from its URL</li>
-<li>pipes2js the_id_of_your_pipe</li>
-<li>cd pipes/the_id_of_your_pipe/</li>
-<li>Edit package.json and change &ldquo;pipes2js&rdquo;: &ldquo;0.0.1&rdquo; to &ldquo;pipes2js&rdquo;: &ldquo;git://github.com/neyric/pipes2js.git&rdquo;</li>
-<li>npm install .</li>
-<li>node run.js</li>
-</ul>
-
-<p>The sad reality for me is that most of my Pipes are no longer functional as they use the old brilliantly simple but deprecated Twitter APIs (shakes fist at Twitter too). But it&rsquo;s nice to be able to keep some sort of copy and give 2 fingers to the purple charlatans.</p>
-
-<p>Update: It runs fine on Windows 8.1 if you have the various Visual Studio Express bits installed to compile Native Node modules. You may also have to run pipes2js with the full path to pipes2js.cmd so Windows can find it.</p>
 
                     </div>
                 </section>
